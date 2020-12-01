@@ -2,7 +2,7 @@
 
 This action updates Upload the contents of the specified directory into S3 bucket and optionally issues an invalidation command of a cloudfront distribution
  
-The AWS Account needs to have the `"s3:PutObject"` permission.
+The AWS Account needs to have the `"s3:PutObject"` permission, if Cloudfront invalidation is enabled then `cloudfront:CreateInvalidation` and `cloudfront:GetInvalidation` are required, if no distribution id is provided (e.g. `invalidate: true`) then `cloudfront:ListDistributions` is also required.
  
 ## Inputs
 
