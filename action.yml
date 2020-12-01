@@ -1,0 +1,28 @@
+name: 'AWS Static Web App Update Action'
+author: 'Kazi Manzur Rashid <kazimanzurrashid@gmail.com>'
+branding:
+  color: 'orange'
+  icon: 'upload'
+description: 'Upload the contents of the specified directory into S3 bucket and optionally issues an invalidation command of a cloudfront distribution.'
+inputs:
+  location:
+    required: true
+    description: 'The location of the directory which contents would be uploaded'
+  bucket:
+    required: true
+    description: 'The name of the S3 bucket where the content would be uploaded'
+  invalidate:
+    required: false
+    description: 'boolean or the cloudfront distribution id, if true then it would use the bucket name to find the associated distribution'
+  AWS_REGION:
+    description: 'Optional if not specified fallbacks to environment variable'
+    required: false
+  AWS_ACCESS_KEY_ID:
+    description: 'Optional if not specified fallbacks to environment variable'
+    required: false
+  AWS_SECRET_ACCESS_KEY:
+    description: 'Optional if not specified fallbacks to environment variable'
+    required: false
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
