@@ -61,7 +61,7 @@ with:
 ### complete
 
 ```yaml
-name: API
+name: Web
 on:
   push:
     branches:
