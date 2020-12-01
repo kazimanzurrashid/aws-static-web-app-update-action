@@ -39,19 +39,20 @@ N/A
 ### minimum
 
 ```yaml
-uses: kazimanzurrashid/lambda-update-action@v1
+uses: kazimanzurrashid/aws-static-web-app-update-action@v1
 with:
-  zip-file: './dist/my_lambda.zip'
+  location: './web/public'
+  bucket: 'example.com'
 ```
 
 ### all
 
 ```yaml
-uses: kazimanzurrashid/lambda-update-action@v1
+uses: kazimanzurrashid/aws-static-web-app-update-action@v1
 with:
-  zip-file: './dist/my_lambda.zip'
-  lambda-name: 'your_lambda'
-  publish: true
+  location: './web/public'
+  bucket: 'example.com'
+  invalidate: 'XXXXXXXXXXXXXX'
   AWS_REGION: ${{ secrets.AWS_REGION }}
   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -65,10 +66,6 @@ on:
   push:
     branches:
       - main
-env:
-  AWS_REGION: ${{ secrets.AWS_REGION }}
-  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -76,21 +73,24 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: .NET setup
-        uses: actions/setup-dotnet@v1
+      - name: Node.js setup
+        uses: actions/setup-node@v2-beta
         with:
-          dotnet-version: 3.1.x
-
-      - name: Lambda.Tools install
-        run: dotnet tool install -g Amazon.Lambda.Tools
+          node-version: 12.x
 
       - name: Build
         run: |
-          cd src/Api
-          dotnet lambda package -o api.zip
+          cd web
+          npm run build
 
       - name: Update
-        uses: kazimanzurrashid/lambda-update-action@v1
+        uses: kazimanzurrashid/aws-static-web-app-update-action@v1
         with:
-          zip-file: src/Api/api.zip
+          location: './web/public'
+          bucket: 'example.com'
+          invalidate: true
+        env:
+          AWS_REGION: ${{ secrets.AWS_REGION }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 ```
