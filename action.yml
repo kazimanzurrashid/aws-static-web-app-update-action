@@ -3,7 +3,7 @@ author: 'Kazi Manzur Rashid <kazimanzurrashid@gmail.com>'
 branding:
   color: 'orange'
   icon: 'upload'
-description: 'Upload the contents of the specified directory into S3 bucket and optionally issues an invalidation command of a cloudfront distribution.'
+description: 'Upload the contents of the specified directory into S3 bucket and optionally invalidates cloudfront distribution.'
 inputs:
   location:
     required: true
