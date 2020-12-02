@@ -49,58 +49,51 @@ class Action {
         args: CreateInvalidationRequest
       ) => Promise<CreateInvalidationResult>;
     },
-    private readonly core: {
-      setFailed: (message: Error | string) => void;
-      log: (message: string) => void;
-    },
     private readonly mime: {
       lookup: (filenameOrExt: string) => string | false;
     },
     private readonly glob: {
       match: (path: string, pattern: string | string[]) => Promise<string[]>;
-    }
+    },
+    private log: (message: string) => void
   ) {}
 
   async run(input: RunInput): Promise<void> {
-    try {
-      const [cacheMap, files] = await Promise.all([
-        this.buildCacheMap(input.location, input.cacheControl),
-        this.getFiles(input.location)
-      ]);
+    const [cacheMap, files] = await Promise.all([
+      this.buildCacheMap(input.location, input.cacheControl),
+      this.getFiles(input.location)
+    ]);
 
-      const uploads = files.map(async (file) =>
-        this.upload({
-          location: input.location,
-          bucket: input.bucket,
-          cacheControl: cacheMap.get(file),
-          file
-        })
-      );
+    const uploads = files.map(async (file) =>
+      this.upload({
+        location: input.location,
+        bucket: input.bucket,
+        cacheControl: cacheMap.get(file),
+        file
+      })
+    );
 
-      await Promise.all(uploads);
+    await Promise.all(uploads);
 
-      if (
-        typeof input.invalidate === 'undefined' ||
-        (input.invalidate || 'false').toString().toLowerCase() === 'false'
-      ) {
-        return;
-      }
-
-      const distributionId =
-        input.invalidate.toString().toLowerCase() === 'true'
-          ? await this.getDistributionId(input.bucket)
-          : input.invalidate.toString();
-
-      if (!distributionId) {
-        return this.core.setFailed(
-          `Could not find any cloudfront distribution that is associated with s3 bucket ${input.bucket}!`
-        );
-      }
-
-      await this.invalidateDistribution(distributionId);
-    } catch (error) {
-      this.core.setFailed(error);
+    if (
+      typeof input.invalidate === 'undefined' ||
+      (input.invalidate || 'false').toString().toLowerCase() === 'false'
+    ) {
+      return;
     }
+
+    const distributionId =
+      input.invalidate.toString().toLowerCase() === 'true'
+        ? await this.getDistributionId(input.bucket)
+        : input.invalidate.toString();
+
+    if (!distributionId) {
+      throw new Error(
+        `Could not find any cloudfront distribution that is associated with s3 bucket ${input.bucket}!`
+      );
+    }
+
+    await this.invalidateDistribution(distributionId);
   }
 
   private async buildCacheMap(
@@ -180,11 +173,11 @@ class Action {
       params.ContentType = contentType;
     }
 
-    this.core.log(`Uploading ${input.file}`);
+    this.log(`Uploading ${input.file}`);
 
     await this.s3.putObject(params);
 
-    this.core.log(`Uploaded ${input.file}`);
+    this.log(`Uploaded ${input.file}`);
   }
 
   private async getDistributionId(domain: string): Promise<string | undefined> {
@@ -226,7 +219,7 @@ class Action {
             Id: id
           };
 
-          this.core.log('Checking invalidation status');
+          this.log('Checking invalidation status');
 
           try {
             const result = await this.cf.getInvalidation(params);
@@ -235,7 +228,7 @@ class Action {
               result.Invalidation &&
               result.Invalidation.Status === 'Completed'
             ) {
-              this.core.log('Invalidation completed');
+              this.log('Invalidation completed');
               return resolve();
             }
 
@@ -260,7 +253,7 @@ class Action {
       }
     };
 
-    this.core.log(`Invalidating ${distributionId}`);
+    this.log(`Invalidating ${distributionId}`);
 
     const result = await this.cf.createInvalidation(params);
 

@@ -40,33 +40,34 @@ const awsSecretAccessKey = getValue('AWS_SECRET_ACCESS_KEY');
     }
   });
 
-  await new Action(
-    {
-      readdir: promisify(readdir),
-      stat: promisify(stat),
-      createReadStream,
-      join
-    },
-    s3,
-    cf,
-    {
-      setFailed,
-      log: info
-    },
-    {
-      lookup
-    },
-    {
-      match: async (path: string, pattern: string | string[]) =>
-        globby(pattern, { cwd: path, onlyFiles: true })
-    }
-  ).run({
-    location,
-    bucket,
-    cacheControl:
-      typeof cacheControl === 'undefined'
-        ? {}
-        : (safeLoad(cacheControl) as { [key: string]: string | string[] }),
-    invalidate
-  });
+  try {
+    await new Action(
+      {
+        readdir: promisify(readdir),
+        stat: promisify(stat),
+        createReadStream,
+        join
+      },
+      s3,
+      cf,
+      {
+        lookup
+      },
+      {
+        match: async (path: string, pattern: string | string[]) =>
+          globby(pattern, { cwd: path, onlyFiles: true })
+      },
+      info
+    ).run({
+      location,
+      bucket,
+      cacheControl:
+        typeof cacheControl === 'undefined'
+          ? {}
+          : (safeLoad(cacheControl) as { [key: string]: string | string[] }),
+      invalidate
+    });
+  } catch (error) {
+    setFailed(error);
+  }
 })();
