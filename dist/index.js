@@ -36,8 +36,10 @@ class Action {
     }
     async run(input) {
         try {
-            const cacheMap = await this.buildCacheMap(input.location, input.cacheControl);
-            const files = await this.getFiles(input.location);
+            const [cacheMap, files] = await Promise.all([
+                this.buildCacheMap(input.location, input.cacheControl),
+                this.getFiles(input.location)
+            ]);
             const uploads = files.map(async (file) => this.upload({
                 location: input.location,
                 bucket: input.bucket,
