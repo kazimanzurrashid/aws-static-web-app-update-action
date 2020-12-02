@@ -1,5 +1,5 @@
 {
-  "name": "aws-static-web-update-action",
+  "name": "aws-static-web-app-update-action",
   "version": "1.0.0",
   "private": true,
   "main": "build/index.js",
