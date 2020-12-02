@@ -11,6 +11,9 @@ inputs:
   bucket:
     required: true
     description: 'The name of the S3 bucket where the content would be uploaded'
+  cache-control:
+      required: false
+      description: 'HTTP cache-control mapping.'
   invalidate:
     required: false
     description: 'boolean or the cloudfront distribution id, if true then it would use the bucket name to find the associated distribution'

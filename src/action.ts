@@ -17,10 +17,12 @@ interface Input {
 
 interface RunInput extends Input {
   invalidate?: boolean | string;
+  cacheControl: { [key: string]: string | string[] };
 }
 
 interface UploadInput extends Input {
   file: string;
+  cacheControl?: string;
 }
 
 class Action {
@@ -49,18 +51,32 @@ class Action {
     },
     private readonly core: {
       setFailed: (message: Error | string) => void;
-      info: (message: string) => void;
+      log: (message: string) => void;
     },
     private readonly mime: {
       lookup: (filenameOrExt: string) => string | false;
+    },
+    private readonly glob: {
+      match: (path: string, pattern: string | string[]) => Promise<string[]>;
     }
   ) {}
 
   async run(input: RunInput): Promise<void> {
     try {
+      const cacheMap = await this.buildCacheMap(
+        input.location,
+        input.cacheControl
+      );
+
       const files = await this.getFiles(input.location);
+
       const uploads = files.map(async (file) =>
-        this.upload({ ...input, file })
+        this.upload({
+          location: input.location,
+          bucket: input.bucket,
+          cacheControl: cacheMap.get(file),
+          file
+        })
       );
 
       await Promise.all(uploads);
@@ -87,6 +103,23 @@ class Action {
     } catch (error) {
       this.core.setFailed(error);
     }
+  }
+
+  private async buildCacheMap(
+    path: string,
+    cacheControl: { [key: string]: string | string[] }
+  ): Promise<Map<string, string>> {
+    const map = new Map<string, string>();
+
+    for (const key of Object.keys(cacheControl)) {
+      const files = await this.glob.match(path, cacheControl[key]);
+
+      for (const file of files) {
+        map.set(this.fs.join(path, file), key);
+      }
+    }
+
+    return map;
   }
 
   private async getFiles(path: string): Promise<string[]> {
@@ -139,17 +172,21 @@ class Action {
       Body: this.fs.createReadStream(input.file)
     };
 
+    if (input.cacheControl) {
+      params.CacheControl = input.cacheControl;
+    }
+
     const contentType = this.mime.lookup(key);
 
     if (contentType) {
       params.ContentType = contentType;
     }
 
-    this.core.info(`uploading ${input.file}`);
+    this.core.log(`Uploading ${input.file}`);
 
     await this.s3.putObject(params);
 
-    this.core.info(`uploaded ${input.file}`);
+    this.core.log(`Uploaded ${input.file}`);
   }
 
   private async getDistributionId(domain: string): Promise<string | undefined> {
@@ -191,7 +228,7 @@ class Action {
             Id: id
           };
 
-          this.core.info('Checking invalidation status');
+          this.core.log('Checking invalidation status');
 
           try {
             const result = await this.cf.getInvalidation(params);
@@ -200,7 +237,7 @@ class Action {
               result.Invalidation &&
               result.Invalidation.Status === 'Completed'
             ) {
-              this.core.info('Invalidation completed');
+              this.core.log('Invalidation completed');
               return resolve();
             }
 
@@ -225,7 +262,7 @@ class Action {
       }
     };
 
-    this.core.info(`Invalidating ${distributionId}`);
+    this.core.log(`Invalidating ${distributionId}`);
 
     const result = await this.cf.createInvalidation(params);
 

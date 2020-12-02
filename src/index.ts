@@ -6,6 +6,8 @@ import { S3 } from '@aws-sdk/client-s3';
 import { CloudFront } from '@aws-sdk/client-cloudfront';
 import { getInput, setFailed, info } from '@actions/core';
 import { lookup } from 'mime-types';
+import globby from 'globby';
+import { safeLoad } from 'js-yaml';
 
 import { Action } from './action';
 
@@ -14,6 +16,7 @@ const getValue = (key: string): string =>
 
 const location = getInput('location', { required: true });
 const bucket = getInput('bucket', { required: true });
+const cacheControl = getInput('cache-control');
 const invalidate = getInput('invalidate');
 
 const awsRegion = getValue('AWS_REGION');
@@ -48,14 +51,22 @@ const awsSecretAccessKey = getValue('AWS_SECRET_ACCESS_KEY');
     cf,
     {
       setFailed,
-      info
+      log: info
     },
     {
       lookup
+    },
+    {
+      match: async (path: string, pattern: string | string[]) =>
+        globby(pattern, { cwd: path, onlyFiles: true })
     }
   ).run({
     location,
     bucket,
+    cacheControl:
+      typeof cacheControl === 'undefined'
+        ? {}
+        : (safeLoad(cacheControl) as { [key: string]: string | string[] }),
     invalidate
   });
 })();

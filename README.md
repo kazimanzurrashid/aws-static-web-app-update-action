@@ -14,6 +14,10 @@ The AWS Account needs to have the `"s3:PutObject"` permission, if Cloudfront inv
 
 **Required**. The name of the S3 bucket where the content would be uploaded.
 
+### `cache-control`
+
+_Optional_. HTTP cache-control mapping. behind the scene it uses [globby](https://github.com/sindresorhus/globby) to find the matching file.
+
 ### `invalidate`
 
 _Optional_. `Boolean` or the id of the cloudfront distribution, The default is `false`, if `true` then it uses the cloudfront distribution id that is associated with the S3 bucket.
@@ -52,6 +56,8 @@ uses: kazimanzurrashid/aws-static-web-app-update-action@v1
 with:
   location: './web/public'
   bucket: 'example.com'
+  cache-control:
+    private,max-age=31536000: ['**', '!index.html']
   invalidate: 'XXXXXXXXXXXXXX'
   AWS_REGION: ${{ secrets.AWS_REGION }}
   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
@@ -81,6 +87,7 @@ jobs:
       - name: Build
         run: |
           cd web
+          npm ci
           npm run build
 
       - name: Update
@@ -88,6 +95,8 @@ jobs:
         with:
           location: './web/public'
           bucket: 'example.com'
+          cache-control:
+            private,max-age=31536000: ['**', '!index.html']
           invalidate: true
         env:
           AWS_REGION: ${{ secrets.AWS_REGION }}
