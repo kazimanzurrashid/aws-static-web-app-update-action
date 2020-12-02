@@ -26,42 +26,37 @@ module.exports = JSON.parse("{\"name\":\"@aws-sdk/client-s3\",\"description\":\"
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Action = void 0;
 class Action {
-    constructor(fs, s3, cf, core, mime, glob) {
+    constructor(fs, s3, cf, mime, glob, log) {
         this.fs = fs;
         this.s3 = s3;
         this.cf = cf;
-        this.core = core;
         this.mime = mime;
         this.glob = glob;
+        this.log = log;
     }
     async run(input) {
-        try {
-            const [cacheMap, files] = await Promise.all([
-                this.buildCacheMap(input.location, input.cacheControl),
-                this.getFiles(input.location)
-            ]);
-            const uploads = files.map(async (file) => this.upload({
-                location: input.location,
-                bucket: input.bucket,
-                cacheControl: cacheMap.get(file),
-                file
-            }));
-            await Promise.all(uploads);
-            if (typeof input.invalidate === 'undefined' ||
-                (input.invalidate || 'false').toString().toLowerCase() === 'false') {
-                return;
-            }
-            const distributionId = input.invalidate.toString().toLowerCase() === 'true'
-                ? await this.getDistributionId(input.bucket)
-                : input.invalidate.toString();
-            if (!distributionId) {
-                return this.core.setFailed(`Could not find any cloudfront distribution that is associated with s3 bucket ${input.bucket}!`);
-            }
-            await this.invalidateDistribution(distributionId);
+        const [cacheMap, files] = await Promise.all([
+            this.buildCacheMap(input.location, input.cacheControl),
+            this.getFiles(input.location)
+        ]);
+        const uploads = files.map(async (file) => this.upload({
+            location: input.location,
+            bucket: input.bucket,
+            cacheControl: cacheMap.get(file),
+            file
+        }));
+        await Promise.all(uploads);
+        if (typeof input.invalidate === 'undefined' ||
+            (input.invalidate || 'false').toString().toLowerCase() === 'false') {
+            return;
         }
-        catch (error) {
-            this.core.setFailed(error);
+        const distributionId = input.invalidate.toString().toLowerCase() === 'true'
+            ? await this.getDistributionId(input.bucket)
+            : input.invalidate.toString();
+        if (!distributionId) {
+            throw new Error(`Could not find any cloudfront distribution that is associated with s3 bucket ${input.bucket}!`);
         }
+        await this.invalidateDistribution(distributionId);
     }
     async buildCacheMap(path, cacheControl) {
         const map = new Map();
@@ -102,9 +97,7 @@ class Action {
         return load(path);
     }
     async upload(input) {
-        const key = input.file
-            .substring(input.location.length + 1)
-            .replace(/\\/g, '/');
+        const key = input.file.substring(input.location.length).replace(/\\/g, '/');
         const params = {
             Bucket: input.bucket,
             Key: key,
@@ -117,9 +110,9 @@ class Action {
         if (contentType) {
             params.ContentType = contentType;
         }
-        this.core.log(`Uploading ${input.file}`);
+        this.log(`Uploading ${input.file}`);
         await this.s3.putObject(params);
-        this.core.log(`Uploaded ${input.file}`);
+        this.log(`Uploaded ${input.file}`);
     }
     async getDistributionId(domain) {
         var _a, _b, _c, _d;
@@ -149,12 +142,12 @@ class Action {
                         DistributionId: distributionId,
                         Id: id
                     };
-                    this.core.log('Checking invalidation status');
+                    this.log('Checking invalidation status');
                     try {
                         const result = await this.cf.getInvalidation(params);
                         if (result.Invalidation &&
                             result.Invalidation.Status === 'Completed') {
-                            this.core.log('Invalidation completed');
+                            this.log('Invalidation completed');
                             return resolve();
                         }
                         await poll(id);
@@ -176,7 +169,7 @@ class Action {
                 }
             }
         };
-        this.core.log(`Invalidating ${distributionId}`);
+        this.log(`Invalidating ${distributionId}`);
         const result = await this.cf.createInvalidation(params);
         if (result.Invalidation && result.Invalidation.Id) {
             await poll(result.Invalidation.Id);
@@ -230,26 +223,28 @@ const awsSecretAccessKey = getValue('AWS_SECRET_ACCESS_KEY');
             secretAccessKey: awsSecretAccessKey
         }
     });
-    await new action_1.Action({
-        readdir: util_1.promisify(fs_1.readdir),
-        stat: util_1.promisify(fs_1.stat),
-        createReadStream: fs_1.createReadStream,
-        join: path_1.join
-    }, s3, cf, {
-        setFailed: core_1.setFailed,
-        log: core_1.info
-    }, {
-        lookup: mime_types_1.lookup
-    }, {
-        match: async (path, pattern) => globby_1.default(pattern, { cwd: path, onlyFiles: true })
-    }).run({
-        location,
-        bucket,
-        cacheControl: typeof cacheControl === 'undefined'
-            ? {}
-            : js_yaml_1.safeLoad(cacheControl),
-        invalidate
-    });
+    try {
+        await new action_1.Action({
+            readdir: util_1.promisify(fs_1.readdir),
+            stat: util_1.promisify(fs_1.stat),
+            createReadStream: fs_1.createReadStream,
+            join: path_1.join
+        }, s3, cf, {
+            lookup: mime_types_1.lookup
+        }, {
+            match: async (path, pattern) => globby_1.default(pattern, { cwd: path, onlyFiles: true })
+        }, core_1.info).run({
+            location,
+            bucket,
+            cacheControl: cacheControl
+                ? js_yaml_1.safeLoad(cacheControl)
+                : {},
+            invalidate
+        });
+    }
+    catch (error) {
+        core_1.setFailed(error);
+    }
 })();
 
 

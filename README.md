@@ -56,7 +56,7 @@ uses: kazimanzurrashid/aws-static-web-app-update-action@v1
 with:
   location: './web/public'
   bucket: 'example.com'
-  cache-control:
+  cache-control: |
     private,max-age=31536000: ['**', '!index.html']
   invalidate: 'XXXXXXXXXXXXXX'
   AWS_REGION: ${{ secrets.AWS_REGION }}
@@ -95,7 +95,7 @@ jobs:
         with:
           location: './web/public'
           bucket: 'example.com'
-          cache-control:
+          cache-control: |
             private,max-age=31536000: ['**', '!index.html']
           invalidate: true
         env:
