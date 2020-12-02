@@ -97,7 +97,9 @@ class Action {
         return load(path);
     }
     async upload(input) {
-        const key = input.file.substring(input.location.length).replace(/\\/g, '/');
+        const key = input.file
+            .substring(input.location.length - 1)
+            .replace(/\\/g, '/');
         const params = {
             Bucket: input.bucket,
             Key: key,

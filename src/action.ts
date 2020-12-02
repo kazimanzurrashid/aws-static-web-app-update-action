@@ -153,7 +153,9 @@ class Action {
   }
 
   private async upload(input: UploadInput): Promise<void> {
-    const key = input.file.substring(input.location.length).replace(/\\/g, '/');
+    const key = input.file
+      .substring(input.location.length - 1)
+      .replace(/\\/g, '/');
 
     const params: PutObjectRequest = {
       Bucket: input.bucket,
