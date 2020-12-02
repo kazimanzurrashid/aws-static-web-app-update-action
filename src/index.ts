@@ -61,10 +61,9 @@ const awsSecretAccessKey = getValue('AWS_SECRET_ACCESS_KEY');
     ).run({
       location,
       bucket,
-      cacheControl:
-        typeof cacheControl === 'undefined'
-          ? {}
-          : (safeLoad(cacheControl) as { [key: string]: string | string[] }),
+      cacheControl: cacheControl
+        ? (safeLoad(cacheControl) as { [key: string]: string | string[] })
+        : {},
       invalidate
     });
   } catch (error) {
