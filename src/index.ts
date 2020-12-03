@@ -23,23 +23,23 @@ const awsRegion = getValue('AWS_REGION');
 const awsAccessKeyId = getValue('AWS_ACCESS_KEY_ID');
 const awsSecretAccessKey = getValue('AWS_SECRET_ACCESS_KEY');
 
+const s3 = new S3({
+  region: awsRegion,
+  credentials: {
+    accessKeyId: awsAccessKeyId,
+    secretAccessKey: awsSecretAccessKey
+  }
+});
+
+const cf = new CloudFront({
+  region: awsRegion,
+  credentials: {
+    accessKeyId: awsAccessKeyId,
+    secretAccessKey: awsSecretAccessKey
+  }
+});
+
 (async () => {
-  const s3 = new S3({
-    region: awsRegion,
-    credentials: {
-      accessKeyId: awsAccessKeyId,
-      secretAccessKey: awsSecretAccessKey
-    }
-  });
-
-  const cf = new CloudFront({
-    region: awsRegion,
-    credentials: {
-      accessKeyId: awsAccessKeyId,
-      secretAccessKey: awsSecretAccessKey
-    }
-  });
-
   try {
     await new Action(
       {
@@ -64,7 +64,8 @@ const awsSecretAccessKey = getValue('AWS_SECRET_ACCESS_KEY');
       cacheControl: cacheControl
         ? (safeLoad(cacheControl) as { [key: string]: string | string[] })
         : {},
-      invalidate
+      invalidate,
+      region: awsRegion
     });
   } catch (error) {
     setFailed(error);

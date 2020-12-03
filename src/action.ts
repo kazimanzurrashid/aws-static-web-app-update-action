@@ -18,6 +18,7 @@ interface Input {
 interface RunInput extends Input {
   invalidate?: boolean | string;
   cacheControl: { [key: string]: string | string[] };
+  region: string;
 }
 
 interface UploadInput extends Input {
@@ -84,7 +85,7 @@ class Action {
 
     const distributionId =
       input.invalidate.toString().toLowerCase() === 'true'
-        ? await this.getDistributionId(input.bucket)
+        ? await this.getDistributionId(input.bucket, input.region)
         : input.invalidate.toString();
 
     if (!distributionId) {
@@ -172,7 +173,18 @@ class Action {
     this.log(`Uploaded ${input.file}`);
   }
 
-  private async getDistributionId(domain: string): Promise<string | undefined> {
+  private async getDistributionId(
+    bucket: string,
+    region: string
+  ): Promise<string | undefined> {
+    const normalizedBucket = bucket.toLowerCase();
+    const normalizedRegion = region.toLowerCase();
+
+    const bucketWithDomainNames = [
+      `${normalizedBucket}.s3.${normalizedRegion}.amazonaws.com`,
+      `${normalizedBucket}.s3-website-${normalizedRegion}.amazonaws.com`
+    ];
+
     let nextMarker: string | undefined = undefined;
 
     do {
@@ -183,20 +195,31 @@ class Action {
 
       const result = await this.cf.listDistributions(params);
 
-      nextMarker = result.DistributionList?.NextMarker;
-
-      const match = result.DistributionList?.Items?.find(
+      let match = result.DistributionList?.Items?.find(
         (item) =>
           item.Aliases &&
           item.Aliases.Items &&
-          item.Aliases.Items.some((a) => a.toLowerCase() === domain)
+          item.Aliases.Items.some((a) => a.toLowerCase() === normalizedBucket)
       );
 
-      nextMarker = result.DistributionList?.NextMarker;
+      if (!match) {
+        match = result.DistributionList?.Items?.find(
+          (item) =>
+            item.Origins &&
+            item.Origins.Items &&
+            item.Origins.Items.some(
+              (o) =>
+                o.DomainName &&
+                bucketWithDomainNames.includes(o.DomainName.toLowerCase())
+            )
+        );
+      }
 
       if (match) {
         return match.Id;
       }
+
+      nextMarker = result.DistributionList?.NextMarker;
     } while (nextMarker);
 
     return undefined;

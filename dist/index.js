@@ -51,7 +51,7 @@ class Action {
             return;
         }
         const distributionId = input.invalidate.toString().toLowerCase() === 'true'
-            ? await this.getDistributionId(input.bucket)
+            ? await this.getDistributionId(input.bucket, input.region)
             : input.invalidate.toString();
         if (!distributionId) {
             throw new Error(`Could not find any cloudfront distribution that is associated with s3 bucket ${input.bucket}!`);
@@ -111,8 +111,14 @@ class Action {
         await this.s3.putObject(params);
         this.log(`Uploaded ${input.file}`);
     }
-    async getDistributionId(domain) {
-        var _a, _b, _c, _d;
+    async getDistributionId(bucket, region) {
+        var _a, _b, _c, _d, _e;
+        const normalizedBucket = bucket.toLowerCase();
+        const normalizedRegion = region.toLowerCase();
+        const bucketWithDomainNames = [
+            `${normalizedBucket}.s3.${normalizedRegion}.amazonaws.com`,
+            `${normalizedBucket}.s3-website-${normalizedRegion}.amazonaws.com`
+        ];
         let nextMarker = undefined;
         do {
             const params = {
@@ -120,14 +126,19 @@ class Action {
                 MaxItems: '100'
             };
             const result = await this.cf.listDistributions(params);
-            nextMarker = (_a = result.DistributionList) === null || _a === void 0 ? void 0 : _a.NextMarker;
-            const match = (_c = (_b = result.DistributionList) === null || _b === void 0 ? void 0 : _b.Items) === null || _c === void 0 ? void 0 : _c.find((item) => item.Aliases &&
+            let match = (_b = (_a = result.DistributionList) === null || _a === void 0 ? void 0 : _a.Items) === null || _b === void 0 ? void 0 : _b.find((item) => item.Aliases &&
                 item.Aliases.Items &&
-                item.Aliases.Items.some((a) => a.toLowerCase() === domain));
-            nextMarker = (_d = result.DistributionList) === null || _d === void 0 ? void 0 : _d.NextMarker;
+                item.Aliases.Items.some((a) => a.toLowerCase() === normalizedBucket));
+            if (!match) {
+                match = (_d = (_c = result.DistributionList) === null || _c === void 0 ? void 0 : _c.Items) === null || _d === void 0 ? void 0 : _d.find((item) => item.Origins &&
+                    item.Origins.Items &&
+                    item.Origins.Items.some((o) => o.DomainName &&
+                        bucketWithDomainNames.includes(o.DomainName.toLowerCase())));
+            }
             if (match) {
                 return match.Id;
             }
+            nextMarker = (_e = result.DistributionList) === null || _e === void 0 ? void 0 : _e.NextMarker;
         } while (nextMarker);
         return undefined;
     }
@@ -205,21 +216,21 @@ const invalidate = core_1.getInput('invalidate');
 const awsRegion = getValue('AWS_REGION');
 const awsAccessKeyId = getValue('AWS_ACCESS_KEY_ID');
 const awsSecretAccessKey = getValue('AWS_SECRET_ACCESS_KEY');
+const s3 = new client_s3_1.S3({
+    region: awsRegion,
+    credentials: {
+        accessKeyId: awsAccessKeyId,
+        secretAccessKey: awsSecretAccessKey
+    }
+});
+const cf = new client_cloudfront_1.CloudFront({
+    region: awsRegion,
+    credentials: {
+        accessKeyId: awsAccessKeyId,
+        secretAccessKey: awsSecretAccessKey
+    }
+});
 (async () => {
-    const s3 = new client_s3_1.S3({
-        region: awsRegion,
-        credentials: {
-            accessKeyId: awsAccessKeyId,
-            secretAccessKey: awsSecretAccessKey
-        }
-    });
-    const cf = new client_cloudfront_1.CloudFront({
-        region: awsRegion,
-        credentials: {
-            accessKeyId: awsAccessKeyId,
-            secretAccessKey: awsSecretAccessKey
-        }
-    });
     try {
         await new action_1.Action({
             readdir: util_1.promisify(fs_1.readdir),
@@ -236,7 +247,8 @@ const awsSecretAccessKey = getValue('AWS_SECRET_ACCESS_KEY');
             cacheControl: cacheControl
                 ? js_yaml_1.safeLoad(cacheControl)
                 : {},
-            invalidate
+            invalidate,
+            region: awsRegion
         });
     }
     catch (error) {
