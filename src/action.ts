@@ -1,6 +1,6 @@
 import { ReadStream, Stats } from 'fs';
 
-import { PutObjectRequest, PutObjectOutput } from '@aws-sdk/client-s3/models';
+import { PutObjectOutput, PutObjectRequest } from '@aws-sdk/client-s3/models';
 import {
   CreateInvalidationRequest,
   CreateInvalidationResult,
@@ -55,7 +55,7 @@ class Action {
     private readonly glob: {
       match: (path: string, pattern: string | string[]) => Promise<string[]>;
     },
-    private log: (message: string) => void
+    private readonly log: (message: string) => void
   ) {}
 
   async run(input: RunInput): Promise<void> {
@@ -114,42 +114,34 @@ class Action {
   }
 
   private async getFiles(path: string): Promise<string[]> {
-    const load = async (location: string): Promise<string[]> => {
-      const entries = await this.fs.readdir(location);
-      const entriesWithStat = await Promise.all(
-        entries.map(async (entry) => {
-          const full = this.fs.join(location, entry);
-          const stat = await this.fs.stat(full);
+    const entries = await this.fs.readdir(path);
+    const entriesWithStat = await Promise.all(
+      entries.map(async (entry) => {
+        const full = this.fs.join(path, entry);
+        const stat = await this.fs.stat(full);
+        return {
+          full,
+          stat
+        };
+      })
+    );
 
-          return {
-            full,
-            stat
-          };
-        })
-      );
+    const files: string[] = [];
+    const directories: string[] = [];
 
-      const files: string[] = [];
-      const directories: string[] = [];
-
-      for (const entry of entriesWithStat) {
-        if (entry.stat.isFile()) {
-          files.push(entry.full);
-        } else if (entry.stat.isDirectory()) {
-          directories.push(entry.full);
-        }
+    for (const entry of entriesWithStat) {
+      if (entry.stat.isFile()) {
+        files.push(entry.full);
+      } else if (entry.stat.isDirectory()) {
+        directories.push(entry.full);
       }
+    }
 
-      await directories
-        .map(load)
-        .reduce(
-          async (a, c) => [...(await a), ...(await c)],
-          Promise.resolve(files)
-        );
+    const tasks = await Promise.all(
+      directories.map(async (directory) => this.getFiles(directory))
+    );
 
-      return files;
-    };
-
-    return load(path);
+    return tasks.reduce((a, c) => [...a, ...c], files);
   }
 
   private async upload(input: UploadInput): Promise<void> {

@@ -69,32 +69,27 @@ class Action {
         return map;
     }
     async getFiles(path) {
-        const load = async (location) => {
-            const entries = await this.fs.readdir(location);
-            const entriesWithStat = await Promise.all(entries.map(async (entry) => {
-                const full = this.fs.join(location, entry);
-                const stat = await this.fs.stat(full);
-                return {
-                    full,
-                    stat
-                };
-            }));
-            const files = [];
-            const directories = [];
-            for (const entry of entriesWithStat) {
-                if (entry.stat.isFile()) {
-                    files.push(entry.full);
-                }
-                else if (entry.stat.isDirectory()) {
-                    directories.push(entry.full);
-                }
+        const entries = await this.fs.readdir(path);
+        const entriesWithStat = await Promise.all(entries.map(async (entry) => {
+            const full = this.fs.join(path, entry);
+            const stat = await this.fs.stat(full);
+            return {
+                full,
+                stat
+            };
+        }));
+        const files = [];
+        const directories = [];
+        for (const entry of entriesWithStat) {
+            if (entry.stat.isFile()) {
+                files.push(entry.full);
             }
-            await directories
-                .map(load)
-                .reduce(async (a, c) => [...(await a), ...(await c)], Promise.resolve(files));
-            return files;
-        };
-        return load(path);
+            else if (entry.stat.isDirectory()) {
+                directories.push(entry.full);
+            }
+        }
+        const tasks = await Promise.all(directories.map(async (directory) => this.getFiles(directory)));
+        return tasks.reduce((a, c) => [...a, ...c], files);
     }
     async upload(input) {
         const key = input.file
