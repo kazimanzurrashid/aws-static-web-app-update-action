@@ -170,7 +170,7 @@ class Action {
         const params = {
             DistributionId: distributionId,
             InvalidationBatch: {
-                CallerReference: Date.now().toString(),
+                CallerReference: process.env.GITHUB_SHA,
                 Paths: {
                     Quantity: 1,
                     Items: ['/*']

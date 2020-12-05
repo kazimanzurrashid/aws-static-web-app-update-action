@@ -260,7 +260,7 @@ class Action {
     const params: CreateInvalidationRequest = {
       DistributionId: distributionId,
       InvalidationBatch: {
-        CallerReference: process.env.GITHUB_SHA || Date.now().toString(),
+        CallerReference: process.env.GITHUB_SHA,
         Paths: {
           Quantity: 1,
           Items: ['/*']
