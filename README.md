@@ -64,7 +64,7 @@ with:
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 ```
 
-### complete
+### React
 
 ```yaml
 name: Web
@@ -86,17 +86,97 @@ jobs:
 
       - name: Build
         run: |
-          cd web
           npm ci
           npm run build
 
       - name: Update
         uses: kazimanzurrashid/aws-static-web-app-update-action@v1
         with:
-          location: './web/public'
-          bucket: 'example.com'
+          location: ./build
+          bucket: my-site.com
           cache-control: |
-            private,max-age=31536000: ['**', '!index.html']
+            public, max-age=31536000, immutable: '/static/**/**'
+            max-age=0, no-cache, no-store, must-revalidate: ['./index.html', './'service-worker.js]
+          invalidate: true
+        env:
+          AWS_REGION: ${{ secrets.AWS_REGION }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+```
+
+### Angular
+
+```yaml
+name: Web
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Node.js setup
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: 12.x
+
+      - name: Build
+        run: |
+          npm ci
+          npm run build --prod
+
+      - name: Update
+        uses: kazimanzurrashid/aws-static-web-app-update-action@v1
+        with:
+          location: ./dist/my-ng-app
+          bucket: my-site.com
+          cache-control: |
+            public, max-age=31536000, immutable: ['./**/*.js', './**/*.css', './**/*.png', './**/*.jpg', './assets/**/**']
+            max-age=0, no-cache, no-store, must-revalidate: ['./index.html']
+          invalidate: true
+        env:
+          AWS_REGION: ${{ secrets.AWS_REGION }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+```
+
+### Gatsby
+
+```yaml
+name: Web
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Node.js setup
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: 12.x
+
+      - name: Build
+        run: |
+          npm ci
+          npm run build
+
+      - name: Update
+        uses: kazimanzurrashid/aws-static-web-app-update-action@v1
+        with:
+          location: ./public
+          bucket: my-site.com
+          cache-control: |
+            max-age=0, no-cache, no-store, must-revalidate: ['./**/**/*.html', './page-data/**/**']
+            public, max-age=31536000, immutable: ['./static/**/**', './*.js', './*.css']
           invalidate: true
         env:
           AWS_REGION: ${{ secrets.AWS_REGION }}
