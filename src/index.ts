@@ -18,7 +18,7 @@ const location = getInput('location', { required: true });
 const bucket = getInput('bucket', { required: true });
 const cacheControl = getInput('cache-control');
 const invalidate = getInput('invalidate');
-
+const wait = (getInput('wait') || 'true').toLowerCase() === 'true';
 const awsRegion = getValue('AWS_REGION');
 const awsAccessKeyId = getValue('AWS_ACCESS_KEY_ID');
 const awsSecretAccessKey = getValue('AWS_SECRET_ACCESS_KEY');
@@ -65,7 +65,8 @@ const cf = new CloudFront({
         ? (safeLoad(cacheControl) as { [key: string]: string | string[] })
         : {},
       invalidate,
-      region: awsRegion
+      region: awsRegion,
+      wait
     });
   } catch (error) {
     setFailed(error);

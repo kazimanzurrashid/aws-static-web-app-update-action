@@ -16,7 +16,12 @@ inputs:
       description: 'HTTP cache-control mapping.'
   invalidate:
     required: false
+    default: "false"
     description: 'boolean or the cloudfront distribution id, if true then it would use the bucket name to find the associated distribution'
+  wait:
+    required: false
+    default: "true"
+    description: 'boolean, if true then it would wait for the invalidation to complete, default is true'
   AWS_REGION:
     description: 'Optional if not specified fallbacks to environment variable'
     required: false

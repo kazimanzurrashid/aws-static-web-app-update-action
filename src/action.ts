@@ -17,6 +17,7 @@ interface Input {
 
 interface RunInput extends Input {
   invalidate?: boolean | string;
+  wait: boolean;
   cacheControl: { [key: string]: string | string[] };
   region: string;
 }
@@ -94,7 +95,7 @@ class Action {
       );
     }
 
-    await this.invalidateDistribution(distributionId);
+    await this.invalidateDistribution(distributionId, input.wait);
   }
 
   private async buildCacheMap(
@@ -225,7 +226,10 @@ class Action {
     return undefined;
   }
 
-  private async invalidateDistribution(distributionId: string): Promise<void> {
+  private async invalidateDistribution(
+    distributionId: string,
+    wait: boolean
+  ): Promise<void> {
     const poll = async (id: string): Promise<void> => {
       return new Promise((resolve, reject) => {
         setTimeout(async () => {
@@ -253,7 +257,7 @@ class Action {
           } catch (error) {
             return reject(error);
           }
-        }, 1000 * 10);
+        }, 1000 * 20);
       });
     };
 
@@ -272,7 +276,7 @@ class Action {
 
     const result = await this.cf.createInvalidation(params);
 
-    if (result.Invalidation && result.Invalidation.Id) {
+    if (wait && result.Invalidation && result.Invalidation.Id) {
       await poll(result.Invalidation.Id);
     }
   }

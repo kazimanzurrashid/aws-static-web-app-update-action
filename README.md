@@ -20,7 +20,11 @@ _Optional_. HTTP cache-control mapping. behind the scene it uses [globby](https:
 
 ### `invalidate`
 
-_Optional_. `Boolean` or the id of the cloudfront distribution, The default is `false`, if `true` then it uses the cloudfront distribution id that is associated with the S3 bucket.
+_Optional_. `Boolean` or the id of the cloudfront distribution, the default is `false`, if `true` then it uses the cloudfront distribution id that is associated with the S3 bucket.
+
+### `wait`
+
+_Optional_. `Boolean`,  if `true` then it would wait for the invalidation to complete, the default it `true`.
 
 ### `AWS_REGION`
 
@@ -59,6 +63,7 @@ with:
   cache-control: |
     private,max-age=31536000: ['**', '!index.html']
   invalidate: 'XXXXXXXXXXXXXX'
+  wait: 'true'
   AWS_REGION: ${{ secrets.AWS_REGION }}
   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
