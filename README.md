@@ -63,7 +63,7 @@ with:
   cache-control: |
     private,max-age=31536000: ['**', '!index.html']
   invalidate: 'XXXXXXXXXXXXXX'
-  wait: 'true'
+  wait: true
   AWS_REGION: ${{ secrets.AWS_REGION }}
   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
