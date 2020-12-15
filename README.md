@@ -1,8 +1,67 @@
 # AWS Static Web App update action
 
-This action uploads the contents of the specified directory with proper mime-type and cache-control into S3 bucket and optionally issues an invalidation command to associated cloudfront distribution
+[![GitHub](https://img.shields.io/github/license/kazimanzurrashid/aws-static-web-app-update-action)](https://opensource.org/licenses/MIT)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/kazimanzurrashid/aws-static-web-app-update-action)](https://github.com/kazimanzurrashid/aws-static-web-app-update-action/releases)
 
-The AWS Account needs to have the `"s3:PutObject"` permission, if Cloudfront invalidation is enabled then `"cloudfront:CreateInvalidation"` and `"cloudfront:GetInvalidation"` are required, if no distribution id is provided (e.g. `invalidate: true`) then `"cloudfront:ListDistributions"` is also required.
+This action uploads the contents of the specified directory with proper mime-type and cache-control into 
+S3 bucket and optionally issues an invalidation command to associated cloudfront distribution.
+
+## Usage
+
+### minimum
+
+```yaml
+uses: kazimanzurrashid/aws-static-web-app-update-action@v1
+with:
+  location: './web/public'
+  bucket: 'example.com'
+```
+
+### complete
+
+```yaml
+uses: kazimanzurrashid/aws-static-web-app-update-action@v1
+with:
+  location: './web/public'
+  bucket: 'example.com'
+  cache-control: |
+    private,max-age=31536000: ['**', '!index.html']
+  invalidate: 'XXXXXXXXXXXXXX'
+  wait: true
+  AWS_REGION: ${{ secrets.AWS_REGION }}
+  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+```
+
+## AWS Permission
+
+The AWS Account needs to have the `"s3:PutObject"` permission, if Cloudfront invalidation is enabled 
+then `"cloudfront:CreateInvalidation"` and `"cloudfront:GetInvalidation"` are required, if no distribution id 
+is provided (e.g. `invalidate: true`) then `"cloudfront:ListDistributions"` is also required.
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "s3:PutObject"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "cloudfront:CreateInvalidation",
+        "cloudfront:GetInvalidation",
+        "cloudfront:ListDistributions"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
+```
 
 ## Inputs
 
@@ -28,46 +87,21 @@ _Optional_. `Boolean`,  if `true` then it would wait for the invalidation to com
 
 ### `AWS_REGION`
 
-_Optional_. If not specified fallbacks to environment variable.
+_Optional_, if not specified fallbacks to environment variable.
 
 ### `AWS_ACCESS_KEY_ID`
 
-_Optional_. If not specified fallbacks to environment variable.
+_Optional_, if not specified fallbacks to environment variable.
 
 ### `AWS_SECRET_ACCESS_KEY`
 
-_Optional_. If not specified fallbacks to environment variable.
+_Optional_, if not specified fallbacks to environment variable.
 
 ## Outputs
 
 N/A
 
-## Example usage
-
-### minimum
-
-```yaml
-uses: kazimanzurrashid/aws-static-web-app-update-action@v1
-with:
-  location: './web/public'
-  bucket: 'example.com'
-```
-
-### all
-
-```yaml
-uses: kazimanzurrashid/aws-static-web-app-update-action@v1
-with:
-  location: './web/public'
-  bucket: 'example.com'
-  cache-control: |
-    private,max-age=31536000: ['**', '!index.html']
-  invalidate: 'XXXXXXXXXXXXXX'
-  wait: true
-  AWS_REGION: ${{ secrets.AWS_REGION }}
-  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-```
+## Examples
 
 ### React
 
