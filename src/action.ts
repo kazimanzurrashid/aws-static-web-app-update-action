@@ -63,7 +63,7 @@ class Action {
   async run(input: RunInput): Promise<void> {
     const [cacheMap, files] = await Promise.all([
       this.buildCacheMap(input.location, input.cacheControl),
-      this.getFiles(input.location)
+      this.listFiles(input.location)
     ]);
 
     const uploads = files.map(async (file) =>
@@ -86,7 +86,7 @@ class Action {
 
     const distributionId =
       input.invalidate.toString().toLowerCase() === 'true'
-        ? await this.getDistributionId(input.bucket, input.region)
+        ? await this.findDistributionId(input.bucket, input.region)
         : input.invalidate.toString();
 
     if (!distributionId) {
@@ -115,7 +115,7 @@ class Action {
     return map;
   }
 
-  private async getFiles(path: string): Promise<string[]> {
+  private async listFiles(path: string): Promise<string[]> {
     const entries = await this.fs.readdir(path);
     const entriesWithStat = await Promise.all(
       entries.map(async (entry) => {
@@ -140,7 +140,7 @@ class Action {
     }
 
     const tasks = await Promise.all(
-      directories.map(async (directory) => this.getFiles(directory))
+      directories.map(async (directory) => this.listFiles(directory))
     );
 
     return tasks.reduce((a, c) => [...a, ...c], files);
@@ -174,7 +174,7 @@ class Action {
     this.log(`Uploaded ${input.file}`);
   }
 
-  private async getDistributionId(
+  private async findDistributionId(
     bucket: string,
     region: string
   ): Promise<string | undefined> {
