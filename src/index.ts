@@ -11,8 +11,7 @@ import { safeLoad } from 'js-yaml';
 
 import { Action } from './action';
 
-const getValue = (key: string): string =>
-  getInput(key) || (process.env[key] as string);
+const getValue = (key: string): string => getInput(key) || process.env[key];
 
 const location = getInput('location', { required: true });
 const bucket = getInput('bucket', { required: true });
