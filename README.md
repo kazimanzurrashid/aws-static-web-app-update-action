@@ -119,7 +119,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Node.js setup
-        uses: actions/setup-node@v2-beta
+        uses: actions/setup-node@v2.1.4
         with:
           node-version: 12.x
 
@@ -159,7 +159,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Node.js setup
-        uses: actions/setup-node@v2-beta
+        uses: actions/setup-node@v2.1.4
         with:
           node-version: 12.x
 
@@ -199,7 +199,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Node.js setup
-        uses: actions/setup-node@v2-beta
+        uses: actions/setup-node@v2.1.4
         with:
           node-version: 12.x
 
