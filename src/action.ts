@@ -191,7 +191,7 @@ class Action {
     do {
       const params: ListDistributionsRequest = {
         Marker: nextMarker,
-        MaxItems: 100
+        MaxItems: '100'
       };
 
       const result = await this.cf.listDistributions(params);
