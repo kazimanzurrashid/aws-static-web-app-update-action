@@ -6,7 +6,7 @@ require('./sourcemap-register.js');module.exports =
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse("{\"name\":\"@aws-sdk/client-cloudfront\",\"description\":\"AWS SDK for JavaScript Cloudfront Client for Node.js, Browser and React Native\",\"version\":\"1.0.0-rc.9\",\"scripts\":{\"clean\":\"yarn remove-definitions && yarn remove-dist && yarn remove-documentation\",\"build-documentation\":\"yarn remove-documentation && typedoc ./\",\"prepublishOnly\":\"yarn build\",\"pretest\":\"yarn build:cjs\",\"remove-definitions\":\"rimraf ./types\",\"remove-dist\":\"rimraf ./dist\",\"remove-documentation\":\"rimraf ./docs\",\"test\":\"exit 0\",\"build:cjs\":\"tsc -p tsconfig.json\",\"build:es\":\"tsc -p tsconfig.es.json\",\"build\":\"yarn build:cjs && yarn build:es\"},\"main\":\"./dist/cjs/index.js\",\"types\":\"./types/index.d.ts\",\"module\":\"./dist/es/index.js\",\"browser\":{\"./runtimeConfig\":\"./runtimeConfig.browser\"},\"react-native\":{\"./runtimeConfig\":\"./runtimeConfig.native\"},\"sideEffects\":false,\"dependencies\":{\"@aws-crypto/sha256-browser\":\"^1.0.0\",\"@aws-crypto/sha256-js\":\"^1.0.0\",\"@aws-sdk/config-resolver\":\"1.0.0-rc.9\",\"@aws-sdk/credential-provider-node\":\"1.0.0-rc.9\",\"@aws-sdk/fetch-http-handler\":\"1.0.0-rc.8\",\"@aws-sdk/hash-node\":\"1.0.0-rc.8\",\"@aws-sdk/invalid-dependency\":\"1.0.0-rc.8\",\"@aws-sdk/middleware-content-length\":\"1.0.0-rc.8\",\"@aws-sdk/middleware-host-header\":\"1.0.0-rc.8\",\"@aws-sdk/middleware-logger\":\"1.0.0-rc.8\",\"@aws-sdk/middleware-retry\":\"1.0.0-rc.9\",\"@aws-sdk/middleware-serde\":\"1.0.0-rc.8\",\"@aws-sdk/middleware-signing\":\"1.0.0-rc.9\",\"@aws-sdk/middleware-stack\":\"1.0.0-rc.8\",\"@aws-sdk/middleware-user-agent\":\"1.0.0-rc.8\",\"@aws-sdk/node-config-provider\":\"1.0.0-rc.9\",\"@aws-sdk/node-http-handler\":\"1.0.0-rc.8\",\"@aws-sdk/protocol-http\":\"1.0.0-rc.8\",\"@aws-sdk/smithy-client\":\"1.0.0-rc.8\",\"@aws-sdk/url-parser-browser\":\"1.0.0-rc.8\",\"@aws-sdk/url-parser-node\":\"1.0.0-rc.9\",\"@aws-sdk/util-base64-browser\":\"1.0.0-rc.8\",\"@aws-sdk/util-base64-node\":\"1.0.0-rc.8\",\"@aws-sdk/util-body-length-browser\":\"1.0.0-rc.8\",\"@aws-sdk/util-body-length-node\":\"1.0.0-rc.8\",\"@aws-sdk/util-user-agent-browser\":\"1.0.0-rc.8\",\"@aws-sdk/util-user-agent-node\":\"1.0.0-rc.8\",\"@aws-sdk/util-utf8-browser\":\"1.0.0-rc.8\",\"@aws-sdk/util-utf8-node\":\"1.0.0-rc.8\",\"@aws-sdk/xml-builder\":\"1.0.0-rc.8\",\"fast-xml-parser\":\"^3.16.0\",\"tslib\":\"^2.0.0\"},\"devDependencies\":{\"@aws-sdk/client-documentation-generator\":\"1.0.0-rc.8\",\"@aws-sdk/types\":\"1.0.0-rc.8\",\"@types/node\":\"^12.7.5\",\"jest\":\"^26.1.0\",\"rimraf\":\"^3.0.0\",\"typedoc\":\"^0.19.2\",\"typescript\":\"~4.1.2\"},\"engines\":{\"node\":\">=10.0.0\"},\"author\":{\"name\":\"AWS SDK for JavaScript Team\",\"url\":\"https://aws.amazon.com/javascript/\"},\"license\":\"Apache-2.0\",\"homepage\":\"https://github.com/aws/aws-sdk-js-v3/tree/master/clients/client-cloudfront\",\"repository\":{\"type\":\"git\",\"url\":\"https://github.com/aws/aws-sdk-js-v3.git\",\"directory\":\"clients/client-cloudfront\"}}");
+module.exports = JSON.parse("{\"name\":\"@aws-sdk/client-cloudfront\",\"description\":\"AWS SDK for JavaScript Cloudfront Client for Node.js, Browser and React Native\",\"version\":\"3.1.0\",\"scripts\":{\"clean\":\"yarn remove-definitions && yarn remove-dist && yarn remove-documentation\",\"build-documentation\":\"yarn remove-documentation && typedoc ./\",\"prepublishOnly\":\"yarn build\",\"pretest\":\"yarn build:cjs\",\"remove-definitions\":\"rimraf ./types\",\"remove-dist\":\"rimraf ./dist\",\"remove-documentation\":\"rimraf ./docs\",\"test\":\"exit 0\",\"build:cjs\":\"tsc -p tsconfig.json\",\"build:es\":\"tsc -p tsconfig.es.json\",\"build\":\"yarn build:cjs && yarn build:es\"},\"main\":\"./dist/cjs/index.js\",\"types\":\"./types/index.d.ts\",\"module\":\"./dist/es/index.js\",\"browser\":{\"./runtimeConfig\":\"./runtimeConfig.browser\"},\"react-native\":{\"./runtimeConfig\":\"./runtimeConfig.native\"},\"sideEffects\":false,\"dependencies\":{\"@aws-crypto/sha256-browser\":\"^1.0.0\",\"@aws-crypto/sha256-js\":\"^1.0.0\",\"@aws-sdk/config-resolver\":\"3.1.0\",\"@aws-sdk/credential-provider-node\":\"3.1.0\",\"@aws-sdk/fetch-http-handler\":\"3.1.0\",\"@aws-sdk/hash-node\":\"3.1.0\",\"@aws-sdk/invalid-dependency\":\"3.1.0\",\"@aws-sdk/middleware-content-length\":\"3.1.0\",\"@aws-sdk/middleware-host-header\":\"3.1.0\",\"@aws-sdk/middleware-logger\":\"3.1.0\",\"@aws-sdk/middleware-retry\":\"3.1.0\",\"@aws-sdk/middleware-serde\":\"3.1.0\",\"@aws-sdk/middleware-signing\":\"3.1.0\",\"@aws-sdk/middleware-stack\":\"3.1.0\",\"@aws-sdk/middleware-user-agent\":\"3.1.0\",\"@aws-sdk/node-config-provider\":\"3.1.0\",\"@aws-sdk/node-http-handler\":\"3.1.0\",\"@aws-sdk/protocol-http\":\"3.1.0\",\"@aws-sdk/smithy-client\":\"3.1.0\",\"@aws-sdk/url-parser-browser\":\"3.1.0\",\"@aws-sdk/url-parser-node\":\"3.1.0\",\"@aws-sdk/util-base64-browser\":\"3.1.0\",\"@aws-sdk/util-base64-node\":\"3.1.0\",\"@aws-sdk/util-body-length-browser\":\"3.1.0\",\"@aws-sdk/util-body-length-node\":\"3.1.0\",\"@aws-sdk/util-user-agent-browser\":\"3.1.0\",\"@aws-sdk/util-user-agent-node\":\"3.1.0\",\"@aws-sdk/util-utf8-browser\":\"3.1.0\",\"@aws-sdk/util-utf8-node\":\"3.1.0\",\"@aws-sdk/util-waiter\":\"3.1.0\",\"@aws-sdk/xml-builder\":\"3.1.0\",\"fast-xml-parser\":\"^3.16.0\",\"tslib\":\"^2.0.0\"},\"devDependencies\":{\"@aws-sdk/client-documentation-generator\":\"3.1.0\",\"@aws-sdk/types\":\"3.1.0\",\"@types/node\":\"^12.7.5\",\"jest\":\"^26.1.0\",\"rimraf\":\"^3.0.0\",\"typedoc\":\"^0.19.2\",\"typescript\":\"~4.1.2\"},\"engines\":{\"node\":\">=10.0.0\"},\"author\":{\"name\":\"AWS SDK for JavaScript Team\",\"url\":\"https://aws.amazon.com/javascript/\"},\"license\":\"Apache-2.0\",\"homepage\":\"https://github.com/aws/aws-sdk-js-v3/tree/master/clients/client-cloudfront\",\"repository\":{\"type\":\"git\",\"url\":\"https://github.com/aws/aws-sdk-js-v3.git\",\"directory\":\"clients/client-cloudfront\"}}");
 
 /***/ }),
 
@@ -14,7 +14,7 @@ module.exports = JSON.parse("{\"name\":\"@aws-sdk/client-cloudfront\",\"descript
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse("{\"name\":\"@aws-sdk/client-s3\",\"description\":\"AWS SDK for JavaScript S3 Client for Node.js, Browser and React Native\",\"version\":\"1.0.0-rc.9\",\"scripts\":{\"clean\":\"yarn remove-definitions && yarn remove-dist && yarn remove-documentation\",\"build-documentation\":\"yarn remove-documentation && typedoc ./\",\"prepublishOnly\":\"yarn build\",\"pretest\":\"yarn build:cjs\",\"remove-definitions\":\"rimraf ./types\",\"remove-dist\":\"rimraf ./dist\",\"remove-documentation\":\"rimraf ./docs\",\"test:unit\":\"mocha **/cjs/**/*.spec.js\",\"test:e2e\":\"mocha **/cjs/**/*.ispec.js && karma start karma.conf.js\",\"test\":\"yarn test:unit\",\"build:cjs\":\"tsc -p tsconfig.json\",\"build:es\":\"tsc -p tsconfig.es.json\",\"build\":\"yarn build:cjs && yarn build:es\"},\"main\":\"./dist/cjs/index.js\",\"types\":\"./types/index.d.ts\",\"module\":\"./dist/es/index.js\",\"browser\":{\"./runtimeConfig\":\"./runtimeConfig.browser\"},\"react-native\":{\"./runtimeConfig\":\"./runtimeConfig.native\"},\"sideEffects\":false,\"dependencies\":{\"@aws-crypto/sha256-browser\":\"^1.0.0\",\"@aws-crypto/sha256-js\":\"^1.0.0\",\"@aws-sdk/config-resolver\":\"1.0.0-rc.9\",\"@aws-sdk/credential-provider-node\":\"1.0.0-rc.9\",\"@aws-sdk/eventstream-serde-browser\":\"1.0.0-rc.8\",\"@aws-sdk/eventstream-serde-config-resolver\":\"1.0.0-rc.8\",\"@aws-sdk/eventstream-serde-node\":\"1.0.0-rc.8\",\"@aws-sdk/fetch-http-handler\":\"1.0.0-rc.8\",\"@aws-sdk/hash-blob-browser\":\"1.0.0-rc.8\",\"@aws-sdk/hash-node\":\"1.0.0-rc.8\",\"@aws-sdk/hash-stream-node\":\"1.0.0-rc.8\",\"@aws-sdk/invalid-dependency\":\"1.0.0-rc.8\",\"@aws-sdk/md5-js\":\"1.0.0-rc.8\",\"@aws-sdk/middleware-apply-body-checksum\":\"1.0.0-rc.8\",\"@aws-sdk/middleware-bucket-endpoint\":\"1.0.0-rc.9\",\"@aws-sdk/middleware-content-length\":\"1.0.0-rc.8\",\"@aws-sdk/middleware-expect-continue\":\"1.0.0-rc.8\",\"@aws-sdk/middleware-host-header\":\"1.0.0-rc.8\",\"@aws-sdk/middleware-location-constraint\":\"1.0.0-rc.8\",\"@aws-sdk/middleware-logger\":\"1.0.0-rc.8\",\"@aws-sdk/middleware-retry\":\"1.0.0-rc.9\",\"@aws-sdk/middleware-sdk-s3\":\"1.0.0-rc.8\",\"@aws-sdk/middleware-serde\":\"1.0.0-rc.8\",\"@aws-sdk/middleware-signing\":\"1.0.0-rc.9\",\"@aws-sdk/middleware-ssec\":\"1.0.0-rc.8\",\"@aws-sdk/middleware-stack\":\"1.0.0-rc.8\",\"@aws-sdk/middleware-user-agent\":\"1.0.0-rc.8\",\"@aws-sdk/node-config-provider\":\"1.0.0-rc.9\",\"@aws-sdk/node-http-handler\":\"1.0.0-rc.8\",\"@aws-sdk/protocol-http\":\"1.0.0-rc.8\",\"@aws-sdk/smithy-client\":\"1.0.0-rc.8\",\"@aws-sdk/url-parser-browser\":\"1.0.0-rc.8\",\"@aws-sdk/url-parser-node\":\"1.0.0-rc.9\",\"@aws-sdk/util-base64-browser\":\"1.0.0-rc.8\",\"@aws-sdk/util-base64-node\":\"1.0.0-rc.8\",\"@aws-sdk/util-body-length-browser\":\"1.0.0-rc.8\",\"@aws-sdk/util-body-length-node\":\"1.0.0-rc.8\",\"@aws-sdk/util-user-agent-browser\":\"1.0.0-rc.8\",\"@aws-sdk/util-user-agent-node\":\"1.0.0-rc.8\",\"@aws-sdk/util-utf8-browser\":\"1.0.0-rc.8\",\"@aws-sdk/util-utf8-node\":\"1.0.0-rc.8\",\"@aws-sdk/xml-builder\":\"1.0.0-rc.8\",\"fast-xml-parser\":\"^3.16.0\",\"tslib\":\"^2.0.0\"},\"devDependencies\":{\"@aws-sdk/client-documentation-generator\":\"1.0.0-rc.8\",\"@aws-sdk/types\":\"1.0.0-rc.8\",\"@types/chai\":\"^4.2.11\",\"@types/mocha\":\"^8.0.4\",\"@types/node\":\"^12.7.5\",\"jest\":\"^26.1.0\",\"rimraf\":\"^3.0.0\",\"typedoc\":\"^0.19.2\",\"typescript\":\"~4.1.2\"},\"engines\":{\"node\":\">=10.0.0\"},\"author\":{\"name\":\"AWS SDK for JavaScript Team\",\"url\":\"https://aws.amazon.com/javascript/\"},\"license\":\"Apache-2.0\",\"homepage\":\"https://github.com/aws/aws-sdk-js-v3/tree/master/clients/client-s3\",\"repository\":{\"type\":\"git\",\"url\":\"https://github.com/aws/aws-sdk-js-v3.git\",\"directory\":\"clients/client-s3\"}}");
+module.exports = JSON.parse("{\"name\":\"@aws-sdk/client-s3\",\"description\":\"AWS SDK for JavaScript S3 Client for Node.js, Browser and React Native\",\"version\":\"3.1.0\",\"scripts\":{\"clean\":\"yarn remove-definitions && yarn remove-dist && yarn remove-documentation\",\"build-documentation\":\"yarn remove-documentation && typedoc ./\",\"prepublishOnly\":\"yarn build\",\"pretest\":\"yarn build:cjs\",\"remove-definitions\":\"rimraf ./types\",\"remove-dist\":\"rimraf ./dist\",\"remove-documentation\":\"rimraf ./docs\",\"test:unit\":\"mocha **/cjs/**/*.spec.js\",\"test:e2e\":\"mocha **/cjs/**/*.ispec.js && karma start karma.conf.js\",\"test\":\"yarn test:unit\",\"build:cjs\":\"tsc -p tsconfig.json\",\"build:es\":\"tsc -p tsconfig.es.json\",\"build\":\"yarn build:cjs && yarn build:es\"},\"main\":\"./dist/cjs/index.js\",\"types\":\"./types/index.d.ts\",\"module\":\"./dist/es/index.js\",\"browser\":{\"./runtimeConfig\":\"./runtimeConfig.browser\"},\"react-native\":{\"./runtimeConfig\":\"./runtimeConfig.native\"},\"sideEffects\":false,\"dependencies\":{\"@aws-crypto/sha256-browser\":\"^1.0.0\",\"@aws-crypto/sha256-js\":\"^1.0.0\",\"@aws-sdk/config-resolver\":\"3.1.0\",\"@aws-sdk/credential-provider-node\":\"3.1.0\",\"@aws-sdk/eventstream-serde-browser\":\"3.1.0\",\"@aws-sdk/eventstream-serde-config-resolver\":\"3.1.0\",\"@aws-sdk/eventstream-serde-node\":\"3.1.0\",\"@aws-sdk/fetch-http-handler\":\"3.1.0\",\"@aws-sdk/hash-blob-browser\":\"3.1.0\",\"@aws-sdk/hash-node\":\"3.1.0\",\"@aws-sdk/hash-stream-node\":\"3.1.0\",\"@aws-sdk/invalid-dependency\":\"3.1.0\",\"@aws-sdk/md5-js\":\"3.1.0\",\"@aws-sdk/middleware-apply-body-checksum\":\"3.1.0\",\"@aws-sdk/middleware-bucket-endpoint\":\"3.1.0\",\"@aws-sdk/middleware-content-length\":\"3.1.0\",\"@aws-sdk/middleware-expect-continue\":\"3.1.0\",\"@aws-sdk/middleware-host-header\":\"3.1.0\",\"@aws-sdk/middleware-location-constraint\":\"3.1.0\",\"@aws-sdk/middleware-logger\":\"3.1.0\",\"@aws-sdk/middleware-retry\":\"3.1.0\",\"@aws-sdk/middleware-sdk-s3\":\"3.1.0\",\"@aws-sdk/middleware-serde\":\"3.1.0\",\"@aws-sdk/middleware-signing\":\"3.1.0\",\"@aws-sdk/middleware-ssec\":\"3.1.0\",\"@aws-sdk/middleware-stack\":\"3.1.0\",\"@aws-sdk/middleware-user-agent\":\"3.1.0\",\"@aws-sdk/node-config-provider\":\"3.1.0\",\"@aws-sdk/node-http-handler\":\"3.1.0\",\"@aws-sdk/protocol-http\":\"3.1.0\",\"@aws-sdk/smithy-client\":\"3.1.0\",\"@aws-sdk/url-parser-browser\":\"3.1.0\",\"@aws-sdk/url-parser-node\":\"3.1.0\",\"@aws-sdk/util-base64-browser\":\"3.1.0\",\"@aws-sdk/util-base64-node\":\"3.1.0\",\"@aws-sdk/util-body-length-browser\":\"3.1.0\",\"@aws-sdk/util-body-length-node\":\"3.1.0\",\"@aws-sdk/util-user-agent-browser\":\"3.1.0\",\"@aws-sdk/util-user-agent-node\":\"3.1.0\",\"@aws-sdk/util-utf8-browser\":\"3.1.0\",\"@aws-sdk/util-utf8-node\":\"3.1.0\",\"@aws-sdk/util-waiter\":\"3.1.0\",\"@aws-sdk/xml-builder\":\"3.1.0\",\"fast-xml-parser\":\"^3.16.0\",\"tslib\":\"^2.0.0\"},\"devDependencies\":{\"@aws-sdk/client-documentation-generator\":\"3.1.0\",\"@aws-sdk/types\":\"3.1.0\",\"@types/chai\":\"^4.2.11\",\"@types/mocha\":\"^8.0.4\",\"@types/node\":\"^12.7.5\",\"jest\":\"^26.1.0\",\"rimraf\":\"^3.0.0\",\"typedoc\":\"^0.19.2\",\"typescript\":\"~4.1.2\"},\"engines\":{\"node\":\">=10.0.0\"},\"author\":{\"name\":\"AWS SDK for JavaScript Team\",\"url\":\"https://aws.amazon.com/javascript/\"},\"license\":\"Apache-2.0\",\"homepage\":\"https://github.com/aws/aws-sdk-js-v3/tree/master/clients/client-s3\",\"repository\":{\"type\":\"git\",\"url\":\"https://github.com/aws/aws-sdk-js-v3.git\",\"directory\":\"clients/client-s3\"}}");
 
 /***/ }),
 
@@ -123,7 +123,7 @@ class Action {
         do {
             const params = {
                 Marker: nextMarker,
-                MaxItems: '100'
+                MaxItems: 100
             };
             const result = await this.cf.listDistributions(params);
             let match = (_b = (_a = result.DistributionList) === null || _a === void 0 ? void 0 : _a.Items) === null || _b === void 0 ? void 0 : _b.find((item) => item.Aliases &&
@@ -2193,16 +2193,16 @@ class CloudFrontClient extends smithy_client_1.Client {
         let _config_2 = config_resolver_1.resolveEndpointsConfig(_config_1);
         let _config_3 = middleware_signing_1.resolveAwsAuthConfig(_config_2);
         let _config_4 = middleware_retry_1.resolveRetryConfig(_config_3);
-        let _config_5 = middleware_user_agent_1.resolveUserAgentConfig(_config_4);
-        let _config_6 = middleware_host_header_1.resolveHostHeaderConfig(_config_5);
+        let _config_5 = middleware_host_header_1.resolveHostHeaderConfig(_config_4);
+        let _config_6 = middleware_user_agent_1.resolveUserAgentConfig(_config_5);
         super(_config_6);
         this.config = _config_6;
         this.middlewareStack.use(middleware_signing_1.getAwsAuthPlugin(this.config));
         this.middlewareStack.use(middleware_retry_1.getRetryPlugin(this.config));
-        this.middlewareStack.use(middleware_user_agent_1.getUserAgentPlugin(this.config));
         this.middlewareStack.use(middleware_content_length_1.getContentLengthPlugin(this.config));
         this.middlewareStack.use(middleware_host_header_1.getHostHeaderPlugin(this.config));
         this.middlewareStack.use(middleware_logger_1.getLoggerPlugin(this.config));
+        this.middlewareStack.use(middleware_user_agent_1.getUserAgentPlugin(this.config));
     }
     destroy() {
         super.destroy();
@@ -2272,12 +2272,6 @@ class CreateCachePolicyCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.CreateCachePolicyRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.CreateCachePolicyResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -2335,12 +2329,6 @@ class CreateCloudFrontOriginAccessIdentityCommand extends smithy_client_1.Comman
             inputFilterSensitiveLog: models_0_1.CreateCloudFrontOriginAccessIdentityRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.CreateCloudFrontOriginAccessIdentityResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -2407,12 +2395,6 @@ class CreateDistributionCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.CreateDistributionRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.CreateDistributionResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -2467,12 +2449,6 @@ class CreateDistributionWithTagsCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.CreateDistributionWithTagsRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.CreateDistributionWithTagsResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -2527,12 +2503,6 @@ class CreateFieldLevelEncryptionConfigCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.CreateFieldLevelEncryptionConfigRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.CreateFieldLevelEncryptionConfigResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -2587,12 +2557,6 @@ class CreateFieldLevelEncryptionProfileCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.CreateFieldLevelEncryptionProfileRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.CreateFieldLevelEncryptionProfileResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -2647,12 +2611,6 @@ class CreateInvalidationCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.CreateInvalidationRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.CreateInvalidationResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -2714,12 +2672,6 @@ class CreateKeyGroupCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.CreateKeyGroupRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.CreateKeyGroupResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -2777,12 +2729,6 @@ class CreateMonitoringSubscriptionCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.CreateMonitoringSubscriptionRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.CreateMonitoringSubscriptionResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -2861,12 +2807,6 @@ class CreateOriginRequestPolicyCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.CreateOriginRequestPolicyRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.CreateOriginRequestPolicyResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -2921,12 +2861,6 @@ class CreatePublicKeyCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.CreatePublicKeyRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.CreatePublicKeyResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -2984,12 +2918,6 @@ class CreateRealtimeLogConfigCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.CreateRealtimeLogConfigRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.CreateRealtimeLogConfigResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -3068,12 +2996,6 @@ class CreateStreamingDistributionCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.CreateStreamingDistributionRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.CreateStreamingDistributionResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -3128,12 +3050,6 @@ class CreateStreamingDistributionWithTagsCommand extends smithy_client_1.Command
             inputFilterSensitiveLog: models_0_1.CreateStreamingDistributionWithTagsRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.CreateStreamingDistributionWithTagsResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -3194,12 +3110,6 @@ class DeleteCachePolicyCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.DeleteCachePolicyRequest.filterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -3254,12 +3164,6 @@ class DeleteCloudFrontOriginAccessIdentityCommand extends smithy_client_1.Comman
             inputFilterSensitiveLog: models_0_1.DeleteCloudFrontOriginAccessIdentityRequest.filterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -3314,12 +3218,6 @@ class DeleteDistributionCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.DeleteDistributionRequest.filterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -3374,12 +3272,6 @@ class DeleteFieldLevelEncryptionConfigCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.DeleteFieldLevelEncryptionConfigRequest.filterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -3434,12 +3326,6 @@ class DeleteFieldLevelEncryptionProfileCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.DeleteFieldLevelEncryptionProfileRequest.filterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -3500,12 +3386,6 @@ class DeleteKeyGroupCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.DeleteKeyGroupRequest.filterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -3560,12 +3440,6 @@ class DeleteMonitoringSubscriptionCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.DeleteMonitoringSubscriptionRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.DeleteMonitoringSubscriptionResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -3626,12 +3500,6 @@ class DeleteOriginRequestPolicyCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.DeleteOriginRequestPolicyRequest.filterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -3686,12 +3554,6 @@ class DeletePublicKeyCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.DeletePublicKeyRequest.filterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -3752,12 +3614,6 @@ class DeleteRealtimeLogConfigCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.DeleteRealtimeLogConfigRequest.filterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -3859,12 +3715,6 @@ class DeleteStreamingDistributionCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.DeleteStreamingDistributionRequest.filterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -3932,12 +3782,6 @@ class GetCachePolicyCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.GetCachePolicyRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.GetCachePolicyResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -3997,12 +3841,6 @@ class GetCachePolicyConfigCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.GetCachePolicyConfigRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.GetCachePolicyConfigResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -4057,12 +3895,6 @@ class GetCloudFrontOriginAccessIdentityCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.GetCloudFrontOriginAccessIdentityRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.GetCloudFrontOriginAccessIdentityResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -4117,12 +3949,6 @@ class GetCloudFrontOriginAccessIdentityConfigCommand extends smithy_client_1.Com
             inputFilterSensitiveLog: models_0_1.GetCloudFrontOriginAccessIdentityConfigRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.GetCloudFrontOriginAccessIdentityConfigResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -4177,12 +4003,6 @@ class GetDistributionCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.GetDistributionRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.GetDistributionResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -4237,12 +4057,6 @@ class GetDistributionConfigCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.GetDistributionConfigRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.GetDistributionConfigResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -4297,12 +4111,6 @@ class GetFieldLevelEncryptionCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.GetFieldLevelEncryptionRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.GetFieldLevelEncryptionResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -4357,12 +4165,6 @@ class GetFieldLevelEncryptionConfigCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.GetFieldLevelEncryptionConfigRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.GetFieldLevelEncryptionConfigResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -4417,12 +4219,6 @@ class GetFieldLevelEncryptionProfileCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.GetFieldLevelEncryptionProfileRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.GetFieldLevelEncryptionProfileResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -4477,12 +4273,6 @@ class GetFieldLevelEncryptionProfileConfigCommand extends smithy_client_1.Comman
             inputFilterSensitiveLog: models_0_1.GetFieldLevelEncryptionProfileConfigRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.GetFieldLevelEncryptionProfileConfigResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -4537,12 +4327,6 @@ class GetInvalidationCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.GetInvalidationRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.GetInvalidationResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -4602,12 +4386,6 @@ class GetKeyGroupCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.GetKeyGroupRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.GetKeyGroupResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -4667,12 +4445,6 @@ class GetKeyGroupConfigCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.GetKeyGroupConfigRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.GetKeyGroupConfigResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -4728,12 +4500,6 @@ class GetMonitoringSubscriptionCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.GetMonitoringSubscriptionRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.GetMonitoringSubscriptionResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -4801,12 +4567,6 @@ class GetOriginRequestPolicyCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.GetOriginRequestPolicyRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.GetOriginRequestPolicyResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -4867,12 +4627,6 @@ class GetOriginRequestPolicyConfigCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.GetOriginRequestPolicyConfigRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.GetOriginRequestPolicyConfigResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -4927,12 +4681,6 @@ class GetPublicKeyCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.GetPublicKeyRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.GetPublicKeyResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -4987,12 +4735,6 @@ class GetPublicKeyConfigCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.GetPublicKeyConfigRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.GetPublicKeyConfigResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -5051,12 +4793,6 @@ class GetRealtimeLogConfigCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.GetRealtimeLogConfigRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_1_1.GetRealtimeLogConfigResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -5111,12 +4847,6 @@ class GetStreamingDistributionCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_1_1.GetStreamingDistributionRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_1_1.GetStreamingDistributionResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -5171,12 +4901,6 @@ class GetStreamingDistributionConfigCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_1_1.GetStreamingDistributionConfigRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_1_1.GetStreamingDistributionConfigResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -5238,12 +4962,6 @@ class ListCachePoliciesCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_1_1.ListCachePoliciesRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_1_1.ListCachePoliciesResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -5298,12 +5016,6 @@ class ListCloudFrontOriginAccessIdentitiesCommand extends smithy_client_1.Comman
             inputFilterSensitiveLog: models_1_1.ListCloudFrontOriginAccessIdentitiesRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_1_1.ListCloudFrontOriginAccessIdentitiesResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -5364,12 +5076,6 @@ class ListDistributionsByCachePolicyIdCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_1_1.ListDistributionsByCachePolicyIdRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_1_1.ListDistributionsByCachePolicyIdResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -5430,12 +5136,6 @@ class ListDistributionsByKeyGroupCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_1_1.ListDistributionsByKeyGroupRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_1_1.ListDistributionsByKeyGroupResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -5496,12 +5196,6 @@ class ListDistributionsByOriginRequestPolicyIdCommand extends smithy_client_1.Co
             inputFilterSensitiveLog: models_1_1.ListDistributionsByOriginRequestPolicyIdRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_1_1.ListDistributionsByOriginRequestPolicyIdResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -5565,12 +5259,6 @@ class ListDistributionsByRealtimeLogConfigCommand extends smithy_client_1.Comman
             inputFilterSensitiveLog: models_1_1.ListDistributionsByRealtimeLogConfigRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_1_1.ListDistributionsByRealtimeLogConfigResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -5625,12 +5313,6 @@ class ListDistributionsByWebACLIdCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_1_1.ListDistributionsByWebACLIdRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_1_1.ListDistributionsByWebACLIdResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -5685,12 +5367,6 @@ class ListDistributionsCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_1_1.ListDistributionsRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_1_1.ListDistributionsResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -5745,12 +5421,6 @@ class ListFieldLevelEncryptionConfigsCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_1_1.ListFieldLevelEncryptionConfigsRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_1_1.ListFieldLevelEncryptionConfigsResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -5805,12 +5475,6 @@ class ListFieldLevelEncryptionProfilesCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_1_1.ListFieldLevelEncryptionProfilesRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_1_1.ListFieldLevelEncryptionProfilesResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -5865,12 +5529,6 @@ class ListInvalidationsCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_1_1.ListInvalidationsRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_1_1.ListInvalidationsResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -5930,12 +5588,6 @@ class ListKeyGroupsCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_1_1.ListKeyGroupsRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_1_1.ListKeyGroupsResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -5997,12 +5649,6 @@ class ListOriginRequestPoliciesCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_1_1.ListOriginRequestPoliciesRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_1_1.ListOriginRequestPoliciesResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -6057,12 +5703,6 @@ class ListPublicKeysCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_1_1.ListPublicKeysRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_1_1.ListPublicKeysResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -6122,12 +5762,6 @@ class ListRealtimeLogConfigsCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_1_1.ListRealtimeLogConfigsRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_1_1.ListRealtimeLogConfigsResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -6182,12 +5816,6 @@ class ListStreamingDistributionsCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_1_1.ListStreamingDistributionsRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_1_1.ListStreamingDistributionsResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -6242,12 +5870,6 @@ class ListTagsForResourceCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_1_1.ListTagsForResourceRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_1_1.ListTagsForResourceResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -6302,12 +5924,6 @@ class TagResourceCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_1_1.TagResourceRequest.filterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -6362,12 +5978,6 @@ class UntagResourceCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_1_1.UntagResourceRequest.filterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -6439,12 +6049,6 @@ class UpdateCachePolicyCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_1_1.UpdateCachePolicyRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_1_1.UpdateCachePolicyResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -6499,12 +6103,6 @@ class UpdateCloudFrontOriginAccessIdentityCommand extends smithy_client_1.Comman
             inputFilterSensitiveLog: models_1_1.UpdateCloudFrontOriginAccessIdentityRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_1_1.UpdateCloudFrontOriginAccessIdentityResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -6637,12 +6235,6 @@ class UpdateDistributionCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_1_1.UpdateDistributionRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_1_1.UpdateDistributionResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -6697,12 +6289,6 @@ class UpdateFieldLevelEncryptionConfigCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_1_1.UpdateFieldLevelEncryptionConfigRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_1_1.UpdateFieldLevelEncryptionConfigResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -6757,12 +6343,6 @@ class UpdateFieldLevelEncryptionProfileCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_1_1.UpdateFieldLevelEncryptionProfileRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_1_1.UpdateFieldLevelEncryptionProfileResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -6834,12 +6414,6 @@ class UpdateKeyGroupCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_1_1.UpdateKeyGroupRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_1_1.UpdateKeyGroupResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -6911,12 +6485,6 @@ class UpdateOriginRequestPolicyCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_1_1.UpdateOriginRequestPolicyRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_1_1.UpdateOriginRequestPolicyResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -6971,12 +6539,6 @@ class UpdatePublicKeyCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_1_1.UpdatePublicKeyRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_1_1.UpdatePublicKeyResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -7051,12 +6613,6 @@ class UpdateRealtimeLogConfigCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_1_1.UpdateRealtimeLogConfigRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_1_1.UpdateRealtimeLogConfigResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -7111,12 +6667,6 @@ class UpdateStreamingDistributionCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_1_1.UpdateStreamingDistributionRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_1_1.UpdateStreamingDistributionResult.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -7147,6 +6697,7 @@ const AWS_ISO_B_TEMPLATE = "cloudfront.{region}.sc2s.sgov.gov";
 const AWS_US_GOV_TEMPLATE = "cloudfront.{region}.amazonaws.com";
 // Partition regions
 const AWS_REGIONS = new Set([
+    "af-south-1",
     "ap-east-1",
     "ap-northeast-1",
     "ap-northeast-2",
@@ -7156,6 +6707,7 @@ const AWS_REGIONS = new Set([
     "ca-central-1",
     "eu-central-1",
     "eu-north-1",
+    "eu-south-1",
     "eu-west-1",
     "eu-west-2",
     "eu-west-3",
@@ -7219,7 +6771,7 @@ const defaultRegionInfoProvider = (region, options) => {
                 return exports.defaultRegionInfoProvider("aws-global");
             }
     }
-    return Promise.resolve(regionInfo);
+    return Promise.resolve({ signingService: "cloudfront", ...regionInfo });
 };
 exports.defaultRegionInfoProvider = defaultRegionInfoProvider;
 //# sourceMappingURL=endpoints.js.map
@@ -7265,12 +6817,14 @@ tslib_1.__exportStar(__webpack_require__(69590), exports);
 tslib_1.__exportStar(__webpack_require__(46657), exports);
 tslib_1.__exportStar(__webpack_require__(52601), exports);
 tslib_1.__exportStar(__webpack_require__(58637), exports);
+tslib_1.__exportStar(__webpack_require__(21906), exports);
 tslib_1.__exportStar(__webpack_require__(87106), exports);
 tslib_1.__exportStar(__webpack_require__(73477), exports);
 tslib_1.__exportStar(__webpack_require__(9417), exports);
 tslib_1.__exportStar(__webpack_require__(82207), exports);
 tslib_1.__exportStar(__webpack_require__(3713), exports);
 tslib_1.__exportStar(__webpack_require__(65100), exports);
+tslib_1.__exportStar(__webpack_require__(93421), exports);
 tslib_1.__exportStar(__webpack_require__(789), exports);
 tslib_1.__exportStar(__webpack_require__(8171), exports);
 tslib_1.__exportStar(__webpack_require__(10385), exports);
@@ -7280,10 +6834,13 @@ tslib_1.__exportStar(__webpack_require__(25724), exports);
 tslib_1.__exportStar(__webpack_require__(63701), exports);
 tslib_1.__exportStar(__webpack_require__(87719), exports);
 tslib_1.__exportStar(__webpack_require__(94464), exports);
+tslib_1.__exportStar(__webpack_require__(47554), exports);
 tslib_1.__exportStar(__webpack_require__(64908), exports);
 tslib_1.__exportStar(__webpack_require__(70376), exports);
 tslib_1.__exportStar(__webpack_require__(48312), exports);
+tslib_1.__exportStar(__webpack_require__(10798), exports);
 tslib_1.__exportStar(__webpack_require__(84466), exports);
+tslib_1.__exportStar(__webpack_require__(15664), exports);
 tslib_1.__exportStar(__webpack_require__(88323), exports);
 tslib_1.__exportStar(__webpack_require__(50898), exports);
 tslib_1.__exportStar(__webpack_require__(76940), exports);
@@ -7292,11 +6849,13 @@ tslib_1.__exportStar(__webpack_require__(96759), exports);
 tslib_1.__exportStar(__webpack_require__(31116), exports);
 tslib_1.__exportStar(__webpack_require__(2750), exports);
 tslib_1.__exportStar(__webpack_require__(47936), exports);
+tslib_1.__exportStar(__webpack_require__(59936), exports);
 tslib_1.__exportStar(__webpack_require__(94862), exports);
 tslib_1.__exportStar(__webpack_require__(962), exports);
 tslib_1.__exportStar(__webpack_require__(99154), exports);
 tslib_1.__exportStar(__webpack_require__(52063), exports);
 tslib_1.__exportStar(__webpack_require__(81915), exports);
+tslib_1.__exportStar(__webpack_require__(50241), exports);
 tslib_1.__exportStar(__webpack_require__(5220), exports);
 tslib_1.__exportStar(__webpack_require__(19975), exports);
 tslib_1.__exportStar(__webpack_require__(89276), exports);
@@ -7310,6 +6869,7 @@ tslib_1.__exportStar(__webpack_require__(41350), exports);
 tslib_1.__exportStar(__webpack_require__(36415), exports);
 tslib_1.__exportStar(__webpack_require__(39338), exports);
 tslib_1.__exportStar(__webpack_require__(30651), exports);
+tslib_1.__exportStar(__webpack_require__(38043), exports);
 tslib_1.__exportStar(__webpack_require__(40992), exports);
 //# sourceMappingURL=index.js.map
 
@@ -9552,6 +9112,228 @@ var UpdateStreamingDistributionResult;
 
 /***/ }),
 
+/***/ 38043:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+//# sourceMappingURL=Interfaces.js.map
+
+/***/ }),
+
+/***/ 10798:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.paginateListCloudFrontOriginAccessIdentities = void 0;
+const CloudFront_1 = __webpack_require__(81585);
+const CloudFrontClient_1 = __webpack_require__(38218);
+const ListCloudFrontOriginAccessIdentitiesCommand_1 = __webpack_require__(48312);
+/**
+ * @private
+ */
+const makePagedClientRequest = async (client, input, ...args) => {
+    // @ts-ignore
+    return await client.send(new ListCloudFrontOriginAccessIdentitiesCommand_1.ListCloudFrontOriginAccessIdentitiesCommand(input), ...args);
+};
+/**
+ * @private
+ */
+const makePagedRequest = async (client, input, ...args) => {
+    // @ts-ignore
+    return await client.listCloudFrontOriginAccessIdentities(input, ...args);
+};
+async function* paginateListCloudFrontOriginAccessIdentities(config, input, ...additionalArguments) {
+    // ToDo: replace with actual type instead of typeof input.Marker
+    let token = config.startingToken || undefined;
+    let hasNext = true;
+    let page;
+    while (hasNext) {
+        input.Marker = token;
+        input["MaxItems"] = config.pageSize;
+        if (config.client instanceof CloudFront_1.CloudFront) {
+            page = await makePagedRequest(config.client, input, ...additionalArguments);
+        }
+        else if (config.client instanceof CloudFrontClient_1.CloudFrontClient) {
+            page = await makePagedClientRequest(config.client, input, ...additionalArguments);
+        }
+        else {
+            throw new Error("Invalid client, expected CloudFront | CloudFrontClient");
+        }
+        yield page;
+        token = page.CloudFrontOriginAccessIdentityList.NextMarker;
+        hasNext = !!token;
+    }
+    // @ts-ignore
+    return undefined;
+}
+exports.paginateListCloudFrontOriginAccessIdentities = paginateListCloudFrontOriginAccessIdentities;
+//# sourceMappingURL=ListCloudFrontOriginAccessIdentitiesPaginator.js.map
+
+/***/ }),
+
+/***/ 15664:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.paginateListDistributions = void 0;
+const CloudFront_1 = __webpack_require__(81585);
+const CloudFrontClient_1 = __webpack_require__(38218);
+const ListDistributionsCommand_1 = __webpack_require__(84466);
+/**
+ * @private
+ */
+const makePagedClientRequest = async (client, input, ...args) => {
+    // @ts-ignore
+    return await client.send(new ListDistributionsCommand_1.ListDistributionsCommand(input), ...args);
+};
+/**
+ * @private
+ */
+const makePagedRequest = async (client, input, ...args) => {
+    // @ts-ignore
+    return await client.listDistributions(input, ...args);
+};
+async function* paginateListDistributions(config, input, ...additionalArguments) {
+    // ToDo: replace with actual type instead of typeof input.Marker
+    let token = config.startingToken || undefined;
+    let hasNext = true;
+    let page;
+    while (hasNext) {
+        input.Marker = token;
+        input["MaxItems"] = config.pageSize;
+        if (config.client instanceof CloudFront_1.CloudFront) {
+            page = await makePagedRequest(config.client, input, ...additionalArguments);
+        }
+        else if (config.client instanceof CloudFrontClient_1.CloudFrontClient) {
+            page = await makePagedClientRequest(config.client, input, ...additionalArguments);
+        }
+        else {
+            throw new Error("Invalid client, expected CloudFront | CloudFrontClient");
+        }
+        yield page;
+        token = page.DistributionList.NextMarker;
+        hasNext = !!token;
+    }
+    // @ts-ignore
+    return undefined;
+}
+exports.paginateListDistributions = paginateListDistributions;
+//# sourceMappingURL=ListDistributionsPaginator.js.map
+
+/***/ }),
+
+/***/ 59936:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.paginateListInvalidations = void 0;
+const CloudFront_1 = __webpack_require__(81585);
+const CloudFrontClient_1 = __webpack_require__(38218);
+const ListInvalidationsCommand_1 = __webpack_require__(47936);
+/**
+ * @private
+ */
+const makePagedClientRequest = async (client, input, ...args) => {
+    // @ts-ignore
+    return await client.send(new ListInvalidationsCommand_1.ListInvalidationsCommand(input), ...args);
+};
+/**
+ * @private
+ */
+const makePagedRequest = async (client, input, ...args) => {
+    // @ts-ignore
+    return await client.listInvalidations(input, ...args);
+};
+async function* paginateListInvalidations(config, input, ...additionalArguments) {
+    // ToDo: replace with actual type instead of typeof input.Marker
+    let token = config.startingToken || undefined;
+    let hasNext = true;
+    let page;
+    while (hasNext) {
+        input.Marker = token;
+        input["MaxItems"] = config.pageSize;
+        if (config.client instanceof CloudFront_1.CloudFront) {
+            page = await makePagedRequest(config.client, input, ...additionalArguments);
+        }
+        else if (config.client instanceof CloudFrontClient_1.CloudFrontClient) {
+            page = await makePagedClientRequest(config.client, input, ...additionalArguments);
+        }
+        else {
+            throw new Error("Invalid client, expected CloudFront | CloudFrontClient");
+        }
+        yield page;
+        token = page.InvalidationList.NextMarker;
+        hasNext = !!token;
+    }
+    // @ts-ignore
+    return undefined;
+}
+exports.paginateListInvalidations = paginateListInvalidations;
+//# sourceMappingURL=ListInvalidationsPaginator.js.map
+
+/***/ }),
+
+/***/ 50241:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.paginateListStreamingDistributions = void 0;
+const CloudFront_1 = __webpack_require__(81585);
+const CloudFrontClient_1 = __webpack_require__(38218);
+const ListStreamingDistributionsCommand_1 = __webpack_require__(81915);
+/**
+ * @private
+ */
+const makePagedClientRequest = async (client, input, ...args) => {
+    // @ts-ignore
+    return await client.send(new ListStreamingDistributionsCommand_1.ListStreamingDistributionsCommand(input), ...args);
+};
+/**
+ * @private
+ */
+const makePagedRequest = async (client, input, ...args) => {
+    // @ts-ignore
+    return await client.listStreamingDistributions(input, ...args);
+};
+async function* paginateListStreamingDistributions(config, input, ...additionalArguments) {
+    // ToDo: replace with actual type instead of typeof input.Marker
+    let token = config.startingToken || undefined;
+    let hasNext = true;
+    let page;
+    while (hasNext) {
+        input.Marker = token;
+        input["MaxItems"] = config.pageSize;
+        if (config.client instanceof CloudFront_1.CloudFront) {
+            page = await makePagedRequest(config.client, input, ...additionalArguments);
+        }
+        else if (config.client instanceof CloudFrontClient_1.CloudFrontClient) {
+            page = await makePagedClientRequest(config.client, input, ...additionalArguments);
+        }
+        else {
+            throw new Error("Invalid client, expected CloudFront | CloudFrontClient");
+        }
+        yield page;
+        token = page.StreamingDistributionList.NextMarker;
+        hasNext = !!token;
+    }
+    // @ts-ignore
+    return undefined;
+}
+exports.paginateListStreamingDistributions = paginateListStreamingDistributions;
+//# sourceMappingURL=ListStreamingDistributionsPaginator.js.map
+
+/***/ }),
+
 /***/ 60108:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -9567,7 +9349,7 @@ const xml_builder_1 = __webpack_require__(39366);
 const fast_xml_parser_1 = __webpack_require__(27448);
 const serializeAws_restXmlCreateCachePolicyCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
     };
     let resolvedPath = "/2020-05-31/cache-policy";
     let body;
@@ -9592,7 +9374,7 @@ const serializeAws_restXmlCreateCachePolicyCommand = async (input, context) => {
 exports.serializeAws_restXmlCreateCachePolicyCommand = serializeAws_restXmlCreateCachePolicyCommand;
 const serializeAws_restXmlCreateCloudFrontOriginAccessIdentityCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
     };
     let resolvedPath = "/2020-05-31/origin-access-identity/cloudfront";
     let body;
@@ -9617,7 +9399,7 @@ const serializeAws_restXmlCreateCloudFrontOriginAccessIdentityCommand = async (i
 exports.serializeAws_restXmlCreateCloudFrontOriginAccessIdentityCommand = serializeAws_restXmlCreateCloudFrontOriginAccessIdentityCommand;
 const serializeAws_restXmlCreateDistributionCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
     };
     let resolvedPath = "/2020-05-31/distribution";
     let body;
@@ -9642,7 +9424,7 @@ const serializeAws_restXmlCreateDistributionCommand = async (input, context) => 
 exports.serializeAws_restXmlCreateDistributionCommand = serializeAws_restXmlCreateDistributionCommand;
 const serializeAws_restXmlCreateDistributionWithTagsCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
     };
     let resolvedPath = "/2020-05-31/distribution";
     const query = {
@@ -9671,7 +9453,7 @@ const serializeAws_restXmlCreateDistributionWithTagsCommand = async (input, cont
 exports.serializeAws_restXmlCreateDistributionWithTagsCommand = serializeAws_restXmlCreateDistributionWithTagsCommand;
 const serializeAws_restXmlCreateFieldLevelEncryptionConfigCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
     };
     let resolvedPath = "/2020-05-31/field-level-encryption";
     let body;
@@ -9696,7 +9478,7 @@ const serializeAws_restXmlCreateFieldLevelEncryptionConfigCommand = async (input
 exports.serializeAws_restXmlCreateFieldLevelEncryptionConfigCommand = serializeAws_restXmlCreateFieldLevelEncryptionConfigCommand;
 const serializeAws_restXmlCreateFieldLevelEncryptionProfileCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
     };
     let resolvedPath = "/2020-05-31/field-level-encryption-profile";
     let body;
@@ -9721,7 +9503,7 @@ const serializeAws_restXmlCreateFieldLevelEncryptionProfileCommand = async (inpu
 exports.serializeAws_restXmlCreateFieldLevelEncryptionProfileCommand = serializeAws_restXmlCreateFieldLevelEncryptionProfileCommand;
 const serializeAws_restXmlCreateInvalidationCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
     };
     let resolvedPath = "/2020-05-31/distribution/{DistributionId}/invalidation";
     if (input.DistributionId !== undefined) {
@@ -9756,7 +9538,7 @@ const serializeAws_restXmlCreateInvalidationCommand = async (input, context) => 
 exports.serializeAws_restXmlCreateInvalidationCommand = serializeAws_restXmlCreateInvalidationCommand;
 const serializeAws_restXmlCreateKeyGroupCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
     };
     let resolvedPath = "/2020-05-31/key-group";
     let body;
@@ -9781,7 +9563,7 @@ const serializeAws_restXmlCreateKeyGroupCommand = async (input, context) => {
 exports.serializeAws_restXmlCreateKeyGroupCommand = serializeAws_restXmlCreateKeyGroupCommand;
 const serializeAws_restXmlCreateMonitoringSubscriptionCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
     };
     let resolvedPath = "/2020-05-31/distributions/{DistributionId}/monitoring-subscription";
     if (input.DistributionId !== undefined) {
@@ -9816,7 +9598,7 @@ const serializeAws_restXmlCreateMonitoringSubscriptionCommand = async (input, co
 exports.serializeAws_restXmlCreateMonitoringSubscriptionCommand = serializeAws_restXmlCreateMonitoringSubscriptionCommand;
 const serializeAws_restXmlCreateOriginRequestPolicyCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
     };
     let resolvedPath = "/2020-05-31/origin-request-policy";
     let body;
@@ -9841,7 +9623,7 @@ const serializeAws_restXmlCreateOriginRequestPolicyCommand = async (input, conte
 exports.serializeAws_restXmlCreateOriginRequestPolicyCommand = serializeAws_restXmlCreateOriginRequestPolicyCommand;
 const serializeAws_restXmlCreatePublicKeyCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
     };
     let resolvedPath = "/2020-05-31/public-key";
     let body;
@@ -9866,7 +9648,7 @@ const serializeAws_restXmlCreatePublicKeyCommand = async (input, context) => {
 exports.serializeAws_restXmlCreatePublicKeyCommand = serializeAws_restXmlCreatePublicKeyCommand;
 const serializeAws_restXmlCreateRealtimeLogConfigCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
     };
     let resolvedPath = "/2020-05-31/realtime-log-config";
     let body;
@@ -9912,7 +9694,7 @@ const serializeAws_restXmlCreateRealtimeLogConfigCommand = async (input, context
 exports.serializeAws_restXmlCreateRealtimeLogConfigCommand = serializeAws_restXmlCreateRealtimeLogConfigCommand;
 const serializeAws_restXmlCreateStreamingDistributionCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
     };
     let resolvedPath = "/2020-05-31/streaming-distribution";
     let body;
@@ -9937,7 +9719,7 @@ const serializeAws_restXmlCreateStreamingDistributionCommand = async (input, con
 exports.serializeAws_restXmlCreateStreamingDistributionCommand = serializeAws_restXmlCreateStreamingDistributionCommand;
 const serializeAws_restXmlCreateStreamingDistributionWithTagsCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
     };
     let resolvedPath = "/2020-05-31/streaming-distribution";
     const query = {
@@ -9966,7 +9748,6 @@ const serializeAws_restXmlCreateStreamingDistributionWithTagsCommand = async (in
 exports.serializeAws_restXmlCreateStreamingDistributionWithTagsCommand = serializeAws_restXmlCreateStreamingDistributionWithTagsCommand;
 const serializeAws_restXmlDeleteCachePolicyCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.IfMatch) && { "If-Match": input.IfMatch }),
     };
     let resolvedPath = "/2020-05-31/cache-policy/{Id}";
@@ -9995,7 +9776,6 @@ const serializeAws_restXmlDeleteCachePolicyCommand = async (input, context) => {
 exports.serializeAws_restXmlDeleteCachePolicyCommand = serializeAws_restXmlDeleteCachePolicyCommand;
 const serializeAws_restXmlDeleteCloudFrontOriginAccessIdentityCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.IfMatch) && { "If-Match": input.IfMatch }),
     };
     let resolvedPath = "/2020-05-31/origin-access-identity/cloudfront/{Id}";
@@ -10024,7 +9804,6 @@ const serializeAws_restXmlDeleteCloudFrontOriginAccessIdentityCommand = async (i
 exports.serializeAws_restXmlDeleteCloudFrontOriginAccessIdentityCommand = serializeAws_restXmlDeleteCloudFrontOriginAccessIdentityCommand;
 const serializeAws_restXmlDeleteDistributionCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.IfMatch) && { "If-Match": input.IfMatch }),
     };
     let resolvedPath = "/2020-05-31/distribution/{Id}";
@@ -10053,7 +9832,6 @@ const serializeAws_restXmlDeleteDistributionCommand = async (input, context) => 
 exports.serializeAws_restXmlDeleteDistributionCommand = serializeAws_restXmlDeleteDistributionCommand;
 const serializeAws_restXmlDeleteFieldLevelEncryptionConfigCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.IfMatch) && { "If-Match": input.IfMatch }),
     };
     let resolvedPath = "/2020-05-31/field-level-encryption/{Id}";
@@ -10082,7 +9860,6 @@ const serializeAws_restXmlDeleteFieldLevelEncryptionConfigCommand = async (input
 exports.serializeAws_restXmlDeleteFieldLevelEncryptionConfigCommand = serializeAws_restXmlDeleteFieldLevelEncryptionConfigCommand;
 const serializeAws_restXmlDeleteFieldLevelEncryptionProfileCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.IfMatch) && { "If-Match": input.IfMatch }),
     };
     let resolvedPath = "/2020-05-31/field-level-encryption-profile/{Id}";
@@ -10111,7 +9888,6 @@ const serializeAws_restXmlDeleteFieldLevelEncryptionProfileCommand = async (inpu
 exports.serializeAws_restXmlDeleteFieldLevelEncryptionProfileCommand = serializeAws_restXmlDeleteFieldLevelEncryptionProfileCommand;
 const serializeAws_restXmlDeleteKeyGroupCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.IfMatch) && { "If-Match": input.IfMatch }),
     };
     let resolvedPath = "/2020-05-31/key-group/{Id}";
@@ -10139,9 +9915,7 @@ const serializeAws_restXmlDeleteKeyGroupCommand = async (input, context) => {
 };
 exports.serializeAws_restXmlDeleteKeyGroupCommand = serializeAws_restXmlDeleteKeyGroupCommand;
 const serializeAws_restXmlDeleteMonitoringSubscriptionCommand = async (input, context) => {
-    const headers = {
-        "Content-Type": "",
-    };
+    const headers = {};
     let resolvedPath = "/2020-05-31/distributions/{DistributionId}/monitoring-subscription";
     if (input.DistributionId !== undefined) {
         const labelValue = input.DistributionId;
@@ -10168,7 +9942,6 @@ const serializeAws_restXmlDeleteMonitoringSubscriptionCommand = async (input, co
 exports.serializeAws_restXmlDeleteMonitoringSubscriptionCommand = serializeAws_restXmlDeleteMonitoringSubscriptionCommand;
 const serializeAws_restXmlDeleteOriginRequestPolicyCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.IfMatch) && { "If-Match": input.IfMatch }),
     };
     let resolvedPath = "/2020-05-31/origin-request-policy/{Id}";
@@ -10197,7 +9970,6 @@ const serializeAws_restXmlDeleteOriginRequestPolicyCommand = async (input, conte
 exports.serializeAws_restXmlDeleteOriginRequestPolicyCommand = serializeAws_restXmlDeleteOriginRequestPolicyCommand;
 const serializeAws_restXmlDeletePublicKeyCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.IfMatch) && { "If-Match": input.IfMatch }),
     };
     let resolvedPath = "/2020-05-31/public-key/{Id}";
@@ -10226,7 +9998,7 @@ const serializeAws_restXmlDeletePublicKeyCommand = async (input, context) => {
 exports.serializeAws_restXmlDeletePublicKeyCommand = serializeAws_restXmlDeletePublicKeyCommand;
 const serializeAws_restXmlDeleteRealtimeLogConfigCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
     };
     let resolvedPath = "/2020-05-31/delete-realtime-log-config";
     let body;
@@ -10256,7 +10028,6 @@ const serializeAws_restXmlDeleteRealtimeLogConfigCommand = async (input, context
 exports.serializeAws_restXmlDeleteRealtimeLogConfigCommand = serializeAws_restXmlDeleteRealtimeLogConfigCommand;
 const serializeAws_restXmlDeleteStreamingDistributionCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.IfMatch) && { "If-Match": input.IfMatch }),
     };
     let resolvedPath = "/2020-05-31/streaming-distribution/{Id}";
@@ -10284,9 +10055,7 @@ const serializeAws_restXmlDeleteStreamingDistributionCommand = async (input, con
 };
 exports.serializeAws_restXmlDeleteStreamingDistributionCommand = serializeAws_restXmlDeleteStreamingDistributionCommand;
 const serializeAws_restXmlGetCachePolicyCommand = async (input, context) => {
-    const headers = {
-        "Content-Type": "",
-    };
+    const headers = {};
     let resolvedPath = "/2020-05-31/cache-policy/{Id}";
     if (input.Id !== undefined) {
         const labelValue = input.Id;
@@ -10312,9 +10081,7 @@ const serializeAws_restXmlGetCachePolicyCommand = async (input, context) => {
 };
 exports.serializeAws_restXmlGetCachePolicyCommand = serializeAws_restXmlGetCachePolicyCommand;
 const serializeAws_restXmlGetCachePolicyConfigCommand = async (input, context) => {
-    const headers = {
-        "Content-Type": "",
-    };
+    const headers = {};
     let resolvedPath = "/2020-05-31/cache-policy/{Id}/config";
     if (input.Id !== undefined) {
         const labelValue = input.Id;
@@ -10340,9 +10107,7 @@ const serializeAws_restXmlGetCachePolicyConfigCommand = async (input, context) =
 };
 exports.serializeAws_restXmlGetCachePolicyConfigCommand = serializeAws_restXmlGetCachePolicyConfigCommand;
 const serializeAws_restXmlGetCloudFrontOriginAccessIdentityCommand = async (input, context) => {
-    const headers = {
-        "Content-Type": "",
-    };
+    const headers = {};
     let resolvedPath = "/2020-05-31/origin-access-identity/cloudfront/{Id}";
     if (input.Id !== undefined) {
         const labelValue = input.Id;
@@ -10368,9 +10133,7 @@ const serializeAws_restXmlGetCloudFrontOriginAccessIdentityCommand = async (inpu
 };
 exports.serializeAws_restXmlGetCloudFrontOriginAccessIdentityCommand = serializeAws_restXmlGetCloudFrontOriginAccessIdentityCommand;
 const serializeAws_restXmlGetCloudFrontOriginAccessIdentityConfigCommand = async (input, context) => {
-    const headers = {
-        "Content-Type": "",
-    };
+    const headers = {};
     let resolvedPath = "/2020-05-31/origin-access-identity/cloudfront/{Id}/config";
     if (input.Id !== undefined) {
         const labelValue = input.Id;
@@ -10396,9 +10159,7 @@ const serializeAws_restXmlGetCloudFrontOriginAccessIdentityConfigCommand = async
 };
 exports.serializeAws_restXmlGetCloudFrontOriginAccessIdentityConfigCommand = serializeAws_restXmlGetCloudFrontOriginAccessIdentityConfigCommand;
 const serializeAws_restXmlGetDistributionCommand = async (input, context) => {
-    const headers = {
-        "Content-Type": "",
-    };
+    const headers = {};
     let resolvedPath = "/2020-05-31/distribution/{Id}";
     if (input.Id !== undefined) {
         const labelValue = input.Id;
@@ -10424,9 +10185,7 @@ const serializeAws_restXmlGetDistributionCommand = async (input, context) => {
 };
 exports.serializeAws_restXmlGetDistributionCommand = serializeAws_restXmlGetDistributionCommand;
 const serializeAws_restXmlGetDistributionConfigCommand = async (input, context) => {
-    const headers = {
-        "Content-Type": "",
-    };
+    const headers = {};
     let resolvedPath = "/2020-05-31/distribution/{Id}/config";
     if (input.Id !== undefined) {
         const labelValue = input.Id;
@@ -10452,9 +10211,7 @@ const serializeAws_restXmlGetDistributionConfigCommand = async (input, context) 
 };
 exports.serializeAws_restXmlGetDistributionConfigCommand = serializeAws_restXmlGetDistributionConfigCommand;
 const serializeAws_restXmlGetFieldLevelEncryptionCommand = async (input, context) => {
-    const headers = {
-        "Content-Type": "",
-    };
+    const headers = {};
     let resolvedPath = "/2020-05-31/field-level-encryption/{Id}";
     if (input.Id !== undefined) {
         const labelValue = input.Id;
@@ -10480,9 +10237,7 @@ const serializeAws_restXmlGetFieldLevelEncryptionCommand = async (input, context
 };
 exports.serializeAws_restXmlGetFieldLevelEncryptionCommand = serializeAws_restXmlGetFieldLevelEncryptionCommand;
 const serializeAws_restXmlGetFieldLevelEncryptionConfigCommand = async (input, context) => {
-    const headers = {
-        "Content-Type": "",
-    };
+    const headers = {};
     let resolvedPath = "/2020-05-31/field-level-encryption/{Id}/config";
     if (input.Id !== undefined) {
         const labelValue = input.Id;
@@ -10508,9 +10263,7 @@ const serializeAws_restXmlGetFieldLevelEncryptionConfigCommand = async (input, c
 };
 exports.serializeAws_restXmlGetFieldLevelEncryptionConfigCommand = serializeAws_restXmlGetFieldLevelEncryptionConfigCommand;
 const serializeAws_restXmlGetFieldLevelEncryptionProfileCommand = async (input, context) => {
-    const headers = {
-        "Content-Type": "",
-    };
+    const headers = {};
     let resolvedPath = "/2020-05-31/field-level-encryption-profile/{Id}";
     if (input.Id !== undefined) {
         const labelValue = input.Id;
@@ -10536,9 +10289,7 @@ const serializeAws_restXmlGetFieldLevelEncryptionProfileCommand = async (input, 
 };
 exports.serializeAws_restXmlGetFieldLevelEncryptionProfileCommand = serializeAws_restXmlGetFieldLevelEncryptionProfileCommand;
 const serializeAws_restXmlGetFieldLevelEncryptionProfileConfigCommand = async (input, context) => {
-    const headers = {
-        "Content-Type": "",
-    };
+    const headers = {};
     let resolvedPath = "/2020-05-31/field-level-encryption-profile/{Id}/config";
     if (input.Id !== undefined) {
         const labelValue = input.Id;
@@ -10564,20 +10315,8 @@ const serializeAws_restXmlGetFieldLevelEncryptionProfileConfigCommand = async (i
 };
 exports.serializeAws_restXmlGetFieldLevelEncryptionProfileConfigCommand = serializeAws_restXmlGetFieldLevelEncryptionProfileConfigCommand;
 const serializeAws_restXmlGetInvalidationCommand = async (input, context) => {
-    const headers = {
-        "Content-Type": "",
-    };
+    const headers = {};
     let resolvedPath = "/2020-05-31/distribution/{DistributionId}/invalidation/{Id}";
-    if (input.Id !== undefined) {
-        const labelValue = input.Id;
-        if (labelValue.length <= 0) {
-            throw new Error("Empty value provided for input HTTP label: Id.");
-        }
-        resolvedPath = resolvedPath.replace("{Id}", smithy_client_1.extendedEncodeURIComponent(labelValue));
-    }
-    else {
-        throw new Error("No value provided for input HTTP label: Id.");
-    }
     if (input.DistributionId !== undefined) {
         const labelValue = input.DistributionId;
         if (labelValue.length <= 0) {
@@ -10587,6 +10326,16 @@ const serializeAws_restXmlGetInvalidationCommand = async (input, context) => {
     }
     else {
         throw new Error("No value provided for input HTTP label: DistributionId.");
+    }
+    if (input.Id !== undefined) {
+        const labelValue = input.Id;
+        if (labelValue.length <= 0) {
+            throw new Error("Empty value provided for input HTTP label: Id.");
+        }
+        resolvedPath = resolvedPath.replace("{Id}", smithy_client_1.extendedEncodeURIComponent(labelValue));
+    }
+    else {
+        throw new Error("No value provided for input HTTP label: Id.");
     }
     let body;
     const { hostname, protocol = "https", port } = await context.endpoint();
@@ -10602,9 +10351,7 @@ const serializeAws_restXmlGetInvalidationCommand = async (input, context) => {
 };
 exports.serializeAws_restXmlGetInvalidationCommand = serializeAws_restXmlGetInvalidationCommand;
 const serializeAws_restXmlGetKeyGroupCommand = async (input, context) => {
-    const headers = {
-        "Content-Type": "",
-    };
+    const headers = {};
     let resolvedPath = "/2020-05-31/key-group/{Id}";
     if (input.Id !== undefined) {
         const labelValue = input.Id;
@@ -10630,9 +10377,7 @@ const serializeAws_restXmlGetKeyGroupCommand = async (input, context) => {
 };
 exports.serializeAws_restXmlGetKeyGroupCommand = serializeAws_restXmlGetKeyGroupCommand;
 const serializeAws_restXmlGetKeyGroupConfigCommand = async (input, context) => {
-    const headers = {
-        "Content-Type": "",
-    };
+    const headers = {};
     let resolvedPath = "/2020-05-31/key-group/{Id}/config";
     if (input.Id !== undefined) {
         const labelValue = input.Id;
@@ -10658,9 +10403,7 @@ const serializeAws_restXmlGetKeyGroupConfigCommand = async (input, context) => {
 };
 exports.serializeAws_restXmlGetKeyGroupConfigCommand = serializeAws_restXmlGetKeyGroupConfigCommand;
 const serializeAws_restXmlGetMonitoringSubscriptionCommand = async (input, context) => {
-    const headers = {
-        "Content-Type": "",
-    };
+    const headers = {};
     let resolvedPath = "/2020-05-31/distributions/{DistributionId}/monitoring-subscription";
     if (input.DistributionId !== undefined) {
         const labelValue = input.DistributionId;
@@ -10686,9 +10429,7 @@ const serializeAws_restXmlGetMonitoringSubscriptionCommand = async (input, conte
 };
 exports.serializeAws_restXmlGetMonitoringSubscriptionCommand = serializeAws_restXmlGetMonitoringSubscriptionCommand;
 const serializeAws_restXmlGetOriginRequestPolicyCommand = async (input, context) => {
-    const headers = {
-        "Content-Type": "",
-    };
+    const headers = {};
     let resolvedPath = "/2020-05-31/origin-request-policy/{Id}";
     if (input.Id !== undefined) {
         const labelValue = input.Id;
@@ -10714,9 +10455,7 @@ const serializeAws_restXmlGetOriginRequestPolicyCommand = async (input, context)
 };
 exports.serializeAws_restXmlGetOriginRequestPolicyCommand = serializeAws_restXmlGetOriginRequestPolicyCommand;
 const serializeAws_restXmlGetOriginRequestPolicyConfigCommand = async (input, context) => {
-    const headers = {
-        "Content-Type": "",
-    };
+    const headers = {};
     let resolvedPath = "/2020-05-31/origin-request-policy/{Id}/config";
     if (input.Id !== undefined) {
         const labelValue = input.Id;
@@ -10742,9 +10481,7 @@ const serializeAws_restXmlGetOriginRequestPolicyConfigCommand = async (input, co
 };
 exports.serializeAws_restXmlGetOriginRequestPolicyConfigCommand = serializeAws_restXmlGetOriginRequestPolicyConfigCommand;
 const serializeAws_restXmlGetPublicKeyCommand = async (input, context) => {
-    const headers = {
-        "Content-Type": "",
-    };
+    const headers = {};
     let resolvedPath = "/2020-05-31/public-key/{Id}";
     if (input.Id !== undefined) {
         const labelValue = input.Id;
@@ -10770,9 +10507,7 @@ const serializeAws_restXmlGetPublicKeyCommand = async (input, context) => {
 };
 exports.serializeAws_restXmlGetPublicKeyCommand = serializeAws_restXmlGetPublicKeyCommand;
 const serializeAws_restXmlGetPublicKeyConfigCommand = async (input, context) => {
-    const headers = {
-        "Content-Type": "",
-    };
+    const headers = {};
     let resolvedPath = "/2020-05-31/public-key/{Id}/config";
     if (input.Id !== undefined) {
         const labelValue = input.Id;
@@ -10799,7 +10534,7 @@ const serializeAws_restXmlGetPublicKeyConfigCommand = async (input, context) => 
 exports.serializeAws_restXmlGetPublicKeyConfigCommand = serializeAws_restXmlGetPublicKeyConfigCommand;
 const serializeAws_restXmlGetRealtimeLogConfigCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
     };
     let resolvedPath = "/2020-05-31/get-realtime-log-config";
     let body;
@@ -10828,9 +10563,7 @@ const serializeAws_restXmlGetRealtimeLogConfigCommand = async (input, context) =
 };
 exports.serializeAws_restXmlGetRealtimeLogConfigCommand = serializeAws_restXmlGetRealtimeLogConfigCommand;
 const serializeAws_restXmlGetStreamingDistributionCommand = async (input, context) => {
-    const headers = {
-        "Content-Type": "",
-    };
+    const headers = {};
     let resolvedPath = "/2020-05-31/streaming-distribution/{Id}";
     if (input.Id !== undefined) {
         const labelValue = input.Id;
@@ -10856,9 +10589,7 @@ const serializeAws_restXmlGetStreamingDistributionCommand = async (input, contex
 };
 exports.serializeAws_restXmlGetStreamingDistributionCommand = serializeAws_restXmlGetStreamingDistributionCommand;
 const serializeAws_restXmlGetStreamingDistributionConfigCommand = async (input, context) => {
-    const headers = {
-        "Content-Type": "",
-    };
+    const headers = {};
     let resolvedPath = "/2020-05-31/streaming-distribution/{Id}/config";
     if (input.Id !== undefined) {
         const labelValue = input.Id;
@@ -10884,14 +10615,12 @@ const serializeAws_restXmlGetStreamingDistributionConfigCommand = async (input, 
 };
 exports.serializeAws_restXmlGetStreamingDistributionConfigCommand = serializeAws_restXmlGetStreamingDistributionConfigCommand;
 const serializeAws_restXmlListCachePoliciesCommand = async (input, context) => {
-    const headers = {
-        "Content-Type": "",
-    };
+    const headers = {};
     let resolvedPath = "/2020-05-31/cache-policy";
     const query = {
-        ...(input.Marker !== undefined && { Marker: input.Marker }),
         ...(input.Type !== undefined && { Type: input.Type }),
-        ...(input.MaxItems !== undefined && { MaxItems: input.MaxItems }),
+        ...(input.Marker !== undefined && { Marker: input.Marker }),
+        ...(input.MaxItems !== undefined && { MaxItems: input.MaxItems.toString() }),
     };
     let body;
     const { hostname, protocol = "https", port } = await context.endpoint();
@@ -10908,13 +10637,11 @@ const serializeAws_restXmlListCachePoliciesCommand = async (input, context) => {
 };
 exports.serializeAws_restXmlListCachePoliciesCommand = serializeAws_restXmlListCachePoliciesCommand;
 const serializeAws_restXmlListCloudFrontOriginAccessIdentitiesCommand = async (input, context) => {
-    const headers = {
-        "Content-Type": "",
-    };
+    const headers = {};
     let resolvedPath = "/2020-05-31/origin-access-identity/cloudfront";
     const query = {
-        ...(input.MaxItems !== undefined && { MaxItems: input.MaxItems }),
         ...(input.Marker !== undefined && { Marker: input.Marker }),
+        ...(input.MaxItems !== undefined && { MaxItems: input.MaxItems.toString() }),
     };
     let body;
     const { hostname, protocol = "https", port } = await context.endpoint();
@@ -10931,13 +10658,11 @@ const serializeAws_restXmlListCloudFrontOriginAccessIdentitiesCommand = async (i
 };
 exports.serializeAws_restXmlListCloudFrontOriginAccessIdentitiesCommand = serializeAws_restXmlListCloudFrontOriginAccessIdentitiesCommand;
 const serializeAws_restXmlListDistributionsCommand = async (input, context) => {
-    const headers = {
-        "Content-Type": "",
-    };
+    const headers = {};
     let resolvedPath = "/2020-05-31/distribution";
     const query = {
-        ...(input.MaxItems !== undefined && { MaxItems: input.MaxItems }),
         ...(input.Marker !== undefined && { Marker: input.Marker }),
+        ...(input.MaxItems !== undefined && { MaxItems: input.MaxItems.toString() }),
     };
     let body;
     const { hostname, protocol = "https", port } = await context.endpoint();
@@ -10954,9 +10679,7 @@ const serializeAws_restXmlListDistributionsCommand = async (input, context) => {
 };
 exports.serializeAws_restXmlListDistributionsCommand = serializeAws_restXmlListDistributionsCommand;
 const serializeAws_restXmlListDistributionsByCachePolicyIdCommand = async (input, context) => {
-    const headers = {
-        "Content-Type": "",
-    };
+    const headers = {};
     let resolvedPath = "/2020-05-31/distributionsByCachePolicyId/{CachePolicyId}";
     if (input.CachePolicyId !== undefined) {
         const labelValue = input.CachePolicyId;
@@ -10969,8 +10692,8 @@ const serializeAws_restXmlListDistributionsByCachePolicyIdCommand = async (input
         throw new Error("No value provided for input HTTP label: CachePolicyId.");
     }
     const query = {
-        ...(input.MaxItems !== undefined && { MaxItems: input.MaxItems }),
         ...(input.Marker !== undefined && { Marker: input.Marker }),
+        ...(input.MaxItems !== undefined && { MaxItems: input.MaxItems.toString() }),
     };
     let body;
     const { hostname, protocol = "https", port } = await context.endpoint();
@@ -10987,9 +10710,7 @@ const serializeAws_restXmlListDistributionsByCachePolicyIdCommand = async (input
 };
 exports.serializeAws_restXmlListDistributionsByCachePolicyIdCommand = serializeAws_restXmlListDistributionsByCachePolicyIdCommand;
 const serializeAws_restXmlListDistributionsByKeyGroupCommand = async (input, context) => {
-    const headers = {
-        "Content-Type": "",
-    };
+    const headers = {};
     let resolvedPath = "/2020-05-31/distributionsByKeyGroupId/{KeyGroupId}";
     if (input.KeyGroupId !== undefined) {
         const labelValue = input.KeyGroupId;
@@ -11003,7 +10724,7 @@ const serializeAws_restXmlListDistributionsByKeyGroupCommand = async (input, con
     }
     const query = {
         ...(input.Marker !== undefined && { Marker: input.Marker }),
-        ...(input.MaxItems !== undefined && { MaxItems: input.MaxItems }),
+        ...(input.MaxItems !== undefined && { MaxItems: input.MaxItems.toString() }),
     };
     let body;
     const { hostname, protocol = "https", port } = await context.endpoint();
@@ -11020,9 +10741,7 @@ const serializeAws_restXmlListDistributionsByKeyGroupCommand = async (input, con
 };
 exports.serializeAws_restXmlListDistributionsByKeyGroupCommand = serializeAws_restXmlListDistributionsByKeyGroupCommand;
 const serializeAws_restXmlListDistributionsByOriginRequestPolicyIdCommand = async (input, context) => {
-    const headers = {
-        "Content-Type": "",
-    };
+    const headers = {};
     let resolvedPath = "/2020-05-31/distributionsByOriginRequestPolicyId/{OriginRequestPolicyId}";
     if (input.OriginRequestPolicyId !== undefined) {
         const labelValue = input.OriginRequestPolicyId;
@@ -11036,7 +10755,7 @@ const serializeAws_restXmlListDistributionsByOriginRequestPolicyIdCommand = asyn
     }
     const query = {
         ...(input.Marker !== undefined && { Marker: input.Marker }),
-        ...(input.MaxItems !== undefined && { MaxItems: input.MaxItems }),
+        ...(input.MaxItems !== undefined && { MaxItems: input.MaxItems.toString() }),
     };
     let body;
     const { hostname, protocol = "https", port } = await context.endpoint();
@@ -11054,7 +10773,7 @@ const serializeAws_restXmlListDistributionsByOriginRequestPolicyIdCommand = asyn
 exports.serializeAws_restXmlListDistributionsByOriginRequestPolicyIdCommand = serializeAws_restXmlListDistributionsByOriginRequestPolicyIdCommand;
 const serializeAws_restXmlListDistributionsByRealtimeLogConfigCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
     };
     let resolvedPath = "/2020-05-31/distributionsByRealtimeLogConfig";
     let body;
@@ -11066,7 +10785,7 @@ const serializeAws_restXmlListDistributionsByRealtimeLogConfigCommand = async (i
         bodyNode.addChildNode(node);
     }
     if (input.MaxItems !== undefined) {
-        const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.MaxItems)).withName("MaxItems");
+        const node = new xml_builder_1.XmlNode("Integer").addChildNode(new xml_builder_1.XmlText(String(input.MaxItems))).withName("MaxItems");
         bodyNode.addChildNode(node);
     }
     if (input.RealtimeLogConfigArn !== undefined) {
@@ -11095,9 +10814,7 @@ const serializeAws_restXmlListDistributionsByRealtimeLogConfigCommand = async (i
 };
 exports.serializeAws_restXmlListDistributionsByRealtimeLogConfigCommand = serializeAws_restXmlListDistributionsByRealtimeLogConfigCommand;
 const serializeAws_restXmlListDistributionsByWebACLIdCommand = async (input, context) => {
-    const headers = {
-        "Content-Type": "",
-    };
+    const headers = {};
     let resolvedPath = "/2020-05-31/distributionsByWebACLId/{WebACLId}";
     if (input.WebACLId !== undefined) {
         const labelValue = input.WebACLId;
@@ -11111,7 +10828,7 @@ const serializeAws_restXmlListDistributionsByWebACLIdCommand = async (input, con
     }
     const query = {
         ...(input.Marker !== undefined && { Marker: input.Marker }),
-        ...(input.MaxItems !== undefined && { MaxItems: input.MaxItems }),
+        ...(input.MaxItems !== undefined && { MaxItems: input.MaxItems.toString() }),
     };
     let body;
     const { hostname, protocol = "https", port } = await context.endpoint();
@@ -11128,13 +10845,11 @@ const serializeAws_restXmlListDistributionsByWebACLIdCommand = async (input, con
 };
 exports.serializeAws_restXmlListDistributionsByWebACLIdCommand = serializeAws_restXmlListDistributionsByWebACLIdCommand;
 const serializeAws_restXmlListFieldLevelEncryptionConfigsCommand = async (input, context) => {
-    const headers = {
-        "Content-Type": "",
-    };
+    const headers = {};
     let resolvedPath = "/2020-05-31/field-level-encryption";
     const query = {
-        ...(input.MaxItems !== undefined && { MaxItems: input.MaxItems }),
         ...(input.Marker !== undefined && { Marker: input.Marker }),
+        ...(input.MaxItems !== undefined && { MaxItems: input.MaxItems.toString() }),
     };
     let body;
     const { hostname, protocol = "https", port } = await context.endpoint();
@@ -11151,13 +10866,11 @@ const serializeAws_restXmlListFieldLevelEncryptionConfigsCommand = async (input,
 };
 exports.serializeAws_restXmlListFieldLevelEncryptionConfigsCommand = serializeAws_restXmlListFieldLevelEncryptionConfigsCommand;
 const serializeAws_restXmlListFieldLevelEncryptionProfilesCommand = async (input, context) => {
-    const headers = {
-        "Content-Type": "",
-    };
+    const headers = {};
     let resolvedPath = "/2020-05-31/field-level-encryption-profile";
     const query = {
-        ...(input.MaxItems !== undefined && { MaxItems: input.MaxItems }),
         ...(input.Marker !== undefined && { Marker: input.Marker }),
+        ...(input.MaxItems !== undefined && { MaxItems: input.MaxItems.toString() }),
     };
     let body;
     const { hostname, protocol = "https", port } = await context.endpoint();
@@ -11174,9 +10887,7 @@ const serializeAws_restXmlListFieldLevelEncryptionProfilesCommand = async (input
 };
 exports.serializeAws_restXmlListFieldLevelEncryptionProfilesCommand = serializeAws_restXmlListFieldLevelEncryptionProfilesCommand;
 const serializeAws_restXmlListInvalidationsCommand = async (input, context) => {
-    const headers = {
-        "Content-Type": "",
-    };
+    const headers = {};
     let resolvedPath = "/2020-05-31/distribution/{DistributionId}/invalidation";
     if (input.DistributionId !== undefined) {
         const labelValue = input.DistributionId;
@@ -11190,7 +10901,7 @@ const serializeAws_restXmlListInvalidationsCommand = async (input, context) => {
     }
     const query = {
         ...(input.Marker !== undefined && { Marker: input.Marker }),
-        ...(input.MaxItems !== undefined && { MaxItems: input.MaxItems }),
+        ...(input.MaxItems !== undefined && { MaxItems: input.MaxItems.toString() }),
     };
     let body;
     const { hostname, protocol = "https", port } = await context.endpoint();
@@ -11207,13 +10918,11 @@ const serializeAws_restXmlListInvalidationsCommand = async (input, context) => {
 };
 exports.serializeAws_restXmlListInvalidationsCommand = serializeAws_restXmlListInvalidationsCommand;
 const serializeAws_restXmlListKeyGroupsCommand = async (input, context) => {
-    const headers = {
-        "Content-Type": "",
-    };
+    const headers = {};
     let resolvedPath = "/2020-05-31/key-group";
     const query = {
-        ...(input.MaxItems !== undefined && { MaxItems: input.MaxItems }),
         ...(input.Marker !== undefined && { Marker: input.Marker }),
+        ...(input.MaxItems !== undefined && { MaxItems: input.MaxItems.toString() }),
     };
     let body;
     const { hostname, protocol = "https", port } = await context.endpoint();
@@ -11230,14 +10939,12 @@ const serializeAws_restXmlListKeyGroupsCommand = async (input, context) => {
 };
 exports.serializeAws_restXmlListKeyGroupsCommand = serializeAws_restXmlListKeyGroupsCommand;
 const serializeAws_restXmlListOriginRequestPoliciesCommand = async (input, context) => {
-    const headers = {
-        "Content-Type": "",
-    };
+    const headers = {};
     let resolvedPath = "/2020-05-31/origin-request-policy";
     const query = {
-        ...(input.Marker !== undefined && { Marker: input.Marker }),
-        ...(input.MaxItems !== undefined && { MaxItems: input.MaxItems }),
         ...(input.Type !== undefined && { Type: input.Type }),
+        ...(input.Marker !== undefined && { Marker: input.Marker }),
+        ...(input.MaxItems !== undefined && { MaxItems: input.MaxItems.toString() }),
     };
     let body;
     const { hostname, protocol = "https", port } = await context.endpoint();
@@ -11254,13 +10961,11 @@ const serializeAws_restXmlListOriginRequestPoliciesCommand = async (input, conte
 };
 exports.serializeAws_restXmlListOriginRequestPoliciesCommand = serializeAws_restXmlListOriginRequestPoliciesCommand;
 const serializeAws_restXmlListPublicKeysCommand = async (input, context) => {
-    const headers = {
-        "Content-Type": "",
-    };
+    const headers = {};
     let resolvedPath = "/2020-05-31/public-key";
     const query = {
         ...(input.Marker !== undefined && { Marker: input.Marker }),
-        ...(input.MaxItems !== undefined && { MaxItems: input.MaxItems }),
+        ...(input.MaxItems !== undefined && { MaxItems: input.MaxItems.toString() }),
     };
     let body;
     const { hostname, protocol = "https", port } = await context.endpoint();
@@ -11277,13 +10982,11 @@ const serializeAws_restXmlListPublicKeysCommand = async (input, context) => {
 };
 exports.serializeAws_restXmlListPublicKeysCommand = serializeAws_restXmlListPublicKeysCommand;
 const serializeAws_restXmlListRealtimeLogConfigsCommand = async (input, context) => {
-    const headers = {
-        "Content-Type": "",
-    };
+    const headers = {};
     let resolvedPath = "/2020-05-31/realtime-log-config";
     const query = {
+        ...(input.MaxItems !== undefined && { MaxItems: input.MaxItems.toString() }),
         ...(input.Marker !== undefined && { Marker: input.Marker }),
-        ...(input.MaxItems !== undefined && { MaxItems: input.MaxItems }),
     };
     let body;
     const { hostname, protocol = "https", port } = await context.endpoint();
@@ -11300,13 +11003,11 @@ const serializeAws_restXmlListRealtimeLogConfigsCommand = async (input, context)
 };
 exports.serializeAws_restXmlListRealtimeLogConfigsCommand = serializeAws_restXmlListRealtimeLogConfigsCommand;
 const serializeAws_restXmlListStreamingDistributionsCommand = async (input, context) => {
-    const headers = {
-        "Content-Type": "",
-    };
+    const headers = {};
     let resolvedPath = "/2020-05-31/streaming-distribution";
     const query = {
-        ...(input.MaxItems !== undefined && { MaxItems: input.MaxItems }),
         ...(input.Marker !== undefined && { Marker: input.Marker }),
+        ...(input.MaxItems !== undefined && { MaxItems: input.MaxItems.toString() }),
     };
     let body;
     const { hostname, protocol = "https", port } = await context.endpoint();
@@ -11323,9 +11024,7 @@ const serializeAws_restXmlListStreamingDistributionsCommand = async (input, cont
 };
 exports.serializeAws_restXmlListStreamingDistributionsCommand = serializeAws_restXmlListStreamingDistributionsCommand;
 const serializeAws_restXmlListTagsForResourceCommand = async (input, context) => {
-    const headers = {
-        "Content-Type": "",
-    };
+    const headers = {};
     let resolvedPath = "/2020-05-31/tagging";
     const query = {
         ...(input.Resource !== undefined && { Resource: input.Resource }),
@@ -11346,7 +11045,7 @@ const serializeAws_restXmlListTagsForResourceCommand = async (input, context) =>
 exports.serializeAws_restXmlListTagsForResourceCommand = serializeAws_restXmlListTagsForResourceCommand;
 const serializeAws_restXmlTagResourceCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
     };
     let resolvedPath = "/2020-05-31/tagging";
     const query = {
@@ -11376,7 +11075,7 @@ const serializeAws_restXmlTagResourceCommand = async (input, context) => {
 exports.serializeAws_restXmlTagResourceCommand = serializeAws_restXmlTagResourceCommand;
 const serializeAws_restXmlUntagResourceCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
     };
     let resolvedPath = "/2020-05-31/tagging";
     const query = {
@@ -11406,7 +11105,7 @@ const serializeAws_restXmlUntagResourceCommand = async (input, context) => {
 exports.serializeAws_restXmlUntagResourceCommand = serializeAws_restXmlUntagResourceCommand;
 const serializeAws_restXmlUpdateCachePolicyCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
         ...(isSerializableHeaderValue(input.IfMatch) && { "If-Match": input.IfMatch }),
     };
     let resolvedPath = "/2020-05-31/cache-policy/{Id}";
@@ -11442,7 +11141,7 @@ const serializeAws_restXmlUpdateCachePolicyCommand = async (input, context) => {
 exports.serializeAws_restXmlUpdateCachePolicyCommand = serializeAws_restXmlUpdateCachePolicyCommand;
 const serializeAws_restXmlUpdateCloudFrontOriginAccessIdentityCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
         ...(isSerializableHeaderValue(input.IfMatch) && { "If-Match": input.IfMatch }),
     };
     let resolvedPath = "/2020-05-31/origin-access-identity/cloudfront/{Id}/config";
@@ -11478,7 +11177,7 @@ const serializeAws_restXmlUpdateCloudFrontOriginAccessIdentityCommand = async (i
 exports.serializeAws_restXmlUpdateCloudFrontOriginAccessIdentityCommand = serializeAws_restXmlUpdateCloudFrontOriginAccessIdentityCommand;
 const serializeAws_restXmlUpdateDistributionCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
         ...(isSerializableHeaderValue(input.IfMatch) && { "If-Match": input.IfMatch }),
     };
     let resolvedPath = "/2020-05-31/distribution/{Id}/config";
@@ -11514,7 +11213,7 @@ const serializeAws_restXmlUpdateDistributionCommand = async (input, context) => 
 exports.serializeAws_restXmlUpdateDistributionCommand = serializeAws_restXmlUpdateDistributionCommand;
 const serializeAws_restXmlUpdateFieldLevelEncryptionConfigCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
         ...(isSerializableHeaderValue(input.IfMatch) && { "If-Match": input.IfMatch }),
     };
     let resolvedPath = "/2020-05-31/field-level-encryption/{Id}/config";
@@ -11550,7 +11249,7 @@ const serializeAws_restXmlUpdateFieldLevelEncryptionConfigCommand = async (input
 exports.serializeAws_restXmlUpdateFieldLevelEncryptionConfigCommand = serializeAws_restXmlUpdateFieldLevelEncryptionConfigCommand;
 const serializeAws_restXmlUpdateFieldLevelEncryptionProfileCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
         ...(isSerializableHeaderValue(input.IfMatch) && { "If-Match": input.IfMatch }),
     };
     let resolvedPath = "/2020-05-31/field-level-encryption-profile/{Id}/config";
@@ -11586,7 +11285,7 @@ const serializeAws_restXmlUpdateFieldLevelEncryptionProfileCommand = async (inpu
 exports.serializeAws_restXmlUpdateFieldLevelEncryptionProfileCommand = serializeAws_restXmlUpdateFieldLevelEncryptionProfileCommand;
 const serializeAws_restXmlUpdateKeyGroupCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
         ...(isSerializableHeaderValue(input.IfMatch) && { "If-Match": input.IfMatch }),
     };
     let resolvedPath = "/2020-05-31/key-group/{Id}";
@@ -11622,7 +11321,7 @@ const serializeAws_restXmlUpdateKeyGroupCommand = async (input, context) => {
 exports.serializeAws_restXmlUpdateKeyGroupCommand = serializeAws_restXmlUpdateKeyGroupCommand;
 const serializeAws_restXmlUpdateOriginRequestPolicyCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
         ...(isSerializableHeaderValue(input.IfMatch) && { "If-Match": input.IfMatch }),
     };
     let resolvedPath = "/2020-05-31/origin-request-policy/{Id}";
@@ -11658,7 +11357,7 @@ const serializeAws_restXmlUpdateOriginRequestPolicyCommand = async (input, conte
 exports.serializeAws_restXmlUpdateOriginRequestPolicyCommand = serializeAws_restXmlUpdateOriginRequestPolicyCommand;
 const serializeAws_restXmlUpdatePublicKeyCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
         ...(isSerializableHeaderValue(input.IfMatch) && { "If-Match": input.IfMatch }),
     };
     let resolvedPath = "/2020-05-31/public-key/{Id}/config";
@@ -11694,7 +11393,7 @@ const serializeAws_restXmlUpdatePublicKeyCommand = async (input, context) => {
 exports.serializeAws_restXmlUpdatePublicKeyCommand = serializeAws_restXmlUpdatePublicKeyCommand;
 const serializeAws_restXmlUpdateRealtimeLogConfigCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
     };
     let resolvedPath = "/2020-05-31/realtime-log-config";
     let body;
@@ -11744,7 +11443,7 @@ const serializeAws_restXmlUpdateRealtimeLogConfigCommand = async (input, context
 exports.serializeAws_restXmlUpdateRealtimeLogConfigCommand = serializeAws_restXmlUpdateRealtimeLogConfigCommand;
 const serializeAws_restXmlUpdateStreamingDistributionCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
         ...(isSerializableHeaderValue(input.IfMatch) && { "If-Match": input.IfMatch }),
     };
     let resolvedPath = "/2020-05-31/streaming-distribution/{Id}/config";
@@ -11788,11 +11487,11 @@ const deserializeAws_restXmlCreateCachePolicyCommand = async (output, context) =
         ETag: undefined,
         Location: undefined,
     };
-    if (output.headers["etag"] !== undefined) {
-        contents.ETag = output.headers["etag"];
-    }
     if (output.headers["location"] !== undefined) {
         contents.Location = output.headers["location"];
+    }
+    if (output.headers["etag"] !== undefined) {
+        contents.ETag = output.headers["etag"];
     }
     const data = await parseBody(output.body, context);
     contents.CachePolicy = deserializeAws_restXmlCachePolicy(data, context);
@@ -11898,11 +11597,11 @@ const deserializeAws_restXmlCreateCloudFrontOriginAccessIdentityCommand = async 
         ETag: undefined,
         Location: undefined,
     };
-    if (output.headers["etag"] !== undefined) {
-        contents.ETag = output.headers["etag"];
-    }
     if (output.headers["location"] !== undefined) {
         contents.Location = output.headers["location"];
+    }
+    if (output.headers["etag"] !== undefined) {
+        contents.ETag = output.headers["etag"];
     }
     const data = await parseBody(output.body, context);
     contents.CloudFrontOriginAccessIdentity = deserializeAws_restXmlCloudFrontOriginAccessIdentity(data, context);
@@ -11984,11 +11683,11 @@ const deserializeAws_restXmlCreateDistributionCommand = async (output, context) 
         ETag: undefined,
         Location: undefined,
     };
-    if (output.headers["etag"] !== undefined) {
-        contents.ETag = output.headers["etag"];
-    }
     if (output.headers["location"] !== undefined) {
         contents.Location = output.headers["location"];
+    }
+    if (output.headers["etag"] !== undefined) {
+        contents.ETag = output.headers["etag"];
     }
     const data = await parseBody(output.body, context);
     contents.Distribution = deserializeAws_restXmlDistribution(data, context);
@@ -12446,11 +12145,11 @@ const deserializeAws_restXmlCreateDistributionWithTagsCommand = async (output, c
         ETag: undefined,
         Location: undefined,
     };
-    if (output.headers["etag"] !== undefined) {
-        contents.ETag = output.headers["etag"];
-    }
     if (output.headers["location"] !== undefined) {
         contents.Location = output.headers["location"];
+    }
+    if (output.headers["etag"] !== undefined) {
+        contents.ETag = output.headers["etag"];
     }
     const data = await parseBody(output.body, context);
     contents.Distribution = deserializeAws_restXmlDistribution(data, context);
@@ -12916,11 +12615,11 @@ const deserializeAws_restXmlCreateFieldLevelEncryptionConfigCommand = async (out
         FieldLevelEncryption: undefined,
         Location: undefined,
     };
-    if (output.headers["etag"] !== undefined) {
-        contents.ETag = output.headers["etag"];
-    }
     if (output.headers["location"] !== undefined) {
         contents.Location = output.headers["location"];
+    }
+    if (output.headers["etag"] !== undefined) {
+        contents.ETag = output.headers["etag"];
     }
     const data = await parseBody(output.body, context);
     contents.FieldLevelEncryption = deserializeAws_restXmlFieldLevelEncryption(data, context);
@@ -13026,11 +12725,11 @@ const deserializeAws_restXmlCreateFieldLevelEncryptionProfileCommand = async (ou
         FieldLevelEncryptionProfile: undefined,
         Location: undefined,
     };
-    if (output.headers["etag"] !== undefined) {
-        contents.ETag = output.headers["etag"];
-    }
     if (output.headers["location"] !== undefined) {
         contents.Location = output.headers["location"];
+    }
+    if (output.headers["etag"] !== undefined) {
+        contents.ETag = output.headers["etag"];
     }
     const data = await parseBody(output.body, context);
     contents.FieldLevelEncryptionProfile = deserializeAws_restXmlFieldLevelEncryptionProfile(data, context);
@@ -13234,11 +12933,11 @@ const deserializeAws_restXmlCreateKeyGroupCommand = async (output, context) => {
         KeyGroup: undefined,
         Location: undefined,
     };
-    if (output.headers["etag"] !== undefined) {
-        contents.ETag = output.headers["etag"];
-    }
     if (output.headers["location"] !== undefined) {
         contents.Location = output.headers["location"];
+    }
+    if (output.headers["etag"] !== undefined) {
+        contents.ETag = output.headers["etag"];
     }
     const data = await parseBody(output.body, context);
     contents.KeyGroup = deserializeAws_restXmlKeyGroup(data, context);
@@ -13476,11 +13175,11 @@ const deserializeAws_restXmlCreatePublicKeyCommand = async (output, context) => 
         Location: undefined,
         PublicKey: undefined,
     };
-    if (output.headers["etag"] !== undefined) {
-        contents.ETag = output.headers["etag"];
-    }
     if (output.headers["location"] !== undefined) {
         contents.Location = output.headers["location"];
+    }
+    if (output.headers["etag"] !== undefined) {
+        contents.ETag = output.headers["etag"];
     }
     const data = await parseBody(output.body, context);
     contents.PublicKey = deserializeAws_restXmlPublicKey(data, context);
@@ -13618,11 +13317,11 @@ const deserializeAws_restXmlCreateStreamingDistributionCommand = async (output, 
         Location: undefined,
         StreamingDistribution: undefined,
     };
-    if (output.headers["etag"] !== undefined) {
-        contents.ETag = output.headers["etag"];
-    }
     if (output.headers["location"] !== undefined) {
         contents.Location = output.headers["location"];
+    }
+    if (output.headers["etag"] !== undefined) {
+        contents.ETag = output.headers["etag"];
     }
     const data = await parseBody(output.body, context);
     contents.StreamingDistribution = deserializeAws_restXmlStreamingDistribution(data, context);
@@ -13760,11 +13459,11 @@ const deserializeAws_restXmlCreateStreamingDistributionWithTagsCommand = async (
         Location: undefined,
         StreamingDistribution: undefined,
     };
-    if (output.headers["etag"] !== undefined) {
-        contents.ETag = output.headers["etag"];
-    }
     if (output.headers["location"] !== undefined) {
         contents.Location = output.headers["location"];
+    }
+    if (output.headers["etag"] !== undefined) {
+        contents.ETag = output.headers["etag"];
     }
     const data = await parseBody(output.body, context);
     contents.StreamingDistribution = deserializeAws_restXmlStreamingDistribution(data, context);
@@ -19896,11 +19595,11 @@ const deserializeAws_restXmlTrustedSignerDoesNotExistResponse = async (parsedOut
 };
 const serializeAws_restXmlAliases = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("Aliases");
-    if (input.Quantity !== undefined) {
+    if (input.Quantity !== undefined && input.Quantity !== null) {
         const node = new xml_builder_1.XmlNode("integer").addChildNode(new xml_builder_1.XmlText(String(input.Quantity))).withName("Quantity");
         bodyNode.addChildNode(node);
     }
-    if (input.Items !== undefined) {
+    if (input.Items !== undefined && input.Items !== null) {
         const nodes = serializeAws_restXmlAliasList(input.Items, context);
         const containerNode = new xml_builder_1.XmlNode("Items");
         nodes.map((node) => {
@@ -19911,18 +19610,23 @@ const serializeAws_restXmlAliases = (input, context) => {
     return bodyNode;
 };
 const serializeAws_restXmlAliasList = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(entry));
         return node.withName("CNAME");
     });
 };
 const serializeAws_restXmlAllowedMethods = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("AllowedMethods");
-    if (input.CachedMethods !== undefined) {
-        const node = serializeAws_restXmlCachedMethods(input.CachedMethods, context).withName("CachedMethods");
+    if (input.Quantity !== undefined && input.Quantity !== null) {
+        const node = new xml_builder_1.XmlNode("integer").addChildNode(new xml_builder_1.XmlText(String(input.Quantity))).withName("Quantity");
         bodyNode.addChildNode(node);
     }
-    if (input.Items !== undefined) {
+    if (input.Items !== undefined && input.Items !== null) {
         const nodes = serializeAws_restXmlMethodsList(input.Items, context);
         const containerNode = new xml_builder_1.XmlNode("Items");
         nodes.map((node) => {
@@ -19930,109 +19634,123 @@ const serializeAws_restXmlAllowedMethods = (input, context) => {
         });
         bodyNode.addChildNode(containerNode);
     }
-    if (input.Quantity !== undefined) {
-        const node = new xml_builder_1.XmlNode("integer").addChildNode(new xml_builder_1.XmlText(String(input.Quantity))).withName("Quantity");
+    if (input.CachedMethods !== undefined && input.CachedMethods !== null) {
+        const node = serializeAws_restXmlCachedMethods(input.CachedMethods, context).withName("CachedMethods");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
 const serializeAws_restXmlAwsAccountNumberList = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(entry));
         return node.withName("AwsAccountNumber");
     });
 };
 const serializeAws_restXmlCacheBehavior = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("CacheBehavior");
-    if (input.ForwardedValues !== undefined) {
-        const node = serializeAws_restXmlForwardedValues(input.ForwardedValues, context).withName("ForwardedValues");
-        bodyNode.addChildNode(node);
-    }
-    if (input.PathPattern !== undefined) {
+    if (input.PathPattern !== undefined && input.PathPattern !== null) {
         const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.PathPattern)).withName("PathPattern");
         bodyNode.addChildNode(node);
     }
-    if (input.AllowedMethods !== undefined) {
-        const node = serializeAws_restXmlAllowedMethods(input.AllowedMethods, context).withName("AllowedMethods");
-        bodyNode.addChildNode(node);
-    }
-    if (input.DefaultTTL !== undefined) {
-        const node = new xml_builder_1.XmlNode("long").addChildNode(new xml_builder_1.XmlText(String(input.DefaultTTL))).withName("DefaultTTL");
-        bodyNode.addChildNode(node);
-    }
-    if (input.FieldLevelEncryptionId !== undefined) {
-        const node = new xml_builder_1.XmlNode("string")
-            .addChildNode(new xml_builder_1.XmlText(input.FieldLevelEncryptionId))
-            .withName("FieldLevelEncryptionId");
-        bodyNode.addChildNode(node);
-    }
-    if (input.OriginRequestPolicyId !== undefined) {
-        const node = new xml_builder_1.XmlNode("string")
-            .addChildNode(new xml_builder_1.XmlText(input.OriginRequestPolicyId))
-            .withName("OriginRequestPolicyId");
-        bodyNode.addChildNode(node);
-    }
-    if (input.TrustedSigners !== undefined) {
-        const node = serializeAws_restXmlTrustedSigners(input.TrustedSigners, context).withName("TrustedSigners");
-        bodyNode.addChildNode(node);
-    }
-    if (input.TrustedKeyGroups !== undefined) {
-        const node = serializeAws_restXmlTrustedKeyGroups(input.TrustedKeyGroups, context).withName("TrustedKeyGroups");
-        bodyNode.addChildNode(node);
-    }
-    if (input.RealtimeLogConfigArn !== undefined) {
-        const node = new xml_builder_1.XmlNode("string")
-            .addChildNode(new xml_builder_1.XmlText(input.RealtimeLogConfigArn))
-            .withName("RealtimeLogConfigArn");
-        bodyNode.addChildNode(node);
-    }
-    if (input.TargetOriginId !== undefined) {
+    if (input.TargetOriginId !== undefined && input.TargetOriginId !== null) {
         const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.TargetOriginId)).withName("TargetOriginId");
         bodyNode.addChildNode(node);
     }
-    if (input.LambdaFunctionAssociations !== undefined) {
-        const node = serializeAws_restXmlLambdaFunctionAssociations(input.LambdaFunctionAssociations, context).withName("LambdaFunctionAssociations");
+    if (input.TrustedSigners !== undefined && input.TrustedSigners !== null) {
+        const node = serializeAws_restXmlTrustedSigners(input.TrustedSigners, context).withName("TrustedSigners");
         bodyNode.addChildNode(node);
     }
-    if (input.Compress !== undefined) {
-        const node = new xml_builder_1.XmlNode("boolean").addChildNode(new xml_builder_1.XmlText(String(input.Compress))).withName("Compress");
+    if (input.TrustedKeyGroups !== undefined && input.TrustedKeyGroups !== null) {
+        const node = serializeAws_restXmlTrustedKeyGroups(input.TrustedKeyGroups, context).withName("TrustedKeyGroups");
         bodyNode.addChildNode(node);
     }
-    if (input.CachePolicyId !== undefined) {
-        const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.CachePolicyId)).withName("CachePolicyId");
-        bodyNode.addChildNode(node);
-    }
-    if (input.MaxTTL !== undefined) {
-        const node = new xml_builder_1.XmlNode("long").addChildNode(new xml_builder_1.XmlText(String(input.MaxTTL))).withName("MaxTTL");
-        bodyNode.addChildNode(node);
-    }
-    if (input.SmoothStreaming !== undefined) {
-        const node = new xml_builder_1.XmlNode("boolean")
-            .addChildNode(new xml_builder_1.XmlText(String(input.SmoothStreaming)))
-            .withName("SmoothStreaming");
-        bodyNode.addChildNode(node);
-    }
-    if (input.ViewerProtocolPolicy !== undefined) {
+    if (input.ViewerProtocolPolicy !== undefined && input.ViewerProtocolPolicy !== null) {
         const node = new xml_builder_1.XmlNode("ViewerProtocolPolicy")
             .addChildNode(new xml_builder_1.XmlText(input.ViewerProtocolPolicy))
             .withName("ViewerProtocolPolicy");
         bodyNode.addChildNode(node);
     }
-    if (input.MinTTL !== undefined) {
+    if (input.AllowedMethods !== undefined && input.AllowedMethods !== null) {
+        const node = serializeAws_restXmlAllowedMethods(input.AllowedMethods, context).withName("AllowedMethods");
+        bodyNode.addChildNode(node);
+    }
+    if (input.SmoothStreaming !== undefined && input.SmoothStreaming !== null) {
+        const node = new xml_builder_1.XmlNode("boolean")
+            .addChildNode(new xml_builder_1.XmlText(String(input.SmoothStreaming)))
+            .withName("SmoothStreaming");
+        bodyNode.addChildNode(node);
+    }
+    if (input.Compress !== undefined && input.Compress !== null) {
+        const node = new xml_builder_1.XmlNode("boolean").addChildNode(new xml_builder_1.XmlText(String(input.Compress))).withName("Compress");
+        bodyNode.addChildNode(node);
+    }
+    if (input.LambdaFunctionAssociations !== undefined && input.LambdaFunctionAssociations !== null) {
+        const node = serializeAws_restXmlLambdaFunctionAssociations(input.LambdaFunctionAssociations, context).withName("LambdaFunctionAssociations");
+        bodyNode.addChildNode(node);
+    }
+    if (input.FieldLevelEncryptionId !== undefined && input.FieldLevelEncryptionId !== null) {
+        const node = new xml_builder_1.XmlNode("string")
+            .addChildNode(new xml_builder_1.XmlText(input.FieldLevelEncryptionId))
+            .withName("FieldLevelEncryptionId");
+        bodyNode.addChildNode(node);
+    }
+    if (input.RealtimeLogConfigArn !== undefined && input.RealtimeLogConfigArn !== null) {
+        const node = new xml_builder_1.XmlNode("string")
+            .addChildNode(new xml_builder_1.XmlText(input.RealtimeLogConfigArn))
+            .withName("RealtimeLogConfigArn");
+        bodyNode.addChildNode(node);
+    }
+    if (input.CachePolicyId !== undefined && input.CachePolicyId !== null) {
+        const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.CachePolicyId)).withName("CachePolicyId");
+        bodyNode.addChildNode(node);
+    }
+    if (input.OriginRequestPolicyId !== undefined && input.OriginRequestPolicyId !== null) {
+        const node = new xml_builder_1.XmlNode("string")
+            .addChildNode(new xml_builder_1.XmlText(input.OriginRequestPolicyId))
+            .withName("OriginRequestPolicyId");
+        bodyNode.addChildNode(node);
+    }
+    if (input.ForwardedValues !== undefined && input.ForwardedValues !== null) {
+        const node = serializeAws_restXmlForwardedValues(input.ForwardedValues, context).withName("ForwardedValues");
+        bodyNode.addChildNode(node);
+    }
+    if (input.MinTTL !== undefined && input.MinTTL !== null) {
         const node = new xml_builder_1.XmlNode("long").addChildNode(new xml_builder_1.XmlText(String(input.MinTTL))).withName("MinTTL");
+        bodyNode.addChildNode(node);
+    }
+    if (input.DefaultTTL !== undefined && input.DefaultTTL !== null) {
+        const node = new xml_builder_1.XmlNode("long").addChildNode(new xml_builder_1.XmlText(String(input.DefaultTTL))).withName("DefaultTTL");
+        bodyNode.addChildNode(node);
+    }
+    if (input.MaxTTL !== undefined && input.MaxTTL !== null) {
+        const node = new xml_builder_1.XmlNode("long").addChildNode(new xml_builder_1.XmlText(String(input.MaxTTL))).withName("MaxTTL");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
 const serializeAws_restXmlCacheBehaviorList = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = serializeAws_restXmlCacheBehavior(entry, context);
         return node.withName("CacheBehavior");
     });
 };
 const serializeAws_restXmlCacheBehaviors = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("CacheBehaviors");
-    if (input.Items !== undefined) {
+    if (input.Quantity !== undefined && input.Quantity !== null) {
+        const node = new xml_builder_1.XmlNode("integer").addChildNode(new xml_builder_1.XmlText(String(input.Quantity))).withName("Quantity");
+        bodyNode.addChildNode(node);
+    }
+    if (input.Items !== undefined && input.Items !== null) {
         const nodes = serializeAws_restXmlCacheBehaviorList(input.Items, context);
         const containerNode = new xml_builder_1.XmlNode("Items");
         nodes.map((node) => {
@@ -20040,15 +19758,15 @@ const serializeAws_restXmlCacheBehaviors = (input, context) => {
         });
         bodyNode.addChildNode(containerNode);
     }
-    if (input.Quantity !== undefined) {
-        const node = new xml_builder_1.XmlNode("integer").addChildNode(new xml_builder_1.XmlText(String(input.Quantity))).withName("Quantity");
-        bodyNode.addChildNode(node);
-    }
     return bodyNode;
 };
 const serializeAws_restXmlCachedMethods = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("CachedMethods");
-    if (input.Items !== undefined) {
+    if (input.Quantity !== undefined && input.Quantity !== null) {
+        const node = new xml_builder_1.XmlNode("integer").addChildNode(new xml_builder_1.XmlText(String(input.Quantity))).withName("Quantity");
+        bodyNode.addChildNode(node);
+    }
+    if (input.Items !== undefined && input.Items !== null) {
         const nodes = serializeAws_restXmlMethodsList(input.Items, context);
         const containerNode = new xml_builder_1.XmlNode("Items");
         nodes.map((node) => {
@@ -20056,35 +19774,32 @@ const serializeAws_restXmlCachedMethods = (input, context) => {
         });
         bodyNode.addChildNode(containerNode);
     }
-    if (input.Quantity !== undefined) {
-        const node = new xml_builder_1.XmlNode("integer").addChildNode(new xml_builder_1.XmlText(String(input.Quantity))).withName("Quantity");
-        bodyNode.addChildNode(node);
-    }
     return bodyNode;
 };
 const serializeAws_restXmlCachePolicyConfig = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("CachePolicyConfig");
-    if (input.MinTTL !== undefined) {
-        const node = new xml_builder_1.XmlNode("long").addChildNode(new xml_builder_1.XmlText(String(input.MinTTL))).withName("MinTTL");
-        bodyNode.addChildNode(node);
-    }
-    if (input.Comment !== undefined) {
+    if (input.Comment !== undefined && input.Comment !== null) {
         const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.Comment)).withName("Comment");
         bodyNode.addChildNode(node);
     }
-    if (input.MaxTTL !== undefined) {
-        const node = new xml_builder_1.XmlNode("long").addChildNode(new xml_builder_1.XmlText(String(input.MaxTTL))).withName("MaxTTL");
-        bodyNode.addChildNode(node);
-    }
-    if (input.Name !== undefined) {
+    if (input.Name !== undefined && input.Name !== null) {
         const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.Name)).withName("Name");
         bodyNode.addChildNode(node);
     }
-    if (input.DefaultTTL !== undefined) {
+    if (input.DefaultTTL !== undefined && input.DefaultTTL !== null) {
         const node = new xml_builder_1.XmlNode("long").addChildNode(new xml_builder_1.XmlText(String(input.DefaultTTL))).withName("DefaultTTL");
         bodyNode.addChildNode(node);
     }
-    if (input.ParametersInCacheKeyAndForwardedToOrigin !== undefined) {
+    if (input.MaxTTL !== undefined && input.MaxTTL !== null) {
+        const node = new xml_builder_1.XmlNode("long").addChildNode(new xml_builder_1.XmlText(String(input.MaxTTL))).withName("MaxTTL");
+        bodyNode.addChildNode(node);
+    }
+    if (input.MinTTL !== undefined && input.MinTTL !== null) {
+        const node = new xml_builder_1.XmlNode("long").addChildNode(new xml_builder_1.XmlText(String(input.MinTTL))).withName("MinTTL");
+        bodyNode.addChildNode(node);
+    }
+    if (input.ParametersInCacheKeyAndForwardedToOrigin !== undefined &&
+        input.ParametersInCacheKeyAndForwardedToOrigin !== null) {
         const node = serializeAws_restXmlParametersInCacheKeyAndForwardedToOrigin(input.ParametersInCacheKeyAndForwardedToOrigin, context).withName("ParametersInCacheKeyAndForwardedToOrigin");
         bodyNode.addChildNode(node);
     }
@@ -20092,41 +19807,41 @@ const serializeAws_restXmlCachePolicyConfig = (input, context) => {
 };
 const serializeAws_restXmlCachePolicyCookiesConfig = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("CachePolicyCookiesConfig");
-    if (input.Cookies !== undefined) {
-        const node = serializeAws_restXmlCookieNames(input.Cookies, context).withName("Cookies");
-        bodyNode.addChildNode(node);
-    }
-    if (input.CookieBehavior !== undefined) {
+    if (input.CookieBehavior !== undefined && input.CookieBehavior !== null) {
         const node = new xml_builder_1.XmlNode("CachePolicyCookieBehavior")
             .addChildNode(new xml_builder_1.XmlText(input.CookieBehavior))
             .withName("CookieBehavior");
+        bodyNode.addChildNode(node);
+    }
+    if (input.Cookies !== undefined && input.Cookies !== null) {
+        const node = serializeAws_restXmlCookieNames(input.Cookies, context).withName("Cookies");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
 const serializeAws_restXmlCachePolicyHeadersConfig = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("CachePolicyHeadersConfig");
-    if (input.Headers !== undefined) {
-        const node = serializeAws_restXmlHeaders(input.Headers, context).withName("Headers");
-        bodyNode.addChildNode(node);
-    }
-    if (input.HeaderBehavior !== undefined) {
+    if (input.HeaderBehavior !== undefined && input.HeaderBehavior !== null) {
         const node = new xml_builder_1.XmlNode("CachePolicyHeaderBehavior")
             .addChildNode(new xml_builder_1.XmlText(input.HeaderBehavior))
             .withName("HeaderBehavior");
+        bodyNode.addChildNode(node);
+    }
+    if (input.Headers !== undefined && input.Headers !== null) {
+        const node = serializeAws_restXmlHeaders(input.Headers, context).withName("Headers");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
 const serializeAws_restXmlCachePolicyQueryStringsConfig = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("CachePolicyQueryStringsConfig");
-    if (input.QueryStringBehavior !== undefined) {
+    if (input.QueryStringBehavior !== undefined && input.QueryStringBehavior !== null) {
         const node = new xml_builder_1.XmlNode("CachePolicyQueryStringBehavior")
             .addChildNode(new xml_builder_1.XmlText(input.QueryStringBehavior))
             .withName("QueryStringBehavior");
         bodyNode.addChildNode(node);
     }
-    if (input.QueryStrings !== undefined) {
+    if (input.QueryStrings !== undefined && input.QueryStrings !== null) {
         const node = serializeAws_restXmlQueryStringNames(input.QueryStrings, context).withName("QueryStrings");
         bodyNode.addChildNode(node);
     }
@@ -20134,11 +19849,11 @@ const serializeAws_restXmlCachePolicyQueryStringsConfig = (input, context) => {
 };
 const serializeAws_restXmlCloudFrontOriginAccessIdentityConfig = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("CloudFrontOriginAccessIdentityConfig");
-    if (input.CallerReference !== undefined) {
+    if (input.CallerReference !== undefined && input.CallerReference !== null) {
         const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.CallerReference)).withName("CallerReference");
         bodyNode.addChildNode(node);
     }
-    if (input.Comment !== undefined) {
+    if (input.Comment !== undefined && input.Comment !== null) {
         const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.Comment)).withName("Comment");
         bodyNode.addChildNode(node);
     }
@@ -20146,43 +19861,52 @@ const serializeAws_restXmlCloudFrontOriginAccessIdentityConfig = (input, context
 };
 const serializeAws_restXmlContentTypeProfile = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("ContentTypeProfile");
-    if (input.ProfileId !== undefined) {
+    if (input.Format !== undefined && input.Format !== null) {
+        const node = new xml_builder_1.XmlNode("Format").addChildNode(new xml_builder_1.XmlText(input.Format)).withName("Format");
+        bodyNode.addChildNode(node);
+    }
+    if (input.ProfileId !== undefined && input.ProfileId !== null) {
         const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.ProfileId)).withName("ProfileId");
         bodyNode.addChildNode(node);
     }
-    if (input.ContentType !== undefined) {
+    if (input.ContentType !== undefined && input.ContentType !== null) {
         const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.ContentType)).withName("ContentType");
-        bodyNode.addChildNode(node);
-    }
-    if (input.Format !== undefined) {
-        const node = new xml_builder_1.XmlNode("Format").addChildNode(new xml_builder_1.XmlText(input.Format)).withName("Format");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
 const serializeAws_restXmlContentTypeProfileConfig = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("ContentTypeProfileConfig");
-    if (input.ContentTypeProfiles !== undefined) {
-        const node = serializeAws_restXmlContentTypeProfiles(input.ContentTypeProfiles, context).withName("ContentTypeProfiles");
-        bodyNode.addChildNode(node);
-    }
-    if (input.ForwardWhenContentTypeIsUnknown !== undefined) {
+    if (input.ForwardWhenContentTypeIsUnknown !== undefined && input.ForwardWhenContentTypeIsUnknown !== null) {
         const node = new xml_builder_1.XmlNode("boolean")
             .addChildNode(new xml_builder_1.XmlText(String(input.ForwardWhenContentTypeIsUnknown)))
             .withName("ForwardWhenContentTypeIsUnknown");
         bodyNode.addChildNode(node);
     }
+    if (input.ContentTypeProfiles !== undefined && input.ContentTypeProfiles !== null) {
+        const node = serializeAws_restXmlContentTypeProfiles(input.ContentTypeProfiles, context).withName("ContentTypeProfiles");
+        bodyNode.addChildNode(node);
+    }
     return bodyNode;
 };
 const serializeAws_restXmlContentTypeProfileList = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = serializeAws_restXmlContentTypeProfile(entry, context);
         return node.withName("ContentTypeProfile");
     });
 };
 const serializeAws_restXmlContentTypeProfiles = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("ContentTypeProfiles");
-    if (input.Items !== undefined) {
+    if (input.Quantity !== undefined && input.Quantity !== null) {
+        const node = new xml_builder_1.XmlNode("integer").addChildNode(new xml_builder_1.XmlText(String(input.Quantity))).withName("Quantity");
+        bodyNode.addChildNode(node);
+    }
+    if (input.Items !== undefined && input.Items !== null) {
         const nodes = serializeAws_restXmlContentTypeProfileList(input.Items, context);
         const containerNode = new xml_builder_1.XmlNode("Items");
         nodes.map((node) => {
@@ -20190,25 +19914,26 @@ const serializeAws_restXmlContentTypeProfiles = (input, context) => {
         });
         bodyNode.addChildNode(containerNode);
     }
-    if (input.Quantity !== undefined) {
-        const node = new xml_builder_1.XmlNode("integer").addChildNode(new xml_builder_1.XmlText(String(input.Quantity))).withName("Quantity");
-        bodyNode.addChildNode(node);
-    }
     return bodyNode;
 };
 const serializeAws_restXmlCookieNameList = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(entry));
         return node.withName("Name");
     });
 };
 const serializeAws_restXmlCookieNames = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("CookieNames");
-    if (input.Quantity !== undefined) {
+    if (input.Quantity !== undefined && input.Quantity !== null) {
         const node = new xml_builder_1.XmlNode("integer").addChildNode(new xml_builder_1.XmlText(String(input.Quantity))).withName("Quantity");
         bodyNode.addChildNode(node);
     }
-    if (input.Items !== undefined) {
+    if (input.Items !== undefined && input.Items !== null) {
         const nodes = serializeAws_restXmlCookieNameList(input.Items, context);
         const containerNode = new xml_builder_1.XmlNode("Items");
         nodes.map((node) => {
@@ -20220,11 +19945,11 @@ const serializeAws_restXmlCookieNames = (input, context) => {
 };
 const serializeAws_restXmlCookiePreference = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("CookiePreference");
-    if (input.Forward !== undefined) {
+    if (input.Forward !== undefined && input.Forward !== null) {
         const node = new xml_builder_1.XmlNode("ItemSelection").addChildNode(new xml_builder_1.XmlText(input.Forward)).withName("Forward");
         bodyNode.addChildNode(node);
     }
-    if (input.WhitelistedNames !== undefined) {
+    if (input.WhitelistedNames !== undefined && input.WhitelistedNames !== null) {
         const node = serializeAws_restXmlCookieNames(input.WhitelistedNames, context).withName("WhitelistedNames");
         bodyNode.addChildNode(node);
     }
@@ -20232,41 +19957,46 @@ const serializeAws_restXmlCookiePreference = (input, context) => {
 };
 const serializeAws_restXmlCustomErrorResponse = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("CustomErrorResponse");
-    if (input.ResponseCode !== undefined) {
-        const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.ResponseCode)).withName("ResponseCode");
-        bodyNode.addChildNode(node);
-    }
-    if (input.ErrorCachingMinTTL !== undefined) {
-        const node = new xml_builder_1.XmlNode("long")
-            .addChildNode(new xml_builder_1.XmlText(String(input.ErrorCachingMinTTL)))
-            .withName("ErrorCachingMinTTL");
-        bodyNode.addChildNode(node);
-    }
-    if (input.ErrorCode !== undefined) {
+    if (input.ErrorCode !== undefined && input.ErrorCode !== null) {
         const node = new xml_builder_1.XmlNode("integer").addChildNode(new xml_builder_1.XmlText(String(input.ErrorCode))).withName("ErrorCode");
         bodyNode.addChildNode(node);
     }
-    if (input.ResponsePagePath !== undefined) {
+    if (input.ResponsePagePath !== undefined && input.ResponsePagePath !== null) {
         const node = new xml_builder_1.XmlNode("string")
             .addChildNode(new xml_builder_1.XmlText(input.ResponsePagePath))
             .withName("ResponsePagePath");
         bodyNode.addChildNode(node);
     }
+    if (input.ResponseCode !== undefined && input.ResponseCode !== null) {
+        const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.ResponseCode)).withName("ResponseCode");
+        bodyNode.addChildNode(node);
+    }
+    if (input.ErrorCachingMinTTL !== undefined && input.ErrorCachingMinTTL !== null) {
+        const node = new xml_builder_1.XmlNode("long")
+            .addChildNode(new xml_builder_1.XmlText(String(input.ErrorCachingMinTTL)))
+            .withName("ErrorCachingMinTTL");
+        bodyNode.addChildNode(node);
+    }
     return bodyNode;
 };
 const serializeAws_restXmlCustomErrorResponseList = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = serializeAws_restXmlCustomErrorResponse(entry, context);
         return node.withName("CustomErrorResponse");
     });
 };
 const serializeAws_restXmlCustomErrorResponses = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("CustomErrorResponses");
-    if (input.Quantity !== undefined) {
+    if (input.Quantity !== undefined && input.Quantity !== null) {
         const node = new xml_builder_1.XmlNode("integer").addChildNode(new xml_builder_1.XmlText(String(input.Quantity))).withName("Quantity");
         bodyNode.addChildNode(node);
     }
-    if (input.Items !== undefined) {
+    if (input.Items !== undefined && input.Items !== null) {
         const nodes = serializeAws_restXmlCustomErrorResponseList(input.Items, context);
         const containerNode = new xml_builder_1.XmlNode("Items");
         nodes.map((node) => {
@@ -20278,11 +20008,11 @@ const serializeAws_restXmlCustomErrorResponses = (input, context) => {
 };
 const serializeAws_restXmlCustomHeaders = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("CustomHeaders");
-    if (input.Quantity !== undefined) {
+    if (input.Quantity !== undefined && input.Quantity !== null) {
         const node = new xml_builder_1.XmlNode("integer").addChildNode(new xml_builder_1.XmlText(String(input.Quantity))).withName("Quantity");
         bodyNode.addChildNode(node);
     }
-    if (input.Items !== undefined) {
+    if (input.Items !== undefined && input.Items !== null) {
         const nodes = serializeAws_restXmlOriginCustomHeadersList(input.Items, context);
         const containerNode = new xml_builder_1.XmlNode("Items");
         nodes.map((node) => {
@@ -20294,211 +20024,211 @@ const serializeAws_restXmlCustomHeaders = (input, context) => {
 };
 const serializeAws_restXmlCustomOriginConfig = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("CustomOriginConfig");
-    if (input.OriginKeepaliveTimeout !== undefined) {
-        const node = new xml_builder_1.XmlNode("integer")
-            .addChildNode(new xml_builder_1.XmlText(String(input.OriginKeepaliveTimeout)))
-            .withName("OriginKeepaliveTimeout");
-        bodyNode.addChildNode(node);
-    }
-    if (input.HTTPPort !== undefined) {
+    if (input.HTTPPort !== undefined && input.HTTPPort !== null) {
         const node = new xml_builder_1.XmlNode("integer").addChildNode(new xml_builder_1.XmlText(String(input.HTTPPort))).withName("HTTPPort");
         bodyNode.addChildNode(node);
     }
-    if (input.OriginProtocolPolicy !== undefined) {
+    if (input.HTTPSPort !== undefined && input.HTTPSPort !== null) {
+        const node = new xml_builder_1.XmlNode("integer").addChildNode(new xml_builder_1.XmlText(String(input.HTTPSPort))).withName("HTTPSPort");
+        bodyNode.addChildNode(node);
+    }
+    if (input.OriginProtocolPolicy !== undefined && input.OriginProtocolPolicy !== null) {
         const node = new xml_builder_1.XmlNode("OriginProtocolPolicy")
             .addChildNode(new xml_builder_1.XmlText(input.OriginProtocolPolicy))
             .withName("OriginProtocolPolicy");
         bodyNode.addChildNode(node);
     }
-    if (input.OriginReadTimeout !== undefined) {
+    if (input.OriginSslProtocols !== undefined && input.OriginSslProtocols !== null) {
+        const node = serializeAws_restXmlOriginSslProtocols(input.OriginSslProtocols, context).withName("OriginSslProtocols");
+        bodyNode.addChildNode(node);
+    }
+    if (input.OriginReadTimeout !== undefined && input.OriginReadTimeout !== null) {
         const node = new xml_builder_1.XmlNode("integer")
             .addChildNode(new xml_builder_1.XmlText(String(input.OriginReadTimeout)))
             .withName("OriginReadTimeout");
         bodyNode.addChildNode(node);
     }
-    if (input.OriginSslProtocols !== undefined) {
-        const node = serializeAws_restXmlOriginSslProtocols(input.OriginSslProtocols, context).withName("OriginSslProtocols");
-        bodyNode.addChildNode(node);
-    }
-    if (input.HTTPSPort !== undefined) {
-        const node = new xml_builder_1.XmlNode("integer").addChildNode(new xml_builder_1.XmlText(String(input.HTTPSPort))).withName("HTTPSPort");
+    if (input.OriginKeepaliveTimeout !== undefined && input.OriginKeepaliveTimeout !== null) {
+        const node = new xml_builder_1.XmlNode("integer")
+            .addChildNode(new xml_builder_1.XmlText(String(input.OriginKeepaliveTimeout)))
+            .withName("OriginKeepaliveTimeout");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
 const serializeAws_restXmlDefaultCacheBehavior = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("DefaultCacheBehavior");
-    if (input.Compress !== undefined) {
-        const node = new xml_builder_1.XmlNode("boolean").addChildNode(new xml_builder_1.XmlText(String(input.Compress))).withName("Compress");
+    if (input.TargetOriginId !== undefined && input.TargetOriginId !== null) {
+        const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.TargetOriginId)).withName("TargetOriginId");
         bodyNode.addChildNode(node);
     }
-    if (input.ViewerProtocolPolicy !== undefined) {
+    if (input.TrustedSigners !== undefined && input.TrustedSigners !== null) {
+        const node = serializeAws_restXmlTrustedSigners(input.TrustedSigners, context).withName("TrustedSigners");
+        bodyNode.addChildNode(node);
+    }
+    if (input.TrustedKeyGroups !== undefined && input.TrustedKeyGroups !== null) {
+        const node = serializeAws_restXmlTrustedKeyGroups(input.TrustedKeyGroups, context).withName("TrustedKeyGroups");
+        bodyNode.addChildNode(node);
+    }
+    if (input.ViewerProtocolPolicy !== undefined && input.ViewerProtocolPolicy !== null) {
         const node = new xml_builder_1.XmlNode("ViewerProtocolPolicy")
             .addChildNode(new xml_builder_1.XmlText(input.ViewerProtocolPolicy))
             .withName("ViewerProtocolPolicy");
         bodyNode.addChildNode(node);
     }
-    if (input.TargetOriginId !== undefined) {
-        const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.TargetOriginId)).withName("TargetOriginId");
+    if (input.AllowedMethods !== undefined && input.AllowedMethods !== null) {
+        const node = serializeAws_restXmlAllowedMethods(input.AllowedMethods, context).withName("AllowedMethods");
         bodyNode.addChildNode(node);
     }
-    if (input.FieldLevelEncryptionId !== undefined) {
-        const node = new xml_builder_1.XmlNode("string")
-            .addChildNode(new xml_builder_1.XmlText(input.FieldLevelEncryptionId))
-            .withName("FieldLevelEncryptionId");
-        bodyNode.addChildNode(node);
-    }
-    if (input.CachePolicyId !== undefined) {
-        const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.CachePolicyId)).withName("CachePolicyId");
-        bodyNode.addChildNode(node);
-    }
-    if (input.MaxTTL !== undefined) {
-        const node = new xml_builder_1.XmlNode("long").addChildNode(new xml_builder_1.XmlText(String(input.MaxTTL))).withName("MaxTTL");
-        bodyNode.addChildNode(node);
-    }
-    if (input.MinTTL !== undefined) {
-        const node = new xml_builder_1.XmlNode("long").addChildNode(new xml_builder_1.XmlText(String(input.MinTTL))).withName("MinTTL");
-        bodyNode.addChildNode(node);
-    }
-    if (input.TrustedKeyGroups !== undefined) {
-        const node = serializeAws_restXmlTrustedKeyGroups(input.TrustedKeyGroups, context).withName("TrustedKeyGroups");
-        bodyNode.addChildNode(node);
-    }
-    if (input.SmoothStreaming !== undefined) {
+    if (input.SmoothStreaming !== undefined && input.SmoothStreaming !== null) {
         const node = new xml_builder_1.XmlNode("boolean")
             .addChildNode(new xml_builder_1.XmlText(String(input.SmoothStreaming)))
             .withName("SmoothStreaming");
         bodyNode.addChildNode(node);
     }
-    if (input.AllowedMethods !== undefined) {
-        const node = serializeAws_restXmlAllowedMethods(input.AllowedMethods, context).withName("AllowedMethods");
+    if (input.Compress !== undefined && input.Compress !== null) {
+        const node = new xml_builder_1.XmlNode("boolean").addChildNode(new xml_builder_1.XmlText(String(input.Compress))).withName("Compress");
         bodyNode.addChildNode(node);
     }
-    if (input.ForwardedValues !== undefined) {
-        const node = serializeAws_restXmlForwardedValues(input.ForwardedValues, context).withName("ForwardedValues");
+    if (input.LambdaFunctionAssociations !== undefined && input.LambdaFunctionAssociations !== null) {
+        const node = serializeAws_restXmlLambdaFunctionAssociations(input.LambdaFunctionAssociations, context).withName("LambdaFunctionAssociations");
         bodyNode.addChildNode(node);
     }
-    if (input.DefaultTTL !== undefined) {
-        const node = new xml_builder_1.XmlNode("long").addChildNode(new xml_builder_1.XmlText(String(input.DefaultTTL))).withName("DefaultTTL");
+    if (input.FieldLevelEncryptionId !== undefined && input.FieldLevelEncryptionId !== null) {
+        const node = new xml_builder_1.XmlNode("string")
+            .addChildNode(new xml_builder_1.XmlText(input.FieldLevelEncryptionId))
+            .withName("FieldLevelEncryptionId");
         bodyNode.addChildNode(node);
     }
-    if (input.TrustedSigners !== undefined) {
-        const node = serializeAws_restXmlTrustedSigners(input.TrustedSigners, context).withName("TrustedSigners");
+    if (input.RealtimeLogConfigArn !== undefined && input.RealtimeLogConfigArn !== null) {
+        const node = new xml_builder_1.XmlNode("string")
+            .addChildNode(new xml_builder_1.XmlText(input.RealtimeLogConfigArn))
+            .withName("RealtimeLogConfigArn");
         bodyNode.addChildNode(node);
     }
-    if (input.OriginRequestPolicyId !== undefined) {
+    if (input.CachePolicyId !== undefined && input.CachePolicyId !== null) {
+        const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.CachePolicyId)).withName("CachePolicyId");
+        bodyNode.addChildNode(node);
+    }
+    if (input.OriginRequestPolicyId !== undefined && input.OriginRequestPolicyId !== null) {
         const node = new xml_builder_1.XmlNode("string")
             .addChildNode(new xml_builder_1.XmlText(input.OriginRequestPolicyId))
             .withName("OriginRequestPolicyId");
         bodyNode.addChildNode(node);
     }
-    if (input.LambdaFunctionAssociations !== undefined) {
-        const node = serializeAws_restXmlLambdaFunctionAssociations(input.LambdaFunctionAssociations, context).withName("LambdaFunctionAssociations");
+    if (input.ForwardedValues !== undefined && input.ForwardedValues !== null) {
+        const node = serializeAws_restXmlForwardedValues(input.ForwardedValues, context).withName("ForwardedValues");
         bodyNode.addChildNode(node);
     }
-    if (input.RealtimeLogConfigArn !== undefined) {
-        const node = new xml_builder_1.XmlNode("string")
-            .addChildNode(new xml_builder_1.XmlText(input.RealtimeLogConfigArn))
-            .withName("RealtimeLogConfigArn");
+    if (input.MinTTL !== undefined && input.MinTTL !== null) {
+        const node = new xml_builder_1.XmlNode("long").addChildNode(new xml_builder_1.XmlText(String(input.MinTTL))).withName("MinTTL");
+        bodyNode.addChildNode(node);
+    }
+    if (input.DefaultTTL !== undefined && input.DefaultTTL !== null) {
+        const node = new xml_builder_1.XmlNode("long").addChildNode(new xml_builder_1.XmlText(String(input.DefaultTTL))).withName("DefaultTTL");
+        bodyNode.addChildNode(node);
+    }
+    if (input.MaxTTL !== undefined && input.MaxTTL !== null) {
+        const node = new xml_builder_1.XmlNode("long").addChildNode(new xml_builder_1.XmlText(String(input.MaxTTL))).withName("MaxTTL");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
 const serializeAws_restXmlDistributionConfig = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("DistributionConfig");
-    if (input.WebACLId !== undefined) {
-        const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.WebACLId)).withName("WebACLId");
+    if (input.CallerReference !== undefined && input.CallerReference !== null) {
+        const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.CallerReference)).withName("CallerReference");
         bodyNode.addChildNode(node);
     }
-    if (input.Aliases !== undefined) {
+    if (input.Aliases !== undefined && input.Aliases !== null) {
         const node = serializeAws_restXmlAliases(input.Aliases, context).withName("Aliases");
         bodyNode.addChildNode(node);
     }
-    if (input.DefaultRootObject !== undefined) {
+    if (input.DefaultRootObject !== undefined && input.DefaultRootObject !== null) {
         const node = new xml_builder_1.XmlNode("string")
             .addChildNode(new xml_builder_1.XmlText(input.DefaultRootObject))
             .withName("DefaultRootObject");
         bodyNode.addChildNode(node);
     }
-    if (input.ViewerCertificate !== undefined) {
-        const node = serializeAws_restXmlViewerCertificate(input.ViewerCertificate, context).withName("ViewerCertificate");
-        bodyNode.addChildNode(node);
-    }
-    if (input.DefaultCacheBehavior !== undefined) {
-        const node = serializeAws_restXmlDefaultCacheBehavior(input.DefaultCacheBehavior, context).withName("DefaultCacheBehavior");
-        bodyNode.addChildNode(node);
-    }
-    if (input.CallerReference !== undefined) {
-        const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.CallerReference)).withName("CallerReference");
-        bodyNode.addChildNode(node);
-    }
-    if (input.IsIPV6Enabled !== undefined) {
-        const node = new xml_builder_1.XmlNode("boolean")
-            .addChildNode(new xml_builder_1.XmlText(String(input.IsIPV6Enabled)))
-            .withName("IsIPV6Enabled");
-        bodyNode.addChildNode(node);
-    }
-    if (input.Enabled !== undefined) {
-        const node = new xml_builder_1.XmlNode("boolean").addChildNode(new xml_builder_1.XmlText(String(input.Enabled))).withName("Enabled");
-        bodyNode.addChildNode(node);
-    }
-    if (input.Logging !== undefined) {
-        const node = serializeAws_restXmlLoggingConfig(input.Logging, context).withName("Logging");
-        bodyNode.addChildNode(node);
-    }
-    if (input.Comment !== undefined) {
-        const node = new xml_builder_1.XmlNode("CommentType").addChildNode(new xml_builder_1.XmlText(input.Comment)).withName("Comment");
-        bodyNode.addChildNode(node);
-    }
-    if (input.Origins !== undefined) {
+    if (input.Origins !== undefined && input.Origins !== null) {
         const node = serializeAws_restXmlOrigins(input.Origins, context).withName("Origins");
         bodyNode.addChildNode(node);
     }
-    if (input.CustomErrorResponses !== undefined) {
-        const node = serializeAws_restXmlCustomErrorResponses(input.CustomErrorResponses, context).withName("CustomErrorResponses");
-        bodyNode.addChildNode(node);
-    }
-    if (input.Restrictions !== undefined) {
-        const node = serializeAws_restXmlRestrictions(input.Restrictions, context).withName("Restrictions");
-        bodyNode.addChildNode(node);
-    }
-    if (input.CacheBehaviors !== undefined) {
-        const node = serializeAws_restXmlCacheBehaviors(input.CacheBehaviors, context).withName("CacheBehaviors");
-        bodyNode.addChildNode(node);
-    }
-    if (input.OriginGroups !== undefined) {
+    if (input.OriginGroups !== undefined && input.OriginGroups !== null) {
         const node = serializeAws_restXmlOriginGroups(input.OriginGroups, context).withName("OriginGroups");
         bodyNode.addChildNode(node);
     }
-    if (input.HttpVersion !== undefined) {
+    if (input.DefaultCacheBehavior !== undefined && input.DefaultCacheBehavior !== null) {
+        const node = serializeAws_restXmlDefaultCacheBehavior(input.DefaultCacheBehavior, context).withName("DefaultCacheBehavior");
+        bodyNode.addChildNode(node);
+    }
+    if (input.CacheBehaviors !== undefined && input.CacheBehaviors !== null) {
+        const node = serializeAws_restXmlCacheBehaviors(input.CacheBehaviors, context).withName("CacheBehaviors");
+        bodyNode.addChildNode(node);
+    }
+    if (input.CustomErrorResponses !== undefined && input.CustomErrorResponses !== null) {
+        const node = serializeAws_restXmlCustomErrorResponses(input.CustomErrorResponses, context).withName("CustomErrorResponses");
+        bodyNode.addChildNode(node);
+    }
+    if (input.Comment !== undefined && input.Comment !== null) {
+        const node = new xml_builder_1.XmlNode("CommentType").addChildNode(new xml_builder_1.XmlText(input.Comment)).withName("Comment");
+        bodyNode.addChildNode(node);
+    }
+    if (input.Logging !== undefined && input.Logging !== null) {
+        const node = serializeAws_restXmlLoggingConfig(input.Logging, context).withName("Logging");
+        bodyNode.addChildNode(node);
+    }
+    if (input.PriceClass !== undefined && input.PriceClass !== null) {
+        const node = new xml_builder_1.XmlNode("PriceClass").addChildNode(new xml_builder_1.XmlText(input.PriceClass)).withName("PriceClass");
+        bodyNode.addChildNode(node);
+    }
+    if (input.Enabled !== undefined && input.Enabled !== null) {
+        const node = new xml_builder_1.XmlNode("boolean").addChildNode(new xml_builder_1.XmlText(String(input.Enabled))).withName("Enabled");
+        bodyNode.addChildNode(node);
+    }
+    if (input.ViewerCertificate !== undefined && input.ViewerCertificate !== null) {
+        const node = serializeAws_restXmlViewerCertificate(input.ViewerCertificate, context).withName("ViewerCertificate");
+        bodyNode.addChildNode(node);
+    }
+    if (input.Restrictions !== undefined && input.Restrictions !== null) {
+        const node = serializeAws_restXmlRestrictions(input.Restrictions, context).withName("Restrictions");
+        bodyNode.addChildNode(node);
+    }
+    if (input.WebACLId !== undefined && input.WebACLId !== null) {
+        const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.WebACLId)).withName("WebACLId");
+        bodyNode.addChildNode(node);
+    }
+    if (input.HttpVersion !== undefined && input.HttpVersion !== null) {
         const node = new xml_builder_1.XmlNode("HttpVersion").addChildNode(new xml_builder_1.XmlText(input.HttpVersion)).withName("HttpVersion");
         bodyNode.addChildNode(node);
     }
-    if (input.PriceClass !== undefined) {
-        const node = new xml_builder_1.XmlNode("PriceClass").addChildNode(new xml_builder_1.XmlText(input.PriceClass)).withName("PriceClass");
+    if (input.IsIPV6Enabled !== undefined && input.IsIPV6Enabled !== null) {
+        const node = new xml_builder_1.XmlNode("boolean")
+            .addChildNode(new xml_builder_1.XmlText(String(input.IsIPV6Enabled)))
+            .withName("IsIPV6Enabled");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
 const serializeAws_restXmlDistributionConfigWithTags = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("DistributionConfigWithTags");
-    if (input.Tags !== undefined) {
-        const node = serializeAws_restXmlTags(input.Tags, context).withName("Tags");
+    if (input.DistributionConfig !== undefined && input.DistributionConfig !== null) {
+        const node = serializeAws_restXmlDistributionConfig(input.DistributionConfig, context).withName("DistributionConfig");
         bodyNode.addChildNode(node);
     }
-    if (input.DistributionConfig !== undefined) {
-        const node = serializeAws_restXmlDistributionConfig(input.DistributionConfig, context).withName("DistributionConfig");
+    if (input.Tags !== undefined && input.Tags !== null) {
+        const node = serializeAws_restXmlTags(input.Tags, context).withName("Tags");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
 const serializeAws_restXmlEncryptionEntities = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("EncryptionEntities");
-    if (input.Quantity !== undefined) {
+    if (input.Quantity !== undefined && input.Quantity !== null) {
         const node = new xml_builder_1.XmlNode("integer").addChildNode(new xml_builder_1.XmlText(String(input.Quantity))).withName("Quantity");
         bodyNode.addChildNode(node);
     }
-    if (input.Items !== undefined) {
+    if (input.Items !== undefined && input.Items !== null) {
         const nodes = serializeAws_restXmlEncryptionEntityList(input.Items, context);
         const containerNode = new xml_builder_1.XmlNode("Items");
         nodes.map((node) => {
@@ -20510,99 +20240,123 @@ const serializeAws_restXmlEncryptionEntities = (input, context) => {
 };
 const serializeAws_restXmlEncryptionEntity = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("EncryptionEntity");
-    if (input.PublicKeyId !== undefined) {
+    if (input.PublicKeyId !== undefined && input.PublicKeyId !== null) {
         const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.PublicKeyId)).withName("PublicKeyId");
         bodyNode.addChildNode(node);
     }
-    if (input.ProviderId !== undefined) {
+    if (input.ProviderId !== undefined && input.ProviderId !== null) {
         const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.ProviderId)).withName("ProviderId");
         bodyNode.addChildNode(node);
     }
-    if (input.FieldPatterns !== undefined) {
+    if (input.FieldPatterns !== undefined && input.FieldPatterns !== null) {
         const node = serializeAws_restXmlFieldPatterns(input.FieldPatterns, context).withName("FieldPatterns");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
 const serializeAws_restXmlEncryptionEntityList = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = serializeAws_restXmlEncryptionEntity(entry, context);
         return node.withName("EncryptionEntity");
     });
 };
 const serializeAws_restXmlEndPoint = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("EndPoint");
-    if (input.StreamType !== undefined) {
+    if (input.StreamType !== undefined && input.StreamType !== null) {
         const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.StreamType)).withName("StreamType");
         bodyNode.addChildNode(node);
     }
-    if (input.KinesisStreamConfig !== undefined) {
+    if (input.KinesisStreamConfig !== undefined && input.KinesisStreamConfig !== null) {
         const node = serializeAws_restXmlKinesisStreamConfig(input.KinesisStreamConfig, context).withName("KinesisStreamConfig");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
 const serializeAws_restXmlEndPointList = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = serializeAws_restXmlEndPoint(entry, context);
         return node.withName("member");
     });
 };
 const serializeAws_restXmlFieldLevelEncryptionConfig = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("FieldLevelEncryptionConfig");
-    if (input.QueryArgProfileConfig !== undefined) {
-        const node = serializeAws_restXmlQueryArgProfileConfig(input.QueryArgProfileConfig, context).withName("QueryArgProfileConfig");
+    if (input.CallerReference !== undefined && input.CallerReference !== null) {
+        const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.CallerReference)).withName("CallerReference");
         bodyNode.addChildNode(node);
     }
-    if (input.ContentTypeProfileConfig !== undefined) {
-        const node = serializeAws_restXmlContentTypeProfileConfig(input.ContentTypeProfileConfig, context).withName("ContentTypeProfileConfig");
-        bodyNode.addChildNode(node);
-    }
-    if (input.Comment !== undefined) {
+    if (input.Comment !== undefined && input.Comment !== null) {
         const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.Comment)).withName("Comment");
         bodyNode.addChildNode(node);
     }
-    if (input.CallerReference !== undefined) {
-        const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.CallerReference)).withName("CallerReference");
+    if (input.QueryArgProfileConfig !== undefined && input.QueryArgProfileConfig !== null) {
+        const node = serializeAws_restXmlQueryArgProfileConfig(input.QueryArgProfileConfig, context).withName("QueryArgProfileConfig");
+        bodyNode.addChildNode(node);
+    }
+    if (input.ContentTypeProfileConfig !== undefined && input.ContentTypeProfileConfig !== null) {
+        const node = serializeAws_restXmlContentTypeProfileConfig(input.ContentTypeProfileConfig, context).withName("ContentTypeProfileConfig");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
 const serializeAws_restXmlFieldLevelEncryptionProfileConfig = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("FieldLevelEncryptionProfileConfig");
-    if (input.Comment !== undefined) {
-        const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.Comment)).withName("Comment");
+    if (input.Name !== undefined && input.Name !== null) {
+        const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.Name)).withName("Name");
         bodyNode.addChildNode(node);
     }
-    if (input.EncryptionEntities !== undefined) {
-        const node = serializeAws_restXmlEncryptionEntities(input.EncryptionEntities, context).withName("EncryptionEntities");
-        bodyNode.addChildNode(node);
-    }
-    if (input.CallerReference !== undefined) {
+    if (input.CallerReference !== undefined && input.CallerReference !== null) {
         const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.CallerReference)).withName("CallerReference");
         bodyNode.addChildNode(node);
     }
-    if (input.Name !== undefined) {
-        const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.Name)).withName("Name");
+    if (input.Comment !== undefined && input.Comment !== null) {
+        const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.Comment)).withName("Comment");
+        bodyNode.addChildNode(node);
+    }
+    if (input.EncryptionEntities !== undefined && input.EncryptionEntities !== null) {
+        const node = serializeAws_restXmlEncryptionEntities(input.EncryptionEntities, context).withName("EncryptionEntities");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
 const serializeAws_restXmlFieldList = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(entry));
         return node.withName("Field");
     });
 };
 const serializeAws_restXmlFieldPatternList = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(entry));
         return node.withName("FieldPattern");
     });
 };
 const serializeAws_restXmlFieldPatterns = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("FieldPatterns");
-    if (input.Items !== undefined) {
+    if (input.Quantity !== undefined && input.Quantity !== null) {
+        const node = new xml_builder_1.XmlNode("integer").addChildNode(new xml_builder_1.XmlText(String(input.Quantity))).withName("Quantity");
+        bodyNode.addChildNode(node);
+    }
+    if (input.Items !== undefined && input.Items !== null) {
         const nodes = serializeAws_restXmlFieldPatternList(input.Items, context);
         const containerNode = new xml_builder_1.XmlNode("Items");
         nodes.map((node) => {
@@ -20610,43 +20364,43 @@ const serializeAws_restXmlFieldPatterns = (input, context) => {
         });
         bodyNode.addChildNode(containerNode);
     }
-    if (input.Quantity !== undefined) {
-        const node = new xml_builder_1.XmlNode("integer").addChildNode(new xml_builder_1.XmlText(String(input.Quantity))).withName("Quantity");
-        bodyNode.addChildNode(node);
-    }
     return bodyNode;
 };
 const serializeAws_restXmlForwardedValues = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("ForwardedValues");
-    if (input.QueryString !== undefined) {
+    if (input.QueryString !== undefined && input.QueryString !== null) {
         const node = new xml_builder_1.XmlNode("boolean")
             .addChildNode(new xml_builder_1.XmlText(String(input.QueryString)))
             .withName("QueryString");
         bodyNode.addChildNode(node);
     }
-    if (input.QueryStringCacheKeys !== undefined) {
-        const node = serializeAws_restXmlQueryStringCacheKeys(input.QueryStringCacheKeys, context).withName("QueryStringCacheKeys");
+    if (input.Cookies !== undefined && input.Cookies !== null) {
+        const node = serializeAws_restXmlCookiePreference(input.Cookies, context).withName("Cookies");
         bodyNode.addChildNode(node);
     }
-    if (input.Headers !== undefined) {
+    if (input.Headers !== undefined && input.Headers !== null) {
         const node = serializeAws_restXmlHeaders(input.Headers, context).withName("Headers");
         bodyNode.addChildNode(node);
     }
-    if (input.Cookies !== undefined) {
-        const node = serializeAws_restXmlCookiePreference(input.Cookies, context).withName("Cookies");
+    if (input.QueryStringCacheKeys !== undefined && input.QueryStringCacheKeys !== null) {
+        const node = serializeAws_restXmlQueryStringCacheKeys(input.QueryStringCacheKeys, context).withName("QueryStringCacheKeys");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
 const serializeAws_restXmlGeoRestriction = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("GeoRestriction");
-    if (input.RestrictionType !== undefined) {
+    if (input.RestrictionType !== undefined && input.RestrictionType !== null) {
         const node = new xml_builder_1.XmlNode("GeoRestrictionType")
             .addChildNode(new xml_builder_1.XmlText(input.RestrictionType))
             .withName("RestrictionType");
         bodyNode.addChildNode(node);
     }
-    if (input.Items !== undefined) {
+    if (input.Quantity !== undefined && input.Quantity !== null) {
+        const node = new xml_builder_1.XmlNode("integer").addChildNode(new xml_builder_1.XmlText(String(input.Quantity))).withName("Quantity");
+        bodyNode.addChildNode(node);
+    }
+    if (input.Items !== undefined && input.Items !== null) {
         const nodes = serializeAws_restXmlLocationList(input.Items, context);
         const containerNode = new xml_builder_1.XmlNode("Items");
         nodes.map((node) => {
@@ -20654,25 +20408,26 @@ const serializeAws_restXmlGeoRestriction = (input, context) => {
         });
         bodyNode.addChildNode(containerNode);
     }
-    if (input.Quantity !== undefined) {
-        const node = new xml_builder_1.XmlNode("integer").addChildNode(new xml_builder_1.XmlText(String(input.Quantity))).withName("Quantity");
-        bodyNode.addChildNode(node);
-    }
     return bodyNode;
 };
 const serializeAws_restXmlHeaderList = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(entry));
         return node.withName("Name");
     });
 };
 const serializeAws_restXmlHeaders = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("Headers");
-    if (input.Quantity !== undefined) {
+    if (input.Quantity !== undefined && input.Quantity !== null) {
         const node = new xml_builder_1.XmlNode("integer").addChildNode(new xml_builder_1.XmlText(String(input.Quantity))).withName("Quantity");
         bodyNode.addChildNode(node);
     }
-    if (input.Items !== undefined) {
+    if (input.Items !== undefined && input.Items !== null) {
         const nodes = serializeAws_restXmlHeaderList(input.Items, context);
         const containerNode = new xml_builder_1.XmlNode("Items");
         nodes.map((node) => {
@@ -20684,11 +20439,11 @@ const serializeAws_restXmlHeaders = (input, context) => {
 };
 const serializeAws_restXmlInvalidationBatch = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("InvalidationBatch");
-    if (input.Paths !== undefined) {
+    if (input.Paths !== undefined && input.Paths !== null) {
         const node = serializeAws_restXmlPaths(input.Paths, context).withName("Paths");
         bodyNode.addChildNode(node);
     }
-    if (input.CallerReference !== undefined) {
+    if (input.CallerReference !== undefined && input.CallerReference !== null) {
         const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.CallerReference)).withName("CallerReference");
         bodyNode.addChildNode(node);
     }
@@ -20696,7 +20451,11 @@ const serializeAws_restXmlInvalidationBatch = (input, context) => {
 };
 const serializeAws_restXmlKeyGroupConfig = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("KeyGroupConfig");
-    if (input.Items !== undefined) {
+    if (input.Name !== undefined && input.Name !== null) {
+        const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.Name)).withName("Name");
+        bodyNode.addChildNode(node);
+    }
+    if (input.Items !== undefined && input.Items !== null) {
         const nodes = serializeAws_restXmlPublicKeyIdList(input.Items, context);
         const containerNode = new xml_builder_1.XmlNode("Items");
         nodes.map((node) => {
@@ -20704,23 +20463,19 @@ const serializeAws_restXmlKeyGroupConfig = (input, context) => {
         });
         bodyNode.addChildNode(containerNode);
     }
-    if (input.Comment !== undefined) {
+    if (input.Comment !== undefined && input.Comment !== null) {
         const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.Comment)).withName("Comment");
-        bodyNode.addChildNode(node);
-    }
-    if (input.Name !== undefined) {
-        const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.Name)).withName("Name");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
 const serializeAws_restXmlKinesisStreamConfig = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("KinesisStreamConfig");
-    if (input.RoleARN !== undefined) {
+    if (input.RoleARN !== undefined && input.RoleARN !== null) {
         const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.RoleARN)).withName("RoleARN");
         bodyNode.addChildNode(node);
     }
-    if (input.StreamARN !== undefined) {
+    if (input.StreamARN !== undefined && input.StreamARN !== null) {
         const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.StreamARN)).withName("StreamARN");
         bodyNode.addChildNode(node);
     }
@@ -20728,17 +20483,17 @@ const serializeAws_restXmlKinesisStreamConfig = (input, context) => {
 };
 const serializeAws_restXmlLambdaFunctionAssociation = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("LambdaFunctionAssociation");
-    if (input.LambdaFunctionARN !== undefined) {
+    if (input.LambdaFunctionARN !== undefined && input.LambdaFunctionARN !== null) {
         const node = new xml_builder_1.XmlNode("LambdaFunctionARN")
             .addChildNode(new xml_builder_1.XmlText(input.LambdaFunctionARN))
             .withName("LambdaFunctionARN");
         bodyNode.addChildNode(node);
     }
-    if (input.EventType !== undefined) {
+    if (input.EventType !== undefined && input.EventType !== null) {
         const node = new xml_builder_1.XmlNode("EventType").addChildNode(new xml_builder_1.XmlText(input.EventType)).withName("EventType");
         bodyNode.addChildNode(node);
     }
-    if (input.IncludeBody !== undefined) {
+    if (input.IncludeBody !== undefined && input.IncludeBody !== null) {
         const node = new xml_builder_1.XmlNode("boolean")
             .addChildNode(new xml_builder_1.XmlText(String(input.IncludeBody)))
             .withName("IncludeBody");
@@ -20747,14 +20502,23 @@ const serializeAws_restXmlLambdaFunctionAssociation = (input, context) => {
     return bodyNode;
 };
 const serializeAws_restXmlLambdaFunctionAssociationList = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = serializeAws_restXmlLambdaFunctionAssociation(entry, context);
         return node.withName("LambdaFunctionAssociation");
     });
 };
 const serializeAws_restXmlLambdaFunctionAssociations = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("LambdaFunctionAssociations");
-    if (input.Items !== undefined) {
+    if (input.Quantity !== undefined && input.Quantity !== null) {
+        const node = new xml_builder_1.XmlNode("integer").addChildNode(new xml_builder_1.XmlText(String(input.Quantity))).withName("Quantity");
+        bodyNode.addChildNode(node);
+    }
+    if (input.Items !== undefined && input.Items !== null) {
         const nodes = serializeAws_restXmlLambdaFunctionAssociationList(input.Items, context);
         const containerNode = new xml_builder_1.XmlNode("Items");
         nodes.map((node) => {
@@ -20762,49 +20526,55 @@ const serializeAws_restXmlLambdaFunctionAssociations = (input, context) => {
         });
         bodyNode.addChildNode(containerNode);
     }
-    if (input.Quantity !== undefined) {
-        const node = new xml_builder_1.XmlNode("integer").addChildNode(new xml_builder_1.XmlText(String(input.Quantity))).withName("Quantity");
-        bodyNode.addChildNode(node);
-    }
     return bodyNode;
 };
 const serializeAws_restXmlLocationList = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(entry));
         return node.withName("Location");
     });
 };
 const serializeAws_restXmlLoggingConfig = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("LoggingConfig");
-    if (input.Prefix !== undefined) {
-        const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.Prefix)).withName("Prefix");
-        bodyNode.addChildNode(node);
-    }
-    if (input.Bucket !== undefined) {
-        const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.Bucket)).withName("Bucket");
-        bodyNode.addChildNode(node);
-    }
-    if (input.Enabled !== undefined) {
+    if (input.Enabled !== undefined && input.Enabled !== null) {
         const node = new xml_builder_1.XmlNode("boolean").addChildNode(new xml_builder_1.XmlText(String(input.Enabled))).withName("Enabled");
         bodyNode.addChildNode(node);
     }
-    if (input.IncludeCookies !== undefined) {
+    if (input.IncludeCookies !== undefined && input.IncludeCookies !== null) {
         const node = new xml_builder_1.XmlNode("boolean")
             .addChildNode(new xml_builder_1.XmlText(String(input.IncludeCookies)))
             .withName("IncludeCookies");
         bodyNode.addChildNode(node);
     }
+    if (input.Bucket !== undefined && input.Bucket !== null) {
+        const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.Bucket)).withName("Bucket");
+        bodyNode.addChildNode(node);
+    }
+    if (input.Prefix !== undefined && input.Prefix !== null) {
+        const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.Prefix)).withName("Prefix");
+        bodyNode.addChildNode(node);
+    }
     return bodyNode;
 };
 const serializeAws_restXmlMethodsList = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = new xml_builder_1.XmlNode("Method").addChildNode(new xml_builder_1.XmlText(entry));
         return node.withName("Method");
     });
 };
 const serializeAws_restXmlMonitoringSubscription = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("MonitoringSubscription");
-    if (input.RealtimeMetricsSubscriptionConfig !== undefined) {
+    if (input.RealtimeMetricsSubscriptionConfig !== undefined && input.RealtimeMetricsSubscriptionConfig !== null) {
         const node = serializeAws_restXmlRealtimeMetricsSubscriptionConfig(input.RealtimeMetricsSubscriptionConfig, context).withName("RealtimeMetricsSubscriptionConfig");
         bodyNode.addChildNode(node);
     }
@@ -20812,117 +20582,132 @@ const serializeAws_restXmlMonitoringSubscription = (input, context) => {
 };
 const serializeAws_restXmlOrigin = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("Origin");
-    if (input.Id !== undefined) {
+    if (input.Id !== undefined && input.Id !== null) {
         const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.Id)).withName("Id");
         bodyNode.addChildNode(node);
     }
-    if (input.OriginPath !== undefined) {
+    if (input.DomainName !== undefined && input.DomainName !== null) {
+        const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.DomainName)).withName("DomainName");
+        bodyNode.addChildNode(node);
+    }
+    if (input.OriginPath !== undefined && input.OriginPath !== null) {
         const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.OriginPath)).withName("OriginPath");
         bodyNode.addChildNode(node);
     }
-    if (input.CustomHeaders !== undefined) {
+    if (input.CustomHeaders !== undefined && input.CustomHeaders !== null) {
         const node = serializeAws_restXmlCustomHeaders(input.CustomHeaders, context).withName("CustomHeaders");
         bodyNode.addChildNode(node);
     }
-    if (input.CustomOriginConfig !== undefined) {
-        const node = serializeAws_restXmlCustomOriginConfig(input.CustomOriginConfig, context).withName("CustomOriginConfig");
-        bodyNode.addChildNode(node);
-    }
-    if (input.S3OriginConfig !== undefined) {
+    if (input.S3OriginConfig !== undefined && input.S3OriginConfig !== null) {
         const node = serializeAws_restXmlS3OriginConfig(input.S3OriginConfig, context).withName("S3OriginConfig");
         bodyNode.addChildNode(node);
     }
-    if (input.ConnectionAttempts !== undefined) {
+    if (input.CustomOriginConfig !== undefined && input.CustomOriginConfig !== null) {
+        const node = serializeAws_restXmlCustomOriginConfig(input.CustomOriginConfig, context).withName("CustomOriginConfig");
+        bodyNode.addChildNode(node);
+    }
+    if (input.ConnectionAttempts !== undefined && input.ConnectionAttempts !== null) {
         const node = new xml_builder_1.XmlNode("integer")
             .addChildNode(new xml_builder_1.XmlText(String(input.ConnectionAttempts)))
             .withName("ConnectionAttempts");
         bodyNode.addChildNode(node);
     }
-    if (input.ConnectionTimeout !== undefined) {
+    if (input.ConnectionTimeout !== undefined && input.ConnectionTimeout !== null) {
         const node = new xml_builder_1.XmlNode("integer")
             .addChildNode(new xml_builder_1.XmlText(String(input.ConnectionTimeout)))
             .withName("ConnectionTimeout");
         bodyNode.addChildNode(node);
     }
-    if (input.OriginShield !== undefined) {
+    if (input.OriginShield !== undefined && input.OriginShield !== null) {
         const node = serializeAws_restXmlOriginShield(input.OriginShield, context).withName("OriginShield");
-        bodyNode.addChildNode(node);
-    }
-    if (input.DomainName !== undefined) {
-        const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.DomainName)).withName("DomainName");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
 const serializeAws_restXmlOriginCustomHeader = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("OriginCustomHeader");
-    if (input.HeaderValue !== undefined) {
-        const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.HeaderValue)).withName("HeaderValue");
+    if (input.HeaderName !== undefined && input.HeaderName !== null) {
+        const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.HeaderName)).withName("HeaderName");
         bodyNode.addChildNode(node);
     }
-    if (input.HeaderName !== undefined) {
-        const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.HeaderName)).withName("HeaderName");
+    if (input.HeaderValue !== undefined && input.HeaderValue !== null) {
+        const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.HeaderValue)).withName("HeaderValue");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
 const serializeAws_restXmlOriginCustomHeadersList = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = serializeAws_restXmlOriginCustomHeader(entry, context);
         return node.withName("OriginCustomHeader");
     });
 };
 const serializeAws_restXmlOriginGroup = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("OriginGroup");
-    if (input.FailoverCriteria !== undefined) {
+    if (input.Id !== undefined && input.Id !== null) {
+        const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.Id)).withName("Id");
+        bodyNode.addChildNode(node);
+    }
+    if (input.FailoverCriteria !== undefined && input.FailoverCriteria !== null) {
         const node = serializeAws_restXmlOriginGroupFailoverCriteria(input.FailoverCriteria, context).withName("FailoverCriteria");
         bodyNode.addChildNode(node);
     }
-    if (input.Members !== undefined) {
+    if (input.Members !== undefined && input.Members !== null) {
         const node = serializeAws_restXmlOriginGroupMembers(input.Members, context).withName("Members");
-        bodyNode.addChildNode(node);
-    }
-    if (input.Id !== undefined) {
-        const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.Id)).withName("Id");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
 const serializeAws_restXmlOriginGroupFailoverCriteria = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("OriginGroupFailoverCriteria");
-    if (input.StatusCodes !== undefined) {
+    if (input.StatusCodes !== undefined && input.StatusCodes !== null) {
         const node = serializeAws_restXmlStatusCodes(input.StatusCodes, context).withName("StatusCodes");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
 const serializeAws_restXmlOriginGroupList = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = serializeAws_restXmlOriginGroup(entry, context);
         return node.withName("OriginGroup");
     });
 };
 const serializeAws_restXmlOriginGroupMember = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("OriginGroupMember");
-    if (input.OriginId !== undefined) {
+    if (input.OriginId !== undefined && input.OriginId !== null) {
         const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.OriginId)).withName("OriginId");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
 const serializeAws_restXmlOriginGroupMemberList = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = serializeAws_restXmlOriginGroupMember(entry, context);
         return node.withName("OriginGroupMember");
     });
 };
 const serializeAws_restXmlOriginGroupMembers = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("OriginGroupMembers");
-    if (input.Quantity !== undefined) {
+    if (input.Quantity !== undefined && input.Quantity !== null) {
         const node = new xml_builder_1.XmlNode("integer").addChildNode(new xml_builder_1.XmlText(String(input.Quantity))).withName("Quantity");
         bodyNode.addChildNode(node);
     }
-    if (input.Items !== undefined) {
+    if (input.Items !== undefined && input.Items !== null) {
         const nodes = serializeAws_restXmlOriginGroupMemberList(input.Items, context);
         const containerNode = new xml_builder_1.XmlNode("Items");
         nodes.map((node) => {
@@ -20934,11 +20719,11 @@ const serializeAws_restXmlOriginGroupMembers = (input, context) => {
 };
 const serializeAws_restXmlOriginGroups = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("OriginGroups");
-    if (input.Quantity !== undefined) {
+    if (input.Quantity !== undefined && input.Quantity !== null) {
         const node = new xml_builder_1.XmlNode("integer").addChildNode(new xml_builder_1.XmlText(String(input.Quantity))).withName("Quantity");
         bodyNode.addChildNode(node);
     }
-    if (input.Items !== undefined) {
+    if (input.Items !== undefined && input.Items !== null) {
         const nodes = serializeAws_restXmlOriginGroupList(input.Items, context);
         const containerNode = new xml_builder_1.XmlNode("Items");
         nodes.map((node) => {
@@ -20949,58 +20734,63 @@ const serializeAws_restXmlOriginGroups = (input, context) => {
     return bodyNode;
 };
 const serializeAws_restXmlOriginList = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = serializeAws_restXmlOrigin(entry, context);
         return node.withName("Origin");
     });
 };
 const serializeAws_restXmlOriginRequestPolicyConfig = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("OriginRequestPolicyConfig");
-    if (input.Comment !== undefined) {
+    if (input.Comment !== undefined && input.Comment !== null) {
         const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.Comment)).withName("Comment");
         bodyNode.addChildNode(node);
     }
-    if (input.CookiesConfig !== undefined) {
-        const node = serializeAws_restXmlOriginRequestPolicyCookiesConfig(input.CookiesConfig, context).withName("CookiesConfig");
+    if (input.Name !== undefined && input.Name !== null) {
+        const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.Name)).withName("Name");
         bodyNode.addChildNode(node);
     }
-    if (input.HeadersConfig !== undefined) {
+    if (input.HeadersConfig !== undefined && input.HeadersConfig !== null) {
         const node = serializeAws_restXmlOriginRequestPolicyHeadersConfig(input.HeadersConfig, context).withName("HeadersConfig");
         bodyNode.addChildNode(node);
     }
-    if (input.QueryStringsConfig !== undefined) {
-        const node = serializeAws_restXmlOriginRequestPolicyQueryStringsConfig(input.QueryStringsConfig, context).withName("QueryStringsConfig");
+    if (input.CookiesConfig !== undefined && input.CookiesConfig !== null) {
+        const node = serializeAws_restXmlOriginRequestPolicyCookiesConfig(input.CookiesConfig, context).withName("CookiesConfig");
         bodyNode.addChildNode(node);
     }
-    if (input.Name !== undefined) {
-        const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.Name)).withName("Name");
+    if (input.QueryStringsConfig !== undefined && input.QueryStringsConfig !== null) {
+        const node = serializeAws_restXmlOriginRequestPolicyQueryStringsConfig(input.QueryStringsConfig, context).withName("QueryStringsConfig");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
 const serializeAws_restXmlOriginRequestPolicyCookiesConfig = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("OriginRequestPolicyCookiesConfig");
-    if (input.Cookies !== undefined) {
-        const node = serializeAws_restXmlCookieNames(input.Cookies, context).withName("Cookies");
-        bodyNode.addChildNode(node);
-    }
-    if (input.CookieBehavior !== undefined) {
+    if (input.CookieBehavior !== undefined && input.CookieBehavior !== null) {
         const node = new xml_builder_1.XmlNode("OriginRequestPolicyCookieBehavior")
             .addChildNode(new xml_builder_1.XmlText(input.CookieBehavior))
             .withName("CookieBehavior");
+        bodyNode.addChildNode(node);
+    }
+    if (input.Cookies !== undefined && input.Cookies !== null) {
+        const node = serializeAws_restXmlCookieNames(input.Cookies, context).withName("Cookies");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
 const serializeAws_restXmlOriginRequestPolicyHeadersConfig = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("OriginRequestPolicyHeadersConfig");
-    if (input.HeaderBehavior !== undefined) {
+    if (input.HeaderBehavior !== undefined && input.HeaderBehavior !== null) {
         const node = new xml_builder_1.XmlNode("OriginRequestPolicyHeaderBehavior")
             .addChildNode(new xml_builder_1.XmlText(input.HeaderBehavior))
             .withName("HeaderBehavior");
         bodyNode.addChildNode(node);
     }
-    if (input.Headers !== undefined) {
+    if (input.Headers !== undefined && input.Headers !== null) {
         const node = serializeAws_restXmlHeaders(input.Headers, context).withName("Headers");
         bodyNode.addChildNode(node);
     }
@@ -21008,13 +20798,13 @@ const serializeAws_restXmlOriginRequestPolicyHeadersConfig = (input, context) =>
 };
 const serializeAws_restXmlOriginRequestPolicyQueryStringsConfig = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("OriginRequestPolicyQueryStringsConfig");
-    if (input.QueryStringBehavior !== undefined) {
+    if (input.QueryStringBehavior !== undefined && input.QueryStringBehavior !== null) {
         const node = new xml_builder_1.XmlNode("OriginRequestPolicyQueryStringBehavior")
             .addChildNode(new xml_builder_1.XmlText(input.QueryStringBehavior))
             .withName("QueryStringBehavior");
         bodyNode.addChildNode(node);
     }
-    if (input.QueryStrings !== undefined) {
+    if (input.QueryStrings !== undefined && input.QueryStrings !== null) {
         const node = serializeAws_restXmlQueryStringNames(input.QueryStrings, context).withName("QueryStrings");
         bodyNode.addChildNode(node);
     }
@@ -21022,11 +20812,11 @@ const serializeAws_restXmlOriginRequestPolicyQueryStringsConfig = (input, contex
 };
 const serializeAws_restXmlOrigins = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("Origins");
-    if (input.Quantity !== undefined) {
+    if (input.Quantity !== undefined && input.Quantity !== null) {
         const node = new xml_builder_1.XmlNode("integer").addChildNode(new xml_builder_1.XmlText(String(input.Quantity))).withName("Quantity");
         bodyNode.addChildNode(node);
     }
-    if (input.Items !== undefined) {
+    if (input.Items !== undefined && input.Items !== null) {
         const nodes = serializeAws_restXmlOriginList(input.Items, context);
         const containerNode = new xml_builder_1.XmlNode("Items");
         nodes.map((node) => {
@@ -21038,25 +20828,25 @@ const serializeAws_restXmlOrigins = (input, context) => {
 };
 const serializeAws_restXmlOriginShield = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("OriginShield");
-    if (input.OriginShieldRegion !== undefined) {
+    if (input.Enabled !== undefined && input.Enabled !== null) {
+        const node = new xml_builder_1.XmlNode("boolean").addChildNode(new xml_builder_1.XmlText(String(input.Enabled))).withName("Enabled");
+        bodyNode.addChildNode(node);
+    }
+    if (input.OriginShieldRegion !== undefined && input.OriginShieldRegion !== null) {
         const node = new xml_builder_1.XmlNode("OriginShieldRegion")
             .addChildNode(new xml_builder_1.XmlText(input.OriginShieldRegion))
             .withName("OriginShieldRegion");
-        bodyNode.addChildNode(node);
-    }
-    if (input.Enabled !== undefined) {
-        const node = new xml_builder_1.XmlNode("boolean").addChildNode(new xml_builder_1.XmlText(String(input.Enabled))).withName("Enabled");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
 const serializeAws_restXmlOriginSslProtocols = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("OriginSslProtocols");
-    if (input.Quantity !== undefined) {
+    if (input.Quantity !== undefined && input.Quantity !== null) {
         const node = new xml_builder_1.XmlNode("integer").addChildNode(new xml_builder_1.XmlText(String(input.Quantity))).withName("Quantity");
         bodyNode.addChildNode(node);
     }
-    if (input.Items !== undefined) {
+    if (input.Items !== undefined && input.Items !== null) {
         const nodes = serializeAws_restXmlSslProtocolsList(input.Items, context);
         const containerNode = new xml_builder_1.XmlNode("Items");
         nodes.map((node) => {
@@ -21068,45 +20858,50 @@ const serializeAws_restXmlOriginSslProtocols = (input, context) => {
 };
 const serializeAws_restXmlParametersInCacheKeyAndForwardedToOrigin = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("ParametersInCacheKeyAndForwardedToOrigin");
-    if (input.QueryStringsConfig !== undefined) {
-        const node = serializeAws_restXmlCachePolicyQueryStringsConfig(input.QueryStringsConfig, context).withName("QueryStringsConfig");
-        bodyNode.addChildNode(node);
-    }
-    if (input.EnableAcceptEncodingBrotli !== undefined) {
-        const node = new xml_builder_1.XmlNode("boolean")
-            .addChildNode(new xml_builder_1.XmlText(String(input.EnableAcceptEncodingBrotli)))
-            .withName("EnableAcceptEncodingBrotli");
-        bodyNode.addChildNode(node);
-    }
-    if (input.HeadersConfig !== undefined) {
-        const node = serializeAws_restXmlCachePolicyHeadersConfig(input.HeadersConfig, context).withName("HeadersConfig");
-        bodyNode.addChildNode(node);
-    }
-    if (input.EnableAcceptEncodingGzip !== undefined) {
+    if (input.EnableAcceptEncodingGzip !== undefined && input.EnableAcceptEncodingGzip !== null) {
         const node = new xml_builder_1.XmlNode("boolean")
             .addChildNode(new xml_builder_1.XmlText(String(input.EnableAcceptEncodingGzip)))
             .withName("EnableAcceptEncodingGzip");
         bodyNode.addChildNode(node);
     }
-    if (input.CookiesConfig !== undefined) {
+    if (input.EnableAcceptEncodingBrotli !== undefined && input.EnableAcceptEncodingBrotli !== null) {
+        const node = new xml_builder_1.XmlNode("boolean")
+            .addChildNode(new xml_builder_1.XmlText(String(input.EnableAcceptEncodingBrotli)))
+            .withName("EnableAcceptEncodingBrotli");
+        bodyNode.addChildNode(node);
+    }
+    if (input.HeadersConfig !== undefined && input.HeadersConfig !== null) {
+        const node = serializeAws_restXmlCachePolicyHeadersConfig(input.HeadersConfig, context).withName("HeadersConfig");
+        bodyNode.addChildNode(node);
+    }
+    if (input.CookiesConfig !== undefined && input.CookiesConfig !== null) {
         const node = serializeAws_restXmlCachePolicyCookiesConfig(input.CookiesConfig, context).withName("CookiesConfig");
+        bodyNode.addChildNode(node);
+    }
+    if (input.QueryStringsConfig !== undefined && input.QueryStringsConfig !== null) {
+        const node = serializeAws_restXmlCachePolicyQueryStringsConfig(input.QueryStringsConfig, context).withName("QueryStringsConfig");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
 const serializeAws_restXmlPathList = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(entry));
         return node.withName("Path");
     });
 };
 const serializeAws_restXmlPaths = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("Paths");
-    if (input.Quantity !== undefined) {
+    if (input.Quantity !== undefined && input.Quantity !== null) {
         const node = new xml_builder_1.XmlNode("integer").addChildNode(new xml_builder_1.XmlText(String(input.Quantity))).withName("Quantity");
         bodyNode.addChildNode(node);
     }
-    if (input.Items !== undefined) {
+    if (input.Items !== undefined && input.Items !== null) {
         const nodes = serializeAws_restXmlPathList(input.Items, context);
         const containerNode = new xml_builder_1.XmlNode("Items");
         nodes.map((node) => {
@@ -21118,37 +20913,42 @@ const serializeAws_restXmlPaths = (input, context) => {
 };
 const serializeAws_restXmlPublicKeyConfig = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("PublicKeyConfig");
-    if (input.Name !== undefined) {
+    if (input.CallerReference !== undefined && input.CallerReference !== null) {
+        const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.CallerReference)).withName("CallerReference");
+        bodyNode.addChildNode(node);
+    }
+    if (input.Name !== undefined && input.Name !== null) {
         const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.Name)).withName("Name");
         bodyNode.addChildNode(node);
     }
-    if (input.EncodedKey !== undefined) {
+    if (input.EncodedKey !== undefined && input.EncodedKey !== null) {
         const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.EncodedKey)).withName("EncodedKey");
         bodyNode.addChildNode(node);
     }
-    if (input.Comment !== undefined) {
+    if (input.Comment !== undefined && input.Comment !== null) {
         const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.Comment)).withName("Comment");
-        bodyNode.addChildNode(node);
-    }
-    if (input.CallerReference !== undefined) {
-        const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.CallerReference)).withName("CallerReference");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
 const serializeAws_restXmlPublicKeyIdList = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(entry));
         return node.withName("PublicKey");
     });
 };
 const serializeAws_restXmlQueryArgProfile = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("QueryArgProfile");
-    if (input.QueryArg !== undefined) {
+    if (input.QueryArg !== undefined && input.QueryArg !== null) {
         const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.QueryArg)).withName("QueryArg");
         bodyNode.addChildNode(node);
     }
-    if (input.ProfileId !== undefined) {
+    if (input.ProfileId !== undefined && input.ProfileId !== null) {
         const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.ProfileId)).withName("ProfileId");
         bodyNode.addChildNode(node);
     }
@@ -21156,27 +20956,36 @@ const serializeAws_restXmlQueryArgProfile = (input, context) => {
 };
 const serializeAws_restXmlQueryArgProfileConfig = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("QueryArgProfileConfig");
-    if (input.ForwardWhenQueryArgProfileIsUnknown !== undefined) {
+    if (input.ForwardWhenQueryArgProfileIsUnknown !== undefined && input.ForwardWhenQueryArgProfileIsUnknown !== null) {
         const node = new xml_builder_1.XmlNode("boolean")
             .addChildNode(new xml_builder_1.XmlText(String(input.ForwardWhenQueryArgProfileIsUnknown)))
             .withName("ForwardWhenQueryArgProfileIsUnknown");
         bodyNode.addChildNode(node);
     }
-    if (input.QueryArgProfiles !== undefined) {
+    if (input.QueryArgProfiles !== undefined && input.QueryArgProfiles !== null) {
         const node = serializeAws_restXmlQueryArgProfiles(input.QueryArgProfiles, context).withName("QueryArgProfiles");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
 const serializeAws_restXmlQueryArgProfileList = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = serializeAws_restXmlQueryArgProfile(entry, context);
         return node.withName("QueryArgProfile");
     });
 };
 const serializeAws_restXmlQueryArgProfiles = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("QueryArgProfiles");
-    if (input.Items !== undefined) {
+    if (input.Quantity !== undefined && input.Quantity !== null) {
+        const node = new xml_builder_1.XmlNode("integer").addChildNode(new xml_builder_1.XmlText(String(input.Quantity))).withName("Quantity");
+        bodyNode.addChildNode(node);
+    }
+    if (input.Items !== undefined && input.Items !== null) {
         const nodes = serializeAws_restXmlQueryArgProfileList(input.Items, context);
         const containerNode = new xml_builder_1.XmlNode("Items");
         nodes.map((node) => {
@@ -21184,15 +20993,15 @@ const serializeAws_restXmlQueryArgProfiles = (input, context) => {
         });
         bodyNode.addChildNode(containerNode);
     }
-    if (input.Quantity !== undefined) {
-        const node = new xml_builder_1.XmlNode("integer").addChildNode(new xml_builder_1.XmlText(String(input.Quantity))).withName("Quantity");
-        bodyNode.addChildNode(node);
-    }
     return bodyNode;
 };
 const serializeAws_restXmlQueryStringCacheKeys = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("QueryStringCacheKeys");
-    if (input.Items !== undefined) {
+    if (input.Quantity !== undefined && input.Quantity !== null) {
+        const node = new xml_builder_1.XmlNode("integer").addChildNode(new xml_builder_1.XmlText(String(input.Quantity))).withName("Quantity");
+        bodyNode.addChildNode(node);
+    }
+    if (input.Items !== undefined && input.Items !== null) {
         const nodes = serializeAws_restXmlQueryStringCacheKeysList(input.Items, context);
         const containerNode = new xml_builder_1.XmlNode("Items");
         nodes.map((node) => {
@@ -21200,25 +21009,26 @@ const serializeAws_restXmlQueryStringCacheKeys = (input, context) => {
         });
         bodyNode.addChildNode(containerNode);
     }
-    if (input.Quantity !== undefined) {
-        const node = new xml_builder_1.XmlNode("integer").addChildNode(new xml_builder_1.XmlText(String(input.Quantity))).withName("Quantity");
-        bodyNode.addChildNode(node);
-    }
     return bodyNode;
 };
 const serializeAws_restXmlQueryStringCacheKeysList = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(entry));
         return node.withName("Name");
     });
 };
 const serializeAws_restXmlQueryStringNames = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("QueryStringNames");
-    if (input.Quantity !== undefined) {
+    if (input.Quantity !== undefined && input.Quantity !== null) {
         const node = new xml_builder_1.XmlNode("integer").addChildNode(new xml_builder_1.XmlText(String(input.Quantity))).withName("Quantity");
         bodyNode.addChildNode(node);
     }
-    if (input.Items !== undefined) {
+    if (input.Items !== undefined && input.Items !== null) {
         const nodes = serializeAws_restXmlQueryStringNamesList(input.Items, context);
         const containerNode = new xml_builder_1.XmlNode("Items");
         nodes.map((node) => {
@@ -21229,14 +21039,19 @@ const serializeAws_restXmlQueryStringNames = (input, context) => {
     return bodyNode;
 };
 const serializeAws_restXmlQueryStringNamesList = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(entry));
         return node.withName("Name");
     });
 };
 const serializeAws_restXmlRealtimeMetricsSubscriptionConfig = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("RealtimeMetricsSubscriptionConfig");
-    if (input.RealtimeMetricsSubscriptionStatus !== undefined) {
+    if (input.RealtimeMetricsSubscriptionStatus !== undefined && input.RealtimeMetricsSubscriptionStatus !== null) {
         const node = new xml_builder_1.XmlNode("RealtimeMetricsSubscriptionStatus")
             .addChildNode(new xml_builder_1.XmlText(input.RealtimeMetricsSubscriptionStatus))
             .withName("RealtimeMetricsSubscriptionStatus");
@@ -21246,7 +21061,7 @@ const serializeAws_restXmlRealtimeMetricsSubscriptionConfig = (input, context) =
 };
 const serializeAws_restXmlRestrictions = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("Restrictions");
-    if (input.GeoRestriction !== undefined) {
+    if (input.GeoRestriction !== undefined && input.GeoRestriction !== null) {
         const node = serializeAws_restXmlGeoRestriction(input.GeoRestriction, context).withName("GeoRestriction");
         bodyNode.addChildNode(node);
     }
@@ -21254,11 +21069,11 @@ const serializeAws_restXmlRestrictions = (input, context) => {
 };
 const serializeAws_restXmlS3Origin = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("S3Origin");
-    if (input.DomainName !== undefined) {
+    if (input.DomainName !== undefined && input.DomainName !== null) {
         const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.DomainName)).withName("DomainName");
         bodyNode.addChildNode(node);
     }
-    if (input.OriginAccessIdentity !== undefined) {
+    if (input.OriginAccessIdentity !== undefined && input.OriginAccessIdentity !== null) {
         const node = new xml_builder_1.XmlNode("string")
             .addChildNode(new xml_builder_1.XmlText(input.OriginAccessIdentity))
             .withName("OriginAccessIdentity");
@@ -21268,7 +21083,7 @@ const serializeAws_restXmlS3Origin = (input, context) => {
 };
 const serializeAws_restXmlS3OriginConfig = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("S3OriginConfig");
-    if (input.OriginAccessIdentity !== undefined) {
+    if (input.OriginAccessIdentity !== undefined && input.OriginAccessIdentity !== null) {
         const node = new xml_builder_1.XmlNode("string")
             .addChildNode(new xml_builder_1.XmlText(input.OriginAccessIdentity))
             .withName("OriginAccessIdentity");
@@ -21277,24 +21092,34 @@ const serializeAws_restXmlS3OriginConfig = (input, context) => {
     return bodyNode;
 };
 const serializeAws_restXmlSslProtocolsList = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = new xml_builder_1.XmlNode("SslProtocol").addChildNode(new xml_builder_1.XmlText(entry));
         return node.withName("SslProtocol");
     });
 };
 const serializeAws_restXmlStatusCodeList = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = new xml_builder_1.XmlNode("integer").addChildNode(new xml_builder_1.XmlText(String(entry)));
         return node.withName("StatusCode");
     });
 };
 const serializeAws_restXmlStatusCodes = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("StatusCodes");
-    if (input.Quantity !== undefined) {
+    if (input.Quantity !== undefined && input.Quantity !== null) {
         const node = new xml_builder_1.XmlNode("integer").addChildNode(new xml_builder_1.XmlText(String(input.Quantity))).withName("Quantity");
         bodyNode.addChildNode(node);
     }
-    if (input.Items !== undefined) {
+    if (input.Items !== undefined && input.Items !== null) {
         const nodes = serializeAws_restXmlStatusCodeList(input.Items, context);
         const containerNode = new xml_builder_1.XmlNode("Items");
         nodes.map((node) => {
@@ -21306,63 +21131,63 @@ const serializeAws_restXmlStatusCodes = (input, context) => {
 };
 const serializeAws_restXmlStreamingDistributionConfig = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("StreamingDistributionConfig");
-    if (input.Logging !== undefined) {
-        const node = serializeAws_restXmlStreamingLoggingConfig(input.Logging, context).withName("Logging");
-        bodyNode.addChildNode(node);
-    }
-    if (input.Comment !== undefined) {
-        const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.Comment)).withName("Comment");
-        bodyNode.addChildNode(node);
-    }
-    if (input.PriceClass !== undefined) {
-        const node = new xml_builder_1.XmlNode("PriceClass").addChildNode(new xml_builder_1.XmlText(input.PriceClass)).withName("PriceClass");
-        bodyNode.addChildNode(node);
-    }
-    if (input.S3Origin !== undefined) {
-        const node = serializeAws_restXmlS3Origin(input.S3Origin, context).withName("S3Origin");
-        bodyNode.addChildNode(node);
-    }
-    if (input.TrustedSigners !== undefined) {
-        const node = serializeAws_restXmlTrustedSigners(input.TrustedSigners, context).withName("TrustedSigners");
-        bodyNode.addChildNode(node);
-    }
-    if (input.Enabled !== undefined) {
-        const node = new xml_builder_1.XmlNode("boolean").addChildNode(new xml_builder_1.XmlText(String(input.Enabled))).withName("Enabled");
-        bodyNode.addChildNode(node);
-    }
-    if (input.CallerReference !== undefined) {
+    if (input.CallerReference !== undefined && input.CallerReference !== null) {
         const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.CallerReference)).withName("CallerReference");
         bodyNode.addChildNode(node);
     }
-    if (input.Aliases !== undefined) {
+    if (input.S3Origin !== undefined && input.S3Origin !== null) {
+        const node = serializeAws_restXmlS3Origin(input.S3Origin, context).withName("S3Origin");
+        bodyNode.addChildNode(node);
+    }
+    if (input.Aliases !== undefined && input.Aliases !== null) {
         const node = serializeAws_restXmlAliases(input.Aliases, context).withName("Aliases");
+        bodyNode.addChildNode(node);
+    }
+    if (input.Comment !== undefined && input.Comment !== null) {
+        const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.Comment)).withName("Comment");
+        bodyNode.addChildNode(node);
+    }
+    if (input.Logging !== undefined && input.Logging !== null) {
+        const node = serializeAws_restXmlStreamingLoggingConfig(input.Logging, context).withName("Logging");
+        bodyNode.addChildNode(node);
+    }
+    if (input.TrustedSigners !== undefined && input.TrustedSigners !== null) {
+        const node = serializeAws_restXmlTrustedSigners(input.TrustedSigners, context).withName("TrustedSigners");
+        bodyNode.addChildNode(node);
+    }
+    if (input.PriceClass !== undefined && input.PriceClass !== null) {
+        const node = new xml_builder_1.XmlNode("PriceClass").addChildNode(new xml_builder_1.XmlText(input.PriceClass)).withName("PriceClass");
+        bodyNode.addChildNode(node);
+    }
+    if (input.Enabled !== undefined && input.Enabled !== null) {
+        const node = new xml_builder_1.XmlNode("boolean").addChildNode(new xml_builder_1.XmlText(String(input.Enabled))).withName("Enabled");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
 const serializeAws_restXmlStreamingDistributionConfigWithTags = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("StreamingDistributionConfigWithTags");
-    if (input.Tags !== undefined) {
-        const node = serializeAws_restXmlTags(input.Tags, context).withName("Tags");
+    if (input.StreamingDistributionConfig !== undefined && input.StreamingDistributionConfig !== null) {
+        const node = serializeAws_restXmlStreamingDistributionConfig(input.StreamingDistributionConfig, context).withName("StreamingDistributionConfig");
         bodyNode.addChildNode(node);
     }
-    if (input.StreamingDistributionConfig !== undefined) {
-        const node = serializeAws_restXmlStreamingDistributionConfig(input.StreamingDistributionConfig, context).withName("StreamingDistributionConfig");
+    if (input.Tags !== undefined && input.Tags !== null) {
+        const node = serializeAws_restXmlTags(input.Tags, context).withName("Tags");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
 const serializeAws_restXmlStreamingLoggingConfig = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("StreamingLoggingConfig");
-    if (input.Bucket !== undefined) {
-        const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.Bucket)).withName("Bucket");
-        bodyNode.addChildNode(node);
-    }
-    if (input.Enabled !== undefined) {
+    if (input.Enabled !== undefined && input.Enabled !== null) {
         const node = new xml_builder_1.XmlNode("boolean").addChildNode(new xml_builder_1.XmlText(String(input.Enabled))).withName("Enabled");
         bodyNode.addChildNode(node);
     }
-    if (input.Prefix !== undefined) {
+    if (input.Bucket !== undefined && input.Bucket !== null) {
+        const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.Bucket)).withName("Bucket");
+        bodyNode.addChildNode(node);
+    }
+    if (input.Prefix !== undefined && input.Prefix !== null) {
         const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.Prefix)).withName("Prefix");
         bodyNode.addChildNode(node);
     }
@@ -21370,25 +21195,30 @@ const serializeAws_restXmlStreamingLoggingConfig = (input, context) => {
 };
 const serializeAws_restXmlTag = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("Tag");
-    if (input.Value !== undefined) {
-        const node = new xml_builder_1.XmlNode("TagValue").addChildNode(new xml_builder_1.XmlText(input.Value)).withName("Value");
+    if (input.Key !== undefined && input.Key !== null) {
+        const node = new xml_builder_1.XmlNode("TagKey").addChildNode(new xml_builder_1.XmlText(input.Key)).withName("Key");
         bodyNode.addChildNode(node);
     }
-    if (input.Key !== undefined) {
-        const node = new xml_builder_1.XmlNode("TagKey").addChildNode(new xml_builder_1.XmlText(input.Key)).withName("Key");
+    if (input.Value !== undefined && input.Value !== null) {
+        const node = new xml_builder_1.XmlNode("TagValue").addChildNode(new xml_builder_1.XmlText(input.Value)).withName("Value");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
 const serializeAws_restXmlTagKeyList = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = new xml_builder_1.XmlNode("TagKey").addChildNode(new xml_builder_1.XmlText(entry));
         return node.withName("Key");
     });
 };
 const serializeAws_restXmlTagKeys = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("TagKeys");
-    if (input.Items !== undefined) {
+    if (input.Items !== undefined && input.Items !== null) {
         const nodes = serializeAws_restXmlTagKeyList(input.Items, context);
         const containerNode = new xml_builder_1.XmlNode("Items");
         nodes.map((node) => {
@@ -21399,14 +21229,19 @@ const serializeAws_restXmlTagKeys = (input, context) => {
     return bodyNode;
 };
 const serializeAws_restXmlTagList = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = serializeAws_restXmlTag(entry, context);
         return node.withName("Tag");
     });
 };
 const serializeAws_restXmlTags = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("Tags");
-    if (input.Items !== undefined) {
+    if (input.Items !== undefined && input.Items !== null) {
         const nodes = serializeAws_restXmlTagList(input.Items, context);
         const containerNode = new xml_builder_1.XmlNode("Items");
         nodes.map((node) => {
@@ -21417,14 +21252,27 @@ const serializeAws_restXmlTags = (input, context) => {
     return bodyNode;
 };
 const serializeAws_restXmlTrustedKeyGroupIdList = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(entry));
         return node.withName("KeyGroup");
     });
 };
 const serializeAws_restXmlTrustedKeyGroups = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("TrustedKeyGroups");
-    if (input.Items !== undefined) {
+    if (input.Enabled !== undefined && input.Enabled !== null) {
+        const node = new xml_builder_1.XmlNode("boolean").addChildNode(new xml_builder_1.XmlText(String(input.Enabled))).withName("Enabled");
+        bodyNode.addChildNode(node);
+    }
+    if (input.Quantity !== undefined && input.Quantity !== null) {
+        const node = new xml_builder_1.XmlNode("integer").addChildNode(new xml_builder_1.XmlText(String(input.Quantity))).withName("Quantity");
+        bodyNode.addChildNode(node);
+    }
+    if (input.Items !== undefined && input.Items !== null) {
         const nodes = serializeAws_restXmlTrustedKeyGroupIdList(input.Items, context);
         const containerNode = new xml_builder_1.XmlNode("Items");
         nodes.map((node) => {
@@ -21432,27 +21280,19 @@ const serializeAws_restXmlTrustedKeyGroups = (input, context) => {
         });
         bodyNode.addChildNode(containerNode);
     }
-    if (input.Quantity !== undefined) {
-        const node = new xml_builder_1.XmlNode("integer").addChildNode(new xml_builder_1.XmlText(String(input.Quantity))).withName("Quantity");
-        bodyNode.addChildNode(node);
-    }
-    if (input.Enabled !== undefined) {
-        const node = new xml_builder_1.XmlNode("boolean").addChildNode(new xml_builder_1.XmlText(String(input.Enabled))).withName("Enabled");
-        bodyNode.addChildNode(node);
-    }
     return bodyNode;
 };
 const serializeAws_restXmlTrustedSigners = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("TrustedSigners");
-    if (input.Enabled !== undefined) {
+    if (input.Enabled !== undefined && input.Enabled !== null) {
         const node = new xml_builder_1.XmlNode("boolean").addChildNode(new xml_builder_1.XmlText(String(input.Enabled))).withName("Enabled");
         bodyNode.addChildNode(node);
     }
-    if (input.Quantity !== undefined) {
+    if (input.Quantity !== undefined && input.Quantity !== null) {
         const node = new xml_builder_1.XmlNode("integer").addChildNode(new xml_builder_1.XmlText(String(input.Quantity))).withName("Quantity");
         bodyNode.addChildNode(node);
     }
-    if (input.Items !== undefined) {
+    if (input.Items !== undefined && input.Items !== null) {
         const nodes = serializeAws_restXmlAwsAccountNumberList(input.Items, context);
         const containerNode = new xml_builder_1.XmlNode("Items");
         nodes.map((node) => {
@@ -21464,85 +21304,85 @@ const serializeAws_restXmlTrustedSigners = (input, context) => {
 };
 const serializeAws_restXmlViewerCertificate = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("ViewerCertificate");
-    if (input.IAMCertificateId !== undefined) {
-        const node = new xml_builder_1.XmlNode("string")
-            .addChildNode(new xml_builder_1.XmlText(input.IAMCertificateId))
-            .withName("IAMCertificateId");
-        bodyNode.addChildNode(node);
-    }
-    if (input.MinimumProtocolVersion !== undefined) {
-        const node = new xml_builder_1.XmlNode("MinimumProtocolVersion")
-            .addChildNode(new xml_builder_1.XmlText(input.MinimumProtocolVersion))
-            .withName("MinimumProtocolVersion");
-        bodyNode.addChildNode(node);
-    }
-    if (input.CloudFrontDefaultCertificate !== undefined) {
+    if (input.CloudFrontDefaultCertificate !== undefined && input.CloudFrontDefaultCertificate !== null) {
         const node = new xml_builder_1.XmlNode("boolean")
             .addChildNode(new xml_builder_1.XmlText(String(input.CloudFrontDefaultCertificate)))
             .withName("CloudFrontDefaultCertificate");
         bodyNode.addChildNode(node);
     }
-    if (input.SSLSupportMethod !== undefined) {
-        const node = new xml_builder_1.XmlNode("SSLSupportMethod")
-            .addChildNode(new xml_builder_1.XmlText(input.SSLSupportMethod))
-            .withName("SSLSupportMethod");
+    if (input.IAMCertificateId !== undefined && input.IAMCertificateId !== null) {
+        const node = new xml_builder_1.XmlNode("string")
+            .addChildNode(new xml_builder_1.XmlText(input.IAMCertificateId))
+            .withName("IAMCertificateId");
         bodyNode.addChildNode(node);
     }
-    if (input.ACMCertificateArn !== undefined) {
+    if (input.ACMCertificateArn !== undefined && input.ACMCertificateArn !== null) {
         const node = new xml_builder_1.XmlNode("string")
             .addChildNode(new xml_builder_1.XmlText(input.ACMCertificateArn))
             .withName("ACMCertificateArn");
         bodyNode.addChildNode(node);
     }
-    if (input.CertificateSource !== undefined) {
+    if (input.SSLSupportMethod !== undefined && input.SSLSupportMethod !== null) {
+        const node = new xml_builder_1.XmlNode("SSLSupportMethod")
+            .addChildNode(new xml_builder_1.XmlText(input.SSLSupportMethod))
+            .withName("SSLSupportMethod");
+        bodyNode.addChildNode(node);
+    }
+    if (input.MinimumProtocolVersion !== undefined && input.MinimumProtocolVersion !== null) {
+        const node = new xml_builder_1.XmlNode("MinimumProtocolVersion")
+            .addChildNode(new xml_builder_1.XmlText(input.MinimumProtocolVersion))
+            .withName("MinimumProtocolVersion");
+        bodyNode.addChildNode(node);
+    }
+    if (input.Certificate !== undefined && input.Certificate !== null) {
+        const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.Certificate)).withName("Certificate");
+        bodyNode.addChildNode(node);
+    }
+    if (input.CertificateSource !== undefined && input.CertificateSource !== null) {
         const node = new xml_builder_1.XmlNode("CertificateSource")
             .addChildNode(new xml_builder_1.XmlText(input.CertificateSource))
             .withName("CertificateSource");
-        bodyNode.addChildNode(node);
-    }
-    if (input.Certificate !== undefined) {
-        const node = new xml_builder_1.XmlNode("string").addChildNode(new xml_builder_1.XmlText(input.Certificate)).withName("Certificate");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
 const deserializeAws_restXmlActiveTrustedKeyGroups = (output, context) => {
     let contents = {
-        Items: undefined,
-        Quantity: undefined,
         Enabled: undefined,
+        Quantity: undefined,
+        Items: undefined,
     };
+    if (output["Enabled"] !== undefined) {
+        contents.Enabled = output["Enabled"] == "true";
+    }
+    if (output["Quantity"] !== undefined) {
+        contents.Quantity = parseInt(output["Quantity"]);
+    }
     if (output.Items === "") {
         contents.Items = [];
     }
     if (output["Items"] !== undefined && output["Items"]["KeyGroup"] !== undefined) {
         contents.Items = deserializeAws_restXmlKGKeyPairIdsList(smithy_client_1.getArrayIfSingleItem(output["Items"]["KeyGroup"]), context);
     }
-    if (output["Quantity"] !== undefined) {
-        contents.Quantity = parseInt(output["Quantity"]);
-    }
-    if (output["Enabled"] !== undefined) {
-        contents.Enabled = output["Enabled"] == "true";
-    }
     return contents;
 };
 const deserializeAws_restXmlActiveTrustedSigners = (output, context) => {
     let contents = {
         Enabled: undefined,
-        Items: undefined,
         Quantity: undefined,
+        Items: undefined,
     };
     if (output["Enabled"] !== undefined) {
         contents.Enabled = output["Enabled"] == "true";
+    }
+    if (output["Quantity"] !== undefined) {
+        contents.Quantity = parseInt(output["Quantity"]);
     }
     if (output.Items === "") {
         contents.Items = [];
     }
     if (output["Items"] !== undefined && output["Items"]["Signer"] !== undefined) {
         contents.Items = deserializeAws_restXmlSignerList(smithy_client_1.getArrayIfSingleItem(output["Items"]["Signer"]), context);
-    }
-    if (output["Quantity"] !== undefined) {
-        contents.Quantity = parseInt(output["Quantity"]);
     }
     return contents;
 };
@@ -21576,19 +21416,33 @@ const deserializeAws_restXmlAliasICPRecordal = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlAliasICPRecordals = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlAliasICPRecordal(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlAliasICPRecordal(entry, context);
+    });
 };
 const deserializeAws_restXmlAliasList = (output, context) => {
-    return (output || []).map((entry) => entry);
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return entry;
+    });
 };
 const deserializeAws_restXmlAllowedMethods = (output, context) => {
     let contents = {
-        CachedMethods: undefined,
-        Items: undefined,
         Quantity: undefined,
+        Items: undefined,
+        CachedMethods: undefined,
     };
-    if (output["CachedMethods"] !== undefined) {
-        contents.CachedMethods = deserializeAws_restXmlCachedMethods(output["CachedMethods"], context);
+    if (output["Quantity"] !== undefined) {
+        contents.Quantity = parseInt(output["Quantity"]);
     }
     if (output.Items === "") {
         contents.Items = [];
@@ -21596,51 +21450,46 @@ const deserializeAws_restXmlAllowedMethods = (output, context) => {
     if (output["Items"] !== undefined && output["Items"]["Method"] !== undefined) {
         contents.Items = deserializeAws_restXmlMethodsList(smithy_client_1.getArrayIfSingleItem(output["Items"]["Method"]), context);
     }
-    if (output["Quantity"] !== undefined) {
-        contents.Quantity = parseInt(output["Quantity"]);
+    if (output["CachedMethods"] !== undefined) {
+        contents.CachedMethods = deserializeAws_restXmlCachedMethods(output["CachedMethods"], context);
     }
     return contents;
 };
 const deserializeAws_restXmlAwsAccountNumberList = (output, context) => {
-    return (output || []).map((entry) => entry);
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return entry;
+    });
 };
 const deserializeAws_restXmlCacheBehavior = (output, context) => {
     let contents = {
-        ForwardedValues: undefined,
         PathPattern: undefined,
-        AllowedMethods: undefined,
-        DefaultTTL: undefined,
-        FieldLevelEncryptionId: undefined,
-        OriginRequestPolicyId: undefined,
+        TargetOriginId: undefined,
         TrustedSigners: undefined,
         TrustedKeyGroups: undefined,
-        RealtimeLogConfigArn: undefined,
-        TargetOriginId: undefined,
-        LambdaFunctionAssociations: undefined,
-        Compress: undefined,
-        CachePolicyId: undefined,
-        MaxTTL: undefined,
-        SmoothStreaming: undefined,
         ViewerProtocolPolicy: undefined,
+        AllowedMethods: undefined,
+        SmoothStreaming: undefined,
+        Compress: undefined,
+        LambdaFunctionAssociations: undefined,
+        FieldLevelEncryptionId: undefined,
+        RealtimeLogConfigArn: undefined,
+        CachePolicyId: undefined,
+        OriginRequestPolicyId: undefined,
+        ForwardedValues: undefined,
         MinTTL: undefined,
+        DefaultTTL: undefined,
+        MaxTTL: undefined,
     };
-    if (output["ForwardedValues"] !== undefined) {
-        contents.ForwardedValues = deserializeAws_restXmlForwardedValues(output["ForwardedValues"], context);
-    }
     if (output["PathPattern"] !== undefined) {
         contents.PathPattern = output["PathPattern"];
     }
-    if (output["AllowedMethods"] !== undefined) {
-        contents.AllowedMethods = deserializeAws_restXmlAllowedMethods(output["AllowedMethods"], context);
-    }
-    if (output["DefaultTTL"] !== undefined) {
-        contents.DefaultTTL = parseInt(output["DefaultTTL"]);
-    }
-    if (output["FieldLevelEncryptionId"] !== undefined) {
-        contents.FieldLevelEncryptionId = output["FieldLevelEncryptionId"];
-    }
-    if (output["OriginRequestPolicyId"] !== undefined) {
-        contents.OriginRequestPolicyId = output["OriginRequestPolicyId"];
+    if (output["TargetOriginId"] !== undefined) {
+        contents.TargetOriginId = output["TargetOriginId"];
     }
     if (output["TrustedSigners"] !== undefined) {
         contents.TrustedSigners = deserializeAws_restXmlTrustedSigners(output["TrustedSigners"], context);
@@ -21648,110 +21497,129 @@ const deserializeAws_restXmlCacheBehavior = (output, context) => {
     if (output["TrustedKeyGroups"] !== undefined) {
         contents.TrustedKeyGroups = deserializeAws_restXmlTrustedKeyGroups(output["TrustedKeyGroups"], context);
     }
-    if (output["RealtimeLogConfigArn"] !== undefined) {
-        contents.RealtimeLogConfigArn = output["RealtimeLogConfigArn"];
+    if (output["ViewerProtocolPolicy"] !== undefined) {
+        contents.ViewerProtocolPolicy = output["ViewerProtocolPolicy"];
     }
-    if (output["TargetOriginId"] !== undefined) {
-        contents.TargetOriginId = output["TargetOriginId"];
-    }
-    if (output["LambdaFunctionAssociations"] !== undefined) {
-        contents.LambdaFunctionAssociations = deserializeAws_restXmlLambdaFunctionAssociations(output["LambdaFunctionAssociations"], context);
-    }
-    if (output["Compress"] !== undefined) {
-        contents.Compress = output["Compress"] == "true";
-    }
-    if (output["CachePolicyId"] !== undefined) {
-        contents.CachePolicyId = output["CachePolicyId"];
-    }
-    if (output["MaxTTL"] !== undefined) {
-        contents.MaxTTL = parseInt(output["MaxTTL"]);
+    if (output["AllowedMethods"] !== undefined) {
+        contents.AllowedMethods = deserializeAws_restXmlAllowedMethods(output["AllowedMethods"], context);
     }
     if (output["SmoothStreaming"] !== undefined) {
         contents.SmoothStreaming = output["SmoothStreaming"] == "true";
     }
-    if (output["ViewerProtocolPolicy"] !== undefined) {
-        contents.ViewerProtocolPolicy = output["ViewerProtocolPolicy"];
+    if (output["Compress"] !== undefined) {
+        contents.Compress = output["Compress"] == "true";
+    }
+    if (output["LambdaFunctionAssociations"] !== undefined) {
+        contents.LambdaFunctionAssociations = deserializeAws_restXmlLambdaFunctionAssociations(output["LambdaFunctionAssociations"], context);
+    }
+    if (output["FieldLevelEncryptionId"] !== undefined) {
+        contents.FieldLevelEncryptionId = output["FieldLevelEncryptionId"];
+    }
+    if (output["RealtimeLogConfigArn"] !== undefined) {
+        contents.RealtimeLogConfigArn = output["RealtimeLogConfigArn"];
+    }
+    if (output["CachePolicyId"] !== undefined) {
+        contents.CachePolicyId = output["CachePolicyId"];
+    }
+    if (output["OriginRequestPolicyId"] !== undefined) {
+        contents.OriginRequestPolicyId = output["OriginRequestPolicyId"];
+    }
+    if (output["ForwardedValues"] !== undefined) {
+        contents.ForwardedValues = deserializeAws_restXmlForwardedValues(output["ForwardedValues"], context);
     }
     if (output["MinTTL"] !== undefined) {
         contents.MinTTL = parseInt(output["MinTTL"]);
     }
+    if (output["DefaultTTL"] !== undefined) {
+        contents.DefaultTTL = parseInt(output["DefaultTTL"]);
+    }
+    if (output["MaxTTL"] !== undefined) {
+        contents.MaxTTL = parseInt(output["MaxTTL"]);
+    }
     return contents;
 };
 const deserializeAws_restXmlCacheBehaviorList = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlCacheBehavior(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlCacheBehavior(entry, context);
+    });
 };
 const deserializeAws_restXmlCacheBehaviors = (output, context) => {
     let contents = {
-        Items: undefined,
         Quantity: undefined,
+        Items: undefined,
     };
+    if (output["Quantity"] !== undefined) {
+        contents.Quantity = parseInt(output["Quantity"]);
+    }
     if (output.Items === "") {
         contents.Items = [];
     }
     if (output["Items"] !== undefined && output["Items"]["CacheBehavior"] !== undefined) {
         contents.Items = deserializeAws_restXmlCacheBehaviorList(smithy_client_1.getArrayIfSingleItem(output["Items"]["CacheBehavior"]), context);
     }
-    if (output["Quantity"] !== undefined) {
-        contents.Quantity = parseInt(output["Quantity"]);
-    }
     return contents;
 };
 const deserializeAws_restXmlCachedMethods = (output, context) => {
     let contents = {
-        Items: undefined,
         Quantity: undefined,
+        Items: undefined,
     };
+    if (output["Quantity"] !== undefined) {
+        contents.Quantity = parseInt(output["Quantity"]);
+    }
     if (output.Items === "") {
         contents.Items = [];
     }
     if (output["Items"] !== undefined && output["Items"]["Method"] !== undefined) {
         contents.Items = deserializeAws_restXmlMethodsList(smithy_client_1.getArrayIfSingleItem(output["Items"]["Method"]), context);
     }
-    if (output["Quantity"] !== undefined) {
-        contents.Quantity = parseInt(output["Quantity"]);
-    }
     return contents;
 };
 const deserializeAws_restXmlCachePolicy = (output, context) => {
     let contents = {
-        CachePolicyConfig: undefined,
-        LastModifiedTime: undefined,
         Id: undefined,
+        LastModifiedTime: undefined,
+        CachePolicyConfig: undefined,
     };
-    if (output["CachePolicyConfig"] !== undefined) {
-        contents.CachePolicyConfig = deserializeAws_restXmlCachePolicyConfig(output["CachePolicyConfig"], context);
+    if (output["Id"] !== undefined) {
+        contents.Id = output["Id"];
     }
     if (output["LastModifiedTime"] !== undefined) {
         contents.LastModifiedTime = new Date(output["LastModifiedTime"]);
     }
-    if (output["Id"] !== undefined) {
-        contents.Id = output["Id"];
+    if (output["CachePolicyConfig"] !== undefined) {
+        contents.CachePolicyConfig = deserializeAws_restXmlCachePolicyConfig(output["CachePolicyConfig"], context);
     }
     return contents;
 };
 const deserializeAws_restXmlCachePolicyConfig = (output, context) => {
     let contents = {
-        MinTTL: undefined,
         Comment: undefined,
-        MaxTTL: undefined,
         Name: undefined,
         DefaultTTL: undefined,
+        MaxTTL: undefined,
+        MinTTL: undefined,
         ParametersInCacheKeyAndForwardedToOrigin: undefined,
     };
-    if (output["MinTTL"] !== undefined) {
-        contents.MinTTL = parseInt(output["MinTTL"]);
-    }
     if (output["Comment"] !== undefined) {
         contents.Comment = output["Comment"];
-    }
-    if (output["MaxTTL"] !== undefined) {
-        contents.MaxTTL = parseInt(output["MaxTTL"]);
     }
     if (output["Name"] !== undefined) {
         contents.Name = output["Name"];
     }
     if (output["DefaultTTL"] !== undefined) {
         contents.DefaultTTL = parseInt(output["DefaultTTL"]);
+    }
+    if (output["MaxTTL"] !== undefined) {
+        contents.MaxTTL = parseInt(output["MaxTTL"]);
+    }
+    if (output["MinTTL"] !== undefined) {
+        contents.MinTTL = parseInt(output["MinTTL"]);
     }
     if (output["ParametersInCacheKeyAndForwardedToOrigin"] !== undefined) {
         contents.ParametersInCacheKeyAndForwardedToOrigin = deserializeAws_restXmlParametersInCacheKeyAndForwardedToOrigin(output["ParametersInCacheKeyAndForwardedToOrigin"], context);
@@ -21760,42 +21628,42 @@ const deserializeAws_restXmlCachePolicyConfig = (output, context) => {
 };
 const deserializeAws_restXmlCachePolicyCookiesConfig = (output, context) => {
     let contents = {
-        Cookies: undefined,
         CookieBehavior: undefined,
+        Cookies: undefined,
     };
-    if (output["Cookies"] !== undefined) {
-        contents.Cookies = deserializeAws_restXmlCookieNames(output["Cookies"], context);
-    }
     if (output["CookieBehavior"] !== undefined) {
         contents.CookieBehavior = output["CookieBehavior"];
+    }
+    if (output["Cookies"] !== undefined) {
+        contents.Cookies = deserializeAws_restXmlCookieNames(output["Cookies"], context);
     }
     return contents;
 };
 const deserializeAws_restXmlCachePolicyHeadersConfig = (output, context) => {
     let contents = {
-        Headers: undefined,
         HeaderBehavior: undefined,
+        Headers: undefined,
     };
-    if (output["Headers"] !== undefined) {
-        contents.Headers = deserializeAws_restXmlHeaders(output["Headers"], context);
-    }
     if (output["HeaderBehavior"] !== undefined) {
         contents.HeaderBehavior = output["HeaderBehavior"];
+    }
+    if (output["Headers"] !== undefined) {
+        contents.Headers = deserializeAws_restXmlHeaders(output["Headers"], context);
     }
     return contents;
 };
 const deserializeAws_restXmlCachePolicyList = (output, context) => {
     let contents = {
-        MaxItems: undefined,
         NextMarker: undefined,
+        MaxItems: undefined,
         Quantity: undefined,
         Items: undefined,
     };
-    if (output["MaxItems"] !== undefined) {
-        contents.MaxItems = parseInt(output["MaxItems"]);
-    }
     if (output["NextMarker"] !== undefined) {
         contents.NextMarker = output["NextMarker"];
+    }
+    if (output["MaxItems"] !== undefined) {
+        contents.MaxItems = parseInt(output["MaxItems"]);
     }
     if (output["Quantity"] !== undefined) {
         contents.Quantity = parseInt(output["Quantity"]);
@@ -21823,34 +21691,41 @@ const deserializeAws_restXmlCachePolicyQueryStringsConfig = (output, context) =>
 };
 const deserializeAws_restXmlCachePolicySummary = (output, context) => {
     let contents = {
-        CachePolicy: undefined,
         Type: undefined,
+        CachePolicy: undefined,
     };
-    if (output["CachePolicy"] !== undefined) {
-        contents.CachePolicy = deserializeAws_restXmlCachePolicy(output["CachePolicy"], context);
-    }
     if (output["Type"] !== undefined) {
         contents.Type = output["Type"];
+    }
+    if (output["CachePolicy"] !== undefined) {
+        contents.CachePolicy = deserializeAws_restXmlCachePolicy(output["CachePolicy"], context);
     }
     return contents;
 };
 const deserializeAws_restXmlCachePolicySummaryList = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlCachePolicySummary(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlCachePolicySummary(entry, context);
+    });
 };
 const deserializeAws_restXmlCloudFrontOriginAccessIdentity = (output, context) => {
     let contents = {
-        CloudFrontOriginAccessIdentityConfig: undefined,
         Id: undefined,
         S3CanonicalUserId: undefined,
+        CloudFrontOriginAccessIdentityConfig: undefined,
     };
-    if (output["CloudFrontOriginAccessIdentityConfig"] !== undefined) {
-        contents.CloudFrontOriginAccessIdentityConfig = deserializeAws_restXmlCloudFrontOriginAccessIdentityConfig(output["CloudFrontOriginAccessIdentityConfig"], context);
-    }
     if (output["Id"] !== undefined) {
         contents.Id = output["Id"];
     }
     if (output["S3CanonicalUserId"] !== undefined) {
         contents.S3CanonicalUserId = output["S3CanonicalUserId"];
+    }
+    if (output["CloudFrontOriginAccessIdentityConfig"] !== undefined) {
+        contents.CloudFrontOriginAccessIdentityConfig = deserializeAws_restXmlCloudFrontOriginAccessIdentityConfig(output["CloudFrontOriginAccessIdentityConfig"], context);
     }
     return contents;
 };
@@ -21869,33 +21744,33 @@ const deserializeAws_restXmlCloudFrontOriginAccessIdentityConfig = (output, cont
 };
 const deserializeAws_restXmlCloudFrontOriginAccessIdentityList = (output, context) => {
     let contents = {
-        Quantity: undefined,
         Marker: undefined,
         NextMarker: undefined,
-        Items: undefined,
         MaxItems: undefined,
         IsTruncated: undefined,
+        Quantity: undefined,
+        Items: undefined,
     };
-    if (output["Quantity"] !== undefined) {
-        contents.Quantity = parseInt(output["Quantity"]);
-    }
     if (output["Marker"] !== undefined) {
         contents.Marker = output["Marker"];
     }
     if (output["NextMarker"] !== undefined) {
         contents.NextMarker = output["NextMarker"];
     }
-    if (output.Items === "") {
-        contents.Items = [];
-    }
-    if (output["Items"] !== undefined && output["Items"]["CloudFrontOriginAccessIdentitySummary"] !== undefined) {
-        contents.Items = deserializeAws_restXmlCloudFrontOriginAccessIdentitySummaryList(smithy_client_1.getArrayIfSingleItem(output["Items"]["CloudFrontOriginAccessIdentitySummary"]), context);
-    }
     if (output["MaxItems"] !== undefined) {
         contents.MaxItems = parseInt(output["MaxItems"]);
     }
     if (output["IsTruncated"] !== undefined) {
         contents.IsTruncated = output["IsTruncated"] == "true";
+    }
+    if (output["Quantity"] !== undefined) {
+        contents.Quantity = parseInt(output["Quantity"]);
+    }
+    if (output.Items === "") {
+        contents.Items = [];
+    }
+    if (output["Items"] !== undefined && output["Items"]["CloudFrontOriginAccessIdentitySummary"] !== undefined) {
+        contents.Items = deserializeAws_restXmlCloudFrontOriginAccessIdentitySummaryList(smithy_client_1.getArrayIfSingleItem(output["Items"]["CloudFrontOriginAccessIdentitySummary"]), context);
     }
     return contents;
 };
@@ -21917,59 +21792,80 @@ const deserializeAws_restXmlCloudFrontOriginAccessIdentitySummary = (output, con
     return contents;
 };
 const deserializeAws_restXmlCloudFrontOriginAccessIdentitySummaryList = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlCloudFrontOriginAccessIdentitySummary(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlCloudFrontOriginAccessIdentitySummary(entry, context);
+    });
 };
 const deserializeAws_restXmlContentTypeProfile = (output, context) => {
     let contents = {
+        Format: undefined,
         ProfileId: undefined,
         ContentType: undefined,
-        Format: undefined,
     };
+    if (output["Format"] !== undefined) {
+        contents.Format = output["Format"];
+    }
     if (output["ProfileId"] !== undefined) {
         contents.ProfileId = output["ProfileId"];
     }
     if (output["ContentType"] !== undefined) {
         contents.ContentType = output["ContentType"];
     }
-    if (output["Format"] !== undefined) {
-        contents.Format = output["Format"];
-    }
     return contents;
 };
 const deserializeAws_restXmlContentTypeProfileConfig = (output, context) => {
     let contents = {
-        ContentTypeProfiles: undefined,
         ForwardWhenContentTypeIsUnknown: undefined,
+        ContentTypeProfiles: undefined,
     };
-    if (output["ContentTypeProfiles"] !== undefined) {
-        contents.ContentTypeProfiles = deserializeAws_restXmlContentTypeProfiles(output["ContentTypeProfiles"], context);
-    }
     if (output["ForwardWhenContentTypeIsUnknown"] !== undefined) {
         contents.ForwardWhenContentTypeIsUnknown = output["ForwardWhenContentTypeIsUnknown"] == "true";
+    }
+    if (output["ContentTypeProfiles"] !== undefined) {
+        contents.ContentTypeProfiles = deserializeAws_restXmlContentTypeProfiles(output["ContentTypeProfiles"], context);
     }
     return contents;
 };
 const deserializeAws_restXmlContentTypeProfileList = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlContentTypeProfile(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlContentTypeProfile(entry, context);
+    });
 };
 const deserializeAws_restXmlContentTypeProfiles = (output, context) => {
     let contents = {
-        Items: undefined,
         Quantity: undefined,
+        Items: undefined,
     };
+    if (output["Quantity"] !== undefined) {
+        contents.Quantity = parseInt(output["Quantity"]);
+    }
     if (output.Items === "") {
         contents.Items = [];
     }
     if (output["Items"] !== undefined && output["Items"]["ContentTypeProfile"] !== undefined) {
         contents.Items = deserializeAws_restXmlContentTypeProfileList(smithy_client_1.getArrayIfSingleItem(output["Items"]["ContentTypeProfile"]), context);
     }
-    if (output["Quantity"] !== undefined) {
-        contents.Quantity = parseInt(output["Quantity"]);
-    }
     return contents;
 };
 const deserializeAws_restXmlCookieNameList = (output, context) => {
-    return (output || []).map((entry) => entry);
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return entry;
+    });
 };
 const deserializeAws_restXmlCookieNames = (output, context) => {
     let contents = {
@@ -22002,27 +21898,34 @@ const deserializeAws_restXmlCookiePreference = (output, context) => {
 };
 const deserializeAws_restXmlCustomErrorResponse = (output, context) => {
     let contents = {
-        ResponseCode: undefined,
-        ErrorCachingMinTTL: undefined,
         ErrorCode: undefined,
         ResponsePagePath: undefined,
+        ResponseCode: undefined,
+        ErrorCachingMinTTL: undefined,
     };
-    if (output["ResponseCode"] !== undefined) {
-        contents.ResponseCode = output["ResponseCode"];
-    }
-    if (output["ErrorCachingMinTTL"] !== undefined) {
-        contents.ErrorCachingMinTTL = parseInt(output["ErrorCachingMinTTL"]);
-    }
     if (output["ErrorCode"] !== undefined) {
         contents.ErrorCode = parseInt(output["ErrorCode"]);
     }
     if (output["ResponsePagePath"] !== undefined) {
         contents.ResponsePagePath = output["ResponsePagePath"];
     }
+    if (output["ResponseCode"] !== undefined) {
+        contents.ResponseCode = output["ResponseCode"];
+    }
+    if (output["ErrorCachingMinTTL"] !== undefined) {
+        contents.ErrorCachingMinTTL = parseInt(output["ErrorCachingMinTTL"]);
+    }
     return contents;
 };
 const deserializeAws_restXmlCustomErrorResponseList = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlCustomErrorResponse(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlCustomErrorResponse(entry, context);
+    });
 };
 const deserializeAws_restXmlCustomErrorResponses = (output, context) => {
     let contents = {
@@ -22058,129 +21961,126 @@ const deserializeAws_restXmlCustomHeaders = (output, context) => {
 };
 const deserializeAws_restXmlCustomOriginConfig = (output, context) => {
     let contents = {
-        OriginKeepaliveTimeout: undefined,
         HTTPPort: undefined,
-        OriginProtocolPolicy: undefined,
-        OriginReadTimeout: undefined,
-        OriginSslProtocols: undefined,
         HTTPSPort: undefined,
+        OriginProtocolPolicy: undefined,
+        OriginSslProtocols: undefined,
+        OriginReadTimeout: undefined,
+        OriginKeepaliveTimeout: undefined,
     };
-    if (output["OriginKeepaliveTimeout"] !== undefined) {
-        contents.OriginKeepaliveTimeout = parseInt(output["OriginKeepaliveTimeout"]);
-    }
     if (output["HTTPPort"] !== undefined) {
         contents.HTTPPort = parseInt(output["HTTPPort"]);
+    }
+    if (output["HTTPSPort"] !== undefined) {
+        contents.HTTPSPort = parseInt(output["HTTPSPort"]);
     }
     if (output["OriginProtocolPolicy"] !== undefined) {
         contents.OriginProtocolPolicy = output["OriginProtocolPolicy"];
     }
-    if (output["OriginReadTimeout"] !== undefined) {
-        contents.OriginReadTimeout = parseInt(output["OriginReadTimeout"]);
-    }
     if (output["OriginSslProtocols"] !== undefined) {
         contents.OriginSslProtocols = deserializeAws_restXmlOriginSslProtocols(output["OriginSslProtocols"], context);
     }
-    if (output["HTTPSPort"] !== undefined) {
-        contents.HTTPSPort = parseInt(output["HTTPSPort"]);
+    if (output["OriginReadTimeout"] !== undefined) {
+        contents.OriginReadTimeout = parseInt(output["OriginReadTimeout"]);
+    }
+    if (output["OriginKeepaliveTimeout"] !== undefined) {
+        contents.OriginKeepaliveTimeout = parseInt(output["OriginKeepaliveTimeout"]);
     }
     return contents;
 };
 const deserializeAws_restXmlDefaultCacheBehavior = (output, context) => {
     let contents = {
-        Compress: undefined,
-        ViewerProtocolPolicy: undefined,
         TargetOriginId: undefined,
-        FieldLevelEncryptionId: undefined,
-        CachePolicyId: undefined,
-        MaxTTL: undefined,
-        MinTTL: undefined,
-        TrustedKeyGroups: undefined,
-        SmoothStreaming: undefined,
-        AllowedMethods: undefined,
-        ForwardedValues: undefined,
-        DefaultTTL: undefined,
         TrustedSigners: undefined,
-        OriginRequestPolicyId: undefined,
+        TrustedKeyGroups: undefined,
+        ViewerProtocolPolicy: undefined,
+        AllowedMethods: undefined,
+        SmoothStreaming: undefined,
+        Compress: undefined,
         LambdaFunctionAssociations: undefined,
+        FieldLevelEncryptionId: undefined,
         RealtimeLogConfigArn: undefined,
+        CachePolicyId: undefined,
+        OriginRequestPolicyId: undefined,
+        ForwardedValues: undefined,
+        MinTTL: undefined,
+        DefaultTTL: undefined,
+        MaxTTL: undefined,
     };
-    if (output["Compress"] !== undefined) {
-        contents.Compress = output["Compress"] == "true";
-    }
-    if (output["ViewerProtocolPolicy"] !== undefined) {
-        contents.ViewerProtocolPolicy = output["ViewerProtocolPolicy"];
-    }
     if (output["TargetOriginId"] !== undefined) {
         contents.TargetOriginId = output["TargetOriginId"];
-    }
-    if (output["FieldLevelEncryptionId"] !== undefined) {
-        contents.FieldLevelEncryptionId = output["FieldLevelEncryptionId"];
-    }
-    if (output["CachePolicyId"] !== undefined) {
-        contents.CachePolicyId = output["CachePolicyId"];
-    }
-    if (output["MaxTTL"] !== undefined) {
-        contents.MaxTTL = parseInt(output["MaxTTL"]);
-    }
-    if (output["MinTTL"] !== undefined) {
-        contents.MinTTL = parseInt(output["MinTTL"]);
-    }
-    if (output["TrustedKeyGroups"] !== undefined) {
-        contents.TrustedKeyGroups = deserializeAws_restXmlTrustedKeyGroups(output["TrustedKeyGroups"], context);
-    }
-    if (output["SmoothStreaming"] !== undefined) {
-        contents.SmoothStreaming = output["SmoothStreaming"] == "true";
-    }
-    if (output["AllowedMethods"] !== undefined) {
-        contents.AllowedMethods = deserializeAws_restXmlAllowedMethods(output["AllowedMethods"], context);
-    }
-    if (output["ForwardedValues"] !== undefined) {
-        contents.ForwardedValues = deserializeAws_restXmlForwardedValues(output["ForwardedValues"], context);
-    }
-    if (output["DefaultTTL"] !== undefined) {
-        contents.DefaultTTL = parseInt(output["DefaultTTL"]);
     }
     if (output["TrustedSigners"] !== undefined) {
         contents.TrustedSigners = deserializeAws_restXmlTrustedSigners(output["TrustedSigners"], context);
     }
-    if (output["OriginRequestPolicyId"] !== undefined) {
-        contents.OriginRequestPolicyId = output["OriginRequestPolicyId"];
+    if (output["TrustedKeyGroups"] !== undefined) {
+        contents.TrustedKeyGroups = deserializeAws_restXmlTrustedKeyGroups(output["TrustedKeyGroups"], context);
+    }
+    if (output["ViewerProtocolPolicy"] !== undefined) {
+        contents.ViewerProtocolPolicy = output["ViewerProtocolPolicy"];
+    }
+    if (output["AllowedMethods"] !== undefined) {
+        contents.AllowedMethods = deserializeAws_restXmlAllowedMethods(output["AllowedMethods"], context);
+    }
+    if (output["SmoothStreaming"] !== undefined) {
+        contents.SmoothStreaming = output["SmoothStreaming"] == "true";
+    }
+    if (output["Compress"] !== undefined) {
+        contents.Compress = output["Compress"] == "true";
     }
     if (output["LambdaFunctionAssociations"] !== undefined) {
         contents.LambdaFunctionAssociations = deserializeAws_restXmlLambdaFunctionAssociations(output["LambdaFunctionAssociations"], context);
     }
+    if (output["FieldLevelEncryptionId"] !== undefined) {
+        contents.FieldLevelEncryptionId = output["FieldLevelEncryptionId"];
+    }
     if (output["RealtimeLogConfigArn"] !== undefined) {
         contents.RealtimeLogConfigArn = output["RealtimeLogConfigArn"];
+    }
+    if (output["CachePolicyId"] !== undefined) {
+        contents.CachePolicyId = output["CachePolicyId"];
+    }
+    if (output["OriginRequestPolicyId"] !== undefined) {
+        contents.OriginRequestPolicyId = output["OriginRequestPolicyId"];
+    }
+    if (output["ForwardedValues"] !== undefined) {
+        contents.ForwardedValues = deserializeAws_restXmlForwardedValues(output["ForwardedValues"], context);
+    }
+    if (output["MinTTL"] !== undefined) {
+        contents.MinTTL = parseInt(output["MinTTL"]);
+    }
+    if (output["DefaultTTL"] !== undefined) {
+        contents.DefaultTTL = parseInt(output["DefaultTTL"]);
+    }
+    if (output["MaxTTL"] !== undefined) {
+        contents.MaxTTL = parseInt(output["MaxTTL"]);
     }
     return contents;
 };
 const deserializeAws_restXmlDistribution = (output, context) => {
     let contents = {
         Id: undefined,
-        LastModifiedTime: undefined,
-        ActiveTrustedKeyGroups: undefined,
+        ARN: undefined,
         Status: undefined,
-        DistributionConfig: undefined,
+        LastModifiedTime: undefined,
         InProgressInvalidationBatches: undefined,
         DomainName: undefined,
-        AliasICPRecordals: undefined,
         ActiveTrustedSigners: undefined,
-        ARN: undefined,
+        ActiveTrustedKeyGroups: undefined,
+        DistributionConfig: undefined,
+        AliasICPRecordals: undefined,
     };
     if (output["Id"] !== undefined) {
         contents.Id = output["Id"];
     }
-    if (output["LastModifiedTime"] !== undefined) {
-        contents.LastModifiedTime = new Date(output["LastModifiedTime"]);
-    }
-    if (output["ActiveTrustedKeyGroups"] !== undefined) {
-        contents.ActiveTrustedKeyGroups = deserializeAws_restXmlActiveTrustedKeyGroups(output["ActiveTrustedKeyGroups"], context);
+    if (output["ARN"] !== undefined) {
+        contents.ARN = output["ARN"];
     }
     if (output["Status"] !== undefined) {
         contents.Status = output["Status"];
     }
-    if (output["DistributionConfig"] !== undefined) {
-        contents.DistributionConfig = deserializeAws_restXmlDistributionConfig(output["DistributionConfig"], context);
+    if (output["LastModifiedTime"] !== undefined) {
+        contents.LastModifiedTime = new Date(output["LastModifiedTime"]);
     }
     if (output["InProgressInvalidationBatches"] !== undefined) {
         contents.InProgressInvalidationBatches = parseInt(output["InProgressInvalidationBatches"]);
@@ -22188,42 +22088,45 @@ const deserializeAws_restXmlDistribution = (output, context) => {
     if (output["DomainName"] !== undefined) {
         contents.DomainName = output["DomainName"];
     }
+    if (output["ActiveTrustedSigners"] !== undefined) {
+        contents.ActiveTrustedSigners = deserializeAws_restXmlActiveTrustedSigners(output["ActiveTrustedSigners"], context);
+    }
+    if (output["ActiveTrustedKeyGroups"] !== undefined) {
+        contents.ActiveTrustedKeyGroups = deserializeAws_restXmlActiveTrustedKeyGroups(output["ActiveTrustedKeyGroups"], context);
+    }
+    if (output["DistributionConfig"] !== undefined) {
+        contents.DistributionConfig = deserializeAws_restXmlDistributionConfig(output["DistributionConfig"], context);
+    }
     if (output.AliasICPRecordals === "") {
         contents.AliasICPRecordals = [];
     }
     if (output["AliasICPRecordals"] !== undefined && output["AliasICPRecordals"]["AliasICPRecordal"] !== undefined) {
         contents.AliasICPRecordals = deserializeAws_restXmlAliasICPRecordals(smithy_client_1.getArrayIfSingleItem(output["AliasICPRecordals"]["AliasICPRecordal"]), context);
     }
-    if (output["ActiveTrustedSigners"] !== undefined) {
-        contents.ActiveTrustedSigners = deserializeAws_restXmlActiveTrustedSigners(output["ActiveTrustedSigners"], context);
-    }
-    if (output["ARN"] !== undefined) {
-        contents.ARN = output["ARN"];
-    }
     return contents;
 };
 const deserializeAws_restXmlDistributionConfig = (output, context) => {
     let contents = {
-        WebACLId: undefined,
+        CallerReference: undefined,
         Aliases: undefined,
         DefaultRootObject: undefined,
-        ViewerCertificate: undefined,
-        DefaultCacheBehavior: undefined,
-        CallerReference: undefined,
-        IsIPV6Enabled: undefined,
-        Enabled: undefined,
-        Logging: undefined,
-        Comment: undefined,
         Origins: undefined,
-        CustomErrorResponses: undefined,
-        Restrictions: undefined,
-        CacheBehaviors: undefined,
         OriginGroups: undefined,
-        HttpVersion: undefined,
+        DefaultCacheBehavior: undefined,
+        CacheBehaviors: undefined,
+        CustomErrorResponses: undefined,
+        Comment: undefined,
+        Logging: undefined,
         PriceClass: undefined,
+        Enabled: undefined,
+        ViewerCertificate: undefined,
+        Restrictions: undefined,
+        WebACLId: undefined,
+        HttpVersion: undefined,
+        IsIPV6Enabled: undefined,
     };
-    if (output["WebACLId"] !== undefined) {
-        contents.WebACLId = output["WebACLId"];
+    if (output["CallerReference"] !== undefined) {
+        contents.CallerReference = output["CallerReference"];
     }
     if (output["Aliases"] !== undefined) {
         contents.Aliases = deserializeAws_restXmlAliases(output["Aliases"], context);
@@ -22231,67 +22134,73 @@ const deserializeAws_restXmlDistributionConfig = (output, context) => {
     if (output["DefaultRootObject"] !== undefined) {
         contents.DefaultRootObject = output["DefaultRootObject"];
     }
-    if (output["ViewerCertificate"] !== undefined) {
-        contents.ViewerCertificate = deserializeAws_restXmlViewerCertificate(output["ViewerCertificate"], context);
-    }
-    if (output["DefaultCacheBehavior"] !== undefined) {
-        contents.DefaultCacheBehavior = deserializeAws_restXmlDefaultCacheBehavior(output["DefaultCacheBehavior"], context);
-    }
-    if (output["CallerReference"] !== undefined) {
-        contents.CallerReference = output["CallerReference"];
-    }
-    if (output["IsIPV6Enabled"] !== undefined) {
-        contents.IsIPV6Enabled = output["IsIPV6Enabled"] == "true";
-    }
-    if (output["Enabled"] !== undefined) {
-        contents.Enabled = output["Enabled"] == "true";
-    }
-    if (output["Logging"] !== undefined) {
-        contents.Logging = deserializeAws_restXmlLoggingConfig(output["Logging"], context);
-    }
-    if (output["Comment"] !== undefined) {
-        contents.Comment = output["Comment"];
-    }
     if (output["Origins"] !== undefined) {
         contents.Origins = deserializeAws_restXmlOrigins(output["Origins"], context);
-    }
-    if (output["CustomErrorResponses"] !== undefined) {
-        contents.CustomErrorResponses = deserializeAws_restXmlCustomErrorResponses(output["CustomErrorResponses"], context);
-    }
-    if (output["Restrictions"] !== undefined) {
-        contents.Restrictions = deserializeAws_restXmlRestrictions(output["Restrictions"], context);
-    }
-    if (output["CacheBehaviors"] !== undefined) {
-        contents.CacheBehaviors = deserializeAws_restXmlCacheBehaviors(output["CacheBehaviors"], context);
     }
     if (output["OriginGroups"] !== undefined) {
         contents.OriginGroups = deserializeAws_restXmlOriginGroups(output["OriginGroups"], context);
     }
-    if (output["HttpVersion"] !== undefined) {
-        contents.HttpVersion = output["HttpVersion"];
+    if (output["DefaultCacheBehavior"] !== undefined) {
+        contents.DefaultCacheBehavior = deserializeAws_restXmlDefaultCacheBehavior(output["DefaultCacheBehavior"], context);
+    }
+    if (output["CacheBehaviors"] !== undefined) {
+        contents.CacheBehaviors = deserializeAws_restXmlCacheBehaviors(output["CacheBehaviors"], context);
+    }
+    if (output["CustomErrorResponses"] !== undefined) {
+        contents.CustomErrorResponses = deserializeAws_restXmlCustomErrorResponses(output["CustomErrorResponses"], context);
+    }
+    if (output["Comment"] !== undefined) {
+        contents.Comment = output["Comment"];
+    }
+    if (output["Logging"] !== undefined) {
+        contents.Logging = deserializeAws_restXmlLoggingConfig(output["Logging"], context);
     }
     if (output["PriceClass"] !== undefined) {
         contents.PriceClass = output["PriceClass"];
+    }
+    if (output["Enabled"] !== undefined) {
+        contents.Enabled = output["Enabled"] == "true";
+    }
+    if (output["ViewerCertificate"] !== undefined) {
+        contents.ViewerCertificate = deserializeAws_restXmlViewerCertificate(output["ViewerCertificate"], context);
+    }
+    if (output["Restrictions"] !== undefined) {
+        contents.Restrictions = deserializeAws_restXmlRestrictions(output["Restrictions"], context);
+    }
+    if (output["WebACLId"] !== undefined) {
+        contents.WebACLId = output["WebACLId"];
+    }
+    if (output["HttpVersion"] !== undefined) {
+        contents.HttpVersion = output["HttpVersion"];
+    }
+    if (output["IsIPV6Enabled"] !== undefined) {
+        contents.IsIPV6Enabled = output["IsIPV6Enabled"] == "true";
     }
     return contents;
 };
 const deserializeAws_restXmlDistributionIdList = (output, context) => {
     let contents = {
-        Quantity: undefined,
-        NextMarker: undefined,
-        IsTruncated: undefined,
-        Items: undefined,
-        MaxItems: undefined,
         Marker: undefined,
+        NextMarker: undefined,
+        MaxItems: undefined,
+        IsTruncated: undefined,
+        Quantity: undefined,
+        Items: undefined,
     };
-    if (output["Quantity"] !== undefined) {
-        contents.Quantity = parseInt(output["Quantity"]);
+    if (output["Marker"] !== undefined) {
+        contents.Marker = output["Marker"];
     }
     if (output["NextMarker"] !== undefined) {
         contents.NextMarker = output["NextMarker"];
     }
+    if (output["MaxItems"] !== undefined) {
+        contents.MaxItems = parseInt(output["MaxItems"]);
+    }
     if (output["IsTruncated"] !== undefined) {
         contents.IsTruncated = output["IsTruncated"] == "true";
+    }
+    if (output["Quantity"] !== undefined) {
+        contents.Quantity = parseInt(output["Quantity"]);
     }
     if (output.Items === "") {
         contents.Items = [];
@@ -22299,31 +22208,38 @@ const deserializeAws_restXmlDistributionIdList = (output, context) => {
     if (output["Items"] !== undefined && output["Items"]["DistributionId"] !== undefined) {
         contents.Items = deserializeAws_restXmlDistributionIdListSummary(smithy_client_1.getArrayIfSingleItem(output["Items"]["DistributionId"]), context);
     }
-    if (output["MaxItems"] !== undefined) {
-        contents.MaxItems = parseInt(output["MaxItems"]);
-    }
-    if (output["Marker"] !== undefined) {
-        contents.Marker = output["Marker"];
-    }
     return contents;
 };
 const deserializeAws_restXmlDistributionIdListSummary = (output, context) => {
-    return (output || []).map((entry) => entry);
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return entry;
+    });
 };
 const deserializeAws_restXmlDistributionList = (output, context) => {
     let contents = {
         Marker: undefined,
         NextMarker: undefined,
+        MaxItems: undefined,
+        IsTruncated: undefined,
         Quantity: undefined,
         Items: undefined,
-        IsTruncated: undefined,
-        MaxItems: undefined,
     };
     if (output["Marker"] !== undefined) {
         contents.Marker = output["Marker"];
     }
     if (output["NextMarker"] !== undefined) {
         contents.NextMarker = output["NextMarker"];
+    }
+    if (output["MaxItems"] !== undefined) {
+        contents.MaxItems = parseInt(output["MaxItems"]);
+    }
+    if (output["IsTruncated"] !== undefined) {
+        contents.IsTruncated = output["IsTruncated"] == "true";
     }
     if (output["Quantity"] !== undefined) {
         contents.Quantity = parseInt(output["Quantity"]);
@@ -22334,51 +22250,87 @@ const deserializeAws_restXmlDistributionList = (output, context) => {
     if (output["Items"] !== undefined && output["Items"]["DistributionSummary"] !== undefined) {
         contents.Items = deserializeAws_restXmlDistributionSummaryList(smithy_client_1.getArrayIfSingleItem(output["Items"]["DistributionSummary"]), context);
     }
-    if (output["IsTruncated"] !== undefined) {
-        contents.IsTruncated = output["IsTruncated"] == "true";
-    }
-    if (output["MaxItems"] !== undefined) {
-        contents.MaxItems = parseInt(output["MaxItems"]);
-    }
     return contents;
 };
 const deserializeAws_restXmlDistributionSummary = (output, context) => {
     let contents = {
-        Comment: undefined,
-        Status: undefined,
-        HttpVersion: undefined,
-        PriceClass: undefined,
-        CacheBehaviors: undefined,
-        AliasICPRecordals: undefined,
         Id: undefined,
         ARN: undefined,
-        Aliases: undefined,
-        WebACLId: undefined,
-        OriginGroups: undefined,
-        Origins: undefined,
-        DomainName: undefined,
-        CustomErrorResponses: undefined,
+        Status: undefined,
         LastModifiedTime: undefined,
-        Restrictions: undefined,
+        DomainName: undefined,
+        Aliases: undefined,
+        Origins: undefined,
+        OriginGroups: undefined,
         DefaultCacheBehavior: undefined,
-        IsIPV6Enabled: undefined,
-        ViewerCertificate: undefined,
+        CacheBehaviors: undefined,
+        CustomErrorResponses: undefined,
+        Comment: undefined,
+        PriceClass: undefined,
         Enabled: undefined,
+        ViewerCertificate: undefined,
+        Restrictions: undefined,
+        WebACLId: undefined,
+        HttpVersion: undefined,
+        IsIPV6Enabled: undefined,
+        AliasICPRecordals: undefined,
     };
-    if (output["Comment"] !== undefined) {
-        contents.Comment = output["Comment"];
+    if (output["Id"] !== undefined) {
+        contents.Id = output["Id"];
+    }
+    if (output["ARN"] !== undefined) {
+        contents.ARN = output["ARN"];
     }
     if (output["Status"] !== undefined) {
         contents.Status = output["Status"];
     }
-    if (output["HttpVersion"] !== undefined) {
-        contents.HttpVersion = output["HttpVersion"];
+    if (output["LastModifiedTime"] !== undefined) {
+        contents.LastModifiedTime = new Date(output["LastModifiedTime"]);
+    }
+    if (output["DomainName"] !== undefined) {
+        contents.DomainName = output["DomainName"];
+    }
+    if (output["Aliases"] !== undefined) {
+        contents.Aliases = deserializeAws_restXmlAliases(output["Aliases"], context);
+    }
+    if (output["Origins"] !== undefined) {
+        contents.Origins = deserializeAws_restXmlOrigins(output["Origins"], context);
+    }
+    if (output["OriginGroups"] !== undefined) {
+        contents.OriginGroups = deserializeAws_restXmlOriginGroups(output["OriginGroups"], context);
+    }
+    if (output["DefaultCacheBehavior"] !== undefined) {
+        contents.DefaultCacheBehavior = deserializeAws_restXmlDefaultCacheBehavior(output["DefaultCacheBehavior"], context);
+    }
+    if (output["CacheBehaviors"] !== undefined) {
+        contents.CacheBehaviors = deserializeAws_restXmlCacheBehaviors(output["CacheBehaviors"], context);
+    }
+    if (output["CustomErrorResponses"] !== undefined) {
+        contents.CustomErrorResponses = deserializeAws_restXmlCustomErrorResponses(output["CustomErrorResponses"], context);
+    }
+    if (output["Comment"] !== undefined) {
+        contents.Comment = output["Comment"];
     }
     if (output["PriceClass"] !== undefined) {
         contents.PriceClass = output["PriceClass"];
     }
-    if (output["CacheBehaviors"] !== undefined) {
-        contents.CacheBehaviors = deserializeAws_restXmlCacheBehaviors(output["CacheBehaviors"], context);
+    if (output["Enabled"] !== undefined) {
+        contents.Enabled = output["Enabled"] == "true";
+    }
+    if (output["ViewerCertificate"] !== undefined) {
+        contents.ViewerCertificate = deserializeAws_restXmlViewerCertificate(output["ViewerCertificate"], context);
+    }
+    if (output["Restrictions"] !== undefined) {
+        contents.Restrictions = deserializeAws_restXmlRestrictions(output["Restrictions"], context);
+    }
+    if (output["WebACLId"] !== undefined) {
+        contents.WebACLId = output["WebACLId"];
+    }
+    if (output["HttpVersion"] !== undefined) {
+        contents.HttpVersion = output["HttpVersion"];
+    }
+    if (output["IsIPV6Enabled"] !== undefined) {
+        contents.IsIPV6Enabled = output["IsIPV6Enabled"] == "true";
     }
     if (output.AliasICPRecordals === "") {
         contents.AliasICPRecordals = [];
@@ -22386,52 +22338,17 @@ const deserializeAws_restXmlDistributionSummary = (output, context) => {
     if (output["AliasICPRecordals"] !== undefined && output["AliasICPRecordals"]["AliasICPRecordal"] !== undefined) {
         contents.AliasICPRecordals = deserializeAws_restXmlAliasICPRecordals(smithy_client_1.getArrayIfSingleItem(output["AliasICPRecordals"]["AliasICPRecordal"]), context);
     }
-    if (output["Id"] !== undefined) {
-        contents.Id = output["Id"];
-    }
-    if (output["ARN"] !== undefined) {
-        contents.ARN = output["ARN"];
-    }
-    if (output["Aliases"] !== undefined) {
-        contents.Aliases = deserializeAws_restXmlAliases(output["Aliases"], context);
-    }
-    if (output["WebACLId"] !== undefined) {
-        contents.WebACLId = output["WebACLId"];
-    }
-    if (output["OriginGroups"] !== undefined) {
-        contents.OriginGroups = deserializeAws_restXmlOriginGroups(output["OriginGroups"], context);
-    }
-    if (output["Origins"] !== undefined) {
-        contents.Origins = deserializeAws_restXmlOrigins(output["Origins"], context);
-    }
-    if (output["DomainName"] !== undefined) {
-        contents.DomainName = output["DomainName"];
-    }
-    if (output["CustomErrorResponses"] !== undefined) {
-        contents.CustomErrorResponses = deserializeAws_restXmlCustomErrorResponses(output["CustomErrorResponses"], context);
-    }
-    if (output["LastModifiedTime"] !== undefined) {
-        contents.LastModifiedTime = new Date(output["LastModifiedTime"]);
-    }
-    if (output["Restrictions"] !== undefined) {
-        contents.Restrictions = deserializeAws_restXmlRestrictions(output["Restrictions"], context);
-    }
-    if (output["DefaultCacheBehavior"] !== undefined) {
-        contents.DefaultCacheBehavior = deserializeAws_restXmlDefaultCacheBehavior(output["DefaultCacheBehavior"], context);
-    }
-    if (output["IsIPV6Enabled"] !== undefined) {
-        contents.IsIPV6Enabled = output["IsIPV6Enabled"] == "true";
-    }
-    if (output["ViewerCertificate"] !== undefined) {
-        contents.ViewerCertificate = deserializeAws_restXmlViewerCertificate(output["ViewerCertificate"], context);
-    }
-    if (output["Enabled"] !== undefined) {
-        contents.Enabled = output["Enabled"] == "true";
-    }
     return contents;
 };
 const deserializeAws_restXmlDistributionSummaryList = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlDistributionSummary(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlDistributionSummary(entry, context);
+    });
 };
 const deserializeAws_restXmlEncryptionEntities = (output, context) => {
     let contents = {
@@ -22467,7 +22384,14 @@ const deserializeAws_restXmlEncryptionEntity = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlEncryptionEntityList = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlEncryptionEntity(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlEncryptionEntity(entry, context);
+    });
 };
 const deserializeAws_restXmlEndPoint = (output, context) => {
     let contents = {
@@ -22483,7 +22407,14 @@ const deserializeAws_restXmlEndPoint = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlEndPointList = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlEndPoint(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlEndPoint(entry, context);
+    });
 };
 const deserializeAws_restXmlFieldLevelEncryption = (output, context) => {
     let contents = {
@@ -22504,32 +22435,38 @@ const deserializeAws_restXmlFieldLevelEncryption = (output, context) => {
 };
 const deserializeAws_restXmlFieldLevelEncryptionConfig = (output, context) => {
     let contents = {
+        CallerReference: undefined,
+        Comment: undefined,
         QueryArgProfileConfig: undefined,
         ContentTypeProfileConfig: undefined,
-        Comment: undefined,
-        CallerReference: undefined,
     };
+    if (output["CallerReference"] !== undefined) {
+        contents.CallerReference = output["CallerReference"];
+    }
+    if (output["Comment"] !== undefined) {
+        contents.Comment = output["Comment"];
+    }
     if (output["QueryArgProfileConfig"] !== undefined) {
         contents.QueryArgProfileConfig = deserializeAws_restXmlQueryArgProfileConfig(output["QueryArgProfileConfig"], context);
     }
     if (output["ContentTypeProfileConfig"] !== undefined) {
         contents.ContentTypeProfileConfig = deserializeAws_restXmlContentTypeProfileConfig(output["ContentTypeProfileConfig"], context);
     }
-    if (output["Comment"] !== undefined) {
-        contents.Comment = output["Comment"];
-    }
-    if (output["CallerReference"] !== undefined) {
-        contents.CallerReference = output["CallerReference"];
-    }
     return contents;
 };
 const deserializeAws_restXmlFieldLevelEncryptionList = (output, context) => {
     let contents = {
-        Quantity: undefined,
-        Items: undefined,
         NextMarker: undefined,
         MaxItems: undefined,
+        Quantity: undefined,
+        Items: undefined,
     };
+    if (output["NextMarker"] !== undefined) {
+        contents.NextMarker = output["NextMarker"];
+    }
+    if (output["MaxItems"] !== undefined) {
+        contents.MaxItems = parseInt(output["MaxItems"]);
+    }
     if (output["Quantity"] !== undefined) {
         contents.Quantity = parseInt(output["Quantity"]);
     }
@@ -22539,61 +22476,61 @@ const deserializeAws_restXmlFieldLevelEncryptionList = (output, context) => {
     if (output["Items"] !== undefined && output["Items"]["FieldLevelEncryptionSummary"] !== undefined) {
         contents.Items = deserializeAws_restXmlFieldLevelEncryptionSummaryList(smithy_client_1.getArrayIfSingleItem(output["Items"]["FieldLevelEncryptionSummary"]), context);
     }
-    if (output["NextMarker"] !== undefined) {
-        contents.NextMarker = output["NextMarker"];
-    }
-    if (output["MaxItems"] !== undefined) {
-        contents.MaxItems = parseInt(output["MaxItems"]);
-    }
     return contents;
 };
 const deserializeAws_restXmlFieldLevelEncryptionProfile = (output, context) => {
     let contents = {
         Id: undefined,
-        FieldLevelEncryptionProfileConfig: undefined,
         LastModifiedTime: undefined,
+        FieldLevelEncryptionProfileConfig: undefined,
     };
     if (output["Id"] !== undefined) {
         contents.Id = output["Id"];
     }
-    if (output["FieldLevelEncryptionProfileConfig"] !== undefined) {
-        contents.FieldLevelEncryptionProfileConfig = deserializeAws_restXmlFieldLevelEncryptionProfileConfig(output["FieldLevelEncryptionProfileConfig"], context);
-    }
     if (output["LastModifiedTime"] !== undefined) {
         contents.LastModifiedTime = new Date(output["LastModifiedTime"]);
+    }
+    if (output["FieldLevelEncryptionProfileConfig"] !== undefined) {
+        contents.FieldLevelEncryptionProfileConfig = deserializeAws_restXmlFieldLevelEncryptionProfileConfig(output["FieldLevelEncryptionProfileConfig"], context);
     }
     return contents;
 };
 const deserializeAws_restXmlFieldLevelEncryptionProfileConfig = (output, context) => {
     let contents = {
+        Name: undefined,
+        CallerReference: undefined,
         Comment: undefined,
         EncryptionEntities: undefined,
-        CallerReference: undefined,
-        Name: undefined,
     };
+    if (output["Name"] !== undefined) {
+        contents.Name = output["Name"];
+    }
+    if (output["CallerReference"] !== undefined) {
+        contents.CallerReference = output["CallerReference"];
+    }
     if (output["Comment"] !== undefined) {
         contents.Comment = output["Comment"];
     }
     if (output["EncryptionEntities"] !== undefined) {
         contents.EncryptionEntities = deserializeAws_restXmlEncryptionEntities(output["EncryptionEntities"], context);
     }
-    if (output["CallerReference"] !== undefined) {
-        contents.CallerReference = output["CallerReference"];
-    }
-    if (output["Name"] !== undefined) {
-        contents.Name = output["Name"];
-    }
     return contents;
 };
 const deserializeAws_restXmlFieldLevelEncryptionProfileList = (output, context) => {
     let contents = {
-        MaxItems: undefined,
-        Items: undefined,
-        Quantity: undefined,
         NextMarker: undefined,
+        MaxItems: undefined,
+        Quantity: undefined,
+        Items: undefined,
     };
+    if (output["NextMarker"] !== undefined) {
+        contents.NextMarker = output["NextMarker"];
+    }
     if (output["MaxItems"] !== undefined) {
         contents.MaxItems = parseInt(output["MaxItems"]);
+    }
+    if (output["Quantity"] !== undefined) {
+        contents.Quantity = parseInt(output["Quantity"]);
     }
     if (output.Items === "") {
         contents.Items = [];
@@ -22601,27 +22538,18 @@ const deserializeAws_restXmlFieldLevelEncryptionProfileList = (output, context) 
     if (output["Items"] !== undefined && output["Items"]["FieldLevelEncryptionProfileSummary"] !== undefined) {
         contents.Items = deserializeAws_restXmlFieldLevelEncryptionProfileSummaryList(smithy_client_1.getArrayIfSingleItem(output["Items"]["FieldLevelEncryptionProfileSummary"]), context);
     }
-    if (output["Quantity"] !== undefined) {
-        contents.Quantity = parseInt(output["Quantity"]);
-    }
-    if (output["NextMarker"] !== undefined) {
-        contents.NextMarker = output["NextMarker"];
-    }
     return contents;
 };
 const deserializeAws_restXmlFieldLevelEncryptionProfileSummary = (output, context) => {
     let contents = {
-        Comment: undefined,
-        EncryptionEntities: undefined,
+        Id: undefined,
         LastModifiedTime: undefined,
         Name: undefined,
-        Id: undefined,
+        EncryptionEntities: undefined,
+        Comment: undefined,
     };
-    if (output["Comment"] !== undefined) {
-        contents.Comment = output["Comment"];
-    }
-    if (output["EncryptionEntities"] !== undefined) {
-        contents.EncryptionEntities = deserializeAws_restXmlEncryptionEntities(output["EncryptionEntities"], context);
+    if (output["Id"] !== undefined) {
+        contents.Id = output["Id"];
     }
     if (output["LastModifiedTime"] !== undefined) {
         contents.LastModifiedTime = new Date(output["LastModifiedTime"]);
@@ -22629,33 +22557,43 @@ const deserializeAws_restXmlFieldLevelEncryptionProfileSummary = (output, contex
     if (output["Name"] !== undefined) {
         contents.Name = output["Name"];
     }
-    if (output["Id"] !== undefined) {
-        contents.Id = output["Id"];
+    if (output["EncryptionEntities"] !== undefined) {
+        contents.EncryptionEntities = deserializeAws_restXmlEncryptionEntities(output["EncryptionEntities"], context);
+    }
+    if (output["Comment"] !== undefined) {
+        contents.Comment = output["Comment"];
     }
     return contents;
 };
 const deserializeAws_restXmlFieldLevelEncryptionProfileSummaryList = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlFieldLevelEncryptionProfileSummary(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlFieldLevelEncryptionProfileSummary(entry, context);
+    });
 };
 const deserializeAws_restXmlFieldLevelEncryptionSummary = (output, context) => {
     let contents = {
-        LastModifiedTime: undefined,
-        QueryArgProfileConfig: undefined,
         Id: undefined,
+        LastModifiedTime: undefined,
         Comment: undefined,
+        QueryArgProfileConfig: undefined,
         ContentTypeProfileConfig: undefined,
     };
-    if (output["LastModifiedTime"] !== undefined) {
-        contents.LastModifiedTime = new Date(output["LastModifiedTime"]);
-    }
-    if (output["QueryArgProfileConfig"] !== undefined) {
-        contents.QueryArgProfileConfig = deserializeAws_restXmlQueryArgProfileConfig(output["QueryArgProfileConfig"], context);
-    }
     if (output["Id"] !== undefined) {
         contents.Id = output["Id"];
     }
+    if (output["LastModifiedTime"] !== undefined) {
+        contents.LastModifiedTime = new Date(output["LastModifiedTime"]);
+    }
     if (output["Comment"] !== undefined) {
         contents.Comment = output["Comment"];
+    }
+    if (output["QueryArgProfileConfig"] !== undefined) {
+        contents.QueryArgProfileConfig = deserializeAws_restXmlQueryArgProfileConfig(output["QueryArgProfileConfig"], context);
     }
     if (output["ContentTypeProfileConfig"] !== undefined) {
         contents.ContentTypeProfileConfig = deserializeAws_restXmlContentTypeProfileConfig(output["ContentTypeProfileConfig"], context);
@@ -22663,59 +22601,83 @@ const deserializeAws_restXmlFieldLevelEncryptionSummary = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlFieldLevelEncryptionSummaryList = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlFieldLevelEncryptionSummary(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlFieldLevelEncryptionSummary(entry, context);
+    });
 };
 const deserializeAws_restXmlFieldList = (output, context) => {
-    return (output || []).map((entry) => entry);
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return entry;
+    });
 };
 const deserializeAws_restXmlFieldPatternList = (output, context) => {
-    return (output || []).map((entry) => entry);
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return entry;
+    });
 };
 const deserializeAws_restXmlFieldPatterns = (output, context) => {
     let contents = {
-        Items: undefined,
         Quantity: undefined,
+        Items: undefined,
     };
+    if (output["Quantity"] !== undefined) {
+        contents.Quantity = parseInt(output["Quantity"]);
+    }
     if (output.Items === "") {
         contents.Items = [];
     }
     if (output["Items"] !== undefined && output["Items"]["FieldPattern"] !== undefined) {
         contents.Items = deserializeAws_restXmlFieldPatternList(smithy_client_1.getArrayIfSingleItem(output["Items"]["FieldPattern"]), context);
     }
-    if (output["Quantity"] !== undefined) {
-        contents.Quantity = parseInt(output["Quantity"]);
-    }
     return contents;
 };
 const deserializeAws_restXmlForwardedValues = (output, context) => {
     let contents = {
         QueryString: undefined,
-        QueryStringCacheKeys: undefined,
-        Headers: undefined,
         Cookies: undefined,
+        Headers: undefined,
+        QueryStringCacheKeys: undefined,
     };
     if (output["QueryString"] !== undefined) {
         contents.QueryString = output["QueryString"] == "true";
     }
-    if (output["QueryStringCacheKeys"] !== undefined) {
-        contents.QueryStringCacheKeys = deserializeAws_restXmlQueryStringCacheKeys(output["QueryStringCacheKeys"], context);
+    if (output["Cookies"] !== undefined) {
+        contents.Cookies = deserializeAws_restXmlCookiePreference(output["Cookies"], context);
     }
     if (output["Headers"] !== undefined) {
         contents.Headers = deserializeAws_restXmlHeaders(output["Headers"], context);
     }
-    if (output["Cookies"] !== undefined) {
-        contents.Cookies = deserializeAws_restXmlCookiePreference(output["Cookies"], context);
+    if (output["QueryStringCacheKeys"] !== undefined) {
+        contents.QueryStringCacheKeys = deserializeAws_restXmlQueryStringCacheKeys(output["QueryStringCacheKeys"], context);
     }
     return contents;
 };
 const deserializeAws_restXmlGeoRestriction = (output, context) => {
     let contents = {
         RestrictionType: undefined,
-        Items: undefined,
         Quantity: undefined,
+        Items: undefined,
     };
     if (output["RestrictionType"] !== undefined) {
         contents.RestrictionType = output["RestrictionType"];
+    }
+    if (output["Quantity"] !== undefined) {
+        contents.Quantity = parseInt(output["Quantity"]);
     }
     if (output.Items === "") {
         contents.Items = [];
@@ -22723,13 +22685,17 @@ const deserializeAws_restXmlGeoRestriction = (output, context) => {
     if (output["Items"] !== undefined && output["Items"]["Location"] !== undefined) {
         contents.Items = deserializeAws_restXmlLocationList(smithy_client_1.getArrayIfSingleItem(output["Items"]["Location"]), context);
     }
-    if (output["Quantity"] !== undefined) {
-        contents.Quantity = parseInt(output["Quantity"]);
-    }
     return contents;
 };
 const deserializeAws_restXmlHeaderList = (output, context) => {
-    return (output || []).map((entry) => entry);
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return entry;
+    });
 };
 const deserializeAws_restXmlHeaders = (output, context) => {
     let contents = {
@@ -22750,18 +22716,18 @@ const deserializeAws_restXmlHeaders = (output, context) => {
 const deserializeAws_restXmlInvalidation = (output, context) => {
     let contents = {
         Id: undefined,
-        CreateTime: undefined,
         Status: undefined,
+        CreateTime: undefined,
         InvalidationBatch: undefined,
     };
     if (output["Id"] !== undefined) {
         contents.Id = output["Id"];
     }
-    if (output["CreateTime"] !== undefined) {
-        contents.CreateTime = new Date(output["CreateTime"]);
-    }
     if (output["Status"] !== undefined) {
         contents.Status = output["Status"];
+    }
+    if (output["CreateTime"] !== undefined) {
+        contents.CreateTime = new Date(output["CreateTime"]);
     }
     if (output["InvalidationBatch"] !== undefined) {
         contents.InvalidationBatch = deserializeAws_restXmlInvalidationBatch(output["InvalidationBatch"], context);
@@ -22783,24 +22749,24 @@ const deserializeAws_restXmlInvalidationBatch = (output, context) => {
 };
 const deserializeAws_restXmlInvalidationList = (output, context) => {
     let contents = {
-        NextMarker: undefined,
-        IsTruncated: undefined,
-        MaxItems: undefined,
         Marker: undefined,
+        NextMarker: undefined,
+        MaxItems: undefined,
+        IsTruncated: undefined,
         Quantity: undefined,
         Items: undefined,
     };
+    if (output["Marker"] !== undefined) {
+        contents.Marker = output["Marker"];
+    }
     if (output["NextMarker"] !== undefined) {
         contents.NextMarker = output["NextMarker"];
-    }
-    if (output["IsTruncated"] !== undefined) {
-        contents.IsTruncated = output["IsTruncated"] == "true";
     }
     if (output["MaxItems"] !== undefined) {
         contents.MaxItems = parseInt(output["MaxItems"]);
     }
-    if (output["Marker"] !== undefined) {
-        contents.Marker = output["Marker"];
+    if (output["IsTruncated"] !== undefined) {
+        contents.IsTruncated = output["IsTruncated"] == "true";
     }
     if (output["Quantity"] !== undefined) {
         contents.Quantity = parseInt(output["Quantity"]);
@@ -22815,47 +22781,57 @@ const deserializeAws_restXmlInvalidationList = (output, context) => {
 };
 const deserializeAws_restXmlInvalidationSummary = (output, context) => {
     let contents = {
-        Status: undefined,
         Id: undefined,
         CreateTime: undefined,
+        Status: undefined,
     };
-    if (output["Status"] !== undefined) {
-        contents.Status = output["Status"];
-    }
     if (output["Id"] !== undefined) {
         contents.Id = output["Id"];
     }
     if (output["CreateTime"] !== undefined) {
         contents.CreateTime = new Date(output["CreateTime"]);
     }
+    if (output["Status"] !== undefined) {
+        contents.Status = output["Status"];
+    }
     return contents;
 };
 const deserializeAws_restXmlInvalidationSummaryList = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlInvalidationSummary(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlInvalidationSummary(entry, context);
+    });
 };
 const deserializeAws_restXmlKeyGroup = (output, context) => {
     let contents = {
+        Id: undefined,
         LastModifiedTime: undefined,
         KeyGroupConfig: undefined,
-        Id: undefined,
     };
+    if (output["Id"] !== undefined) {
+        contents.Id = output["Id"];
+    }
     if (output["LastModifiedTime"] !== undefined) {
         contents.LastModifiedTime = new Date(output["LastModifiedTime"]);
     }
     if (output["KeyGroupConfig"] !== undefined) {
         contents.KeyGroupConfig = deserializeAws_restXmlKeyGroupConfig(output["KeyGroupConfig"], context);
     }
-    if (output["Id"] !== undefined) {
-        contents.Id = output["Id"];
-    }
     return contents;
 };
 const deserializeAws_restXmlKeyGroupConfig = (output, context) => {
     let contents = {
+        Name: undefined,
         Items: undefined,
         Comment: undefined,
-        Name: undefined,
     };
+    if (output["Name"] !== undefined) {
+        contents.Name = output["Name"];
+    }
     if (output.Items === "") {
         contents.Items = [];
     }
@@ -22865,26 +22841,23 @@ const deserializeAws_restXmlKeyGroupConfig = (output, context) => {
     if (output["Comment"] !== undefined) {
         contents.Comment = output["Comment"];
     }
-    if (output["Name"] !== undefined) {
-        contents.Name = output["Name"];
-    }
     return contents;
 };
 const deserializeAws_restXmlKeyGroupList = (output, context) => {
     let contents = {
         NextMarker: undefined,
-        Quantity: undefined,
         MaxItems: undefined,
+        Quantity: undefined,
         Items: undefined,
     };
     if (output["NextMarker"] !== undefined) {
         contents.NextMarker = output["NextMarker"];
     }
-    if (output["Quantity"] !== undefined) {
-        contents.Quantity = parseInt(output["Quantity"]);
-    }
     if (output["MaxItems"] !== undefined) {
         contents.MaxItems = parseInt(output["MaxItems"]);
+    }
+    if (output["Quantity"] !== undefined) {
+        contents.Quantity = parseInt(output["Quantity"]);
     }
     if (output.Items === "") {
         contents.Items = [];
@@ -22904,42 +22877,63 @@ const deserializeAws_restXmlKeyGroupSummary = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlKeyGroupSummaryList = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlKeyGroupSummary(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlKeyGroupSummary(entry, context);
+    });
 };
 const deserializeAws_restXmlKeyPairIdList = (output, context) => {
-    return (output || []).map((entry) => entry);
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return entry;
+    });
 };
 const deserializeAws_restXmlKeyPairIds = (output, context) => {
     let contents = {
-        Items: undefined,
         Quantity: undefined,
+        Items: undefined,
     };
+    if (output["Quantity"] !== undefined) {
+        contents.Quantity = parseInt(output["Quantity"]);
+    }
     if (output.Items === "") {
         contents.Items = [];
     }
     if (output["Items"] !== undefined && output["Items"]["KeyPairId"] !== undefined) {
         contents.Items = deserializeAws_restXmlKeyPairIdList(smithy_client_1.getArrayIfSingleItem(output["Items"]["KeyPairId"]), context);
     }
-    if (output["Quantity"] !== undefined) {
-        contents.Quantity = parseInt(output["Quantity"]);
-    }
     return contents;
 };
 const deserializeAws_restXmlKGKeyPairIds = (output, context) => {
     let contents = {
-        KeyPairIds: undefined,
         KeyGroupId: undefined,
+        KeyPairIds: undefined,
     };
-    if (output["KeyPairIds"] !== undefined) {
-        contents.KeyPairIds = deserializeAws_restXmlKeyPairIds(output["KeyPairIds"], context);
-    }
     if (output["KeyGroupId"] !== undefined) {
         contents.KeyGroupId = output["KeyGroupId"];
+    }
+    if (output["KeyPairIds"] !== undefined) {
+        contents.KeyPairIds = deserializeAws_restXmlKeyPairIds(output["KeyPairIds"], context);
     }
     return contents;
 };
 const deserializeAws_restXmlKGKeyPairIdsList = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlKGKeyPairIds(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlKGKeyPairIds(entry, context);
+    });
 };
 const deserializeAws_restXmlKinesisStreamConfig = (output, context) => {
     let contents = {
@@ -22972,50 +22966,71 @@ const deserializeAws_restXmlLambdaFunctionAssociation = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlLambdaFunctionAssociationList = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlLambdaFunctionAssociation(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlLambdaFunctionAssociation(entry, context);
+    });
 };
 const deserializeAws_restXmlLambdaFunctionAssociations = (output, context) => {
     let contents = {
-        Items: undefined,
         Quantity: undefined,
+        Items: undefined,
     };
+    if (output["Quantity"] !== undefined) {
+        contents.Quantity = parseInt(output["Quantity"]);
+    }
     if (output.Items === "") {
         contents.Items = [];
     }
     if (output["Items"] !== undefined && output["Items"]["LambdaFunctionAssociation"] !== undefined) {
         contents.Items = deserializeAws_restXmlLambdaFunctionAssociationList(smithy_client_1.getArrayIfSingleItem(output["Items"]["LambdaFunctionAssociation"]), context);
     }
-    if (output["Quantity"] !== undefined) {
-        contents.Quantity = parseInt(output["Quantity"]);
-    }
     return contents;
 };
 const deserializeAws_restXmlLocationList = (output, context) => {
-    return (output || []).map((entry) => entry);
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return entry;
+    });
 };
 const deserializeAws_restXmlLoggingConfig = (output, context) => {
     let contents = {
-        Prefix: undefined,
-        Bucket: undefined,
         Enabled: undefined,
         IncludeCookies: undefined,
+        Bucket: undefined,
+        Prefix: undefined,
     };
-    if (output["Prefix"] !== undefined) {
-        contents.Prefix = output["Prefix"];
-    }
-    if (output["Bucket"] !== undefined) {
-        contents.Bucket = output["Bucket"];
-    }
     if (output["Enabled"] !== undefined) {
         contents.Enabled = output["Enabled"] == "true";
     }
     if (output["IncludeCookies"] !== undefined) {
         contents.IncludeCookies = output["IncludeCookies"] == "true";
     }
+    if (output["Bucket"] !== undefined) {
+        contents.Bucket = output["Bucket"];
+    }
+    if (output["Prefix"] !== undefined) {
+        contents.Prefix = output["Prefix"];
+    }
     return contents;
 };
 const deserializeAws_restXmlMethodsList = (output, context) => {
-    return (output || []).map((entry) => entry);
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return entry;
+    });
 };
 const deserializeAws_restXmlMonitoringSubscription = (output, context) => {
     let contents = {
@@ -23029,17 +23044,20 @@ const deserializeAws_restXmlMonitoringSubscription = (output, context) => {
 const deserializeAws_restXmlOrigin = (output, context) => {
     let contents = {
         Id: undefined,
+        DomainName: undefined,
         OriginPath: undefined,
         CustomHeaders: undefined,
-        CustomOriginConfig: undefined,
         S3OriginConfig: undefined,
+        CustomOriginConfig: undefined,
         ConnectionAttempts: undefined,
         ConnectionTimeout: undefined,
         OriginShield: undefined,
-        DomainName: undefined,
     };
     if (output["Id"] !== undefined) {
         contents.Id = output["Id"];
+    }
+    if (output["DomainName"] !== undefined) {
+        contents.DomainName = output["DomainName"];
     }
     if (output["OriginPath"] !== undefined) {
         contents.OriginPath = output["OriginPath"];
@@ -23047,11 +23065,11 @@ const deserializeAws_restXmlOrigin = (output, context) => {
     if (output["CustomHeaders"] !== undefined) {
         contents.CustomHeaders = deserializeAws_restXmlCustomHeaders(output["CustomHeaders"], context);
     }
-    if (output["CustomOriginConfig"] !== undefined) {
-        contents.CustomOriginConfig = deserializeAws_restXmlCustomOriginConfig(output["CustomOriginConfig"], context);
-    }
     if (output["S3OriginConfig"] !== undefined) {
         contents.S3OriginConfig = deserializeAws_restXmlS3OriginConfig(output["S3OriginConfig"], context);
+    }
+    if (output["CustomOriginConfig"] !== undefined) {
+        contents.CustomOriginConfig = deserializeAws_restXmlCustomOriginConfig(output["CustomOriginConfig"], context);
     }
     if (output["ConnectionAttempts"] !== undefined) {
         contents.ConnectionAttempts = parseInt(output["ConnectionAttempts"]);
@@ -23062,41 +23080,45 @@ const deserializeAws_restXmlOrigin = (output, context) => {
     if (output["OriginShield"] !== undefined) {
         contents.OriginShield = deserializeAws_restXmlOriginShield(output["OriginShield"], context);
     }
-    if (output["DomainName"] !== undefined) {
-        contents.DomainName = output["DomainName"];
-    }
     return contents;
 };
 const deserializeAws_restXmlOriginCustomHeader = (output, context) => {
     let contents = {
-        HeaderValue: undefined,
         HeaderName: undefined,
+        HeaderValue: undefined,
     };
-    if (output["HeaderValue"] !== undefined) {
-        contents.HeaderValue = output["HeaderValue"];
-    }
     if (output["HeaderName"] !== undefined) {
         contents.HeaderName = output["HeaderName"];
+    }
+    if (output["HeaderValue"] !== undefined) {
+        contents.HeaderValue = output["HeaderValue"];
     }
     return contents;
 };
 const deserializeAws_restXmlOriginCustomHeadersList = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlOriginCustomHeader(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlOriginCustomHeader(entry, context);
+    });
 };
 const deserializeAws_restXmlOriginGroup = (output, context) => {
     let contents = {
+        Id: undefined,
         FailoverCriteria: undefined,
         Members: undefined,
-        Id: undefined,
     };
+    if (output["Id"] !== undefined) {
+        contents.Id = output["Id"];
+    }
     if (output["FailoverCriteria"] !== undefined) {
         contents.FailoverCriteria = deserializeAws_restXmlOriginGroupFailoverCriteria(output["FailoverCriteria"], context);
     }
     if (output["Members"] !== undefined) {
         contents.Members = deserializeAws_restXmlOriginGroupMembers(output["Members"], context);
-    }
-    if (output["Id"] !== undefined) {
-        contents.Id = output["Id"];
     }
     return contents;
 };
@@ -23110,7 +23132,14 @@ const deserializeAws_restXmlOriginGroupFailoverCriteria = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlOriginGroupList = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlOriginGroup(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlOriginGroup(entry, context);
+    });
 };
 const deserializeAws_restXmlOriginGroupMember = (output, context) => {
     let contents = {
@@ -23122,7 +23151,14 @@ const deserializeAws_restXmlOriginGroupMember = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlOriginGroupMemberList = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlOriginGroupMember(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlOriginGroupMember(entry, context);
+    });
 };
 const deserializeAws_restXmlOriginGroupMembers = (output, context) => {
     let contents = {
@@ -23157,60 +23193,67 @@ const deserializeAws_restXmlOriginGroups = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlOriginList = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlOrigin(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlOrigin(entry, context);
+    });
 };
 const deserializeAws_restXmlOriginRequestPolicy = (output, context) => {
     let contents = {
+        Id: undefined,
         LastModifiedTime: undefined,
         OriginRequestPolicyConfig: undefined,
-        Id: undefined,
     };
+    if (output["Id"] !== undefined) {
+        contents.Id = output["Id"];
+    }
     if (output["LastModifiedTime"] !== undefined) {
         contents.LastModifiedTime = new Date(output["LastModifiedTime"]);
     }
     if (output["OriginRequestPolicyConfig"] !== undefined) {
         contents.OriginRequestPolicyConfig = deserializeAws_restXmlOriginRequestPolicyConfig(output["OriginRequestPolicyConfig"], context);
     }
-    if (output["Id"] !== undefined) {
-        contents.Id = output["Id"];
-    }
     return contents;
 };
 const deserializeAws_restXmlOriginRequestPolicyConfig = (output, context) => {
     let contents = {
         Comment: undefined,
-        CookiesConfig: undefined,
-        HeadersConfig: undefined,
-        QueryStringsConfig: undefined,
         Name: undefined,
+        HeadersConfig: undefined,
+        CookiesConfig: undefined,
+        QueryStringsConfig: undefined,
     };
     if (output["Comment"] !== undefined) {
         contents.Comment = output["Comment"];
     }
-    if (output["CookiesConfig"] !== undefined) {
-        contents.CookiesConfig = deserializeAws_restXmlOriginRequestPolicyCookiesConfig(output["CookiesConfig"], context);
+    if (output["Name"] !== undefined) {
+        contents.Name = output["Name"];
     }
     if (output["HeadersConfig"] !== undefined) {
         contents.HeadersConfig = deserializeAws_restXmlOriginRequestPolicyHeadersConfig(output["HeadersConfig"], context);
     }
+    if (output["CookiesConfig"] !== undefined) {
+        contents.CookiesConfig = deserializeAws_restXmlOriginRequestPolicyCookiesConfig(output["CookiesConfig"], context);
+    }
     if (output["QueryStringsConfig"] !== undefined) {
         contents.QueryStringsConfig = deserializeAws_restXmlOriginRequestPolicyQueryStringsConfig(output["QueryStringsConfig"], context);
-    }
-    if (output["Name"] !== undefined) {
-        contents.Name = output["Name"];
     }
     return contents;
 };
 const deserializeAws_restXmlOriginRequestPolicyCookiesConfig = (output, context) => {
     let contents = {
-        Cookies: undefined,
         CookieBehavior: undefined,
+        Cookies: undefined,
     };
-    if (output["Cookies"] !== undefined) {
-        contents.Cookies = deserializeAws_restXmlCookieNames(output["Cookies"], context);
-    }
     if (output["CookieBehavior"] !== undefined) {
         contents.CookieBehavior = output["CookieBehavior"];
+    }
+    if (output["Cookies"] !== undefined) {
+        contents.Cookies = deserializeAws_restXmlCookieNames(output["Cookies"], context);
     }
     return contents;
 };
@@ -23229,19 +23272,19 @@ const deserializeAws_restXmlOriginRequestPolicyHeadersConfig = (output, context)
 };
 const deserializeAws_restXmlOriginRequestPolicyList = (output, context) => {
     let contents = {
+        NextMarker: undefined,
         MaxItems: undefined,
         Quantity: undefined,
-        NextMarker: undefined,
         Items: undefined,
     };
+    if (output["NextMarker"] !== undefined) {
+        contents.NextMarker = output["NextMarker"];
+    }
     if (output["MaxItems"] !== undefined) {
         contents.MaxItems = parseInt(output["MaxItems"]);
     }
     if (output["Quantity"] !== undefined) {
         contents.Quantity = parseInt(output["Quantity"]);
-    }
-    if (output["NextMarker"] !== undefined) {
-        contents.NextMarker = output["NextMarker"];
     }
     if (output.Items === "") {
         contents.Items = [];
@@ -23278,7 +23321,14 @@ const deserializeAws_restXmlOriginRequestPolicySummary = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlOriginRequestPolicySummaryList = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlOriginRequestPolicySummary(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlOriginRequestPolicySummary(entry, context);
+    });
 };
 const deserializeAws_restXmlOrigins = (output, context) => {
     let contents = {
@@ -23298,14 +23348,14 @@ const deserializeAws_restXmlOrigins = (output, context) => {
 };
 const deserializeAws_restXmlOriginShield = (output, context) => {
     let contents = {
-        OriginShieldRegion: undefined,
         Enabled: undefined,
+        OriginShieldRegion: undefined,
     };
-    if (output["OriginShieldRegion"] !== undefined) {
-        contents.OriginShieldRegion = output["OriginShieldRegion"];
-    }
     if (output["Enabled"] !== undefined) {
         contents.Enabled = output["Enabled"] == "true";
+    }
+    if (output["OriginShieldRegion"] !== undefined) {
+        contents.OriginShieldRegion = output["OriginShieldRegion"];
     }
     return contents;
 };
@@ -23327,14 +23377,14 @@ const deserializeAws_restXmlOriginSslProtocols = (output, context) => {
 };
 const deserializeAws_restXmlParametersInCacheKeyAndForwardedToOrigin = (output, context) => {
     let contents = {
-        QueryStringsConfig: undefined,
+        EnableAcceptEncodingGzip: undefined,
         EnableAcceptEncodingBrotli: undefined,
         HeadersConfig: undefined,
-        EnableAcceptEncodingGzip: undefined,
         CookiesConfig: undefined,
+        QueryStringsConfig: undefined,
     };
-    if (output["QueryStringsConfig"] !== undefined) {
-        contents.QueryStringsConfig = deserializeAws_restXmlCachePolicyQueryStringsConfig(output["QueryStringsConfig"], context);
+    if (output["EnableAcceptEncodingGzip"] !== undefined) {
+        contents.EnableAcceptEncodingGzip = output["EnableAcceptEncodingGzip"] == "true";
     }
     if (output["EnableAcceptEncodingBrotli"] !== undefined) {
         contents.EnableAcceptEncodingBrotli = output["EnableAcceptEncodingBrotli"] == "true";
@@ -23342,16 +23392,23 @@ const deserializeAws_restXmlParametersInCacheKeyAndForwardedToOrigin = (output, 
     if (output["HeadersConfig"] !== undefined) {
         contents.HeadersConfig = deserializeAws_restXmlCachePolicyHeadersConfig(output["HeadersConfig"], context);
     }
-    if (output["EnableAcceptEncodingGzip"] !== undefined) {
-        contents.EnableAcceptEncodingGzip = output["EnableAcceptEncodingGzip"] == "true";
-    }
     if (output["CookiesConfig"] !== undefined) {
         contents.CookiesConfig = deserializeAws_restXmlCachePolicyCookiesConfig(output["CookiesConfig"], context);
+    }
+    if (output["QueryStringsConfig"] !== undefined) {
+        contents.QueryStringsConfig = deserializeAws_restXmlCachePolicyQueryStringsConfig(output["QueryStringsConfig"], context);
     }
     return contents;
 };
 const deserializeAws_restXmlPathList = (output, context) => {
-    return (output || []).map((entry) => entry);
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return entry;
+    });
 };
 const deserializeAws_restXmlPaths = (output, context) => {
     let contents = {
@@ -23388,11 +23445,14 @@ const deserializeAws_restXmlPublicKey = (output, context) => {
 };
 const deserializeAws_restXmlPublicKeyConfig = (output, context) => {
     let contents = {
+        CallerReference: undefined,
         Name: undefined,
         EncodedKey: undefined,
         Comment: undefined,
-        CallerReference: undefined,
     };
+    if (output["CallerReference"] !== undefined) {
+        contents.CallerReference = output["CallerReference"];
+    }
     if (output["Name"] !== undefined) {
         contents.Name = output["Name"];
     }
@@ -23402,65 +23462,76 @@ const deserializeAws_restXmlPublicKeyConfig = (output, context) => {
     if (output["Comment"] !== undefined) {
         contents.Comment = output["Comment"];
     }
-    if (output["CallerReference"] !== undefined) {
-        contents.CallerReference = output["CallerReference"];
-    }
     return contents;
 };
 const deserializeAws_restXmlPublicKeyIdList = (output, context) => {
-    return (output || []).map((entry) => entry);
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return entry;
+    });
 };
 const deserializeAws_restXmlPublicKeyList = (output, context) => {
     let contents = {
-        Items: undefined,
-        Quantity: undefined,
         NextMarker: undefined,
         MaxItems: undefined,
+        Quantity: undefined,
+        Items: undefined,
     };
-    if (output.Items === "") {
-        contents.Items = [];
-    }
-    if (output["Items"] !== undefined && output["Items"]["PublicKeySummary"] !== undefined) {
-        contents.Items = deserializeAws_restXmlPublicKeySummaryList(smithy_client_1.getArrayIfSingleItem(output["Items"]["PublicKeySummary"]), context);
-    }
-    if (output["Quantity"] !== undefined) {
-        contents.Quantity = parseInt(output["Quantity"]);
-    }
     if (output["NextMarker"] !== undefined) {
         contents.NextMarker = output["NextMarker"];
     }
     if (output["MaxItems"] !== undefined) {
         contents.MaxItems = parseInt(output["MaxItems"]);
     }
+    if (output["Quantity"] !== undefined) {
+        contents.Quantity = parseInt(output["Quantity"]);
+    }
+    if (output.Items === "") {
+        contents.Items = [];
+    }
+    if (output["Items"] !== undefined && output["Items"]["PublicKeySummary"] !== undefined) {
+        contents.Items = deserializeAws_restXmlPublicKeySummaryList(smithy_client_1.getArrayIfSingleItem(output["Items"]["PublicKeySummary"]), context);
+    }
     return contents;
 };
 const deserializeAws_restXmlPublicKeySummary = (output, context) => {
     let contents = {
-        CreatedTime: undefined,
-        Comment: undefined,
         Id: undefined,
         Name: undefined,
+        CreatedTime: undefined,
         EncodedKey: undefined,
+        Comment: undefined,
     };
-    if (output["CreatedTime"] !== undefined) {
-        contents.CreatedTime = new Date(output["CreatedTime"]);
-    }
-    if (output["Comment"] !== undefined) {
-        contents.Comment = output["Comment"];
-    }
     if (output["Id"] !== undefined) {
         contents.Id = output["Id"];
     }
     if (output["Name"] !== undefined) {
         contents.Name = output["Name"];
     }
+    if (output["CreatedTime"] !== undefined) {
+        contents.CreatedTime = new Date(output["CreatedTime"]);
+    }
     if (output["EncodedKey"] !== undefined) {
         contents.EncodedKey = output["EncodedKey"];
+    }
+    if (output["Comment"] !== undefined) {
+        contents.Comment = output["Comment"];
     }
     return contents;
 };
 const deserializeAws_restXmlPublicKeySummaryList = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlPublicKeySummary(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlPublicKeySummary(entry, context);
+    });
 };
 const deserializeAws_restXmlQueryArgProfile = (output, context) => {
     let contents = {
@@ -23489,42 +23560,56 @@ const deserializeAws_restXmlQueryArgProfileConfig = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlQueryArgProfileList = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlQueryArgProfile(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlQueryArgProfile(entry, context);
+    });
 };
 const deserializeAws_restXmlQueryArgProfiles = (output, context) => {
     let contents = {
-        Items: undefined,
         Quantity: undefined,
+        Items: undefined,
     };
+    if (output["Quantity"] !== undefined) {
+        contents.Quantity = parseInt(output["Quantity"]);
+    }
     if (output.Items === "") {
         contents.Items = [];
     }
     if (output["Items"] !== undefined && output["Items"]["QueryArgProfile"] !== undefined) {
         contents.Items = deserializeAws_restXmlQueryArgProfileList(smithy_client_1.getArrayIfSingleItem(output["Items"]["QueryArgProfile"]), context);
     }
-    if (output["Quantity"] !== undefined) {
-        contents.Quantity = parseInt(output["Quantity"]);
-    }
     return contents;
 };
 const deserializeAws_restXmlQueryStringCacheKeys = (output, context) => {
     let contents = {
-        Items: undefined,
         Quantity: undefined,
+        Items: undefined,
     };
+    if (output["Quantity"] !== undefined) {
+        contents.Quantity = parseInt(output["Quantity"]);
+    }
     if (output.Items === "") {
         contents.Items = [];
     }
     if (output["Items"] !== undefined && output["Items"]["Name"] !== undefined) {
         contents.Items = deserializeAws_restXmlQueryStringCacheKeysList(smithy_client_1.getArrayIfSingleItem(output["Items"]["Name"]), context);
     }
-    if (output["Quantity"] !== undefined) {
-        contents.Quantity = parseInt(output["Quantity"]);
-    }
     return contents;
 };
 const deserializeAws_restXmlQueryStringCacheKeysList = (output, context) => {
-    return (output || []).map((entry) => entry);
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return entry;
+    });
 };
 const deserializeAws_restXmlQueryStringNames = (output, context) => {
     let contents = {
@@ -23543,30 +23628,31 @@ const deserializeAws_restXmlQueryStringNames = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlQueryStringNamesList = (output, context) => {
-    return (output || []).map((entry) => entry);
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return entry;
+    });
 };
 const deserializeAws_restXmlRealtimeLogConfig = (output, context) => {
     let contents = {
-        Fields: undefined,
         ARN: undefined,
-        SamplingRate: undefined,
         Name: undefined,
+        SamplingRate: undefined,
         EndPoints: undefined,
+        Fields: undefined,
     };
-    if (output.Fields === "") {
-        contents.Fields = [];
-    }
-    if (output["Fields"] !== undefined && output["Fields"]["Field"] !== undefined) {
-        contents.Fields = deserializeAws_restXmlFieldList(smithy_client_1.getArrayIfSingleItem(output["Fields"]["Field"]), context);
-    }
     if (output["ARN"] !== undefined) {
         contents.ARN = output["ARN"];
     }
-    if (output["SamplingRate"] !== undefined) {
-        contents.SamplingRate = parseInt(output["SamplingRate"]);
-    }
     if (output["Name"] !== undefined) {
         contents.Name = output["Name"];
+    }
+    if (output["SamplingRate"] !== undefined) {
+        contents.SamplingRate = parseInt(output["SamplingRate"]);
     }
     if (output.EndPoints === "") {
         contents.EndPoints = [];
@@ -23574,22 +23660,32 @@ const deserializeAws_restXmlRealtimeLogConfig = (output, context) => {
     if (output["EndPoints"] !== undefined && output["EndPoints"]["member"] !== undefined) {
         contents.EndPoints = deserializeAws_restXmlEndPointList(smithy_client_1.getArrayIfSingleItem(output["EndPoints"]["member"]), context);
     }
+    if (output.Fields === "") {
+        contents.Fields = [];
+    }
+    if (output["Fields"] !== undefined && output["Fields"]["Field"] !== undefined) {
+        contents.Fields = deserializeAws_restXmlFieldList(smithy_client_1.getArrayIfSingleItem(output["Fields"]["Field"]), context);
+    }
     return contents;
 };
 const deserializeAws_restXmlRealtimeLogConfigList = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlRealtimeLogConfig(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlRealtimeLogConfig(entry, context);
+    });
 };
 const deserializeAws_restXmlRealtimeLogConfigs = (output, context) => {
     let contents = {
-        IsTruncated: undefined,
         MaxItems: undefined,
         Items: undefined,
+        IsTruncated: undefined,
         Marker: undefined,
         NextMarker: undefined,
     };
-    if (output["IsTruncated"] !== undefined) {
-        contents.IsTruncated = output["IsTruncated"] == "true";
-    }
     if (output["MaxItems"] !== undefined) {
         contents.MaxItems = parseInt(output["MaxItems"]);
     }
@@ -23598,6 +23694,9 @@ const deserializeAws_restXmlRealtimeLogConfigs = (output, context) => {
     }
     if (output["Items"] !== undefined && output["Items"]["member"] !== undefined) {
         contents.Items = deserializeAws_restXmlRealtimeLogConfigList(smithy_client_1.getArrayIfSingleItem(output["Items"]["member"]), context);
+    }
+    if (output["IsTruncated"] !== undefined) {
+        contents.IsTruncated = output["IsTruncated"] == "true";
     }
     if (output["Marker"] !== undefined) {
         contents.Marker = output["Marker"];
@@ -23661,13 +23760,34 @@ const deserializeAws_restXmlSigner = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlSignerList = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlSigner(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlSigner(entry, context);
+    });
 };
 const deserializeAws_restXmlSslProtocolsList = (output, context) => {
-    return (output || []).map((entry) => entry);
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return entry;
+    });
 };
 const deserializeAws_restXmlStatusCodeList = (output, context) => {
-    return (output || []).map((entry) => parseInt(entry));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return parseInt(entry);
+    });
 };
 const deserializeAws_restXmlStatusCodes = (output, context) => {
     let contents = {
@@ -23687,22 +23807,28 @@ const deserializeAws_restXmlStatusCodes = (output, context) => {
 };
 const deserializeAws_restXmlStreamingDistribution = (output, context) => {
     let contents = {
-        ARN: undefined,
         Id: undefined,
+        ARN: undefined,
+        Status: undefined,
         LastModifiedTime: undefined,
+        DomainName: undefined,
         ActiveTrustedSigners: undefined,
         StreamingDistributionConfig: undefined,
-        DomainName: undefined,
-        Status: undefined,
     };
-    if (output["ARN"] !== undefined) {
-        contents.ARN = output["ARN"];
-    }
     if (output["Id"] !== undefined) {
         contents.Id = output["Id"];
     }
+    if (output["ARN"] !== undefined) {
+        contents.ARN = output["ARN"];
+    }
+    if (output["Status"] !== undefined) {
+        contents.Status = output["Status"];
+    }
     if (output["LastModifiedTime"] !== undefined) {
         contents.LastModifiedTime = new Date(output["LastModifiedTime"]);
+    }
+    if (output["DomainName"] !== undefined) {
+        contents.DomainName = output["DomainName"];
     }
     if (output["ActiveTrustedSigners"] !== undefined) {
         contents.ActiveTrustedSigners = deserializeAws_restXmlActiveTrustedSigners(output["ActiveTrustedSigners"], context);
@@ -23710,71 +23836,65 @@ const deserializeAws_restXmlStreamingDistribution = (output, context) => {
     if (output["StreamingDistributionConfig"] !== undefined) {
         contents.StreamingDistributionConfig = deserializeAws_restXmlStreamingDistributionConfig(output["StreamingDistributionConfig"], context);
     }
-    if (output["DomainName"] !== undefined) {
-        contents.DomainName = output["DomainName"];
-    }
-    if (output["Status"] !== undefined) {
-        contents.Status = output["Status"];
-    }
     return contents;
 };
 const deserializeAws_restXmlStreamingDistributionConfig = (output, context) => {
     let contents = {
-        Logging: undefined,
-        Comment: undefined,
-        PriceClass: undefined,
-        S3Origin: undefined,
-        TrustedSigners: undefined,
-        Enabled: undefined,
         CallerReference: undefined,
+        S3Origin: undefined,
         Aliases: undefined,
+        Comment: undefined,
+        Logging: undefined,
+        TrustedSigners: undefined,
+        PriceClass: undefined,
+        Enabled: undefined,
     };
-    if (output["Logging"] !== undefined) {
-        contents.Logging = deserializeAws_restXmlStreamingLoggingConfig(output["Logging"], context);
-    }
-    if (output["Comment"] !== undefined) {
-        contents.Comment = output["Comment"];
-    }
-    if (output["PriceClass"] !== undefined) {
-        contents.PriceClass = output["PriceClass"];
+    if (output["CallerReference"] !== undefined) {
+        contents.CallerReference = output["CallerReference"];
     }
     if (output["S3Origin"] !== undefined) {
         contents.S3Origin = deserializeAws_restXmlS3Origin(output["S3Origin"], context);
     }
+    if (output["Aliases"] !== undefined) {
+        contents.Aliases = deserializeAws_restXmlAliases(output["Aliases"], context);
+    }
+    if (output["Comment"] !== undefined) {
+        contents.Comment = output["Comment"];
+    }
+    if (output["Logging"] !== undefined) {
+        contents.Logging = deserializeAws_restXmlStreamingLoggingConfig(output["Logging"], context);
+    }
     if (output["TrustedSigners"] !== undefined) {
         contents.TrustedSigners = deserializeAws_restXmlTrustedSigners(output["TrustedSigners"], context);
     }
+    if (output["PriceClass"] !== undefined) {
+        contents.PriceClass = output["PriceClass"];
+    }
     if (output["Enabled"] !== undefined) {
         contents.Enabled = output["Enabled"] == "true";
-    }
-    if (output["CallerReference"] !== undefined) {
-        contents.CallerReference = output["CallerReference"];
-    }
-    if (output["Aliases"] !== undefined) {
-        contents.Aliases = deserializeAws_restXmlAliases(output["Aliases"], context);
     }
     return contents;
 };
 const deserializeAws_restXmlStreamingDistributionList = (output, context) => {
     let contents = {
-        NextMarker: undefined,
-        IsTruncated: undefined,
-        MaxItems: undefined,
         Marker: undefined,
+        NextMarker: undefined,
+        MaxItems: undefined,
+        IsTruncated: undefined,
         Quantity: undefined,
         Items: undefined,
     };
+    if (output["Marker"] !== undefined) {
+        contents.Marker = output["Marker"];
+    }
     if (output["NextMarker"] !== undefined) {
         contents.NextMarker = output["NextMarker"];
-    }
-    if (output["IsTruncated"] !== undefined) {
-        contents.IsTruncated = output["IsTruncated"] == "true";
     }
     if (output["MaxItems"] !== undefined) {
         contents.MaxItems = parseInt(output["MaxItems"]);
     }
-    if (output["Marker"] !== undefined) {
-        contents.Marker = output["Marker"];
+    if (output["IsTruncated"] !== undefined) {
+        contents.IsTruncated = output["IsTruncated"] == "true";
     }
     if (output["Quantity"] !== undefined) {
         contents.Quantity = parseInt(output["Quantity"]);
@@ -23789,67 +23909,74 @@ const deserializeAws_restXmlStreamingDistributionList = (output, context) => {
 };
 const deserializeAws_restXmlStreamingDistributionSummary = (output, context) => {
     let contents = {
-        PriceClass: undefined,
-        S3Origin: undefined,
-        DomainName: undefined,
-        Status: undefined,
-        Enabled: undefined,
-        Aliases: undefined,
-        LastModifiedTime: undefined,
-        TrustedSigners: undefined,
         Id: undefined,
-        Comment: undefined,
         ARN: undefined,
+        Status: undefined,
+        LastModifiedTime: undefined,
+        DomainName: undefined,
+        S3Origin: undefined,
+        Aliases: undefined,
+        TrustedSigners: undefined,
+        Comment: undefined,
+        PriceClass: undefined,
+        Enabled: undefined,
     };
-    if (output["PriceClass"] !== undefined) {
-        contents.PriceClass = output["PriceClass"];
-    }
-    if (output["S3Origin"] !== undefined) {
-        contents.S3Origin = deserializeAws_restXmlS3Origin(output["S3Origin"], context);
-    }
-    if (output["DomainName"] !== undefined) {
-        contents.DomainName = output["DomainName"];
-    }
-    if (output["Status"] !== undefined) {
-        contents.Status = output["Status"];
-    }
-    if (output["Enabled"] !== undefined) {
-        contents.Enabled = output["Enabled"] == "true";
-    }
-    if (output["Aliases"] !== undefined) {
-        contents.Aliases = deserializeAws_restXmlAliases(output["Aliases"], context);
-    }
-    if (output["LastModifiedTime"] !== undefined) {
-        contents.LastModifiedTime = new Date(output["LastModifiedTime"]);
-    }
-    if (output["TrustedSigners"] !== undefined) {
-        contents.TrustedSigners = deserializeAws_restXmlTrustedSigners(output["TrustedSigners"], context);
-    }
     if (output["Id"] !== undefined) {
         contents.Id = output["Id"];
-    }
-    if (output["Comment"] !== undefined) {
-        contents.Comment = output["Comment"];
     }
     if (output["ARN"] !== undefined) {
         contents.ARN = output["ARN"];
     }
-    return contents;
-};
-const deserializeAws_restXmlStreamingDistributionSummaryList = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlStreamingDistributionSummary(entry, context));
-};
-const deserializeAws_restXmlStreamingLoggingConfig = (output, context) => {
-    let contents = {
-        Bucket: undefined,
-        Enabled: undefined,
-        Prefix: undefined,
-    };
-    if (output["Bucket"] !== undefined) {
-        contents.Bucket = output["Bucket"];
+    if (output["Status"] !== undefined) {
+        contents.Status = output["Status"];
+    }
+    if (output["LastModifiedTime"] !== undefined) {
+        contents.LastModifiedTime = new Date(output["LastModifiedTime"]);
+    }
+    if (output["DomainName"] !== undefined) {
+        contents.DomainName = output["DomainName"];
+    }
+    if (output["S3Origin"] !== undefined) {
+        contents.S3Origin = deserializeAws_restXmlS3Origin(output["S3Origin"], context);
+    }
+    if (output["Aliases"] !== undefined) {
+        contents.Aliases = deserializeAws_restXmlAliases(output["Aliases"], context);
+    }
+    if (output["TrustedSigners"] !== undefined) {
+        contents.TrustedSigners = deserializeAws_restXmlTrustedSigners(output["TrustedSigners"], context);
+    }
+    if (output["Comment"] !== undefined) {
+        contents.Comment = output["Comment"];
+    }
+    if (output["PriceClass"] !== undefined) {
+        contents.PriceClass = output["PriceClass"];
     }
     if (output["Enabled"] !== undefined) {
         contents.Enabled = output["Enabled"] == "true";
+    }
+    return contents;
+};
+const deserializeAws_restXmlStreamingDistributionSummaryList = (output, context) => {
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlStreamingDistributionSummary(entry, context);
+    });
+};
+const deserializeAws_restXmlStreamingLoggingConfig = (output, context) => {
+    let contents = {
+        Enabled: undefined,
+        Bucket: undefined,
+        Prefix: undefined,
+    };
+    if (output["Enabled"] !== undefined) {
+        contents.Enabled = output["Enabled"] == "true";
+    }
+    if (output["Bucket"] !== undefined) {
+        contents.Bucket = output["Bucket"];
     }
     if (output["Prefix"] !== undefined) {
         contents.Prefix = output["Prefix"];
@@ -23858,19 +23985,26 @@ const deserializeAws_restXmlStreamingLoggingConfig = (output, context) => {
 };
 const deserializeAws_restXmlTag = (output, context) => {
     let contents = {
-        Value: undefined,
         Key: undefined,
+        Value: undefined,
     };
-    if (output["Value"] !== undefined) {
-        contents.Value = output["Value"];
-    }
     if (output["Key"] !== undefined) {
         contents.Key = output["Key"];
+    }
+    if (output["Value"] !== undefined) {
+        contents.Value = output["Value"];
     }
     return contents;
 };
 const deserializeAws_restXmlTagList = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlTag(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlTag(entry, context);
+    });
 };
 const deserializeAws_restXmlTags = (output, context) => {
     let contents = {
@@ -23885,25 +24019,32 @@ const deserializeAws_restXmlTags = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlTrustedKeyGroupIdList = (output, context) => {
-    return (output || []).map((entry) => entry);
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return entry;
+    });
 };
 const deserializeAws_restXmlTrustedKeyGroups = (output, context) => {
     let contents = {
-        Items: undefined,
-        Quantity: undefined,
         Enabled: undefined,
+        Quantity: undefined,
+        Items: undefined,
     };
+    if (output["Enabled"] !== undefined) {
+        contents.Enabled = output["Enabled"] == "true";
+    }
+    if (output["Quantity"] !== undefined) {
+        contents.Quantity = parseInt(output["Quantity"]);
+    }
     if (output.Items === "") {
         contents.Items = [];
     }
     if (output["Items"] !== undefined && output["Items"]["KeyGroup"] !== undefined) {
         contents.Items = deserializeAws_restXmlTrustedKeyGroupIdList(smithy_client_1.getArrayIfSingleItem(output["Items"]["KeyGroup"]), context);
-    }
-    if (output["Quantity"] !== undefined) {
-        contents.Quantity = parseInt(output["Quantity"]);
-    }
-    if (output["Enabled"] !== undefined) {
-        contents.Enabled = output["Enabled"] == "true";
     }
     return contents;
 };
@@ -23929,42 +24070,46 @@ const deserializeAws_restXmlTrustedSigners = (output, context) => {
 };
 const deserializeAws_restXmlViewerCertificate = (output, context) => {
     let contents = {
-        IAMCertificateId: undefined,
-        MinimumProtocolVersion: undefined,
         CloudFrontDefaultCertificate: undefined,
-        SSLSupportMethod: undefined,
+        IAMCertificateId: undefined,
         ACMCertificateArn: undefined,
-        CertificateSource: undefined,
+        SSLSupportMethod: undefined,
+        MinimumProtocolVersion: undefined,
         Certificate: undefined,
+        CertificateSource: undefined,
     };
-    if (output["IAMCertificateId"] !== undefined) {
-        contents.IAMCertificateId = output["IAMCertificateId"];
-    }
-    if (output["MinimumProtocolVersion"] !== undefined) {
-        contents.MinimumProtocolVersion = output["MinimumProtocolVersion"];
-    }
     if (output["CloudFrontDefaultCertificate"] !== undefined) {
         contents.CloudFrontDefaultCertificate = output["CloudFrontDefaultCertificate"] == "true";
     }
-    if (output["SSLSupportMethod"] !== undefined) {
-        contents.SSLSupportMethod = output["SSLSupportMethod"];
+    if (output["IAMCertificateId"] !== undefined) {
+        contents.IAMCertificateId = output["IAMCertificateId"];
     }
     if (output["ACMCertificateArn"] !== undefined) {
         contents.ACMCertificateArn = output["ACMCertificateArn"];
     }
-    if (output["CertificateSource"] !== undefined) {
-        contents.CertificateSource = output["CertificateSource"];
+    if (output["SSLSupportMethod"] !== undefined) {
+        contents.SSLSupportMethod = output["SSLSupportMethod"];
+    }
+    if (output["MinimumProtocolVersion"] !== undefined) {
+        contents.MinimumProtocolVersion = output["MinimumProtocolVersion"];
     }
     if (output["Certificate"] !== undefined) {
         contents.Certificate = output["Certificate"];
     }
+    if (output["CertificateSource"] !== undefined) {
+        contents.CertificateSource = output["CertificateSource"];
+    }
     return contents;
 };
-const deserializeMetadata = (output) => ({
-    httpStatusCode: output.statusCode,
-    httpHeaders: output.headers,
-    requestId: output.headers["x-amzn-requestid"],
-});
+const deserializeMetadata = (output) => {
+    var _a;
+    return ({
+        httpStatusCode: output.statusCode,
+        requestId: (_a = output.headers["x-amzn-requestid"]) !== null && _a !== void 0 ? _a : output.headers["x-amzn-request-id"],
+        extendedRequestId: output.headers["x-amz-id-2"],
+        cfId: output.headers["x-amz-cf-id"],
+    });
+};
 // Collect low-level response body stream to Uint8Array.
 const collectBody = (streamBody = new Uint8Array(), context) => {
     if (streamBody instanceof Uint8Array) {
@@ -23975,6 +24120,7 @@ const collectBody = (streamBody = new Uint8Array(), context) => {
 // Encode Uint8Array data into string with utf-8.
 const collectBodyString = (streamBody, context) => collectBody(streamBody, context).then((body) => context.utf8Encoder(body));
 const isSerializableHeaderValue = (value) => value !== undefined &&
+    value !== null &&
     value !== "" &&
     (!Object.getOwnPropertyNames(value).includes("length") || value.length != 0) &&
     (!Object.getOwnPropertyNames(value).includes("size") || value.size != 0);
@@ -24047,7 +24193,10 @@ exports.ClientDefaultValues = {
     base64Encoder: util_base64_node_1.toBase64,
     bodyLengthChecker: util_body_length_node_1.calculateBodyLength,
     credentialDefaultProvider: credential_provider_node_1.defaultProvider,
-    defaultUserAgent: util_user_agent_node_1.defaultUserAgent(package_json_1.default.name, package_json_1.default.version),
+    defaultUserAgentProvider: util_user_agent_node_1.defaultUserAgent({
+        serviceId: runtimeConfig_shared_1.ClientSharedValues.serviceId,
+        clientVersion: package_json_1.default.version,
+    }),
     maxAttempts: node_config_provider_1.loadConfig(middleware_retry_1.NODE_MAX_ATTEMPT_CONFIG_OPTIONS),
     region: node_config_provider_1.loadConfig(config_resolver_1.NODE_REGION_CONFIG_OPTIONS, config_resolver_1.NODE_REGION_CONFIG_FILE_OPTIONS),
     requestHandler: new node_http_handler_1.NodeHttpHandler(),
@@ -24077,9 +24226,126 @@ exports.ClientSharedValues = {
     disableHostPrefix: false,
     logger: {},
     regionInfoProvider: endpoints_1.defaultRegionInfoProvider,
-    serviceId: "cloudfront",
+    serviceId: "CloudFront",
 };
 //# sourceMappingURL=runtimeConfig.shared.js.map
+
+/***/ }),
+
+/***/ 21906:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.waitForDistributionDeployed = void 0;
+const GetDistributionCommand_1 = __webpack_require__(58637);
+const util_waiter_1 = __webpack_require__(6243);
+const checkState = async (client, input) => {
+    try {
+        let result = await client.send(new GetDistributionCommand_1.GetDistributionCommand(input));
+        try {
+            let returnComparator = () => {
+                return result.Distribution.Status;
+            };
+            if (returnComparator() === "Deployed") {
+                return { state: util_waiter_1.WaiterState.SUCCESS };
+            }
+        }
+        catch (e) { }
+    }
+    catch (exception) { }
+    return { state: util_waiter_1.WaiterState.RETRY };
+};
+/**
+ * Wait until a distribution is deployed.
+ *  @param params : Waiter configuration options.
+ *  @param input : the input to GetDistributionCommand for polling.
+ */
+const waitForDistributionDeployed = async (params, input) => {
+    const serviceDefaults = { minDelay: 60, maxDelay: 120 };
+    return util_waiter_1.createWaiter({ ...serviceDefaults, ...params }, input, checkState);
+};
+exports.waitForDistributionDeployed = waitForDistributionDeployed;
+//# sourceMappingURL=waitForDistributionDeployed.js.map
+
+/***/ }),
+
+/***/ 93421:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.waitForInvalidationCompleted = void 0;
+const GetInvalidationCommand_1 = __webpack_require__(65100);
+const util_waiter_1 = __webpack_require__(6243);
+const checkState = async (client, input) => {
+    try {
+        let result = await client.send(new GetInvalidationCommand_1.GetInvalidationCommand(input));
+        try {
+            let returnComparator = () => {
+                return result.Invalidation.Status;
+            };
+            if (returnComparator() === "Completed") {
+                return { state: util_waiter_1.WaiterState.SUCCESS };
+            }
+        }
+        catch (e) { }
+    }
+    catch (exception) { }
+    return { state: util_waiter_1.WaiterState.RETRY };
+};
+/**
+ * Wait until an invalidation has completed.
+ *  @param params : Waiter configuration options.
+ *  @param input : the input to GetInvalidationCommand for polling.
+ */
+const waitForInvalidationCompleted = async (params, input) => {
+    const serviceDefaults = { minDelay: 20, maxDelay: 120 };
+    return util_waiter_1.createWaiter({ ...serviceDefaults, ...params }, input, checkState);
+};
+exports.waitForInvalidationCompleted = waitForInvalidationCompleted;
+//# sourceMappingURL=waitForInvalidationCompleted.js.map
+
+/***/ }),
+
+/***/ 47554:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.waitForStreamingDistributionDeployed = void 0;
+const GetStreamingDistributionCommand_1 = __webpack_require__(94464);
+const util_waiter_1 = __webpack_require__(6243);
+const checkState = async (client, input) => {
+    try {
+        let result = await client.send(new GetStreamingDistributionCommand_1.GetStreamingDistributionCommand(input));
+        try {
+            let returnComparator = () => {
+                return result.StreamingDistribution.Status;
+            };
+            if (returnComparator() === "Deployed") {
+                return { state: util_waiter_1.WaiterState.SUCCESS };
+            }
+        }
+        catch (e) { }
+    }
+    catch (exception) { }
+    return { state: util_waiter_1.WaiterState.RETRY };
+};
+/**
+ * Wait until a streaming distribution is deployed.
+ *  @param params : Waiter configuration options.
+ *  @param input : the input to GetStreamingDistributionCommand for polling.
+ */
+const waitForStreamingDistributionDeployed = async (params, input) => {
+    const serviceDefaults = { minDelay: 60, maxDelay: 120 };
+    return util_waiter_1.createWaiter({ ...serviceDefaults, ...params }, input, checkState);
+};
+exports.waitForStreamingDistributionDeployed = waitForStreamingDistributionDeployed;
+//# sourceMappingURL=waitForStreamingDistributionDeployed.js.map
 
 /***/ }),
 
@@ -25499,21 +25765,21 @@ class S3Client extends smithy_client_1.Client {
         let _config_2 = config_resolver_1.resolveEndpointsConfig(_config_1);
         let _config_3 = middleware_signing_1.resolveAwsAuthConfig(_config_2);
         let _config_4 = middleware_retry_1.resolveRetryConfig(_config_3);
-        let _config_5 = middleware_user_agent_1.resolveUserAgentConfig(_config_4);
-        let _config_6 = middleware_host_header_1.resolveHostHeaderConfig(_config_5);
-        let _config_7 = middleware_bucket_endpoint_1.resolveBucketEndpointConfig(_config_6);
+        let _config_5 = middleware_host_header_1.resolveHostHeaderConfig(_config_4);
+        let _config_6 = middleware_bucket_endpoint_1.resolveBucketEndpointConfig(_config_5);
+        let _config_7 = middleware_user_agent_1.resolveUserAgentConfig(_config_6);
         let _config_8 = eventstream_serde_config_resolver_1.resolveEventStreamSerdeConfig(_config_7);
         super(_config_8);
         this.config = _config_8;
         this.middlewareStack.use(middleware_signing_1.getAwsAuthPlugin(this.config));
         this.middlewareStack.use(middleware_retry_1.getRetryPlugin(this.config));
-        this.middlewareStack.use(middleware_user_agent_1.getUserAgentPlugin(this.config));
         this.middlewareStack.use(middleware_content_length_1.getContentLengthPlugin(this.config));
         this.middlewareStack.use(middleware_host_header_1.getHostHeaderPlugin(this.config));
         this.middlewareStack.use(middleware_logger_1.getLoggerPlugin(this.config));
         this.middlewareStack.use(middleware_sdk_s3_1.getValidateBucketNamePlugin(this.config));
         this.middlewareStack.use(middleware_sdk_s3_1.getUseRegionalEndpointPlugin(this.config));
         this.middlewareStack.use(middleware_expect_continue_1.getAddExpectContinuePlugin(this.config));
+        this.middlewareStack.use(middleware_user_agent_1.getUserAgentPlugin(this.config));
     }
     destroy() {
         super.destroy();
@@ -25603,12 +25869,6 @@ class AbortMultipartUploadCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.AbortMultipartUploadRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.AbortMultipartUploadOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -25776,12 +26036,6 @@ class CompleteMultipartUploadCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.CompleteMultipartUploadRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.CompleteMultipartUploadOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -26007,12 +26261,6 @@ class CopyObjectCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.CopyObjectRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.CopyObjectOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -26180,12 +26428,6 @@ class CreateBucketCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.CreateBucketRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.CreateBucketOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -26505,12 +26747,6 @@ class CreateMultipartUploadCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.CreateMultipartUploadRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.CreateMultipartUploadOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -26596,12 +26832,6 @@ class DeleteBucketAnalyticsConfigurationCommand extends smithy_client_1.Command 
             inputFilterSensitiveLog: models_0_1.DeleteBucketAnalyticsConfigurationRequest.filterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -26673,12 +26903,6 @@ class DeleteBucketCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.DeleteBucketRequest.filterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -26756,12 +26980,6 @@ class DeleteBucketCorsCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.DeleteBucketCorsRequest.filterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -26841,12 +27059,6 @@ class DeleteBucketEncryptionCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.DeleteBucketEncryptionRequest.filterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -26925,12 +27137,6 @@ class DeleteBucketIntelligentTieringConfigurationCommand extends smithy_client_1
             inputFilterSensitiveLog: models_0_1.DeleteBucketIntelligentTieringConfigurationRequest.filterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -27012,12 +27218,6 @@ class DeleteBucketInventoryConfigurationCommand extends smithy_client_1.Command 
             inputFilterSensitiveLog: models_0_1.DeleteBucketInventoryConfigurationRequest.filterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -27099,12 +27299,6 @@ class DeleteBucketLifecycleCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.DeleteBucketLifecycleRequest.filterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -27196,12 +27390,6 @@ class DeleteBucketMetricsConfigurationCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.DeleteBucketMetricsConfigurationRequest.filterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -27276,12 +27464,6 @@ class DeleteBucketOwnershipControlsCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.DeleteBucketOwnershipControlsRequest.filterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -27371,12 +27553,6 @@ class DeleteBucketPolicyCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.DeleteBucketPolicyRequest.filterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -27459,12 +27635,6 @@ class DeleteBucketReplicationCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.DeleteBucketReplicationRequest.filterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -27538,12 +27708,6 @@ class DeleteBucketTaggingCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.DeleteBucketTaggingRequest.filterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -27626,12 +27790,6 @@ class DeleteBucketWebsiteCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.DeleteBucketWebsiteRequest.filterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -27718,12 +27876,6 @@ class DeleteObjectCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.DeleteObjectRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.DeleteObjectOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -27804,12 +27956,6 @@ class DeleteObjectTaggingCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.DeleteObjectTaggingRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.DeleteObjectTaggingOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -27924,12 +28070,6 @@ class DeleteObjectsCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.DeleteObjectsRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.DeleteObjectsOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -28014,12 +28154,6 @@ class DeletePublicAccessBlockCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.DeletePublicAccessBlockRequest.filterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -28102,12 +28236,6 @@ class GetBucketAccelerateConfigurationCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.GetBucketAccelerateConfigurationRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.GetBucketAccelerateConfigurationOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -28179,12 +28307,6 @@ class GetBucketAclCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.GetBucketAclRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.GetBucketAclOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -28270,12 +28392,6 @@ class GetBucketAnalyticsConfigurationCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.GetBucketAnalyticsConfigurationRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.GetBucketAnalyticsConfigurationOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -28352,12 +28468,6 @@ class GetBucketCorsCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.GetBucketCorsRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.GetBucketCorsOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -28434,12 +28544,6 @@ class GetBucketEncryptionCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.GetBucketEncryptionRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.GetBucketEncryptionOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -28518,12 +28622,6 @@ class GetBucketIntelligentTieringConfigurationCommand extends smithy_client_1.Co
             inputFilterSensitiveLog: models_0_1.GetBucketIntelligentTieringConfigurationRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.GetBucketIntelligentTieringConfigurationOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -28609,12 +28707,6 @@ class GetBucketInventoryConfigurationCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.GetBucketInventoryConfigurationRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.GetBucketInventoryConfigurationOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -28726,12 +28818,6 @@ class GetBucketLifecycleConfigurationCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.GetBucketLifecycleConfigurationRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.GetBucketLifecycleConfigurationOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -28806,12 +28892,6 @@ class GetBucketLocationCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.GetBucketLocationRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.GetBucketLocationOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -28883,12 +28963,6 @@ class GetBucketLoggingCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.GetBucketLoggingRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.GetBucketLoggingOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -28981,12 +29055,6 @@ class GetBucketMetricsConfigurationCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.GetBucketMetricsConfigurationRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.GetBucketMetricsConfigurationOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -29063,12 +29131,6 @@ class GetBucketNotificationConfigurationCommand extends smithy_client_1.Command 
             inputFilterSensitiveLog: models_0_1.GetBucketNotificationConfigurationRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.NotificationConfiguration.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -29142,12 +29204,6 @@ class GetBucketOwnershipControlsCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.GetBucketOwnershipControlsRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.GetBucketOwnershipControlsOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -29230,12 +29286,6 @@ class GetBucketPolicyCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.GetBucketPolicyRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.GetBucketPolicyOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -29322,12 +29372,6 @@ class GetBucketPolicyStatusCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.GetBucketPolicyStatusRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.GetBucketPolicyStatusOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -29418,12 +29462,6 @@ class GetBucketReplicationCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.GetBucketReplicationRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.GetBucketReplicationOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -29490,12 +29528,6 @@ class GetBucketRequestPaymentCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.GetBucketRequestPaymentRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.GetBucketRequestPaymentOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -29583,12 +29615,6 @@ class GetBucketTaggingCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.GetBucketTaggingRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.GetBucketTaggingOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -29669,12 +29695,6 @@ class GetBucketVersioningCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.GetBucketVersioningRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.GetBucketVersioningOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -29751,12 +29771,6 @@ class GetBucketWebsiteCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.GetBucketWebsiteRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.GetBucketWebsiteOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -29839,12 +29853,6 @@ class GetObjectAclCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.GetObjectAclRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.GetObjectAclOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -30076,12 +30084,6 @@ class GetObjectCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.GetObjectRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.GetObjectOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -30139,12 +30141,6 @@ class GetObjectLegalHoldCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.GetObjectLegalHoldRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.GetObjectLegalHoldOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -30204,12 +30200,6 @@ class GetObjectLockConfigurationCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.GetObjectLockConfigurationRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.GetObjectLockConfigurationOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -30267,12 +30257,6 @@ class GetObjectRetentionCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.GetObjectRetentionRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.GetObjectRetentionOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -30351,12 +30335,6 @@ class GetObjectTaggingCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.GetObjectTaggingRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.GetObjectTaggingOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -30429,12 +30407,6 @@ class GetObjectTorrentCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.GetObjectTorrentRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.GetObjectTorrentOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -30530,12 +30502,6 @@ class GetPublicAccessBlockCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.GetPublicAccessBlockRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.GetPublicAccessBlockOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -30600,12 +30566,6 @@ class HeadBucketCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.HeadBucketRequest.filterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -30770,12 +30730,6 @@ class HeadObjectCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.HeadObjectRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.HeadObjectOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -30871,12 +30825,6 @@ class ListBucketAnalyticsConfigurationsCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.ListBucketAnalyticsConfigurationsRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.ListBucketAnalyticsConfigurationsOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -30955,12 +30903,6 @@ class ListBucketIntelligentTieringConfigurationsCommand extends smithy_client_1.
             inputFilterSensitiveLog: models_0_1.ListBucketIntelligentTieringConfigurationsRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.ListBucketIntelligentTieringConfigurationsOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -31055,12 +30997,6 @@ class ListBucketInventoryConfigurationsCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.ListBucketInventoryConfigurationsRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.ListBucketInventoryConfigurationsOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -31157,12 +31093,6 @@ class ListBucketMetricsConfigurationsCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.ListBucketMetricsConfigurationsRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.ListBucketMetricsConfigurationsOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -31217,12 +31147,6 @@ class ListBucketsCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: (input) => input,
             outputFilterSensitiveLog: models_0_1.ListBucketsOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -31329,12 +31253,6 @@ class ListMultipartUploadsCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.ListMultipartUploadsRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.ListMultipartUploadsOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -31423,12 +31341,6 @@ class ListObjectVersionsCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.ListObjectVersionsRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.ListObjectVersionsOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -31522,12 +31434,6 @@ class ListObjectsCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.ListObjectsRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.ListObjectsOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -31621,12 +31527,6 @@ class ListObjectsV2Command extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.ListObjectsV2Request.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.ListObjectsV2Output.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -31727,12 +31627,6 @@ class ListPartsCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.ListPartsRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.ListPartsOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -31834,12 +31728,6 @@ class PutBucketAccelerateConfigurationCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.PutBucketAccelerateConfigurationRequest.filterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -32086,12 +31974,6 @@ class PutBucketAclCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.PutBucketAclRequest.filterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -32263,12 +32145,6 @@ class PutBucketAnalyticsConfigurationCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.PutBucketAnalyticsConfigurationRequest.filterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -32383,12 +32259,6 @@ class PutBucketCorsCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.PutBucketCorsRequest.filterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -32477,12 +32347,6 @@ class PutBucketEncryptionCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.PutBucketEncryptionRequest.filterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -32561,12 +32425,6 @@ class PutBucketIntelligentTieringConfigurationCommand extends smithy_client_1.Co
             inputFilterSensitiveLog: models_0_1.PutBucketIntelligentTieringConfigurationRequest.filterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -32723,12 +32581,6 @@ class PutBucketInventoryConfigurationCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.PutBucketInventoryConfigurationRequest.filterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -32880,12 +32732,6 @@ class PutBucketLifecycleConfigurationCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.PutBucketLifecycleConfigurationRequest.filterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -33021,12 +32867,6 @@ class PutBucketLoggingCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.PutBucketLoggingRequest.filterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -33138,12 +32978,6 @@ class PutBucketMetricsConfigurationCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.PutBucketMetricsConfigurationRequest.filterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -33261,12 +33095,6 @@ class PutBucketNotificationConfigurationCommand extends smithy_client_1.Command 
             inputFilterSensitiveLog: models_0_1.PutBucketNotificationConfigurationRequest.filterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -33339,12 +33167,6 @@ class PutBucketOwnershipControlsCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.PutBucketOwnershipControlsRequest.filterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -33435,12 +33257,6 @@ class PutBucketPolicyCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.PutBucketPolicyRequest.filterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -33562,12 +33378,6 @@ class PutBucketReplicationCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.PutBucketReplicationRequest.filterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -33642,12 +33452,6 @@ class PutBucketRequestPaymentCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.PutBucketRequestPaymentRequest.filterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -33783,12 +33587,6 @@ class PutBucketTaggingCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.PutBucketTaggingRequest.filterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -33893,12 +33691,6 @@ class PutBucketVersioningCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.PutBucketVersioningRequest.filterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -34080,12 +33872,6 @@ class PutBucketWebsiteCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.PutBucketWebsiteRequest.filterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -34320,12 +34106,6 @@ class PutObjectAclCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.PutObjectAclRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.PutObjectAclOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -34464,12 +34244,6 @@ class PutObjectCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.PutObjectRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.PutObjectOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -34537,12 +34311,6 @@ class PutObjectLegalHoldCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.PutObjectLegalHoldRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.PutObjectLegalHoldOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -34617,12 +34385,6 @@ class PutObjectLockConfigurationCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.PutObjectLockConfigurationRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.PutObjectLockConfigurationOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -34690,12 +34452,6 @@ class PutObjectRetentionCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.PutObjectRetentionRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.PutObjectRetentionOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -34850,12 +34606,6 @@ class PutObjectTaggingCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.PutObjectTaggingRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.PutObjectTaggingOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -34956,12 +34706,6 @@ class PutPublicAccessBlockCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_0_1.PutPublicAccessBlockRequest.filterSensitiveLog,
             outputFilterSensitiveLog: (output) => output,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -35310,12 +35054,6 @@ class RestoreObjectCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_1_1.RestoreObjectRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_0_1.RestoreObjectOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -35491,12 +35229,6 @@ class SelectObjectContentCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_1_1.SelectObjectContentRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_1_1.SelectObjectContentOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -35692,12 +35424,6 @@ class UploadPartCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_1_1.UploadPartRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_1_1.UploadPartOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -35936,12 +35662,6 @@ class UploadPartCopyCommand extends smithy_client_1.Command {
             inputFilterSensitiveLog: models_1_1.UploadPartCopyRequest.filterSensitiveLog,
             outputFilterSensitiveLog: models_1_1.UploadPartCopyOutput.filterSensitiveLog,
         };
-        if (typeof logger.info === "function") {
-            logger.info({
-                clientName,
-                commandName,
-            });
-        }
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
     }
@@ -35972,6 +35692,7 @@ const AWS_ISO_B_TEMPLATE = "s3.{region}.sc2s.sgov.gov";
 const AWS_US_GOV_TEMPLATE = "s3.{region}.amazonaws.com";
 // Partition regions
 const AWS_REGIONS = new Set([
+    "af-south-1",
     "ap-east-1",
     "ap-northeast-1",
     "ap-northeast-2",
@@ -35981,6 +35702,7 @@ const AWS_REGIONS = new Set([
     "ca-central-1",
     "eu-central-1",
     "eu-north-1",
+    "eu-south-1",
     "eu-west-1",
     "eu-west-2",
     "eu-west-3",
@@ -35999,6 +35721,12 @@ const defaultRegionInfoProvider = (region, options) => {
     let regionInfo = undefined;
     switch (region) {
         // First, try to match exact region names.
+        case "af-south-1":
+            regionInfo = {
+                hostname: "s3.af-south-1.amazonaws.com",
+                partition: "aws",
+            };
+            break;
         case "ap-east-1":
             regionInfo = {
                 hostname: "s3.ap-east-1.amazonaws.com",
@@ -36035,6 +35763,13 @@ const defaultRegionInfoProvider = (region, options) => {
                 partition: "aws",
             };
             break;
+        case "aws-global":
+            regionInfo = {
+                hostname: "s3.amazonaws.com",
+                partition: "aws",
+                signingRegion: "us-east-1",
+            };
+            break;
         case "ca-central-1":
             regionInfo = {
                 hostname: "s3.ca-central-1.amazonaws.com",
@@ -36065,6 +35800,12 @@ const defaultRegionInfoProvider = (region, options) => {
                 partition: "aws",
             };
             break;
+        case "eu-south-1":
+            regionInfo = {
+                hostname: "s3.eu-south-1.amazonaws.com",
+                partition: "aws",
+            };
+            break;
         case "eu-west-1":
             regionInfo = {
                 hostname: "s3.eu-west-1.amazonaws.com",
@@ -36085,7 +35826,7 @@ const defaultRegionInfoProvider = (region, options) => {
             break;
         case "fips-us-gov-west-1":
             regionInfo = {
-                hostname: "s3-fips-us-gov-west-1.amazonaws.com",
+                hostname: "s3-fips.us-gov-west-1.amazonaws.com",
                 partition: "aws-us-gov",
                 signingRegion: "us-gov-west-1",
             };
@@ -36111,7 +35852,7 @@ const defaultRegionInfoProvider = (region, options) => {
             break;
         case "us-east-1":
             regionInfo = {
-                hostname: "s3.amazonaws.com",
+                hostname: "s3.us-east-1.amazonaws.com",
                 partition: "aws",
             };
             break;
@@ -36197,7 +35938,7 @@ const defaultRegionInfoProvider = (region, options) => {
                 };
             }
     }
-    return Promise.resolve(regionInfo);
+    return Promise.resolve({ signingService: "s3", ...regionInfo });
 };
 exports.defaultRegionInfoProvider = defaultRegionInfoProvider;
 //# sourceMappingURL=endpoints.js.map
@@ -36264,7 +36005,9 @@ tslib_1.__exportStar(__webpack_require__(75372), exports);
 tslib_1.__exportStar(__webpack_require__(13971), exports);
 tslib_1.__exportStar(__webpack_require__(99958), exports);
 tslib_1.__exportStar(__webpack_require__(43096), exports);
+tslib_1.__exportStar(__webpack_require__(51991), exports);
 tslib_1.__exportStar(__webpack_require__(44903), exports);
+tslib_1.__exportStar(__webpack_require__(10835), exports);
 tslib_1.__exportStar(__webpack_require__(84209), exports);
 tslib_1.__exportStar(__webpack_require__(73971), exports);
 tslib_1.__exportStar(__webpack_require__(98186), exports);
@@ -38278,6 +38021,7 @@ const makePagedRequest = async (client, input, ...args) => {
     return await client.listObjectsV2(input, ...args);
 };
 async function* paginateListObjectsV2(config, input, ...additionalArguments) {
+    // ToDo: replace with actual type instead of typeof input.ContinuationToken
     let token = config.startingToken || undefined;
     let hasNext = true;
     let page;
@@ -38330,6 +38074,7 @@ const makePagedRequest = async (client, input, ...args) => {
     return await client.listParts(input, ...args);
 };
 async function* paginateListParts(config, input, ...additionalArguments) {
+    // ToDo: replace with actual type instead of typeof input.PartNumberMarker
     let token = config.startingToken || undefined;
     let hasNext = true;
     let page;
@@ -38374,7 +38119,6 @@ const xml_builder_1 = __webpack_require__(39366);
 const fast_xml_parser_1 = __webpack_require__(27448);
 const serializeAws_restXmlAbortMultipartUploadCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.RequestPayer) && { "x-amz-request-payer": input.RequestPayer }),
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -38424,7 +38168,7 @@ const serializeAws_restXmlAbortMultipartUploadCommand = async (input, context) =
 exports.serializeAws_restXmlAbortMultipartUploadCommand = serializeAws_restXmlAbortMultipartUploadCommand;
 const serializeAws_restXmlCompleteMultipartUploadCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
         ...(isSerializableHeaderValue(input.RequestPayer) && { "x-amz-request-payer": input.RequestPayer }),
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -38480,7 +38224,6 @@ const serializeAws_restXmlCompleteMultipartUploadCommand = async (input, context
 exports.serializeAws_restXmlCompleteMultipartUploadCommand = serializeAws_restXmlCompleteMultipartUploadCommand;
 const serializeAws_restXmlCopyObjectCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.ACL) && { "x-amz-acl": input.ACL }),
         ...(isSerializableHeaderValue(input.CacheControl) && { "Cache-Control": input.CacheControl }),
         ...(isSerializableHeaderValue(input.ContentDisposition) && { "Content-Disposition": input.ContentDisposition }),
@@ -38605,7 +38348,7 @@ const serializeAws_restXmlCopyObjectCommand = async (input, context) => {
 exports.serializeAws_restXmlCopyObjectCommand = serializeAws_restXmlCopyObjectCommand;
 const serializeAws_restXmlCreateBucketCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
         ...(isSerializableHeaderValue(input.ACL) && { "x-amz-acl": input.ACL }),
         ...(isSerializableHeaderValue(input.GrantFullControl) && { "x-amz-grant-full-control": input.GrantFullControl }),
         ...(isSerializableHeaderValue(input.GrantRead) && { "x-amz-grant-read": input.GrantRead }),
@@ -38649,7 +38392,6 @@ const serializeAws_restXmlCreateBucketCommand = async (input, context) => {
 exports.serializeAws_restXmlCreateBucketCommand = serializeAws_restXmlCreateBucketCommand;
 const serializeAws_restXmlCreateMultipartUploadCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.ACL) && { "x-amz-acl": input.ACL }),
         ...(isSerializableHeaderValue(input.CacheControl) && { "Cache-Control": input.CacheControl }),
         ...(isSerializableHeaderValue(input.ContentDisposition) && { "Content-Disposition": input.ContentDisposition }),
@@ -38747,7 +38489,6 @@ const serializeAws_restXmlCreateMultipartUploadCommand = async (input, context) 
 exports.serializeAws_restXmlCreateMultipartUploadCommand = serializeAws_restXmlCreateMultipartUploadCommand;
 const serializeAws_restXmlDeleteBucketCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -38778,7 +38519,6 @@ const serializeAws_restXmlDeleteBucketCommand = async (input, context) => {
 exports.serializeAws_restXmlDeleteBucketCommand = serializeAws_restXmlDeleteBucketCommand;
 const serializeAws_restXmlDeleteBucketAnalyticsConfigurationCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -38814,7 +38554,6 @@ const serializeAws_restXmlDeleteBucketAnalyticsConfigurationCommand = async (inp
 exports.serializeAws_restXmlDeleteBucketAnalyticsConfigurationCommand = serializeAws_restXmlDeleteBucketAnalyticsConfigurationCommand;
 const serializeAws_restXmlDeleteBucketCorsCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -38849,7 +38588,6 @@ const serializeAws_restXmlDeleteBucketCorsCommand = async (input, context) => {
 exports.serializeAws_restXmlDeleteBucketCorsCommand = serializeAws_restXmlDeleteBucketCorsCommand;
 const serializeAws_restXmlDeleteBucketEncryptionCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -38883,9 +38621,7 @@ const serializeAws_restXmlDeleteBucketEncryptionCommand = async (input, context)
 };
 exports.serializeAws_restXmlDeleteBucketEncryptionCommand = serializeAws_restXmlDeleteBucketEncryptionCommand;
 const serializeAws_restXmlDeleteBucketIntelligentTieringConfigurationCommand = async (input, context) => {
-    const headers = {
-        "Content-Type": "",
-    };
+    const headers = {};
     let resolvedPath = "/{Bucket}";
     if (input.Bucket !== undefined) {
         const labelValue = input.Bucket;
@@ -38917,7 +38653,6 @@ const serializeAws_restXmlDeleteBucketIntelligentTieringConfigurationCommand = a
 exports.serializeAws_restXmlDeleteBucketIntelligentTieringConfigurationCommand = serializeAws_restXmlDeleteBucketIntelligentTieringConfigurationCommand;
 const serializeAws_restXmlDeleteBucketInventoryConfigurationCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -38953,7 +38688,6 @@ const serializeAws_restXmlDeleteBucketInventoryConfigurationCommand = async (inp
 exports.serializeAws_restXmlDeleteBucketInventoryConfigurationCommand = serializeAws_restXmlDeleteBucketInventoryConfigurationCommand;
 const serializeAws_restXmlDeleteBucketLifecycleCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -38988,7 +38722,6 @@ const serializeAws_restXmlDeleteBucketLifecycleCommand = async (input, context) 
 exports.serializeAws_restXmlDeleteBucketLifecycleCommand = serializeAws_restXmlDeleteBucketLifecycleCommand;
 const serializeAws_restXmlDeleteBucketMetricsConfigurationCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -39024,7 +38757,6 @@ const serializeAws_restXmlDeleteBucketMetricsConfigurationCommand = async (input
 exports.serializeAws_restXmlDeleteBucketMetricsConfigurationCommand = serializeAws_restXmlDeleteBucketMetricsConfigurationCommand;
 const serializeAws_restXmlDeleteBucketOwnershipControlsCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -39059,7 +38791,6 @@ const serializeAws_restXmlDeleteBucketOwnershipControlsCommand = async (input, c
 exports.serializeAws_restXmlDeleteBucketOwnershipControlsCommand = serializeAws_restXmlDeleteBucketOwnershipControlsCommand;
 const serializeAws_restXmlDeleteBucketPolicyCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -39094,7 +38825,6 @@ const serializeAws_restXmlDeleteBucketPolicyCommand = async (input, context) => 
 exports.serializeAws_restXmlDeleteBucketPolicyCommand = serializeAws_restXmlDeleteBucketPolicyCommand;
 const serializeAws_restXmlDeleteBucketReplicationCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -39129,7 +38859,6 @@ const serializeAws_restXmlDeleteBucketReplicationCommand = async (input, context
 exports.serializeAws_restXmlDeleteBucketReplicationCommand = serializeAws_restXmlDeleteBucketReplicationCommand;
 const serializeAws_restXmlDeleteBucketTaggingCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -39164,7 +38893,6 @@ const serializeAws_restXmlDeleteBucketTaggingCommand = async (input, context) =>
 exports.serializeAws_restXmlDeleteBucketTaggingCommand = serializeAws_restXmlDeleteBucketTaggingCommand;
 const serializeAws_restXmlDeleteBucketWebsiteCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -39199,7 +38927,6 @@ const serializeAws_restXmlDeleteBucketWebsiteCommand = async (input, context) =>
 exports.serializeAws_restXmlDeleteBucketWebsiteCommand = serializeAws_restXmlDeleteBucketWebsiteCommand;
 const serializeAws_restXmlDeleteObjectCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.MFA) && { "x-amz-mfa": input.MFA }),
         ...(isSerializableHeaderValue(input.RequestPayer) && { "x-amz-request-payer": input.RequestPayer }),
         ...(isSerializableHeaderValue(input.BypassGovernanceRetention) && {
@@ -39253,7 +38980,7 @@ const serializeAws_restXmlDeleteObjectCommand = async (input, context) => {
 exports.serializeAws_restXmlDeleteObjectCommand = serializeAws_restXmlDeleteObjectCommand;
 const serializeAws_restXmlDeleteObjectsCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
         ...(isSerializableHeaderValue(input.MFA) && { "x-amz-mfa": input.MFA }),
         ...(isSerializableHeaderValue(input.RequestPayer) && { "x-amz-request-payer": input.RequestPayer }),
         ...(isSerializableHeaderValue(input.BypassGovernanceRetention) && {
@@ -39300,7 +39027,6 @@ const serializeAws_restXmlDeleteObjectsCommand = async (input, context) => {
 exports.serializeAws_restXmlDeleteObjectsCommand = serializeAws_restXmlDeleteObjectsCommand;
 const serializeAws_restXmlDeleteObjectTaggingCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -39349,7 +39075,6 @@ const serializeAws_restXmlDeleteObjectTaggingCommand = async (input, context) =>
 exports.serializeAws_restXmlDeleteObjectTaggingCommand = serializeAws_restXmlDeleteObjectTaggingCommand;
 const serializeAws_restXmlDeletePublicAccessBlockCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -39384,7 +39109,6 @@ const serializeAws_restXmlDeletePublicAccessBlockCommand = async (input, context
 exports.serializeAws_restXmlDeletePublicAccessBlockCommand = serializeAws_restXmlDeletePublicAccessBlockCommand;
 const serializeAws_restXmlGetBucketAccelerateConfigurationCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -39419,7 +39143,6 @@ const serializeAws_restXmlGetBucketAccelerateConfigurationCommand = async (input
 exports.serializeAws_restXmlGetBucketAccelerateConfigurationCommand = serializeAws_restXmlGetBucketAccelerateConfigurationCommand;
 const serializeAws_restXmlGetBucketAclCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -39454,7 +39177,6 @@ const serializeAws_restXmlGetBucketAclCommand = async (input, context) => {
 exports.serializeAws_restXmlGetBucketAclCommand = serializeAws_restXmlGetBucketAclCommand;
 const serializeAws_restXmlGetBucketAnalyticsConfigurationCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -39491,7 +39213,6 @@ const serializeAws_restXmlGetBucketAnalyticsConfigurationCommand = async (input,
 exports.serializeAws_restXmlGetBucketAnalyticsConfigurationCommand = serializeAws_restXmlGetBucketAnalyticsConfigurationCommand;
 const serializeAws_restXmlGetBucketCorsCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -39526,7 +39247,6 @@ const serializeAws_restXmlGetBucketCorsCommand = async (input, context) => {
 exports.serializeAws_restXmlGetBucketCorsCommand = serializeAws_restXmlGetBucketCorsCommand;
 const serializeAws_restXmlGetBucketEncryptionCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -39560,9 +39280,7 @@ const serializeAws_restXmlGetBucketEncryptionCommand = async (input, context) =>
 };
 exports.serializeAws_restXmlGetBucketEncryptionCommand = serializeAws_restXmlGetBucketEncryptionCommand;
 const serializeAws_restXmlGetBucketIntelligentTieringConfigurationCommand = async (input, context) => {
-    const headers = {
-        "Content-Type": "",
-    };
+    const headers = {};
     let resolvedPath = "/{Bucket}";
     if (input.Bucket !== undefined) {
         const labelValue = input.Bucket;
@@ -39595,7 +39313,6 @@ const serializeAws_restXmlGetBucketIntelligentTieringConfigurationCommand = asyn
 exports.serializeAws_restXmlGetBucketIntelligentTieringConfigurationCommand = serializeAws_restXmlGetBucketIntelligentTieringConfigurationCommand;
 const serializeAws_restXmlGetBucketInventoryConfigurationCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -39632,7 +39349,6 @@ const serializeAws_restXmlGetBucketInventoryConfigurationCommand = async (input,
 exports.serializeAws_restXmlGetBucketInventoryConfigurationCommand = serializeAws_restXmlGetBucketInventoryConfigurationCommand;
 const serializeAws_restXmlGetBucketLifecycleConfigurationCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -39667,7 +39383,6 @@ const serializeAws_restXmlGetBucketLifecycleConfigurationCommand = async (input,
 exports.serializeAws_restXmlGetBucketLifecycleConfigurationCommand = serializeAws_restXmlGetBucketLifecycleConfigurationCommand;
 const serializeAws_restXmlGetBucketLocationCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -39702,7 +39417,6 @@ const serializeAws_restXmlGetBucketLocationCommand = async (input, context) => {
 exports.serializeAws_restXmlGetBucketLocationCommand = serializeAws_restXmlGetBucketLocationCommand;
 const serializeAws_restXmlGetBucketLoggingCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -39737,7 +39451,6 @@ const serializeAws_restXmlGetBucketLoggingCommand = async (input, context) => {
 exports.serializeAws_restXmlGetBucketLoggingCommand = serializeAws_restXmlGetBucketLoggingCommand;
 const serializeAws_restXmlGetBucketMetricsConfigurationCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -39774,7 +39487,6 @@ const serializeAws_restXmlGetBucketMetricsConfigurationCommand = async (input, c
 exports.serializeAws_restXmlGetBucketMetricsConfigurationCommand = serializeAws_restXmlGetBucketMetricsConfigurationCommand;
 const serializeAws_restXmlGetBucketNotificationConfigurationCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -39809,7 +39521,6 @@ const serializeAws_restXmlGetBucketNotificationConfigurationCommand = async (inp
 exports.serializeAws_restXmlGetBucketNotificationConfigurationCommand = serializeAws_restXmlGetBucketNotificationConfigurationCommand;
 const serializeAws_restXmlGetBucketOwnershipControlsCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -39844,7 +39555,6 @@ const serializeAws_restXmlGetBucketOwnershipControlsCommand = async (input, cont
 exports.serializeAws_restXmlGetBucketOwnershipControlsCommand = serializeAws_restXmlGetBucketOwnershipControlsCommand;
 const serializeAws_restXmlGetBucketPolicyCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -39879,7 +39589,6 @@ const serializeAws_restXmlGetBucketPolicyCommand = async (input, context) => {
 exports.serializeAws_restXmlGetBucketPolicyCommand = serializeAws_restXmlGetBucketPolicyCommand;
 const serializeAws_restXmlGetBucketPolicyStatusCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -39914,7 +39623,6 @@ const serializeAws_restXmlGetBucketPolicyStatusCommand = async (input, context) 
 exports.serializeAws_restXmlGetBucketPolicyStatusCommand = serializeAws_restXmlGetBucketPolicyStatusCommand;
 const serializeAws_restXmlGetBucketReplicationCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -39949,7 +39657,6 @@ const serializeAws_restXmlGetBucketReplicationCommand = async (input, context) =
 exports.serializeAws_restXmlGetBucketReplicationCommand = serializeAws_restXmlGetBucketReplicationCommand;
 const serializeAws_restXmlGetBucketRequestPaymentCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -39984,7 +39691,6 @@ const serializeAws_restXmlGetBucketRequestPaymentCommand = async (input, context
 exports.serializeAws_restXmlGetBucketRequestPaymentCommand = serializeAws_restXmlGetBucketRequestPaymentCommand;
 const serializeAws_restXmlGetBucketTaggingCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -40019,7 +39725,6 @@ const serializeAws_restXmlGetBucketTaggingCommand = async (input, context) => {
 exports.serializeAws_restXmlGetBucketTaggingCommand = serializeAws_restXmlGetBucketTaggingCommand;
 const serializeAws_restXmlGetBucketVersioningCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -40054,7 +39759,6 @@ const serializeAws_restXmlGetBucketVersioningCommand = async (input, context) =>
 exports.serializeAws_restXmlGetBucketVersioningCommand = serializeAws_restXmlGetBucketVersioningCommand;
 const serializeAws_restXmlGetBucketWebsiteCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -40089,7 +39793,6 @@ const serializeAws_restXmlGetBucketWebsiteCommand = async (input, context) => {
 exports.serializeAws_restXmlGetBucketWebsiteCommand = serializeAws_restXmlGetBucketWebsiteCommand;
 const serializeAws_restXmlGetObjectCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.IfMatch) && { "If-Match": input.IfMatch }),
         ...(isSerializableHeaderValue(input.IfModifiedSince) && {
             "If-Modified-Since": smithy_client_1.dateToUtcString(input.IfModifiedSince).toString(),
@@ -40168,7 +39871,6 @@ const serializeAws_restXmlGetObjectCommand = async (input, context) => {
 exports.serializeAws_restXmlGetObjectCommand = serializeAws_restXmlGetObjectCommand;
 const serializeAws_restXmlGetObjectAclCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.RequestPayer) && { "x-amz-request-payer": input.RequestPayer }),
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -40218,7 +39920,6 @@ const serializeAws_restXmlGetObjectAclCommand = async (input, context) => {
 exports.serializeAws_restXmlGetObjectAclCommand = serializeAws_restXmlGetObjectAclCommand;
 const serializeAws_restXmlGetObjectLegalHoldCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.RequestPayer) && { "x-amz-request-payer": input.RequestPayer }),
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -40268,7 +39969,6 @@ const serializeAws_restXmlGetObjectLegalHoldCommand = async (input, context) => 
 exports.serializeAws_restXmlGetObjectLegalHoldCommand = serializeAws_restXmlGetObjectLegalHoldCommand;
 const serializeAws_restXmlGetObjectLockConfigurationCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -40303,7 +40003,6 @@ const serializeAws_restXmlGetObjectLockConfigurationCommand = async (input, cont
 exports.serializeAws_restXmlGetObjectLockConfigurationCommand = serializeAws_restXmlGetObjectLockConfigurationCommand;
 const serializeAws_restXmlGetObjectRetentionCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.RequestPayer) && { "x-amz-request-payer": input.RequestPayer }),
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -40353,7 +40052,6 @@ const serializeAws_restXmlGetObjectRetentionCommand = async (input, context) => 
 exports.serializeAws_restXmlGetObjectRetentionCommand = serializeAws_restXmlGetObjectRetentionCommand;
 const serializeAws_restXmlGetObjectTaggingCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -40402,7 +40100,6 @@ const serializeAws_restXmlGetObjectTaggingCommand = async (input, context) => {
 exports.serializeAws_restXmlGetObjectTaggingCommand = serializeAws_restXmlGetObjectTaggingCommand;
 const serializeAws_restXmlGetObjectTorrentCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.RequestPayer) && { "x-amz-request-payer": input.RequestPayer }),
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -40451,7 +40148,6 @@ const serializeAws_restXmlGetObjectTorrentCommand = async (input, context) => {
 exports.serializeAws_restXmlGetObjectTorrentCommand = serializeAws_restXmlGetObjectTorrentCommand;
 const serializeAws_restXmlGetPublicAccessBlockCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -40486,7 +40182,6 @@ const serializeAws_restXmlGetPublicAccessBlockCommand = async (input, context) =
 exports.serializeAws_restXmlGetPublicAccessBlockCommand = serializeAws_restXmlGetPublicAccessBlockCommand;
 const serializeAws_restXmlHeadBucketCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -40517,7 +40212,6 @@ const serializeAws_restXmlHeadBucketCommand = async (input, context) => {
 exports.serializeAws_restXmlHeadBucketCommand = serializeAws_restXmlHeadBucketCommand;
 const serializeAws_restXmlHeadObjectCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.IfMatch) && { "If-Match": input.IfMatch }),
         ...(isSerializableHeaderValue(input.IfModifiedSince) && {
             "If-Modified-Since": smithy_client_1.dateToUtcString(input.IfModifiedSince).toString(),
@@ -40585,7 +40279,6 @@ const serializeAws_restXmlHeadObjectCommand = async (input, context) => {
 exports.serializeAws_restXmlHeadObjectCommand = serializeAws_restXmlHeadObjectCommand;
 const serializeAws_restXmlListBucketAnalyticsConfigurationsCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -40621,9 +40314,7 @@ const serializeAws_restXmlListBucketAnalyticsConfigurationsCommand = async (inpu
 };
 exports.serializeAws_restXmlListBucketAnalyticsConfigurationsCommand = serializeAws_restXmlListBucketAnalyticsConfigurationsCommand;
 const serializeAws_restXmlListBucketIntelligentTieringConfigurationsCommand = async (input, context) => {
-    const headers = {
-        "Content-Type": "",
-    };
+    const headers = {};
     let resolvedPath = "/{Bucket}";
     if (input.Bucket !== undefined) {
         const labelValue = input.Bucket;
@@ -40656,7 +40347,6 @@ const serializeAws_restXmlListBucketIntelligentTieringConfigurationsCommand = as
 exports.serializeAws_restXmlListBucketIntelligentTieringConfigurationsCommand = serializeAws_restXmlListBucketIntelligentTieringConfigurationsCommand;
 const serializeAws_restXmlListBucketInventoryConfigurationsCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -40693,7 +40383,6 @@ const serializeAws_restXmlListBucketInventoryConfigurationsCommand = async (inpu
 exports.serializeAws_restXmlListBucketInventoryConfigurationsCommand = serializeAws_restXmlListBucketInventoryConfigurationsCommand;
 const serializeAws_restXmlListBucketMetricsConfigurationsCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -40729,9 +40418,7 @@ const serializeAws_restXmlListBucketMetricsConfigurationsCommand = async (input,
 };
 exports.serializeAws_restXmlListBucketMetricsConfigurationsCommand = serializeAws_restXmlListBucketMetricsConfigurationsCommand;
 const serializeAws_restXmlListBucketsCommand = async (input, context) => {
-    const headers = {
-        "Content-Type": "",
-    };
+    const headers = {};
     let resolvedPath = "/";
     let body;
     body = "";
@@ -40749,7 +40436,6 @@ const serializeAws_restXmlListBucketsCommand = async (input, context) => {
 exports.serializeAws_restXmlListBucketsCommand = serializeAws_restXmlListBucketsCommand;
 const serializeAws_restXmlListMultipartUploadsCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -40790,7 +40476,6 @@ const serializeAws_restXmlListMultipartUploadsCommand = async (input, context) =
 exports.serializeAws_restXmlListMultipartUploadsCommand = serializeAws_restXmlListMultipartUploadsCommand;
 const serializeAws_restXmlListObjectsCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.RequestPayer) && { "x-amz-request-payer": input.RequestPayer }),
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -40830,7 +40515,6 @@ const serializeAws_restXmlListObjectsCommand = async (input, context) => {
 exports.serializeAws_restXmlListObjectsCommand = serializeAws_restXmlListObjectsCommand;
 const serializeAws_restXmlListObjectsV2Command = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.RequestPayer) && { "x-amz-request-payer": input.RequestPayer }),
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -40873,7 +40557,6 @@ const serializeAws_restXmlListObjectsV2Command = async (input, context) => {
 exports.serializeAws_restXmlListObjectsV2Command = serializeAws_restXmlListObjectsV2Command;
 const serializeAws_restXmlListObjectVersionsCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -40914,7 +40597,6 @@ const serializeAws_restXmlListObjectVersionsCommand = async (input, context) => 
 exports.serializeAws_restXmlListObjectVersionsCommand = serializeAws_restXmlListObjectVersionsCommand;
 const serializeAws_restXmlListPartsCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.RequestPayer) && { "x-amz-request-payer": input.RequestPayer }),
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -40966,7 +40648,7 @@ const serializeAws_restXmlListPartsCommand = async (input, context) => {
 exports.serializeAws_restXmlListPartsCommand = serializeAws_restXmlListPartsCommand;
 const serializeAws_restXmlPutBucketAccelerateConfigurationCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -41008,7 +40690,7 @@ const serializeAws_restXmlPutBucketAccelerateConfigurationCommand = async (input
 exports.serializeAws_restXmlPutBucketAccelerateConfigurationCommand = serializeAws_restXmlPutBucketAccelerateConfigurationCommand;
 const serializeAws_restXmlPutBucketAclCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
         ...(isSerializableHeaderValue(input.ACL) && { "x-amz-acl": input.ACL }),
         ...(isSerializableHeaderValue(input.ContentMD5) && { "Content-MD5": input.ContentMD5 }),
         ...(isSerializableHeaderValue(input.GrantFullControl) && { "x-amz-grant-full-control": input.GrantFullControl }),
@@ -41057,7 +40739,7 @@ const serializeAws_restXmlPutBucketAclCommand = async (input, context) => {
 exports.serializeAws_restXmlPutBucketAclCommand = serializeAws_restXmlPutBucketAclCommand;
 const serializeAws_restXmlPutBucketAnalyticsConfigurationCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -41100,7 +40782,7 @@ const serializeAws_restXmlPutBucketAnalyticsConfigurationCommand = async (input,
 exports.serializeAws_restXmlPutBucketAnalyticsConfigurationCommand = serializeAws_restXmlPutBucketAnalyticsConfigurationCommand;
 const serializeAws_restXmlPutBucketCorsCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
         ...(isSerializableHeaderValue(input.ContentMD5) && { "Content-MD5": input.ContentMD5 }),
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -41143,7 +40825,7 @@ const serializeAws_restXmlPutBucketCorsCommand = async (input, context) => {
 exports.serializeAws_restXmlPutBucketCorsCommand = serializeAws_restXmlPutBucketCorsCommand;
 const serializeAws_restXmlPutBucketEncryptionCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
         ...(isSerializableHeaderValue(input.ContentMD5) && { "Content-MD5": input.ContentMD5 }),
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -41186,7 +40868,7 @@ const serializeAws_restXmlPutBucketEncryptionCommand = async (input, context) =>
 exports.serializeAws_restXmlPutBucketEncryptionCommand = serializeAws_restXmlPutBucketEncryptionCommand;
 const serializeAws_restXmlPutBucketIntelligentTieringConfigurationCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
     };
     let resolvedPath = "/{Bucket}";
     if (input.Bucket !== undefined) {
@@ -41226,7 +40908,7 @@ const serializeAws_restXmlPutBucketIntelligentTieringConfigurationCommand = asyn
 exports.serializeAws_restXmlPutBucketIntelligentTieringConfigurationCommand = serializeAws_restXmlPutBucketIntelligentTieringConfigurationCommand;
 const serializeAws_restXmlPutBucketInventoryConfigurationCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -41269,7 +40951,7 @@ const serializeAws_restXmlPutBucketInventoryConfigurationCommand = async (input,
 exports.serializeAws_restXmlPutBucketInventoryConfigurationCommand = serializeAws_restXmlPutBucketInventoryConfigurationCommand;
 const serializeAws_restXmlPutBucketLifecycleConfigurationCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -41311,7 +40993,7 @@ const serializeAws_restXmlPutBucketLifecycleConfigurationCommand = async (input,
 exports.serializeAws_restXmlPutBucketLifecycleConfigurationCommand = serializeAws_restXmlPutBucketLifecycleConfigurationCommand;
 const serializeAws_restXmlPutBucketLoggingCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
         ...(isSerializableHeaderValue(input.ContentMD5) && { "Content-MD5": input.ContentMD5 }),
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -41354,7 +41036,7 @@ const serializeAws_restXmlPutBucketLoggingCommand = async (input, context) => {
 exports.serializeAws_restXmlPutBucketLoggingCommand = serializeAws_restXmlPutBucketLoggingCommand;
 const serializeAws_restXmlPutBucketMetricsConfigurationCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -41397,7 +41079,7 @@ const serializeAws_restXmlPutBucketMetricsConfigurationCommand = async (input, c
 exports.serializeAws_restXmlPutBucketMetricsConfigurationCommand = serializeAws_restXmlPutBucketMetricsConfigurationCommand;
 const serializeAws_restXmlPutBucketNotificationConfigurationCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -41439,7 +41121,7 @@ const serializeAws_restXmlPutBucketNotificationConfigurationCommand = async (inp
 exports.serializeAws_restXmlPutBucketNotificationConfigurationCommand = serializeAws_restXmlPutBucketNotificationConfigurationCommand;
 const serializeAws_restXmlPutBucketOwnershipControlsCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
         ...(isSerializableHeaderValue(input.ContentMD5) && { "Content-MD5": input.ContentMD5 }),
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -41482,7 +41164,7 @@ const serializeAws_restXmlPutBucketOwnershipControlsCommand = async (input, cont
 exports.serializeAws_restXmlPutBucketOwnershipControlsCommand = serializeAws_restXmlPutBucketOwnershipControlsCommand;
 const serializeAws_restXmlPutBucketPolicyCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "text/plain",
+        "content-type": "text/plain",
         ...(isSerializableHeaderValue(input.ContentMD5) && { "Content-MD5": input.ContentMD5 }),
         ...(isSerializableHeaderValue(input.ConfirmRemoveSelfBucketAccess) && {
             "x-amz-confirm-remove-self-bucket-access": input.ConfirmRemoveSelfBucketAccess.toString(),
@@ -41526,7 +41208,7 @@ const serializeAws_restXmlPutBucketPolicyCommand = async (input, context) => {
 exports.serializeAws_restXmlPutBucketPolicyCommand = serializeAws_restXmlPutBucketPolicyCommand;
 const serializeAws_restXmlPutBucketReplicationCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
         ...(isSerializableHeaderValue(input.ContentMD5) && { "Content-MD5": input.ContentMD5 }),
         ...(isSerializableHeaderValue(input.Token) && { "x-amz-bucket-object-lock-token": input.Token }),
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
@@ -41570,7 +41252,7 @@ const serializeAws_restXmlPutBucketReplicationCommand = async (input, context) =
 exports.serializeAws_restXmlPutBucketReplicationCommand = serializeAws_restXmlPutBucketReplicationCommand;
 const serializeAws_restXmlPutBucketRequestPaymentCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
         ...(isSerializableHeaderValue(input.ContentMD5) && { "Content-MD5": input.ContentMD5 }),
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -41613,7 +41295,7 @@ const serializeAws_restXmlPutBucketRequestPaymentCommand = async (input, context
 exports.serializeAws_restXmlPutBucketRequestPaymentCommand = serializeAws_restXmlPutBucketRequestPaymentCommand;
 const serializeAws_restXmlPutBucketTaggingCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
         ...(isSerializableHeaderValue(input.ContentMD5) && { "Content-MD5": input.ContentMD5 }),
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -41656,7 +41338,7 @@ const serializeAws_restXmlPutBucketTaggingCommand = async (input, context) => {
 exports.serializeAws_restXmlPutBucketTaggingCommand = serializeAws_restXmlPutBucketTaggingCommand;
 const serializeAws_restXmlPutBucketVersioningCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
         ...(isSerializableHeaderValue(input.ContentMD5) && { "Content-MD5": input.ContentMD5 }),
         ...(isSerializableHeaderValue(input.MFA) && { "x-amz-mfa": input.MFA }),
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
@@ -41700,7 +41382,7 @@ const serializeAws_restXmlPutBucketVersioningCommand = async (input, context) =>
 exports.serializeAws_restXmlPutBucketVersioningCommand = serializeAws_restXmlPutBucketVersioningCommand;
 const serializeAws_restXmlPutBucketWebsiteCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
         ...(isSerializableHeaderValue(input.ContentMD5) && { "Content-MD5": input.ContentMD5 }),
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -41743,7 +41425,7 @@ const serializeAws_restXmlPutBucketWebsiteCommand = async (input, context) => {
 exports.serializeAws_restXmlPutBucketWebsiteCommand = serializeAws_restXmlPutBucketWebsiteCommand;
 const serializeAws_restXmlPutObjectCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/octet-stream",
+        "content-type": "application/octet-stream",
         ...(isSerializableHeaderValue(input.ACL) && { "x-amz-acl": input.ACL }),
         ...(isSerializableHeaderValue(input.CacheControl) && { "Cache-Control": input.CacheControl }),
         ...(isSerializableHeaderValue(input.ContentDisposition) && { "Content-Disposition": input.ContentDisposition }),
@@ -41848,7 +41530,7 @@ const serializeAws_restXmlPutObjectCommand = async (input, context) => {
 exports.serializeAws_restXmlPutObjectCommand = serializeAws_restXmlPutObjectCommand;
 const serializeAws_restXmlPutObjectAclCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
         ...(isSerializableHeaderValue(input.ACL) && { "x-amz-acl": input.ACL }),
         ...(isSerializableHeaderValue(input.ContentMD5) && { "Content-MD5": input.ContentMD5 }),
         ...(isSerializableHeaderValue(input.GrantFullControl) && { "x-amz-grant-full-control": input.GrantFullControl }),
@@ -41912,7 +41594,7 @@ const serializeAws_restXmlPutObjectAclCommand = async (input, context) => {
 exports.serializeAws_restXmlPutObjectAclCommand = serializeAws_restXmlPutObjectAclCommand;
 const serializeAws_restXmlPutObjectLegalHoldCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
         ...(isSerializableHeaderValue(input.RequestPayer) && { "x-amz-request-payer": input.RequestPayer }),
         ...(isSerializableHeaderValue(input.ContentMD5) && { "Content-MD5": input.ContentMD5 }),
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
@@ -41970,7 +41652,7 @@ const serializeAws_restXmlPutObjectLegalHoldCommand = async (input, context) => 
 exports.serializeAws_restXmlPutObjectLegalHoldCommand = serializeAws_restXmlPutObjectLegalHoldCommand;
 const serializeAws_restXmlPutObjectLockConfigurationCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
         ...(isSerializableHeaderValue(input.RequestPayer) && { "x-amz-request-payer": input.RequestPayer }),
         ...(isSerializableHeaderValue(input.Token) && { "x-amz-bucket-object-lock-token": input.Token }),
         ...(isSerializableHeaderValue(input.ContentMD5) && { "Content-MD5": input.ContentMD5 }),
@@ -42015,7 +41697,7 @@ const serializeAws_restXmlPutObjectLockConfigurationCommand = async (input, cont
 exports.serializeAws_restXmlPutObjectLockConfigurationCommand = serializeAws_restXmlPutObjectLockConfigurationCommand;
 const serializeAws_restXmlPutObjectRetentionCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
         ...(isSerializableHeaderValue(input.RequestPayer) && { "x-amz-request-payer": input.RequestPayer }),
         ...(isSerializableHeaderValue(input.BypassGovernanceRetention) && {
             "x-amz-bypass-governance-retention": input.BypassGovernanceRetention.toString(),
@@ -42076,7 +41758,7 @@ const serializeAws_restXmlPutObjectRetentionCommand = async (input, context) => 
 exports.serializeAws_restXmlPutObjectRetentionCommand = serializeAws_restXmlPutObjectRetentionCommand;
 const serializeAws_restXmlPutObjectTaggingCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
         ...(isSerializableHeaderValue(input.ContentMD5) && { "Content-MD5": input.ContentMD5 }),
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -42133,7 +41815,7 @@ const serializeAws_restXmlPutObjectTaggingCommand = async (input, context) => {
 exports.serializeAws_restXmlPutObjectTaggingCommand = serializeAws_restXmlPutObjectTaggingCommand;
 const serializeAws_restXmlPutPublicAccessBlockCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
         ...(isSerializableHeaderValue(input.ContentMD5) && { "Content-MD5": input.ContentMD5 }),
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -42176,7 +41858,7 @@ const serializeAws_restXmlPutPublicAccessBlockCommand = async (input, context) =
 exports.serializeAws_restXmlPutPublicAccessBlockCommand = serializeAws_restXmlPutPublicAccessBlockCommand;
 const serializeAws_restXmlRestoreObjectCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
         ...(isSerializableHeaderValue(input.RequestPayer) && { "x-amz-request-payer": input.RequestPayer }),
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -42233,7 +41915,7 @@ const serializeAws_restXmlRestoreObjectCommand = async (input, context) => {
 exports.serializeAws_restXmlRestoreObjectCommand = serializeAws_restXmlRestoreObjectCommand;
 const serializeAws_restXmlSelectObjectContentCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/xml",
+        "content-type": "application/xml",
         ...(isSerializableHeaderValue(input.SSECustomerAlgorithm) && {
             "x-amz-server-side-encryption-customer-algorithm": input.SSECustomerAlgorithm,
         }),
@@ -42321,7 +42003,7 @@ const serializeAws_restXmlSelectObjectContentCommand = async (input, context) =>
 exports.serializeAws_restXmlSelectObjectContentCommand = serializeAws_restXmlSelectObjectContentCommand;
 const serializeAws_restXmlUploadPartCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "application/octet-stream",
+        "content-type": "application/octet-stream",
         ...(isSerializableHeaderValue(input.ContentLength) && { "Content-Length": input.ContentLength.toString() }),
         ...(isSerializableHeaderValue(input.ContentMD5) && { "Content-MD5": input.ContentMD5 }),
         ...(isSerializableHeaderValue(input.SSECustomerAlgorithm) && {
@@ -42388,7 +42070,6 @@ const serializeAws_restXmlUploadPartCommand = async (input, context) => {
 exports.serializeAws_restXmlUploadPartCommand = serializeAws_restXmlUploadPartCommand;
 const serializeAws_restXmlUploadPartCopyCommand = async (input, context) => {
     const headers = {
-        "Content-Type": "",
         ...(isSerializableHeaderValue(input.CopySource) && { "x-amz-copy-source": input.CopySource }),
         ...(isSerializableHeaderValue(input.CopySourceIfMatch) && {
             "x-amz-copy-source-if-match": input.CopySourceIfMatch,
@@ -47072,7 +46753,7 @@ const deserializeAws_restXmlObjectNotInActiveTierErrorResponse = async (parsedOu
 };
 const serializeAws_restXmlAbortIncompleteMultipartUpload = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("AbortIncompleteMultipartUpload");
-    if (input.DaysAfterInitiation !== undefined) {
+    if (input.DaysAfterInitiation !== undefined && input.DaysAfterInitiation !== null) {
         const node = new xml_builder_1.XmlNode("DaysAfterInitiation")
             .addChildNode(new xml_builder_1.XmlText(String(input.DaysAfterInitiation)))
             .withName("DaysAfterInitiation");
@@ -47082,7 +46763,7 @@ const serializeAws_restXmlAbortIncompleteMultipartUpload = (input, context) => {
 };
 const serializeAws_restXmlAccelerateConfiguration = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("AccelerateConfiguration");
-    if (input.Status !== undefined) {
+    if (input.Status !== undefined && input.Status !== null) {
         const node = new xml_builder_1.XmlNode("BucketAccelerateStatus").addChildNode(new xml_builder_1.XmlText(input.Status)).withName("Status");
         bodyNode.addChildNode(node);
     }
@@ -47090,7 +46771,7 @@ const serializeAws_restXmlAccelerateConfiguration = (input, context) => {
 };
 const serializeAws_restXmlAccessControlPolicy = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("AccessControlPolicy");
-    if (input.Grants !== undefined) {
+    if (input.Grants !== undefined && input.Grants !== null) {
         const nodes = serializeAws_restXmlGrants(input.Grants, context);
         const containerNode = new xml_builder_1.XmlNode("AccessControlList");
         nodes.map((node) => {
@@ -47098,7 +46779,7 @@ const serializeAws_restXmlAccessControlPolicy = (input, context) => {
         });
         bodyNode.addChildNode(containerNode);
     }
-    if (input.Owner !== undefined) {
+    if (input.Owner !== undefined && input.Owner !== null) {
         const node = serializeAws_restXmlOwner(input.Owner, context).withName("Owner");
         bodyNode.addChildNode(node);
     }
@@ -47106,37 +46787,52 @@ const serializeAws_restXmlAccessControlPolicy = (input, context) => {
 };
 const serializeAws_restXmlAccessControlTranslation = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("AccessControlTranslation");
-    if (input.Owner !== undefined) {
+    if (input.Owner !== undefined && input.Owner !== null) {
         const node = new xml_builder_1.XmlNode("OwnerOverride").addChildNode(new xml_builder_1.XmlText(input.Owner)).withName("Owner");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
 const serializeAws_restXmlAllowedHeaders = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = new xml_builder_1.XmlNode("AllowedHeader").addChildNode(new xml_builder_1.XmlText(entry));
         return node.withName("member");
     });
 };
 const serializeAws_restXmlAllowedMethods = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = new xml_builder_1.XmlNode("AllowedMethod").addChildNode(new xml_builder_1.XmlText(entry));
         return node.withName("member");
     });
 };
 const serializeAws_restXmlAllowedOrigins = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = new xml_builder_1.XmlNode("AllowedOrigin").addChildNode(new xml_builder_1.XmlText(entry));
         return node.withName("member");
     });
 };
 const serializeAws_restXmlAnalyticsAndOperator = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("AnalyticsAndOperator");
-    if (input.Prefix !== undefined) {
+    if (input.Prefix !== undefined && input.Prefix !== null) {
         const node = new xml_builder_1.XmlNode("Prefix").addChildNode(new xml_builder_1.XmlText(input.Prefix)).withName("Prefix");
         bodyNode.addChildNode(node);
     }
-    if (input.Tags !== undefined) {
+    if (input.Tags !== undefined && input.Tags !== null) {
         const nodes = serializeAws_restXmlTagSet(input.Tags, context);
         nodes.map((node) => {
             node = node.withName("Tag");
@@ -47147,15 +46843,15 @@ const serializeAws_restXmlAnalyticsAndOperator = (input, context) => {
 };
 const serializeAws_restXmlAnalyticsConfiguration = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("AnalyticsConfiguration");
-    if (input.Id !== undefined) {
+    if (input.Id !== undefined && input.Id !== null) {
         const node = new xml_builder_1.XmlNode("AnalyticsId").addChildNode(new xml_builder_1.XmlText(input.Id)).withName("Id");
         bodyNode.addChildNode(node);
     }
-    if (input.Filter !== undefined) {
+    if (input.Filter !== undefined && input.Filter !== null) {
         const node = serializeAws_restXmlAnalyticsFilter(input.Filter, context).withName("Filter");
         bodyNode.addChildNode(node);
     }
-    if (input.StorageClassAnalysis !== undefined) {
+    if (input.StorageClassAnalysis !== undefined && input.StorageClassAnalysis !== null) {
         const node = serializeAws_restXmlStorageClassAnalysis(input.StorageClassAnalysis, context).withName("StorageClassAnalysis");
         bodyNode.addChildNode(node);
     }
@@ -47163,7 +46859,7 @@ const serializeAws_restXmlAnalyticsConfiguration = (input, context) => {
 };
 const serializeAws_restXmlAnalyticsExportDestination = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("AnalyticsExportDestination");
-    if (input.S3BucketDestination !== undefined) {
+    if (input.S3BucketDestination !== undefined && input.S3BucketDestination !== null) {
         const node = serializeAws_restXmlAnalyticsS3BucketDestination(input.S3BucketDestination, context).withName("S3BucketDestination");
         bodyNode.addChildNode(node);
     }
@@ -47195,23 +46891,23 @@ const serializeAws_restXmlAnalyticsFilter = (input, context) => {
 };
 const serializeAws_restXmlAnalyticsS3BucketDestination = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("AnalyticsS3BucketDestination");
-    if (input.Format !== undefined) {
+    if (input.Format !== undefined && input.Format !== null) {
         const node = new xml_builder_1.XmlNode("AnalyticsS3ExportFileFormat")
             .addChildNode(new xml_builder_1.XmlText(input.Format))
             .withName("Format");
         bodyNode.addChildNode(node);
     }
-    if (input.BucketAccountId !== undefined) {
+    if (input.BucketAccountId !== undefined && input.BucketAccountId !== null) {
         const node = new xml_builder_1.XmlNode("AccountId")
             .addChildNode(new xml_builder_1.XmlText(input.BucketAccountId))
             .withName("BucketAccountId");
         bodyNode.addChildNode(node);
     }
-    if (input.Bucket !== undefined) {
+    if (input.Bucket !== undefined && input.Bucket !== null) {
         const node = new xml_builder_1.XmlNode("BucketName").addChildNode(new xml_builder_1.XmlText(input.Bucket)).withName("Bucket");
         bodyNode.addChildNode(node);
     }
-    if (input.Prefix !== undefined) {
+    if (input.Prefix !== undefined && input.Prefix !== null) {
         const node = new xml_builder_1.XmlNode("Prefix").addChildNode(new xml_builder_1.XmlText(input.Prefix)).withName("Prefix");
         bodyNode.addChildNode(node);
     }
@@ -47219,7 +46915,7 @@ const serializeAws_restXmlAnalyticsS3BucketDestination = (input, context) => {
 };
 const serializeAws_restXmlBucketLifecycleConfiguration = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("BucketLifecycleConfiguration");
-    if (input.Rules !== undefined) {
+    if (input.Rules !== undefined && input.Rules !== null) {
         const nodes = serializeAws_restXmlLifecycleRules(input.Rules, context);
         nodes.map((node) => {
             node = node.withName("Rule");
@@ -47230,7 +46926,7 @@ const serializeAws_restXmlBucketLifecycleConfiguration = (input, context) => {
 };
 const serializeAws_restXmlBucketLoggingStatus = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("BucketLoggingStatus");
-    if (input.LoggingEnabled !== undefined) {
+    if (input.LoggingEnabled !== undefined && input.LoggingEnabled !== null) {
         const node = serializeAws_restXmlLoggingEnabled(input.LoggingEnabled, context).withName("LoggingEnabled");
         bodyNode.addChildNode(node);
     }
@@ -47238,7 +46934,7 @@ const serializeAws_restXmlBucketLoggingStatus = (input, context) => {
 };
 const serializeAws_restXmlCompletedMultipartUpload = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("CompletedMultipartUpload");
-    if (input.Parts !== undefined) {
+    if (input.Parts !== undefined && input.Parts !== null) {
         const nodes = serializeAws_restXmlCompletedPartList(input.Parts, context);
         nodes.map((node) => {
             node = node.withName("Part");
@@ -47249,11 +46945,11 @@ const serializeAws_restXmlCompletedMultipartUpload = (input, context) => {
 };
 const serializeAws_restXmlCompletedPart = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("CompletedPart");
-    if (input.ETag !== undefined) {
+    if (input.ETag !== undefined && input.ETag !== null) {
         const node = new xml_builder_1.XmlNode("ETag").addChildNode(new xml_builder_1.XmlText(input.ETag)).withName("ETag");
         bodyNode.addChildNode(node);
     }
-    if (input.PartNumber !== undefined) {
+    if (input.PartNumber !== undefined && input.PartNumber !== null) {
         const node = new xml_builder_1.XmlNode("PartNumber")
             .addChildNode(new xml_builder_1.XmlText(String(input.PartNumber)))
             .withName("PartNumber");
@@ -47262,20 +46958,25 @@ const serializeAws_restXmlCompletedPart = (input, context) => {
     return bodyNode;
 };
 const serializeAws_restXmlCompletedPartList = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = serializeAws_restXmlCompletedPart(entry, context);
         return node.withName("member");
     });
 };
 const serializeAws_restXmlCondition = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("Condition");
-    if (input.HttpErrorCodeReturnedEquals !== undefined) {
+    if (input.HttpErrorCodeReturnedEquals !== undefined && input.HttpErrorCodeReturnedEquals !== null) {
         const node = new xml_builder_1.XmlNode("HttpErrorCodeReturnedEquals")
             .addChildNode(new xml_builder_1.XmlText(input.HttpErrorCodeReturnedEquals))
             .withName("HttpErrorCodeReturnedEquals");
         bodyNode.addChildNode(node);
     }
-    if (input.KeyPrefixEquals !== undefined) {
+    if (input.KeyPrefixEquals !== undefined && input.KeyPrefixEquals !== null) {
         const node = new xml_builder_1.XmlNode("KeyPrefixEquals")
             .addChildNode(new xml_builder_1.XmlText(input.KeyPrefixEquals))
             .withName("KeyPrefixEquals");
@@ -47285,7 +46986,7 @@ const serializeAws_restXmlCondition = (input, context) => {
 };
 const serializeAws_restXmlCORSConfiguration = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("CORSConfiguration");
-    if (input.CORSRules !== undefined) {
+    if (input.CORSRules !== undefined && input.CORSRules !== null) {
         const nodes = serializeAws_restXmlCORSRules(input.CORSRules, context);
         nodes.map((node) => {
             node = node.withName("CORSRule");
@@ -47296,35 +46997,35 @@ const serializeAws_restXmlCORSConfiguration = (input, context) => {
 };
 const serializeAws_restXmlCORSRule = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("CORSRule");
-    if (input.AllowedHeaders !== undefined) {
+    if (input.AllowedHeaders !== undefined && input.AllowedHeaders !== null) {
         const nodes = serializeAws_restXmlAllowedHeaders(input.AllowedHeaders, context);
         nodes.map((node) => {
             node = node.withName("AllowedHeader");
             bodyNode.addChildNode(node);
         });
     }
-    if (input.AllowedMethods !== undefined) {
+    if (input.AllowedMethods !== undefined && input.AllowedMethods !== null) {
         const nodes = serializeAws_restXmlAllowedMethods(input.AllowedMethods, context);
         nodes.map((node) => {
             node = node.withName("AllowedMethod");
             bodyNode.addChildNode(node);
         });
     }
-    if (input.AllowedOrigins !== undefined) {
+    if (input.AllowedOrigins !== undefined && input.AllowedOrigins !== null) {
         const nodes = serializeAws_restXmlAllowedOrigins(input.AllowedOrigins, context);
         nodes.map((node) => {
             node = node.withName("AllowedOrigin");
             bodyNode.addChildNode(node);
         });
     }
-    if (input.ExposeHeaders !== undefined) {
+    if (input.ExposeHeaders !== undefined && input.ExposeHeaders !== null) {
         const nodes = serializeAws_restXmlExposeHeaders(input.ExposeHeaders, context);
         nodes.map((node) => {
             node = node.withName("ExposeHeader");
             bodyNode.addChildNode(node);
         });
     }
-    if (input.MaxAgeSeconds !== undefined) {
+    if (input.MaxAgeSeconds !== undefined && input.MaxAgeSeconds !== null) {
         const node = new xml_builder_1.XmlNode("MaxAgeSeconds")
             .addChildNode(new xml_builder_1.XmlText(String(input.MaxAgeSeconds)))
             .withName("MaxAgeSeconds");
@@ -47333,14 +47034,19 @@ const serializeAws_restXmlCORSRule = (input, context) => {
     return bodyNode;
 };
 const serializeAws_restXmlCORSRules = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = serializeAws_restXmlCORSRule(entry, context);
         return node.withName("member");
     });
 };
 const serializeAws_restXmlCreateBucketConfiguration = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("CreateBucketConfiguration");
-    if (input.LocationConstraint !== undefined) {
+    if (input.LocationConstraint !== undefined && input.LocationConstraint !== null) {
         const node = new xml_builder_1.XmlNode("BucketLocationConstraint")
             .addChildNode(new xml_builder_1.XmlText(input.LocationConstraint))
             .withName("LocationConstraint");
@@ -47350,41 +47056,41 @@ const serializeAws_restXmlCreateBucketConfiguration = (input, context) => {
 };
 const serializeAws_restXmlCSVInput = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("CSVInput");
-    if (input.FileHeaderInfo !== undefined) {
+    if (input.FileHeaderInfo !== undefined && input.FileHeaderInfo !== null) {
         const node = new xml_builder_1.XmlNode("FileHeaderInfo")
             .addChildNode(new xml_builder_1.XmlText(input.FileHeaderInfo))
             .withName("FileHeaderInfo");
         bodyNode.addChildNode(node);
     }
-    if (input.Comments !== undefined) {
+    if (input.Comments !== undefined && input.Comments !== null) {
         const node = new xml_builder_1.XmlNode("Comments").addChildNode(new xml_builder_1.XmlText(input.Comments)).withName("Comments");
         bodyNode.addChildNode(node);
     }
-    if (input.QuoteEscapeCharacter !== undefined) {
+    if (input.QuoteEscapeCharacter !== undefined && input.QuoteEscapeCharacter !== null) {
         const node = new xml_builder_1.XmlNode("QuoteEscapeCharacter")
             .addChildNode(new xml_builder_1.XmlText(input.QuoteEscapeCharacter))
             .withName("QuoteEscapeCharacter");
         bodyNode.addChildNode(node);
     }
-    if (input.RecordDelimiter !== undefined) {
+    if (input.RecordDelimiter !== undefined && input.RecordDelimiter !== null) {
         const node = new xml_builder_1.XmlNode("RecordDelimiter")
             .addChildNode(new xml_builder_1.XmlText(input.RecordDelimiter))
             .withName("RecordDelimiter");
         bodyNode.addChildNode(node);
     }
-    if (input.FieldDelimiter !== undefined) {
+    if (input.FieldDelimiter !== undefined && input.FieldDelimiter !== null) {
         const node = new xml_builder_1.XmlNode("FieldDelimiter")
             .addChildNode(new xml_builder_1.XmlText(input.FieldDelimiter))
             .withName("FieldDelimiter");
         bodyNode.addChildNode(node);
     }
-    if (input.QuoteCharacter !== undefined) {
+    if (input.QuoteCharacter !== undefined && input.QuoteCharacter !== null) {
         const node = new xml_builder_1.XmlNode("QuoteCharacter")
             .addChildNode(new xml_builder_1.XmlText(input.QuoteCharacter))
             .withName("QuoteCharacter");
         bodyNode.addChildNode(node);
     }
-    if (input.AllowQuotedRecordDelimiter !== undefined) {
+    if (input.AllowQuotedRecordDelimiter !== undefined && input.AllowQuotedRecordDelimiter !== null) {
         const node = new xml_builder_1.XmlNode("AllowQuotedRecordDelimiter")
             .addChildNode(new xml_builder_1.XmlText(String(input.AllowQuotedRecordDelimiter)))
             .withName("AllowQuotedRecordDelimiter");
@@ -47394,29 +47100,29 @@ const serializeAws_restXmlCSVInput = (input, context) => {
 };
 const serializeAws_restXmlCSVOutput = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("CSVOutput");
-    if (input.QuoteFields !== undefined) {
+    if (input.QuoteFields !== undefined && input.QuoteFields !== null) {
         const node = new xml_builder_1.XmlNode("QuoteFields").addChildNode(new xml_builder_1.XmlText(input.QuoteFields)).withName("QuoteFields");
         bodyNode.addChildNode(node);
     }
-    if (input.QuoteEscapeCharacter !== undefined) {
+    if (input.QuoteEscapeCharacter !== undefined && input.QuoteEscapeCharacter !== null) {
         const node = new xml_builder_1.XmlNode("QuoteEscapeCharacter")
             .addChildNode(new xml_builder_1.XmlText(input.QuoteEscapeCharacter))
             .withName("QuoteEscapeCharacter");
         bodyNode.addChildNode(node);
     }
-    if (input.RecordDelimiter !== undefined) {
+    if (input.RecordDelimiter !== undefined && input.RecordDelimiter !== null) {
         const node = new xml_builder_1.XmlNode("RecordDelimiter")
             .addChildNode(new xml_builder_1.XmlText(input.RecordDelimiter))
             .withName("RecordDelimiter");
         bodyNode.addChildNode(node);
     }
-    if (input.FieldDelimiter !== undefined) {
+    if (input.FieldDelimiter !== undefined && input.FieldDelimiter !== null) {
         const node = new xml_builder_1.XmlNode("FieldDelimiter")
             .addChildNode(new xml_builder_1.XmlText(input.FieldDelimiter))
             .withName("FieldDelimiter");
         bodyNode.addChildNode(node);
     }
-    if (input.QuoteCharacter !== undefined) {
+    if (input.QuoteCharacter !== undefined && input.QuoteCharacter !== null) {
         const node = new xml_builder_1.XmlNode("QuoteCharacter")
             .addChildNode(new xml_builder_1.XmlText(input.QuoteCharacter))
             .withName("QuoteCharacter");
@@ -47426,15 +47132,15 @@ const serializeAws_restXmlCSVOutput = (input, context) => {
 };
 const serializeAws_restXmlDefaultRetention = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("DefaultRetention");
-    if (input.Mode !== undefined) {
+    if (input.Mode !== undefined && input.Mode !== null) {
         const node = new xml_builder_1.XmlNode("ObjectLockRetentionMode").addChildNode(new xml_builder_1.XmlText(input.Mode)).withName("Mode");
         bodyNode.addChildNode(node);
     }
-    if (input.Days !== undefined) {
+    if (input.Days !== undefined && input.Days !== null) {
         const node = new xml_builder_1.XmlNode("Days").addChildNode(new xml_builder_1.XmlText(String(input.Days))).withName("Days");
         bodyNode.addChildNode(node);
     }
-    if (input.Years !== undefined) {
+    if (input.Years !== undefined && input.Years !== null) {
         const node = new xml_builder_1.XmlNode("Years").addChildNode(new xml_builder_1.XmlText(String(input.Years))).withName("Years");
         bodyNode.addChildNode(node);
     }
@@ -47442,14 +47148,14 @@ const serializeAws_restXmlDefaultRetention = (input, context) => {
 };
 const serializeAws_restXmlDelete = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("Delete");
-    if (input.Objects !== undefined) {
+    if (input.Objects !== undefined && input.Objects !== null) {
         const nodes = serializeAws_restXmlObjectIdentifierList(input.Objects, context);
         nodes.map((node) => {
             node = node.withName("Object");
             bodyNode.addChildNode(node);
         });
     }
-    if (input.Quiet !== undefined) {
+    if (input.Quiet !== undefined && input.Quiet !== null) {
         const node = new xml_builder_1.XmlNode("Quiet").addChildNode(new xml_builder_1.XmlText(String(input.Quiet))).withName("Quiet");
         bodyNode.addChildNode(node);
     }
@@ -47457,7 +47163,7 @@ const serializeAws_restXmlDelete = (input, context) => {
 };
 const serializeAws_restXmlDeleteMarkerReplication = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("DeleteMarkerReplication");
-    if (input.Status !== undefined) {
+    if (input.Status !== undefined && input.Status !== null) {
         const node = new xml_builder_1.XmlNode("DeleteMarkerReplicationStatus")
             .addChildNode(new xml_builder_1.XmlText(input.Status))
             .withName("Status");
@@ -47467,31 +47173,31 @@ const serializeAws_restXmlDeleteMarkerReplication = (input, context) => {
 };
 const serializeAws_restXmlDestination = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("Destination");
-    if (input.Bucket !== undefined) {
+    if (input.Bucket !== undefined && input.Bucket !== null) {
         const node = new xml_builder_1.XmlNode("BucketName").addChildNode(new xml_builder_1.XmlText(input.Bucket)).withName("Bucket");
         bodyNode.addChildNode(node);
     }
-    if (input.Account !== undefined) {
+    if (input.Account !== undefined && input.Account !== null) {
         const node = new xml_builder_1.XmlNode("AccountId").addChildNode(new xml_builder_1.XmlText(input.Account)).withName("Account");
         bodyNode.addChildNode(node);
     }
-    if (input.StorageClass !== undefined) {
+    if (input.StorageClass !== undefined && input.StorageClass !== null) {
         const node = new xml_builder_1.XmlNode("StorageClass").addChildNode(new xml_builder_1.XmlText(input.StorageClass)).withName("StorageClass");
         bodyNode.addChildNode(node);
     }
-    if (input.AccessControlTranslation !== undefined) {
+    if (input.AccessControlTranslation !== undefined && input.AccessControlTranslation !== null) {
         const node = serializeAws_restXmlAccessControlTranslation(input.AccessControlTranslation, context).withName("AccessControlTranslation");
         bodyNode.addChildNode(node);
     }
-    if (input.EncryptionConfiguration !== undefined) {
+    if (input.EncryptionConfiguration !== undefined && input.EncryptionConfiguration !== null) {
         const node = serializeAws_restXmlEncryptionConfiguration(input.EncryptionConfiguration, context).withName("EncryptionConfiguration");
         bodyNode.addChildNode(node);
     }
-    if (input.ReplicationTime !== undefined) {
+    if (input.ReplicationTime !== undefined && input.ReplicationTime !== null) {
         const node = serializeAws_restXmlReplicationTime(input.ReplicationTime, context).withName("ReplicationTime");
         bodyNode.addChildNode(node);
     }
-    if (input.Metrics !== undefined) {
+    if (input.Metrics !== undefined && input.Metrics !== null) {
         const node = serializeAws_restXmlMetrics(input.Metrics, context).withName("Metrics");
         bodyNode.addChildNode(node);
     }
@@ -47499,17 +47205,17 @@ const serializeAws_restXmlDestination = (input, context) => {
 };
 const serializeAws_restXmlEncryption = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("Encryption");
-    if (input.EncryptionType !== undefined) {
+    if (input.EncryptionType !== undefined && input.EncryptionType !== null) {
         const node = new xml_builder_1.XmlNode("ServerSideEncryption")
             .addChildNode(new xml_builder_1.XmlText(input.EncryptionType))
             .withName("EncryptionType");
         bodyNode.addChildNode(node);
     }
-    if (input.KMSKeyId !== undefined) {
+    if (input.KMSKeyId !== undefined && input.KMSKeyId !== null) {
         const node = new xml_builder_1.XmlNode("SSEKMSKeyId").addChildNode(new xml_builder_1.XmlText(input.KMSKeyId)).withName("KMSKeyId");
         bodyNode.addChildNode(node);
     }
-    if (input.KMSContext !== undefined) {
+    if (input.KMSContext !== undefined && input.KMSContext !== null) {
         const node = new xml_builder_1.XmlNode("KMSContext").addChildNode(new xml_builder_1.XmlText(input.KMSContext)).withName("KMSContext");
         bodyNode.addChildNode(node);
     }
@@ -47517,7 +47223,7 @@ const serializeAws_restXmlEncryption = (input, context) => {
 };
 const serializeAws_restXmlEncryptionConfiguration = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("EncryptionConfiguration");
-    if (input.ReplicaKmsKeyID !== undefined) {
+    if (input.ReplicaKmsKeyID !== undefined && input.ReplicaKmsKeyID !== null) {
         const node = new xml_builder_1.XmlNode("ReplicaKmsKeyID")
             .addChildNode(new xml_builder_1.XmlText(input.ReplicaKmsKeyID))
             .withName("ReplicaKmsKeyID");
@@ -47527,21 +47233,26 @@ const serializeAws_restXmlEncryptionConfiguration = (input, context) => {
 };
 const serializeAws_restXmlErrorDocument = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("ErrorDocument");
-    if (input.Key !== undefined) {
+    if (input.Key !== undefined && input.Key !== null) {
         const node = new xml_builder_1.XmlNode("ObjectKey").addChildNode(new xml_builder_1.XmlText(input.Key)).withName("Key");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
 const serializeAws_restXmlEventList = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = new xml_builder_1.XmlNode("Event").addChildNode(new xml_builder_1.XmlText(entry));
         return node.withName("member");
     });
 };
 const serializeAws_restXmlExistingObjectReplication = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("ExistingObjectReplication");
-    if (input.Status !== undefined) {
+    if (input.Status !== undefined && input.Status !== null) {
         const node = new xml_builder_1.XmlNode("ExistingObjectReplicationStatus")
             .addChildNode(new xml_builder_1.XmlText(input.Status))
             .withName("Status");
@@ -47550,32 +47261,42 @@ const serializeAws_restXmlExistingObjectReplication = (input, context) => {
     return bodyNode;
 };
 const serializeAws_restXmlExposeHeaders = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = new xml_builder_1.XmlNode("ExposeHeader").addChildNode(new xml_builder_1.XmlText(entry));
         return node.withName("member");
     });
 };
 const serializeAws_restXmlFilterRule = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("FilterRule");
-    if (input.Name !== undefined) {
+    if (input.Name !== undefined && input.Name !== null) {
         const node = new xml_builder_1.XmlNode("FilterRuleName").addChildNode(new xml_builder_1.XmlText(input.Name)).withName("Name");
         bodyNode.addChildNode(node);
     }
-    if (input.Value !== undefined) {
+    if (input.Value !== undefined && input.Value !== null) {
         const node = new xml_builder_1.XmlNode("FilterRuleValue").addChildNode(new xml_builder_1.XmlText(input.Value)).withName("Value");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
 const serializeAws_restXmlFilterRuleList = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = serializeAws_restXmlFilterRule(entry, context);
         return node.withName("member");
     });
 };
 const serializeAws_restXmlGlacierJobParameters = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("GlacierJobParameters");
-    if (input.Tier !== undefined) {
+    if (input.Tier !== undefined && input.Tier !== null) {
         const node = new xml_builder_1.XmlNode("Tier").addChildNode(new xml_builder_1.XmlText(input.Tier)).withName("Tier");
         bodyNode.addChildNode(node);
     }
@@ -47583,11 +47304,11 @@ const serializeAws_restXmlGlacierJobParameters = (input, context) => {
 };
 const serializeAws_restXmlGrant = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("Grant");
-    if (input.Grantee !== undefined) {
+    if (input.Grantee !== undefined && input.Grantee !== null) {
         const node = serializeAws_restXmlGrantee(input.Grantee, context).withName("Grantee");
         bodyNode.addChildNode(node);
     }
-    if (input.Permission !== undefined) {
+    if (input.Permission !== undefined && input.Permission !== null) {
         const node = new xml_builder_1.XmlNode("Permission").addChildNode(new xml_builder_1.XmlText(input.Permission)).withName("Permission");
         bodyNode.addChildNode(node);
     }
@@ -47595,36 +47316,41 @@ const serializeAws_restXmlGrant = (input, context) => {
 };
 const serializeAws_restXmlGrantee = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("Grantee");
-    if (input.DisplayName !== undefined) {
+    if (input.DisplayName !== undefined && input.DisplayName !== null) {
         const node = new xml_builder_1.XmlNode("DisplayName").addChildNode(new xml_builder_1.XmlText(input.DisplayName)).withName("DisplayName");
         bodyNode.addChildNode(node);
     }
-    if (input.EmailAddress !== undefined) {
+    if (input.EmailAddress !== undefined && input.EmailAddress !== null) {
         const node = new xml_builder_1.XmlNode("EmailAddress").addChildNode(new xml_builder_1.XmlText(input.EmailAddress)).withName("EmailAddress");
         bodyNode.addChildNode(node);
     }
-    if (input.ID !== undefined) {
+    if (input.ID !== undefined && input.ID !== null) {
         const node = new xml_builder_1.XmlNode("ID").addChildNode(new xml_builder_1.XmlText(input.ID)).withName("ID");
         bodyNode.addChildNode(node);
     }
-    if (input.URI !== undefined) {
+    if (input.URI !== undefined && input.URI !== null) {
         const node = new xml_builder_1.XmlNode("URI").addChildNode(new xml_builder_1.XmlText(input.URI)).withName("URI");
         bodyNode.addChildNode(node);
     }
-    if (input.Type !== undefined) {
+    if (input.Type !== undefined && input.Type !== null) {
         bodyNode.addAttribute("xsi:type", input.Type);
     }
     return bodyNode;
 };
 const serializeAws_restXmlGrants = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = serializeAws_restXmlGrant(entry, context);
         return node.withName("Grant");
     });
 };
 const serializeAws_restXmlIndexDocument = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("IndexDocument");
-    if (input.Suffix !== undefined) {
+    if (input.Suffix !== undefined && input.Suffix !== null) {
         const node = new xml_builder_1.XmlNode("Suffix").addChildNode(new xml_builder_1.XmlText(input.Suffix)).withName("Suffix");
         bodyNode.addChildNode(node);
     }
@@ -47632,21 +47358,21 @@ const serializeAws_restXmlIndexDocument = (input, context) => {
 };
 const serializeAws_restXmlInputSerialization = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("InputSerialization");
-    if (input.CSV !== undefined) {
+    if (input.CSV !== undefined && input.CSV !== null) {
         const node = serializeAws_restXmlCSVInput(input.CSV, context).withName("CSV");
         bodyNode.addChildNode(node);
     }
-    if (input.CompressionType !== undefined) {
+    if (input.CompressionType !== undefined && input.CompressionType !== null) {
         const node = new xml_builder_1.XmlNode("CompressionType")
             .addChildNode(new xml_builder_1.XmlText(input.CompressionType))
             .withName("CompressionType");
         bodyNode.addChildNode(node);
     }
-    if (input.JSON !== undefined) {
+    if (input.JSON !== undefined && input.JSON !== null) {
         const node = serializeAws_restXmlJSONInput(input.JSON, context).withName("JSON");
         bodyNode.addChildNode(node);
     }
-    if (input.Parquet !== undefined) {
+    if (input.Parquet !== undefined && input.Parquet !== null) {
         const node = serializeAws_restXmlParquetInput(input.Parquet, context).withName("Parquet");
         bodyNode.addChildNode(node);
     }
@@ -47654,11 +47380,11 @@ const serializeAws_restXmlInputSerialization = (input, context) => {
 };
 const serializeAws_restXmlIntelligentTieringAndOperator = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("IntelligentTieringAndOperator");
-    if (input.Prefix !== undefined) {
+    if (input.Prefix !== undefined && input.Prefix !== null) {
         const node = new xml_builder_1.XmlNode("Prefix").addChildNode(new xml_builder_1.XmlText(input.Prefix)).withName("Prefix");
         bodyNode.addChildNode(node);
     }
-    if (input.Tags !== undefined) {
+    if (input.Tags !== undefined && input.Tags !== null) {
         const nodes = serializeAws_restXmlTagSet(input.Tags, context);
         nodes.map((node) => {
             node = node.withName("Tag");
@@ -47669,19 +47395,19 @@ const serializeAws_restXmlIntelligentTieringAndOperator = (input, context) => {
 };
 const serializeAws_restXmlIntelligentTieringConfiguration = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("IntelligentTieringConfiguration");
-    if (input.Id !== undefined) {
+    if (input.Id !== undefined && input.Id !== null) {
         const node = new xml_builder_1.XmlNode("IntelligentTieringId").addChildNode(new xml_builder_1.XmlText(input.Id)).withName("Id");
         bodyNode.addChildNode(node);
     }
-    if (input.Filter !== undefined) {
+    if (input.Filter !== undefined && input.Filter !== null) {
         const node = serializeAws_restXmlIntelligentTieringFilter(input.Filter, context).withName("Filter");
         bodyNode.addChildNode(node);
     }
-    if (input.Status !== undefined) {
+    if (input.Status !== undefined && input.Status !== null) {
         const node = new xml_builder_1.XmlNode("IntelligentTieringStatus").addChildNode(new xml_builder_1.XmlText(input.Status)).withName("Status");
         bodyNode.addChildNode(node);
     }
-    if (input.Tierings !== undefined) {
+    if (input.Tierings !== undefined && input.Tierings !== null) {
         const nodes = serializeAws_restXmlTieringList(input.Tierings, context);
         nodes.map((node) => {
             node = node.withName("Tiering");
@@ -47692,15 +47418,15 @@ const serializeAws_restXmlIntelligentTieringConfiguration = (input, context) => 
 };
 const serializeAws_restXmlIntelligentTieringFilter = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("IntelligentTieringFilter");
-    if (input.Prefix !== undefined) {
+    if (input.Prefix !== undefined && input.Prefix !== null) {
         const node = new xml_builder_1.XmlNode("Prefix").addChildNode(new xml_builder_1.XmlText(input.Prefix)).withName("Prefix");
         bodyNode.addChildNode(node);
     }
-    if (input.Tag !== undefined) {
+    if (input.Tag !== undefined && input.Tag !== null) {
         const node = serializeAws_restXmlTag(input.Tag, context).withName("Tag");
         bodyNode.addChildNode(node);
     }
-    if (input.And !== undefined) {
+    if (input.And !== undefined && input.And !== null) {
         const node = serializeAws_restXmlIntelligentTieringAndOperator(input.And, context).withName("And");
         bodyNode.addChildNode(node);
     }
@@ -47708,29 +47434,29 @@ const serializeAws_restXmlIntelligentTieringFilter = (input, context) => {
 };
 const serializeAws_restXmlInventoryConfiguration = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("InventoryConfiguration");
-    if (input.Destination !== undefined) {
+    if (input.Destination !== undefined && input.Destination !== null) {
         const node = serializeAws_restXmlInventoryDestination(input.Destination, context).withName("Destination");
         bodyNode.addChildNode(node);
     }
-    if (input.IsEnabled !== undefined) {
+    if (input.IsEnabled !== undefined && input.IsEnabled !== null) {
         const node = new xml_builder_1.XmlNode("IsEnabled").addChildNode(new xml_builder_1.XmlText(String(input.IsEnabled))).withName("IsEnabled");
         bodyNode.addChildNode(node);
     }
-    if (input.Filter !== undefined) {
+    if (input.Filter !== undefined && input.Filter !== null) {
         const node = serializeAws_restXmlInventoryFilter(input.Filter, context).withName("Filter");
         bodyNode.addChildNode(node);
     }
-    if (input.Id !== undefined) {
+    if (input.Id !== undefined && input.Id !== null) {
         const node = new xml_builder_1.XmlNode("InventoryId").addChildNode(new xml_builder_1.XmlText(input.Id)).withName("Id");
         bodyNode.addChildNode(node);
     }
-    if (input.IncludedObjectVersions !== undefined) {
+    if (input.IncludedObjectVersions !== undefined && input.IncludedObjectVersions !== null) {
         const node = new xml_builder_1.XmlNode("InventoryIncludedObjectVersions")
             .addChildNode(new xml_builder_1.XmlText(input.IncludedObjectVersions))
             .withName("IncludedObjectVersions");
         bodyNode.addChildNode(node);
     }
-    if (input.OptionalFields !== undefined) {
+    if (input.OptionalFields !== undefined && input.OptionalFields !== null) {
         const nodes = serializeAws_restXmlInventoryOptionalFields(input.OptionalFields, context);
         const containerNode = new xml_builder_1.XmlNode("OptionalFields");
         nodes.map((node) => {
@@ -47738,7 +47464,7 @@ const serializeAws_restXmlInventoryConfiguration = (input, context) => {
         });
         bodyNode.addChildNode(containerNode);
     }
-    if (input.Schedule !== undefined) {
+    if (input.Schedule !== undefined && input.Schedule !== null) {
         const node = serializeAws_restXmlInventorySchedule(input.Schedule, context).withName("Schedule");
         bodyNode.addChildNode(node);
     }
@@ -47746,7 +47472,7 @@ const serializeAws_restXmlInventoryConfiguration = (input, context) => {
 };
 const serializeAws_restXmlInventoryDestination = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("InventoryDestination");
-    if (input.S3BucketDestination !== undefined) {
+    if (input.S3BucketDestination !== undefined && input.S3BucketDestination !== null) {
         const node = serializeAws_restXmlInventoryS3BucketDestination(input.S3BucketDestination, context).withName("S3BucketDestination");
         bodyNode.addChildNode(node);
     }
@@ -47754,11 +47480,11 @@ const serializeAws_restXmlInventoryDestination = (input, context) => {
 };
 const serializeAws_restXmlInventoryEncryption = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("InventoryEncryption");
-    if (input.SSES3 !== undefined) {
+    if (input.SSES3 !== undefined && input.SSES3 !== null) {
         const node = serializeAws_restXmlSSES3(input.SSES3, context).withName("SSE-S3");
         bodyNode.addChildNode(node);
     }
-    if (input.SSEKMS !== undefined) {
+    if (input.SSEKMS !== undefined && input.SSEKMS !== null) {
         const node = serializeAws_restXmlSSEKMS(input.SSEKMS, context).withName("SSE-KMS");
         bodyNode.addChildNode(node);
     }
@@ -47766,37 +47492,42 @@ const serializeAws_restXmlInventoryEncryption = (input, context) => {
 };
 const serializeAws_restXmlInventoryFilter = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("InventoryFilter");
-    if (input.Prefix !== undefined) {
+    if (input.Prefix !== undefined && input.Prefix !== null) {
         const node = new xml_builder_1.XmlNode("Prefix").addChildNode(new xml_builder_1.XmlText(input.Prefix)).withName("Prefix");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
 const serializeAws_restXmlInventoryOptionalFields = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = new xml_builder_1.XmlNode("InventoryOptionalField").addChildNode(new xml_builder_1.XmlText(entry));
         return node.withName("Field");
     });
 };
 const serializeAws_restXmlInventoryS3BucketDestination = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("InventoryS3BucketDestination");
-    if (input.AccountId !== undefined) {
+    if (input.AccountId !== undefined && input.AccountId !== null) {
         const node = new xml_builder_1.XmlNode("AccountId").addChildNode(new xml_builder_1.XmlText(input.AccountId)).withName("AccountId");
         bodyNode.addChildNode(node);
     }
-    if (input.Bucket !== undefined) {
+    if (input.Bucket !== undefined && input.Bucket !== null) {
         const node = new xml_builder_1.XmlNode("BucketName").addChildNode(new xml_builder_1.XmlText(input.Bucket)).withName("Bucket");
         bodyNode.addChildNode(node);
     }
-    if (input.Format !== undefined) {
+    if (input.Format !== undefined && input.Format !== null) {
         const node = new xml_builder_1.XmlNode("InventoryFormat").addChildNode(new xml_builder_1.XmlText(input.Format)).withName("Format");
         bodyNode.addChildNode(node);
     }
-    if (input.Prefix !== undefined) {
+    if (input.Prefix !== undefined && input.Prefix !== null) {
         const node = new xml_builder_1.XmlNode("Prefix").addChildNode(new xml_builder_1.XmlText(input.Prefix)).withName("Prefix");
         bodyNode.addChildNode(node);
     }
-    if (input.Encryption !== undefined) {
+    if (input.Encryption !== undefined && input.Encryption !== null) {
         const node = serializeAws_restXmlInventoryEncryption(input.Encryption, context).withName("Encryption");
         bodyNode.addChildNode(node);
     }
@@ -47804,7 +47535,7 @@ const serializeAws_restXmlInventoryS3BucketDestination = (input, context) => {
 };
 const serializeAws_restXmlInventorySchedule = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("InventorySchedule");
-    if (input.Frequency !== undefined) {
+    if (input.Frequency !== undefined && input.Frequency !== null) {
         const node = new xml_builder_1.XmlNode("InventoryFrequency").addChildNode(new xml_builder_1.XmlText(input.Frequency)).withName("Frequency");
         bodyNode.addChildNode(node);
     }
@@ -47812,7 +47543,7 @@ const serializeAws_restXmlInventorySchedule = (input, context) => {
 };
 const serializeAws_restXmlJSONInput = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("JSONInput");
-    if (input.Type !== undefined) {
+    if (input.Type !== undefined && input.Type !== null) {
         const node = new xml_builder_1.XmlNode("JSONType").addChildNode(new xml_builder_1.XmlText(input.Type)).withName("Type");
         bodyNode.addChildNode(node);
     }
@@ -47820,7 +47551,7 @@ const serializeAws_restXmlJSONInput = (input, context) => {
 };
 const serializeAws_restXmlJSONOutput = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("JSONOutput");
-    if (input.RecordDelimiter !== undefined) {
+    if (input.RecordDelimiter !== undefined && input.RecordDelimiter !== null) {
         const node = new xml_builder_1.XmlNode("RecordDelimiter")
             .addChildNode(new xml_builder_1.XmlText(input.RecordDelimiter))
             .withName("RecordDelimiter");
@@ -47830,48 +47561,53 @@ const serializeAws_restXmlJSONOutput = (input, context) => {
 };
 const serializeAws_restXmlLambdaFunctionConfiguration = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("LambdaFunctionConfiguration");
-    if (input.Id !== undefined) {
+    if (input.Id !== undefined && input.Id !== null) {
         const node = new xml_builder_1.XmlNode("NotificationId").addChildNode(new xml_builder_1.XmlText(input.Id)).withName("Id");
         bodyNode.addChildNode(node);
     }
-    if (input.LambdaFunctionArn !== undefined) {
+    if (input.LambdaFunctionArn !== undefined && input.LambdaFunctionArn !== null) {
         const node = new xml_builder_1.XmlNode("LambdaFunctionArn")
             .addChildNode(new xml_builder_1.XmlText(input.LambdaFunctionArn))
             .withName("CloudFunction");
         bodyNode.addChildNode(node);
     }
-    if (input.Events !== undefined) {
+    if (input.Events !== undefined && input.Events !== null) {
         const nodes = serializeAws_restXmlEventList(input.Events, context);
         nodes.map((node) => {
             node = node.withName("Event");
             bodyNode.addChildNode(node);
         });
     }
-    if (input.Filter !== undefined) {
+    if (input.Filter !== undefined && input.Filter !== null) {
         const node = serializeAws_restXmlNotificationConfigurationFilter(input.Filter, context).withName("Filter");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
 const serializeAws_restXmlLambdaFunctionConfigurationList = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = serializeAws_restXmlLambdaFunctionConfiguration(entry, context);
         return node.withName("member");
     });
 };
 const serializeAws_restXmlLifecycleExpiration = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("LifecycleExpiration");
-    if (input.Date !== undefined) {
+    if (input.Date !== undefined && input.Date !== null) {
         const node = new xml_builder_1.XmlNode("Date")
             .addChildNode(new xml_builder_1.XmlText(input.Date.toISOString().split(".")[0] + "Z"))
             .withName("Date");
         bodyNode.addChildNode(node);
     }
-    if (input.Days !== undefined) {
+    if (input.Days !== undefined && input.Days !== null) {
         const node = new xml_builder_1.XmlNode("Days").addChildNode(new xml_builder_1.XmlText(String(input.Days))).withName("Days");
         bodyNode.addChildNode(node);
     }
-    if (input.ExpiredObjectDeleteMarker !== undefined) {
+    if (input.ExpiredObjectDeleteMarker !== undefined && input.ExpiredObjectDeleteMarker !== null) {
         const node = new xml_builder_1.XmlNode("ExpiredObjectDeleteMarker")
             .addChildNode(new xml_builder_1.XmlText(String(input.ExpiredObjectDeleteMarker)))
             .withName("ExpiredObjectDeleteMarker");
@@ -47881,45 +47617,45 @@ const serializeAws_restXmlLifecycleExpiration = (input, context) => {
 };
 const serializeAws_restXmlLifecycleRule = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("LifecycleRule");
-    if (input.Expiration !== undefined) {
+    if (input.Expiration !== undefined && input.Expiration !== null) {
         const node = serializeAws_restXmlLifecycleExpiration(input.Expiration, context).withName("Expiration");
         bodyNode.addChildNode(node);
     }
-    if (input.ID !== undefined) {
+    if (input.ID !== undefined && input.ID !== null) {
         const node = new xml_builder_1.XmlNode("ID").addChildNode(new xml_builder_1.XmlText(input.ID)).withName("ID");
         bodyNode.addChildNode(node);
     }
-    if (input.Prefix !== undefined) {
+    if (input.Prefix !== undefined && input.Prefix !== null) {
         const node = new xml_builder_1.XmlNode("Prefix").addChildNode(new xml_builder_1.XmlText(input.Prefix)).withName("Prefix");
         bodyNode.addChildNode(node);
     }
-    if (input.Filter !== undefined) {
+    if (input.Filter !== undefined && input.Filter !== null) {
         const node = serializeAws_restXmlLifecycleRuleFilter(input.Filter, context).withName("Filter");
         bodyNode.addChildNode(node);
     }
-    if (input.Status !== undefined) {
+    if (input.Status !== undefined && input.Status !== null) {
         const node = new xml_builder_1.XmlNode("ExpirationStatus").addChildNode(new xml_builder_1.XmlText(input.Status)).withName("Status");
         bodyNode.addChildNode(node);
     }
-    if (input.Transitions !== undefined) {
+    if (input.Transitions !== undefined && input.Transitions !== null) {
         const nodes = serializeAws_restXmlTransitionList(input.Transitions, context);
         nodes.map((node) => {
             node = node.withName("Transition");
             bodyNode.addChildNode(node);
         });
     }
-    if (input.NoncurrentVersionTransitions !== undefined) {
+    if (input.NoncurrentVersionTransitions !== undefined && input.NoncurrentVersionTransitions !== null) {
         const nodes = serializeAws_restXmlNoncurrentVersionTransitionList(input.NoncurrentVersionTransitions, context);
         nodes.map((node) => {
             node = node.withName("NoncurrentVersionTransition");
             bodyNode.addChildNode(node);
         });
     }
-    if (input.NoncurrentVersionExpiration !== undefined) {
+    if (input.NoncurrentVersionExpiration !== undefined && input.NoncurrentVersionExpiration !== null) {
         const node = serializeAws_restXmlNoncurrentVersionExpiration(input.NoncurrentVersionExpiration, context).withName("NoncurrentVersionExpiration");
         bodyNode.addChildNode(node);
     }
-    if (input.AbortIncompleteMultipartUpload !== undefined) {
+    if (input.AbortIncompleteMultipartUpload !== undefined && input.AbortIncompleteMultipartUpload !== null) {
         const node = serializeAws_restXmlAbortIncompleteMultipartUpload(input.AbortIncompleteMultipartUpload, context).withName("AbortIncompleteMultipartUpload");
         bodyNode.addChildNode(node);
     }
@@ -47927,11 +47663,11 @@ const serializeAws_restXmlLifecycleRule = (input, context) => {
 };
 const serializeAws_restXmlLifecycleRuleAndOperator = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("LifecycleRuleAndOperator");
-    if (input.Prefix !== undefined) {
+    if (input.Prefix !== undefined && input.Prefix !== null) {
         const node = new xml_builder_1.XmlNode("Prefix").addChildNode(new xml_builder_1.XmlText(input.Prefix)).withName("Prefix");
         bodyNode.addChildNode(node);
     }
-    if (input.Tags !== undefined) {
+    if (input.Tags !== undefined && input.Tags !== null) {
         const nodes = serializeAws_restXmlTagSet(input.Tags, context);
         nodes.map((node) => {
             node = node.withName("Tag");
@@ -47965,18 +47701,23 @@ const serializeAws_restXmlLifecycleRuleFilter = (input, context) => {
     return bodyNode;
 };
 const serializeAws_restXmlLifecycleRules = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = serializeAws_restXmlLifecycleRule(entry, context);
         return node.withName("member");
     });
 };
 const serializeAws_restXmlLoggingEnabled = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("LoggingEnabled");
-    if (input.TargetBucket !== undefined) {
+    if (input.TargetBucket !== undefined && input.TargetBucket !== null) {
         const node = new xml_builder_1.XmlNode("TargetBucket").addChildNode(new xml_builder_1.XmlText(input.TargetBucket)).withName("TargetBucket");
         bodyNode.addChildNode(node);
     }
-    if (input.TargetGrants !== undefined) {
+    if (input.TargetGrants !== undefined && input.TargetGrants !== null) {
         const nodes = serializeAws_restXmlTargetGrants(input.TargetGrants, context);
         const containerNode = new xml_builder_1.XmlNode("TargetGrants");
         nodes.map((node) => {
@@ -47984,7 +47725,7 @@ const serializeAws_restXmlLoggingEnabled = (input, context) => {
         });
         bodyNode.addChildNode(containerNode);
     }
-    if (input.TargetPrefix !== undefined) {
+    if (input.TargetPrefix !== undefined && input.TargetPrefix !== null) {
         const node = new xml_builder_1.XmlNode("TargetPrefix").addChildNode(new xml_builder_1.XmlText(input.TargetPrefix)).withName("TargetPrefix");
         bodyNode.addChildNode(node);
     }
@@ -47992,11 +47733,11 @@ const serializeAws_restXmlLoggingEnabled = (input, context) => {
 };
 const serializeAws_restXmlMetadataEntry = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("MetadataEntry");
-    if (input.Name !== undefined) {
+    if (input.Name !== undefined && input.Name !== null) {
         const node = new xml_builder_1.XmlNode("MetadataKey").addChildNode(new xml_builder_1.XmlText(input.Name)).withName("Name");
         bodyNode.addChildNode(node);
     }
-    if (input.Value !== undefined) {
+    if (input.Value !== undefined && input.Value !== null) {
         const node = new xml_builder_1.XmlNode("MetadataValue").addChildNode(new xml_builder_1.XmlText(input.Value)).withName("Value");
         bodyNode.addChildNode(node);
     }
@@ -48004,11 +47745,11 @@ const serializeAws_restXmlMetadataEntry = (input, context) => {
 };
 const serializeAws_restXmlMetrics = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("Metrics");
-    if (input.Status !== undefined) {
+    if (input.Status !== undefined && input.Status !== null) {
         const node = new xml_builder_1.XmlNode("MetricsStatus").addChildNode(new xml_builder_1.XmlText(input.Status)).withName("Status");
         bodyNode.addChildNode(node);
     }
-    if (input.EventThreshold !== undefined) {
+    if (input.EventThreshold !== undefined && input.EventThreshold !== null) {
         const node = serializeAws_restXmlReplicationTimeValue(input.EventThreshold, context).withName("EventThreshold");
         bodyNode.addChildNode(node);
     }
@@ -48016,11 +47757,11 @@ const serializeAws_restXmlMetrics = (input, context) => {
 };
 const serializeAws_restXmlMetricsAndOperator = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("MetricsAndOperator");
-    if (input.Prefix !== undefined) {
+    if (input.Prefix !== undefined && input.Prefix !== null) {
         const node = new xml_builder_1.XmlNode("Prefix").addChildNode(new xml_builder_1.XmlText(input.Prefix)).withName("Prefix");
         bodyNode.addChildNode(node);
     }
-    if (input.Tags !== undefined) {
+    if (input.Tags !== undefined && input.Tags !== null) {
         const nodes = serializeAws_restXmlTagSet(input.Tags, context);
         nodes.map((node) => {
             node = node.withName("Tag");
@@ -48031,11 +47772,11 @@ const serializeAws_restXmlMetricsAndOperator = (input, context) => {
 };
 const serializeAws_restXmlMetricsConfiguration = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("MetricsConfiguration");
-    if (input.Id !== undefined) {
+    if (input.Id !== undefined && input.Id !== null) {
         const node = new xml_builder_1.XmlNode("MetricsId").addChildNode(new xml_builder_1.XmlText(input.Id)).withName("Id");
         bodyNode.addChildNode(node);
     }
-    if (input.Filter !== undefined) {
+    if (input.Filter !== undefined && input.Filter !== null) {
         const node = serializeAws_restXmlMetricsFilter(input.Filter, context).withName("Filter");
         bodyNode.addChildNode(node);
     }
@@ -48067,7 +47808,7 @@ const serializeAws_restXmlMetricsFilter = (input, context) => {
 };
 const serializeAws_restXmlNoncurrentVersionExpiration = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("NoncurrentVersionExpiration");
-    if (input.NoncurrentDays !== undefined) {
+    if (input.NoncurrentDays !== undefined && input.NoncurrentDays !== null) {
         const node = new xml_builder_1.XmlNode("Days")
             .addChildNode(new xml_builder_1.XmlText(String(input.NoncurrentDays)))
             .withName("NoncurrentDays");
@@ -48077,13 +47818,13 @@ const serializeAws_restXmlNoncurrentVersionExpiration = (input, context) => {
 };
 const serializeAws_restXmlNoncurrentVersionTransition = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("NoncurrentVersionTransition");
-    if (input.NoncurrentDays !== undefined) {
+    if (input.NoncurrentDays !== undefined && input.NoncurrentDays !== null) {
         const node = new xml_builder_1.XmlNode("Days")
             .addChildNode(new xml_builder_1.XmlText(String(input.NoncurrentDays)))
             .withName("NoncurrentDays");
         bodyNode.addChildNode(node);
     }
-    if (input.StorageClass !== undefined) {
+    if (input.StorageClass !== undefined && input.StorageClass !== null) {
         const node = new xml_builder_1.XmlNode("TransitionStorageClass")
             .addChildNode(new xml_builder_1.XmlText(input.StorageClass))
             .withName("StorageClass");
@@ -48092,28 +47833,33 @@ const serializeAws_restXmlNoncurrentVersionTransition = (input, context) => {
     return bodyNode;
 };
 const serializeAws_restXmlNoncurrentVersionTransitionList = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = serializeAws_restXmlNoncurrentVersionTransition(entry, context);
         return node.withName("member");
     });
 };
 const serializeAws_restXmlNotificationConfiguration = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("NotificationConfiguration");
-    if (input.TopicConfigurations !== undefined) {
+    if (input.TopicConfigurations !== undefined && input.TopicConfigurations !== null) {
         const nodes = serializeAws_restXmlTopicConfigurationList(input.TopicConfigurations, context);
         nodes.map((node) => {
             node = node.withName("TopicConfiguration");
             bodyNode.addChildNode(node);
         });
     }
-    if (input.QueueConfigurations !== undefined) {
+    if (input.QueueConfigurations !== undefined && input.QueueConfigurations !== null) {
         const nodes = serializeAws_restXmlQueueConfigurationList(input.QueueConfigurations, context);
         nodes.map((node) => {
             node = node.withName("QueueConfiguration");
             bodyNode.addChildNode(node);
         });
     }
-    if (input.LambdaFunctionConfigurations !== undefined) {
+    if (input.LambdaFunctionConfigurations !== undefined && input.LambdaFunctionConfigurations !== null) {
         const nodes = serializeAws_restXmlLambdaFunctionConfigurationList(input.LambdaFunctionConfigurations, context);
         nodes.map((node) => {
             node = node.withName("CloudFunctionConfiguration");
@@ -48124,7 +47870,7 @@ const serializeAws_restXmlNotificationConfiguration = (input, context) => {
 };
 const serializeAws_restXmlNotificationConfigurationFilter = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("NotificationConfigurationFilter");
-    if (input.Key !== undefined) {
+    if (input.Key !== undefined && input.Key !== null) {
         const node = serializeAws_restXmlS3KeyFilter(input.Key, context).withName("S3Key");
         bodyNode.addChildNode(node);
     }
@@ -48132,31 +47878,36 @@ const serializeAws_restXmlNotificationConfigurationFilter = (input, context) => 
 };
 const serializeAws_restXmlObjectIdentifier = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("ObjectIdentifier");
-    if (input.Key !== undefined) {
+    if (input.Key !== undefined && input.Key !== null) {
         const node = new xml_builder_1.XmlNode("ObjectKey").addChildNode(new xml_builder_1.XmlText(input.Key)).withName("Key");
         bodyNode.addChildNode(node);
     }
-    if (input.VersionId !== undefined) {
+    if (input.VersionId !== undefined && input.VersionId !== null) {
         const node = new xml_builder_1.XmlNode("ObjectVersionId").addChildNode(new xml_builder_1.XmlText(input.VersionId)).withName("VersionId");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
 const serializeAws_restXmlObjectIdentifierList = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = serializeAws_restXmlObjectIdentifier(entry, context);
         return node.withName("member");
     });
 };
 const serializeAws_restXmlObjectLockConfiguration = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("ObjectLockConfiguration");
-    if (input.ObjectLockEnabled !== undefined) {
+    if (input.ObjectLockEnabled !== undefined && input.ObjectLockEnabled !== null) {
         const node = new xml_builder_1.XmlNode("ObjectLockEnabled")
             .addChildNode(new xml_builder_1.XmlText(input.ObjectLockEnabled))
             .withName("ObjectLockEnabled");
         bodyNode.addChildNode(node);
     }
-    if (input.Rule !== undefined) {
+    if (input.Rule !== undefined && input.Rule !== null) {
         const node = serializeAws_restXmlObjectLockRule(input.Rule, context).withName("Rule");
         bodyNode.addChildNode(node);
     }
@@ -48164,7 +47915,7 @@ const serializeAws_restXmlObjectLockConfiguration = (input, context) => {
 };
 const serializeAws_restXmlObjectLockLegalHold = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("ObjectLockLegalHold");
-    if (input.Status !== undefined) {
+    if (input.Status !== undefined && input.Status !== null) {
         const node = new xml_builder_1.XmlNode("ObjectLockLegalHoldStatus")
             .addChildNode(new xml_builder_1.XmlText(input.Status))
             .withName("Status");
@@ -48174,11 +47925,11 @@ const serializeAws_restXmlObjectLockLegalHold = (input, context) => {
 };
 const serializeAws_restXmlObjectLockRetention = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("ObjectLockRetention");
-    if (input.Mode !== undefined) {
+    if (input.Mode !== undefined && input.Mode !== null) {
         const node = new xml_builder_1.XmlNode("ObjectLockRetentionMode").addChildNode(new xml_builder_1.XmlText(input.Mode)).withName("Mode");
         bodyNode.addChildNode(node);
     }
-    if (input.RetainUntilDate !== undefined) {
+    if (input.RetainUntilDate !== undefined && input.RetainUntilDate !== null) {
         const node = new xml_builder_1.XmlNode("Date")
             .addChildNode(new xml_builder_1.XmlText(input.RetainUntilDate.toISOString().split(".")[0] + "Z"))
             .withName("RetainUntilDate");
@@ -48188,7 +47939,7 @@ const serializeAws_restXmlObjectLockRetention = (input, context) => {
 };
 const serializeAws_restXmlObjectLockRule = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("ObjectLockRule");
-    if (input.DefaultRetention !== undefined) {
+    if (input.DefaultRetention !== undefined && input.DefaultRetention !== null) {
         const node = serializeAws_restXmlDefaultRetention(input.DefaultRetention, context).withName("DefaultRetention");
         bodyNode.addChildNode(node);
     }
@@ -48196,7 +47947,7 @@ const serializeAws_restXmlObjectLockRule = (input, context) => {
 };
 const serializeAws_restXmlOutputLocation = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("OutputLocation");
-    if (input.S3 !== undefined) {
+    if (input.S3 !== undefined && input.S3 !== null) {
         const node = serializeAws_restXmlS3Location(input.S3, context).withName("S3");
         bodyNode.addChildNode(node);
     }
@@ -48204,11 +47955,11 @@ const serializeAws_restXmlOutputLocation = (input, context) => {
 };
 const serializeAws_restXmlOutputSerialization = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("OutputSerialization");
-    if (input.CSV !== undefined) {
+    if (input.CSV !== undefined && input.CSV !== null) {
         const node = serializeAws_restXmlCSVOutput(input.CSV, context).withName("CSV");
         bodyNode.addChildNode(node);
     }
-    if (input.JSON !== undefined) {
+    if (input.JSON !== undefined && input.JSON !== null) {
         const node = serializeAws_restXmlJSONOutput(input.JSON, context).withName("JSON");
         bodyNode.addChildNode(node);
     }
@@ -48216,11 +47967,11 @@ const serializeAws_restXmlOutputSerialization = (input, context) => {
 };
 const serializeAws_restXmlOwner = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("Owner");
-    if (input.DisplayName !== undefined) {
+    if (input.DisplayName !== undefined && input.DisplayName !== null) {
         const node = new xml_builder_1.XmlNode("DisplayName").addChildNode(new xml_builder_1.XmlText(input.DisplayName)).withName("DisplayName");
         bodyNode.addChildNode(node);
     }
-    if (input.ID !== undefined) {
+    if (input.ID !== undefined && input.ID !== null) {
         const node = new xml_builder_1.XmlNode("ID").addChildNode(new xml_builder_1.XmlText(input.ID)).withName("ID");
         bodyNode.addChildNode(node);
     }
@@ -48228,7 +47979,7 @@ const serializeAws_restXmlOwner = (input, context) => {
 };
 const serializeAws_restXmlOwnershipControls = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("OwnershipControls");
-    if (input.Rules !== undefined) {
+    if (input.Rules !== undefined && input.Rules !== null) {
         const nodes = serializeAws_restXmlOwnershipControlsRules(input.Rules, context);
         nodes.map((node) => {
             node = node.withName("Rule");
@@ -48239,7 +47990,7 @@ const serializeAws_restXmlOwnershipControls = (input, context) => {
 };
 const serializeAws_restXmlOwnershipControlsRule = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("OwnershipControlsRule");
-    if (input.ObjectOwnership !== undefined) {
+    if (input.ObjectOwnership !== undefined && input.ObjectOwnership !== null) {
         const node = new xml_builder_1.XmlNode("ObjectOwnership")
             .addChildNode(new xml_builder_1.XmlText(input.ObjectOwnership))
             .withName("ObjectOwnership");
@@ -48248,7 +47999,12 @@ const serializeAws_restXmlOwnershipControlsRule = (input, context) => {
     return bodyNode;
 };
 const serializeAws_restXmlOwnershipControlsRules = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = serializeAws_restXmlOwnershipControlsRule(entry, context);
         return node.withName("member");
     });
@@ -48259,25 +48015,25 @@ const serializeAws_restXmlParquetInput = (input, context) => {
 };
 const serializeAws_restXmlPublicAccessBlockConfiguration = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("PublicAccessBlockConfiguration");
-    if (input.BlockPublicAcls !== undefined) {
+    if (input.BlockPublicAcls !== undefined && input.BlockPublicAcls !== null) {
         const node = new xml_builder_1.XmlNode("Setting")
             .addChildNode(new xml_builder_1.XmlText(String(input.BlockPublicAcls)))
             .withName("BlockPublicAcls");
         bodyNode.addChildNode(node);
     }
-    if (input.IgnorePublicAcls !== undefined) {
+    if (input.IgnorePublicAcls !== undefined && input.IgnorePublicAcls !== null) {
         const node = new xml_builder_1.XmlNode("Setting")
             .addChildNode(new xml_builder_1.XmlText(String(input.IgnorePublicAcls)))
             .withName("IgnorePublicAcls");
         bodyNode.addChildNode(node);
     }
-    if (input.BlockPublicPolicy !== undefined) {
+    if (input.BlockPublicPolicy !== undefined && input.BlockPublicPolicy !== null) {
         const node = new xml_builder_1.XmlNode("Setting")
             .addChildNode(new xml_builder_1.XmlText(String(input.BlockPublicPolicy)))
             .withName("BlockPublicPolicy");
         bodyNode.addChildNode(node);
     }
-    if (input.RestrictPublicBuckets !== undefined) {
+    if (input.RestrictPublicBuckets !== undefined && input.RestrictPublicBuckets !== null) {
         const node = new xml_builder_1.XmlNode("Setting")
             .addChildNode(new xml_builder_1.XmlText(String(input.RestrictPublicBuckets)))
             .withName("RestrictPublicBuckets");
@@ -48287,56 +48043,61 @@ const serializeAws_restXmlPublicAccessBlockConfiguration = (input, context) => {
 };
 const serializeAws_restXmlQueueConfiguration = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("QueueConfiguration");
-    if (input.Id !== undefined) {
+    if (input.Id !== undefined && input.Id !== null) {
         const node = new xml_builder_1.XmlNode("NotificationId").addChildNode(new xml_builder_1.XmlText(input.Id)).withName("Id");
         bodyNode.addChildNode(node);
     }
-    if (input.QueueArn !== undefined) {
+    if (input.QueueArn !== undefined && input.QueueArn !== null) {
         const node = new xml_builder_1.XmlNode("QueueArn").addChildNode(new xml_builder_1.XmlText(input.QueueArn)).withName("Queue");
         bodyNode.addChildNode(node);
     }
-    if (input.Events !== undefined) {
+    if (input.Events !== undefined && input.Events !== null) {
         const nodes = serializeAws_restXmlEventList(input.Events, context);
         nodes.map((node) => {
             node = node.withName("Event");
             bodyNode.addChildNode(node);
         });
     }
-    if (input.Filter !== undefined) {
+    if (input.Filter !== undefined && input.Filter !== null) {
         const node = serializeAws_restXmlNotificationConfigurationFilter(input.Filter, context).withName("Filter");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
 const serializeAws_restXmlQueueConfigurationList = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = serializeAws_restXmlQueueConfiguration(entry, context);
         return node.withName("member");
     });
 };
 const serializeAws_restXmlRedirect = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("Redirect");
-    if (input.HostName !== undefined) {
+    if (input.HostName !== undefined && input.HostName !== null) {
         const node = new xml_builder_1.XmlNode("HostName").addChildNode(new xml_builder_1.XmlText(input.HostName)).withName("HostName");
         bodyNode.addChildNode(node);
     }
-    if (input.HttpRedirectCode !== undefined) {
+    if (input.HttpRedirectCode !== undefined && input.HttpRedirectCode !== null) {
         const node = new xml_builder_1.XmlNode("HttpRedirectCode")
             .addChildNode(new xml_builder_1.XmlText(input.HttpRedirectCode))
             .withName("HttpRedirectCode");
         bodyNode.addChildNode(node);
     }
-    if (input.Protocol !== undefined) {
+    if (input.Protocol !== undefined && input.Protocol !== null) {
         const node = new xml_builder_1.XmlNode("Protocol").addChildNode(new xml_builder_1.XmlText(input.Protocol)).withName("Protocol");
         bodyNode.addChildNode(node);
     }
-    if (input.ReplaceKeyPrefixWith !== undefined) {
+    if (input.ReplaceKeyPrefixWith !== undefined && input.ReplaceKeyPrefixWith !== null) {
         const node = new xml_builder_1.XmlNode("ReplaceKeyPrefixWith")
             .addChildNode(new xml_builder_1.XmlText(input.ReplaceKeyPrefixWith))
             .withName("ReplaceKeyPrefixWith");
         bodyNode.addChildNode(node);
     }
-    if (input.ReplaceKeyWith !== undefined) {
+    if (input.ReplaceKeyWith !== undefined && input.ReplaceKeyWith !== null) {
         const node = new xml_builder_1.XmlNode("ReplaceKeyWith")
             .addChildNode(new xml_builder_1.XmlText(input.ReplaceKeyWith))
             .withName("ReplaceKeyWith");
@@ -48346,11 +48107,11 @@ const serializeAws_restXmlRedirect = (input, context) => {
 };
 const serializeAws_restXmlRedirectAllRequestsTo = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("RedirectAllRequestsTo");
-    if (input.HostName !== undefined) {
+    if (input.HostName !== undefined && input.HostName !== null) {
         const node = new xml_builder_1.XmlNode("HostName").addChildNode(new xml_builder_1.XmlText(input.HostName)).withName("HostName");
         bodyNode.addChildNode(node);
     }
-    if (input.Protocol !== undefined) {
+    if (input.Protocol !== undefined && input.Protocol !== null) {
         const node = new xml_builder_1.XmlNode("Protocol").addChildNode(new xml_builder_1.XmlText(input.Protocol)).withName("Protocol");
         bodyNode.addChildNode(node);
     }
@@ -48358,7 +48119,7 @@ const serializeAws_restXmlRedirectAllRequestsTo = (input, context) => {
 };
 const serializeAws_restXmlReplicaModifications = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("ReplicaModifications");
-    if (input.Status !== undefined) {
+    if (input.Status !== undefined && input.Status !== null) {
         const node = new xml_builder_1.XmlNode("ReplicaModificationsStatus")
             .addChildNode(new xml_builder_1.XmlText(input.Status))
             .withName("Status");
@@ -48368,11 +48129,11 @@ const serializeAws_restXmlReplicaModifications = (input, context) => {
 };
 const serializeAws_restXmlReplicationConfiguration = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("ReplicationConfiguration");
-    if (input.Role !== undefined) {
+    if (input.Role !== undefined && input.Role !== null) {
         const node = new xml_builder_1.XmlNode("Role").addChildNode(new xml_builder_1.XmlText(input.Role)).withName("Role");
         bodyNode.addChildNode(node);
     }
-    if (input.Rules !== undefined) {
+    if (input.Rules !== undefined && input.Rules !== null) {
         const nodes = serializeAws_restXmlReplicationRules(input.Rules, context);
         nodes.map((node) => {
             node = node.withName("Rule");
@@ -48383,39 +48144,39 @@ const serializeAws_restXmlReplicationConfiguration = (input, context) => {
 };
 const serializeAws_restXmlReplicationRule = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("ReplicationRule");
-    if (input.ID !== undefined) {
+    if (input.ID !== undefined && input.ID !== null) {
         const node = new xml_builder_1.XmlNode("ID").addChildNode(new xml_builder_1.XmlText(input.ID)).withName("ID");
         bodyNode.addChildNode(node);
     }
-    if (input.Priority !== undefined) {
+    if (input.Priority !== undefined && input.Priority !== null) {
         const node = new xml_builder_1.XmlNode("Priority").addChildNode(new xml_builder_1.XmlText(String(input.Priority))).withName("Priority");
         bodyNode.addChildNode(node);
     }
-    if (input.Prefix !== undefined) {
+    if (input.Prefix !== undefined && input.Prefix !== null) {
         const node = new xml_builder_1.XmlNode("Prefix").addChildNode(new xml_builder_1.XmlText(input.Prefix)).withName("Prefix");
         bodyNode.addChildNode(node);
     }
-    if (input.Filter !== undefined) {
+    if (input.Filter !== undefined && input.Filter !== null) {
         const node = serializeAws_restXmlReplicationRuleFilter(input.Filter, context).withName("Filter");
         bodyNode.addChildNode(node);
     }
-    if (input.Status !== undefined) {
+    if (input.Status !== undefined && input.Status !== null) {
         const node = new xml_builder_1.XmlNode("ReplicationRuleStatus").addChildNode(new xml_builder_1.XmlText(input.Status)).withName("Status");
         bodyNode.addChildNode(node);
     }
-    if (input.SourceSelectionCriteria !== undefined) {
+    if (input.SourceSelectionCriteria !== undefined && input.SourceSelectionCriteria !== null) {
         const node = serializeAws_restXmlSourceSelectionCriteria(input.SourceSelectionCriteria, context).withName("SourceSelectionCriteria");
         bodyNode.addChildNode(node);
     }
-    if (input.ExistingObjectReplication !== undefined) {
+    if (input.ExistingObjectReplication !== undefined && input.ExistingObjectReplication !== null) {
         const node = serializeAws_restXmlExistingObjectReplication(input.ExistingObjectReplication, context).withName("ExistingObjectReplication");
         bodyNode.addChildNode(node);
     }
-    if (input.Destination !== undefined) {
+    if (input.Destination !== undefined && input.Destination !== null) {
         const node = serializeAws_restXmlDestination(input.Destination, context).withName("Destination");
         bodyNode.addChildNode(node);
     }
-    if (input.DeleteMarkerReplication !== undefined) {
+    if (input.DeleteMarkerReplication !== undefined && input.DeleteMarkerReplication !== null) {
         const node = serializeAws_restXmlDeleteMarkerReplication(input.DeleteMarkerReplication, context).withName("DeleteMarkerReplication");
         bodyNode.addChildNode(node);
     }
@@ -48423,11 +48184,11 @@ const serializeAws_restXmlReplicationRule = (input, context) => {
 };
 const serializeAws_restXmlReplicationRuleAndOperator = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("ReplicationRuleAndOperator");
-    if (input.Prefix !== undefined) {
+    if (input.Prefix !== undefined && input.Prefix !== null) {
         const node = new xml_builder_1.XmlNode("Prefix").addChildNode(new xml_builder_1.XmlText(input.Prefix)).withName("Prefix");
         bodyNode.addChildNode(node);
     }
-    if (input.Tags !== undefined) {
+    if (input.Tags !== undefined && input.Tags !== null) {
         const nodes = serializeAws_restXmlTagSet(input.Tags, context);
         nodes.map((node) => {
             node = node.withName("Tag");
@@ -48461,18 +48222,23 @@ const serializeAws_restXmlReplicationRuleFilter = (input, context) => {
     return bodyNode;
 };
 const serializeAws_restXmlReplicationRules = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = serializeAws_restXmlReplicationRule(entry, context);
         return node.withName("member");
     });
 };
 const serializeAws_restXmlReplicationTime = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("ReplicationTime");
-    if (input.Status !== undefined) {
+    if (input.Status !== undefined && input.Status !== null) {
         const node = new xml_builder_1.XmlNode("ReplicationTimeStatus").addChildNode(new xml_builder_1.XmlText(input.Status)).withName("Status");
         bodyNode.addChildNode(node);
     }
-    if (input.Time !== undefined) {
+    if (input.Time !== undefined && input.Time !== null) {
         const node = serializeAws_restXmlReplicationTimeValue(input.Time, context).withName("Time");
         bodyNode.addChildNode(node);
     }
@@ -48480,7 +48246,7 @@ const serializeAws_restXmlReplicationTime = (input, context) => {
 };
 const serializeAws_restXmlReplicationTimeValue = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("ReplicationTimeValue");
-    if (input.Minutes !== undefined) {
+    if (input.Minutes !== undefined && input.Minutes !== null) {
         const node = new xml_builder_1.XmlNode("Minutes").addChildNode(new xml_builder_1.XmlText(String(input.Minutes))).withName("Minutes");
         bodyNode.addChildNode(node);
     }
@@ -48488,7 +48254,7 @@ const serializeAws_restXmlReplicationTimeValue = (input, context) => {
 };
 const serializeAws_restXmlRequestPaymentConfiguration = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("RequestPaymentConfiguration");
-    if (input.Payer !== undefined) {
+    if (input.Payer !== undefined && input.Payer !== null) {
         const node = new xml_builder_1.XmlNode("Payer").addChildNode(new xml_builder_1.XmlText(input.Payer)).withName("Payer");
         bodyNode.addChildNode(node);
     }
@@ -48496,7 +48262,7 @@ const serializeAws_restXmlRequestPaymentConfiguration = (input, context) => {
 };
 const serializeAws_restXmlRequestProgress = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("RequestProgress");
-    if (input.Enabled !== undefined) {
+    if (input.Enabled !== undefined && input.Enabled !== null) {
         const node = new xml_builder_1.XmlNode("EnableRequestProgress")
             .addChildNode(new xml_builder_1.XmlText(String(input.Enabled)))
             .withName("Enabled");
@@ -48506,31 +48272,31 @@ const serializeAws_restXmlRequestProgress = (input, context) => {
 };
 const serializeAws_restXmlRestoreRequest = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("RestoreRequest");
-    if (input.Days !== undefined) {
+    if (input.Days !== undefined && input.Days !== null) {
         const node = new xml_builder_1.XmlNode("Days").addChildNode(new xml_builder_1.XmlText(String(input.Days))).withName("Days");
         bodyNode.addChildNode(node);
     }
-    if (input.GlacierJobParameters !== undefined) {
+    if (input.GlacierJobParameters !== undefined && input.GlacierJobParameters !== null) {
         const node = serializeAws_restXmlGlacierJobParameters(input.GlacierJobParameters, context).withName("GlacierJobParameters");
         bodyNode.addChildNode(node);
     }
-    if (input.Type !== undefined) {
+    if (input.Type !== undefined && input.Type !== null) {
         const node = new xml_builder_1.XmlNode("RestoreRequestType").addChildNode(new xml_builder_1.XmlText(input.Type)).withName("Type");
         bodyNode.addChildNode(node);
     }
-    if (input.Tier !== undefined) {
+    if (input.Tier !== undefined && input.Tier !== null) {
         const node = new xml_builder_1.XmlNode("Tier").addChildNode(new xml_builder_1.XmlText(input.Tier)).withName("Tier");
         bodyNode.addChildNode(node);
     }
-    if (input.Description !== undefined) {
+    if (input.Description !== undefined && input.Description !== null) {
         const node = new xml_builder_1.XmlNode("Description").addChildNode(new xml_builder_1.XmlText(input.Description)).withName("Description");
         bodyNode.addChildNode(node);
     }
-    if (input.SelectParameters !== undefined) {
+    if (input.SelectParameters !== undefined && input.SelectParameters !== null) {
         const node = serializeAws_restXmlSelectParameters(input.SelectParameters, context).withName("SelectParameters");
         bodyNode.addChildNode(node);
     }
-    if (input.OutputLocation !== undefined) {
+    if (input.OutputLocation !== undefined && input.OutputLocation !== null) {
         const node = serializeAws_restXmlOutputLocation(input.OutputLocation, context).withName("OutputLocation");
         bodyNode.addChildNode(node);
     }
@@ -48538,25 +48304,30 @@ const serializeAws_restXmlRestoreRequest = (input, context) => {
 };
 const serializeAws_restXmlRoutingRule = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("RoutingRule");
-    if (input.Condition !== undefined) {
+    if (input.Condition !== undefined && input.Condition !== null) {
         const node = serializeAws_restXmlCondition(input.Condition, context).withName("Condition");
         bodyNode.addChildNode(node);
     }
-    if (input.Redirect !== undefined) {
+    if (input.Redirect !== undefined && input.Redirect !== null) {
         const node = serializeAws_restXmlRedirect(input.Redirect, context).withName("Redirect");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
 const serializeAws_restXmlRoutingRules = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = serializeAws_restXmlRoutingRule(entry, context);
         return node.withName("RoutingRule");
     });
 };
 const serializeAws_restXmlS3KeyFilter = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("S3KeyFilter");
-    if (input.FilterRules !== undefined) {
+    if (input.FilterRules !== undefined && input.FilterRules !== null) {
         const nodes = serializeAws_restXmlFilterRuleList(input.FilterRules, context);
         nodes.map((node) => {
             node = node.withName("FilterRule");
@@ -48567,23 +48338,23 @@ const serializeAws_restXmlS3KeyFilter = (input, context) => {
 };
 const serializeAws_restXmlS3Location = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("S3Location");
-    if (input.BucketName !== undefined) {
+    if (input.BucketName !== undefined && input.BucketName !== null) {
         const node = new xml_builder_1.XmlNode("BucketName").addChildNode(new xml_builder_1.XmlText(input.BucketName)).withName("BucketName");
         bodyNode.addChildNode(node);
     }
-    if (input.Prefix !== undefined) {
+    if (input.Prefix !== undefined && input.Prefix !== null) {
         const node = new xml_builder_1.XmlNode("LocationPrefix").addChildNode(new xml_builder_1.XmlText(input.Prefix)).withName("Prefix");
         bodyNode.addChildNode(node);
     }
-    if (input.Encryption !== undefined) {
+    if (input.Encryption !== undefined && input.Encryption !== null) {
         const node = serializeAws_restXmlEncryption(input.Encryption, context).withName("Encryption");
         bodyNode.addChildNode(node);
     }
-    if (input.CannedACL !== undefined) {
+    if (input.CannedACL !== undefined && input.CannedACL !== null) {
         const node = new xml_builder_1.XmlNode("ObjectCannedACL").addChildNode(new xml_builder_1.XmlText(input.CannedACL)).withName("CannedACL");
         bodyNode.addChildNode(node);
     }
-    if (input.AccessControlList !== undefined) {
+    if (input.AccessControlList !== undefined && input.AccessControlList !== null) {
         const nodes = serializeAws_restXmlGrants(input.AccessControlList, context);
         const containerNode = new xml_builder_1.XmlNode("AccessControlList");
         nodes.map((node) => {
@@ -48591,11 +48362,11 @@ const serializeAws_restXmlS3Location = (input, context) => {
         });
         bodyNode.addChildNode(containerNode);
     }
-    if (input.Tagging !== undefined) {
+    if (input.Tagging !== undefined && input.Tagging !== null) {
         const node = serializeAws_restXmlTagging(input.Tagging, context).withName("Tagging");
         bodyNode.addChildNode(node);
     }
-    if (input.UserMetadata !== undefined) {
+    if (input.UserMetadata !== undefined && input.UserMetadata !== null) {
         const nodes = serializeAws_restXmlUserMetadata(input.UserMetadata, context);
         const containerNode = new xml_builder_1.XmlNode("UserMetadata");
         nodes.map((node) => {
@@ -48603,7 +48374,7 @@ const serializeAws_restXmlS3Location = (input, context) => {
         });
         bodyNode.addChildNode(containerNode);
     }
-    if (input.StorageClass !== undefined) {
+    if (input.StorageClass !== undefined && input.StorageClass !== null) {
         const node = new xml_builder_1.XmlNode("StorageClass").addChildNode(new xml_builder_1.XmlText(input.StorageClass)).withName("StorageClass");
         bodyNode.addChildNode(node);
     }
@@ -48611,11 +48382,11 @@ const serializeAws_restXmlS3Location = (input, context) => {
 };
 const serializeAws_restXmlScanRange = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("ScanRange");
-    if (input.Start !== undefined) {
+    if (input.Start !== undefined && input.Start !== null) {
         const node = new xml_builder_1.XmlNode("Start").addChildNode(new xml_builder_1.XmlText(String(input.Start))).withName("Start");
         bodyNode.addChildNode(node);
     }
-    if (input.End !== undefined) {
+    if (input.End !== undefined && input.End !== null) {
         const node = new xml_builder_1.XmlNode("End").addChildNode(new xml_builder_1.XmlText(String(input.End))).withName("End");
         bodyNode.addChildNode(node);
     }
@@ -48623,21 +48394,21 @@ const serializeAws_restXmlScanRange = (input, context) => {
 };
 const serializeAws_restXmlSelectParameters = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("SelectParameters");
-    if (input.InputSerialization !== undefined) {
+    if (input.InputSerialization !== undefined && input.InputSerialization !== null) {
         const node = serializeAws_restXmlInputSerialization(input.InputSerialization, context).withName("InputSerialization");
         bodyNode.addChildNode(node);
     }
-    if (input.ExpressionType !== undefined) {
+    if (input.ExpressionType !== undefined && input.ExpressionType !== null) {
         const node = new xml_builder_1.XmlNode("ExpressionType")
             .addChildNode(new xml_builder_1.XmlText(input.ExpressionType))
             .withName("ExpressionType");
         bodyNode.addChildNode(node);
     }
-    if (input.Expression !== undefined) {
+    if (input.Expression !== undefined && input.Expression !== null) {
         const node = new xml_builder_1.XmlNode("Expression").addChildNode(new xml_builder_1.XmlText(input.Expression)).withName("Expression");
         bodyNode.addChildNode(node);
     }
-    if (input.OutputSerialization !== undefined) {
+    if (input.OutputSerialization !== undefined && input.OutputSerialization !== null) {
         const node = serializeAws_restXmlOutputSerialization(input.OutputSerialization, context).withName("OutputSerialization");
         bodyNode.addChildNode(node);
     }
@@ -48645,13 +48416,13 @@ const serializeAws_restXmlSelectParameters = (input, context) => {
 };
 const serializeAws_restXmlServerSideEncryptionByDefault = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("ServerSideEncryptionByDefault");
-    if (input.SSEAlgorithm !== undefined) {
+    if (input.SSEAlgorithm !== undefined && input.SSEAlgorithm !== null) {
         const node = new xml_builder_1.XmlNode("ServerSideEncryption")
             .addChildNode(new xml_builder_1.XmlText(input.SSEAlgorithm))
             .withName("SSEAlgorithm");
         bodyNode.addChildNode(node);
     }
-    if (input.KMSMasterKeyID !== undefined) {
+    if (input.KMSMasterKeyID !== undefined && input.KMSMasterKeyID !== null) {
         const node = new xml_builder_1.XmlNode("SSEKMSKeyId")
             .addChildNode(new xml_builder_1.XmlText(input.KMSMasterKeyID))
             .withName("KMSMasterKeyID");
@@ -48661,7 +48432,7 @@ const serializeAws_restXmlServerSideEncryptionByDefault = (input, context) => {
 };
 const serializeAws_restXmlServerSideEncryptionConfiguration = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("ServerSideEncryptionConfiguration");
-    if (input.Rules !== undefined) {
+    if (input.Rules !== undefined && input.Rules !== null) {
         const nodes = serializeAws_restXmlServerSideEncryptionRules(input.Rules, context);
         nodes.map((node) => {
             node = node.withName("Rule");
@@ -48672,11 +48443,11 @@ const serializeAws_restXmlServerSideEncryptionConfiguration = (input, context) =
 };
 const serializeAws_restXmlServerSideEncryptionRule = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("ServerSideEncryptionRule");
-    if (input.ApplyServerSideEncryptionByDefault !== undefined) {
+    if (input.ApplyServerSideEncryptionByDefault !== undefined && input.ApplyServerSideEncryptionByDefault !== null) {
         const node = serializeAws_restXmlServerSideEncryptionByDefault(input.ApplyServerSideEncryptionByDefault, context).withName("ApplyServerSideEncryptionByDefault");
         bodyNode.addChildNode(node);
     }
-    if (input.BucketKeyEnabled !== undefined) {
+    if (input.BucketKeyEnabled !== undefined && input.BucketKeyEnabled !== null) {
         const node = new xml_builder_1.XmlNode("BucketKeyEnabled")
             .addChildNode(new xml_builder_1.XmlText(String(input.BucketKeyEnabled)))
             .withName("BucketKeyEnabled");
@@ -48685,18 +48456,23 @@ const serializeAws_restXmlServerSideEncryptionRule = (input, context) => {
     return bodyNode;
 };
 const serializeAws_restXmlServerSideEncryptionRules = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = serializeAws_restXmlServerSideEncryptionRule(entry, context);
         return node.withName("member");
     });
 };
 const serializeAws_restXmlSourceSelectionCriteria = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("SourceSelectionCriteria");
-    if (input.SseKmsEncryptedObjects !== undefined) {
+    if (input.SseKmsEncryptedObjects !== undefined && input.SseKmsEncryptedObjects !== null) {
         const node = serializeAws_restXmlSseKmsEncryptedObjects(input.SseKmsEncryptedObjects, context).withName("SseKmsEncryptedObjects");
         bodyNode.addChildNode(node);
     }
-    if (input.ReplicaModifications !== undefined) {
+    if (input.ReplicaModifications !== undefined && input.ReplicaModifications !== null) {
         const node = serializeAws_restXmlReplicaModifications(input.ReplicaModifications, context).withName("ReplicaModifications");
         bodyNode.addChildNode(node);
     }
@@ -48704,7 +48480,7 @@ const serializeAws_restXmlSourceSelectionCriteria = (input, context) => {
 };
 const serializeAws_restXmlSSEKMS = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("SSE-KMS");
-    if (input.KeyId !== undefined) {
+    if (input.KeyId !== undefined && input.KeyId !== null) {
         const node = new xml_builder_1.XmlNode("SSEKMSKeyId").addChildNode(new xml_builder_1.XmlText(input.KeyId)).withName("KeyId");
         bodyNode.addChildNode(node);
     }
@@ -48712,7 +48488,7 @@ const serializeAws_restXmlSSEKMS = (input, context) => {
 };
 const serializeAws_restXmlSseKmsEncryptedObjects = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("SseKmsEncryptedObjects");
-    if (input.Status !== undefined) {
+    if (input.Status !== undefined && input.Status !== null) {
         const node = new xml_builder_1.XmlNode("SseKmsEncryptedObjectsStatus")
             .addChildNode(new xml_builder_1.XmlText(input.Status))
             .withName("Status");
@@ -48726,7 +48502,7 @@ const serializeAws_restXmlSSES3 = (input, context) => {
 };
 const serializeAws_restXmlStorageClassAnalysis = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("StorageClassAnalysis");
-    if (input.DataExport !== undefined) {
+    if (input.DataExport !== undefined && input.DataExport !== null) {
         const node = serializeAws_restXmlStorageClassAnalysisDataExport(input.DataExport, context).withName("DataExport");
         bodyNode.addChildNode(node);
     }
@@ -48734,13 +48510,13 @@ const serializeAws_restXmlStorageClassAnalysis = (input, context) => {
 };
 const serializeAws_restXmlStorageClassAnalysisDataExport = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("StorageClassAnalysisDataExport");
-    if (input.OutputSchemaVersion !== undefined) {
+    if (input.OutputSchemaVersion !== undefined && input.OutputSchemaVersion !== null) {
         const node = new xml_builder_1.XmlNode("StorageClassAnalysisSchemaVersion")
             .addChildNode(new xml_builder_1.XmlText(input.OutputSchemaVersion))
             .withName("OutputSchemaVersion");
         bodyNode.addChildNode(node);
     }
-    if (input.Destination !== undefined) {
+    if (input.Destination !== undefined && input.Destination !== null) {
         const node = serializeAws_restXmlAnalyticsExportDestination(input.Destination, context).withName("Destination");
         bodyNode.addChildNode(node);
     }
@@ -48748,11 +48524,11 @@ const serializeAws_restXmlStorageClassAnalysisDataExport = (input, context) => {
 };
 const serializeAws_restXmlTag = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("Tag");
-    if (input.Key !== undefined) {
+    if (input.Key !== undefined && input.Key !== null) {
         const node = new xml_builder_1.XmlNode("ObjectKey").addChildNode(new xml_builder_1.XmlText(input.Key)).withName("Key");
         bodyNode.addChildNode(node);
     }
-    if (input.Value !== undefined) {
+    if (input.Value !== undefined && input.Value !== null) {
         const node = new xml_builder_1.XmlNode("Value").addChildNode(new xml_builder_1.XmlText(input.Value)).withName("Value");
         bodyNode.addChildNode(node);
     }
@@ -48760,7 +48536,7 @@ const serializeAws_restXmlTag = (input, context) => {
 };
 const serializeAws_restXmlTagging = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("Tagging");
-    if (input.TagSet !== undefined) {
+    if (input.TagSet !== undefined && input.TagSet !== null) {
         const nodes = serializeAws_restXmlTagSet(input.TagSet, context);
         const containerNode = new xml_builder_1.XmlNode("TagSet");
         nodes.map((node) => {
@@ -48771,18 +48547,23 @@ const serializeAws_restXmlTagging = (input, context) => {
     return bodyNode;
 };
 const serializeAws_restXmlTagSet = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = serializeAws_restXmlTag(entry, context);
         return node.withName("Tag");
     });
 };
 const serializeAws_restXmlTargetGrant = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("TargetGrant");
-    if (input.Grantee !== undefined) {
+    if (input.Grantee !== undefined && input.Grantee !== null) {
         const node = serializeAws_restXmlGrantee(input.Grantee, context).withName("Grantee");
         bodyNode.addChildNode(node);
     }
-    if (input.Permission !== undefined) {
+    if (input.Permission !== undefined && input.Permission !== null) {
         const node = new xml_builder_1.XmlNode("BucketLogsPermission")
             .addChildNode(new xml_builder_1.XmlText(input.Permission))
             .withName("Permission");
@@ -48791,20 +48572,25 @@ const serializeAws_restXmlTargetGrant = (input, context) => {
     return bodyNode;
 };
 const serializeAws_restXmlTargetGrants = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = serializeAws_restXmlTargetGrant(entry, context);
         return node.withName("Grant");
     });
 };
 const serializeAws_restXmlTiering = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("Tiering");
-    if (input.Days !== undefined) {
+    if (input.Days !== undefined && input.Days !== null) {
         const node = new xml_builder_1.XmlNode("IntelligentTieringDays")
             .addChildNode(new xml_builder_1.XmlText(String(input.Days)))
             .withName("Days");
         bodyNode.addChildNode(node);
     }
-    if (input.AccessTier !== undefined) {
+    if (input.AccessTier !== undefined && input.AccessTier !== null) {
         const node = new xml_builder_1.XmlNode("IntelligentTieringAccessTier")
             .addChildNode(new xml_builder_1.XmlText(input.AccessTier))
             .withName("AccessTier");
@@ -48813,53 +48599,63 @@ const serializeAws_restXmlTiering = (input, context) => {
     return bodyNode;
 };
 const serializeAws_restXmlTieringList = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = serializeAws_restXmlTiering(entry, context);
         return node.withName("member");
     });
 };
 const serializeAws_restXmlTopicConfiguration = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("TopicConfiguration");
-    if (input.Id !== undefined) {
+    if (input.Id !== undefined && input.Id !== null) {
         const node = new xml_builder_1.XmlNode("NotificationId").addChildNode(new xml_builder_1.XmlText(input.Id)).withName("Id");
         bodyNode.addChildNode(node);
     }
-    if (input.TopicArn !== undefined) {
+    if (input.TopicArn !== undefined && input.TopicArn !== null) {
         const node = new xml_builder_1.XmlNode("TopicArn").addChildNode(new xml_builder_1.XmlText(input.TopicArn)).withName("Topic");
         bodyNode.addChildNode(node);
     }
-    if (input.Events !== undefined) {
+    if (input.Events !== undefined && input.Events !== null) {
         const nodes = serializeAws_restXmlEventList(input.Events, context);
         nodes.map((node) => {
             node = node.withName("Event");
             bodyNode.addChildNode(node);
         });
     }
-    if (input.Filter !== undefined) {
+    if (input.Filter !== undefined && input.Filter !== null) {
         const node = serializeAws_restXmlNotificationConfigurationFilter(input.Filter, context).withName("Filter");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
 const serializeAws_restXmlTopicConfigurationList = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = serializeAws_restXmlTopicConfiguration(entry, context);
         return node.withName("member");
     });
 };
 const serializeAws_restXmlTransition = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("Transition");
-    if (input.Date !== undefined) {
+    if (input.Date !== undefined && input.Date !== null) {
         const node = new xml_builder_1.XmlNode("Date")
             .addChildNode(new xml_builder_1.XmlText(input.Date.toISOString().split(".")[0] + "Z"))
             .withName("Date");
         bodyNode.addChildNode(node);
     }
-    if (input.Days !== undefined) {
+    if (input.Days !== undefined && input.Days !== null) {
         const node = new xml_builder_1.XmlNode("Days").addChildNode(new xml_builder_1.XmlText(String(input.Days))).withName("Days");
         bodyNode.addChildNode(node);
     }
-    if (input.StorageClass !== undefined) {
+    if (input.StorageClass !== undefined && input.StorageClass !== null) {
         const node = new xml_builder_1.XmlNode("TransitionStorageClass")
             .addChildNode(new xml_builder_1.XmlText(input.StorageClass))
             .withName("StorageClass");
@@ -48868,24 +48664,34 @@ const serializeAws_restXmlTransition = (input, context) => {
     return bodyNode;
 };
 const serializeAws_restXmlTransitionList = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = serializeAws_restXmlTransition(entry, context);
         return node.withName("member");
     });
 };
 const serializeAws_restXmlUserMetadata = (input, context) => {
-    return input.map((entry) => {
+    return input
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
         const node = serializeAws_restXmlMetadataEntry(entry, context);
         return node.withName("MetadataEntry");
     });
 };
 const serializeAws_restXmlVersioningConfiguration = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("VersioningConfiguration");
-    if (input.MFADelete !== undefined) {
+    if (input.MFADelete !== undefined && input.MFADelete !== null) {
         const node = new xml_builder_1.XmlNode("MFADelete").addChildNode(new xml_builder_1.XmlText(input.MFADelete)).withName("MfaDelete");
         bodyNode.addChildNode(node);
     }
-    if (input.Status !== undefined) {
+    if (input.Status !== undefined && input.Status !== null) {
         const node = new xml_builder_1.XmlNode("BucketVersioningStatus").addChildNode(new xml_builder_1.XmlText(input.Status)).withName("Status");
         bodyNode.addChildNode(node);
     }
@@ -48893,19 +48699,19 @@ const serializeAws_restXmlVersioningConfiguration = (input, context) => {
 };
 const serializeAws_restXmlWebsiteConfiguration = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("WebsiteConfiguration");
-    if (input.ErrorDocument !== undefined) {
+    if (input.ErrorDocument !== undefined && input.ErrorDocument !== null) {
         const node = serializeAws_restXmlErrorDocument(input.ErrorDocument, context).withName("ErrorDocument");
         bodyNode.addChildNode(node);
     }
-    if (input.IndexDocument !== undefined) {
+    if (input.IndexDocument !== undefined && input.IndexDocument !== null) {
         const node = serializeAws_restXmlIndexDocument(input.IndexDocument, context).withName("IndexDocument");
         bodyNode.addChildNode(node);
     }
-    if (input.RedirectAllRequestsTo !== undefined) {
+    if (input.RedirectAllRequestsTo !== undefined && input.RedirectAllRequestsTo !== null) {
         const node = serializeAws_restXmlRedirectAllRequestsTo(input.RedirectAllRequestsTo, context).withName("RedirectAllRequestsTo");
         bodyNode.addChildNode(node);
     }
-    if (input.RoutingRules !== undefined) {
+    if (input.RoutingRules !== undefined && input.RoutingRules !== null) {
         const nodes = serializeAws_restXmlRoutingRules(input.RoutingRules, context);
         const containerNode = new xml_builder_1.XmlNode("RoutingRules");
         nodes.map((node) => {
@@ -48934,13 +48740,34 @@ const deserializeAws_restXmlAccessControlTranslation = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlAllowedHeaders = (output, context) => {
-    return (output || []).map((entry) => entry);
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return entry;
+    });
 };
 const deserializeAws_restXmlAllowedMethods = (output, context) => {
-    return (output || []).map((entry) => entry);
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return entry;
+    });
 };
 const deserializeAws_restXmlAllowedOrigins = (output, context) => {
-    return (output || []).map((entry) => entry);
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return entry;
+    });
 };
 const deserializeAws_restXmlAnalyticsAndOperator = (output, context) => {
     let contents = {
@@ -48976,7 +48803,14 @@ const deserializeAws_restXmlAnalyticsConfiguration = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlAnalyticsConfigurationList = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlAnalyticsConfiguration(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlAnalyticsConfiguration(entry, context);
+    });
 };
 const deserializeAws_restXmlAnalyticsExportDestination = (output, context) => {
     let contents = {
@@ -49040,7 +48874,14 @@ const deserializeAws_restXmlBucket = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlBuckets = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlBucket(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlBucket(entry, context);
+    });
 };
 const deserializeAws_restXmlCommonPrefix = (output, context) => {
     let contents = {
@@ -49052,7 +48893,14 @@ const deserializeAws_restXmlCommonPrefix = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlCommonPrefixList = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlCommonPrefix(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlCommonPrefix(entry, context);
+    });
 };
 const deserializeAws_restXmlCondition = (output, context) => {
     let contents = {
@@ -49131,7 +48979,14 @@ const deserializeAws_restXmlCORSRule = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlCORSRules = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlCORSRule(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlCORSRule(entry, context);
+    });
 };
 const deserializeAws_restXmlDefaultRetention = (output, context) => {
     let contents = {
@@ -49172,7 +49027,14 @@ const deserializeAws_restXmlDeletedObject = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlDeletedObjects = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlDeletedObject(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlDeletedObject(entry, context);
+    });
 };
 const deserializeAws_restXmlDeleteMarkerEntry = (output, context) => {
     let contents = {
@@ -49209,7 +49071,14 @@ const deserializeAws_restXmlDeleteMarkerReplication = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlDeleteMarkers = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlDeleteMarkerEntry(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlDeleteMarkerEntry(entry, context);
+    });
 };
 const deserializeAws_restXmlDestination = (output, context) => {
     let contents = {
@@ -49284,10 +49153,24 @@ const deserializeAws_restXmlErrorDocument = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlErrors = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXml_Error(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXml_Error(entry, context);
+    });
 };
 const deserializeAws_restXmlEventList = (output, context) => {
-    return (output || []).map((entry) => entry);
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return entry;
+    });
 };
 const deserializeAws_restXmlExistingObjectReplication = (output, context) => {
     let contents = {
@@ -49299,7 +49182,14 @@ const deserializeAws_restXmlExistingObjectReplication = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlExposeHeaders = (output, context) => {
-    return (output || []).map((entry) => entry);
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return entry;
+    });
 };
 const deserializeAws_restXmlFilterRule = (output, context) => {
     let contents = {
@@ -49315,7 +49205,14 @@ const deserializeAws_restXmlFilterRule = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlFilterRuleList = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlFilterRule(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlFilterRule(entry, context);
+    });
 };
 const deserializeAws_restXmlGrant = (output, context) => {
     let contents = {
@@ -49356,7 +49253,14 @@ const deserializeAws_restXmlGrantee = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlGrants = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlGrant(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlGrant(entry, context);
+    });
 };
 const deserializeAws_restXmlIndexDocument = (output, context) => {
     let contents = {
@@ -49421,7 +49325,14 @@ const deserializeAws_restXmlIntelligentTieringConfiguration = (output, context) 
     return contents;
 };
 const deserializeAws_restXmlIntelligentTieringConfigurationList = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlIntelligentTieringConfiguration(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlIntelligentTieringConfiguration(entry, context);
+    });
 };
 const deserializeAws_restXmlIntelligentTieringFilter = (output, context) => {
     let contents = {
@@ -49477,7 +49388,14 @@ const deserializeAws_restXmlInventoryConfiguration = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlInventoryConfigurationList = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlInventoryConfiguration(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlInventoryConfiguration(entry, context);
+    });
 };
 const deserializeAws_restXmlInventoryDestination = (output, context) => {
     let contents = {
@@ -49511,7 +49429,14 @@ const deserializeAws_restXmlInventoryFilter = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlInventoryOptionalFields = (output, context) => {
-    return (output || []).map((entry) => entry);
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return entry;
+    });
 };
 const deserializeAws_restXmlInventoryS3BucketDestination = (output, context) => {
     let contents = {
@@ -49572,7 +49497,14 @@ const deserializeAws_restXmlLambdaFunctionConfiguration = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlLambdaFunctionConfigurationList = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlLambdaFunctionConfiguration(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlLambdaFunctionConfiguration(entry, context);
+    });
 };
 const deserializeAws_restXmlLifecycleExpiration = (output, context) => {
     let contents = {
@@ -49673,7 +49605,14 @@ const deserializeAws_restXmlLifecycleRuleFilter = (output, context) => {
     return { $unknown: Object.entries(output)[0] };
 };
 const deserializeAws_restXmlLifecycleRules = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlLifecycleRule(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlLifecycleRule(entry, context);
+    });
 };
 const deserializeAws_restXmlLoggingEnabled = (output, context) => {
     let contents = {
@@ -49738,7 +49677,14 @@ const deserializeAws_restXmlMetricsConfiguration = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlMetricsConfigurationList = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlMetricsConfiguration(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlMetricsConfiguration(entry, context);
+    });
 };
 const deserializeAws_restXmlMetricsFilter = (output, context) => {
     if (output["Prefix"] !== undefined) {
@@ -49788,7 +49734,14 @@ const deserializeAws_restXmlMultipartUpload = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlMultipartUploadList = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlMultipartUpload(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlMultipartUpload(entry, context);
+    });
 };
 const deserializeAws_restXmlNoncurrentVersionExpiration = (output, context) => {
     let contents = {
@@ -49813,7 +49766,14 @@ const deserializeAws_restXmlNoncurrentVersionTransition = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlNoncurrentVersionTransitionList = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlNoncurrentVersionTransition(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlNoncurrentVersionTransition(entry, context);
+    });
 };
 const deserializeAws_restXmlNotificationConfigurationFilter = (output, context) => {
     let contents = {
@@ -49854,7 +49814,14 @@ const deserializeAws_restXml_Object = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlObjectList = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXml_Object(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXml_Object(entry, context);
+    });
 };
 const deserializeAws_restXmlObjectLockConfiguration = (output, context) => {
     let contents = {
@@ -49938,7 +49905,14 @@ const deserializeAws_restXmlObjectVersion = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlObjectVersionList = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlObjectVersion(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlObjectVersion(entry, context);
+    });
 };
 const deserializeAws_restXmlOwner = (output, context) => {
     let contents = {
@@ -49975,7 +49949,14 @@ const deserializeAws_restXmlOwnershipControlsRule = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlOwnershipControlsRules = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlOwnershipControlsRule(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlOwnershipControlsRule(entry, context);
+    });
 };
 const deserializeAws_restXmlPart = (output, context) => {
     let contents = {
@@ -49999,7 +49980,14 @@ const deserializeAws_restXmlPart = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlParts = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlPart(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlPart(entry, context);
+    });
 };
 const deserializeAws_restXmlPolicyStatus = (output, context) => {
     let contents = {
@@ -50056,7 +50044,14 @@ const deserializeAws_restXmlQueueConfiguration = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlQueueConfigurationList = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlQueueConfiguration(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlQueueConfiguration(entry, context);
+    });
 };
 const deserializeAws_restXmlRedirect = (output, context) => {
     let contents = {
@@ -50197,7 +50192,14 @@ const deserializeAws_restXmlReplicationRuleFilter = (output, context) => {
     return { $unknown: Object.entries(output)[0] };
 };
 const deserializeAws_restXmlReplicationRules = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlReplicationRule(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlReplicationRule(entry, context);
+    });
 };
 const deserializeAws_restXmlReplicationTime = (output, context) => {
     let contents = {
@@ -50235,7 +50237,14 @@ const deserializeAws_restXmlRoutingRule = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlRoutingRules = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlRoutingRule(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlRoutingRule(entry, context);
+    });
 };
 const deserializeAws_restXmlS3KeyFilter = (output, context) => {
     let contents = {
@@ -50288,7 +50297,14 @@ const deserializeAws_restXmlServerSideEncryptionRule = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlServerSideEncryptionRules = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlServerSideEncryptionRule(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlServerSideEncryptionRule(entry, context);
+    });
 };
 const deserializeAws_restXmlSourceSelectionCriteria = (output, context) => {
     let contents = {
@@ -50361,7 +50377,14 @@ const deserializeAws_restXmlTag = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlTagSet = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlTag(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlTag(entry, context);
+    });
 };
 const deserializeAws_restXmlTargetGrant = (output, context) => {
     let contents = {
@@ -50377,7 +50400,14 @@ const deserializeAws_restXmlTargetGrant = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlTargetGrants = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlTargetGrant(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlTargetGrant(entry, context);
+    });
 };
 const deserializeAws_restXmlTiering = (output, context) => {
     let contents = {
@@ -50393,7 +50423,14 @@ const deserializeAws_restXmlTiering = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlTieringList = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlTiering(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlTiering(entry, context);
+    });
 };
 const deserializeAws_restXmlTopicConfiguration = (output, context) => {
     let contents = {
@@ -50420,7 +50457,14 @@ const deserializeAws_restXmlTopicConfiguration = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlTopicConfigurationList = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlTopicConfiguration(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlTopicConfiguration(entry, context);
+    });
 };
 const deserializeAws_restXmlTransition = (output, context) => {
     let contents = {
@@ -50440,13 +50484,24 @@ const deserializeAws_restXmlTransition = (output, context) => {
     return contents;
 };
 const deserializeAws_restXmlTransitionList = (output, context) => {
-    return (output || []).map((entry) => deserializeAws_restXmlTransition(entry, context));
+    return (output || [])
+        .filter((e) => e != null)
+        .map((entry) => {
+        if (entry === null) {
+            return null;
+        }
+        return deserializeAws_restXmlTransition(entry, context);
+    });
 };
-const deserializeMetadata = (output) => ({
-    httpStatusCode: output.statusCode,
-    httpHeaders: output.headers,
-    requestId: output.headers["x-amzn-requestid"],
-});
+const deserializeMetadata = (output) => {
+    var _a;
+    return ({
+        httpStatusCode: output.statusCode,
+        requestId: (_a = output.headers["x-amzn-requestid"]) !== null && _a !== void 0 ? _a : output.headers["x-amzn-request-id"],
+        extendedRequestId: output.headers["x-amz-id-2"],
+        cfId: output.headers["x-amz-cf-id"],
+    });
+};
 // Collect low-level response body stream to Uint8Array.
 const collectBody = (streamBody = new Uint8Array(), context) => {
     if (streamBody instanceof Uint8Array) {
@@ -50457,6 +50512,7 @@ const collectBody = (streamBody = new Uint8Array(), context) => {
 // Encode Uint8Array data into string with utf-8.
 const collectBodyString = (streamBody, context) => collectBody(streamBody, context).then((body) => context.utf8Encoder(body));
 const isSerializableHeaderValue = (value) => value !== undefined &&
+    value !== null &&
     value !== "" &&
     (!Object.getOwnPropertyNames(value).includes("length") || value.length != 0) &&
     (!Object.getOwnPropertyNames(value).includes("size") || value.size != 0);
@@ -50532,7 +50588,10 @@ exports.ClientDefaultValues = {
     base64Encoder: util_base64_node_1.toBase64,
     bodyLengthChecker: util_body_length_node_1.calculateBodyLength,
     credentialDefaultProvider: credential_provider_node_1.defaultProvider,
-    defaultUserAgent: util_user_agent_node_1.defaultUserAgent(package_json_1.default.name, package_json_1.default.version),
+    defaultUserAgentProvider: util_user_agent_node_1.defaultUserAgent({
+        serviceId: runtimeConfig_shared_1.ClientSharedValues.serviceId,
+        clientVersion: package_json_1.default.version,
+    }),
     eventStreamSerdeProvider: eventstream_serde_node_1.eventStreamSerdeProvider,
     maxAttempts: node_config_provider_1.loadConfig(middleware_retry_1.NODE_MAX_ATTEMPT_CONFIG_OPTIONS),
     md5: hash_node_1.Hash.bind(null, "md5"),
@@ -50566,11 +50625,73 @@ exports.ClientSharedValues = {
     disableHostPrefix: false,
     logger: {},
     regionInfoProvider: endpoints_1.defaultRegionInfoProvider,
-    serviceId: "s3",
+    serviceId: "S3",
     signingEscapePath: false,
     useArnRegion: false,
 };
 //# sourceMappingURL=runtimeConfig.shared.js.map
+
+/***/ }),
+
+/***/ 51991:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.waitForBucketExists = void 0;
+const HeadBucketCommand_1 = __webpack_require__(43096);
+const util_waiter_1 = __webpack_require__(6243);
+const checkState = async (client, input) => {
+    try {
+        let result = await client.send(new HeadBucketCommand_1.HeadBucketCommand(input));
+        return { state: util_waiter_1.WaiterState.SUCCESS };
+    }
+    catch (exception) { }
+    return { state: util_waiter_1.WaiterState.RETRY };
+};
+/**
+ *
+ *  @param params : Waiter configuration options.
+ *  @param input : the input to HeadBucketCommand for polling.
+ */
+const waitForBucketExists = async (params, input) => {
+    const serviceDefaults = { minDelay: 5, maxDelay: 120 };
+    return util_waiter_1.createWaiter({ ...serviceDefaults, ...params }, input, checkState);
+};
+exports.waitForBucketExists = waitForBucketExists;
+//# sourceMappingURL=waitForBucketExists.js.map
+
+/***/ }),
+
+/***/ 10835:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.waitForObjectExists = void 0;
+const HeadObjectCommand_1 = __webpack_require__(44903);
+const util_waiter_1 = __webpack_require__(6243);
+const checkState = async (client, input) => {
+    try {
+        let result = await client.send(new HeadObjectCommand_1.HeadObjectCommand(input));
+        return { state: util_waiter_1.WaiterState.SUCCESS };
+    }
+    catch (exception) { }
+    return { state: util_waiter_1.WaiterState.RETRY };
+};
+/**
+ *
+ *  @param params : Waiter configuration options.
+ *  @param input : the input to HeadObjectCommand for polling.
+ */
+const waitForObjectExists = async (params, input) => {
+    const serviceDefaults = { minDelay: 5, maxDelay: 120 };
+    return util_waiter_1.createWaiter({ ...serviceDefaults, ...params }, input, checkState);
+};
+exports.waitForObjectExists = waitForObjectExists;
+//# sourceMappingURL=waitForObjectExists.js.map
 
 /***/ }),
 
@@ -51675,7 +51796,7 @@ exports.ENV_IMDS_DISABLED = "AWS_EC2_METADATA_DISABLED";
 function defaultProvider(init = {}) {
     const { profile = process.env[credential_provider_ini_1.ENV_PROFILE] } = init;
     const providerChain = profile
-        ? credential_provider_ini_1.fromIni(init)
+        ? property_provider_1.chain(credential_provider_ini_1.fromIni(init), credential_provider_process_1.fromProcess(init))
         : property_provider_1.chain(credential_provider_env_1.fromEnv(), credential_provider_ini_1.fromIni(init), credential_provider_process_1.fromProcess(init), remoteProvider(init));
     return property_provider_1.memoize(providerChain, (credentials) => credentials.expiration !== undefined && credentials.expiration.getTime() - Date.now() < 300000, (credentials) => credentials.expiration !== undefined);
 }
@@ -51689,7 +51810,7 @@ function remoteProvider(init) {
     }
     return credential_provider_imds_1.fromInstanceMetadata(init);
 }
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9zcmMvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQUEsOEVBQTJEO0FBQzNELGdGQU0yQztBQUMzQyw4RUFBcUY7QUFDckYsc0ZBQW9GO0FBQ3BGLGtFQUEyRTtBQUc5RCxRQUFBLGlCQUFpQixHQUFHLDJCQUEyQixDQUFDO0FBRTdEOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7R0EyQkc7QUFDSCxTQUFnQixlQUFlLENBQUMsT0FBMkQsRUFBRTtJQUMzRixNQUFNLEVBQUUsT0FBTyxHQUFHLE9BQU8sQ0FBQyxHQUFHLENBQUMscUNBQVcsQ0FBQyxFQUFFLEdBQUcsSUFBSSxDQUFDO0lBQ3BELE1BQU0sYUFBYSxHQUFHLE9BQU87UUFDM0IsQ0FBQyxDQUFDLGlDQUFPLENBQUMsSUFBSSxDQUFDO1FBQ2YsQ0FBQyxDQUFDLHlCQUFLLENBQUMsaUNBQU8sRUFBRSxFQUFFLGlDQUFPLENBQUMsSUFBSSxDQUFDLEVBQUUseUNBQVcsQ0FBQyxJQUFJLENBQUMsRUFBRSxjQUFjLENBQUMsSUFBSSxDQUFDLENBQUMsQ0FBQztJQUU3RSxPQUFPLDJCQUFPLENBQ1osYUFBYSxFQUNiLENBQUMsV0FBVyxFQUFFLEVBQUUsQ0FBQyxXQUFXLENBQUMsVUFBVSxLQUFLLFNBQVMsSUFBSSxXQUFXLENBQUMsVUFBVSxDQUFDLE9BQU8sRUFBRSxHQUFHLElBQUksQ0FBQyxHQUFHLEVBQUUsR0FBRyxNQUFNLEVBQy9HLENBQUMsV0FBVyxFQUFFLEVBQUUsQ0FBQyxXQUFXLENBQUMsVUFBVSxLQUFLLFNBQVMsQ0FDdEQsQ0FBQztBQUNKLENBQUM7QUFYRCwwQ0FXQztBQUVELFNBQVMsY0FBYyxDQUFDLElBQXdCO0lBQzlDLElBQUksT0FBTyxDQUFDLEdBQUcsQ0FBQyxnREFBcUIsQ0FBQyxJQUFJLE9BQU8sQ0FBQyxHQUFHLENBQUMsNENBQWlCLENBQUMsRUFBRTtRQUN4RSxPQUFPLGdEQUFxQixDQUFDLElBQUksQ0FBQyxDQUFDO0tBQ3BDO0lBRUQsSUFBSSxPQUFPLENBQUMsR0FBRyxDQUFDLHlCQUFpQixDQUFDLEVBQUU7UUFDbEMsT0FBTyxHQUFHLEVBQUUsQ0FBQyxPQUFPLENBQUMsTUFBTSxDQUFDLElBQUksaUNBQWEsQ0FBQywrQ0FBK0MsQ0FBQyxDQUFDLENBQUM7S0FDakc7SUFFRCxPQUFPLCtDQUFvQixDQUFDLElBQUksQ0FBQyxDQUFDO0FBQ3BDLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBmcm9tRW52IH0gZnJvbSBcIkBhd3Mtc2RrL2NyZWRlbnRpYWwtcHJvdmlkZXItZW52XCI7XG5pbXBvcnQge1xuICBFTlZfQ01EU19GVUxMX1VSSSxcbiAgRU5WX0NNRFNfUkVMQVRJVkVfVVJJLFxuICBmcm9tQ29udGFpbmVyTWV0YWRhdGEsXG4gIGZyb21JbnN0YW5jZU1ldGFkYXRhLFxuICBSZW1vdGVQcm92aWRlckluaXQsXG59IGZyb20gXCJAYXdzLXNkay9jcmVkZW50aWFsLXByb3ZpZGVyLWltZHNcIjtcbmltcG9ydCB7IEVOVl9QUk9GSUxFLCBmcm9tSW5pLCBGcm9tSW5pSW5pdCB9IGZyb20gXCJAYXdzLXNkay9jcmVkZW50aWFsLXByb3ZpZGVyLWluaVwiO1xuaW1wb3J0IHsgZnJvbVByb2Nlc3MsIEZyb21Qcm9jZXNzSW5pdCB9IGZyb20gXCJAYXdzLXNkay9jcmVkZW50aWFsLXByb3ZpZGVyLXByb2Nlc3NcIjtcbmltcG9ydCB7IGNoYWluLCBtZW1vaXplLCBQcm92aWRlckVycm9yIH0gZnJvbSBcIkBhd3Mtc2RrL3Byb3BlcnR5LXByb3ZpZGVyXCI7XG5pbXBvcnQgeyBDcmVkZW50aWFsUHJvdmlkZXIgfSBmcm9tIFwiQGF3cy1zZGsvdHlwZXNcIjtcblxuZXhwb3J0IGNvbnN0IEVOVl9JTURTX0RJU0FCTEVEID0gXCJBV1NfRUMyX01FVEFEQVRBX0RJU0FCTEVEXCI7XG5cbi8qKlxuICogQ3JlYXRlcyBhIGNyZWRlbnRpYWwgcHJvdmlkZXIgdGhhdCB3aWxsIGF0dGVtcHQgdG8gZmluZCBjcmVkZW50aWFscyBmcm9tIHRoZVxuICogZm9sbG93aW5nIHNvdXJjZXMgKGxpc3RlZCBpbiBvcmRlciBvZiBwcmVjZWRlbmNlKTpcbiAqICAgKiBFbnZpcm9ubWVudCB2YXJpYWJsZXMgZXhwb3NlZCB2aWEgYHByb2Nlc3MuZW52YFxuICogICAqIFNoYXJlZCBjcmVkZW50aWFscyBhbmQgY29uZmlnIGluaSBmaWxlc1xuICogICAqIFRoZSBFQzIvRUNTIEluc3RhbmNlIE1ldGFkYXRhIFNlcnZpY2VcbiAqXG4gKiBUaGUgZGVmYXVsdCBjcmVkZW50aWFsIHByb3ZpZGVyIHdpbGwgaW52b2tlIG9uZSBwcm92aWRlciBhdCBhIHRpbWUgYW5kIG9ubHlcbiAqIGNvbnRpbnVlIHRvIHRoZSBuZXh0IGlmIG5vIGNyZWRlbnRpYWxzIGhhdmUgYmVlbiBsb2NhdGVkLiBGb3IgZXhhbXBsZSwgaWZcbiAqIHRoZSBwcm9jZXNzIGZpbmRzIHZhbHVlcyBkZWZpbmVkIHZpYSB0aGUgYEFXU19BQ0NFU1NfS0VZX0lEYCBhbmRcbiAqIGBBV1NfU0VDUkVUX0FDQ0VTU19LRVlgIGVudmlyb25tZW50IHZhcmlhYmxlcywgdGhlIGZpbGVzIGF0XG4gKiBgfi8uYXdzL2NyZWRlbnRpYWxzYCBhbmQgYH4vLmF3cy9jb25maWdgIHdpbGwgbm90IGJlIHJlYWQsIG5vciB3aWxsIGFueVxuICogbWVzc2FnZXMgYmUgc2VudCB0byB0aGUgSW5zdGFuY2UgTWV0YWRhdGEgU2VydmljZS5cbiAqXG4gKiBAcGFyYW0gaW5pdCAgICAgICAgICAgICAgICAgIENvbmZpZ3VyYXRpb24gdGhhdCBpcyBwYXNzZWQgdG8gZWFjaCBpbmRpdmlkdWFsXG4gKiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHByb3ZpZGVyXG4gKlxuICogQHNlZSBmcm9tRW52ICAgICAgICAgICAgICAgICBUaGUgZnVuY3Rpb24gdXNlZCB0byBzb3VyY2UgY3JlZGVudGlhbHMgZnJvbVxuICogICAgICAgICAgICAgICAgICAgICAgICAgICAgICBlbnZpcm9ubWVudCB2YXJpYWJsZXNcbiAqIEBzZWUgZnJvbUluaSAgICAgICAgICAgICAgICAgVGhlIGZ1bmN0aW9uIHVzZWQgdG8gc291cmNlIGNyZWRlbnRpYWxzIGZyb20gSU5JXG4gKiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZpbGVzXG4gKiBAc2VlIGZyb21Qcm9jZXNzICAgICAgICAgICAgIFRoZSBmdW5jdGlubyB1c2VkIHRvIHNvdXJjZXMgY3JlZGVudGlhbHMgZnJvbVxuICogICAgICAgICAgICAgICAgICAgICAgICAgICAgICBjcmVkZW50aWFsX3Byb2Nlc3MgaW4gSU5JIGZpbGVzXG4gKiBAc2VlIGZyb21JbnN0YW5jZU1ldGFkYXRhICAgIFRoZSBmdW5jdGlvbiB1c2VkIHRvIHNvdXJjZSBjcmVkZW50aWFscyBmcm9tIHRoZVxuICogICAgICAgICAgICAgICAgICAgICAgICAgICAgICBFQzIgSW5zdGFuY2UgTWV0YWRhdGEgU2VydmljZVxuICogQHNlZSBmcm9tQ29udGFpbmVyTWV0YWRhdGEgICBUaGUgZnVuY3Rpb24gdXNlZCB0byBzb3VyY2UgY3JlZGVudGlhbHMgZnJvbSB0aGVcbiAqICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgRUNTIENvbnRhaW5lciBNZXRhZGF0YSBTZXJ2aWNlXG4gKi9cbmV4cG9ydCBmdW5jdGlvbiBkZWZhdWx0UHJvdmlkZXIoaW5pdDogRnJvbUluaUluaXQgJiBSZW1vdGVQcm92aWRlckluaXQgJiBGcm9tUHJvY2Vzc0luaXQgPSB7fSk6IENyZWRlbnRpYWxQcm92aWRlciB7XG4gIGNvbnN0IHsgcHJvZmlsZSA9IHByb2Nlc3MuZW52W0VOVl9QUk9GSUxFXSB9ID0gaW5pdDtcbiAgY29uc3QgcHJvdmlkZXJDaGFpbiA9IHByb2ZpbGVcbiAgICA/IGZyb21JbmkoaW5pdClcbiAgICA6IGNoYWluKGZyb21FbnYoKSwgZnJvbUluaShpbml0KSwgZnJvbVByb2Nlc3MoaW5pdCksIHJlbW90ZVByb3ZpZGVyKGluaXQpKTtcblxuICByZXR1cm4gbWVtb2l6ZShcbiAgICBwcm92aWRlckNoYWluLFxuICAgIChjcmVkZW50aWFscykgPT4gY3JlZGVudGlhbHMuZXhwaXJhdGlvbiAhPT0gdW5kZWZpbmVkICYmIGNyZWRlbnRpYWxzLmV4cGlyYXRpb24uZ2V0VGltZSgpIC0gRGF0ZS5ub3coKSA8IDMwMDAwMCxcbiAgICAoY3JlZGVudGlhbHMpID0+IGNyZWRlbnRpYWxzLmV4cGlyYXRpb24gIT09IHVuZGVmaW5lZFxuICApO1xufVxuXG5mdW5jdGlvbiByZW1vdGVQcm92aWRlcihpbml0OiBSZW1vdGVQcm92aWRlckluaXQpOiBDcmVkZW50aWFsUHJvdmlkZXIge1xuICBpZiAocHJvY2Vzcy5lbnZbRU5WX0NNRFNfUkVMQVRJVkVfVVJJXSB8fCBwcm9jZXNzLmVudltFTlZfQ01EU19GVUxMX1VSSV0pIHtcbiAgICByZXR1cm4gZnJvbUNvbnRhaW5lck1ldGFkYXRhKGluaXQpO1xuICB9XG5cbiAgaWYgKHByb2Nlc3MuZW52W0VOVl9JTURTX0RJU0FCTEVEXSkge1xuICAgIHJldHVybiAoKSA9PiBQcm9taXNlLnJlamVjdChuZXcgUHJvdmlkZXJFcnJvcihcIkVDMiBJbnN0YW5jZSBNZXRhZGF0YSBTZXJ2aWNlIGFjY2VzcyBkaXNhYmxlZFwiKSk7XG4gIH1cblxuICByZXR1cm4gZnJvbUluc3RhbmNlTWV0YWRhdGEoaW5pdCk7XG59XG4iXX0=
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9zcmMvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQUEsOEVBQTJEO0FBQzNELGdGQU0yQztBQUMzQyw4RUFBcUY7QUFDckYsc0ZBQW9GO0FBQ3BGLGtFQUEyRTtBQUc5RCxRQUFBLGlCQUFpQixHQUFHLDJCQUEyQixDQUFDO0FBRTdEOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7R0EyQkc7QUFDSCxTQUFnQixlQUFlLENBQUMsT0FBMkQsRUFBRTtJQUMzRixNQUFNLEVBQUUsT0FBTyxHQUFHLE9BQU8sQ0FBQyxHQUFHLENBQUMscUNBQVcsQ0FBQyxFQUFFLEdBQUcsSUFBSSxDQUFDO0lBQ3BELE1BQU0sYUFBYSxHQUFHLE9BQU87UUFDM0IsQ0FBQyxDQUFDLHlCQUFLLENBQUMsaUNBQU8sQ0FBQyxJQUFJLENBQUMsRUFBRSx5Q0FBVyxDQUFDLElBQUksQ0FBQyxDQUFDO1FBQ3pDLENBQUMsQ0FBQyx5QkFBSyxDQUFDLGlDQUFPLEVBQUUsRUFBRSxpQ0FBTyxDQUFDLElBQUksQ0FBQyxFQUFFLHlDQUFXLENBQUMsSUFBSSxDQUFDLEVBQUUsY0FBYyxDQUFDLElBQUksQ0FBQyxDQUFDLENBQUM7SUFFN0UsT0FBTywyQkFBTyxDQUNaLGFBQWEsRUFDYixDQUFDLFdBQVcsRUFBRSxFQUFFLENBQUMsV0FBVyxDQUFDLFVBQVUsS0FBSyxTQUFTLElBQUksV0FBVyxDQUFDLFVBQVUsQ0FBQyxPQUFPLEVBQUUsR0FBRyxJQUFJLENBQUMsR0FBRyxFQUFFLEdBQUcsTUFBTSxFQUMvRyxDQUFDLFdBQVcsRUFBRSxFQUFFLENBQUMsV0FBVyxDQUFDLFVBQVUsS0FBSyxTQUFTLENBQ3RELENBQUM7QUFDSixDQUFDO0FBWEQsMENBV0M7QUFFRCxTQUFTLGNBQWMsQ0FBQyxJQUF3QjtJQUM5QyxJQUFJLE9BQU8sQ0FBQyxHQUFHLENBQUMsZ0RBQXFCLENBQUMsSUFBSSxPQUFPLENBQUMsR0FBRyxDQUFDLDRDQUFpQixDQUFDLEVBQUU7UUFDeEUsT0FBTyxnREFBcUIsQ0FBQyxJQUFJLENBQUMsQ0FBQztLQUNwQztJQUVELElBQUksT0FBTyxDQUFDLEdBQUcsQ0FBQyx5QkFBaUIsQ0FBQyxFQUFFO1FBQ2xDLE9BQU8sR0FBRyxFQUFFLENBQUMsT0FBTyxDQUFDLE1BQU0sQ0FBQyxJQUFJLGlDQUFhLENBQUMsK0NBQStDLENBQUMsQ0FBQyxDQUFDO0tBQ2pHO0lBRUQsT0FBTywrQ0FBb0IsQ0FBQyxJQUFJLENBQUMsQ0FBQztBQUNwQyxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgZnJvbUVudiB9IGZyb20gXCJAYXdzLXNkay9jcmVkZW50aWFsLXByb3ZpZGVyLWVudlwiO1xuaW1wb3J0IHtcbiAgRU5WX0NNRFNfRlVMTF9VUkksXG4gIEVOVl9DTURTX1JFTEFUSVZFX1VSSSxcbiAgZnJvbUNvbnRhaW5lck1ldGFkYXRhLFxuICBmcm9tSW5zdGFuY2VNZXRhZGF0YSxcbiAgUmVtb3RlUHJvdmlkZXJJbml0LFxufSBmcm9tIFwiQGF3cy1zZGsvY3JlZGVudGlhbC1wcm92aWRlci1pbWRzXCI7XG5pbXBvcnQgeyBFTlZfUFJPRklMRSwgZnJvbUluaSwgRnJvbUluaUluaXQgfSBmcm9tIFwiQGF3cy1zZGsvY3JlZGVudGlhbC1wcm92aWRlci1pbmlcIjtcbmltcG9ydCB7IGZyb21Qcm9jZXNzLCBGcm9tUHJvY2Vzc0luaXQgfSBmcm9tIFwiQGF3cy1zZGsvY3JlZGVudGlhbC1wcm92aWRlci1wcm9jZXNzXCI7XG5pbXBvcnQgeyBjaGFpbiwgbWVtb2l6ZSwgUHJvdmlkZXJFcnJvciB9IGZyb20gXCJAYXdzLXNkay9wcm9wZXJ0eS1wcm92aWRlclwiO1xuaW1wb3J0IHsgQ3JlZGVudGlhbFByb3ZpZGVyIH0gZnJvbSBcIkBhd3Mtc2RrL3R5cGVzXCI7XG5cbmV4cG9ydCBjb25zdCBFTlZfSU1EU19ESVNBQkxFRCA9IFwiQVdTX0VDMl9NRVRBREFUQV9ESVNBQkxFRFwiO1xuXG4vKipcbiAqIENyZWF0ZXMgYSBjcmVkZW50aWFsIHByb3ZpZGVyIHRoYXQgd2lsbCBhdHRlbXB0IHRvIGZpbmQgY3JlZGVudGlhbHMgZnJvbSB0aGVcbiAqIGZvbGxvd2luZyBzb3VyY2VzIChsaXN0ZWQgaW4gb3JkZXIgb2YgcHJlY2VkZW5jZSk6XG4gKiAgICogRW52aXJvbm1lbnQgdmFyaWFibGVzIGV4cG9zZWQgdmlhIGBwcm9jZXNzLmVudmBcbiAqICAgKiBTaGFyZWQgY3JlZGVudGlhbHMgYW5kIGNvbmZpZyBpbmkgZmlsZXNcbiAqICAgKiBUaGUgRUMyL0VDUyBJbnN0YW5jZSBNZXRhZGF0YSBTZXJ2aWNlXG4gKlxuICogVGhlIGRlZmF1bHQgY3JlZGVudGlhbCBwcm92aWRlciB3aWxsIGludm9rZSBvbmUgcHJvdmlkZXIgYXQgYSB0aW1lIGFuZCBvbmx5XG4gKiBjb250aW51ZSB0byB0aGUgbmV4dCBpZiBubyBjcmVkZW50aWFscyBoYXZlIGJlZW4gbG9jYXRlZC4gRm9yIGV4YW1wbGUsIGlmXG4gKiB0aGUgcHJvY2VzcyBmaW5kcyB2YWx1ZXMgZGVmaW5lZCB2aWEgdGhlIGBBV1NfQUNDRVNTX0tFWV9JRGAgYW5kXG4gKiBgQVdTX1NFQ1JFVF9BQ0NFU1NfS0VZYCBlbnZpcm9ubWVudCB2YXJpYWJsZXMsIHRoZSBmaWxlcyBhdFxuICogYH4vLmF3cy9jcmVkZW50aWFsc2AgYW5kIGB+Ly5hd3MvY29uZmlnYCB3aWxsIG5vdCBiZSByZWFkLCBub3Igd2lsbCBhbnlcbiAqIG1lc3NhZ2VzIGJlIHNlbnQgdG8gdGhlIEluc3RhbmNlIE1ldGFkYXRhIFNlcnZpY2UuXG4gKlxuICogQHBhcmFtIGluaXQgICAgICAgICAgICAgICAgICBDb25maWd1cmF0aW9uIHRoYXQgaXMgcGFzc2VkIHRvIGVhY2ggaW5kaXZpZHVhbFxuICogICAgICAgICAgICAgICAgICAgICAgICAgICAgICBwcm92aWRlclxuICpcbiAqIEBzZWUgZnJvbUVudiAgICAgICAgICAgICAgICAgVGhlIGZ1bmN0aW9uIHVzZWQgdG8gc291cmNlIGNyZWRlbnRpYWxzIGZyb21cbiAqICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZW52aXJvbm1lbnQgdmFyaWFibGVzXG4gKiBAc2VlIGZyb21JbmkgICAgICAgICAgICAgICAgIFRoZSBmdW5jdGlvbiB1c2VkIHRvIHNvdXJjZSBjcmVkZW50aWFscyBmcm9tIElOSVxuICogICAgICAgICAgICAgICAgICAgICAgICAgICAgICBmaWxlc1xuICogQHNlZSBmcm9tUHJvY2VzcyAgICAgICAgICAgICBUaGUgZnVuY3Rpbm8gdXNlZCB0byBzb3VyY2VzIGNyZWRlbnRpYWxzIGZyb21cbiAqICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgY3JlZGVudGlhbF9wcm9jZXNzIGluIElOSSBmaWxlc1xuICogQHNlZSBmcm9tSW5zdGFuY2VNZXRhZGF0YSAgICBUaGUgZnVuY3Rpb24gdXNlZCB0byBzb3VyY2UgY3JlZGVudGlhbHMgZnJvbSB0aGVcbiAqICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgRUMyIEluc3RhbmNlIE1ldGFkYXRhIFNlcnZpY2VcbiAqIEBzZWUgZnJvbUNvbnRhaW5lck1ldGFkYXRhICAgVGhlIGZ1bmN0aW9uIHVzZWQgdG8gc291cmNlIGNyZWRlbnRpYWxzIGZyb20gdGhlXG4gKiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEVDUyBDb250YWluZXIgTWV0YWRhdGEgU2VydmljZVxuICovXG5leHBvcnQgZnVuY3Rpb24gZGVmYXVsdFByb3ZpZGVyKGluaXQ6IEZyb21JbmlJbml0ICYgUmVtb3RlUHJvdmlkZXJJbml0ICYgRnJvbVByb2Nlc3NJbml0ID0ge30pOiBDcmVkZW50aWFsUHJvdmlkZXIge1xuICBjb25zdCB7IHByb2ZpbGUgPSBwcm9jZXNzLmVudltFTlZfUFJPRklMRV0gfSA9IGluaXQ7XG4gIGNvbnN0IHByb3ZpZGVyQ2hhaW4gPSBwcm9maWxlXG4gICAgPyBjaGFpbihmcm9tSW5pKGluaXQpLCBmcm9tUHJvY2Vzcyhpbml0KSlcbiAgICA6IGNoYWluKGZyb21FbnYoKSwgZnJvbUluaShpbml0KSwgZnJvbVByb2Nlc3MoaW5pdCksIHJlbW90ZVByb3ZpZGVyKGluaXQpKTtcblxuICByZXR1cm4gbWVtb2l6ZShcbiAgICBwcm92aWRlckNoYWluLFxuICAgIChjcmVkZW50aWFscykgPT4gY3JlZGVudGlhbHMuZXhwaXJhdGlvbiAhPT0gdW5kZWZpbmVkICYmIGNyZWRlbnRpYWxzLmV4cGlyYXRpb24uZ2V0VGltZSgpIC0gRGF0ZS5ub3coKSA8IDMwMDAwMCxcbiAgICAoY3JlZGVudGlhbHMpID0+IGNyZWRlbnRpYWxzLmV4cGlyYXRpb24gIT09IHVuZGVmaW5lZFxuICApO1xufVxuXG5mdW5jdGlvbiByZW1vdGVQcm92aWRlcihpbml0OiBSZW1vdGVQcm92aWRlckluaXQpOiBDcmVkZW50aWFsUHJvdmlkZXIge1xuICBpZiAocHJvY2Vzcy5lbnZbRU5WX0NNRFNfUkVMQVRJVkVfVVJJXSB8fCBwcm9jZXNzLmVudltFTlZfQ01EU19GVUxMX1VSSV0pIHtcbiAgICByZXR1cm4gZnJvbUNvbnRhaW5lck1ldGFkYXRhKGluaXQpO1xuICB9XG5cbiAgaWYgKHByb2Nlc3MuZW52W0VOVl9JTURTX0RJU0FCTEVEXSkge1xuICAgIHJldHVybiAoKSA9PiBQcm9taXNlLnJlamVjdChuZXcgUHJvdmlkZXJFcnJvcihcIkVDMiBJbnN0YW5jZSBNZXRhZGF0YSBTZXJ2aWNlIGFjY2VzcyBkaXNhYmxlZFwiKSk7XG4gIH1cblxuICByZXR1cm4gZnJvbUluc3RhbmNlTWV0YWRhdGEoaW5pdCk7XG59XG4iXX0=
 
 /***/ }),
 
@@ -54923,21 +55044,19 @@ tslib_1.__exportStar(__webpack_require__(63712), exports);
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getLoggerPlugin = exports.loggerMiddlewareOptions = exports.loggerMiddleware = void 0;
 const loggerMiddleware = () => (next, context) => async (args) => {
-    var _a;
-    const { logger } = context;
+    const { clientName, commandName, inputFilterSensitiveLog, logger, outputFilterSensitiveLog } = context;
     const response = await next(args);
     if (!logger) {
         return response;
     }
-    const httpResponse = response.response;
     if (typeof logger.info === "function") {
+        const { $metadata, ...outputWithoutMetadata } = response.output;
         logger.info({
-            metadata: {
-                statusCode: httpResponse.statusCode,
-                requestId: (_a = httpResponse.headers["x-amzn-requestid"]) !== null && _a !== void 0 ? _a : httpResponse.headers["x-amzn-request-id"],
-                extendedRequestId: httpResponse.headers["x-amz-id-2"],
-                cfId: httpResponse.headers["x-amz-cf-id"],
-            },
+            clientName,
+            commandName,
+            input: inputFilterSensitiveLog(args.input),
+            output: outputFilterSensitiveLog(outputWithoutMetadata),
+            metadata: $metadata,
         });
     }
     return response;
@@ -54955,7 +55074,7 @@ const getLoggerPlugin = (options) => ({
     },
 });
 exports.getLoggerPlugin = getLoggerPlugin;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibG9nZ2VyTWlkZGxld2FyZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9sb2dnZXJNaWRkbGV3YXJlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7OztBQVlPLE1BQU0sZ0JBQWdCLEdBQUcsR0FBRyxFQUFFLENBQUMsQ0FDcEMsSUFBb0MsRUFDcEMsT0FBZ0MsRUFDQSxFQUFFLENBQUMsS0FBSyxFQUN4QyxJQUFxQyxFQUNLLEVBQUU7O0lBQzVDLE1BQU0sRUFBRSxNQUFNLEVBQUUsR0FBRyxPQUFPLENBQUM7SUFFM0IsTUFBTSxRQUFRLEdBQUcsTUFBTSxJQUFJLENBQUMsSUFBSSxDQUFDLENBQUM7SUFFbEMsSUFBSSxDQUFDLE1BQU0sRUFBRTtRQUNYLE9BQU8sUUFBUSxDQUFDO0tBQ2pCO0lBRUQsTUFBTSxZQUFZLEdBQUcsUUFBUSxDQUFDLFFBQXdCLENBQUM7SUFFdkQsSUFBSSxPQUFPLE1BQU0sQ0FBQyxJQUFJLEtBQUssVUFBVSxFQUFFO1FBQ3JDLE1BQU0sQ0FBQyxJQUFJLENBQUM7WUFDVixRQUFRLEVBQUU7Z0JBQ1IsVUFBVSxFQUFFLFlBQVksQ0FBQyxVQUFVO2dCQUNuQyxTQUFTLFFBQUUsWUFBWSxDQUFDLE9BQU8sQ0FBQyxrQkFBa0IsQ0FBQyxtQ0FBSSxZQUFZLENBQUMsT0FBTyxDQUFDLG1CQUFtQixDQUFDO2dCQUNoRyxpQkFBaUIsRUFBRSxZQUFZLENBQUMsT0FBTyxDQUFDLFlBQVksQ0FBQztnQkFDckQsSUFBSSxFQUFFLFlBQVksQ0FBQyxPQUFPLENBQUMsYUFBYSxDQUFDO2FBQzFDO1NBQ0YsQ0FBQyxDQUFDO0tBQ0o7SUFFRCxPQUFPLFFBQVEsQ0FBQztBQUNsQixDQUFDLENBQUM7QUE1QlcsUUFBQSxnQkFBZ0Isb0JBNEIzQjtBQUVXLFFBQUEsdUJBQXVCLEdBQWdEO0lBQ2xGLElBQUksRUFBRSxrQkFBa0I7SUFDeEIsSUFBSSxFQUFFLENBQUMsUUFBUSxDQUFDO0lBQ2hCLElBQUksRUFBRSxZQUFZO0NBQ25CLENBQUM7QUFFRiw2REFBNkQ7QUFDdEQsTUFBTSxlQUFlLEdBQUcsQ0FBQyxPQUFZLEVBQXVCLEVBQUUsQ0FBQyxDQUFDO0lBQ3JFLFlBQVksRUFBRSxDQUFDLFdBQVcsRUFBRSxFQUFFO1FBQzVCLFdBQVcsQ0FBQyxHQUFHLENBQUMsd0JBQWdCLEVBQUUsRUFBRSwrQkFBdUIsQ0FBQyxDQUFDO0lBQy9ELENBQUM7Q0FDRixDQUFDLENBQUM7QUFKVSxRQUFBLGVBQWUsbUJBSXpCIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgSHR0cFJlc3BvbnNlIH0gZnJvbSBcIkBhd3Mtc2RrL3Byb3RvY29sLWh0dHBcIjtcbmltcG9ydCB7XG4gIEFic29sdXRlTG9jYXRpb24sXG4gIEhhbmRsZXJFeGVjdXRpb25Db250ZXh0LFxuICBJbml0aWFsaXplSGFuZGxlcixcbiAgSW5pdGlhbGl6ZUhhbmRsZXJBcmd1bWVudHMsXG4gIEluaXRpYWxpemVIYW5kbGVyT3B0aW9ucyxcbiAgSW5pdGlhbGl6ZUhhbmRsZXJPdXRwdXQsXG4gIE1ldGFkYXRhQmVhcmVyLFxuICBQbHVnZ2FibGUsXG59IGZyb20gXCJAYXdzLXNkay90eXBlc1wiO1xuXG5leHBvcnQgY29uc3QgbG9nZ2VyTWlkZGxld2FyZSA9ICgpID0+IDxPdXRwdXQgZXh0ZW5kcyBNZXRhZGF0YUJlYXJlciA9IE1ldGFkYXRhQmVhcmVyPihcbiAgbmV4dDogSW5pdGlhbGl6ZUhhbmRsZXI8YW55LCBPdXRwdXQ+LFxuICBjb250ZXh0OiBIYW5kbGVyRXhlY3V0aW9uQ29udGV4dFxuKTogSW5pdGlhbGl6ZUhhbmRsZXI8YW55LCBPdXRwdXQ+ID0+IGFzeW5jIChcbiAgYXJnczogSW5pdGlhbGl6ZUhhbmRsZXJBcmd1bWVudHM8YW55PlxuKTogUHJvbWlzZTxJbml0aWFsaXplSGFuZGxlck91dHB1dDxPdXRwdXQ+PiA9PiB7XG4gIGNvbnN0IHsgbG9nZ2VyIH0gPSBjb250ZXh0O1xuXG4gIGNvbnN0IHJlc3BvbnNlID0gYXdhaXQgbmV4dChhcmdzKTtcblxuICBpZiAoIWxvZ2dlcikge1xuICAgIHJldHVybiByZXNwb25zZTtcbiAgfVxuXG4gIGNvbnN0IGh0dHBSZXNwb25zZSA9IHJlc3BvbnNlLnJlc3BvbnNlIGFzIEh0dHBSZXNwb25zZTtcblxuICBpZiAodHlwZW9mIGxvZ2dlci5pbmZvID09PSBcImZ1bmN0aW9uXCIpIHtcbiAgICBsb2dnZXIuaW5mbyh7XG4gICAgICBtZXRhZGF0YToge1xuICAgICAgICBzdGF0dXNDb2RlOiBodHRwUmVzcG9uc2Uuc3RhdHVzQ29kZSxcbiAgICAgICAgcmVxdWVzdElkOiBodHRwUmVzcG9uc2UuaGVhZGVyc1tcIngtYW16bi1yZXF1ZXN0aWRcIl0gPz8gaHR0cFJlc3BvbnNlLmhlYWRlcnNbXCJ4LWFtem4tcmVxdWVzdC1pZFwiXSxcbiAgICAgICAgZXh0ZW5kZWRSZXF1ZXN0SWQ6IGh0dHBSZXNwb25zZS5oZWFkZXJzW1wieC1hbXotaWQtMlwiXSxcbiAgICAgICAgY2ZJZDogaHR0cFJlc3BvbnNlLmhlYWRlcnNbXCJ4LWFtei1jZi1pZFwiXSxcbiAgICAgIH0sXG4gICAgfSk7XG4gIH1cblxuICByZXR1cm4gcmVzcG9uc2U7XG59O1xuXG5leHBvcnQgY29uc3QgbG9nZ2VyTWlkZGxld2FyZU9wdGlvbnM6IEluaXRpYWxpemVIYW5kbGVyT3B0aW9ucyAmIEFic29sdXRlTG9jYXRpb24gPSB7XG4gIG5hbWU6IFwibG9nZ2VyTWlkZGxld2FyZVwiLFxuICB0YWdzOiBbXCJMT0dHRVJcIl0sXG4gIHN0ZXA6IFwiaW5pdGlhbGl6ZVwiLFxufTtcblxuLy8gZXNsaW50LWRpc2FibGUtbmV4dC1saW5lIEB0eXBlc2NyaXB0LWVzbGludC9uby11bnVzZWQtdmFyc1xuZXhwb3J0IGNvbnN0IGdldExvZ2dlclBsdWdpbiA9IChvcHRpb25zOiBhbnkpOiBQbHVnZ2FibGU8YW55LCBhbnk+ID0+ICh7XG4gIGFwcGx5VG9TdGFjazogKGNsaWVudFN0YWNrKSA9PiB7XG4gICAgY2xpZW50U3RhY2suYWRkKGxvZ2dlck1pZGRsZXdhcmUoKSwgbG9nZ2VyTWlkZGxld2FyZU9wdGlvbnMpO1xuICB9LFxufSk7XG4iXX0=
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibG9nZ2VyTWlkZGxld2FyZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9sb2dnZXJNaWRkbGV3YXJlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7OztBQVlPLE1BQU0sZ0JBQWdCLEdBQUcsR0FBRyxFQUFFLENBQUMsQ0FDcEMsSUFBb0MsRUFDcEMsT0FBZ0MsRUFDQSxFQUFFLENBQUMsS0FBSyxFQUN4QyxJQUFxQyxFQUNLLEVBQUU7SUFDNUMsTUFBTSxFQUFFLFVBQVUsRUFBRSxXQUFXLEVBQUUsdUJBQXVCLEVBQUUsTUFBTSxFQUFFLHdCQUF3QixFQUFFLEdBQUcsT0FBTyxDQUFDO0lBRXZHLE1BQU0sUUFBUSxHQUFHLE1BQU0sSUFBSSxDQUFDLElBQUksQ0FBQyxDQUFDO0lBRWxDLElBQUksQ0FBQyxNQUFNLEVBQUU7UUFDWCxPQUFPLFFBQVEsQ0FBQztLQUNqQjtJQUVELElBQUksT0FBTyxNQUFNLENBQUMsSUFBSSxLQUFLLFVBQVUsRUFBRTtRQUNyQyxNQUFNLEVBQUUsU0FBUyxFQUFFLEdBQUcscUJBQXFCLEVBQUUsR0FBRyxRQUFRLENBQUMsTUFBTSxDQUFDO1FBQ2hFLE1BQU0sQ0FBQyxJQUFJLENBQUM7WUFDVixVQUFVO1lBQ1YsV0FBVztZQUNYLEtBQUssRUFBRSx1QkFBdUIsQ0FBQyxJQUFJLENBQUMsS0FBSyxDQUFDO1lBQzFDLE1BQU0sRUFBRSx3QkFBd0IsQ0FBQyxxQkFBcUIsQ0FBQztZQUN2RCxRQUFRLEVBQUUsU0FBUztTQUNwQixDQUFDLENBQUM7S0FDSjtJQUVELE9BQU8sUUFBUSxDQUFDO0FBQ2xCLENBQUMsQ0FBQztBQTFCVyxRQUFBLGdCQUFnQixvQkEwQjNCO0FBRVcsUUFBQSx1QkFBdUIsR0FBZ0Q7SUFDbEYsSUFBSSxFQUFFLGtCQUFrQjtJQUN4QixJQUFJLEVBQUUsQ0FBQyxRQUFRLENBQUM7SUFDaEIsSUFBSSxFQUFFLFlBQVk7Q0FDbkIsQ0FBQztBQUVGLDZEQUE2RDtBQUN0RCxNQUFNLGVBQWUsR0FBRyxDQUFDLE9BQVksRUFBdUIsRUFBRSxDQUFDLENBQUM7SUFDckUsWUFBWSxFQUFFLENBQUMsV0FBVyxFQUFFLEVBQUU7UUFDNUIsV0FBVyxDQUFDLEdBQUcsQ0FBQyx3QkFBZ0IsRUFBRSxFQUFFLCtCQUF1QixDQUFDLENBQUM7SUFDL0QsQ0FBQztDQUNGLENBQUMsQ0FBQztBQUpVLFFBQUEsZUFBZSxtQkFJekIiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBIdHRwUmVzcG9uc2UgfSBmcm9tIFwiQGF3cy1zZGsvcHJvdG9jb2wtaHR0cFwiO1xuaW1wb3J0IHtcbiAgQWJzb2x1dGVMb2NhdGlvbixcbiAgSGFuZGxlckV4ZWN1dGlvbkNvbnRleHQsXG4gIEluaXRpYWxpemVIYW5kbGVyLFxuICBJbml0aWFsaXplSGFuZGxlckFyZ3VtZW50cyxcbiAgSW5pdGlhbGl6ZUhhbmRsZXJPcHRpb25zLFxuICBJbml0aWFsaXplSGFuZGxlck91dHB1dCxcbiAgTWV0YWRhdGFCZWFyZXIsXG4gIFBsdWdnYWJsZSxcbn0gZnJvbSBcIkBhd3Mtc2RrL3R5cGVzXCI7XG5cbmV4cG9ydCBjb25zdCBsb2dnZXJNaWRkbGV3YXJlID0gKCkgPT4gPE91dHB1dCBleHRlbmRzIE1ldGFkYXRhQmVhcmVyID0gTWV0YWRhdGFCZWFyZXI+KFxuICBuZXh0OiBJbml0aWFsaXplSGFuZGxlcjxhbnksIE91dHB1dD4sXG4gIGNvbnRleHQ6IEhhbmRsZXJFeGVjdXRpb25Db250ZXh0XG4pOiBJbml0aWFsaXplSGFuZGxlcjxhbnksIE91dHB1dD4gPT4gYXN5bmMgKFxuICBhcmdzOiBJbml0aWFsaXplSGFuZGxlckFyZ3VtZW50czxhbnk+XG4pOiBQcm9taXNlPEluaXRpYWxpemVIYW5kbGVyT3V0cHV0PE91dHB1dD4+ID0+IHtcbiAgY29uc3QgeyBjbGllbnROYW1lLCBjb21tYW5kTmFtZSwgaW5wdXRGaWx0ZXJTZW5zaXRpdmVMb2csIGxvZ2dlciwgb3V0cHV0RmlsdGVyU2Vuc2l0aXZlTG9nIH0gPSBjb250ZXh0O1xuXG4gIGNvbnN0IHJlc3BvbnNlID0gYXdhaXQgbmV4dChhcmdzKTtcblxuICBpZiAoIWxvZ2dlcikge1xuICAgIHJldHVybiByZXNwb25zZTtcbiAgfVxuXG4gIGlmICh0eXBlb2YgbG9nZ2VyLmluZm8gPT09IFwiZnVuY3Rpb25cIikge1xuICAgIGNvbnN0IHsgJG1ldGFkYXRhLCAuLi5vdXRwdXRXaXRob3V0TWV0YWRhdGEgfSA9IHJlc3BvbnNlLm91dHB1dDtcbiAgICBsb2dnZXIuaW5mbyh7XG4gICAgICBjbGllbnROYW1lLFxuICAgICAgY29tbWFuZE5hbWUsXG4gICAgICBpbnB1dDogaW5wdXRGaWx0ZXJTZW5zaXRpdmVMb2coYXJncy5pbnB1dCksXG4gICAgICBvdXRwdXQ6IG91dHB1dEZpbHRlclNlbnNpdGl2ZUxvZyhvdXRwdXRXaXRob3V0TWV0YWRhdGEpLFxuICAgICAgbWV0YWRhdGE6ICRtZXRhZGF0YSxcbiAgICB9KTtcbiAgfVxuXG4gIHJldHVybiByZXNwb25zZTtcbn07XG5cbmV4cG9ydCBjb25zdCBsb2dnZXJNaWRkbGV3YXJlT3B0aW9uczogSW5pdGlhbGl6ZUhhbmRsZXJPcHRpb25zICYgQWJzb2x1dGVMb2NhdGlvbiA9IHtcbiAgbmFtZTogXCJsb2dnZXJNaWRkbGV3YXJlXCIsXG4gIHRhZ3M6IFtcIkxPR0dFUlwiXSxcbiAgc3RlcDogXCJpbml0aWFsaXplXCIsXG59O1xuXG4vLyBlc2xpbnQtZGlzYWJsZS1uZXh0LWxpbmUgQHR5cGVzY3JpcHQtZXNsaW50L25vLXVudXNlZC12YXJzXG5leHBvcnQgY29uc3QgZ2V0TG9nZ2VyUGx1Z2luID0gKG9wdGlvbnM6IGFueSk6IFBsdWdnYWJsZTxhbnksIGFueT4gPT4gKHtcbiAgYXBwbHlUb1N0YWNrOiAoY2xpZW50U3RhY2spID0+IHtcbiAgICBjbGllbnRTdGFjay5hZGQobG9nZ2VyTWlkZGxld2FyZSgpLCBsb2dnZXJNaWRkbGV3YXJlT3B0aW9ucyk7XG4gIH0sXG59KTtcbiJdfQ==
 
 /***/ }),
 
@@ -55277,7 +55396,7 @@ exports.NODE_RETRY_MODE_CONFIG_OPTIONS = {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.NO_RETRY_INCREMENT = exports.TIMEOUT_RETRY_COST = exports.RETRY_COST = exports.INITIAL_RETRY_TOKENS = exports.THROTTLING_RETRY_DELAY_BASE = exports.MAXIMUM_RETRY_DELAY = exports.DEFAULT_RETRY_DELAY_BASE = void 0;
+exports.REQUEST_HEADER = exports.INVOCATION_ID_HEADER = exports.NO_RETRY_INCREMENT = exports.TIMEOUT_RETRY_COST = exports.RETRY_COST = exports.INITIAL_RETRY_TOKENS = exports.THROTTLING_RETRY_DELAY_BASE = exports.MAXIMUM_RETRY_DELAY = exports.DEFAULT_RETRY_DELAY_BASE = void 0;
 /**
  * The base number of milliseconds to use in calculating a suitable cool-down
  * time when a retryable error is encountered.
@@ -55311,7 +55430,15 @@ exports.TIMEOUT_RETRY_COST = 10;
  * if an SDK operation invocation succeeds without requiring a retry request.
  */
 exports.NO_RETRY_INCREMENT = 1;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY29uc3RhbnRzLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vc3JjL2NvbnN0YW50cy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFBQTs7O0dBR0c7QUFDVSxRQUFBLHdCQUF3QixHQUFHLEdBQUcsQ0FBQztBQUU1Qzs7O0dBR0c7QUFDVSxRQUFBLG1CQUFtQixHQUFHLEVBQUUsR0FBRyxJQUFJLENBQUM7QUFFN0M7OztHQUdHO0FBQ1UsUUFBQSwyQkFBMkIsR0FBRyxHQUFHLENBQUM7QUFFL0M7O0dBRUc7QUFDVSxRQUFBLG9CQUFvQixHQUFHLEdBQUcsQ0FBQztBQUV4Qzs7R0FFRztBQUNVLFFBQUEsVUFBVSxHQUFHLENBQUMsQ0FBQztBQUU1Qjs7O0dBR0c7QUFDVSxRQUFBLGtCQUFrQixHQUFHLEVBQUUsQ0FBQztBQUVyQzs7O0dBR0c7QUFDVSxRQUFBLGtCQUFrQixHQUFHLENBQUMsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogVGhlIGJhc2UgbnVtYmVyIG9mIG1pbGxpc2Vjb25kcyB0byB1c2UgaW4gY2FsY3VsYXRpbmcgYSBzdWl0YWJsZSBjb29sLWRvd25cbiAqIHRpbWUgd2hlbiBhIHJldHJ5YWJsZSBlcnJvciBpcyBlbmNvdW50ZXJlZC5cbiAqL1xuZXhwb3J0IGNvbnN0IERFRkFVTFRfUkVUUllfREVMQVlfQkFTRSA9IDEwMDtcblxuLyoqXG4gKiBUaGUgbWF4aW11bSBhbW91bnQgb2YgdGltZSAoaW4gbWlsbGlzZWNvbmRzKSB0aGF0IHdpbGwgYmUgdXNlZCBhcyBhIGRlbGF5XG4gKiBiZXR3ZWVuIHJldHJ5IGF0dGVtcHRzLlxuICovXG5leHBvcnQgY29uc3QgTUFYSU1VTV9SRVRSWV9ERUxBWSA9IDIwICogMTAwMDtcblxuLyoqXG4gKiBUaGUgcmV0cnkgZGVsYXkgYmFzZSAoaW4gbWlsbGlzZWNvbmRzKSB0byB1c2Ugd2hlbiBhIHRocm90dGxpbmcgZXJyb3IgaXNcbiAqIGVuY291bnRlcmVkLlxuICovXG5leHBvcnQgY29uc3QgVEhST1RUTElOR19SRVRSWV9ERUxBWV9CQVNFID0gNTAwO1xuXG4vKipcbiAqIEluaXRpYWwgbnVtYmVyIG9mIHJldHJ5IHRva2VucyBpbiBSZXRyeSBRdW90YVxuICovXG5leHBvcnQgY29uc3QgSU5JVElBTF9SRVRSWV9UT0tFTlMgPSA1MDA7XG5cbi8qKlxuICogVGhlIHRvdGFsIGFtb3VudCBvZiByZXRyeSB0b2tlbnMgdG8gYmUgZGVjcmVtZW50ZWQgZnJvbSByZXRyeSB0b2tlbiBiYWxhbmNlLlxuICovXG5leHBvcnQgY29uc3QgUkVUUllfQ09TVCA9IDU7XG5cbi8qKlxuICogVGhlIHRvdGFsIGFtb3VudCBvZiByZXRyeSB0b2tlbnMgdG8gYmUgZGVjcmVtZW50ZWQgZnJvbSByZXRyeSB0b2tlbiBiYWxhbmNlXG4gKiB3aGVuIGEgdGhyb3R0bGluZyBlcnJvciBpcyBlbmNvdW50ZXJlZC5cbiAqL1xuZXhwb3J0IGNvbnN0IFRJTUVPVVRfUkVUUllfQ09TVCA9IDEwO1xuXG4vKipcbiAqIFRoZSB0b3RhbCBhbW91bnQgb2YgcmV0cnkgdG9rZW4gdG8gYmUgaW5jcmVtZW50ZWQgZnJvbSByZXRyeSB0b2tlbiBiYWxhbmNlXG4gKiBpZiBhbiBTREsgb3BlcmF0aW9uIGludm9jYXRpb24gc3VjY2VlZHMgd2l0aG91dCByZXF1aXJpbmcgYSByZXRyeSByZXF1ZXN0LlxuICovXG5leHBvcnQgY29uc3QgTk9fUkVUUllfSU5DUkVNRU5UID0gMTtcbiJdfQ==
+/**
+ * Header name for SDK invocation ID
+ */
+exports.INVOCATION_ID_HEADER = "amz-sdk-invocation-id";
+/**
+ * Header name for request retry information.
+ */
+exports.REQUEST_HEADER = "amz-sdk-request";
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY29uc3RhbnRzLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vc3JjL2NvbnN0YW50cy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFBQTs7O0dBR0c7QUFDVSxRQUFBLHdCQUF3QixHQUFHLEdBQUcsQ0FBQztBQUU1Qzs7O0dBR0c7QUFDVSxRQUFBLG1CQUFtQixHQUFHLEVBQUUsR0FBRyxJQUFJLENBQUM7QUFFN0M7OztHQUdHO0FBQ1UsUUFBQSwyQkFBMkIsR0FBRyxHQUFHLENBQUM7QUFFL0M7O0dBRUc7QUFDVSxRQUFBLG9CQUFvQixHQUFHLEdBQUcsQ0FBQztBQUV4Qzs7R0FFRztBQUNVLFFBQUEsVUFBVSxHQUFHLENBQUMsQ0FBQztBQUU1Qjs7O0dBR0c7QUFDVSxRQUFBLGtCQUFrQixHQUFHLEVBQUUsQ0FBQztBQUVyQzs7O0dBR0c7QUFDVSxRQUFBLGtCQUFrQixHQUFHLENBQUMsQ0FBQztBQUVwQzs7R0FFRztBQUNVLFFBQUEsb0JBQW9CLEdBQUcsdUJBQXVCLENBQUM7QUFFNUQ7O0dBRUc7QUFDVSxRQUFBLGNBQWMsR0FBRyxpQkFBaUIsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogVGhlIGJhc2UgbnVtYmVyIG9mIG1pbGxpc2Vjb25kcyB0byB1c2UgaW4gY2FsY3VsYXRpbmcgYSBzdWl0YWJsZSBjb29sLWRvd25cbiAqIHRpbWUgd2hlbiBhIHJldHJ5YWJsZSBlcnJvciBpcyBlbmNvdW50ZXJlZC5cbiAqL1xuZXhwb3J0IGNvbnN0IERFRkFVTFRfUkVUUllfREVMQVlfQkFTRSA9IDEwMDtcblxuLyoqXG4gKiBUaGUgbWF4aW11bSBhbW91bnQgb2YgdGltZSAoaW4gbWlsbGlzZWNvbmRzKSB0aGF0IHdpbGwgYmUgdXNlZCBhcyBhIGRlbGF5XG4gKiBiZXR3ZWVuIHJldHJ5IGF0dGVtcHRzLlxuICovXG5leHBvcnQgY29uc3QgTUFYSU1VTV9SRVRSWV9ERUxBWSA9IDIwICogMTAwMDtcblxuLyoqXG4gKiBUaGUgcmV0cnkgZGVsYXkgYmFzZSAoaW4gbWlsbGlzZWNvbmRzKSB0byB1c2Ugd2hlbiBhIHRocm90dGxpbmcgZXJyb3IgaXNcbiAqIGVuY291bnRlcmVkLlxuICovXG5leHBvcnQgY29uc3QgVEhST1RUTElOR19SRVRSWV9ERUxBWV9CQVNFID0gNTAwO1xuXG4vKipcbiAqIEluaXRpYWwgbnVtYmVyIG9mIHJldHJ5IHRva2VucyBpbiBSZXRyeSBRdW90YVxuICovXG5leHBvcnQgY29uc3QgSU5JVElBTF9SRVRSWV9UT0tFTlMgPSA1MDA7XG5cbi8qKlxuICogVGhlIHRvdGFsIGFtb3VudCBvZiByZXRyeSB0b2tlbnMgdG8gYmUgZGVjcmVtZW50ZWQgZnJvbSByZXRyeSB0b2tlbiBiYWxhbmNlLlxuICovXG5leHBvcnQgY29uc3QgUkVUUllfQ09TVCA9IDU7XG5cbi8qKlxuICogVGhlIHRvdGFsIGFtb3VudCBvZiByZXRyeSB0b2tlbnMgdG8gYmUgZGVjcmVtZW50ZWQgZnJvbSByZXRyeSB0b2tlbiBiYWxhbmNlXG4gKiB3aGVuIGEgdGhyb3R0bGluZyBlcnJvciBpcyBlbmNvdW50ZXJlZC5cbiAqL1xuZXhwb3J0IGNvbnN0IFRJTUVPVVRfUkVUUllfQ09TVCA9IDEwO1xuXG4vKipcbiAqIFRoZSB0b3RhbCBhbW91bnQgb2YgcmV0cnkgdG9rZW4gdG8gYmUgaW5jcmVtZW50ZWQgZnJvbSByZXRyeSB0b2tlbiBiYWxhbmNlXG4gKiBpZiBhbiBTREsgb3BlcmF0aW9uIGludm9jYXRpb24gc3VjY2VlZHMgd2l0aG91dCByZXF1aXJpbmcgYSByZXRyeSByZXF1ZXN0LlxuICovXG5leHBvcnQgY29uc3QgTk9fUkVUUllfSU5DUkVNRU5UID0gMTtcblxuLyoqXG4gKiBIZWFkZXIgbmFtZSBmb3IgU0RLIGludm9jYXRpb24gSURcbiAqL1xuZXhwb3J0IGNvbnN0IElOVk9DQVRJT05fSURfSEVBREVSID0gXCJhbXotc2RrLWludm9jYXRpb24taWRcIjtcblxuLyoqXG4gKiBIZWFkZXIgbmFtZSBmb3IgcmVxdWVzdCByZXRyeSBpbmZvcm1hdGlvbi5cbiAqL1xuZXhwb3J0IGNvbnN0IFJFUVVFU1RfSEVBREVSID0gXCJhbXotc2RrLXJlcXVlc3RcIjtcbiJdfQ==
 
 /***/ }),
 
@@ -55379,6 +55506,7 @@ class StandardRetryStrategy {
     constructor(maxAttemptsProvider, options) {
         var _a, _b, _c;
         this.maxAttemptsProvider = maxAttemptsProvider;
+        this.mode = exports.DEFAULT_RETRY_MODE;
         this.retryDecider = (_a = options === null || options === void 0 ? void 0 : options.retryDecider) !== null && _a !== void 0 ? _a : retryDecider_1.defaultRetryDecider;
         this.delayDecider = (_b = options === null || options === void 0 ? void 0 : options.delayDecider) !== null && _b !== void 0 ? _b : delayDecider_1.defaultDelayDecider;
         this.retryQuota = (_c = options === null || options === void 0 ? void 0 : options.retryQuota) !== null && _c !== void 0 ? _c : defaultRetryQuota_1.getDefaultRetryQuota(constants_1.INITIAL_RETRY_TOKENS);
@@ -55403,12 +55531,12 @@ class StandardRetryStrategy {
         const maxAttempts = await this.getMaxAttempts();
         const { request } = args;
         if (protocol_http_1.HttpRequest.isInstance(request)) {
-            request.headers["amz-sdk-invocation-id"] = uuid_1.v4();
+            request.headers[constants_1.INVOCATION_ID_HEADER] = uuid_1.v4();
         }
         while (true) {
             try {
                 if (protocol_http_1.HttpRequest.isInstance(request)) {
-                    request.headers["amz-sdk-request"] = `attempt=${attempts + 1}; max=${maxAttempts}`;
+                    request.headers[constants_1.REQUEST_HEADER] = `attempt=${attempts + 1}; max=${maxAttempts}`;
                 }
                 const { response, output } = await next(args);
                 this.retryQuota.releaseRetryTokens(retryTokenAmount);
@@ -55436,7 +55564,7 @@ class StandardRetryStrategy {
     }
 }
 exports.StandardRetryStrategy = StandardRetryStrategy;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZGVmYXVsdFN0cmF0ZWd5LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vc3JjL2RlZmF1bHRTdHJhdGVneS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFBQSwwREFBcUQ7QUFDckQsd0ZBQTBFO0FBRzFFLCtCQUEwQjtBQUUxQiwyQ0FBMEc7QUFDMUcsMkRBQTJEO0FBQzNELGlEQUFxRDtBQUNyRCxpREFBcUQ7QUFFckQ7OztHQUdHO0FBQ1UsUUFBQSxvQkFBb0IsR0FBRyxDQUFDLENBQUM7QUFFdEM7O0dBRUc7QUFDVSxRQUFBLGtCQUFrQixHQUFHLFVBQVUsQ0FBQztBQW9EN0MsTUFBYSxxQkFBcUI7SUFLaEMsWUFBNkIsbUJBQXFDLEVBQUUsT0FBc0M7O1FBQTdFLHdCQUFtQixHQUFuQixtQkFBbUIsQ0FBa0I7UUFDaEUsSUFBSSxDQUFDLFlBQVksU0FBRyxPQUFPLGFBQVAsT0FBTyx1QkFBUCxPQUFPLENBQUUsWUFBWSxtQ0FBSSxrQ0FBbUIsQ0FBQztRQUNqRSxJQUFJLENBQUMsWUFBWSxTQUFHLE9BQU8sYUFBUCxPQUFPLHVCQUFQLE9BQU8sQ0FBRSxZQUFZLG1DQUFJLGtDQUFtQixDQUFDO1FBQ2pFLElBQUksQ0FBQyxVQUFVLFNBQUcsT0FBTyxhQUFQLE9BQU8sdUJBQVAsT0FBTyxDQUFFLFVBQVUsbUNBQUksd0NBQW9CLENBQUMsZ0NBQW9CLENBQUMsQ0FBQztJQUN0RixDQUFDO0lBRU8sV0FBVyxDQUFDLEtBQWUsRUFBRSxRQUFnQixFQUFFLFdBQW1CO1FBQ3hFLE9BQU8sUUFBUSxHQUFHLFdBQVcsSUFBSSxJQUFJLENBQUMsWUFBWSxDQUFDLEtBQUssQ0FBQyxJQUFJLElBQUksQ0FBQyxVQUFVLENBQUMsY0FBYyxDQUFDLEtBQUssQ0FBQyxDQUFDO0lBQ3JHLENBQUM7SUFFTyxLQUFLLENBQUMsY0FBYztRQUMxQixJQUFJLFdBQW1CLENBQUM7UUFDeEIsSUFBSTtZQUNGLFdBQVcsR0FBRyxNQUFNLElBQUksQ0FBQyxtQkFBbUIsRUFBRSxDQUFDO1NBQ2hEO1FBQUMsT0FBTyxLQUFLLEVBQUU7WUFDZCxXQUFXLEdBQUcsNEJBQW9CLENBQUM7U0FDcEM7UUFDRCxPQUFPLFdBQVcsQ0FBQztJQUNyQixDQUFDO0lBRUQsS0FBSyxDQUFDLEtBQUssQ0FDVCxJQUFtQyxFQUNuQyxJQUFxQztRQUVyQyxJQUFJLGdCQUFnQixDQUFDO1FBQ3JCLElBQUksUUFBUSxHQUFHLENBQUMsQ0FBQztRQUNqQixJQUFJLFVBQVUsR0FBRyxDQUFDLENBQUM7UUFFbkIsTUFBTSxXQUFXLEdBQUcsTUFBTSxJQUFJLENBQUMsY0FBYyxFQUFFLENBQUM7UUFFaEQsTUFBTSxFQUFFLE9BQU8sRUFBRSxHQUFHLElBQUksQ0FBQztRQUN6QixJQUFJLDJCQUFXLENBQUMsVUFBVSxDQUFDLE9BQU8sQ0FBQyxFQUFFO1lBQ25DLE9BQU8sQ0FBQyxPQUFPLENBQUMsdUJBQXVCLENBQUMsR0FBRyxTQUFFLEVBQUUsQ0FBQztTQUNqRDtRQUVELE9BQU8sSUFBSSxFQUFFO1lBQ1gsSUFBSTtnQkFDRixJQUFJLDJCQUFXLENBQUMsVUFBVSxDQUFDLE9BQU8sQ0FBQyxFQUFFO29CQUNuQyxPQUFPLENBQUMsT0FBTyxDQUFDLGlCQUFpQixDQUFDLEdBQUcsV0FBVyxRQUFRLEdBQUcsQ0FBQyxTQUFTLFdBQVcsRUFBRSxDQUFDO2lCQUNwRjtnQkFDRCxNQUFNLEVBQUUsUUFBUSxFQUFFLE1BQU0sRUFBRSxHQUFHLE1BQU0sSUFBSSxDQUFDLElBQUksQ0FBQyxDQUFDO2dCQUU5QyxJQUFJLENBQUMsVUFBVSxDQUFDLGtCQUFrQixDQUFDLGdCQUFnQixDQUFDLENBQUM7Z0JBQ3JELE1BQU0sQ0FBQyxTQUFTLENBQUMsUUFBUSxHQUFHLFFBQVEsR0FBRyxDQUFDLENBQUM7Z0JBQ3pDLE1BQU0sQ0FBQyxTQUFTLENBQUMsZUFBZSxHQUFHLFVBQVUsQ0FBQztnQkFFOUMsT0FBTyxFQUFFLFFBQVEsRUFBRSxNQUFNLEVBQUUsQ0FBQzthQUM3QjtZQUFDLE9BQU8sR0FBRyxFQUFFO2dCQUNaLFFBQVEsRUFBRSxDQUFDO2dCQUNYLElBQUksSUFBSSxDQUFDLFdBQVcsQ0FBQyxHQUFlLEVBQUUsUUFBUSxFQUFFLFdBQVcsQ0FBQyxFQUFFO29CQUM1RCxnQkFBZ0IsR0FBRyxJQUFJLENBQUMsVUFBVSxDQUFDLG1CQUFtQixDQUFDLEdBQUcsQ0FBQyxDQUFDO29CQUM1RCxNQUFNLEtBQUssR0FBRyxJQUFJLENBQUMsWUFBWSxDQUM3QixnREFBaUIsQ0FBQyxHQUFHLENBQUMsQ0FBQyxDQUFDLENBQUMsdUNBQTJCLENBQUMsQ0FBQyxDQUFDLG9DQUF3QixFQUMvRSxRQUFRLENBQ1QsQ0FBQztvQkFDRixVQUFVLElBQUksS0FBSyxDQUFDO29CQUVwQixNQUFNLElBQUksT0FBTyxDQUFDLENBQUMsT0FBTyxFQUFFLEVBQUUsQ0FBQyxVQUFVLENBQUMsT0FBTyxFQUFFLEtBQUssQ0FBQyxDQUFDLENBQUM7b0JBQzNELFNBQVM7aUJBQ1Y7Z0JBRUQsSUFBSSxDQUFDLEdBQUcsQ0FBQyxTQUFTLEVBQUU7b0JBQ2xCLEdBQUcsQ0FBQyxTQUFTLEdBQUcsRUFBRSxDQUFDO2lCQUNwQjtnQkFFRCxHQUFHLENBQUMsU0FBUyxDQUFDLFFBQVEsR0FBRyxRQUFRLENBQUM7Z0JBQ2xDLEdBQUcsQ0FBQyxTQUFTLENBQUMsZUFBZSxHQUFHLFVBQVUsQ0FBQztnQkFDM0MsTUFBTSxHQUFHLENBQUM7YUFDWDtTQUNGO0lBQ0gsQ0FBQztDQUNGO0FBNUVELHNEQTRFQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IEh0dHBSZXF1ZXN0IH0gZnJvbSBcIkBhd3Mtc2RrL3Byb3RvY29sLWh0dHBcIjtcbmltcG9ydCB7IGlzVGhyb3R0bGluZ0Vycm9yIH0gZnJvbSBcIkBhd3Mtc2RrL3NlcnZpY2UtZXJyb3ItY2xhc3NpZmljYXRpb25cIjtcbmltcG9ydCB7IFNka0Vycm9yIH0gZnJvbSBcIkBhd3Mtc2RrL3NtaXRoeS1jbGllbnRcIjtcbmltcG9ydCB7IEZpbmFsaXplSGFuZGxlciwgRmluYWxpemVIYW5kbGVyQXJndW1lbnRzLCBNZXRhZGF0YUJlYXJlciwgUHJvdmlkZXIsIFJldHJ5U3RyYXRlZ3kgfSBmcm9tIFwiQGF3cy1zZGsvdHlwZXNcIjtcbmltcG9ydCB7IHY0IH0gZnJvbSBcInV1aWRcIjtcblxuaW1wb3J0IHsgREVGQVVMVF9SRVRSWV9ERUxBWV9CQVNFLCBJTklUSUFMX1JFVFJZX1RPS0VOUywgVEhST1RUTElOR19SRVRSWV9ERUxBWV9CQVNFIH0gZnJvbSBcIi4vY29uc3RhbnRzXCI7XG5pbXBvcnQgeyBnZXREZWZhdWx0UmV0cnlRdW90YSB9IGZyb20gXCIuL2RlZmF1bHRSZXRyeVF1b3RhXCI7XG5pbXBvcnQgeyBkZWZhdWx0RGVsYXlEZWNpZGVyIH0gZnJvbSBcIi4vZGVsYXlEZWNpZGVyXCI7XG5pbXBvcnQgeyBkZWZhdWx0UmV0cnlEZWNpZGVyIH0gZnJvbSBcIi4vcmV0cnlEZWNpZGVyXCI7XG5cbi8qKlxuICogVGhlIGRlZmF1bHQgdmFsdWUgZm9yIGhvdyBtYW55IEhUVFAgcmVxdWVzdHMgYW4gU0RLIHNob3VsZCBtYWtlIGZvciBhXG4gKiBzaW5nbGUgU0RLIG9wZXJhdGlvbiBpbnZvY2F0aW9uIGJlZm9yZSBnaXZpbmcgdXBcbiAqL1xuZXhwb3J0IGNvbnN0IERFRkFVTFRfTUFYX0FUVEVNUFRTID0gMztcblxuLyoqXG4gKiBUaGUgZGVmYXVsdCByZXRyeSBhbGdvcml0aG0gdG8gdXNlLlxuICovXG5leHBvcnQgY29uc3QgREVGQVVMVF9SRVRSWV9NT0RFID0gXCJzdGFuZGFyZFwiO1xuXG4vKipcbiAqIERldGVybWluZXMgd2hldGhlciBhbiBlcnJvciBpcyByZXRyeWFibGUgYmFzZWQgb24gdGhlIG51bWJlciBvZiByZXRyaWVzXG4gKiBhbHJlYWR5IGF0dGVtcHRlZCwgdGhlIEhUVFAgc3RhdHVzIGNvZGUsIGFuZCB0aGUgZXJyb3IgcmVjZWl2ZWQgKGlmIGFueSkuXG4gKlxuICogQHBhcmFtIGVycm9yICAgICAgICAgVGhlIGVycm9yIGVuY291bnRlcmVkLlxuICovXG5leHBvcnQgaW50ZXJmYWNlIFJldHJ5RGVjaWRlciB7XG4gIChlcnJvcjogU2RrRXJyb3IpOiBib29sZWFuO1xufVxuXG4vKipcbiAqIERldGVybWluZXMgdGhlIG51bWJlciBvZiBtaWxsaXNlY29uZHMgdG8gd2FpdCBiZWZvcmUgcmV0cnlpbmcgYW4gYWN0aW9uLlxuICpcbiAqIEBwYXJhbSBkZWxheUJhc2UgVGhlIGJhc2UgZGVsYXkgKGluIG1pbGxpc2Vjb25kcykuXG4gKiBAcGFyYW0gYXR0ZW1wdHMgIFRoZSBudW1iZXIgb2YgdGltZXMgdGhlIGFjdGlvbiBoYXMgYWxyZWFkeSBiZWVuIHRyaWVkLlxuICovXG5leHBvcnQgaW50ZXJmYWNlIERlbGF5RGVjaWRlciB7XG4gIChkZWxheUJhc2U6IG51bWJlciwgYXR0ZW1wdHM6IG51bWJlcik6IG51bWJlcjtcbn1cblxuLyoqXG4gKiBJbnRlcmZhY2UgdGhhdCBzcGVjaWZpZXMgdGhlIHJldHJ5IHF1b3RhIGJlaGF2aW9yLlxuICovXG5leHBvcnQgaW50ZXJmYWNlIFJldHJ5UXVvdGEge1xuICAvKipcbiAgICogcmV0dXJucyB0cnVlIGlmIHJldHJ5IHRva2VucyBhcmUgYXZhaWxhYmxlIGZyb20gdGhlIHJldHJ5IHF1b3RhIGJ1Y2tldC5cbiAgICovXG4gIGhhc1JldHJ5VG9rZW5zOiAoZXJyb3I6IFNka0Vycm9yKSA9PiBib29sZWFuO1xuXG4gIC8qKlxuICAgKiByZXR1cm5zIHRva2VuIGFtb3VudCBmcm9tIHRoZSByZXRyeSBxdW90YSBidWNrZXQuXG4gICAqIHRocm93cyBlcnJvciBpcyByZXRyeSB0b2tlbnMgYXJlIG5vdCBhdmFpbGFibGUuXG4gICAqL1xuICByZXRyaWV2ZVJldHJ5VG9rZW5zOiAoZXJyb3I6IFNka0Vycm9yKSA9PiBudW1iZXI7XG5cbiAgLyoqXG4gICAqIHJlbGVhc2VzIHRva2VucyBiYWNrIHRvIHRoZSByZXRyeSBxdW90YS5cbiAgICovXG4gIHJlbGVhc2VSZXRyeVRva2VuczogKHJlbGVhc2VDYXBhY2l0eUFtb3VudD86IG51bWJlcikgPT4gdm9pZDtcbn1cblxuLyoqXG4gKiBTdHJhdGVneSBvcHRpb25zIHRvIGJlIHBhc3NlZCB0byBTdGFuZGFyZFJldHJ5U3RyYXRlZ3lcbiAqL1xuZXhwb3J0IGludGVyZmFjZSBTdGFuZGFyZFJldHJ5U3RyYXRlZ3lPcHRpb25zIHtcbiAgcmV0cnlEZWNpZGVyPzogUmV0cnlEZWNpZGVyO1xuICBkZWxheURlY2lkZXI/OiBEZWxheURlY2lkZXI7XG4gIHJldHJ5UXVvdGE/OiBSZXRyeVF1b3RhO1xufVxuXG5leHBvcnQgY2xhc3MgU3RhbmRhcmRSZXRyeVN0cmF0ZWd5IGltcGxlbWVudHMgUmV0cnlTdHJhdGVneSB7XG4gIHByaXZhdGUgcmV0cnlEZWNpZGVyOiBSZXRyeURlY2lkZXI7XG4gIHByaXZhdGUgZGVsYXlEZWNpZGVyOiBEZWxheURlY2lkZXI7XG4gIHByaXZhdGUgcmV0cnlRdW90YTogUmV0cnlRdW90YTtcblxuICBjb25zdHJ1Y3Rvcihwcml2YXRlIHJlYWRvbmx5IG1heEF0dGVtcHRzUHJvdmlkZXI6IFByb3ZpZGVyPG51bWJlcj4sIG9wdGlvbnM/OiBTdGFuZGFyZFJldHJ5U3RyYXRlZ3lPcHRpb25zKSB7XG4gICAgdGhpcy5yZXRyeURlY2lkZXIgPSBvcHRpb25zPy5yZXRyeURlY2lkZXIgPz8gZGVmYXVsdFJldHJ5RGVjaWRlcjtcbiAgICB0aGlzLmRlbGF5RGVjaWRlciA9IG9wdGlvbnM/LmRlbGF5RGVjaWRlciA/PyBkZWZhdWx0RGVsYXlEZWNpZGVyO1xuICAgIHRoaXMucmV0cnlRdW90YSA9IG9wdGlvbnM/LnJldHJ5UXVvdGEgPz8gZ2V0RGVmYXVsdFJldHJ5UXVvdGEoSU5JVElBTF9SRVRSWV9UT0tFTlMpO1xuICB9XG5cbiAgcHJpdmF0ZSBzaG91bGRSZXRyeShlcnJvcjogU2RrRXJyb3IsIGF0dGVtcHRzOiBudW1iZXIsIG1heEF0dGVtcHRzOiBudW1iZXIpIHtcbiAgICByZXR1cm4gYXR0ZW1wdHMgPCBtYXhBdHRlbXB0cyAmJiB0aGlzLnJldHJ5RGVjaWRlcihlcnJvcikgJiYgdGhpcy5yZXRyeVF1b3RhLmhhc1JldHJ5VG9rZW5zKGVycm9yKTtcbiAgfVxuXG4gIHByaXZhdGUgYXN5bmMgZ2V0TWF4QXR0ZW1wdHMoKSB7XG4gICAgbGV0IG1heEF0dGVtcHRzOiBudW1iZXI7XG4gICAgdHJ5IHtcbiAgICAgIG1heEF0dGVtcHRzID0gYXdhaXQgdGhpcy5tYXhBdHRlbXB0c1Byb3ZpZGVyKCk7XG4gICAgfSBjYXRjaCAoZXJyb3IpIHtcbiAgICAgIG1heEF0dGVtcHRzID0gREVGQVVMVF9NQVhfQVRURU1QVFM7XG4gICAgfVxuICAgIHJldHVybiBtYXhBdHRlbXB0cztcbiAgfVxuXG4gIGFzeW5jIHJldHJ5PElucHV0IGV4dGVuZHMgb2JqZWN0LCBPdXB1dCBleHRlbmRzIE1ldGFkYXRhQmVhcmVyPihcbiAgICBuZXh0OiBGaW5hbGl6ZUhhbmRsZXI8SW5wdXQsIE91cHV0PixcbiAgICBhcmdzOiBGaW5hbGl6ZUhhbmRsZXJBcmd1bWVudHM8SW5wdXQ+XG4gICkge1xuICAgIGxldCByZXRyeVRva2VuQW1vdW50O1xuICAgIGxldCBhdHRlbXB0cyA9IDA7XG4gICAgbGV0IHRvdGFsRGVsYXkgPSAwO1xuXG4gICAgY29uc3QgbWF4QXR0ZW1wdHMgPSBhd2FpdCB0aGlzLmdldE1heEF0dGVtcHRzKCk7XG5cbiAgICBjb25zdCB7IHJlcXVlc3QgfSA9IGFyZ3M7XG4gICAgaWYgKEh0dHBSZXF1ZXN0LmlzSW5zdGFuY2UocmVxdWVzdCkpIHtcbiAgICAgIHJlcXVlc3QuaGVhZGVyc1tcImFtei1zZGstaW52b2NhdGlvbi1pZFwiXSA9IHY0KCk7XG4gICAgfVxuXG4gICAgd2hpbGUgKHRydWUpIHtcbiAgICAgIHRyeSB7XG4gICAgICAgIGlmIChIdHRwUmVxdWVzdC5pc0luc3RhbmNlKHJlcXVlc3QpKSB7XG4gICAgICAgICAgcmVxdWVzdC5oZWFkZXJzW1wiYW16LXNkay1yZXF1ZXN0XCJdID0gYGF0dGVtcHQ9JHthdHRlbXB0cyArIDF9OyBtYXg9JHttYXhBdHRlbXB0c31gO1xuICAgICAgICB9XG4gICAgICAgIGNvbnN0IHsgcmVzcG9uc2UsIG91dHB1dCB9ID0gYXdhaXQgbmV4dChhcmdzKTtcblxuICAgICAgICB0aGlzLnJldHJ5UXVvdGEucmVsZWFzZVJldHJ5VG9rZW5zKHJldHJ5VG9rZW5BbW91bnQpO1xuICAgICAgICBvdXRwdXQuJG1ldGFkYXRhLmF0dGVtcHRzID0gYXR0ZW1wdHMgKyAxO1xuICAgICAgICBvdXRwdXQuJG1ldGFkYXRhLnRvdGFsUmV0cnlEZWxheSA9IHRvdGFsRGVsYXk7XG5cbiAgICAgICAgcmV0dXJuIHsgcmVzcG9uc2UsIG91dHB1dCB9O1xuICAgICAgfSBjYXRjaCAoZXJyKSB7XG4gICAgICAgIGF0dGVtcHRzKys7XG4gICAgICAgIGlmICh0aGlzLnNob3VsZFJldHJ5KGVyciBhcyBTZGtFcnJvciwgYXR0ZW1wdHMsIG1heEF0dGVtcHRzKSkge1xuICAgICAgICAgIHJldHJ5VG9rZW5BbW91bnQgPSB0aGlzLnJldHJ5UXVvdGEucmV0cmlldmVSZXRyeVRva2VucyhlcnIpO1xuICAgICAgICAgIGNvbnN0IGRlbGF5ID0gdGhpcy5kZWxheURlY2lkZXIoXG4gICAgICAgICAgICBpc1Rocm90dGxpbmdFcnJvcihlcnIpID8gVEhST1RUTElOR19SRVRSWV9ERUxBWV9CQVNFIDogREVGQVVMVF9SRVRSWV9ERUxBWV9CQVNFLFxuICAgICAgICAgICAgYXR0ZW1wdHNcbiAgICAgICAgICApO1xuICAgICAgICAgIHRvdGFsRGVsYXkgKz0gZGVsYXk7XG5cbiAgICAgICAgICBhd2FpdCBuZXcgUHJvbWlzZSgocmVzb2x2ZSkgPT4gc2V0VGltZW91dChyZXNvbHZlLCBkZWxheSkpO1xuICAgICAgICAgIGNvbnRpbnVlO1xuICAgICAgICB9XG5cbiAgICAgICAgaWYgKCFlcnIuJG1ldGFkYXRhKSB7XG4gICAgICAgICAgZXJyLiRtZXRhZGF0YSA9IHt9O1xuICAgICAgICB9XG5cbiAgICAgICAgZXJyLiRtZXRhZGF0YS5hdHRlbXB0cyA9IGF0dGVtcHRzO1xuICAgICAgICBlcnIuJG1ldGFkYXRhLnRvdGFsUmV0cnlEZWxheSA9IHRvdGFsRGVsYXk7XG4gICAgICAgIHRocm93IGVycjtcbiAgICAgIH1cbiAgICB9XG4gIH1cbn1cbiJdfQ==
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZGVmYXVsdFN0cmF0ZWd5LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vc3JjL2RlZmF1bHRTdHJhdGVneS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFBQSwwREFBcUQ7QUFDckQsd0ZBQTBFO0FBRzFFLCtCQUEwQjtBQUUxQiwyQ0FNcUI7QUFDckIsMkRBQTJEO0FBQzNELGlEQUFxRDtBQUNyRCxpREFBcUQ7QUFFckQ7OztHQUdHO0FBQ1UsUUFBQSxvQkFBb0IsR0FBRyxDQUFDLENBQUM7QUFFdEM7O0dBRUc7QUFDVSxRQUFBLGtCQUFrQixHQUFHLFVBQVUsQ0FBQztBQW9EN0MsTUFBYSxxQkFBcUI7SUFNaEMsWUFBNkIsbUJBQXFDLEVBQUUsT0FBc0M7O1FBQTdFLHdCQUFtQixHQUFuQixtQkFBbUIsQ0FBa0I7UUFGbEQsU0FBSSxHQUFHLDBCQUFrQixDQUFDO1FBR3hDLElBQUksQ0FBQyxZQUFZLFNBQUcsT0FBTyxhQUFQLE9BQU8sdUJBQVAsT0FBTyxDQUFFLFlBQVksbUNBQUksa0NBQW1CLENBQUM7UUFDakUsSUFBSSxDQUFDLFlBQVksU0FBRyxPQUFPLGFBQVAsT0FBTyx1QkFBUCxPQUFPLENBQUUsWUFBWSxtQ0FBSSxrQ0FBbUIsQ0FBQztRQUNqRSxJQUFJLENBQUMsVUFBVSxTQUFHLE9BQU8sYUFBUCxPQUFPLHVCQUFQLE9BQU8sQ0FBRSxVQUFVLG1DQUFJLHdDQUFvQixDQUFDLGdDQUFvQixDQUFDLENBQUM7SUFDdEYsQ0FBQztJQUVPLFdBQVcsQ0FBQyxLQUFlLEVBQUUsUUFBZ0IsRUFBRSxXQUFtQjtRQUN4RSxPQUFPLFFBQVEsR0FBRyxXQUFXLElBQUksSUFBSSxDQUFDLFlBQVksQ0FBQyxLQUFLLENBQUMsSUFBSSxJQUFJLENBQUMsVUFBVSxDQUFDLGNBQWMsQ0FBQyxLQUFLLENBQUMsQ0FBQztJQUNyRyxDQUFDO0lBRU8sS0FBSyxDQUFDLGNBQWM7UUFDMUIsSUFBSSxXQUFtQixDQUFDO1FBQ3hCLElBQUk7WUFDRixXQUFXLEdBQUcsTUFBTSxJQUFJLENBQUMsbUJBQW1CLEVBQUUsQ0FBQztTQUNoRDtRQUFDLE9BQU8sS0FBSyxFQUFFO1lBQ2QsV0FBVyxHQUFHLDRCQUFvQixDQUFDO1NBQ3BDO1FBQ0QsT0FBTyxXQUFXLENBQUM7SUFDckIsQ0FBQztJQUVELEtBQUssQ0FBQyxLQUFLLENBQ1QsSUFBbUMsRUFDbkMsSUFBcUM7UUFFckMsSUFBSSxnQkFBZ0IsQ0FBQztRQUNyQixJQUFJLFFBQVEsR0FBRyxDQUFDLENBQUM7UUFDakIsSUFBSSxVQUFVLEdBQUcsQ0FBQyxDQUFDO1FBRW5CLE1BQU0sV0FBVyxHQUFHLE1BQU0sSUFBSSxDQUFDLGNBQWMsRUFBRSxDQUFDO1FBRWhELE1BQU0sRUFBRSxPQUFPLEVBQUUsR0FBRyxJQUFJLENBQUM7UUFDekIsSUFBSSwyQkFBVyxDQUFDLFVBQVUsQ0FBQyxPQUFPLENBQUMsRUFBRTtZQUNuQyxPQUFPLENBQUMsT0FBTyxDQUFDLGdDQUFvQixDQUFDLEdBQUcsU0FBRSxFQUFFLENBQUM7U0FDOUM7UUFFRCxPQUFPLElBQUksRUFBRTtZQUNYLElBQUk7Z0JBQ0YsSUFBSSwyQkFBVyxDQUFDLFVBQVUsQ0FBQyxPQUFPLENBQUMsRUFBRTtvQkFDbkMsT0FBTyxDQUFDLE9BQU8sQ0FBQywwQkFBYyxDQUFDLEdBQUcsV0FBVyxRQUFRLEdBQUcsQ0FBQyxTQUFTLFdBQVcsRUFBRSxDQUFDO2lCQUNqRjtnQkFDRCxNQUFNLEVBQUUsUUFBUSxFQUFFLE1BQU0sRUFBRSxHQUFHLE1BQU0sSUFBSSxDQUFDLElBQUksQ0FBQyxDQUFDO2dCQUU5QyxJQUFJLENBQUMsVUFBVSxDQUFDLGtCQUFrQixDQUFDLGdCQUFnQixDQUFDLENBQUM7Z0JBQ3JELE1BQU0sQ0FBQyxTQUFTLENBQUMsUUFBUSxHQUFHLFFBQVEsR0FBRyxDQUFDLENBQUM7Z0JBQ3pDLE1BQU0sQ0FBQyxTQUFTLENBQUMsZUFBZSxHQUFHLFVBQVUsQ0FBQztnQkFFOUMsT0FBTyxFQUFFLFFBQVEsRUFBRSxNQUFNLEVBQUUsQ0FBQzthQUM3QjtZQUFDLE9BQU8sR0FBRyxFQUFFO2dCQUNaLFFBQVEsRUFBRSxDQUFDO2dCQUNYLElBQUksSUFBSSxDQUFDLFdBQVcsQ0FBQyxHQUFlLEVBQUUsUUFBUSxFQUFFLFdBQVcsQ0FBQyxFQUFFO29CQUM1RCxnQkFBZ0IsR0FBRyxJQUFJLENBQUMsVUFBVSxDQUFDLG1CQUFtQixDQUFDLEdBQUcsQ0FBQyxDQUFDO29CQUM1RCxNQUFNLEtBQUssR0FBRyxJQUFJLENBQUMsWUFBWSxDQUM3QixnREFBaUIsQ0FBQyxHQUFHLENBQUMsQ0FBQyxDQUFDLENBQUMsdUNBQTJCLENBQUMsQ0FBQyxDQUFDLG9DQUF3QixFQUMvRSxRQUFRLENBQ1QsQ0FBQztvQkFDRixVQUFVLElBQUksS0FBSyxDQUFDO29CQUVwQixNQUFNLElBQUksT0FBTyxDQUFDLENBQUMsT0FBTyxFQUFFLEVBQUUsQ0FBQyxVQUFVLENBQUMsT0FBTyxFQUFFLEtBQUssQ0FBQyxDQUFDLENBQUM7b0JBQzNELFNBQVM7aUJBQ1Y7Z0JBRUQsSUFBSSxDQUFDLEdBQUcsQ0FBQyxTQUFTLEVBQUU7b0JBQ2xCLEdBQUcsQ0FBQyxTQUFTLEdBQUcsRUFBRSxDQUFDO2lCQUNwQjtnQkFFRCxHQUFHLENBQUMsU0FBUyxDQUFDLFFBQVEsR0FBRyxRQUFRLENBQUM7Z0JBQ2xDLEdBQUcsQ0FBQyxTQUFTLENBQUMsZUFBZSxHQUFHLFVBQVUsQ0FBQztnQkFDM0MsTUFBTSxHQUFHLENBQUM7YUFDWDtTQUNGO0lBQ0gsQ0FBQztDQUNGO0FBN0VELHNEQTZFQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IEh0dHBSZXF1ZXN0IH0gZnJvbSBcIkBhd3Mtc2RrL3Byb3RvY29sLWh0dHBcIjtcbmltcG9ydCB7IGlzVGhyb3R0bGluZ0Vycm9yIH0gZnJvbSBcIkBhd3Mtc2RrL3NlcnZpY2UtZXJyb3ItY2xhc3NpZmljYXRpb25cIjtcbmltcG9ydCB7IFNka0Vycm9yIH0gZnJvbSBcIkBhd3Mtc2RrL3NtaXRoeS1jbGllbnRcIjtcbmltcG9ydCB7IEZpbmFsaXplSGFuZGxlciwgRmluYWxpemVIYW5kbGVyQXJndW1lbnRzLCBNZXRhZGF0YUJlYXJlciwgUHJvdmlkZXIsIFJldHJ5U3RyYXRlZ3kgfSBmcm9tIFwiQGF3cy1zZGsvdHlwZXNcIjtcbmltcG9ydCB7IHY0IH0gZnJvbSBcInV1aWRcIjtcblxuaW1wb3J0IHtcbiAgREVGQVVMVF9SRVRSWV9ERUxBWV9CQVNFLFxuICBJTklUSUFMX1JFVFJZX1RPS0VOUyxcbiAgSU5WT0NBVElPTl9JRF9IRUFERVIsXG4gIFJFUVVFU1RfSEVBREVSLFxuICBUSFJPVFRMSU5HX1JFVFJZX0RFTEFZX0JBU0UsXG59IGZyb20gXCIuL2NvbnN0YW50c1wiO1xuaW1wb3J0IHsgZ2V0RGVmYXVsdFJldHJ5UXVvdGEgfSBmcm9tIFwiLi9kZWZhdWx0UmV0cnlRdW90YVwiO1xuaW1wb3J0IHsgZGVmYXVsdERlbGF5RGVjaWRlciB9IGZyb20gXCIuL2RlbGF5RGVjaWRlclwiO1xuaW1wb3J0IHsgZGVmYXVsdFJldHJ5RGVjaWRlciB9IGZyb20gXCIuL3JldHJ5RGVjaWRlclwiO1xuXG4vKipcbiAqIFRoZSBkZWZhdWx0IHZhbHVlIGZvciBob3cgbWFueSBIVFRQIHJlcXVlc3RzIGFuIFNESyBzaG91bGQgbWFrZSBmb3IgYVxuICogc2luZ2xlIFNESyBvcGVyYXRpb24gaW52b2NhdGlvbiBiZWZvcmUgZ2l2aW5nIHVwXG4gKi9cbmV4cG9ydCBjb25zdCBERUZBVUxUX01BWF9BVFRFTVBUUyA9IDM7XG5cbi8qKlxuICogVGhlIGRlZmF1bHQgcmV0cnkgYWxnb3JpdGhtIHRvIHVzZS5cbiAqL1xuZXhwb3J0IGNvbnN0IERFRkFVTFRfUkVUUllfTU9ERSA9IFwic3RhbmRhcmRcIjtcblxuLyoqXG4gKiBEZXRlcm1pbmVzIHdoZXRoZXIgYW4gZXJyb3IgaXMgcmV0cnlhYmxlIGJhc2VkIG9uIHRoZSBudW1iZXIgb2YgcmV0cmllc1xuICogYWxyZWFkeSBhdHRlbXB0ZWQsIHRoZSBIVFRQIHN0YXR1cyBjb2RlLCBhbmQgdGhlIGVycm9yIHJlY2VpdmVkIChpZiBhbnkpLlxuICpcbiAqIEBwYXJhbSBlcnJvciAgICAgICAgIFRoZSBlcnJvciBlbmNvdW50ZXJlZC5cbiAqL1xuZXhwb3J0IGludGVyZmFjZSBSZXRyeURlY2lkZXIge1xuICAoZXJyb3I6IFNka0Vycm9yKTogYm9vbGVhbjtcbn1cblxuLyoqXG4gKiBEZXRlcm1pbmVzIHRoZSBudW1iZXIgb2YgbWlsbGlzZWNvbmRzIHRvIHdhaXQgYmVmb3JlIHJldHJ5aW5nIGFuIGFjdGlvbi5cbiAqXG4gKiBAcGFyYW0gZGVsYXlCYXNlIFRoZSBiYXNlIGRlbGF5IChpbiBtaWxsaXNlY29uZHMpLlxuICogQHBhcmFtIGF0dGVtcHRzICBUaGUgbnVtYmVyIG9mIHRpbWVzIHRoZSBhY3Rpb24gaGFzIGFscmVhZHkgYmVlbiB0cmllZC5cbiAqL1xuZXhwb3J0IGludGVyZmFjZSBEZWxheURlY2lkZXIge1xuICAoZGVsYXlCYXNlOiBudW1iZXIsIGF0dGVtcHRzOiBudW1iZXIpOiBudW1iZXI7XG59XG5cbi8qKlxuICogSW50ZXJmYWNlIHRoYXQgc3BlY2lmaWVzIHRoZSByZXRyeSBxdW90YSBiZWhhdmlvci5cbiAqL1xuZXhwb3J0IGludGVyZmFjZSBSZXRyeVF1b3RhIHtcbiAgLyoqXG4gICAqIHJldHVybnMgdHJ1ZSBpZiByZXRyeSB0b2tlbnMgYXJlIGF2YWlsYWJsZSBmcm9tIHRoZSByZXRyeSBxdW90YSBidWNrZXQuXG4gICAqL1xuICBoYXNSZXRyeVRva2VuczogKGVycm9yOiBTZGtFcnJvcikgPT4gYm9vbGVhbjtcblxuICAvKipcbiAgICogcmV0dXJucyB0b2tlbiBhbW91bnQgZnJvbSB0aGUgcmV0cnkgcXVvdGEgYnVja2V0LlxuICAgKiB0aHJvd3MgZXJyb3IgaXMgcmV0cnkgdG9rZW5zIGFyZSBub3QgYXZhaWxhYmxlLlxuICAgKi9cbiAgcmV0cmlldmVSZXRyeVRva2VuczogKGVycm9yOiBTZGtFcnJvcikgPT4gbnVtYmVyO1xuXG4gIC8qKlxuICAgKiByZWxlYXNlcyB0b2tlbnMgYmFjayB0byB0aGUgcmV0cnkgcXVvdGEuXG4gICAqL1xuICByZWxlYXNlUmV0cnlUb2tlbnM6IChyZWxlYXNlQ2FwYWNpdHlBbW91bnQ/OiBudW1iZXIpID0+IHZvaWQ7XG59XG5cbi8qKlxuICogU3RyYXRlZ3kgb3B0aW9ucyB0byBiZSBwYXNzZWQgdG8gU3RhbmRhcmRSZXRyeVN0cmF0ZWd5XG4gKi9cbmV4cG9ydCBpbnRlcmZhY2UgU3RhbmRhcmRSZXRyeVN0cmF0ZWd5T3B0aW9ucyB7XG4gIHJldHJ5RGVjaWRlcj86IFJldHJ5RGVjaWRlcjtcbiAgZGVsYXlEZWNpZGVyPzogRGVsYXlEZWNpZGVyO1xuICByZXRyeVF1b3RhPzogUmV0cnlRdW90YTtcbn1cblxuZXhwb3J0IGNsYXNzIFN0YW5kYXJkUmV0cnlTdHJhdGVneSBpbXBsZW1lbnRzIFJldHJ5U3RyYXRlZ3kge1xuICBwcml2YXRlIHJldHJ5RGVjaWRlcjogUmV0cnlEZWNpZGVyO1xuICBwcml2YXRlIGRlbGF5RGVjaWRlcjogRGVsYXlEZWNpZGVyO1xuICBwcml2YXRlIHJldHJ5UXVvdGE6IFJldHJ5UXVvdGE7XG4gIHB1YmxpYyByZWFkb25seSBtb2RlID0gREVGQVVMVF9SRVRSWV9NT0RFO1xuXG4gIGNvbnN0cnVjdG9yKHByaXZhdGUgcmVhZG9ubHkgbWF4QXR0ZW1wdHNQcm92aWRlcjogUHJvdmlkZXI8bnVtYmVyPiwgb3B0aW9ucz86IFN0YW5kYXJkUmV0cnlTdHJhdGVneU9wdGlvbnMpIHtcbiAgICB0aGlzLnJldHJ5RGVjaWRlciA9IG9wdGlvbnM/LnJldHJ5RGVjaWRlciA/PyBkZWZhdWx0UmV0cnlEZWNpZGVyO1xuICAgIHRoaXMuZGVsYXlEZWNpZGVyID0gb3B0aW9ucz8uZGVsYXlEZWNpZGVyID8/IGRlZmF1bHREZWxheURlY2lkZXI7XG4gICAgdGhpcy5yZXRyeVF1b3RhID0gb3B0aW9ucz8ucmV0cnlRdW90YSA/PyBnZXREZWZhdWx0UmV0cnlRdW90YShJTklUSUFMX1JFVFJZX1RPS0VOUyk7XG4gIH1cblxuICBwcml2YXRlIHNob3VsZFJldHJ5KGVycm9yOiBTZGtFcnJvciwgYXR0ZW1wdHM6IG51bWJlciwgbWF4QXR0ZW1wdHM6IG51bWJlcikge1xuICAgIHJldHVybiBhdHRlbXB0cyA8IG1heEF0dGVtcHRzICYmIHRoaXMucmV0cnlEZWNpZGVyKGVycm9yKSAmJiB0aGlzLnJldHJ5UXVvdGEuaGFzUmV0cnlUb2tlbnMoZXJyb3IpO1xuICB9XG5cbiAgcHJpdmF0ZSBhc3luYyBnZXRNYXhBdHRlbXB0cygpIHtcbiAgICBsZXQgbWF4QXR0ZW1wdHM6IG51bWJlcjtcbiAgICB0cnkge1xuICAgICAgbWF4QXR0ZW1wdHMgPSBhd2FpdCB0aGlzLm1heEF0dGVtcHRzUHJvdmlkZXIoKTtcbiAgICB9IGNhdGNoIChlcnJvcikge1xuICAgICAgbWF4QXR0ZW1wdHMgPSBERUZBVUxUX01BWF9BVFRFTVBUUztcbiAgICB9XG4gICAgcmV0dXJuIG1heEF0dGVtcHRzO1xuICB9XG5cbiAgYXN5bmMgcmV0cnk8SW5wdXQgZXh0ZW5kcyBvYmplY3QsIE91cHV0IGV4dGVuZHMgTWV0YWRhdGFCZWFyZXI+KFxuICAgIG5leHQ6IEZpbmFsaXplSGFuZGxlcjxJbnB1dCwgT3VwdXQ+LFxuICAgIGFyZ3M6IEZpbmFsaXplSGFuZGxlckFyZ3VtZW50czxJbnB1dD5cbiAgKSB7XG4gICAgbGV0IHJldHJ5VG9rZW5BbW91bnQ7XG4gICAgbGV0IGF0dGVtcHRzID0gMDtcbiAgICBsZXQgdG90YWxEZWxheSA9IDA7XG5cbiAgICBjb25zdCBtYXhBdHRlbXB0cyA9IGF3YWl0IHRoaXMuZ2V0TWF4QXR0ZW1wdHMoKTtcblxuICAgIGNvbnN0IHsgcmVxdWVzdCB9ID0gYXJncztcbiAgICBpZiAoSHR0cFJlcXVlc3QuaXNJbnN0YW5jZShyZXF1ZXN0KSkge1xuICAgICAgcmVxdWVzdC5oZWFkZXJzW0lOVk9DQVRJT05fSURfSEVBREVSXSA9IHY0KCk7XG4gICAgfVxuXG4gICAgd2hpbGUgKHRydWUpIHtcbiAgICAgIHRyeSB7XG4gICAgICAgIGlmIChIdHRwUmVxdWVzdC5pc0luc3RhbmNlKHJlcXVlc3QpKSB7XG4gICAgICAgICAgcmVxdWVzdC5oZWFkZXJzW1JFUVVFU1RfSEVBREVSXSA9IGBhdHRlbXB0PSR7YXR0ZW1wdHMgKyAxfTsgbWF4PSR7bWF4QXR0ZW1wdHN9YDtcbiAgICAgICAgfVxuICAgICAgICBjb25zdCB7IHJlc3BvbnNlLCBvdXRwdXQgfSA9IGF3YWl0IG5leHQoYXJncyk7XG5cbiAgICAgICAgdGhpcy5yZXRyeVF1b3RhLnJlbGVhc2VSZXRyeVRva2VucyhyZXRyeVRva2VuQW1vdW50KTtcbiAgICAgICAgb3V0cHV0LiRtZXRhZGF0YS5hdHRlbXB0cyA9IGF0dGVtcHRzICsgMTtcbiAgICAgICAgb3V0cHV0LiRtZXRhZGF0YS50b3RhbFJldHJ5RGVsYXkgPSB0b3RhbERlbGF5O1xuXG4gICAgICAgIHJldHVybiB7IHJlc3BvbnNlLCBvdXRwdXQgfTtcbiAgICAgIH0gY2F0Y2ggKGVycikge1xuICAgICAgICBhdHRlbXB0cysrO1xuICAgICAgICBpZiAodGhpcy5zaG91bGRSZXRyeShlcnIgYXMgU2RrRXJyb3IsIGF0dGVtcHRzLCBtYXhBdHRlbXB0cykpIHtcbiAgICAgICAgICByZXRyeVRva2VuQW1vdW50ID0gdGhpcy5yZXRyeVF1b3RhLnJldHJpZXZlUmV0cnlUb2tlbnMoZXJyKTtcbiAgICAgICAgICBjb25zdCBkZWxheSA9IHRoaXMuZGVsYXlEZWNpZGVyKFxuICAgICAgICAgICAgaXNUaHJvdHRsaW5nRXJyb3IoZXJyKSA/IFRIUk9UVExJTkdfUkVUUllfREVMQVlfQkFTRSA6IERFRkFVTFRfUkVUUllfREVMQVlfQkFTRSxcbiAgICAgICAgICAgIGF0dGVtcHRzXG4gICAgICAgICAgKTtcbiAgICAgICAgICB0b3RhbERlbGF5ICs9IGRlbGF5O1xuXG4gICAgICAgICAgYXdhaXQgbmV3IFByb21pc2UoKHJlc29sdmUpID0+IHNldFRpbWVvdXQocmVzb2x2ZSwgZGVsYXkpKTtcbiAgICAgICAgICBjb250aW51ZTtcbiAgICAgICAgfVxuXG4gICAgICAgIGlmICghZXJyLiRtZXRhZGF0YSkge1xuICAgICAgICAgIGVyci4kbWV0YWRhdGEgPSB7fTtcbiAgICAgICAgfVxuXG4gICAgICAgIGVyci4kbWV0YWRhdGEuYXR0ZW1wdHMgPSBhdHRlbXB0cztcbiAgICAgICAgZXJyLiRtZXRhZGF0YS50b3RhbFJldHJ5RGVsYXkgPSB0b3RhbERlbGF5O1xuICAgICAgICB0aHJvdyBlcnI7XG4gICAgICB9XG4gICAgfVxuICB9XG59XG4iXX0=
 
 /***/ }),
 
@@ -55465,11 +55593,46 @@ exports.defaultDelayDecider = defaultDelayDecider;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const tslib_1 = __webpack_require__(30450);
 tslib_1.__exportStar(__webpack_require__(86730), exports);
+tslib_1.__exportStar(__webpack_require__(69317), exports);
 tslib_1.__exportStar(__webpack_require__(85857), exports);
 tslib_1.__exportStar(__webpack_require__(49083), exports);
 tslib_1.__exportStar(__webpack_require__(7659), exports);
 tslib_1.__exportStar(__webpack_require__(26553), exports);
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9zcmMvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQUEsNERBQWtDO0FBQ2xDLDREQUFrQztBQUNsQywyREFBaUM7QUFDakMseURBQStCO0FBQy9CLHlEQUErQiIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCAqIGZyb20gXCIuL3JldHJ5TWlkZGxld2FyZVwiO1xuZXhwb3J0ICogZnJvbSBcIi4vZGVmYXVsdFN0cmF0ZWd5XCI7XG5leHBvcnQgKiBmcm9tIFwiLi9jb25maWd1cmF0aW9uc1wiO1xuZXhwb3J0ICogZnJvbSBcIi4vZGVsYXlEZWNpZGVyXCI7XG5leHBvcnQgKiBmcm9tIFwiLi9yZXRyeURlY2lkZXJcIjtcbiJdfQ==
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9zcmMvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQUEsNERBQWtDO0FBQ2xDLHVFQUE2QztBQUM3Qyw0REFBa0M7QUFDbEMsMkRBQWlDO0FBQ2pDLHlEQUErQjtBQUMvQix5REFBK0IiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgKiBmcm9tIFwiLi9yZXRyeU1pZGRsZXdhcmVcIjtcbmV4cG9ydCAqIGZyb20gXCIuL29taXRSZXRyeUhlYWRlcnNNaWRkbGV3YXJlXCI7XG5leHBvcnQgKiBmcm9tIFwiLi9kZWZhdWx0U3RyYXRlZ3lcIjtcbmV4cG9ydCAqIGZyb20gXCIuL2NvbmZpZ3VyYXRpb25zXCI7XG5leHBvcnQgKiBmcm9tIFwiLi9kZWxheURlY2lkZXJcIjtcbmV4cG9ydCAqIGZyb20gXCIuL3JldHJ5RGVjaWRlclwiO1xuIl19
+
+/***/ }),
+
+/***/ 69317:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.getOmitRetryHeadersPlugin = exports.omitRetryHeadersMiddlewareOptions = exports.omitRetryHeadersMiddleware = void 0;
+const protocol_http_1 = __webpack_require__(67498);
+const constants_1 = __webpack_require__(91285);
+const omitRetryHeadersMiddleware = () => (next) => async (args) => {
+    const { request } = args;
+    if (protocol_http_1.HttpRequest.isInstance(request)) {
+        delete request.headers[constants_1.INVOCATION_ID_HEADER];
+        delete request.headers[constants_1.REQUEST_HEADER];
+    }
+    return next(args);
+};
+exports.omitRetryHeadersMiddleware = omitRetryHeadersMiddleware;
+exports.omitRetryHeadersMiddlewareOptions = {
+    name: "omitRetryHeadersMiddleware",
+    tags: ["RETRY", "HEADERS", "OMIT_RETRY_HEADERS"],
+    relation: "before",
+    toMiddleware: "awsAuthMiddleware",
+};
+const getOmitRetryHeadersPlugin = (options) => ({
+    applyToStack: (clientStack) => {
+        clientStack.addRelativeTo(exports.omitRetryHeadersMiddleware(), exports.omitRetryHeadersMiddlewareOptions);
+    },
+});
+exports.getOmitRetryHeadersPlugin = getOmitRetryHeadersPlugin;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoib21pdFJldHJ5SGVhZGVyc01pZGRsZXdhcmUuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9zcmMvb21pdFJldHJ5SGVhZGVyc01pZGRsZXdhcmUudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQUEsMERBQXFEO0FBVXJELDJDQUFtRTtBQUU1RCxNQUFNLDBCQUEwQixHQUFHLEdBQUcsRUFBRSxDQUFDLENBQzlDLElBQWtDLEVBQ0osRUFBRSxDQUFDLEtBQUssRUFDdEMsSUFBbUMsRUFDSyxFQUFFO0lBQzFDLE1BQU0sRUFBRSxPQUFPLEVBQUUsR0FBRyxJQUFJLENBQUM7SUFDekIsSUFBSSwyQkFBVyxDQUFDLFVBQVUsQ0FBQyxPQUFPLENBQUMsRUFBRTtRQUNuQyxPQUFPLE9BQU8sQ0FBQyxPQUFPLENBQUMsZ0NBQW9CLENBQUMsQ0FBQztRQUM3QyxPQUFPLE9BQU8sQ0FBQyxPQUFPLENBQUMsMEJBQWMsQ0FBQyxDQUFDO0tBQ3hDO0lBQ0QsT0FBTyxJQUFJLENBQUMsSUFBSSxDQUFDLENBQUM7QUFDcEIsQ0FBQyxDQUFDO0FBWFcsUUFBQSwwQkFBMEIsOEJBV3JDO0FBRVcsUUFBQSxpQ0FBaUMsR0FBOEI7SUFDMUUsSUFBSSxFQUFFLDRCQUE0QjtJQUNsQyxJQUFJLEVBQUUsQ0FBQyxPQUFPLEVBQUUsU0FBUyxFQUFFLG9CQUFvQixDQUFDO0lBQ2hELFFBQVEsRUFBRSxRQUFRO0lBQ2xCLFlBQVksRUFBRSxtQkFBbUI7Q0FDbEMsQ0FBQztBQUVLLE1BQU0seUJBQXlCLEdBQUcsQ0FBQyxPQUFnQixFQUF1QixFQUFFLENBQUMsQ0FBQztJQUNuRixZQUFZLEVBQUUsQ0FBQyxXQUFXLEVBQUUsRUFBRTtRQUM1QixXQUFXLENBQUMsYUFBYSxDQUFDLGtDQUEwQixFQUFFLEVBQUUseUNBQWlDLENBQUMsQ0FBQztJQUM3RixDQUFDO0NBQ0YsQ0FBQyxDQUFDO0FBSlUsUUFBQSx5QkFBeUIsNkJBSW5DIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgSHR0cFJlcXVlc3QgfSBmcm9tIFwiQGF3cy1zZGsvcHJvdG9jb2wtaHR0cFwiO1xuaW1wb3J0IHtcbiAgRmluYWxpemVIYW5kbGVyLFxuICBGaW5hbGl6ZUhhbmRsZXJBcmd1bWVudHMsXG4gIEZpbmFsaXplSGFuZGxlck91dHB1dCxcbiAgTWV0YWRhdGFCZWFyZXIsXG4gIFBsdWdnYWJsZSxcbiAgUmVsYXRpdmVNaWRkbGV3YXJlT3B0aW9ucyxcbn0gZnJvbSBcIkBhd3Mtc2RrL3R5cGVzXCI7XG5cbmltcG9ydCB7IElOVk9DQVRJT05fSURfSEVBREVSLCBSRVFVRVNUX0hFQURFUiB9IGZyb20gXCIuL2NvbnN0YW50c1wiO1xuXG5leHBvcnQgY29uc3Qgb21pdFJldHJ5SGVhZGVyc01pZGRsZXdhcmUgPSAoKSA9PiA8T3V0cHV0IGV4dGVuZHMgTWV0YWRhdGFCZWFyZXIgPSBNZXRhZGF0YUJlYXJlcj4oXG4gIG5leHQ6IEZpbmFsaXplSGFuZGxlcjxhbnksIE91dHB1dD5cbik6IEZpbmFsaXplSGFuZGxlcjxhbnksIE91dHB1dD4gPT4gYXN5bmMgKFxuICBhcmdzOiBGaW5hbGl6ZUhhbmRsZXJBcmd1bWVudHM8YW55PlxuKTogUHJvbWlzZTxGaW5hbGl6ZUhhbmRsZXJPdXRwdXQ8T3V0cHV0Pj4gPT4ge1xuICBjb25zdCB7IHJlcXVlc3QgfSA9IGFyZ3M7XG4gIGlmIChIdHRwUmVxdWVzdC5pc0luc3RhbmNlKHJlcXVlc3QpKSB7XG4gICAgZGVsZXRlIHJlcXVlc3QuaGVhZGVyc1tJTlZPQ0FUSU9OX0lEX0hFQURFUl07XG4gICAgZGVsZXRlIHJlcXVlc3QuaGVhZGVyc1tSRVFVRVNUX0hFQURFUl07XG4gIH1cbiAgcmV0dXJuIG5leHQoYXJncyk7XG59O1xuXG5leHBvcnQgY29uc3Qgb21pdFJldHJ5SGVhZGVyc01pZGRsZXdhcmVPcHRpb25zOiBSZWxhdGl2ZU1pZGRsZXdhcmVPcHRpb25zID0ge1xuICBuYW1lOiBcIm9taXRSZXRyeUhlYWRlcnNNaWRkbGV3YXJlXCIsXG4gIHRhZ3M6IFtcIlJFVFJZXCIsIFwiSEVBREVSU1wiLCBcIk9NSVRfUkVUUllfSEVBREVSU1wiXSxcbiAgcmVsYXRpb246IFwiYmVmb3JlXCIsXG4gIHRvTWlkZGxld2FyZTogXCJhd3NBdXRoTWlkZGxld2FyZVwiLFxufTtcblxuZXhwb3J0IGNvbnN0IGdldE9taXRSZXRyeUhlYWRlcnNQbHVnaW4gPSAob3B0aW9uczogdW5rbm93bik6IFBsdWdnYWJsZTxhbnksIGFueT4gPT4gKHtcbiAgYXBwbHlUb1N0YWNrOiAoY2xpZW50U3RhY2spID0+IHtcbiAgICBjbGllbnRTdGFjay5hZGRSZWxhdGl2ZVRvKG9taXRSZXRyeUhlYWRlcnNNaWRkbGV3YXJlKCksIG9taXRSZXRyeUhlYWRlcnNNaWRkbGV3YXJlT3B0aW9ucyk7XG4gIH0sXG59KTtcbiJdfQ==
 
 /***/ }),
 
@@ -55499,7 +55662,12 @@ exports.defaultRetryDecider = defaultRetryDecider;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getRetryPlugin = exports.retryMiddlewareOptions = exports.retryMiddleware = void 0;
-const retryMiddleware = (options) => (next) => async (args) => options.retryStrategy.retry(next, args);
+const retryMiddleware = (options) => (next, context) => async (args) => {
+    var _a;
+    if ((_a = options === null || options === void 0 ? void 0 : options.retryStrategy) === null || _a === void 0 ? void 0 : _a.mode)
+        context.userAgent = [...(context.userAgent || []), ["cfg/retry-mode", options.retryStrategy.mode]];
+    return options.retryStrategy.retry(next, args);
+};
 exports.retryMiddleware = retryMiddleware;
 exports.retryMiddlewareOptions = {
     name: "retryMiddleware",
@@ -55513,7 +55681,7 @@ const getRetryPlugin = (options) => ({
     },
 });
 exports.getRetryPlugin = getRetryPlugin;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicmV0cnlNaWRkbGV3YXJlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vc3JjL3JldHJ5TWlkZGxld2FyZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFZTyxNQUFNLGVBQWUsR0FBRyxDQUFDLE9BQTRCLEVBQUUsRUFBRSxDQUFDLENBQy9ELElBQWtDLEVBQ0osRUFBRSxDQUFDLEtBQUssRUFDdEMsSUFBbUMsRUFDSyxFQUFFLENBQUMsT0FBTyxDQUFDLGFBQWEsQ0FBQyxLQUFLLENBQUMsSUFBSSxFQUFFLElBQUksQ0FBQyxDQUFDO0FBSnhFLFFBQUEsZUFBZSxtQkFJeUQ7QUFFeEUsUUFBQSxzQkFBc0IsR0FBcUQ7SUFDdEYsSUFBSSxFQUFFLGlCQUFpQjtJQUN2QixJQUFJLEVBQUUsQ0FBQyxPQUFPLENBQUM7SUFDZixJQUFJLEVBQUUsaUJBQWlCO0lBQ3ZCLFFBQVEsRUFBRSxNQUFNO0NBQ2pCLENBQUM7QUFFSyxNQUFNLGNBQWMsR0FBRyxDQUFDLE9BQTRCLEVBQXVCLEVBQUUsQ0FBQyxDQUFDO0lBQ3BGLFlBQVksRUFBRSxDQUFDLFdBQVcsRUFBRSxFQUFFO1FBQzVCLFdBQVcsQ0FBQyxHQUFHLENBQUMsdUJBQWUsQ0FBQyxPQUFPLENBQUMsRUFBRSw4QkFBc0IsQ0FBQyxDQUFDO0lBQ3BFLENBQUM7Q0FDRixDQUFDLENBQUM7QUFKVSxRQUFBLGNBQWMsa0JBSXhCIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHtcbiAgQWJzb2x1dGVMb2NhdGlvbixcbiAgRmluYWxpemVIYW5kbGVyLFxuICBGaW5hbGl6ZUhhbmRsZXJBcmd1bWVudHMsXG4gIEZpbmFsaXplSGFuZGxlck91dHB1dCxcbiAgRmluYWxpemVSZXF1ZXN0SGFuZGxlck9wdGlvbnMsXG4gIE1ldGFkYXRhQmVhcmVyLFxuICBQbHVnZ2FibGUsXG59IGZyb20gXCJAYXdzLXNkay90eXBlc1wiO1xuXG5pbXBvcnQgeyBSZXRyeVJlc29sdmVkQ29uZmlnIH0gZnJvbSBcIi4vY29uZmlndXJhdGlvbnNcIjtcblxuZXhwb3J0IGNvbnN0IHJldHJ5TWlkZGxld2FyZSA9IChvcHRpb25zOiBSZXRyeVJlc29sdmVkQ29uZmlnKSA9PiA8T3V0cHV0IGV4dGVuZHMgTWV0YWRhdGFCZWFyZXIgPSBNZXRhZGF0YUJlYXJlcj4oXG4gIG5leHQ6IEZpbmFsaXplSGFuZGxlcjxhbnksIE91dHB1dD5cbik6IEZpbmFsaXplSGFuZGxlcjxhbnksIE91dHB1dD4gPT4gYXN5bmMgKFxuICBhcmdzOiBGaW5hbGl6ZUhhbmRsZXJBcmd1bWVudHM8YW55PlxuKTogUHJvbWlzZTxGaW5hbGl6ZUhhbmRsZXJPdXRwdXQ8T3V0cHV0Pj4gPT4gb3B0aW9ucy5yZXRyeVN0cmF0ZWd5LnJldHJ5KG5leHQsIGFyZ3MpO1xuXG5leHBvcnQgY29uc3QgcmV0cnlNaWRkbGV3YXJlT3B0aW9uczogRmluYWxpemVSZXF1ZXN0SGFuZGxlck9wdGlvbnMgJiBBYnNvbHV0ZUxvY2F0aW9uID0ge1xuICBuYW1lOiBcInJldHJ5TWlkZGxld2FyZVwiLFxuICB0YWdzOiBbXCJSRVRSWVwiXSxcbiAgc3RlcDogXCJmaW5hbGl6ZVJlcXVlc3RcIixcbiAgcHJpb3JpdHk6IFwiaGlnaFwiLFxufTtcblxuZXhwb3J0IGNvbnN0IGdldFJldHJ5UGx1Z2luID0gKG9wdGlvbnM6IFJldHJ5UmVzb2x2ZWRDb25maWcpOiBQbHVnZ2FibGU8YW55LCBhbnk+ID0+ICh7XG4gIGFwcGx5VG9TdGFjazogKGNsaWVudFN0YWNrKSA9PiB7XG4gICAgY2xpZW50U3RhY2suYWRkKHJldHJ5TWlkZGxld2FyZShvcHRpb25zKSwgcmV0cnlNaWRkbGV3YXJlT3B0aW9ucyk7XG4gIH0sXG59KTtcbiJdfQ==
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicmV0cnlNaWRkbGV3YXJlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vc3JjL3JldHJ5TWlkZGxld2FyZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFhTyxNQUFNLGVBQWUsR0FBRyxDQUFDLE9BQTRCLEVBQUUsRUFBRSxDQUFDLENBQy9ELElBQWtDLEVBQ2xDLE9BQWdDLEVBQ0YsRUFBRSxDQUFDLEtBQUssRUFDdEMsSUFBbUMsRUFDSyxFQUFFOztJQUMxQyxVQUFJLE9BQU8sYUFBUCxPQUFPLHVCQUFQLE9BQU8sQ0FBRSxhQUFhLDBDQUFFLElBQUk7UUFDOUIsT0FBTyxDQUFDLFNBQVMsR0FBRyxDQUFDLEdBQUcsQ0FBQyxPQUFPLENBQUMsU0FBUyxJQUFJLEVBQUUsQ0FBQyxFQUFFLENBQUMsZ0JBQWdCLEVBQUUsT0FBTyxDQUFDLGFBQWEsQ0FBQyxJQUFJLENBQUMsQ0FBQyxDQUFDO0lBQ3JHLE9BQU8sT0FBTyxDQUFDLGFBQWEsQ0FBQyxLQUFLLENBQUMsSUFBSSxFQUFFLElBQUksQ0FBQyxDQUFDO0FBQ2pELENBQUMsQ0FBQztBQVRXLFFBQUEsZUFBZSxtQkFTMUI7QUFFVyxRQUFBLHNCQUFzQixHQUFxRDtJQUN0RixJQUFJLEVBQUUsaUJBQWlCO0lBQ3ZCLElBQUksRUFBRSxDQUFDLE9BQU8sQ0FBQztJQUNmLElBQUksRUFBRSxpQkFBaUI7SUFDdkIsUUFBUSxFQUFFLE1BQU07Q0FDakIsQ0FBQztBQUVLLE1BQU0sY0FBYyxHQUFHLENBQUMsT0FBNEIsRUFBdUIsRUFBRSxDQUFDLENBQUM7SUFDcEYsWUFBWSxFQUFFLENBQUMsV0FBVyxFQUFFLEVBQUU7UUFDNUIsV0FBVyxDQUFDLEdBQUcsQ0FBQyx1QkFBZSxDQUFDLE9BQU8sQ0FBQyxFQUFFLDhCQUFzQixDQUFDLENBQUM7SUFDcEUsQ0FBQztDQUNGLENBQUMsQ0FBQztBQUpVLFFBQUEsY0FBYyxrQkFJeEIiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge1xuICBBYnNvbHV0ZUxvY2F0aW9uLFxuICBGaW5hbGl6ZUhhbmRsZXIsXG4gIEZpbmFsaXplSGFuZGxlckFyZ3VtZW50cyxcbiAgRmluYWxpemVIYW5kbGVyT3V0cHV0LFxuICBGaW5hbGl6ZVJlcXVlc3RIYW5kbGVyT3B0aW9ucyxcbiAgSGFuZGxlckV4ZWN1dGlvbkNvbnRleHQsXG4gIE1ldGFkYXRhQmVhcmVyLFxuICBQbHVnZ2FibGUsXG59IGZyb20gXCJAYXdzLXNkay90eXBlc1wiO1xuXG5pbXBvcnQgeyBSZXRyeVJlc29sdmVkQ29uZmlnIH0gZnJvbSBcIi4vY29uZmlndXJhdGlvbnNcIjtcblxuZXhwb3J0IGNvbnN0IHJldHJ5TWlkZGxld2FyZSA9IChvcHRpb25zOiBSZXRyeVJlc29sdmVkQ29uZmlnKSA9PiA8T3V0cHV0IGV4dGVuZHMgTWV0YWRhdGFCZWFyZXIgPSBNZXRhZGF0YUJlYXJlcj4oXG4gIG5leHQ6IEZpbmFsaXplSGFuZGxlcjxhbnksIE91dHB1dD4sXG4gIGNvbnRleHQ6IEhhbmRsZXJFeGVjdXRpb25Db250ZXh0XG4pOiBGaW5hbGl6ZUhhbmRsZXI8YW55LCBPdXRwdXQ+ID0+IGFzeW5jIChcbiAgYXJnczogRmluYWxpemVIYW5kbGVyQXJndW1lbnRzPGFueT5cbik6IFByb21pc2U8RmluYWxpemVIYW5kbGVyT3V0cHV0PE91dHB1dD4+ID0+IHtcbiAgaWYgKG9wdGlvbnM/LnJldHJ5U3RyYXRlZ3k/Lm1vZGUpXG4gICAgY29udGV4dC51c2VyQWdlbnQgPSBbLi4uKGNvbnRleHQudXNlckFnZW50IHx8IFtdKSwgW1wiY2ZnL3JldHJ5LW1vZGVcIiwgb3B0aW9ucy5yZXRyeVN0cmF0ZWd5Lm1vZGVdXTtcbiAgcmV0dXJuIG9wdGlvbnMucmV0cnlTdHJhdGVneS5yZXRyeShuZXh0LCBhcmdzKTtcbn07XG5cbmV4cG9ydCBjb25zdCByZXRyeU1pZGRsZXdhcmVPcHRpb25zOiBGaW5hbGl6ZVJlcXVlc3RIYW5kbGVyT3B0aW9ucyAmIEFic29sdXRlTG9jYXRpb24gPSB7XG4gIG5hbWU6IFwicmV0cnlNaWRkbGV3YXJlXCIsXG4gIHRhZ3M6IFtcIlJFVFJZXCJdLFxuICBzdGVwOiBcImZpbmFsaXplUmVxdWVzdFwiLFxuICBwcmlvcml0eTogXCJoaWdoXCIsXG59O1xuXG5leHBvcnQgY29uc3QgZ2V0UmV0cnlQbHVnaW4gPSAob3B0aW9uczogUmV0cnlSZXNvbHZlZENvbmZpZyk6IFBsdWdnYWJsZTxhbnksIGFueT4gPT4gKHtcbiAgYXBwbHlUb1N0YWNrOiAoY2xpZW50U3RhY2spID0+IHtcbiAgICBjbGllbnRTdGFjay5hZGQocmV0cnlNaWRkbGV3YXJlKG9wdGlvbnMpLCByZXRyeU1pZGRsZXdhcmVPcHRpb25zKTtcbiAgfSxcbn0pO1xuIl19
 
 /***/ }),
 
@@ -56204,23 +56372,15 @@ function __classPrivateFieldSet(receiver, privateMap, value) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.deserializerMiddleware = void 0;
 const deserializerMiddleware = (options, deserializer) => (next, context) => async (args) => {
-    const { logger, outputFilterSensitiveLog } = context;
     const { response } = await next(args);
     const parsed = await deserializer(response, options);
-    // Log parsed after $metadata is removed in https://github.com/aws/aws-sdk-js-v3/issues/1490
-    const { $metadata, ...outputWithoutMetadata } = parsed;
-    if (typeof (logger === null || logger === void 0 ? void 0 : logger.info) === "function") {
-        logger.info({
-            output: outputFilterSensitiveLog(outputWithoutMetadata),
-        });
-    }
     return {
         response,
         output: parsed,
     };
 };
 exports.deserializerMiddleware = deserializerMiddleware;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZGVzZXJpYWxpemVyTWlkZGxld2FyZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9kZXNlcmlhbGl6ZXJNaWRkbGV3YXJlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7OztBQVNPLE1BQU0sc0JBQXNCLEdBQUcsQ0FDcEMsT0FBcUIsRUFDckIsWUFBMEQsRUFDcEIsRUFBRSxDQUFDLENBQ3pDLElBQXVDLEVBQ3ZDLE9BQWdDLEVBQ0csRUFBRSxDQUFDLEtBQUssRUFDM0MsSUFBd0MsRUFDRyxFQUFFO0lBQzdDLE1BQU0sRUFBRSxNQUFNLEVBQUUsd0JBQXdCLEVBQUUsR0FBRyxPQUFPLENBQUM7SUFFckQsTUFBTSxFQUFFLFFBQVEsRUFBRSxHQUFHLE1BQU0sSUFBSSxDQUFDLElBQUksQ0FBQyxDQUFDO0lBRXRDLE1BQU0sTUFBTSxHQUFHLE1BQU0sWUFBWSxDQUFDLFFBQVEsRUFBRSxPQUFPLENBQUMsQ0FBQztJQUVyRCw0RkFBNEY7SUFDNUYsTUFBTSxFQUFFLFNBQVMsRUFBRSxHQUFHLHFCQUFxQixFQUFFLEdBQUcsTUFBTSxDQUFDO0lBRXZELElBQUksUUFBTyxNQUFNLGFBQU4sTUFBTSx1QkFBTixNQUFNLENBQUUsSUFBSSxDQUFBLEtBQUssVUFBVSxFQUFFO1FBQ3RDLE1BQU0sQ0FBQyxJQUFJLENBQUM7WUFDVixNQUFNLEVBQUUsd0JBQXdCLENBQUMscUJBQXFCLENBQUM7U0FDeEQsQ0FBQyxDQUFDO0tBQ0o7SUFFRCxPQUFPO1FBQ0wsUUFBUTtRQUNSLE1BQU0sRUFBRSxNQUFnQjtLQUN6QixDQUFDO0FBQ0osQ0FBQyxDQUFDO0FBNUJXLFFBQUEsc0JBQXNCLDBCQTRCakMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge1xuICBEZXNlcmlhbGl6ZUhhbmRsZXIsXG4gIERlc2VyaWFsaXplSGFuZGxlckFyZ3VtZW50cyxcbiAgRGVzZXJpYWxpemVIYW5kbGVyT3V0cHV0LFxuICBEZXNlcmlhbGl6ZU1pZGRsZXdhcmUsXG4gIEhhbmRsZXJFeGVjdXRpb25Db250ZXh0LFxuICBSZXNwb25zZURlc2VyaWFsaXplcixcbn0gZnJvbSBcIkBhd3Mtc2RrL3R5cGVzXCI7XG5cbmV4cG9ydCBjb25zdCBkZXNlcmlhbGl6ZXJNaWRkbGV3YXJlID0gPElucHV0IGV4dGVuZHMgb2JqZWN0LCBPdXRwdXQgZXh0ZW5kcyBvYmplY3QsIFJ1bnRpbWVVdGlscyA9IGFueT4oXG4gIG9wdGlvbnM6IFJ1bnRpbWVVdGlscyxcbiAgZGVzZXJpYWxpemVyOiBSZXNwb25zZURlc2VyaWFsaXplcjxhbnksIGFueSwgUnVudGltZVV0aWxzPlxuKTogRGVzZXJpYWxpemVNaWRkbGV3YXJlPElucHV0LCBPdXRwdXQ+ID0+IChcbiAgbmV4dDogRGVzZXJpYWxpemVIYW5kbGVyPElucHV0LCBPdXRwdXQ+LFxuICBjb250ZXh0OiBIYW5kbGVyRXhlY3V0aW9uQ29udGV4dFxuKTogRGVzZXJpYWxpemVIYW5kbGVyPElucHV0LCBPdXRwdXQ+ID0+IGFzeW5jIChcbiAgYXJnczogRGVzZXJpYWxpemVIYW5kbGVyQXJndW1lbnRzPElucHV0PlxuKTogUHJvbWlzZTxEZXNlcmlhbGl6ZUhhbmRsZXJPdXRwdXQ8T3V0cHV0Pj4gPT4ge1xuICBjb25zdCB7IGxvZ2dlciwgb3V0cHV0RmlsdGVyU2Vuc2l0aXZlTG9nIH0gPSBjb250ZXh0O1xuXG4gIGNvbnN0IHsgcmVzcG9uc2UgfSA9IGF3YWl0IG5leHQoYXJncyk7XG5cbiAgY29uc3QgcGFyc2VkID0gYXdhaXQgZGVzZXJpYWxpemVyKHJlc3BvbnNlLCBvcHRpb25zKTtcblxuICAvLyBMb2cgcGFyc2VkIGFmdGVyICRtZXRhZGF0YSBpcyByZW1vdmVkIGluIGh0dHBzOi8vZ2l0aHViLmNvbS9hd3MvYXdzLXNkay1qcy12My9pc3N1ZXMvMTQ5MFxuICBjb25zdCB7ICRtZXRhZGF0YSwgLi4ub3V0cHV0V2l0aG91dE1ldGFkYXRhIH0gPSBwYXJzZWQ7XG5cbiAgaWYgKHR5cGVvZiBsb2dnZXI/LmluZm8gPT09IFwiZnVuY3Rpb25cIikge1xuICAgIGxvZ2dlci5pbmZvKHtcbiAgICAgIG91dHB1dDogb3V0cHV0RmlsdGVyU2Vuc2l0aXZlTG9nKG91dHB1dFdpdGhvdXRNZXRhZGF0YSksXG4gICAgfSk7XG4gIH1cblxuICByZXR1cm4ge1xuICAgIHJlc3BvbnNlLFxuICAgIG91dHB1dDogcGFyc2VkIGFzIE91dHB1dCxcbiAgfTtcbn07XG4iXX0=
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZGVzZXJpYWxpemVyTWlkZGxld2FyZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9kZXNlcmlhbGl6ZXJNaWRkbGV3YXJlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7OztBQVNPLE1BQU0sc0JBQXNCLEdBQUcsQ0FDcEMsT0FBcUIsRUFDckIsWUFBMEQsRUFDcEIsRUFBRSxDQUFDLENBQ3pDLElBQXVDLEVBQ3ZDLE9BQWdDLEVBQ0csRUFBRSxDQUFDLEtBQUssRUFDM0MsSUFBd0MsRUFDRyxFQUFFO0lBQzdDLE1BQU0sRUFBRSxRQUFRLEVBQUUsR0FBRyxNQUFNLElBQUksQ0FBQyxJQUFJLENBQUMsQ0FBQztJQUN0QyxNQUFNLE1BQU0sR0FBRyxNQUFNLFlBQVksQ0FBQyxRQUFRLEVBQUUsT0FBTyxDQUFDLENBQUM7SUFDckQsT0FBTztRQUNMLFFBQVE7UUFDUixNQUFNLEVBQUUsTUFBZ0I7S0FDekIsQ0FBQztBQUNKLENBQUMsQ0FBQztBQWZXLFFBQUEsc0JBQXNCLDBCQWVqQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7XG4gIERlc2VyaWFsaXplSGFuZGxlcixcbiAgRGVzZXJpYWxpemVIYW5kbGVyQXJndW1lbnRzLFxuICBEZXNlcmlhbGl6ZUhhbmRsZXJPdXRwdXQsXG4gIERlc2VyaWFsaXplTWlkZGxld2FyZSxcbiAgSGFuZGxlckV4ZWN1dGlvbkNvbnRleHQsXG4gIFJlc3BvbnNlRGVzZXJpYWxpemVyLFxufSBmcm9tIFwiQGF3cy1zZGsvdHlwZXNcIjtcblxuZXhwb3J0IGNvbnN0IGRlc2VyaWFsaXplck1pZGRsZXdhcmUgPSA8SW5wdXQgZXh0ZW5kcyBvYmplY3QsIE91dHB1dCBleHRlbmRzIG9iamVjdCwgUnVudGltZVV0aWxzID0gYW55PihcbiAgb3B0aW9uczogUnVudGltZVV0aWxzLFxuICBkZXNlcmlhbGl6ZXI6IFJlc3BvbnNlRGVzZXJpYWxpemVyPGFueSwgYW55LCBSdW50aW1lVXRpbHM+XG4pOiBEZXNlcmlhbGl6ZU1pZGRsZXdhcmU8SW5wdXQsIE91dHB1dD4gPT4gKFxuICBuZXh0OiBEZXNlcmlhbGl6ZUhhbmRsZXI8SW5wdXQsIE91dHB1dD4sXG4gIGNvbnRleHQ6IEhhbmRsZXJFeGVjdXRpb25Db250ZXh0XG4pOiBEZXNlcmlhbGl6ZUhhbmRsZXI8SW5wdXQsIE91dHB1dD4gPT4gYXN5bmMgKFxuICBhcmdzOiBEZXNlcmlhbGl6ZUhhbmRsZXJBcmd1bWVudHM8SW5wdXQ+XG4pOiBQcm9taXNlPERlc2VyaWFsaXplSGFuZGxlck91dHB1dDxPdXRwdXQ+PiA9PiB7XG4gIGNvbnN0IHsgcmVzcG9uc2UgfSA9IGF3YWl0IG5leHQoYXJncyk7XG4gIGNvbnN0IHBhcnNlZCA9IGF3YWl0IGRlc2VyaWFsaXplcihyZXNwb25zZSwgb3B0aW9ucyk7XG4gIHJldHVybiB7XG4gICAgcmVzcG9uc2UsXG4gICAgb3V0cHV0OiBwYXJzZWQgYXMgT3V0cHV0LFxuICB9O1xufTtcbiJdfQ==
 
 /***/ }),
 
@@ -56278,12 +56438,6 @@ exports.getSerdePlugin = getSerdePlugin;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.serializerMiddleware = void 0;
 const serializerMiddleware = (options, serializer) => (next, context) => async (args) => {
-    const { logger, inputFilterSensitiveLog } = context;
-    if (typeof (logger === null || logger === void 0 ? void 0 : logger.info) === "function") {
-        logger.info({
-            input: inputFilterSensitiveLog(args.input),
-        });
-    }
     const request = await serializer(args.input, options);
     return next({
         ...args,
@@ -56291,7 +56445,7 @@ const serializerMiddleware = (options, serializer) => (next, context) => async (
     });
 };
 exports.serializerMiddleware = serializerMiddleware;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2VyaWFsaXplck1pZGRsZXdhcmUuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9zcmMvc2VyaWFsaXplck1pZGRsZXdhcmUudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBVU8sTUFBTSxvQkFBb0IsR0FBRyxDQUNsQyxPQUFxQixFQUNyQixVQUFnRCxFQUNaLEVBQUUsQ0FBQyxDQUN2QyxJQUFxQyxFQUNyQyxPQUFnQyxFQUNDLEVBQUUsQ0FBQyxLQUFLLEVBQ3pDLElBQXNDLEVBQ0csRUFBRTtJQUMzQyxNQUFNLEVBQUUsTUFBTSxFQUFFLHVCQUF1QixFQUFFLEdBQUcsT0FBTyxDQUFDO0lBRXBELElBQUksUUFBTyxNQUFNLGFBQU4sTUFBTSx1QkFBTixNQUFNLENBQUUsSUFBSSxDQUFBLEtBQUssVUFBVSxFQUFFO1FBQ3RDLE1BQU0sQ0FBQyxJQUFJLENBQUM7WUFDVixLQUFLLEVBQUUsdUJBQXVCLENBQUMsSUFBSSxDQUFDLEtBQUssQ0FBQztTQUMzQyxDQUFDLENBQUM7S0FDSjtJQUVELE1BQU0sT0FBTyxHQUFHLE1BQU0sVUFBVSxDQUFDLElBQUksQ0FBQyxLQUFLLEVBQUUsT0FBTyxDQUFDLENBQUM7SUFFdEQsT0FBTyxJQUFJLENBQUM7UUFDVixHQUFHLElBQUk7UUFDUCxPQUFPO0tBQ1IsQ0FBQyxDQUFDO0FBQ0wsQ0FBQyxDQUFDO0FBdkJXLFFBQUEsb0JBQW9CLHdCQXVCL0IiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge1xuICBFbmRwb2ludEJlYXJlcixcbiAgSGFuZGxlckV4ZWN1dGlvbkNvbnRleHQsXG4gIFJlcXVlc3RTZXJpYWxpemVyLFxuICBTZXJpYWxpemVIYW5kbGVyLFxuICBTZXJpYWxpemVIYW5kbGVyQXJndW1lbnRzLFxuICBTZXJpYWxpemVIYW5kbGVyT3V0cHV0LFxuICBTZXJpYWxpemVNaWRkbGV3YXJlLFxufSBmcm9tIFwiQGF3cy1zZGsvdHlwZXNcIjtcblxuZXhwb3J0IGNvbnN0IHNlcmlhbGl6ZXJNaWRkbGV3YXJlID0gPElucHV0IGV4dGVuZHMgb2JqZWN0LCBPdXRwdXQgZXh0ZW5kcyBvYmplY3QsIFJ1bnRpbWVVdGlscyBleHRlbmRzIEVuZHBvaW50QmVhcmVyPihcbiAgb3B0aW9uczogUnVudGltZVV0aWxzLFxuICBzZXJpYWxpemVyOiBSZXF1ZXN0U2VyaWFsaXplcjxhbnksIFJ1bnRpbWVVdGlscz5cbik6IFNlcmlhbGl6ZU1pZGRsZXdhcmU8SW5wdXQsIE91dHB1dD4gPT4gKFxuICBuZXh0OiBTZXJpYWxpemVIYW5kbGVyPElucHV0LCBPdXRwdXQ+LFxuICBjb250ZXh0OiBIYW5kbGVyRXhlY3V0aW9uQ29udGV4dFxuKTogU2VyaWFsaXplSGFuZGxlcjxJbnB1dCwgT3V0cHV0PiA9PiBhc3luYyAoXG4gIGFyZ3M6IFNlcmlhbGl6ZUhhbmRsZXJBcmd1bWVudHM8SW5wdXQ+XG4pOiBQcm9taXNlPFNlcmlhbGl6ZUhhbmRsZXJPdXRwdXQ8T3V0cHV0Pj4gPT4ge1xuICBjb25zdCB7IGxvZ2dlciwgaW5wdXRGaWx0ZXJTZW5zaXRpdmVMb2cgfSA9IGNvbnRleHQ7XG5cbiAgaWYgKHR5cGVvZiBsb2dnZXI/LmluZm8gPT09IFwiZnVuY3Rpb25cIikge1xuICAgIGxvZ2dlci5pbmZvKHtcbiAgICAgIGlucHV0OiBpbnB1dEZpbHRlclNlbnNpdGl2ZUxvZyhhcmdzLmlucHV0KSxcbiAgICB9KTtcbiAgfVxuXG4gIGNvbnN0IHJlcXVlc3QgPSBhd2FpdCBzZXJpYWxpemVyKGFyZ3MuaW5wdXQsIG9wdGlvbnMpO1xuXG4gIHJldHVybiBuZXh0KHtcbiAgICAuLi5hcmdzLFxuICAgIHJlcXVlc3QsXG4gIH0pO1xufTtcbiJdfQ==
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2VyaWFsaXplck1pZGRsZXdhcmUuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9zcmMvc2VyaWFsaXplck1pZGRsZXdhcmUudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBVU8sTUFBTSxvQkFBb0IsR0FBRyxDQUNsQyxPQUFxQixFQUNyQixVQUFnRCxFQUNaLEVBQUUsQ0FBQyxDQUN2QyxJQUFxQyxFQUNyQyxPQUFnQyxFQUNDLEVBQUUsQ0FBQyxLQUFLLEVBQ3pDLElBQXNDLEVBQ0csRUFBRTtJQUMzQyxNQUFNLE9BQU8sR0FBRyxNQUFNLFVBQVUsQ0FBQyxJQUFJLENBQUMsS0FBSyxFQUFFLE9BQU8sQ0FBQyxDQUFDO0lBQ3RELE9BQU8sSUFBSSxDQUFDO1FBQ1YsR0FBRyxJQUFJO1FBQ1AsT0FBTztLQUNSLENBQUMsQ0FBQztBQUNMLENBQUMsQ0FBQztBQWRXLFFBQUEsb0JBQW9CLHdCQWMvQiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7XG4gIEVuZHBvaW50QmVhcmVyLFxuICBIYW5kbGVyRXhlY3V0aW9uQ29udGV4dCxcbiAgUmVxdWVzdFNlcmlhbGl6ZXIsXG4gIFNlcmlhbGl6ZUhhbmRsZXIsXG4gIFNlcmlhbGl6ZUhhbmRsZXJBcmd1bWVudHMsXG4gIFNlcmlhbGl6ZUhhbmRsZXJPdXRwdXQsXG4gIFNlcmlhbGl6ZU1pZGRsZXdhcmUsXG59IGZyb20gXCJAYXdzLXNkay90eXBlc1wiO1xuXG5leHBvcnQgY29uc3Qgc2VyaWFsaXplck1pZGRsZXdhcmUgPSA8SW5wdXQgZXh0ZW5kcyBvYmplY3QsIE91dHB1dCBleHRlbmRzIG9iamVjdCwgUnVudGltZVV0aWxzIGV4dGVuZHMgRW5kcG9pbnRCZWFyZXI+KFxuICBvcHRpb25zOiBSdW50aW1lVXRpbHMsXG4gIHNlcmlhbGl6ZXI6IFJlcXVlc3RTZXJpYWxpemVyPGFueSwgUnVudGltZVV0aWxzPlxuKTogU2VyaWFsaXplTWlkZGxld2FyZTxJbnB1dCwgT3V0cHV0PiA9PiAoXG4gIG5leHQ6IFNlcmlhbGl6ZUhhbmRsZXI8SW5wdXQsIE91dHB1dD4sXG4gIGNvbnRleHQ6IEhhbmRsZXJFeGVjdXRpb25Db250ZXh0XG4pOiBTZXJpYWxpemVIYW5kbGVyPElucHV0LCBPdXRwdXQ+ID0+IGFzeW5jIChcbiAgYXJnczogU2VyaWFsaXplSGFuZGxlckFyZ3VtZW50czxJbnB1dD5cbik6IFByb21pc2U8U2VyaWFsaXplSGFuZGxlck91dHB1dDxPdXRwdXQ+PiA9PiB7XG4gIGNvbnN0IHJlcXVlc3QgPSBhd2FpdCBzZXJpYWxpemVyKGFyZ3MuaW5wdXQsIG9wdGlvbnMpO1xuICByZXR1cm4gbmV4dCh7XG4gICAgLi4uYXJncyxcbiAgICByZXF1ZXN0LFxuICB9KTtcbn07XG4iXX0=
 
 /***/ }),
 
@@ -56573,6 +56727,8 @@ function resolveAwsAuthConfig(input) {
             //update client's singing region and signing service config if they are resolved.
             //signing region resolving order: user supplied signingRegion -> endpoints.json inferred region -> client region
             input.signingRegion = input.signingRegion || signingRegion || region;
+            //signing name resolving order:
+            //user supplied signingName -> endpoints.json inferred (credential scope -> model arnNamespace) -> model service id
             input.signingName = input.signingName || signingService || input.serviceId;
             return new signature_v4_1.SignatureV4({
                 credentials: normalizedCreds,
@@ -56599,7 +56755,7 @@ function normalizeProvider(input) {
     }
     return input;
 }
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY29uZmlndXJhdGlvbnMuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9zcmMvY29uZmlndXJhdGlvbnMudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQUEsd0RBQW9EO0FBNENwRCxTQUFnQixvQkFBb0IsQ0FBSSxLQUFrRDtJQUN4RixNQUFNLFdBQVcsR0FBRyxLQUFLLENBQUMsV0FBVyxJQUFJLEtBQUssQ0FBQyx5QkFBeUIsQ0FBQyxLQUFZLENBQUMsQ0FBQztJQUN2RixNQUFNLGVBQWUsR0FBRyxpQkFBaUIsQ0FBQyxXQUFXLENBQUMsQ0FBQztJQUN2RCxNQUFNLEVBQUUsaUJBQWlCLEdBQUcsSUFBSSxFQUFFLGlCQUFpQixHQUFHLEtBQUssQ0FBQyxpQkFBaUIsSUFBSSxDQUFDLEVBQUUsTUFBTSxFQUFFLEdBQUcsS0FBSyxDQUFDO0lBQ3JHLElBQUksTUFBK0IsQ0FBQztJQUNwQyxJQUFJLEtBQUssQ0FBQyxNQUFNLEVBQUU7UUFDaEIsMkZBQTJGO1FBQzNGLE1BQU0sR0FBRyxpQkFBaUIsQ0FBQyxLQUFLLENBQUMsTUFBTSxDQUFDLENBQUM7S0FDMUM7U0FBTTtRQUNMLHFEQUFxRDtRQUNyRCxNQUFNLEdBQUcsR0FBRyxFQUFFLENBQ1osaUJBQWlCLENBQUMsS0FBSyxDQUFDLE1BQU0sQ0FBQyxFQUFFO2FBQzlCLElBQUksQ0FBQyxLQUFLLEVBQUUsTUFBTSxFQUFFLEVBQUUsQ0FBQyxDQUFDLENBQUMsTUFBTSxLQUFLLENBQUMsa0JBQWtCLENBQUMsTUFBTSxDQUFDLENBQUMsSUFBSSxFQUFFLEVBQUUsTUFBTSxDQUF5QixDQUFDO2FBQ3hHLElBQUksQ0FBQyxDQUFDLENBQUMsVUFBVSxFQUFFLE1BQU0sQ0FBQyxFQUFFLEVBQUU7WUFDN0IsTUFBTSxFQUFFLGFBQWEsRUFBRSxjQUFjLEVBQUUsR0FBRyxVQUFVLENBQUM7WUFDckQsaUZBQWlGO1lBQ2pGLGdIQUFnSDtZQUNoSCxLQUFLLENBQUMsYUFBYSxHQUFHLEtBQUssQ0FBQyxhQUFhLElBQUksYUFBYSxJQUFJLE1BQU0sQ0FBQztZQUNyRSxLQUFLLENBQUMsV0FBVyxHQUFHLEtBQUssQ0FBQyxXQUFXLElBQUksY0FBYyxJQUFJLEtBQUssQ0FBQyxTQUFTLENBQUM7WUFFM0UsT0FBTyxJQUFJLDBCQUFXLENBQUM7Z0JBQ3JCLFdBQVcsRUFBRSxlQUFlO2dCQUM1QixNQUFNLEVBQUUsS0FBSyxDQUFDLGFBQWE7Z0JBQzNCLE9BQU8sRUFBRSxLQUFLLENBQUMsV0FBVztnQkFDMUIsTUFBTTtnQkFDTixhQUFhLEVBQUUsaUJBQWlCO2FBQ2pDLENBQUMsQ0FBQztRQUNMLENBQUMsQ0FBQyxDQUFDO0tBQ1I7SUFFRCxPQUFPO1FBQ0wsR0FBRyxLQUFLO1FBQ1IsaUJBQWlCO1FBQ2pCLGlCQUFpQjtRQUNqQixXQUFXLEVBQUUsZUFBZTtRQUM1QixNQUFNO0tBQ1AsQ0FBQztBQUNKLENBQUM7QUFyQ0Qsb0RBcUNDO0FBRUQsU0FBUyxpQkFBaUIsQ0FBSSxLQUFzQjtJQUNsRCxJQUFJLE9BQU8sS0FBSyxLQUFLLFFBQVEsRUFBRTtRQUM3QixNQUFNLFdBQVcsR0FBRyxPQUFPLENBQUMsT0FBTyxDQUFDLEtBQUssQ0FBQyxDQUFDO1FBQzNDLE9BQU8sR0FBRyxFQUFFLENBQUMsV0FBVyxDQUFDO0tBQzFCO0lBQ0QsT0FBTyxLQUFvQixDQUFDO0FBQzlCLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBTaWduYXR1cmVWNCB9IGZyb20gXCJAYXdzLXNkay9zaWduYXR1cmUtdjRcIjtcbmltcG9ydCB7IENyZWRlbnRpYWxzLCBIYXNoQ29uc3RydWN0b3IsIFByb3ZpZGVyLCBSZWdpb25JbmZvLCBSZWdpb25JbmZvUHJvdmlkZXIsIFJlcXVlc3RTaWduZXIgfSBmcm9tIFwiQGF3cy1zZGsvdHlwZXNcIjtcblxuZXhwb3J0IGludGVyZmFjZSBBd3NBdXRoSW5wdXRDb25maWcge1xuICAvKipcbiAgICogVGhlIGNyZWRlbnRpYWxzIHVzZWQgdG8gc2lnbiByZXF1ZXN0cy5cbiAgICovXG4gIGNyZWRlbnRpYWxzPzogQ3JlZGVudGlhbHMgfCBQcm92aWRlcjxDcmVkZW50aWFscz47XG5cbiAgLyoqXG4gICAqIFRoZSBzaWduZXIgdG8gdXNlIHdoZW4gc2lnbmluZyByZXF1ZXN0cy5cbiAgICovXG4gIHNpZ25lcj86IFJlcXVlc3RTaWduZXIgfCBQcm92aWRlcjxSZXF1ZXN0U2lnbmVyPjtcblxuICAvKipcbiAgICogV2hldGhlciB0byBlc2NhcGUgcmVxdWVzdCBwYXRoIHdoZW4gc2lnbmluZyB0aGUgcmVxdWVzdC5cbiAgICovXG4gIHNpZ25pbmdFc2NhcGVQYXRoPzogYm9vbGVhbjtcblxuICAvKipcbiAgICogQW4gb2Zmc2V0IHZhbHVlIGluIG1pbGxpc2Vjb25kcyB0byBhcHBseSB0byBhbGwgc2lnbmluZyB0aW1lcy5cbiAgICovXG4gIHN5c3RlbUNsb2NrT2Zmc2V0PzogbnVtYmVyO1xuXG4gIC8qKlxuICAgKiBUaGUgcmVnaW9uIHdoZXJlIHlvdSB3YW50IHRvIHNpZ24geW91ciByZXF1ZXN0IGFnYWluc3QuIFRoaXNcbiAgICogY2FuIGJlIGRpZmZlcmVudCB0byB0aGUgcmVnaW9uIGluIHRoZSBlbmRwb2ludC5cbiAgICovXG4gIHNpZ25pbmdSZWdpb24/OiBzdHJpbmc7XG59XG5pbnRlcmZhY2UgUHJldmlvdXNseVJlc29sdmVkIHtcbiAgY3JlZGVudGlhbERlZmF1bHRQcm92aWRlcjogKGlucHV0OiBhbnkpID0+IFByb3ZpZGVyPENyZWRlbnRpYWxzPjtcbiAgcmVnaW9uOiBzdHJpbmcgfCBQcm92aWRlcjxzdHJpbmc+O1xuICByZWdpb25JbmZvUHJvdmlkZXI6IFJlZ2lvbkluZm9Qcm92aWRlcjtcbiAgc2lnbmluZ05hbWU/OiBzdHJpbmc7XG4gIHNlcnZpY2VJZDogc3RyaW5nO1xuICBzaGEyNTY6IEhhc2hDb25zdHJ1Y3Rvcjtcbn1cbmV4cG9ydCBpbnRlcmZhY2UgQXdzQXV0aFJlc29sdmVkQ29uZmlnIHtcbiAgY3JlZGVudGlhbHM6IFByb3ZpZGVyPENyZWRlbnRpYWxzPjtcbiAgc2lnbmVyOiBQcm92aWRlcjxSZXF1ZXN0U2lnbmVyPjtcbiAgc2lnbmluZ0VzY2FwZVBhdGg6IGJvb2xlYW47XG4gIHN5c3RlbUNsb2NrT2Zmc2V0OiBudW1iZXI7XG59XG5leHBvcnQgZnVuY3Rpb24gcmVzb2x2ZUF3c0F1dGhDb25maWc8VD4oaW5wdXQ6IFQgJiBBd3NBdXRoSW5wdXRDb25maWcgJiBQcmV2aW91c2x5UmVzb2x2ZWQpOiBUICYgQXdzQXV0aFJlc29sdmVkQ29uZmlnIHtcbiAgY29uc3QgY3JlZGVudGlhbHMgPSBpbnB1dC5jcmVkZW50aWFscyB8fCBpbnB1dC5jcmVkZW50aWFsRGVmYXVsdFByb3ZpZGVyKGlucHV0IGFzIGFueSk7XG4gIGNvbnN0IG5vcm1hbGl6ZWRDcmVkcyA9IG5vcm1hbGl6ZVByb3ZpZGVyKGNyZWRlbnRpYWxzKTtcbiAgY29uc3QgeyBzaWduaW5nRXNjYXBlUGF0aCA9IHRydWUsIHN5c3RlbUNsb2NrT2Zmc2V0ID0gaW5wdXQuc3lzdGVtQ2xvY2tPZmZzZXQgfHwgMCwgc2hhMjU2IH0gPSBpbnB1dDtcbiAgbGV0IHNpZ25lcjogUHJvdmlkZXI8UmVxdWVzdFNpZ25lcj47XG4gIGlmIChpbnB1dC5zaWduZXIpIHtcbiAgICAvL2lmIHNpZ25lciBpcyBzdXBwbGllZCBieSB1c2VyLCBub3JtYWxpemUgaXQgdG8gYSBmdW5jdGlvbiByZXR1cm5pbmcgYSBwcm9taXNlIGZvciBzaWduZXIuXG4gICAgc2lnbmVyID0gbm9ybWFsaXplUHJvdmlkZXIoaW5wdXQuc2lnbmVyKTtcbiAgfSBlbHNlIHtcbiAgICAvL2NvbnN0cnVjdCBhIHByb3ZpZGVyIGluZmVycmluZyBzaWduaW5nIGZyb20gcmVnaW9uLlxuICAgIHNpZ25lciA9ICgpID0+XG4gICAgICBub3JtYWxpemVQcm92aWRlcihpbnB1dC5yZWdpb24pKClcbiAgICAgICAgLnRoZW4oYXN5bmMgKHJlZ2lvbikgPT4gWyhhd2FpdCBpbnB1dC5yZWdpb25JbmZvUHJvdmlkZXIocmVnaW9uKSkgfHwge30sIHJlZ2lvbl0gYXMgW1JlZ2lvbkluZm8sIHN0cmluZ10pXG4gICAgICAgIC50aGVuKChbcmVnaW9uSW5mbywgcmVnaW9uXSkgPT4ge1xuICAgICAgICAgIGNvbnN0IHsgc2lnbmluZ1JlZ2lvbiwgc2lnbmluZ1NlcnZpY2UgfSA9IHJlZ2lvbkluZm87XG4gICAgICAgICAgLy91cGRhdGUgY2xpZW50J3Mgc2luZ2luZyByZWdpb24gYW5kIHNpZ25pbmcgc2VydmljZSBjb25maWcgaWYgdGhleSBhcmUgcmVzb2x2ZWQuXG4gICAgICAgICAgLy9zaWduaW5nIHJlZ2lvbiByZXNvbHZpbmcgb3JkZXI6IHVzZXIgc3VwcGxpZWQgc2lnbmluZ1JlZ2lvbiAtPiBlbmRwb2ludHMuanNvbiBpbmZlcnJlZCByZWdpb24gLT4gY2xpZW50IHJlZ2lvblxuICAgICAgICAgIGlucHV0LnNpZ25pbmdSZWdpb24gPSBpbnB1dC5zaWduaW5nUmVnaW9uIHx8IHNpZ25pbmdSZWdpb24gfHwgcmVnaW9uO1xuICAgICAgICAgIGlucHV0LnNpZ25pbmdOYW1lID0gaW5wdXQuc2lnbmluZ05hbWUgfHwgc2lnbmluZ1NlcnZpY2UgfHwgaW5wdXQuc2VydmljZUlkO1xuXG4gICAgICAgICAgcmV0dXJuIG5ldyBTaWduYXR1cmVWNCh7XG4gICAgICAgICAgICBjcmVkZW50aWFsczogbm9ybWFsaXplZENyZWRzLFxuICAgICAgICAgICAgcmVnaW9uOiBpbnB1dC5zaWduaW5nUmVnaW9uLFxuICAgICAgICAgICAgc2VydmljZTogaW5wdXQuc2lnbmluZ05hbWUsXG4gICAgICAgICAgICBzaGEyNTYsXG4gICAgICAgICAgICB1cmlFc2NhcGVQYXRoOiBzaWduaW5nRXNjYXBlUGF0aCxcbiAgICAgICAgICB9KTtcbiAgICAgICAgfSk7XG4gIH1cblxuICByZXR1cm4ge1xuICAgIC4uLmlucHV0LFxuICAgIHN5c3RlbUNsb2NrT2Zmc2V0LFxuICAgIHNpZ25pbmdFc2NhcGVQYXRoLFxuICAgIGNyZWRlbnRpYWxzOiBub3JtYWxpemVkQ3JlZHMsXG4gICAgc2lnbmVyLFxuICB9O1xufVxuXG5mdW5jdGlvbiBub3JtYWxpemVQcm92aWRlcjxUPihpbnB1dDogVCB8IFByb3ZpZGVyPFQ+KTogUHJvdmlkZXI8VD4ge1xuICBpZiAodHlwZW9mIGlucHV0ID09PSBcIm9iamVjdFwiKSB7XG4gICAgY29uc3QgcHJvbWlzaWZpZWQgPSBQcm9taXNlLnJlc29sdmUoaW5wdXQpO1xuICAgIHJldHVybiAoKSA9PiBwcm9taXNpZmllZDtcbiAgfVxuICByZXR1cm4gaW5wdXQgYXMgUHJvdmlkZXI8VD47XG59XG4iXX0=
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY29uZmlndXJhdGlvbnMuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9zcmMvY29uZmlndXJhdGlvbnMudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQUEsd0RBQW9EO0FBNENwRCxTQUFnQixvQkFBb0IsQ0FBSSxLQUFrRDtJQUN4RixNQUFNLFdBQVcsR0FBRyxLQUFLLENBQUMsV0FBVyxJQUFJLEtBQUssQ0FBQyx5QkFBeUIsQ0FBQyxLQUFZLENBQUMsQ0FBQztJQUN2RixNQUFNLGVBQWUsR0FBRyxpQkFBaUIsQ0FBQyxXQUFXLENBQUMsQ0FBQztJQUN2RCxNQUFNLEVBQUUsaUJBQWlCLEdBQUcsSUFBSSxFQUFFLGlCQUFpQixHQUFHLEtBQUssQ0FBQyxpQkFBaUIsSUFBSSxDQUFDLEVBQUUsTUFBTSxFQUFFLEdBQUcsS0FBSyxDQUFDO0lBQ3JHLElBQUksTUFBK0IsQ0FBQztJQUNwQyxJQUFJLEtBQUssQ0FBQyxNQUFNLEVBQUU7UUFDaEIsMkZBQTJGO1FBQzNGLE1BQU0sR0FBRyxpQkFBaUIsQ0FBQyxLQUFLLENBQUMsTUFBTSxDQUFDLENBQUM7S0FDMUM7U0FBTTtRQUNMLHFEQUFxRDtRQUNyRCxNQUFNLEdBQUcsR0FBRyxFQUFFLENBQ1osaUJBQWlCLENBQUMsS0FBSyxDQUFDLE1BQU0sQ0FBQyxFQUFFO2FBQzlCLElBQUksQ0FBQyxLQUFLLEVBQUUsTUFBTSxFQUFFLEVBQUUsQ0FBQyxDQUFDLENBQUMsTUFBTSxLQUFLLENBQUMsa0JBQWtCLENBQUMsTUFBTSxDQUFDLENBQUMsSUFBSSxFQUFFLEVBQUUsTUFBTSxDQUF5QixDQUFDO2FBQ3hHLElBQUksQ0FBQyxDQUFDLENBQUMsVUFBVSxFQUFFLE1BQU0sQ0FBQyxFQUFFLEVBQUU7WUFDN0IsTUFBTSxFQUFFLGFBQWEsRUFBRSxjQUFjLEVBQUUsR0FBRyxVQUFVLENBQUM7WUFDckQsaUZBQWlGO1lBQ2pGLGdIQUFnSDtZQUNoSCxLQUFLLENBQUMsYUFBYSxHQUFHLEtBQUssQ0FBQyxhQUFhLElBQUksYUFBYSxJQUFJLE1BQU0sQ0FBQztZQUNyRSwrQkFBK0I7WUFDL0IsbUhBQW1IO1lBQ25ILEtBQUssQ0FBQyxXQUFXLEdBQUcsS0FBSyxDQUFDLFdBQVcsSUFBSSxjQUFjLElBQUksS0FBSyxDQUFDLFNBQVMsQ0FBQztZQUUzRSxPQUFPLElBQUksMEJBQVcsQ0FBQztnQkFDckIsV0FBVyxFQUFFLGVBQWU7Z0JBQzVCLE1BQU0sRUFBRSxLQUFLLENBQUMsYUFBYTtnQkFDM0IsT0FBTyxFQUFFLEtBQUssQ0FBQyxXQUFXO2dCQUMxQixNQUFNO2dCQUNOLGFBQWEsRUFBRSxpQkFBaUI7YUFDakMsQ0FBQyxDQUFDO1FBQ0wsQ0FBQyxDQUFDLENBQUM7S0FDUjtJQUVELE9BQU87UUFDTCxHQUFHLEtBQUs7UUFDUixpQkFBaUI7UUFDakIsaUJBQWlCO1FBQ2pCLFdBQVcsRUFBRSxlQUFlO1FBQzVCLE1BQU07S0FDUCxDQUFDO0FBQ0osQ0FBQztBQXZDRCxvREF1Q0M7QUFFRCxTQUFTLGlCQUFpQixDQUFJLEtBQXNCO0lBQ2xELElBQUksT0FBTyxLQUFLLEtBQUssUUFBUSxFQUFFO1FBQzdCLE1BQU0sV0FBVyxHQUFHLE9BQU8sQ0FBQyxPQUFPLENBQUMsS0FBSyxDQUFDLENBQUM7UUFDM0MsT0FBTyxHQUFHLEVBQUUsQ0FBQyxXQUFXLENBQUM7S0FDMUI7SUFDRCxPQUFPLEtBQW9CLENBQUM7QUFDOUIsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IFNpZ25hdHVyZVY0IH0gZnJvbSBcIkBhd3Mtc2RrL3NpZ25hdHVyZS12NFwiO1xuaW1wb3J0IHsgQ3JlZGVudGlhbHMsIEhhc2hDb25zdHJ1Y3RvciwgUHJvdmlkZXIsIFJlZ2lvbkluZm8sIFJlZ2lvbkluZm9Qcm92aWRlciwgUmVxdWVzdFNpZ25lciB9IGZyb20gXCJAYXdzLXNkay90eXBlc1wiO1xuXG5leHBvcnQgaW50ZXJmYWNlIEF3c0F1dGhJbnB1dENvbmZpZyB7XG4gIC8qKlxuICAgKiBUaGUgY3JlZGVudGlhbHMgdXNlZCB0byBzaWduIHJlcXVlc3RzLlxuICAgKi9cbiAgY3JlZGVudGlhbHM/OiBDcmVkZW50aWFscyB8IFByb3ZpZGVyPENyZWRlbnRpYWxzPjtcblxuICAvKipcbiAgICogVGhlIHNpZ25lciB0byB1c2Ugd2hlbiBzaWduaW5nIHJlcXVlc3RzLlxuICAgKi9cbiAgc2lnbmVyPzogUmVxdWVzdFNpZ25lciB8IFByb3ZpZGVyPFJlcXVlc3RTaWduZXI+O1xuXG4gIC8qKlxuICAgKiBXaGV0aGVyIHRvIGVzY2FwZSByZXF1ZXN0IHBhdGggd2hlbiBzaWduaW5nIHRoZSByZXF1ZXN0LlxuICAgKi9cbiAgc2lnbmluZ0VzY2FwZVBhdGg/OiBib29sZWFuO1xuXG4gIC8qKlxuICAgKiBBbiBvZmZzZXQgdmFsdWUgaW4gbWlsbGlzZWNvbmRzIHRvIGFwcGx5IHRvIGFsbCBzaWduaW5nIHRpbWVzLlxuICAgKi9cbiAgc3lzdGVtQ2xvY2tPZmZzZXQ/OiBudW1iZXI7XG5cbiAgLyoqXG4gICAqIFRoZSByZWdpb24gd2hlcmUgeW91IHdhbnQgdG8gc2lnbiB5b3VyIHJlcXVlc3QgYWdhaW5zdC4gVGhpc1xuICAgKiBjYW4gYmUgZGlmZmVyZW50IHRvIHRoZSByZWdpb24gaW4gdGhlIGVuZHBvaW50LlxuICAgKi9cbiAgc2lnbmluZ1JlZ2lvbj86IHN0cmluZztcbn1cbmludGVyZmFjZSBQcmV2aW91c2x5UmVzb2x2ZWQge1xuICBjcmVkZW50aWFsRGVmYXVsdFByb3ZpZGVyOiAoaW5wdXQ6IGFueSkgPT4gUHJvdmlkZXI8Q3JlZGVudGlhbHM+O1xuICByZWdpb246IHN0cmluZyB8IFByb3ZpZGVyPHN0cmluZz47XG4gIHJlZ2lvbkluZm9Qcm92aWRlcjogUmVnaW9uSW5mb1Byb3ZpZGVyO1xuICBzaWduaW5nTmFtZT86IHN0cmluZztcbiAgc2VydmljZUlkOiBzdHJpbmc7XG4gIHNoYTI1NjogSGFzaENvbnN0cnVjdG9yO1xufVxuZXhwb3J0IGludGVyZmFjZSBBd3NBdXRoUmVzb2x2ZWRDb25maWcge1xuICBjcmVkZW50aWFsczogUHJvdmlkZXI8Q3JlZGVudGlhbHM+O1xuICBzaWduZXI6IFByb3ZpZGVyPFJlcXVlc3RTaWduZXI+O1xuICBzaWduaW5nRXNjYXBlUGF0aDogYm9vbGVhbjtcbiAgc3lzdGVtQ2xvY2tPZmZzZXQ6IG51bWJlcjtcbn1cbmV4cG9ydCBmdW5jdGlvbiByZXNvbHZlQXdzQXV0aENvbmZpZzxUPihpbnB1dDogVCAmIEF3c0F1dGhJbnB1dENvbmZpZyAmIFByZXZpb3VzbHlSZXNvbHZlZCk6IFQgJiBBd3NBdXRoUmVzb2x2ZWRDb25maWcge1xuICBjb25zdCBjcmVkZW50aWFscyA9IGlucHV0LmNyZWRlbnRpYWxzIHx8IGlucHV0LmNyZWRlbnRpYWxEZWZhdWx0UHJvdmlkZXIoaW5wdXQgYXMgYW55KTtcbiAgY29uc3Qgbm9ybWFsaXplZENyZWRzID0gbm9ybWFsaXplUHJvdmlkZXIoY3JlZGVudGlhbHMpO1xuICBjb25zdCB7IHNpZ25pbmdFc2NhcGVQYXRoID0gdHJ1ZSwgc3lzdGVtQ2xvY2tPZmZzZXQgPSBpbnB1dC5zeXN0ZW1DbG9ja09mZnNldCB8fCAwLCBzaGEyNTYgfSA9IGlucHV0O1xuICBsZXQgc2lnbmVyOiBQcm92aWRlcjxSZXF1ZXN0U2lnbmVyPjtcbiAgaWYgKGlucHV0LnNpZ25lcikge1xuICAgIC8vaWYgc2lnbmVyIGlzIHN1cHBsaWVkIGJ5IHVzZXIsIG5vcm1hbGl6ZSBpdCB0byBhIGZ1bmN0aW9uIHJldHVybmluZyBhIHByb21pc2UgZm9yIHNpZ25lci5cbiAgICBzaWduZXIgPSBub3JtYWxpemVQcm92aWRlcihpbnB1dC5zaWduZXIpO1xuICB9IGVsc2Uge1xuICAgIC8vY29uc3RydWN0IGEgcHJvdmlkZXIgaW5mZXJyaW5nIHNpZ25pbmcgZnJvbSByZWdpb24uXG4gICAgc2lnbmVyID0gKCkgPT5cbiAgICAgIG5vcm1hbGl6ZVByb3ZpZGVyKGlucHV0LnJlZ2lvbikoKVxuICAgICAgICAudGhlbihhc3luYyAocmVnaW9uKSA9PiBbKGF3YWl0IGlucHV0LnJlZ2lvbkluZm9Qcm92aWRlcihyZWdpb24pKSB8fCB7fSwgcmVnaW9uXSBhcyBbUmVnaW9uSW5mbywgc3RyaW5nXSlcbiAgICAgICAgLnRoZW4oKFtyZWdpb25JbmZvLCByZWdpb25dKSA9PiB7XG4gICAgICAgICAgY29uc3QgeyBzaWduaW5nUmVnaW9uLCBzaWduaW5nU2VydmljZSB9ID0gcmVnaW9uSW5mbztcbiAgICAgICAgICAvL3VwZGF0ZSBjbGllbnQncyBzaW5naW5nIHJlZ2lvbiBhbmQgc2lnbmluZyBzZXJ2aWNlIGNvbmZpZyBpZiB0aGV5IGFyZSByZXNvbHZlZC5cbiAgICAgICAgICAvL3NpZ25pbmcgcmVnaW9uIHJlc29sdmluZyBvcmRlcjogdXNlciBzdXBwbGllZCBzaWduaW5nUmVnaW9uIC0+IGVuZHBvaW50cy5qc29uIGluZmVycmVkIHJlZ2lvbiAtPiBjbGllbnQgcmVnaW9uXG4gICAgICAgICAgaW5wdXQuc2lnbmluZ1JlZ2lvbiA9IGlucHV0LnNpZ25pbmdSZWdpb24gfHwgc2lnbmluZ1JlZ2lvbiB8fCByZWdpb247XG4gICAgICAgICAgLy9zaWduaW5nIG5hbWUgcmVzb2x2aW5nIG9yZGVyOlxuICAgICAgICAgIC8vdXNlciBzdXBwbGllZCBzaWduaW5nTmFtZSAtPiBlbmRwb2ludHMuanNvbiBpbmZlcnJlZCAoY3JlZGVudGlhbCBzY29wZSAtPiBtb2RlbCBhcm5OYW1lc3BhY2UpIC0+IG1vZGVsIHNlcnZpY2UgaWRcbiAgICAgICAgICBpbnB1dC5zaWduaW5nTmFtZSA9IGlucHV0LnNpZ25pbmdOYW1lIHx8IHNpZ25pbmdTZXJ2aWNlIHx8IGlucHV0LnNlcnZpY2VJZDtcblxuICAgICAgICAgIHJldHVybiBuZXcgU2lnbmF0dXJlVjQoe1xuICAgICAgICAgICAgY3JlZGVudGlhbHM6IG5vcm1hbGl6ZWRDcmVkcyxcbiAgICAgICAgICAgIHJlZ2lvbjogaW5wdXQuc2lnbmluZ1JlZ2lvbixcbiAgICAgICAgICAgIHNlcnZpY2U6IGlucHV0LnNpZ25pbmdOYW1lLFxuICAgICAgICAgICAgc2hhMjU2LFxuICAgICAgICAgICAgdXJpRXNjYXBlUGF0aDogc2lnbmluZ0VzY2FwZVBhdGgsXG4gICAgICAgICAgfSk7XG4gICAgICAgIH0pO1xuICB9XG5cbiAgcmV0dXJuIHtcbiAgICAuLi5pbnB1dCxcbiAgICBzeXN0ZW1DbG9ja09mZnNldCxcbiAgICBzaWduaW5nRXNjYXBlUGF0aCxcbiAgICBjcmVkZW50aWFsczogbm9ybWFsaXplZENyZWRzLFxuICAgIHNpZ25lcixcbiAgfTtcbn1cblxuZnVuY3Rpb24gbm9ybWFsaXplUHJvdmlkZXI8VD4oaW5wdXQ6IFQgfCBQcm92aWRlcjxUPik6IFByb3ZpZGVyPFQ+IHtcbiAgaWYgKHR5cGVvZiBpbnB1dCA9PT0gXCJvYmplY3RcIikge1xuICAgIGNvbnN0IHByb21pc2lmaWVkID0gUHJvbWlzZS5yZXNvbHZlKGlucHV0KTtcbiAgICByZXR1cm4gKCkgPT4gcHJvbWlzaWZpZWQ7XG4gIH1cbiAgcmV0dXJuIGlucHV0IGFzIFByb3ZpZGVyPFQ+O1xufVxuIl19
 
 /***/ }),
 
@@ -57464,10 +57620,28 @@ function __classPrivateFieldSet(receiver, privateMap, value) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.resolveUserAgentConfig = void 0;
 function resolveUserAgentConfig(input) {
-    return input;
+    return {
+        ...input,
+        customUserAgent: typeof input.customUserAgent === "string" ? [[input.customUserAgent]] : input.customUserAgent,
+    };
 }
 exports.resolveUserAgentConfig = resolveUserAgentConfig;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY29uZmlndXJhdGlvbnMuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9zcmMvY29uZmlndXJhdGlvbnMudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBZUEsU0FBZ0Isc0JBQXNCLENBQ3BDLEtBQW9EO0lBRXBELE9BQU8sS0FBSyxDQUFDO0FBQ2YsQ0FBQztBQUpELHdEQUlDIiwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGludGVyZmFjZSBVc2VyQWdlbnRJbnB1dENvbmZpZyB7XG4gIC8qKlxuICAgKiBUaGUgY3VzdG9tIHVzZXIgYWdlbnQgaGVhZGVyIHRoYXQgd291bGQgYmUgYXBwZW5kZWQgdG8gZGVmYXVsdCBvbmVcbiAgICovXG4gIGN1c3RvbVVzZXJBZ2VudD86IHN0cmluZztcbn1cbmludGVyZmFjZSBQcmV2aW91c2x5UmVzb2x2ZWQge1xuICBkZWZhdWx0VXNlckFnZW50OiBzdHJpbmc7XG4gIHJ1bnRpbWU6IHN0cmluZztcbn1cbmV4cG9ydCBpbnRlcmZhY2UgVXNlckFnZW50UmVzb2x2ZWRDb25maWcge1xuICBkZWZhdWx0VXNlckFnZW50OiBzdHJpbmc7XG4gIGN1c3RvbVVzZXJBZ2VudD86IHN0cmluZztcbiAgcnVudGltZTogc3RyaW5nO1xufVxuZXhwb3J0IGZ1bmN0aW9uIHJlc29sdmVVc2VyQWdlbnRDb25maWc8VD4oXG4gIGlucHV0OiBUICYgUHJldmlvdXNseVJlc29sdmVkICYgVXNlckFnZW50SW5wdXRDb25maWdcbik6IFQgJiBVc2VyQWdlbnRSZXNvbHZlZENvbmZpZyB7XG4gIHJldHVybiBpbnB1dDtcbn1cbiJdfQ==
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY29uZmlndXJhdGlvbnMuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9zcmMvY29uZmlndXJhdGlvbnMudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBZ0JBLFNBQWdCLHNCQUFzQixDQUNwQyxLQUFvRDtJQUVwRCxPQUFPO1FBQ0wsR0FBRyxLQUFLO1FBQ1IsZUFBZSxFQUFFLE9BQU8sS0FBSyxDQUFDLGVBQWUsS0FBSyxRQUFRLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxLQUFLLENBQUMsZUFBZSxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsS0FBSyxDQUFDLGVBQWU7S0FDL0csQ0FBQztBQUNKLENBQUM7QUFQRCx3REFPQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IFByb3ZpZGVyLCBVc2VyQWdlbnQgfSBmcm9tIFwiQGF3cy1zZGsvdHlwZXNcIjtcbmV4cG9ydCBpbnRlcmZhY2UgVXNlckFnZW50SW5wdXRDb25maWcge1xuICAvKipcbiAgICogVGhlIGN1c3RvbSB1c2VyIGFnZW50IGhlYWRlciB0aGF0IHdvdWxkIGJlIGFwcGVuZGVkIHRvIGRlZmF1bHQgb25lXG4gICAqL1xuICBjdXN0b21Vc2VyQWdlbnQ/OiBzdHJpbmcgfCBVc2VyQWdlbnQ7XG59XG5pbnRlcmZhY2UgUHJldmlvdXNseVJlc29sdmVkIHtcbiAgZGVmYXVsdFVzZXJBZ2VudFByb3ZpZGVyOiBQcm92aWRlcjxVc2VyQWdlbnQ+O1xuICBydW50aW1lOiBzdHJpbmc7XG59XG5leHBvcnQgaW50ZXJmYWNlIFVzZXJBZ2VudFJlc29sdmVkQ29uZmlnIHtcbiAgZGVmYXVsdFVzZXJBZ2VudFByb3ZpZGVyOiBQcm92aWRlcjxVc2VyQWdlbnQ+O1xuICBjdXN0b21Vc2VyQWdlbnQ/OiBVc2VyQWdlbnQ7XG4gIHJ1bnRpbWU6IHN0cmluZztcbn1cbmV4cG9ydCBmdW5jdGlvbiByZXNvbHZlVXNlckFnZW50Q29uZmlnPFQ+KFxuICBpbnB1dDogVCAmIFByZXZpb3VzbHlSZXNvbHZlZCAmIFVzZXJBZ2VudElucHV0Q29uZmlnXG4pOiBUICYgVXNlckFnZW50UmVzb2x2ZWRDb25maWcge1xuICByZXR1cm4ge1xuICAgIC4uLmlucHV0LFxuICAgIGN1c3RvbVVzZXJBZ2VudDogdHlwZW9mIGlucHV0LmN1c3RvbVVzZXJBZ2VudCA9PT0gXCJzdHJpbmdcIiA/IFtbaW5wdXQuY3VzdG9tVXNlckFnZW50XV0gOiBpbnB1dC5jdXN0b21Vc2VyQWdlbnQsXG4gIH07XG59XG4iXX0=
+
+/***/ }),
+
+/***/ 81584:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.UA_ESCAPE_REGEX = exports.SPACE = exports.X_AMZ_USER_AGENT = exports.USER_AGENT = void 0;
+exports.USER_AGENT = "user-agent";
+exports.X_AMZ_USER_AGENT = "x-amz-user-agent";
+exports.SPACE = " ";
+exports.UA_ESCAPE_REGEX = /[^\!\#\$\%\&\'\*\+\-\.\^\_\`\|\~\d\w]/g;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY29uc3RhbnRzLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vc3JjL2NvbnN0YW50cy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFBYSxRQUFBLFVBQVUsR0FBRyxZQUFZLENBQUM7QUFFMUIsUUFBQSxnQkFBZ0IsR0FBRyxrQkFBa0IsQ0FBQztBQUV0QyxRQUFBLEtBQUssR0FBRyxHQUFHLENBQUM7QUFFWixRQUFBLGVBQWUsR0FBRyx3Q0FBd0MsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBjb25zdCBVU0VSX0FHRU5UID0gXCJ1c2VyLWFnZW50XCI7XG5cbmV4cG9ydCBjb25zdCBYX0FNWl9VU0VSX0FHRU5UID0gXCJ4LWFtei11c2VyLWFnZW50XCI7XG5cbmV4cG9ydCBjb25zdCBTUEFDRSA9IFwiIFwiO1xuXG5leHBvcnQgY29uc3QgVUFfRVNDQVBFX1JFR0VYID0gL1teXFwhXFwjXFwkXFwlXFwmXFwnXFwqXFwrXFwtXFwuXFxeXFxfXFxgXFx8XFx+XFxkXFx3XS9nO1xuIl19
 
 /***/ }),
 
@@ -57479,12 +57653,12 @@ exports.resolveUserAgentConfig = resolveUserAgentConfig;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const tslib_1 = __webpack_require__(88188);
 tslib_1.__exportStar(__webpack_require__(6378), exports);
-tslib_1.__exportStar(__webpack_require__(5119), exports);
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9zcmMvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQUEsMkRBQWlDO0FBQ2pDLHVEQUE2QiIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCAqIGZyb20gXCIuL2NvbmZpZ3VyYXRpb25zXCI7XG5leHBvcnQgKiBmcm9tIFwiLi9taWRkbGV3YXJlXCI7XG4iXX0=
+tslib_1.__exportStar(__webpack_require__(8240), exports);
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9zcmMvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQUEsMkRBQWlDO0FBQ2pDLGtFQUF3QyIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCAqIGZyb20gXCIuL2NvbmZpZ3VyYXRpb25zXCI7XG5leHBvcnQgKiBmcm9tIFwiLi91c2VyLWFnZW50LW1pZGRsZXdhcmVcIjtcbiJdfQ==
 
 /***/ }),
 
-/***/ 5119:
+/***/ 8240:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
@@ -57492,41 +57666,74 @@ tslib_1.__exportStar(__webpack_require__(5119), exports);
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getUserAgentPlugin = exports.getUserAgentMiddlewareOptions = exports.userAgentMiddleware = void 0;
 const protocol_http_1 = __webpack_require__(67498);
-function userAgentMiddleware(options) {
-    return (next) => (args) => {
-        const { request } = args;
-        if (!protocol_http_1.HttpRequest.isInstance(request))
-            return next(args);
-        const { headers } = request;
-        const userAgentHeader = options.runtime === "node" ? "user-agent" : "x-amz-user-agent";
-        if (!headers[userAgentHeader]) {
-            headers[userAgentHeader] = `${options.defaultUserAgent}`;
-        }
-        else {
-            headers[userAgentHeader] += ` ${options.defaultUserAgent}`;
-        }
-        if (options.customUserAgent) {
-            headers[userAgentHeader] += ` ${options.customUserAgent}`;
-        }
-        return next({
-            ...args,
-            request,
-        });
-    };
-}
+const constants_1 = __webpack_require__(81584);
+/**
+ * Build user agent header sections from:
+ * 1. runtime-specific default user agent provider;
+ * 2. custom user agent from `customUserAgent` client config;
+ * 3. handler execution context set by internal SDK components;
+ * The built user agent will be set to `x-amz-user-agent` header for ALL the
+ * runtimes.
+ * Please note that any override to the `user-agent` or `x-amz-user-agent` header
+ * in the HTTP request is discouraged. Please use `customUserAgent` client
+ * config or middleware setting the `userAgent` context to generate desired user
+ * agent.
+ */
+const userAgentMiddleware = (options) => (next, context) => async (args) => {
+    var _a, _b;
+    const { request } = args;
+    if (!protocol_http_1.HttpRequest.isInstance(request))
+        return next(args);
+    const { headers } = request;
+    const userAgent = ((_a = context === null || context === void 0 ? void 0 : context.userAgent) === null || _a === void 0 ? void 0 : _a.map(escapeUserAgent)) || [];
+    const defaultUserAgent = (await options.defaultUserAgentProvider()).map(escapeUserAgent);
+    const customUserAgent = ((_b = options === null || options === void 0 ? void 0 : options.customUserAgent) === null || _b === void 0 ? void 0 : _b.map(escapeUserAgent)) || [];
+    // Set value to AWS-specific user agent header
+    headers[constants_1.X_AMZ_USER_AGENT] = [...defaultUserAgent, ...userAgent, ...customUserAgent].join(constants_1.SPACE);
+    // Get value to be sent with non-AWS-specific user agent header.
+    const normalUAValue = [
+        ...defaultUserAgent.filter((section) => section.startsWith("aws-sdk-")),
+        ...customUserAgent,
+    ].join(constants_1.SPACE);
+    if (options.runtime !== "browser" && normalUAValue) {
+        headers[constants_1.USER_AGENT] = headers[constants_1.USER_AGENT] ? `${headers[constants_1.USER_AGENT]} ${normalUAValue}` : normalUAValue;
+    }
+    return next({
+        ...args,
+        request,
+    });
+};
 exports.userAgentMiddleware = userAgentMiddleware;
+/**
+ * Escape the each pair according to https://tools.ietf.org/html/rfc5234 and join the pair with pattern `name/version`.
+ * User agent name may include prefix like `md/`, `api/`, `os/` etc., we should not escape the `/` after the prefix.
+ * @private
+ */
+const escapeUserAgent = ([name, version]) => {
+    const prefixSeparatorIndex = name.indexOf("/");
+    const prefix = name.substring(0, prefixSeparatorIndex); // If no prefix, prefix is just ""
+    let uaName = name.substring(prefixSeparatorIndex + 1);
+    if (prefix === "api") {
+        uaName = uaName.toLowerCase();
+    }
+    return [prefix, uaName, version]
+        .filter((item) => item && item.length > 0)
+        .map((item) => item === null || item === void 0 ? void 0 : item.replace(constants_1.UA_ESCAPE_REGEX, "_"))
+        .join("/");
+};
 exports.getUserAgentMiddlewareOptions = {
     name: "getUserAgentMiddleware",
     step: "build",
+    priority: "low",
     tags: ["SET_USER_AGENT", "USER_AGENT"],
 };
 const getUserAgentPlugin = (config) => ({
     applyToStack: (clientStack) => {
-        clientStack.add(userAgentMiddleware(config), exports.getUserAgentMiddlewareOptions);
+        clientStack.add(exports.userAgentMiddleware(config), exports.getUserAgentMiddlewareOptions);
     },
 });
 exports.getUserAgentPlugin = getUserAgentPlugin;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWlkZGxld2FyZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9taWRkbGV3YXJlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7OztBQUFBLDBEQUFxRDtBQVlyRCxTQUFnQixtQkFBbUIsQ0FBQyxPQUFnQztJQUNsRSxPQUFPLENBQWdDLElBQTRCLEVBQTBCLEVBQUUsQ0FBQyxDQUM5RixJQUFnQyxFQUNLLEVBQUU7UUFDdkMsTUFBTSxFQUFFLE9BQU8sRUFBRSxHQUFHLElBQUksQ0FBQztRQUN6QixJQUFJLENBQUMsMkJBQVcsQ0FBQyxVQUFVLENBQUMsT0FBTyxDQUFDO1lBQUUsT0FBTyxJQUFJLENBQUMsSUFBSSxDQUFDLENBQUM7UUFDeEQsTUFBTSxFQUFFLE9BQU8sRUFBRSxHQUFHLE9BQU8sQ0FBQztRQUM1QixNQUFNLGVBQWUsR0FBRyxPQUFPLENBQUMsT0FBTyxLQUFLLE1BQU0sQ0FBQyxDQUFDLENBQUMsWUFBWSxDQUFDLENBQUMsQ0FBQyxrQkFBa0IsQ0FBQztRQUN2RixJQUFJLENBQUMsT0FBTyxDQUFDLGVBQWUsQ0FBQyxFQUFFO1lBQzdCLE9BQU8sQ0FBQyxlQUFlLENBQUMsR0FBRyxHQUFHLE9BQU8sQ0FBQyxnQkFBZ0IsRUFBRSxDQUFDO1NBQzFEO2FBQU07WUFDTCxPQUFPLENBQUMsZUFBZSxDQUFDLElBQUksSUFBSSxPQUFPLENBQUMsZ0JBQWdCLEVBQUUsQ0FBQztTQUM1RDtRQUNELElBQUksT0FBTyxDQUFDLGVBQWUsRUFBRTtZQUMzQixPQUFPLENBQUMsZUFBZSxDQUFDLElBQUksSUFBSSxPQUFPLENBQUMsZUFBZSxFQUFFLENBQUM7U0FDM0Q7UUFDRCxPQUFPLElBQUksQ0FBQztZQUNWLEdBQUcsSUFBSTtZQUNQLE9BQU87U0FDUixDQUFDLENBQUM7SUFDTCxDQUFDLENBQUM7QUFDSixDQUFDO0FBckJELGtEQXFCQztBQUVZLFFBQUEsNkJBQTZCLEdBQXdCO0lBQ2hFLElBQUksRUFBRSx3QkFBd0I7SUFDOUIsSUFBSSxFQUFFLE9BQU87SUFDYixJQUFJLEVBQUUsQ0FBQyxnQkFBZ0IsRUFBRSxZQUFZLENBQUM7Q0FDdkMsQ0FBQztBQUVLLE1BQU0sa0JBQWtCLEdBQUcsQ0FBQyxNQUErQixFQUF1QixFQUFFLENBQUMsQ0FBQztJQUMzRixZQUFZLEVBQUUsQ0FBQyxXQUFXLEVBQUUsRUFBRTtRQUM1QixXQUFXLENBQUMsR0FBRyxDQUFDLG1CQUFtQixDQUFDLE1BQU0sQ0FBQyxFQUFFLHFDQUE2QixDQUFDLENBQUM7SUFDOUUsQ0FBQztDQUNGLENBQUMsQ0FBQztBQUpVLFFBQUEsa0JBQWtCLHNCQUk1QiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IEh0dHBSZXF1ZXN0IH0gZnJvbSBcIkBhd3Mtc2RrL3Byb3RvY29sLWh0dHBcIjtcbmltcG9ydCB7XG4gIEJ1aWxkSGFuZGxlcixcbiAgQnVpbGRIYW5kbGVyQXJndW1lbnRzLFxuICBCdWlsZEhhbmRsZXJPcHRpb25zLFxuICBCdWlsZEhhbmRsZXJPdXRwdXQsXG4gIE1ldGFkYXRhQmVhcmVyLFxuICBQbHVnZ2FibGUsXG59IGZyb20gXCJAYXdzLXNkay90eXBlc1wiO1xuXG5pbXBvcnQgeyBVc2VyQWdlbnRSZXNvbHZlZENvbmZpZyB9IGZyb20gXCIuL2NvbmZpZ3VyYXRpb25zXCI7XG5cbmV4cG9ydCBmdW5jdGlvbiB1c2VyQWdlbnRNaWRkbGV3YXJlKG9wdGlvbnM6IFVzZXJBZ2VudFJlc29sdmVkQ29uZmlnKSB7XG4gIHJldHVybiA8T3V0cHV0IGV4dGVuZHMgTWV0YWRhdGFCZWFyZXI+KG5leHQ6IEJ1aWxkSGFuZGxlcjxhbnksIGFueT4pOiBCdWlsZEhhbmRsZXI8YW55LCBhbnk+ID0+IChcbiAgICBhcmdzOiBCdWlsZEhhbmRsZXJBcmd1bWVudHM8YW55PlxuICApOiBQcm9taXNlPEJ1aWxkSGFuZGxlck91dHB1dDxPdXRwdXQ+PiA9PiB7XG4gICAgY29uc3QgeyByZXF1ZXN0IH0gPSBhcmdzO1xuICAgIGlmICghSHR0cFJlcXVlc3QuaXNJbnN0YW5jZShyZXF1ZXN0KSkgcmV0dXJuIG5leHQoYXJncyk7XG4gICAgY29uc3QgeyBoZWFkZXJzIH0gPSByZXF1ZXN0O1xuICAgIGNvbnN0IHVzZXJBZ2VudEhlYWRlciA9IG9wdGlvbnMucnVudGltZSA9PT0gXCJub2RlXCIgPyBcInVzZXItYWdlbnRcIiA6IFwieC1hbXotdXNlci1hZ2VudFwiO1xuICAgIGlmICghaGVhZGVyc1t1c2VyQWdlbnRIZWFkZXJdKSB7XG4gICAgICBoZWFkZXJzW3VzZXJBZ2VudEhlYWRlcl0gPSBgJHtvcHRpb25zLmRlZmF1bHRVc2VyQWdlbnR9YDtcbiAgICB9IGVsc2Uge1xuICAgICAgaGVhZGVyc1t1c2VyQWdlbnRIZWFkZXJdICs9IGAgJHtvcHRpb25zLmRlZmF1bHRVc2VyQWdlbnR9YDtcbiAgICB9XG4gICAgaWYgKG9wdGlvbnMuY3VzdG9tVXNlckFnZW50KSB7XG4gICAgICBoZWFkZXJzW3VzZXJBZ2VudEhlYWRlcl0gKz0gYCAke29wdGlvbnMuY3VzdG9tVXNlckFnZW50fWA7XG4gICAgfVxuICAgIHJldHVybiBuZXh0KHtcbiAgICAgIC4uLmFyZ3MsXG4gICAgICByZXF1ZXN0LFxuICAgIH0pO1xuICB9O1xufVxuXG5leHBvcnQgY29uc3QgZ2V0VXNlckFnZW50TWlkZGxld2FyZU9wdGlvbnM6IEJ1aWxkSGFuZGxlck9wdGlvbnMgPSB7XG4gIG5hbWU6IFwiZ2V0VXNlckFnZW50TWlkZGxld2FyZVwiLFxuICBzdGVwOiBcImJ1aWxkXCIsXG4gIHRhZ3M6IFtcIlNFVF9VU0VSX0FHRU5UXCIsIFwiVVNFUl9BR0VOVFwiXSxcbn07XG5cbmV4cG9ydCBjb25zdCBnZXRVc2VyQWdlbnRQbHVnaW4gPSAoY29uZmlnOiBVc2VyQWdlbnRSZXNvbHZlZENvbmZpZyk6IFBsdWdnYWJsZTxhbnksIGFueT4gPT4gKHtcbiAgYXBwbHlUb1N0YWNrOiAoY2xpZW50U3RhY2spID0+IHtcbiAgICBjbGllbnRTdGFjay5hZGQodXNlckFnZW50TWlkZGxld2FyZShjb25maWcpLCBnZXRVc2VyQWdlbnRNaWRkbGV3YXJlT3B0aW9ucyk7XG4gIH0sXG59KTtcbiJdfQ==
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidXNlci1hZ2VudC1taWRkbGV3YXJlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vc3JjL3VzZXItYWdlbnQtbWlkZGxld2FyZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFBQSwwREFBcUQ7QUFjckQsMkNBQW1GO0FBRW5GOzs7Ozs7Ozs7OztHQVdHO0FBQ0ksTUFBTSxtQkFBbUIsR0FBRyxDQUFDLE9BQWdDLEVBQUUsRUFBRSxDQUFDLENBQ3ZFLElBQTRCLEVBQzVCLE9BQWdDLEVBQ1IsRUFBRSxDQUFDLEtBQUssRUFBRSxJQUFnQyxFQUF1QyxFQUFFOztJQUMzRyxNQUFNLEVBQUUsT0FBTyxFQUFFLEdBQUcsSUFBSSxDQUFDO0lBQ3pCLElBQUksQ0FBQywyQkFBVyxDQUFDLFVBQVUsQ0FBQyxPQUFPLENBQUM7UUFBRSxPQUFPLElBQUksQ0FBQyxJQUFJLENBQUMsQ0FBQztJQUN4RCxNQUFNLEVBQUUsT0FBTyxFQUFFLEdBQUcsT0FBTyxDQUFDO0lBQzVCLE1BQU0sU0FBUyxHQUFHLE9BQUEsT0FBTyxhQUFQLE9BQU8sdUJBQVAsT0FBTyxDQUFFLFNBQVMsMENBQUUsR0FBRyxDQUFDLGVBQWUsTUFBSyxFQUFFLENBQUM7SUFDakUsTUFBTSxnQkFBZ0IsR0FBRyxDQUFDLE1BQU0sT0FBTyxDQUFDLHdCQUF3QixFQUFFLENBQUMsQ0FBQyxHQUFHLENBQUMsZUFBZSxDQUFDLENBQUM7SUFDekYsTUFBTSxlQUFlLEdBQUcsT0FBQSxPQUFPLGFBQVAsT0FBTyx1QkFBUCxPQUFPLENBQUUsZUFBZSwwQ0FBRSxHQUFHLENBQUMsZUFBZSxNQUFLLEVBQUUsQ0FBQztJQUM3RSw4Q0FBOEM7SUFDOUMsT0FBTyxDQUFDLDRCQUFnQixDQUFDLEdBQUcsQ0FBQyxHQUFHLGdCQUFnQixFQUFFLEdBQUcsU0FBUyxFQUFFLEdBQUcsZUFBZSxDQUFDLENBQUMsSUFBSSxDQUFDLGlCQUFLLENBQUMsQ0FBQztJQUNoRyxnRUFBZ0U7SUFDaEUsTUFBTSxhQUFhLEdBQUc7UUFDcEIsR0FBRyxnQkFBZ0IsQ0FBQyxNQUFNLENBQUMsQ0FBQyxPQUFPLEVBQUUsRUFBRSxDQUFDLE9BQU8sQ0FBQyxVQUFVLENBQUMsVUFBVSxDQUFDLENBQUM7UUFDdkUsR0FBRyxlQUFlO0tBQ25CLENBQUMsSUFBSSxDQUFDLGlCQUFLLENBQUMsQ0FBQztJQUNkLElBQUksT0FBTyxDQUFDLE9BQU8sS0FBSyxTQUFTLElBQUksYUFBYSxFQUFFO1FBQ2xELE9BQU8sQ0FBQyxzQkFBVSxDQUFDLEdBQUcsT0FBTyxDQUFDLHNCQUFVLENBQUMsQ0FBQyxDQUFDLENBQUMsR0FBRyxPQUFPLENBQUMsc0JBQVUsQ0FBQyxJQUFJLGFBQWEsRUFBRSxDQUFDLENBQUMsQ0FBQyxhQUFhLENBQUM7S0FDdkc7SUFFRCxPQUFPLElBQUksQ0FBQztRQUNWLEdBQUcsSUFBSTtRQUNQLE9BQU87S0FDUixDQUFDLENBQUM7QUFDTCxDQUFDLENBQUM7QUF6QlcsUUFBQSxtQkFBbUIsdUJBeUI5QjtBQUVGOzs7O0dBSUc7QUFDSCxNQUFNLGVBQWUsR0FBRyxDQUFDLENBQUMsSUFBSSxFQUFFLE9BQU8sQ0FBZ0IsRUFBVSxFQUFFO0lBQ2pFLE1BQU0sb0JBQW9CLEdBQUcsSUFBSSxDQUFDLE9BQU8sQ0FBQyxHQUFHLENBQUMsQ0FBQztJQUMvQyxNQUFNLE1BQU0sR0FBRyxJQUFJLENBQUMsU0FBUyxDQUFDLENBQUMsRUFBRSxvQkFBb0IsQ0FBQyxDQUFDLENBQUMsa0NBQWtDO0lBQzFGLElBQUksTUFBTSxHQUFHLElBQUksQ0FBQyxTQUFTLENBQUMsb0JBQW9CLEdBQUcsQ0FBQyxDQUFDLENBQUM7SUFDdEQsSUFBSSxNQUFNLEtBQUssS0FBSyxFQUFFO1FBQ3BCLE1BQU0sR0FBRyxNQUFNLENBQUMsV0FBVyxFQUFFLENBQUM7S0FDL0I7SUFDRCxPQUFPLENBQUMsTUFBTSxFQUFFLE1BQU0sRUFBRSxPQUFPLENBQUM7U0FDN0IsTUFBTSxDQUFDLENBQUMsSUFBSSxFQUFFLEVBQUUsQ0FBQyxJQUFJLElBQUksSUFBSSxDQUFDLE1BQU0sR0FBRyxDQUFDLENBQUM7U0FDekMsR0FBRyxDQUFDLENBQUMsSUFBSSxFQUFFLEVBQUUsQ0FBQyxJQUFJLGFBQUosSUFBSSx1QkFBSixJQUFJLENBQUUsT0FBTyxDQUFDLDJCQUFlLEVBQUUsR0FBRyxDQUFDLENBQUM7U0FDbEQsSUFBSSxDQUFDLEdBQUcsQ0FBQyxDQUFDO0FBQ2YsQ0FBQyxDQUFDO0FBRVcsUUFBQSw2QkFBNkIsR0FBMkM7SUFDbkYsSUFBSSxFQUFFLHdCQUF3QjtJQUM5QixJQUFJLEVBQUUsT0FBTztJQUNiLFFBQVEsRUFBRSxLQUFLO0lBQ2YsSUFBSSxFQUFFLENBQUMsZ0JBQWdCLEVBQUUsWUFBWSxDQUFDO0NBQ3ZDLENBQUM7QUFFSyxNQUFNLGtCQUFrQixHQUFHLENBQUMsTUFBK0IsRUFBdUIsRUFBRSxDQUFDLENBQUM7SUFDM0YsWUFBWSxFQUFFLENBQUMsV0FBVyxFQUFFLEVBQUU7UUFDNUIsV0FBVyxDQUFDLEdBQUcsQ0FBQywyQkFBbUIsQ0FBQyxNQUFNLENBQUMsRUFBRSxxQ0FBNkIsQ0FBQyxDQUFDO0lBQzlFLENBQUM7Q0FDRixDQUFDLENBQUM7QUFKVSxRQUFBLGtCQUFrQixzQkFJNUIiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBIdHRwUmVxdWVzdCB9IGZyb20gXCJAYXdzLXNkay9wcm90b2NvbC1odHRwXCI7XG5pbXBvcnQge1xuICBBYnNvbHV0ZUxvY2F0aW9uLFxuICBCdWlsZEhhbmRsZXIsXG4gIEJ1aWxkSGFuZGxlckFyZ3VtZW50cyxcbiAgQnVpbGRIYW5kbGVyT3B0aW9ucyxcbiAgQnVpbGRIYW5kbGVyT3V0cHV0LFxuICBIYW5kbGVyRXhlY3V0aW9uQ29udGV4dCxcbiAgTWV0YWRhdGFCZWFyZXIsXG4gIFBsdWdnYWJsZSxcbiAgVXNlckFnZW50UGFpcixcbn0gZnJvbSBcIkBhd3Mtc2RrL3R5cGVzXCI7XG5cbmltcG9ydCB7IFVzZXJBZ2VudFJlc29sdmVkQ29uZmlnIH0gZnJvbSBcIi4vY29uZmlndXJhdGlvbnNcIjtcbmltcG9ydCB7IFNQQUNFLCBVQV9FU0NBUEVfUkVHRVgsIFVTRVJfQUdFTlQsIFhfQU1aX1VTRVJfQUdFTlQgfSBmcm9tIFwiLi9jb25zdGFudHNcIjtcblxuLyoqXG4gKiBCdWlsZCB1c2VyIGFnZW50IGhlYWRlciBzZWN0aW9ucyBmcm9tOlxuICogMS4gcnVudGltZS1zcGVjaWZpYyBkZWZhdWx0IHVzZXIgYWdlbnQgcHJvdmlkZXI7XG4gKiAyLiBjdXN0b20gdXNlciBhZ2VudCBmcm9tIGBjdXN0b21Vc2VyQWdlbnRgIGNsaWVudCBjb25maWc7XG4gKiAzLiBoYW5kbGVyIGV4ZWN1dGlvbiBjb250ZXh0IHNldCBieSBpbnRlcm5hbCBTREsgY29tcG9uZW50cztcbiAqIFRoZSBidWlsdCB1c2VyIGFnZW50IHdpbGwgYmUgc2V0IHRvIGB4LWFtei11c2VyLWFnZW50YCBoZWFkZXIgZm9yIEFMTCB0aGVcbiAqIHJ1bnRpbWVzLlxuICogUGxlYXNlIG5vdGUgdGhhdCBhbnkgb3ZlcnJpZGUgdG8gdGhlIGB1c2VyLWFnZW50YCBvciBgeC1hbXotdXNlci1hZ2VudGAgaGVhZGVyXG4gKiBpbiB0aGUgSFRUUCByZXF1ZXN0IGlzIGRpc2NvdXJhZ2VkLiBQbGVhc2UgdXNlIGBjdXN0b21Vc2VyQWdlbnRgIGNsaWVudFxuICogY29uZmlnIG9yIG1pZGRsZXdhcmUgc2V0dGluZyB0aGUgYHVzZXJBZ2VudGAgY29udGV4dCB0byBnZW5lcmF0ZSBkZXNpcmVkIHVzZXJcbiAqIGFnZW50LlxuICovXG5leHBvcnQgY29uc3QgdXNlckFnZW50TWlkZGxld2FyZSA9IChvcHRpb25zOiBVc2VyQWdlbnRSZXNvbHZlZENvbmZpZykgPT4gPE91dHB1dCBleHRlbmRzIE1ldGFkYXRhQmVhcmVyPihcbiAgbmV4dDogQnVpbGRIYW5kbGVyPGFueSwgYW55PixcbiAgY29udGV4dDogSGFuZGxlckV4ZWN1dGlvbkNvbnRleHRcbik6IEJ1aWxkSGFuZGxlcjxhbnksIGFueT4gPT4gYXN5bmMgKGFyZ3M6IEJ1aWxkSGFuZGxlckFyZ3VtZW50czxhbnk+KTogUHJvbWlzZTxCdWlsZEhhbmRsZXJPdXRwdXQ8T3V0cHV0Pj4gPT4ge1xuICBjb25zdCB7IHJlcXVlc3QgfSA9IGFyZ3M7XG4gIGlmICghSHR0cFJlcXVlc3QuaXNJbnN0YW5jZShyZXF1ZXN0KSkgcmV0dXJuIG5leHQoYXJncyk7XG4gIGNvbnN0IHsgaGVhZGVycyB9ID0gcmVxdWVzdDtcbiAgY29uc3QgdXNlckFnZW50ID0gY29udGV4dD8udXNlckFnZW50Py5tYXAoZXNjYXBlVXNlckFnZW50KSB8fCBbXTtcbiAgY29uc3QgZGVmYXVsdFVzZXJBZ2VudCA9IChhd2FpdCBvcHRpb25zLmRlZmF1bHRVc2VyQWdlbnRQcm92aWRlcigpKS5tYXAoZXNjYXBlVXNlckFnZW50KTtcbiAgY29uc3QgY3VzdG9tVXNlckFnZW50ID0gb3B0aW9ucz8uY3VzdG9tVXNlckFnZW50Py5tYXAoZXNjYXBlVXNlckFnZW50KSB8fCBbXTtcbiAgLy8gU2V0IHZhbHVlIHRvIEFXUy1zcGVjaWZpYyB1c2VyIGFnZW50IGhlYWRlclxuICBoZWFkZXJzW1hfQU1aX1VTRVJfQUdFTlRdID0gWy4uLmRlZmF1bHRVc2VyQWdlbnQsIC4uLnVzZXJBZ2VudCwgLi4uY3VzdG9tVXNlckFnZW50XS5qb2luKFNQQUNFKTtcbiAgLy8gR2V0IHZhbHVlIHRvIGJlIHNlbnQgd2l0aCBub24tQVdTLXNwZWNpZmljIHVzZXIgYWdlbnQgaGVhZGVyLlxuICBjb25zdCBub3JtYWxVQVZhbHVlID0gW1xuICAgIC4uLmRlZmF1bHRVc2VyQWdlbnQuZmlsdGVyKChzZWN0aW9uKSA9PiBzZWN0aW9uLnN0YXJ0c1dpdGgoXCJhd3Mtc2RrLVwiKSksXG4gICAgLi4uY3VzdG9tVXNlckFnZW50LFxuICBdLmpvaW4oU1BBQ0UpO1xuICBpZiAob3B0aW9ucy5ydW50aW1lICE9PSBcImJyb3dzZXJcIiAmJiBub3JtYWxVQVZhbHVlKSB7XG4gICAgaGVhZGVyc1tVU0VSX0FHRU5UXSA9IGhlYWRlcnNbVVNFUl9BR0VOVF0gPyBgJHtoZWFkZXJzW1VTRVJfQUdFTlRdfSAke25vcm1hbFVBVmFsdWV9YCA6IG5vcm1hbFVBVmFsdWU7XG4gIH1cblxuICByZXR1cm4gbmV4dCh7XG4gICAgLi4uYXJncyxcbiAgICByZXF1ZXN0LFxuICB9KTtcbn07XG5cbi8qKlxuICogRXNjYXBlIHRoZSBlYWNoIHBhaXIgYWNjb3JkaW5nIHRvIGh0dHBzOi8vdG9vbHMuaWV0Zi5vcmcvaHRtbC9yZmM1MjM0IGFuZCBqb2luIHRoZSBwYWlyIHdpdGggcGF0dGVybiBgbmFtZS92ZXJzaW9uYC5cbiAqIFVzZXIgYWdlbnQgbmFtZSBtYXkgaW5jbHVkZSBwcmVmaXggbGlrZSBgbWQvYCwgYGFwaS9gLCBgb3MvYCBldGMuLCB3ZSBzaG91bGQgbm90IGVzY2FwZSB0aGUgYC9gIGFmdGVyIHRoZSBwcmVmaXguXG4gKiBAcHJpdmF0ZVxuICovXG5jb25zdCBlc2NhcGVVc2VyQWdlbnQgPSAoW25hbWUsIHZlcnNpb25dOiBVc2VyQWdlbnRQYWlyKTogc3RyaW5nID0+IHtcbiAgY29uc3QgcHJlZml4U2VwYXJhdG9ySW5kZXggPSBuYW1lLmluZGV4T2YoXCIvXCIpO1xuICBjb25zdCBwcmVmaXggPSBuYW1lLnN1YnN0cmluZygwLCBwcmVmaXhTZXBhcmF0b3JJbmRleCk7IC8vIElmIG5vIHByZWZpeCwgcHJlZml4IGlzIGp1c3QgXCJcIlxuICBsZXQgdWFOYW1lID0gbmFtZS5zdWJzdHJpbmcocHJlZml4U2VwYXJhdG9ySW5kZXggKyAxKTtcbiAgaWYgKHByZWZpeCA9PT0gXCJhcGlcIikge1xuICAgIHVhTmFtZSA9IHVhTmFtZS50b0xvd2VyQ2FzZSgpO1xuICB9XG4gIHJldHVybiBbcHJlZml4LCB1YU5hbWUsIHZlcnNpb25dXG4gICAgLmZpbHRlcigoaXRlbSkgPT4gaXRlbSAmJiBpdGVtLmxlbmd0aCA+IDApXG4gICAgLm1hcCgoaXRlbSkgPT4gaXRlbT8ucmVwbGFjZShVQV9FU0NBUEVfUkVHRVgsIFwiX1wiKSlcbiAgICAuam9pbihcIi9cIik7XG59O1xuXG5leHBvcnQgY29uc3QgZ2V0VXNlckFnZW50TWlkZGxld2FyZU9wdGlvbnM6IEJ1aWxkSGFuZGxlck9wdGlvbnMgJiBBYnNvbHV0ZUxvY2F0aW9uID0ge1xuICBuYW1lOiBcImdldFVzZXJBZ2VudE1pZGRsZXdhcmVcIixcbiAgc3RlcDogXCJidWlsZFwiLFxuICBwcmlvcml0eTogXCJsb3dcIixcbiAgdGFnczogW1wiU0VUX1VTRVJfQUdFTlRcIiwgXCJVU0VSX0FHRU5UXCJdLFxufTtcblxuZXhwb3J0IGNvbnN0IGdldFVzZXJBZ2VudFBsdWdpbiA9IChjb25maWc6IFVzZXJBZ2VudFJlc29sdmVkQ29uZmlnKTogUGx1Z2dhYmxlPGFueSwgYW55PiA9PiAoe1xuICBhcHBseVRvU3RhY2s6IChjbGllbnRTdGFjaykgPT4ge1xuICAgIGNsaWVudFN0YWNrLmFkZCh1c2VyQWdlbnRNaWRkbGV3YXJlKGNvbmZpZyksIGdldFVzZXJBZ2VudE1pZGRsZXdhcmVPcHRpb25zKTtcbiAgfSxcbn0pO1xuIl19
 
 /***/ }),
 
@@ -60045,6 +60252,7 @@ exports.MAX_PRESIGNED_TTL = 60 * 60 * 24 * 7;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.clearCredentialCache = exports.getSigningKey = exports.createScope = void 0;
+const util_hex_encoding_1 = __webpack_require__(73291);
 const constants_1 = __webpack_require__(13851);
 const signingKeyCache = {};
 const cacheQueue = [];
@@ -60071,8 +60279,9 @@ exports.createScope = createScope;
  * @param service           The service to which the signed request is being
  *                          sent.
  */
-function getSigningKey(sha256Constructor, credentials, shortDate, region, service) {
-    const cacheKey = `${shortDate}:${region}:${service}:` + `${credentials.accessKeyId}:${credentials.sessionToken}`;
+const getSigningKey = async (sha256Constructor, credentials, shortDate, region, service) => {
+    const credsHash = await hmac(sha256Constructor, credentials.secretAccessKey, credentials.accessKeyId);
+    const cacheKey = `${shortDate}:${region}:${service}:${util_hex_encoding_1.toHex(credsHash)}:${credentials.sessionToken}`;
     if (cacheKey in signingKeyCache) {
         return signingKeyCache[cacheKey];
     }
@@ -60080,18 +60289,12 @@ function getSigningKey(sha256Constructor, credentials, shortDate, region, servic
     while (cacheQueue.length > constants_1.MAX_CACHE_SIZE) {
         delete signingKeyCache[cacheQueue.shift()];
     }
-    return (signingKeyCache[cacheKey] = new Promise((resolve, reject) => {
-        let keyPromise = Promise.resolve(`AWS4${credentials.secretAccessKey}`);
-        for (const signable of [shortDate, region, service, constants_1.KEY_TYPE_IDENTIFIER]) {
-            keyPromise = keyPromise.then((intermediateKey) => hmac(sha256Constructor, intermediateKey, signable));
-            keyPromise.catch(() => { });
-        }
-        keyPromise.then(resolve, (reason) => {
-            delete signingKeyCache[cacheKey];
-            reject(reason);
-        });
-    }));
-}
+    let key = `AWS4${credentials.secretAccessKey}`;
+    for (const signable of [shortDate, region, service, constants_1.KEY_TYPE_IDENTIFIER]) {
+        key = await hmac(sha256Constructor, key, signable);
+    }
+    return (signingKeyCache[cacheKey] = key);
+};
 exports.getSigningKey = getSigningKey;
 /**
  * @internal
@@ -60108,7 +60311,7 @@ function hmac(ctor, secret, data) {
     hash.update(data);
     return hash.digest();
 }
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY3JlZGVudGlhbERlcml2YXRpb24uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9zcmMvY3JlZGVudGlhbERlcml2YXRpb24udHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBRUEsMkNBQWtFO0FBRWxFLE1BQU0sZUFBZSxHQUEyQyxFQUFFLENBQUM7QUFDbkUsTUFBTSxVQUFVLEdBQWtCLEVBQUUsQ0FBQztBQUVyQzs7Ozs7O0dBTUc7QUFDSCxTQUFnQixXQUFXLENBQUMsU0FBaUIsRUFBRSxNQUFjLEVBQUUsT0FBZTtJQUM1RSxPQUFPLEdBQUcsU0FBUyxJQUFJLE1BQU0sSUFBSSxPQUFPLElBQUksK0JBQW1CLEVBQUUsQ0FBQztBQUNwRSxDQUFDO0FBRkQsa0NBRUM7QUFFRDs7Ozs7Ozs7Ozs7R0FXRztBQUNILFNBQWdCLGFBQWEsQ0FDM0IsaUJBQWtDLEVBQ2xDLFdBQXdCLEVBQ3hCLFNBQWlCLEVBQ2pCLE1BQWMsRUFDZCxPQUFlO0lBRWYsTUFBTSxRQUFRLEdBQUcsR0FBRyxTQUFTLElBQUksTUFBTSxJQUFJLE9BQU8sR0FBRyxHQUFHLEdBQUcsV0FBVyxDQUFDLFdBQVcsSUFBSSxXQUFXLENBQUMsWUFBWSxFQUFFLENBQUM7SUFDakgsSUFBSSxRQUFRLElBQUksZUFBZSxFQUFFO1FBQy9CLE9BQU8sZUFBZSxDQUFDLFFBQVEsQ0FBQyxDQUFDO0tBQ2xDO0lBRUQsVUFBVSxDQUFDLElBQUksQ0FBQyxRQUFRLENBQUMsQ0FBQztJQUMxQixPQUFPLFVBQVUsQ0FBQyxNQUFNLEdBQUcsMEJBQWMsRUFBRTtRQUN6QyxPQUFPLGVBQWUsQ0FBQyxVQUFVLENBQUMsS0FBSyxFQUFZLENBQUMsQ0FBQztLQUN0RDtJQUVELE9BQU8sQ0FBQyxlQUFlLENBQUMsUUFBUSxDQUFDLEdBQUcsSUFBSSxPQUFPLENBQUMsQ0FBQyxPQUFPLEVBQUUsTUFBTSxFQUFFLEVBQUU7UUFDbEUsSUFBSSxVQUFVLEdBQXdCLE9BQU8sQ0FBQyxPQUFPLENBQUMsT0FBTyxXQUFXLENBQUMsZUFBZSxFQUFFLENBQUMsQ0FBQztRQUU1RixLQUFLLE1BQU0sUUFBUSxJQUFJLENBQUMsU0FBUyxFQUFFLE1BQU0sRUFBRSxPQUFPLEVBQUUsK0JBQW1CLENBQUMsRUFBRTtZQUN4RSxVQUFVLEdBQUcsVUFBVSxDQUFDLElBQUksQ0FBYSxDQUFDLGVBQWUsRUFBRSxFQUFFLENBQUMsSUFBSSxDQUFDLGlCQUFpQixFQUFFLGVBQWUsRUFBRSxRQUFRLENBQUMsQ0FBQyxDQUFDO1lBQ2xILFVBQVUsQ0FBQyxLQUFLLENBQUMsR0FBRyxFQUFFLEdBQUUsQ0FBQyxDQUFDLENBQUM7U0FDNUI7UUFFQSxVQUFrQyxDQUFDLElBQUksQ0FBQyxPQUFPLEVBQUUsQ0FBQyxNQUFNLEVBQUUsRUFBRTtZQUMzRCxPQUFPLGVBQWUsQ0FBQyxRQUFRLENBQUMsQ0FBQztZQUNqQyxNQUFNLENBQUMsTUFBTSxDQUFDLENBQUM7UUFDakIsQ0FBQyxDQUFDLENBQUM7SUFDTCxDQUFDLENBQUMsQ0FBQyxDQUFDO0FBQ04sQ0FBQztBQTlCRCxzQ0E4QkM7QUFFRDs7R0FFRztBQUNILFNBQWdCLG9CQUFvQjtJQUNsQyxVQUFVLENBQUMsTUFBTSxHQUFHLENBQUMsQ0FBQztJQUN0QixNQUFNLENBQUMsSUFBSSxDQUFDLGVBQWUsQ0FBQyxDQUFDLE9BQU8sQ0FBQyxDQUFDLFFBQVEsRUFBRSxFQUFFO1FBQ2hELE9BQU8sZUFBZSxDQUFDLFFBQVEsQ0FBQyxDQUFDO0lBQ25DLENBQUMsQ0FBQyxDQUFDO0FBQ0wsQ0FBQztBQUxELG9EQUtDO0FBRUQsU0FBUyxJQUFJLENBQUMsSUFBcUIsRUFBRSxNQUFrQixFQUFFLElBQWdCO0lBQ3ZFLE1BQU0sSUFBSSxHQUFHLElBQUksSUFBSSxDQUFDLE1BQU0sQ0FBQyxDQUFDO0lBQzlCLElBQUksQ0FBQyxNQUFNLENBQUMsSUFBSSxDQUFDLENBQUM7SUFDbEIsT0FBTyxJQUFJLENBQUMsTUFBTSxFQUFFLENBQUM7QUFDdkIsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IENyZWRlbnRpYWxzLCBIYXNoQ29uc3RydWN0b3IsIFNvdXJjZURhdGEgfSBmcm9tIFwiQGF3cy1zZGsvdHlwZXNcIjtcblxuaW1wb3J0IHsgS0VZX1RZUEVfSURFTlRJRklFUiwgTUFYX0NBQ0hFX1NJWkUgfSBmcm9tIFwiLi9jb25zdGFudHNcIjtcblxuY29uc3Qgc2lnbmluZ0tleUNhY2hlOiB7IFtrZXk6IHN0cmluZ106IFByb21pc2U8VWludDhBcnJheT4gfSA9IHt9O1xuY29uc3QgY2FjaGVRdWV1ZTogQXJyYXk8c3RyaW5nPiA9IFtdO1xuXG4vKipcbiAqIENyZWF0ZSBhIHN0cmluZyBkZXNjcmliaW5nIHRoZSBzY29wZSBvZiBjcmVkZW50aWFscyB1c2VkIHRvIHNpZ24gYSByZXF1ZXN0LlxuICpcbiAqIEBwYXJhbSBzaG9ydERhdGUgVGhlIGN1cnJlbnQgY2FsZW5kYXIgZGF0ZSBpbiB0aGUgZm9ybSBZWVlZTU1ERC5cbiAqIEBwYXJhbSByZWdpb24gICAgVGhlIEFXUyByZWdpb24gaW4gd2hpY2ggdGhlIHNlcnZpY2UgcmVzaWRlcy5cbiAqIEBwYXJhbSBzZXJ2aWNlICAgVGhlIHNlcnZpY2UgdG8gd2hpY2ggdGhlIHNpZ25lZCByZXF1ZXN0IGlzIGJlaW5nIHNlbnQuXG4gKi9cbmV4cG9ydCBmdW5jdGlvbiBjcmVhdGVTY29wZShzaG9ydERhdGU6IHN0cmluZywgcmVnaW9uOiBzdHJpbmcsIHNlcnZpY2U6IHN0cmluZyk6IHN0cmluZyB7XG4gIHJldHVybiBgJHtzaG9ydERhdGV9LyR7cmVnaW9ufS8ke3NlcnZpY2V9LyR7S0VZX1RZUEVfSURFTlRJRklFUn1gO1xufVxuXG4vKipcbiAqIERlcml2ZSBhIHNpZ25pbmcga2V5IGZyb20gaXRzIGNvbXBvc2l0ZSBwYXJ0c1xuICpcbiAqIEBwYXJhbSBzaGEyNTZDb25zdHJ1Y3RvciBBIGNvbnN0cnVjdG9yIGZ1bmN0aW9uIHRoYXQgY2FuIGluc3RhbnRpYXRlIFNIQS0yNTZcbiAqICAgICAgICAgICAgICAgICAgICAgICAgICBoYXNoIG9iamVjdHMuXG4gKiBAcGFyYW0gY3JlZGVudGlhbHMgICAgICAgVGhlIGNyZWRlbnRpYWxzIHdpdGggd2hpY2ggdGhlIHJlcXVlc3Qgd2lsbCBiZVxuICogICAgICAgICAgICAgICAgICAgICAgICAgIHNpZ25lZC5cbiAqIEBwYXJhbSBzaG9ydERhdGUgICAgICAgICBUaGUgY3VycmVudCBjYWxlbmRhciBkYXRlIGluIHRoZSBmb3JtIFlZWVlNTURELlxuICogQHBhcmFtIHJlZ2lvbiAgICAgICAgICAgIFRoZSBBV1MgcmVnaW9uIGluIHdoaWNoIHRoZSBzZXJ2aWNlIHJlc2lkZXMuXG4gKiBAcGFyYW0gc2VydmljZSAgICAgICAgICAgVGhlIHNlcnZpY2UgdG8gd2hpY2ggdGhlIHNpZ25lZCByZXF1ZXN0IGlzIGJlaW5nXG4gKiAgICAgICAgICAgICAgICAgICAgICAgICAgc2VudC5cbiAqL1xuZXhwb3J0IGZ1bmN0aW9uIGdldFNpZ25pbmdLZXkoXG4gIHNoYTI1NkNvbnN0cnVjdG9yOiBIYXNoQ29uc3RydWN0b3IsXG4gIGNyZWRlbnRpYWxzOiBDcmVkZW50aWFscyxcbiAgc2hvcnREYXRlOiBzdHJpbmcsXG4gIHJlZ2lvbjogc3RyaW5nLFxuICBzZXJ2aWNlOiBzdHJpbmdcbik6IFByb21pc2U8VWludDhBcnJheT4ge1xuICBjb25zdCBjYWNoZUtleSA9IGAke3Nob3J0RGF0ZX06JHtyZWdpb259OiR7c2VydmljZX06YCArIGAke2NyZWRlbnRpYWxzLmFjY2Vzc0tleUlkfToke2NyZWRlbnRpYWxzLnNlc3Npb25Ub2tlbn1gO1xuICBpZiAoY2FjaGVLZXkgaW4gc2lnbmluZ0tleUNhY2hlKSB7XG4gICAgcmV0dXJuIHNpZ25pbmdLZXlDYWNoZVtjYWNoZUtleV07XG4gIH1cblxuICBjYWNoZVF1ZXVlLnB1c2goY2FjaGVLZXkpO1xuICB3aGlsZSAoY2FjaGVRdWV1ZS5sZW5ndGggPiBNQVhfQ0FDSEVfU0laRSkge1xuICAgIGRlbGV0ZSBzaWduaW5nS2V5Q2FjaGVbY2FjaGVRdWV1ZS5zaGlmdCgpIGFzIHN0cmluZ107XG4gIH1cblxuICByZXR1cm4gKHNpZ25pbmdLZXlDYWNoZVtjYWNoZUtleV0gPSBuZXcgUHJvbWlzZSgocmVzb2x2ZSwgcmVqZWN0KSA9PiB7XG4gICAgbGV0IGtleVByb21pc2U6IFByb21pc2U8U291cmNlRGF0YT4gPSBQcm9taXNlLnJlc29sdmUoYEFXUzQke2NyZWRlbnRpYWxzLnNlY3JldEFjY2Vzc0tleX1gKTtcblxuICAgIGZvciAoY29uc3Qgc2lnbmFibGUgb2YgW3Nob3J0RGF0ZSwgcmVnaW9uLCBzZXJ2aWNlLCBLRVlfVFlQRV9JREVOVElGSUVSXSkge1xuICAgICAga2V5UHJvbWlzZSA9IGtleVByb21pc2UudGhlbjxVaW50OEFycmF5PigoaW50ZXJtZWRpYXRlS2V5KSA9PiBobWFjKHNoYTI1NkNvbnN0cnVjdG9yLCBpbnRlcm1lZGlhdGVLZXksIHNpZ25hYmxlKSk7XG4gICAgICBrZXlQcm9taXNlLmNhdGNoKCgpID0+IHt9KTtcbiAgICB9XG5cbiAgICAoa2V5UHJvbWlzZSBhcyBQcm9taXNlPFVpbnQ4QXJyYXk+KS50aGVuKHJlc29sdmUsIChyZWFzb24pID0+IHtcbiAgICAgIGRlbGV0ZSBzaWduaW5nS2V5Q2FjaGVbY2FjaGVLZXldO1xuICAgICAgcmVqZWN0KHJlYXNvbik7XG4gICAgfSk7XG4gIH0pKTtcbn1cblxuLyoqXG4gKiBAaW50ZXJuYWxcbiAqL1xuZXhwb3J0IGZ1bmN0aW9uIGNsZWFyQ3JlZGVudGlhbENhY2hlKCk6IHZvaWQge1xuICBjYWNoZVF1ZXVlLmxlbmd0aCA9IDA7XG4gIE9iamVjdC5rZXlzKHNpZ25pbmdLZXlDYWNoZSkuZm9yRWFjaCgoY2FjaGVLZXkpID0+IHtcbiAgICBkZWxldGUgc2lnbmluZ0tleUNhY2hlW2NhY2hlS2V5XTtcbiAgfSk7XG59XG5cbmZ1bmN0aW9uIGhtYWMoY3RvcjogSGFzaENvbnN0cnVjdG9yLCBzZWNyZXQ6IFNvdXJjZURhdGEsIGRhdGE6IFNvdXJjZURhdGEpOiBQcm9taXNlPFVpbnQ4QXJyYXk+IHtcbiAgY29uc3QgaGFzaCA9IG5ldyBjdG9yKHNlY3JldCk7XG4gIGhhc2gudXBkYXRlKGRhdGEpO1xuICByZXR1cm4gaGFzaC5kaWdlc3QoKTtcbn1cbiJdfQ==
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY3JlZGVudGlhbERlcml2YXRpb24uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9zcmMvY3JlZGVudGlhbERlcml2YXRpb24udHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQ0Esa0VBQW1EO0FBRW5ELDJDQUFrRTtBQUVsRSxNQUFNLGVBQWUsR0FBa0MsRUFBRSxDQUFDO0FBQzFELE1BQU0sVUFBVSxHQUFrQixFQUFFLENBQUM7QUFFckM7Ozs7OztHQU1HO0FBQ0gsU0FBZ0IsV0FBVyxDQUFDLFNBQWlCLEVBQUUsTUFBYyxFQUFFLE9BQWU7SUFDNUUsT0FBTyxHQUFHLFNBQVMsSUFBSSxNQUFNLElBQUksT0FBTyxJQUFJLCtCQUFtQixFQUFFLENBQUM7QUFDcEUsQ0FBQztBQUZELGtDQUVDO0FBRUQ7Ozs7Ozs7Ozs7O0dBV0c7QUFDSSxNQUFNLGFBQWEsR0FBRyxLQUFLLEVBQ2hDLGlCQUFrQyxFQUNsQyxXQUF3QixFQUN4QixTQUFpQixFQUNqQixNQUFjLEVBQ2QsT0FBZSxFQUNNLEVBQUU7SUFDdkIsTUFBTSxTQUFTLEdBQUcsTUFBTSxJQUFJLENBQUMsaUJBQWlCLEVBQUUsV0FBVyxDQUFDLGVBQWUsRUFBRSxXQUFXLENBQUMsV0FBVyxDQUFDLENBQUM7SUFDdEcsTUFBTSxRQUFRLEdBQUcsR0FBRyxTQUFTLElBQUksTUFBTSxJQUFJLE9BQU8sSUFBSSx5QkFBSyxDQUFDLFNBQVMsQ0FBQyxJQUFJLFdBQVcsQ0FBQyxZQUFZLEVBQUUsQ0FBQztJQUNyRyxJQUFJLFFBQVEsSUFBSSxlQUFlLEVBQUU7UUFDL0IsT0FBTyxlQUFlLENBQUMsUUFBUSxDQUFDLENBQUM7S0FDbEM7SUFFRCxVQUFVLENBQUMsSUFBSSxDQUFDLFFBQVEsQ0FBQyxDQUFDO0lBQzFCLE9BQU8sVUFBVSxDQUFDLE1BQU0sR0FBRywwQkFBYyxFQUFFO1FBQ3pDLE9BQU8sZUFBZSxDQUFDLFVBQVUsQ0FBQyxLQUFLLEVBQVksQ0FBQyxDQUFDO0tBQ3REO0lBRUQsSUFBSSxHQUFHLEdBQWUsT0FBTyxXQUFXLENBQUMsZUFBZSxFQUFFLENBQUM7SUFDM0QsS0FBSyxNQUFNLFFBQVEsSUFBSSxDQUFDLFNBQVMsRUFBRSxNQUFNLEVBQUUsT0FBTyxFQUFFLCtCQUFtQixDQUFDLEVBQUU7UUFDeEUsR0FBRyxHQUFHLE1BQU0sSUFBSSxDQUFDLGlCQUFpQixFQUFFLEdBQUcsRUFBRSxRQUFRLENBQUMsQ0FBQztLQUNwRDtJQUNELE9BQU8sQ0FBQyxlQUFlLENBQUMsUUFBUSxDQUFDLEdBQUcsR0FBaUIsQ0FBQyxDQUFDO0FBQ3pELENBQUMsQ0FBQztBQXZCVyxRQUFBLGFBQWEsaUJBdUJ4QjtBQUVGOztHQUVHO0FBQ0gsU0FBZ0Isb0JBQW9CO0lBQ2xDLFVBQVUsQ0FBQyxNQUFNLEdBQUcsQ0FBQyxDQUFDO0lBQ3RCLE1BQU0sQ0FBQyxJQUFJLENBQUMsZUFBZSxDQUFDLENBQUMsT0FBTyxDQUFDLENBQUMsUUFBUSxFQUFFLEVBQUU7UUFDaEQsT0FBTyxlQUFlLENBQUMsUUFBUSxDQUFDLENBQUM7SUFDbkMsQ0FBQyxDQUFDLENBQUM7QUFDTCxDQUFDO0FBTEQsb0RBS0M7QUFFRCxTQUFTLElBQUksQ0FBQyxJQUFxQixFQUFFLE1BQWtCLEVBQUUsSUFBZ0I7SUFDdkUsTUFBTSxJQUFJLEdBQUcsSUFBSSxJQUFJLENBQUMsTUFBTSxDQUFDLENBQUM7SUFDOUIsSUFBSSxDQUFDLE1BQU0sQ0FBQyxJQUFJLENBQUMsQ0FBQztJQUNsQixPQUFPLElBQUksQ0FBQyxNQUFNLEVBQUUsQ0FBQztBQUN2QixDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgQ3JlZGVudGlhbHMsIEhhc2hDb25zdHJ1Y3RvciwgU291cmNlRGF0YSB9IGZyb20gXCJAYXdzLXNkay90eXBlc1wiO1xuaW1wb3J0IHsgdG9IZXggfSBmcm9tIFwiQGF3cy1zZGsvdXRpbC1oZXgtZW5jb2RpbmdcIjtcblxuaW1wb3J0IHsgS0VZX1RZUEVfSURFTlRJRklFUiwgTUFYX0NBQ0hFX1NJWkUgfSBmcm9tIFwiLi9jb25zdGFudHNcIjtcblxuY29uc3Qgc2lnbmluZ0tleUNhY2hlOiB7IFtrZXk6IHN0cmluZ106IFVpbnQ4QXJyYXkgfSA9IHt9O1xuY29uc3QgY2FjaGVRdWV1ZTogQXJyYXk8c3RyaW5nPiA9IFtdO1xuXG4vKipcbiAqIENyZWF0ZSBhIHN0cmluZyBkZXNjcmliaW5nIHRoZSBzY29wZSBvZiBjcmVkZW50aWFscyB1c2VkIHRvIHNpZ24gYSByZXF1ZXN0LlxuICpcbiAqIEBwYXJhbSBzaG9ydERhdGUgVGhlIGN1cnJlbnQgY2FsZW5kYXIgZGF0ZSBpbiB0aGUgZm9ybSBZWVlZTU1ERC5cbiAqIEBwYXJhbSByZWdpb24gICAgVGhlIEFXUyByZWdpb24gaW4gd2hpY2ggdGhlIHNlcnZpY2UgcmVzaWRlcy5cbiAqIEBwYXJhbSBzZXJ2aWNlICAgVGhlIHNlcnZpY2UgdG8gd2hpY2ggdGhlIHNpZ25lZCByZXF1ZXN0IGlzIGJlaW5nIHNlbnQuXG4gKi9cbmV4cG9ydCBmdW5jdGlvbiBjcmVhdGVTY29wZShzaG9ydERhdGU6IHN0cmluZywgcmVnaW9uOiBzdHJpbmcsIHNlcnZpY2U6IHN0cmluZyk6IHN0cmluZyB7XG4gIHJldHVybiBgJHtzaG9ydERhdGV9LyR7cmVnaW9ufS8ke3NlcnZpY2V9LyR7S0VZX1RZUEVfSURFTlRJRklFUn1gO1xufVxuXG4vKipcbiAqIERlcml2ZSBhIHNpZ25pbmcga2V5IGZyb20gaXRzIGNvbXBvc2l0ZSBwYXJ0c1xuICpcbiAqIEBwYXJhbSBzaGEyNTZDb25zdHJ1Y3RvciBBIGNvbnN0cnVjdG9yIGZ1bmN0aW9uIHRoYXQgY2FuIGluc3RhbnRpYXRlIFNIQS0yNTZcbiAqICAgICAgICAgICAgICAgICAgICAgICAgICBoYXNoIG9iamVjdHMuXG4gKiBAcGFyYW0gY3JlZGVudGlhbHMgICAgICAgVGhlIGNyZWRlbnRpYWxzIHdpdGggd2hpY2ggdGhlIHJlcXVlc3Qgd2lsbCBiZVxuICogICAgICAgICAgICAgICAgICAgICAgICAgIHNpZ25lZC5cbiAqIEBwYXJhbSBzaG9ydERhdGUgICAgICAgICBUaGUgY3VycmVudCBjYWxlbmRhciBkYXRlIGluIHRoZSBmb3JtIFlZWVlNTURELlxuICogQHBhcmFtIHJlZ2lvbiAgICAgICAgICAgIFRoZSBBV1MgcmVnaW9uIGluIHdoaWNoIHRoZSBzZXJ2aWNlIHJlc2lkZXMuXG4gKiBAcGFyYW0gc2VydmljZSAgICAgICAgICAgVGhlIHNlcnZpY2UgdG8gd2hpY2ggdGhlIHNpZ25lZCByZXF1ZXN0IGlzIGJlaW5nXG4gKiAgICAgICAgICAgICAgICAgICAgICAgICAgc2VudC5cbiAqL1xuZXhwb3J0IGNvbnN0IGdldFNpZ25pbmdLZXkgPSBhc3luYyAoXG4gIHNoYTI1NkNvbnN0cnVjdG9yOiBIYXNoQ29uc3RydWN0b3IsXG4gIGNyZWRlbnRpYWxzOiBDcmVkZW50aWFscyxcbiAgc2hvcnREYXRlOiBzdHJpbmcsXG4gIHJlZ2lvbjogc3RyaW5nLFxuICBzZXJ2aWNlOiBzdHJpbmdcbik6IFByb21pc2U8VWludDhBcnJheT4gPT4ge1xuICBjb25zdCBjcmVkc0hhc2ggPSBhd2FpdCBobWFjKHNoYTI1NkNvbnN0cnVjdG9yLCBjcmVkZW50aWFscy5zZWNyZXRBY2Nlc3NLZXksIGNyZWRlbnRpYWxzLmFjY2Vzc0tleUlkKTtcbiAgY29uc3QgY2FjaGVLZXkgPSBgJHtzaG9ydERhdGV9OiR7cmVnaW9ufToke3NlcnZpY2V9OiR7dG9IZXgoY3JlZHNIYXNoKX06JHtjcmVkZW50aWFscy5zZXNzaW9uVG9rZW59YDtcbiAgaWYgKGNhY2hlS2V5IGluIHNpZ25pbmdLZXlDYWNoZSkge1xuICAgIHJldHVybiBzaWduaW5nS2V5Q2FjaGVbY2FjaGVLZXldO1xuICB9XG5cbiAgY2FjaGVRdWV1ZS5wdXNoKGNhY2hlS2V5KTtcbiAgd2hpbGUgKGNhY2hlUXVldWUubGVuZ3RoID4gTUFYX0NBQ0hFX1NJWkUpIHtcbiAgICBkZWxldGUgc2lnbmluZ0tleUNhY2hlW2NhY2hlUXVldWUuc2hpZnQoKSBhcyBzdHJpbmddO1xuICB9XG5cbiAgbGV0IGtleTogU291cmNlRGF0YSA9IGBBV1M0JHtjcmVkZW50aWFscy5zZWNyZXRBY2Nlc3NLZXl9YDtcbiAgZm9yIChjb25zdCBzaWduYWJsZSBvZiBbc2hvcnREYXRlLCByZWdpb24sIHNlcnZpY2UsIEtFWV9UWVBFX0lERU5USUZJRVJdKSB7XG4gICAga2V5ID0gYXdhaXQgaG1hYyhzaGEyNTZDb25zdHJ1Y3Rvciwga2V5LCBzaWduYWJsZSk7XG4gIH1cbiAgcmV0dXJuIChzaWduaW5nS2V5Q2FjaGVbY2FjaGVLZXldID0ga2V5IGFzIFVpbnQ4QXJyYXkpO1xufTtcblxuLyoqXG4gKiBAaW50ZXJuYWxcbiAqL1xuZXhwb3J0IGZ1bmN0aW9uIGNsZWFyQ3JlZGVudGlhbENhY2hlKCk6IHZvaWQge1xuICBjYWNoZVF1ZXVlLmxlbmd0aCA9IDA7XG4gIE9iamVjdC5rZXlzKHNpZ25pbmdLZXlDYWNoZSkuZm9yRWFjaCgoY2FjaGVLZXkpID0+IHtcbiAgICBkZWxldGUgc2lnbmluZ0tleUNhY2hlW2NhY2hlS2V5XTtcbiAgfSk7XG59XG5cbmZ1bmN0aW9uIGhtYWMoY3RvcjogSGFzaENvbnN0cnVjdG9yLCBzZWNyZXQ6IFNvdXJjZURhdGEsIGRhdGE6IFNvdXJjZURhdGEpOiBQcm9taXNlPFVpbnQ4QXJyYXk+IHtcbiAgY29uc3QgaGFzaCA9IG5ldyBjdG9yKHNlY3JldCk7XG4gIGhhc2gudXBkYXRlKGRhdGEpO1xuICByZXR1cm4gaGFzaC5kaWdlc3QoKTtcbn1cbiJdfQ==
 
 /***/ }),
 
@@ -61725,22 +61928,258 @@ function __classPrivateFieldSet(receiver, privateMap, value) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.defaultUserAgent = void 0;
-const tslib_1 = __webpack_require__(47552);
-const process_1 = tslib_1.__importDefault(__webpack_require__(61765));
-function defaultUserAgent(packageName, packageVersion) {
-    let engine = `${process_1.default.platform}/${process_1.default.version}`;
-    if (process_1.default.env.AWS_EXECUTION_ENV) {
-        engine += ` exec-env/${process_1.default.env.AWS_EXECUTION_ENV}`;
+exports.defaultUserAgent = exports.UA_APP_ID_INI_NAME = exports.UA_APP_ID_ENV_NAME = void 0;
+const node_config_provider_1 = __webpack_require__(71124);
+const os_1 = __webpack_require__(12087);
+const process_1 = __webpack_require__(61765);
+exports.UA_APP_ID_ENV_NAME = "AWS_SDK_UA_APP_ID";
+exports.UA_APP_ID_INI_NAME = "sdk-ua-app-id";
+/**
+ * Collect metrics from runtime to put into user agent.
+ */
+const defaultUserAgent = ({ serviceId, clientVersion, }) => async () => {
+    const sections = [
+        // sdk-metadata
+        ["aws-sdk-js", clientVersion],
+        // os-metadata
+        [`os/${os_1.platform()}`, os_1.release()],
+        // language-metadata
+        // ECMAScript edition doesn't matter in JS, so no version needed.
+        ["lang/js"],
+        ["md/nodejs", `${process_1.versions.node}`],
+    ];
+    if (serviceId) {
+        // api-metadata
+        // service Id may not appear in non-AWS clients
+        sections.push([`api/${serviceId}`, clientVersion]);
     }
-    return `aws-sdk-nodejs-v3-${packageName}/${packageVersion} ${engine}`;
-}
+    if (process_1.env.AWS_EXECUTION_ENV) {
+        // env-metadata
+        sections.push([`exec-env/${process_1.env.AWS_EXECUTION_ENV}`]);
+    }
+    const appId = await node_config_provider_1.loadConfig({
+        environmentVariableSelector: (env) => env[exports.UA_APP_ID_ENV_NAME],
+        configFileSelector: (profile) => profile[exports.UA_APP_ID_INI_NAME],
+        default: undefined,
+    })();
+    if (appId) {
+        sections.push([`app/${appId}`]);
+    }
+    return sections;
+};
 exports.defaultUserAgent = defaultUserAgent;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9zcmMvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7OztBQUFBLDhEQUE4QjtBQUU5QixTQUFnQixnQkFBZ0IsQ0FBQyxXQUFtQixFQUFFLGNBQXNCO0lBQzFFLElBQUksTUFBTSxHQUFHLEdBQUcsaUJBQU8sQ0FBQyxRQUFRLElBQUksaUJBQU8sQ0FBQyxPQUFPLEVBQUUsQ0FBQztJQUN0RCxJQUFJLGlCQUFPLENBQUMsR0FBRyxDQUFDLGlCQUFpQixFQUFFO1FBQ2pDLE1BQU0sSUFBSSxhQUFhLGlCQUFPLENBQUMsR0FBRyxDQUFDLGlCQUFpQixFQUFFLENBQUM7S0FDeEQ7SUFDRCxPQUFPLHFCQUFxQixXQUFXLElBQUksY0FBYyxJQUFJLE1BQU0sRUFBRSxDQUFDO0FBQ3hFLENBQUM7QUFORCw0Q0FNQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBwcm9jZXNzIGZyb20gXCJwcm9jZXNzXCI7XG5cbmV4cG9ydCBmdW5jdGlvbiBkZWZhdWx0VXNlckFnZW50KHBhY2thZ2VOYW1lOiBzdHJpbmcsIHBhY2thZ2VWZXJzaW9uOiBzdHJpbmcpOiBzdHJpbmcge1xuICBsZXQgZW5naW5lID0gYCR7cHJvY2Vzcy5wbGF0Zm9ybX0vJHtwcm9jZXNzLnZlcnNpb259YDtcbiAgaWYgKHByb2Nlc3MuZW52LkFXU19FWEVDVVRJT05fRU5WKSB7XG4gICAgZW5naW5lICs9IGAgZXhlYy1lbnYvJHtwcm9jZXNzLmVudi5BV1NfRVhFQ1VUSU9OX0VOVn1gO1xuICB9XG4gIHJldHVybiBgYXdzLXNkay1ub2RlanMtdjMtJHtwYWNrYWdlTmFtZX0vJHtwYWNrYWdlVmVyc2lvbn0gJHtlbmdpbmV9YDtcbn1cbiJdfQ==
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9zcmMvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQUEsd0VBQTJEO0FBRTNELDJCQUF1QztBQUN2QyxxQ0FBd0M7QUFFM0IsUUFBQSxrQkFBa0IsR0FBRyxtQkFBbUIsQ0FBQztBQUN6QyxRQUFBLGtCQUFrQixHQUFHLGVBQWUsQ0FBQztBQU9sRDs7R0FFRztBQUNJLE1BQU0sZ0JBQWdCLEdBQUcsQ0FBQyxFQUMvQixTQUFTLEVBQ1QsYUFBYSxHQUNXLEVBQXVCLEVBQUUsQ0FBQyxLQUFLLElBQUksRUFBRTtJQUM3RCxNQUFNLFFBQVEsR0FBYztRQUMxQixlQUFlO1FBQ2YsQ0FBQyxZQUFZLEVBQUUsYUFBYSxDQUFDO1FBQzdCLGNBQWM7UUFDZCxDQUFDLE1BQU0sYUFBUSxFQUFFLEVBQUUsRUFBRSxZQUFPLEVBQUUsQ0FBQztRQUMvQixvQkFBb0I7UUFDcEIsaUVBQWlFO1FBQ2pFLENBQUMsU0FBUyxDQUFDO1FBQ1gsQ0FBQyxXQUFXLEVBQUUsR0FBRyxrQkFBUSxDQUFDLElBQUksRUFBRSxDQUFDO0tBQ2xDLENBQUM7SUFFRixJQUFJLFNBQVMsRUFBRTtRQUNiLGVBQWU7UUFDZiwrQ0FBK0M7UUFDL0MsUUFBUSxDQUFDLElBQUksQ0FBQyxDQUFDLE9BQU8sU0FBUyxFQUFFLEVBQUUsYUFBYSxDQUFDLENBQUMsQ0FBQztLQUNwRDtJQUVELElBQUksYUFBRyxDQUFDLGlCQUFpQixFQUFFO1FBQ3pCLGVBQWU7UUFDZixRQUFRLENBQUMsSUFBSSxDQUFDLENBQUMsWUFBWSxhQUFHLENBQUMsaUJBQWlCLEVBQUUsQ0FBQyxDQUFDLENBQUM7S0FDdEQ7SUFFRCxNQUFNLEtBQUssR0FBRyxNQUFNLGlDQUFVLENBQXFCO1FBQ2pELDJCQUEyQixFQUFFLENBQUMsR0FBRyxFQUFFLEVBQUUsQ0FBQyxHQUFHLENBQUMsMEJBQWtCLENBQUM7UUFDN0Qsa0JBQWtCLEVBQUUsQ0FBQyxPQUFPLEVBQUUsRUFBRSxDQUFDLE9BQU8sQ0FBQywwQkFBa0IsQ0FBQztRQUM1RCxPQUFPLEVBQUUsU0FBUztLQUNuQixDQUFDLEVBQUUsQ0FBQztJQUNMLElBQUksS0FBSyxFQUFFO1FBQ1QsUUFBUSxDQUFDLElBQUksQ0FBQyxDQUFDLE9BQU8sS0FBSyxFQUFFLENBQUMsQ0FBQyxDQUFDO0tBQ2pDO0lBRUQsT0FBTyxRQUFRLENBQUM7QUFDbEIsQ0FBQyxDQUFDO0FBcENXLFFBQUEsZ0JBQWdCLG9CQW9DM0IiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBsb2FkQ29uZmlnIH0gZnJvbSBcIkBhd3Mtc2RrL25vZGUtY29uZmlnLXByb3ZpZGVyXCI7XG5pbXBvcnQgeyBQcm92aWRlciwgVXNlckFnZW50IH0gZnJvbSBcIkBhd3Mtc2RrL3R5cGVzXCI7XG5pbXBvcnQgeyBwbGF0Zm9ybSwgcmVsZWFzZSB9IGZyb20gXCJvc1wiO1xuaW1wb3J0IHsgZW52LCB2ZXJzaW9ucyB9IGZyb20gXCJwcm9jZXNzXCI7XG5cbmV4cG9ydCBjb25zdCBVQV9BUFBfSURfRU5WX05BTUUgPSBcIkFXU19TREtfVUFfQVBQX0lEXCI7XG5leHBvcnQgY29uc3QgVUFfQVBQX0lEX0lOSV9OQU1FID0gXCJzZGstdWEtYXBwLWlkXCI7XG5cbmludGVyZmFjZSBEZWZhdWx0VXNlckFnZW50T3B0aW9ucyB7XG4gIHNlcnZpY2VJZD86IHN0cmluZztcbiAgY2xpZW50VmVyc2lvbjogc3RyaW5nO1xufVxuXG4vKipcbiAqIENvbGxlY3QgbWV0cmljcyBmcm9tIHJ1bnRpbWUgdG8gcHV0IGludG8gdXNlciBhZ2VudC5cbiAqL1xuZXhwb3J0IGNvbnN0IGRlZmF1bHRVc2VyQWdlbnQgPSAoe1xuICBzZXJ2aWNlSWQsXG4gIGNsaWVudFZlcnNpb24sXG59OiBEZWZhdWx0VXNlckFnZW50T3B0aW9ucyk6IFByb3ZpZGVyPFVzZXJBZ2VudD4gPT4gYXN5bmMgKCkgPT4ge1xuICBjb25zdCBzZWN0aW9uczogVXNlckFnZW50ID0gW1xuICAgIC8vIHNkay1tZXRhZGF0YVxuICAgIFtcImF3cy1zZGstanNcIiwgY2xpZW50VmVyc2lvbl0sXG4gICAgLy8gb3MtbWV0YWRhdGFcbiAgICBbYG9zLyR7cGxhdGZvcm0oKX1gLCByZWxlYXNlKCldLFxuICAgIC8vIGxhbmd1YWdlLW1ldGFkYXRhXG4gICAgLy8gRUNNQVNjcmlwdCBlZGl0aW9uIGRvZXNuJ3QgbWF0dGVyIGluIEpTLCBzbyBubyB2ZXJzaW9uIG5lZWRlZC5cbiAgICBbXCJsYW5nL2pzXCJdLFxuICAgIFtcIm1kL25vZGVqc1wiLCBgJHt2ZXJzaW9ucy5ub2RlfWBdLFxuICBdO1xuXG4gIGlmIChzZXJ2aWNlSWQpIHtcbiAgICAvLyBhcGktbWV0YWRhdGFcbiAgICAvLyBzZXJ2aWNlIElkIG1heSBub3QgYXBwZWFyIGluIG5vbi1BV1MgY2xpZW50c1xuICAgIHNlY3Rpb25zLnB1c2goW2BhcGkvJHtzZXJ2aWNlSWR9YCwgY2xpZW50VmVyc2lvbl0pO1xuICB9XG5cbiAgaWYgKGVudi5BV1NfRVhFQ1VUSU9OX0VOVikge1xuICAgIC8vIGVudi1tZXRhZGF0YVxuICAgIHNlY3Rpb25zLnB1c2goW2BleGVjLWVudi8ke2Vudi5BV1NfRVhFQ1VUSU9OX0VOVn1gXSk7XG4gIH1cblxuICBjb25zdCBhcHBJZCA9IGF3YWl0IGxvYWRDb25maWc8c3RyaW5nIHwgdW5kZWZpbmVkPih7XG4gICAgZW52aXJvbm1lbnRWYXJpYWJsZVNlbGVjdG9yOiAoZW52KSA9PiBlbnZbVUFfQVBQX0lEX0VOVl9OQU1FXSxcbiAgICBjb25maWdGaWxlU2VsZWN0b3I6IChwcm9maWxlKSA9PiBwcm9maWxlW1VBX0FQUF9JRF9JTklfTkFNRV0sXG4gICAgZGVmYXVsdDogdW5kZWZpbmVkLFxuICB9KSgpO1xuICBpZiAoYXBwSWQpIHtcbiAgICBzZWN0aW9ucy5wdXNoKFtgYXBwLyR7YXBwSWR9YF0pO1xuICB9XG5cbiAgcmV0dXJuIHNlY3Rpb25zO1xufTtcbiJdfQ==
 
 /***/ }),
 
-/***/ 47552:
+/***/ 85227:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.toUtf8 = exports.fromUtf8 = void 0;
+const util_buffer_from_1 = __webpack_require__(38577);
+const fromUtf8 = (input) => {
+    const buf = util_buffer_from_1.fromString(input, "utf8");
+    return new Uint8Array(buf.buffer, buf.byteOffset, buf.byteLength / Uint8Array.BYTES_PER_ELEMENT);
+};
+exports.fromUtf8 = fromUtf8;
+const toUtf8 = (input) => util_buffer_from_1.fromArrayBuffer(input.buffer, input.byteOffset, input.byteLength).toString("utf8");
+exports.toUtf8 = toUtf8;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9zcmMvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQUEsZ0VBQXdFO0FBRWpFLE1BQU0sUUFBUSxHQUFHLENBQUMsS0FBYSxFQUFjLEVBQUU7SUFDcEQsTUFBTSxHQUFHLEdBQUcsNkJBQVUsQ0FBQyxLQUFLLEVBQUUsTUFBTSxDQUFDLENBQUM7SUFDdEMsT0FBTyxJQUFJLFVBQVUsQ0FBQyxHQUFHLENBQUMsTUFBTSxFQUFFLEdBQUcsQ0FBQyxVQUFVLEVBQUUsR0FBRyxDQUFDLFVBQVUsR0FBRyxVQUFVLENBQUMsaUJBQWlCLENBQUMsQ0FBQztBQUNuRyxDQUFDLENBQUM7QUFIVyxRQUFBLFFBQVEsWUFHbkI7QUFFSyxNQUFNLE1BQU0sR0FBRyxDQUFDLEtBQWlCLEVBQVUsRUFBRSxDQUNsRCxrQ0FBZSxDQUFDLEtBQUssQ0FBQyxNQUFNLEVBQUUsS0FBSyxDQUFDLFVBQVUsRUFBRSxLQUFLLENBQUMsVUFBVSxDQUFDLENBQUMsUUFBUSxDQUFDLE1BQU0sQ0FBQyxDQUFDO0FBRHhFLFFBQUEsTUFBTSxVQUNrRSIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IGZyb21BcnJheUJ1ZmZlciwgZnJvbVN0cmluZyB9IGZyb20gXCJAYXdzLXNkay91dGlsLWJ1ZmZlci1mcm9tXCI7XG5cbmV4cG9ydCBjb25zdCBmcm9tVXRmOCA9IChpbnB1dDogc3RyaW5nKTogVWludDhBcnJheSA9PiB7XG4gIGNvbnN0IGJ1ZiA9IGZyb21TdHJpbmcoaW5wdXQsIFwidXRmOFwiKTtcbiAgcmV0dXJuIG5ldyBVaW50OEFycmF5KGJ1Zi5idWZmZXIsIGJ1Zi5ieXRlT2Zmc2V0LCBidWYuYnl0ZUxlbmd0aCAvIFVpbnQ4QXJyYXkuQllURVNfUEVSX0VMRU1FTlQpO1xufTtcblxuZXhwb3J0IGNvbnN0IHRvVXRmOCA9IChpbnB1dDogVWludDhBcnJheSk6IHN0cmluZyA9PlxuICBmcm9tQXJyYXlCdWZmZXIoaW5wdXQuYnVmZmVyLCBpbnB1dC5ieXRlT2Zmc2V0LCBpbnB1dC5ieXRlTGVuZ3RoKS50b1N0cmluZyhcInV0ZjhcIik7XG4iXX0=
+
+/***/ }),
+
+/***/ 41194:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.createWaiter = void 0;
+const poller_1 = __webpack_require__(58015);
+const utils_1 = __webpack_require__(79534);
+const waiter_1 = __webpack_require__(70709);
+const abortTimeout = async (abortSignal) => {
+    return new Promise((resolve) => {
+        abortSignal.onabort = () => resolve({ state: waiter_1.WaiterState.ABORTED });
+    });
+};
+/**
+ * Create a waiter promise that only resolves when:
+ * 1. Abort controller is signaled
+ * 2. Max wait time is reached
+ * 3. `acceptorChecks` succeeds, or fails
+ * Otherwise, it invokes `acceptorChecks` with exponential-backoff delay.
+ *
+ * @internal
+ */
+const createWaiter = async (options, input, acceptorChecks) => {
+    const params = {
+        ...waiter_1.waiterServiceDefaults,
+        ...options,
+    };
+    utils_1.validateWaiterOptions(params);
+    const exitConditions = [poller_1.runPolling(params, input, acceptorChecks)];
+    if (options.abortController) {
+        exitConditions.push(abortTimeout(options.abortController.signal));
+    }
+    return Promise.race(exitConditions);
+};
+exports.createWaiter = createWaiter;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY3JlYXRlV2FpdGVyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vc3JjL2NyZWF0ZVdhaXRlci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFFQSxxQ0FBc0M7QUFDdEMsbUNBQWdEO0FBQ2hELHFDQUEyRjtBQUUzRixNQUFNLFlBQVksR0FBRyxLQUFLLEVBQUUsV0FBd0IsRUFBeUIsRUFBRTtJQUM3RSxPQUFPLElBQUksT0FBTyxDQUFDLENBQUMsT0FBTyxFQUFFLEVBQUU7UUFDN0IsV0FBVyxDQUFDLE9BQU8sR0FBRyxHQUFHLEVBQUUsQ0FBQyxPQUFPLENBQUMsRUFBRSxLQUFLLEVBQUUsb0JBQVcsQ0FBQyxPQUFPLEVBQUUsQ0FBQyxDQUFDO0lBQ3RFLENBQUMsQ0FBQyxDQUFDO0FBQ0wsQ0FBQyxDQUFDO0FBRUY7Ozs7Ozs7O0dBUUc7QUFDSSxNQUFNLFlBQVksR0FBRyxLQUFLLEVBQy9CLE9BQThCLEVBQzlCLEtBQVksRUFDWixjQUF1RSxFQUNoRCxFQUFFO0lBQ3pCLE1BQU0sTUFBTSxHQUFHO1FBQ2IsR0FBRyw4QkFBcUI7UUFDeEIsR0FBRyxPQUFPO0tBQ1gsQ0FBQztJQUNGLDZCQUFxQixDQUFDLE1BQU0sQ0FBQyxDQUFDO0lBRTlCLE1BQU0sY0FBYyxHQUFHLENBQUMsbUJBQVUsQ0FBZ0IsTUFBTSxFQUFFLEtBQUssRUFBRSxjQUFjLENBQUMsQ0FBQyxDQUFDO0lBQ2xGLElBQUksT0FBTyxDQUFDLGVBQWUsRUFBRTtRQUMzQixjQUFjLENBQUMsSUFBSSxDQUFDLFlBQVksQ0FBQyxPQUFPLENBQUMsZUFBZSxDQUFDLE1BQU0sQ0FBQyxDQUFDLENBQUM7S0FDbkU7SUFDRCxPQUFPLE9BQU8sQ0FBQyxJQUFJLENBQUMsY0FBYyxDQUFDLENBQUM7QUFDdEMsQ0FBQyxDQUFDO0FBaEJXLFFBQUEsWUFBWSxnQkFnQnZCIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgQWJvcnRTaWduYWwgfSBmcm9tIFwiQGF3cy1zZGsvdHlwZXNcIjtcblxuaW1wb3J0IHsgcnVuUG9sbGluZyB9IGZyb20gXCIuL3BvbGxlclwiO1xuaW1wb3J0IHsgdmFsaWRhdGVXYWl0ZXJPcHRpb25zIH0gZnJvbSBcIi4vdXRpbHNcIjtcbmltcG9ydCB7IFdhaXRlck9wdGlvbnMsIFdhaXRlclJlc3VsdCwgd2FpdGVyU2VydmljZURlZmF1bHRzLCBXYWl0ZXJTdGF0ZSB9IGZyb20gXCIuL3dhaXRlclwiO1xuXG5jb25zdCBhYm9ydFRpbWVvdXQgPSBhc3luYyAoYWJvcnRTaWduYWw6IEFib3J0U2lnbmFsKTogUHJvbWlzZTxXYWl0ZXJSZXN1bHQ+ID0+IHtcbiAgcmV0dXJuIG5ldyBQcm9taXNlKChyZXNvbHZlKSA9PiB7XG4gICAgYWJvcnRTaWduYWwub25hYm9ydCA9ICgpID0+IHJlc29sdmUoeyBzdGF0ZTogV2FpdGVyU3RhdGUuQUJPUlRFRCB9KTtcbiAgfSk7XG59O1xuXG4vKipcbiAqIENyZWF0ZSBhIHdhaXRlciBwcm9taXNlIHRoYXQgb25seSByZXNvbHZlcyB3aGVuOlxuICogMS4gQWJvcnQgY29udHJvbGxlciBpcyBzaWduYWxlZFxuICogMi4gTWF4IHdhaXQgdGltZSBpcyByZWFjaGVkXG4gKiAzLiBgYWNjZXB0b3JDaGVja3NgIHN1Y2NlZWRzLCBvciBmYWlsc1xuICogT3RoZXJ3aXNlLCBpdCBpbnZva2VzIGBhY2NlcHRvckNoZWNrc2Agd2l0aCBleHBvbmVudGlhbC1iYWNrb2ZmIGRlbGF5LlxuICpcbiAqIEBpbnRlcm5hbFxuICovXG5leHBvcnQgY29uc3QgY3JlYXRlV2FpdGVyID0gYXN5bmMgPENsaWVudCwgSW5wdXQ+KFxuICBvcHRpb25zOiBXYWl0ZXJPcHRpb25zPENsaWVudD4sXG4gIGlucHV0OiBJbnB1dCxcbiAgYWNjZXB0b3JDaGVja3M6IChjbGllbnQ6IENsaWVudCwgaW5wdXQ6IElucHV0KSA9PiBQcm9taXNlPFdhaXRlclJlc3VsdD5cbik6IFByb21pc2U8V2FpdGVyUmVzdWx0PiA9PiB7XG4gIGNvbnN0IHBhcmFtcyA9IHtcbiAgICAuLi53YWl0ZXJTZXJ2aWNlRGVmYXVsdHMsXG4gICAgLi4ub3B0aW9ucyxcbiAgfTtcbiAgdmFsaWRhdGVXYWl0ZXJPcHRpb25zKHBhcmFtcyk7XG5cbiAgY29uc3QgZXhpdENvbmRpdGlvbnMgPSBbcnVuUG9sbGluZzxDbGllbnQsIElucHV0PihwYXJhbXMsIGlucHV0LCBhY2NlcHRvckNoZWNrcyldO1xuICBpZiAob3B0aW9ucy5hYm9ydENvbnRyb2xsZXIpIHtcbiAgICBleGl0Q29uZGl0aW9ucy5wdXNoKGFib3J0VGltZW91dChvcHRpb25zLmFib3J0Q29udHJvbGxlci5zaWduYWwpKTtcbiAgfVxuICByZXR1cm4gUHJvbWlzZS5yYWNlKGV4aXRDb25kaXRpb25zKTtcbn07XG4iXX0=
+
+/***/ }),
+
+/***/ 6243:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const tslib_1 = __webpack_require__(50192);
+tslib_1.__exportStar(__webpack_require__(41194), exports);
+tslib_1.__exportStar(__webpack_require__(70709), exports);
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9zcmMvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQUEseURBQStCO0FBQy9CLG1EQUF5QiIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCAqIGZyb20gXCIuL2NyZWF0ZVdhaXRlclwiO1xuZXhwb3J0ICogZnJvbSBcIi4vd2FpdGVyXCI7XG4iXX0=
+
+/***/ }),
+
+/***/ 58015:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.runPolling = void 0;
+const sleep_1 = __webpack_require__(35442);
+const waiter_1 = __webpack_require__(70709);
+/**
+ * Reference: https://awslabs.github.io/smithy/1.0/spec/waiters.html#waiter-retries
+ */
+const exponentialBackoffWithJitter = (minDelay, maxDelay, attemptCeiling, attempt) => {
+    if (attempt > attemptCeiling)
+        return maxDelay;
+    const delay = minDelay * 2 ** (attempt - 1);
+    return randomInRange(minDelay, delay);
+};
+const randomInRange = (min, max) => min + Math.random() * (max - min);
+/**
+ * Function that runs indefinite polling as part of waiters.
+ * @param params options passed to the waiter.
+ * @param client AWS SDK Client
+ * @param input client input
+ * @param stateChecker function that checks the acceptor states on each poll.
+ */
+const runPolling = async ({ minDelay, maxDelay, maxWaitTime, abortController, client }, input, acceptorChecks) => {
+    var _a;
+    let currentAttempt = 1;
+    const waitUntil = Date.now() + maxWaitTime * 1000;
+    // The max attempt number that the derived delay time tend to increase.
+    // Pre-compute this number to avoid Number type overflow.
+    const attemptCeiling = Math.log(maxDelay / minDelay) / Math.log(2) + 1;
+    while (true) {
+        if ((_a = abortController === null || abortController === void 0 ? void 0 : abortController.signal) === null || _a === void 0 ? void 0 : _a.aborted) {
+            return { state: waiter_1.WaiterState.ABORTED };
+        }
+        const delay = exponentialBackoffWithJitter(minDelay, maxDelay, attemptCeiling, currentAttempt);
+        // Resolve the promise explicitly at timeout or aborted. Otherwise this while loop will keep making API call until
+        // `acceptorCheck` returns non-retry status, even with the Promise.race() outside.
+        if (Date.now() + delay * 1000 > waitUntil) {
+            return { state: waiter_1.WaiterState.TIMEOUT };
+        }
+        await sleep_1.sleep(delay);
+        const { state } = await acceptorChecks(client, input);
+        if (state !== waiter_1.WaiterState.RETRY) {
+            return { state };
+        }
+        currentAttempt += 1;
+    }
+};
+exports.runPolling = runPolling;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicG9sbGVyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vc3JjL3BvbGxlci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFBQSx5Q0FBc0M7QUFDdEMscUNBQTRFO0FBRTVFOztHQUVHO0FBQ0gsTUFBTSw0QkFBNEIsR0FBRyxDQUFDLFFBQWdCLEVBQUUsUUFBZ0IsRUFBRSxjQUFzQixFQUFFLE9BQWUsRUFBRSxFQUFFO0lBQ25ILElBQUksT0FBTyxHQUFHLGNBQWM7UUFBRSxPQUFPLFFBQVEsQ0FBQztJQUM5QyxNQUFNLEtBQUssR0FBRyxRQUFRLEdBQUcsQ0FBQyxJQUFJLENBQUMsT0FBTyxHQUFHLENBQUMsQ0FBQyxDQUFDO0lBQzVDLE9BQU8sYUFBYSxDQUFDLFFBQVEsRUFBRSxLQUFLLENBQUMsQ0FBQztBQUN4QyxDQUFDLENBQUM7QUFFRixNQUFNLGFBQWEsR0FBRyxDQUFDLEdBQVcsRUFBRSxHQUFXLEVBQUUsRUFBRSxDQUFDLEdBQUcsR0FBRyxJQUFJLENBQUMsTUFBTSxFQUFFLEdBQUcsQ0FBQyxHQUFHLEdBQUcsR0FBRyxDQUFDLENBQUM7QUFFdEY7Ozs7OztHQU1HO0FBQ0ksTUFBTSxVQUFVLEdBQUcsS0FBSyxFQUM3QixFQUFFLFFBQVEsRUFBRSxRQUFRLEVBQUUsV0FBVyxFQUFFLGVBQWUsRUFBRSxNQUFNLEVBQWlDLEVBQzNGLEtBQVksRUFDWixjQUF1RSxFQUNoRCxFQUFFOztJQUN6QixJQUFJLGNBQWMsR0FBRyxDQUFDLENBQUM7SUFDdkIsTUFBTSxTQUFTLEdBQUcsSUFBSSxDQUFDLEdBQUcsRUFBRSxHQUFHLFdBQVcsR0FBRyxJQUFJLENBQUM7SUFDbEQsdUVBQXVFO0lBQ3ZFLHlEQUF5RDtJQUN6RCxNQUFNLGNBQWMsR0FBRyxJQUFJLENBQUMsR0FBRyxDQUFDLFFBQVEsR0FBRyxRQUFRLENBQUMsR0FBRyxJQUFJLENBQUMsR0FBRyxDQUFDLENBQUMsQ0FBQyxHQUFHLENBQUMsQ0FBQztJQUN2RSxPQUFPLElBQUksRUFBRTtRQUNYLFVBQUksZUFBZSxhQUFmLGVBQWUsdUJBQWYsZUFBZSxDQUFFLE1BQU0sMENBQUUsT0FBTyxFQUFFO1lBQ3BDLE9BQU8sRUFBRSxLQUFLLEVBQUUsb0JBQVcsQ0FBQyxPQUFPLEVBQUUsQ0FBQztTQUN2QztRQUNELE1BQU0sS0FBSyxHQUFHLDRCQUE0QixDQUFDLFFBQVEsRUFBRSxRQUFRLEVBQUUsY0FBYyxFQUFFLGNBQWMsQ0FBQyxDQUFDO1FBQy9GLGtIQUFrSDtRQUNsSCxrRkFBa0Y7UUFDbEYsSUFBSSxJQUFJLENBQUMsR0FBRyxFQUFFLEdBQUcsS0FBSyxHQUFHLElBQUksR0FBRyxTQUFTLEVBQUU7WUFDekMsT0FBTyxFQUFFLEtBQUssRUFBRSxvQkFBVyxDQUFDLE9BQU8sRUFBRSxDQUFDO1NBQ3ZDO1FBQ0QsTUFBTSxhQUFLLENBQUMsS0FBSyxDQUFDLENBQUM7UUFDbkIsTUFBTSxFQUFFLEtBQUssRUFBRSxHQUFHLE1BQU0sY0FBYyxDQUFDLE1BQU0sRUFBRSxLQUFLLENBQUMsQ0FBQztRQUN0RCxJQUFJLEtBQUssS0FBSyxvQkFBVyxDQUFDLEtBQUssRUFBRTtZQUMvQixPQUFPLEVBQUUsS0FBSyxFQUFFLENBQUM7U0FDbEI7UUFFRCxjQUFjLElBQUksQ0FBQyxDQUFDO0tBQ3JCO0FBQ0gsQ0FBQyxDQUFDO0FBNUJXLFFBQUEsVUFBVSxjQTRCckIiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBzbGVlcCB9IGZyb20gXCIuL3V0aWxzL3NsZWVwXCI7XG5pbXBvcnQgeyBSZXNvbHZlZFdhaXRlck9wdGlvbnMsIFdhaXRlclJlc3VsdCwgV2FpdGVyU3RhdGUgfSBmcm9tIFwiLi93YWl0ZXJcIjtcblxuLyoqXG4gKiBSZWZlcmVuY2U6IGh0dHBzOi8vYXdzbGFicy5naXRodWIuaW8vc21pdGh5LzEuMC9zcGVjL3dhaXRlcnMuaHRtbCN3YWl0ZXItcmV0cmllc1xuICovXG5jb25zdCBleHBvbmVudGlhbEJhY2tvZmZXaXRoSml0dGVyID0gKG1pbkRlbGF5OiBudW1iZXIsIG1heERlbGF5OiBudW1iZXIsIGF0dGVtcHRDZWlsaW5nOiBudW1iZXIsIGF0dGVtcHQ6IG51bWJlcikgPT4ge1xuICBpZiAoYXR0ZW1wdCA+IGF0dGVtcHRDZWlsaW5nKSByZXR1cm4gbWF4RGVsYXk7XG4gIGNvbnN0IGRlbGF5ID0gbWluRGVsYXkgKiAyICoqIChhdHRlbXB0IC0gMSk7XG4gIHJldHVybiByYW5kb21JblJhbmdlKG1pbkRlbGF5LCBkZWxheSk7XG59O1xuXG5jb25zdCByYW5kb21JblJhbmdlID0gKG1pbjogbnVtYmVyLCBtYXg6IG51bWJlcikgPT4gbWluICsgTWF0aC5yYW5kb20oKSAqIChtYXggLSBtaW4pO1xuXG4vKipcbiAqIEZ1bmN0aW9uIHRoYXQgcnVucyBpbmRlZmluaXRlIHBvbGxpbmcgYXMgcGFydCBvZiB3YWl0ZXJzLlxuICogQHBhcmFtIHBhcmFtcyBvcHRpb25zIHBhc3NlZCB0byB0aGUgd2FpdGVyLlxuICogQHBhcmFtIGNsaWVudCBBV1MgU0RLIENsaWVudFxuICogQHBhcmFtIGlucHV0IGNsaWVudCBpbnB1dFxuICogQHBhcmFtIHN0YXRlQ2hlY2tlciBmdW5jdGlvbiB0aGF0IGNoZWNrcyB0aGUgYWNjZXB0b3Igc3RhdGVzIG9uIGVhY2ggcG9sbC5cbiAqL1xuZXhwb3J0IGNvbnN0IHJ1blBvbGxpbmcgPSBhc3luYyA8Q2xpZW50LCBJbnB1dD4oXG4gIHsgbWluRGVsYXksIG1heERlbGF5LCBtYXhXYWl0VGltZSwgYWJvcnRDb250cm9sbGVyLCBjbGllbnQgfTogUmVzb2x2ZWRXYWl0ZXJPcHRpb25zPENsaWVudD4sXG4gIGlucHV0OiBJbnB1dCxcbiAgYWNjZXB0b3JDaGVja3M6IChjbGllbnQ6IENsaWVudCwgaW5wdXQ6IElucHV0KSA9PiBQcm9taXNlPFdhaXRlclJlc3VsdD5cbik6IFByb21pc2U8V2FpdGVyUmVzdWx0PiA9PiB7XG4gIGxldCBjdXJyZW50QXR0ZW1wdCA9IDE7XG4gIGNvbnN0IHdhaXRVbnRpbCA9IERhdGUubm93KCkgKyBtYXhXYWl0VGltZSAqIDEwMDA7XG4gIC8vIFRoZSBtYXggYXR0ZW1wdCBudW1iZXIgdGhhdCB0aGUgZGVyaXZlZCBkZWxheSB0aW1lIHRlbmQgdG8gaW5jcmVhc2UuXG4gIC8vIFByZS1jb21wdXRlIHRoaXMgbnVtYmVyIHRvIGF2b2lkIE51bWJlciB0eXBlIG92ZXJmbG93LlxuICBjb25zdCBhdHRlbXB0Q2VpbGluZyA9IE1hdGgubG9nKG1heERlbGF5IC8gbWluRGVsYXkpIC8gTWF0aC5sb2coMikgKyAxO1xuICB3aGlsZSAodHJ1ZSkge1xuICAgIGlmIChhYm9ydENvbnRyb2xsZXI/LnNpZ25hbD8uYWJvcnRlZCkge1xuICAgICAgcmV0dXJuIHsgc3RhdGU6IFdhaXRlclN0YXRlLkFCT1JURUQgfTtcbiAgICB9XG4gICAgY29uc3QgZGVsYXkgPSBleHBvbmVudGlhbEJhY2tvZmZXaXRoSml0dGVyKG1pbkRlbGF5LCBtYXhEZWxheSwgYXR0ZW1wdENlaWxpbmcsIGN1cnJlbnRBdHRlbXB0KTtcbiAgICAvLyBSZXNvbHZlIHRoZSBwcm9taXNlIGV4cGxpY2l0bHkgYXQgdGltZW91dCBvciBhYm9ydGVkLiBPdGhlcndpc2UgdGhpcyB3aGlsZSBsb29wIHdpbGwga2VlcCBtYWtpbmcgQVBJIGNhbGwgdW50aWxcbiAgICAvLyBgYWNjZXB0b3JDaGVja2AgcmV0dXJucyBub24tcmV0cnkgc3RhdHVzLCBldmVuIHdpdGggdGhlIFByb21pc2UucmFjZSgpIG91dHNpZGUuXG4gICAgaWYgKERhdGUubm93KCkgKyBkZWxheSAqIDEwMDAgPiB3YWl0VW50aWwpIHtcbiAgICAgIHJldHVybiB7IHN0YXRlOiBXYWl0ZXJTdGF0ZS5USU1FT1VUIH07XG4gICAgfVxuICAgIGF3YWl0IHNsZWVwKGRlbGF5KTtcbiAgICBjb25zdCB7IHN0YXRlIH0gPSBhd2FpdCBhY2NlcHRvckNoZWNrcyhjbGllbnQsIGlucHV0KTtcbiAgICBpZiAoc3RhdGUgIT09IFdhaXRlclN0YXRlLlJFVFJZKSB7XG4gICAgICByZXR1cm4geyBzdGF0ZSB9O1xuICAgIH1cblxuICAgIGN1cnJlbnRBdHRlbXB0ICs9IDE7XG4gIH1cbn07XG4iXX0=
+
+/***/ }),
+
+/***/ 79534:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const tslib_1 = __webpack_require__(50192);
+tslib_1.__exportStar(__webpack_require__(35442), exports);
+tslib_1.__exportStar(__webpack_require__(49067), exports);
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi9zcmMvdXRpbHMvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQUEsa0RBQXdCO0FBQ3hCLHFEQUEyQiIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCAqIGZyb20gXCIuL3NsZWVwXCI7XG5leHBvcnQgKiBmcm9tIFwiLi92YWxpZGF0ZVwiO1xuIl19
+
+/***/ }),
+
+/***/ 35442:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.sleep = void 0;
+const sleep = (seconds) => {
+    return new Promise((resolve) => setTimeout(resolve, seconds * 1000));
+};
+exports.sleep = sleep;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2xlZXAuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi9zcmMvdXRpbHMvc2xlZXAudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQU8sTUFBTSxLQUFLLEdBQUcsQ0FBQyxPQUFlLEVBQUUsRUFBRTtJQUN2QyxPQUFPLElBQUksT0FBTyxDQUFDLENBQUMsT0FBTyxFQUFFLEVBQUUsQ0FBQyxVQUFVLENBQUMsT0FBTyxFQUFFLE9BQU8sR0FBRyxJQUFJLENBQUMsQ0FBQyxDQUFDO0FBQ3ZFLENBQUMsQ0FBQztBQUZXLFFBQUEsS0FBSyxTQUVoQiIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBjb25zdCBzbGVlcCA9IChzZWNvbmRzOiBudW1iZXIpID0+IHtcbiAgcmV0dXJuIG5ldyBQcm9taXNlKChyZXNvbHZlKSA9PiBzZXRUaW1lb3V0KHJlc29sdmUsIHNlY29uZHMgKiAxMDAwKSk7XG59O1xuIl19
+
+/***/ }),
+
+/***/ 49067:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.validateWaiterOptions = void 0;
+/**
+ * Validates that waiter options are passed correctly
+ * @param options a waiter configuration object
+ */
+const validateWaiterOptions = (options) => {
+    if (options.maxWaitTime < 1) {
+        throw `WaiterOptions.maxWaitTime must be greater than 0`;
+    }
+    else if (options.maxWaitTime <= options.minDelay) {
+        throw `WaiterOptions.maxWaitTime [${options.maxWaitTime}] must be greater than WaiterOptions.minDelay [${options.minDelay}] for this waiter`;
+    }
+};
+exports.validateWaiterOptions = validateWaiterOptions;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidmFsaWRhdGUuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi9zcmMvdXRpbHMvdmFsaWRhdGUudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBRUE7OztHQUdHO0FBQ0ksTUFBTSxxQkFBcUIsR0FBRyxDQUFTLE9BQXNDLEVBQVEsRUFBRTtJQUM1RixJQUFJLE9BQU8sQ0FBQyxXQUFXLEdBQUcsQ0FBQyxFQUFFO1FBQzNCLE1BQU0sa0RBQWtELENBQUM7S0FDMUQ7U0FBTSxJQUFJLE9BQU8sQ0FBQyxXQUFXLElBQUksT0FBTyxDQUFDLFFBQVEsRUFBRTtRQUNsRCxNQUFNLDhCQUE4QixPQUFPLENBQUMsV0FBVyxrREFBa0QsT0FBTyxDQUFDLFFBQVEsbUJBQW1CLENBQUM7S0FDOUk7QUFDSCxDQUFDLENBQUM7QUFOVyxRQUFBLHFCQUFxQix5QkFNaEMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBSZXNvbHZlZFdhaXRlck9wdGlvbnMgfSBmcm9tIFwiLi4vd2FpdGVyXCI7XG5cbi8qKlxuICogVmFsaWRhdGVzIHRoYXQgd2FpdGVyIG9wdGlvbnMgYXJlIHBhc3NlZCBjb3JyZWN0bHlcbiAqIEBwYXJhbSBvcHRpb25zIGEgd2FpdGVyIGNvbmZpZ3VyYXRpb24gb2JqZWN0XG4gKi9cbmV4cG9ydCBjb25zdCB2YWxpZGF0ZVdhaXRlck9wdGlvbnMgPSA8Q2xpZW50PihvcHRpb25zOiBSZXNvbHZlZFdhaXRlck9wdGlvbnM8Q2xpZW50Pik6IHZvaWQgPT4ge1xuICBpZiAob3B0aW9ucy5tYXhXYWl0VGltZSA8IDEpIHtcbiAgICB0aHJvdyBgV2FpdGVyT3B0aW9ucy5tYXhXYWl0VGltZSBtdXN0IGJlIGdyZWF0ZXIgdGhhbiAwYDtcbiAgfSBlbHNlIGlmIChvcHRpb25zLm1heFdhaXRUaW1lIDw9IG9wdGlvbnMubWluRGVsYXkpIHtcbiAgICB0aHJvdyBgV2FpdGVyT3B0aW9ucy5tYXhXYWl0VGltZSBbJHtvcHRpb25zLm1heFdhaXRUaW1lfV0gbXVzdCBiZSBncmVhdGVyIHRoYW4gV2FpdGVyT3B0aW9ucy5taW5EZWxheSBbJHtvcHRpb25zLm1pbkRlbGF5fV0gZm9yIHRoaXMgd2FpdGVyYDtcbiAgfVxufTtcbiJdfQ==
+
+/***/ }),
+
+/***/ 70709:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.WaiterState = exports.waiterServiceDefaults = void 0;
+/**
+ * @private
+ */
+exports.waiterServiceDefaults = {
+    minDelay: 2,
+    maxDelay: 120,
+};
+var WaiterState;
+(function (WaiterState) {
+    WaiterState["ABORTED"] = "ABORTED";
+    WaiterState["FAILURE"] = "FAILURE";
+    WaiterState["SUCCESS"] = "SUCCESS";
+    WaiterState["RETRY"] = "RETRY";
+    WaiterState["TIMEOUT"] = "TIMEOUT";
+})(WaiterState = exports.WaiterState || (exports.WaiterState = {}));
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoid2FpdGVyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vc3JjL3dhaXRlci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFtQ0E7O0dBRUc7QUFDVSxRQUFBLHFCQUFxQixHQUFHO0lBQ25DLFFBQVEsRUFBRSxDQUFDO0lBQ1gsUUFBUSxFQUFFLEdBQUc7Q0FDZCxDQUFDO0FBUUYsSUFBWSxXQU1YO0FBTkQsV0FBWSxXQUFXO0lBQ3JCLGtDQUFtQixDQUFBO0lBQ25CLGtDQUFtQixDQUFBO0lBQ25CLGtDQUFtQixDQUFBO0lBQ25CLDhCQUFlLENBQUE7SUFDZixrQ0FBbUIsQ0FBQTtBQUNyQixDQUFDLEVBTlcsV0FBVyxHQUFYLG1CQUFXLEtBQVgsbUJBQVcsUUFNdEIiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBBYm9ydENvbnRyb2xsZXIgfSBmcm9tIFwiQGF3cy1zZGsvdHlwZXNcIjtcblxuZXhwb3J0IGludGVyZmFjZSBXYWl0ZXJDb25maWd1cmF0aW9uPENsaWVudD4ge1xuICAvKipcbiAgICogUmVxdWlyZWQgc2VydmljZSBjbGllbnRcbiAgICovXG4gIGNsaWVudDogQ2xpZW50O1xuXG4gIC8qKlxuICAgKiBUaGUgYW1vdW50IG9mIHRpbWUgaW4gc2Vjb25kcyBhIHVzZXIgaXMgd2lsbGluZyB0byB3YWl0IGZvciBhIHdhaXRlciB0byBjb21wbGV0ZS5cbiAgICovXG4gIG1heFdhaXRUaW1lOiBudW1iZXI7XG5cbiAgLyoqXG4gICAqIEFib3J0IGNvbnRyb2xsZXIuIFVzZWQgZm9yIGVuZGluZyB0aGUgd2FpdGVyIGVhcmx5LlxuICAgKi9cbiAgYWJvcnRDb250cm9sbGVyPzogQWJvcnRDb250cm9sbGVyO1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIFdhaXRlck9wdGlvbnM8Q2xpZW50PiBleHRlbmRzIFdhaXRlckNvbmZpZ3VyYXRpb248Q2xpZW50PiB7XG4gIC8qKlxuICAgKiBUaGUgbWluaW11bSBhbW91bnQgb2YgdGltZSB0byBkZWxheSBiZXR3ZWVuIHJldHJpZXMgaW4gc2Vjb25kcy4gVGhpcyB2YWx1ZSBkZWZhdWx0c1xuICAgKiB0byAyIGlmIG5vdCBzcGVjaWZpZWQuIElmIHNwZWNpZmllZCwgdGhpcyB2YWx1ZSBNVVNUIGJlIGdyZWF0ZXIgdGhhbiBvciBlcXVhbCB0byAxXG4gICAqIGFuZCBsZXNzIHRoYW4gb3IgZXF1YWwgdG8gbWF4RGVsYXkuXG4gICAqL1xuICBtaW5EZWxheT86IG51bWJlcjtcblxuICAvKipcbiAgICogVGhlIG1heGltdW0gYW1vdW50IG9mIHRpbWUgdG8gZGVsYXkgYmV0d2VlbiByZXRyaWVzIGluIHNlY29uZHMuIFRoZSBtYXhpbXVtIGFtb3VudFxuICAgKiBvZiB0aW1lIGluIHNlY29uZHMgdG8gZGVsYXkgYmV0d2VlbiBlYWNoIHJldHJ5LiBUaGlzIHZhbHVlIGRlZmF1bHRzIHRvIDEyMCBpZiBub3RcbiAgICogc3BlY2lmaWVkICgyIG1pbnV0ZXMpLiBJZiBzcGVjaWZpZWQsIHRoaXMgdmFsdWUgTVVTVCBiZSBncmVhdGVyIHRoYW4gb3IgZXF1YWwgdG8gMS5cbiAgICovXG4gIG1heERlbGF5PzogbnVtYmVyO1xufVxuXG4vKipcbiAqIEBwcml2YXRlXG4gKi9cbmV4cG9ydCBjb25zdCB3YWl0ZXJTZXJ2aWNlRGVmYXVsdHMgPSB7XG4gIG1pbkRlbGF5OiAyLFxuICBtYXhEZWxheTogMTIwLFxufTtcblxuLyoqXG4gKiBAcHJpdmF0ZVxuICovXG5leHBvcnQgdHlwZSBSZXNvbHZlZFdhaXRlck9wdGlvbnM8Q2xpZW50PiA9IFdhaXRlck9wdGlvbnM8Q2xpZW50PiAmXG4gIFJlcXVpcmVkPFBpY2s8V2FpdGVyT3B0aW9uczxDbGllbnQ+LCBcIm1pbkRlbGF5XCIgfCBcIm1heERlbGF5XCI+PjtcblxuZXhwb3J0IGVudW0gV2FpdGVyU3RhdGUge1xuICBBQk9SVEVEID0gXCJBQk9SVEVEXCIsXG4gIEZBSUxVUkUgPSBcIkZBSUxVUkVcIixcbiAgU1VDQ0VTUyA9IFwiU1VDQ0VTU1wiLFxuICBSRVRSWSA9IFwiUkVUUllcIixcbiAgVElNRU9VVCA9IFwiVElNRU9VVFwiLFxufVxuXG5leHBvcnQgdHlwZSBXYWl0ZXJSZXN1bHQgPSB7XG4gIHN0YXRlOiBXYWl0ZXJTdGF0ZTtcbn07XG4iXX0=
+
+/***/ }),
+
+/***/ 50192:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -61989,25 +62428,6 @@ function __classPrivateFieldSet(receiver, privateMap, value) {
     return value;
 }
 
-
-/***/ }),
-
-/***/ 85227:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.toUtf8 = exports.fromUtf8 = void 0;
-const util_buffer_from_1 = __webpack_require__(38577);
-const fromUtf8 = (input) => {
-    const buf = util_buffer_from_1.fromString(input, "utf8");
-    return new Uint8Array(buf.buffer, buf.byteOffset, buf.byteLength / Uint8Array.BYTES_PER_ELEMENT);
-};
-exports.fromUtf8 = fromUtf8;
-const toUtf8 = (input) => util_buffer_from_1.fromArrayBuffer(input.buffer, input.byteOffset, input.byteLength).toString("utf8");
-exports.toUtf8 = toUtf8;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9zcmMvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQUEsZ0VBQXdFO0FBRWpFLE1BQU0sUUFBUSxHQUFHLENBQUMsS0FBYSxFQUFjLEVBQUU7SUFDcEQsTUFBTSxHQUFHLEdBQUcsNkJBQVUsQ0FBQyxLQUFLLEVBQUUsTUFBTSxDQUFDLENBQUM7SUFDdEMsT0FBTyxJQUFJLFVBQVUsQ0FBQyxHQUFHLENBQUMsTUFBTSxFQUFFLEdBQUcsQ0FBQyxVQUFVLEVBQUUsR0FBRyxDQUFDLFVBQVUsR0FBRyxVQUFVLENBQUMsaUJBQWlCLENBQUMsQ0FBQztBQUNuRyxDQUFDLENBQUM7QUFIVyxRQUFBLFFBQVEsWUFHbkI7QUFFSyxNQUFNLE1BQU0sR0FBRyxDQUFDLEtBQWlCLEVBQVUsRUFBRSxDQUNsRCxrQ0FBZSxDQUFDLEtBQUssQ0FBQyxNQUFNLEVBQUUsS0FBSyxDQUFDLFVBQVUsRUFBRSxLQUFLLENBQUMsVUFBVSxDQUFDLENBQUMsUUFBUSxDQUFDLE1BQU0sQ0FBQyxDQUFDO0FBRHhFLFFBQUEsTUFBTSxVQUNrRSIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IGZyb21BcnJheUJ1ZmZlciwgZnJvbVN0cmluZyB9IGZyb20gXCJAYXdzLXNkay91dGlsLWJ1ZmZlci1mcm9tXCI7XG5cbmV4cG9ydCBjb25zdCBmcm9tVXRmOCA9IChpbnB1dDogc3RyaW5nKTogVWludDhBcnJheSA9PiB7XG4gIGNvbnN0IGJ1ZiA9IGZyb21TdHJpbmcoaW5wdXQsIFwidXRmOFwiKTtcbiAgcmV0dXJuIG5ldyBVaW50OEFycmF5KGJ1Zi5idWZmZXIsIGJ1Zi5ieXRlT2Zmc2V0LCBidWYuYnl0ZUxlbmd0aCAvIFVpbnQ4QXJyYXkuQllURVNfUEVSX0VMRU1FTlQpO1xufTtcblxuZXhwb3J0IGNvbnN0IHRvVXRmOCA9IChpbnB1dDogVWludDhBcnJheSk6IHN0cmluZyA9PlxuICBmcm9tQXJyYXlCdWZmZXIoaW5wdXQuYnVmZmVyLCBpbnB1dC5ieXRlT2Zmc2V0LCBpbnB1dC5ieXRlTGVuZ3RoKS50b1N0cmluZyhcInV0ZjhcIik7XG4iXX0=
 
 /***/ }),
 
