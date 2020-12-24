@@ -2,6 +2,7 @@
 
 [![GitHub](https://img.shields.io/github/license/kazimanzurrashid/aws-static-web-app-update-action)](https://opensource.org/licenses/MIT)
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/kazimanzurrashid/aws-static-web-app-update-action)](https://github.com/kazimanzurrashid/aws-static-web-app-update-action/releases)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/kazimanzurrashid/aws-static-web-app-update-action/v1)](https://github.com/kazimanzurrashid/aws-static-web-app-update-action/actions)
 
 This action uploads the contents of the specified directory with proper mime-type and cache-control into 
 S3 bucket and optionally issues an invalidation command to associated cloudfront distribution.
