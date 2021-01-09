@@ -7,7 +7,7 @@ import { CloudFront } from '@aws-sdk/client-cloudfront';
 import { getInput, setFailed, info } from '@actions/core';
 import { lookup } from 'mime-types';
 import globby from 'globby';
-import { safeLoad } from 'js-yaml';
+import { load } from 'js-yaml';
 
 import { Action } from './action';
 
@@ -62,7 +62,7 @@ const cf = new CloudFront({
       location,
       bucket,
       cacheControl: cacheControl
-        ? (safeLoad(cacheControl) as { [key: string]: string | string[] })
+        ? (load(cacheControl) as { [key: string]: string | string[] })
         : {},
       invalidate,
       region: awsRegion,

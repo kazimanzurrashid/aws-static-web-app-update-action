@@ -46,9 +46,7 @@ is provided (e.g. `invalidate: true`) then `"cloudfront:ListDistributions"` is a
   "Statement": [
     {
       "Effect": "Allow",
-      "Action": [
-        "s3:PutObject"
-      ],
+      "Action": ["s3:PutObject"],
       "Resource": "*"
     },
     {
@@ -84,7 +82,7 @@ _Optional_. `Boolean` or the id of the cloudfront distribution, the default is `
 
 ### `wait`
 
-_Optional_. `Boolean`,  if `true` then it would wait for the invalidation to complete, the default it `true`.
+_Optional_. `Boolean`, if `true` then it would wait for the invalidation to complete, the default it `true`.
 
 ### `AWS_REGION`
 
