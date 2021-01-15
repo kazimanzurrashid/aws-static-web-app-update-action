@@ -165,7 +165,7 @@ jobs:
       - name: Build
         run: |
           npm ci
-          npm run build --prod
+          ng build --prod
 
       - name: Update
         uses: kazimanzurrashid/aws-static-web-app-update-action@v1

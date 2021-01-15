@@ -6,7 +6,7 @@ require('./sourcemap-register.js');module.exports =
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse("{\"name\":\"@aws-sdk/client-cloudfront\",\"description\":\"AWS SDK for JavaScript Cloudfront Client for Node.js, Browser and React Native\",\"version\":\"3.2.0\",\"scripts\":{\"clean\":\"yarn remove-definitions && yarn remove-dist && yarn remove-documentation\",\"build-documentation\":\"yarn remove-documentation && typedoc ./\",\"prepublishOnly\":\"yarn build\",\"pretest\":\"yarn build:cjs\",\"remove-definitions\":\"rimraf ./types\",\"remove-dist\":\"rimraf ./dist\",\"remove-documentation\":\"rimraf ./docs\",\"test\":\"exit 0\",\"build:cjs\":\"tsc -p tsconfig.json\",\"build:es\":\"tsc -p tsconfig.es.json\",\"build\":\"yarn build:cjs && yarn build:es\"},\"main\":\"./dist/cjs/index.js\",\"types\":\"./types/index.d.ts\",\"module\":\"./dist/es/index.js\",\"browser\":{\"./runtimeConfig\":\"./runtimeConfig.browser\"},\"react-native\":{\"./runtimeConfig\":\"./runtimeConfig.native\"},\"sideEffects\":false,\"dependencies\":{\"@aws-crypto/sha256-browser\":\"^1.0.0\",\"@aws-crypto/sha256-js\":\"^1.0.0\",\"@aws-sdk/config-resolver\":\"3.2.0\",\"@aws-sdk/credential-provider-node\":\"3.1.0\",\"@aws-sdk/fetch-http-handler\":\"3.2.0\",\"@aws-sdk/hash-node\":\"3.1.0\",\"@aws-sdk/invalid-dependency\":\"3.2.0\",\"@aws-sdk/middleware-content-length\":\"3.2.0\",\"@aws-sdk/middleware-host-header\":\"3.2.0\",\"@aws-sdk/middleware-logger\":\"3.2.0\",\"@aws-sdk/middleware-retry\":\"3.2.0\",\"@aws-sdk/middleware-serde\":\"3.2.0\",\"@aws-sdk/middleware-signing\":\"3.2.0\",\"@aws-sdk/middleware-stack\":\"3.1.0\",\"@aws-sdk/middleware-user-agent\":\"3.2.0\",\"@aws-sdk/node-config-provider\":\"3.1.0\",\"@aws-sdk/node-http-handler\":\"3.2.0\",\"@aws-sdk/protocol-http\":\"3.2.0\",\"@aws-sdk/smithy-client\":\"3.2.0\",\"@aws-sdk/url-parser-browser\":\"3.1.0\",\"@aws-sdk/url-parser-node\":\"3.1.0\",\"@aws-sdk/util-base64-browser\":\"3.1.0\",\"@aws-sdk/util-base64-node\":\"3.1.0\",\"@aws-sdk/util-body-length-browser\":\"3.1.0\",\"@aws-sdk/util-body-length-node\":\"3.1.0\",\"@aws-sdk/util-user-agent-browser\":\"3.2.0\",\"@aws-sdk/util-user-agent-node\":\"3.2.0\",\"@aws-sdk/util-utf8-browser\":\"3.1.0\",\"@aws-sdk/util-utf8-node\":\"3.1.0\",\"@aws-sdk/util-waiter\":\"3.2.0\",\"@aws-sdk/xml-builder\":\"3.1.0\",\"fast-xml-parser\":\"^3.16.0\",\"tslib\":\"^2.0.0\"},\"devDependencies\":{\"@aws-sdk/client-documentation-generator\":\"3.1.0\",\"@aws-sdk/types\":\"3.1.0\",\"@types/node\":\"^12.7.5\",\"jest\":\"^26.1.0\",\"rimraf\":\"^3.0.0\",\"typedoc\":\"^0.19.2\",\"typescript\":\"~4.1.2\"},\"engines\":{\"node\":\">=10.0.0\"},\"author\":{\"name\":\"AWS SDK for JavaScript Team\",\"url\":\"https://aws.amazon.com/javascript/\"},\"license\":\"Apache-2.0\",\"homepage\":\"https://github.com/aws/aws-sdk-js-v3/tree/master/clients/client-cloudfront\",\"repository\":{\"type\":\"git\",\"url\":\"https://github.com/aws/aws-sdk-js-v3.git\",\"directory\":\"clients/client-cloudfront\"}}");
+module.exports = JSON.parse("{\"name\":\"@aws-sdk/client-cloudfront\",\"description\":\"AWS SDK for JavaScript Cloudfront Client for Node.js, Browser and React Native\",\"version\":\"3.3.0\",\"scripts\":{\"clean\":\"yarn remove-definitions && yarn remove-dist && yarn remove-documentation\",\"build-documentation\":\"yarn remove-documentation && typedoc ./\",\"prepublishOnly\":\"yarn build\",\"pretest\":\"yarn build:cjs\",\"remove-definitions\":\"rimraf ./types\",\"remove-dist\":\"rimraf ./dist\",\"remove-documentation\":\"rimraf ./docs\",\"test\":\"exit 0\",\"build:cjs\":\"tsc -p tsconfig.json\",\"build:es\":\"tsc -p tsconfig.es.json\",\"build\":\"yarn build:cjs && yarn build:es\"},\"main\":\"./dist/cjs/index.js\",\"types\":\"./types/index.d.ts\",\"module\":\"./dist/es/index.js\",\"browser\":{\"./runtimeConfig\":\"./runtimeConfig.browser\"},\"react-native\":{\"./runtimeConfig\":\"./runtimeConfig.native\"},\"sideEffects\":false,\"dependencies\":{\"@aws-crypto/sha256-browser\":\"^1.0.0\",\"@aws-crypto/sha256-js\":\"^1.0.0\",\"@aws-sdk/config-resolver\":\"3.3.0\",\"@aws-sdk/credential-provider-node\":\"3.3.0\",\"@aws-sdk/fetch-http-handler\":\"3.3.0\",\"@aws-sdk/hash-node\":\"3.3.0\",\"@aws-sdk/invalid-dependency\":\"3.3.0\",\"@aws-sdk/middleware-content-length\":\"3.3.0\",\"@aws-sdk/middleware-host-header\":\"3.3.0\",\"@aws-sdk/middleware-logger\":\"3.3.0\",\"@aws-sdk/middleware-retry\":\"3.3.0\",\"@aws-sdk/middleware-serde\":\"3.3.0\",\"@aws-sdk/middleware-signing\":\"3.3.0\",\"@aws-sdk/middleware-stack\":\"3.1.0\",\"@aws-sdk/middleware-user-agent\":\"3.3.0\",\"@aws-sdk/node-config-provider\":\"3.3.0\",\"@aws-sdk/node-http-handler\":\"3.3.0\",\"@aws-sdk/protocol-http\":\"3.3.0\",\"@aws-sdk/smithy-client\":\"3.3.0\",\"@aws-sdk/types\":\"3.1.0\",\"@aws-sdk/url-parser\":\"3.3.0\",\"@aws-sdk/url-parser-native\":\"3.3.0\",\"@aws-sdk/util-base64-browser\":\"3.1.0\",\"@aws-sdk/util-base64-node\":\"3.1.0\",\"@aws-sdk/util-body-length-browser\":\"3.1.0\",\"@aws-sdk/util-body-length-node\":\"3.1.0\",\"@aws-sdk/util-user-agent-browser\":\"3.3.0\",\"@aws-sdk/util-user-agent-node\":\"3.3.0\",\"@aws-sdk/util-utf8-browser\":\"3.1.0\",\"@aws-sdk/util-utf8-node\":\"3.1.0\",\"@aws-sdk/util-waiter\":\"3.3.0\",\"@aws-sdk/xml-builder\":\"3.1.0\",\"fast-xml-parser\":\"^3.16.0\",\"tslib\":\"^2.0.0\"},\"devDependencies\":{\"@aws-sdk/client-documentation-generator\":\"3.1.0\",\"@types/node\":\"^12.7.5\",\"jest\":\"^26.1.0\",\"rimraf\":\"^3.0.0\",\"typedoc\":\"^0.19.2\",\"typescript\":\"~4.1.2\"},\"engines\":{\"node\":\">=10.0.0\"},\"author\":{\"name\":\"AWS SDK for JavaScript Team\",\"url\":\"https://aws.amazon.com/javascript/\"},\"license\":\"Apache-2.0\",\"homepage\":\"https://github.com/aws/aws-sdk-js-v3/tree/master/clients/client-cloudfront\",\"repository\":{\"type\":\"git\",\"url\":\"https://github.com/aws/aws-sdk-js-v3.git\",\"directory\":\"clients/client-cloudfront\"}}");
 
 /***/ }),
 
@@ -14,7 +14,7 @@ module.exports = JSON.parse("{\"name\":\"@aws-sdk/client-cloudfront\",\"descript
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse("{\"name\":\"@aws-sdk/client-s3\",\"description\":\"AWS SDK for JavaScript S3 Client for Node.js, Browser and React Native\",\"version\":\"3.2.0\",\"scripts\":{\"clean\":\"yarn remove-definitions && yarn remove-dist && yarn remove-documentation\",\"build-documentation\":\"yarn remove-documentation && typedoc ./\",\"prepublishOnly\":\"yarn build\",\"pretest\":\"yarn build:cjs\",\"remove-definitions\":\"rimraf ./types\",\"remove-dist\":\"rimraf ./dist\",\"remove-documentation\":\"rimraf ./docs\",\"test:unit\":\"mocha **/cjs/**/*.spec.js\",\"test:e2e\":\"mocha **/cjs/**/*.ispec.js && karma start karma.conf.js\",\"test\":\"yarn test:unit\",\"build:cjs\":\"tsc -p tsconfig.json\",\"build:es\":\"tsc -p tsconfig.es.json\",\"build\":\"yarn build:cjs && yarn build:es\"},\"main\":\"./dist/cjs/index.js\",\"types\":\"./types/index.d.ts\",\"module\":\"./dist/es/index.js\",\"browser\":{\"./runtimeConfig\":\"./runtimeConfig.browser\"},\"react-native\":{\"./runtimeConfig\":\"./runtimeConfig.native\"},\"sideEffects\":false,\"dependencies\":{\"@aws-crypto/sha256-browser\":\"^1.0.0\",\"@aws-crypto/sha256-js\":\"^1.0.0\",\"@aws-sdk/config-resolver\":\"3.2.0\",\"@aws-sdk/credential-provider-node\":\"3.1.0\",\"@aws-sdk/eventstream-serde-browser\":\"3.2.0\",\"@aws-sdk/eventstream-serde-config-resolver\":\"3.2.0\",\"@aws-sdk/eventstream-serde-node\":\"3.2.0\",\"@aws-sdk/fetch-http-handler\":\"3.2.0\",\"@aws-sdk/hash-blob-browser\":\"3.1.0\",\"@aws-sdk/hash-node\":\"3.1.0\",\"@aws-sdk/hash-stream-node\":\"3.1.0\",\"@aws-sdk/invalid-dependency\":\"3.2.0\",\"@aws-sdk/md5-js\":\"3.1.0\",\"@aws-sdk/middleware-apply-body-checksum\":\"3.2.0\",\"@aws-sdk/middleware-bucket-endpoint\":\"3.2.0\",\"@aws-sdk/middleware-content-length\":\"3.2.0\",\"@aws-sdk/middleware-expect-continue\":\"3.2.0\",\"@aws-sdk/middleware-host-header\":\"3.2.0\",\"@aws-sdk/middleware-location-constraint\":\"3.1.0\",\"@aws-sdk/middleware-logger\":\"3.2.0\",\"@aws-sdk/middleware-retry\":\"3.2.0\",\"@aws-sdk/middleware-sdk-s3\":\"3.2.0\",\"@aws-sdk/middleware-serde\":\"3.2.0\",\"@aws-sdk/middleware-signing\":\"3.2.0\",\"@aws-sdk/middleware-ssec\":\"3.1.0\",\"@aws-sdk/middleware-stack\":\"3.1.0\",\"@aws-sdk/middleware-user-agent\":\"3.2.0\",\"@aws-sdk/node-config-provider\":\"3.1.0\",\"@aws-sdk/node-http-handler\":\"3.2.0\",\"@aws-sdk/protocol-http\":\"3.2.0\",\"@aws-sdk/smithy-client\":\"3.2.0\",\"@aws-sdk/url-parser-browser\":\"3.1.0\",\"@aws-sdk/url-parser-node\":\"3.1.0\",\"@aws-sdk/util-base64-browser\":\"3.1.0\",\"@aws-sdk/util-base64-node\":\"3.1.0\",\"@aws-sdk/util-body-length-browser\":\"3.1.0\",\"@aws-sdk/util-body-length-node\":\"3.1.0\",\"@aws-sdk/util-user-agent-browser\":\"3.2.0\",\"@aws-sdk/util-user-agent-node\":\"3.2.0\",\"@aws-sdk/util-utf8-browser\":\"3.1.0\",\"@aws-sdk/util-utf8-node\":\"3.1.0\",\"@aws-sdk/util-waiter\":\"3.2.0\",\"@aws-sdk/xml-builder\":\"3.1.0\",\"fast-xml-parser\":\"^3.16.0\",\"tslib\":\"^2.0.0\"},\"devDependencies\":{\"@aws-sdk/client-documentation-generator\":\"3.1.0\",\"@aws-sdk/types\":\"3.1.0\",\"@types/chai\":\"^4.2.11\",\"@types/mocha\":\"^8.0.4\",\"@types/node\":\"^12.7.5\",\"jest\":\"^26.1.0\",\"rimraf\":\"^3.0.0\",\"typedoc\":\"^0.19.2\",\"typescript\":\"~4.1.2\"},\"engines\":{\"node\":\">=10.0.0\"},\"author\":{\"name\":\"AWS SDK for JavaScript Team\",\"url\":\"https://aws.amazon.com/javascript/\"},\"license\":\"Apache-2.0\",\"homepage\":\"https://github.com/aws/aws-sdk-js-v3/tree/master/clients/client-s3\",\"repository\":{\"type\":\"git\",\"url\":\"https://github.com/aws/aws-sdk-js-v3.git\",\"directory\":\"clients/client-s3\"}}");
+module.exports = JSON.parse("{\"name\":\"@aws-sdk/client-s3\",\"description\":\"AWS SDK for JavaScript S3 Client for Node.js, Browser and React Native\",\"version\":\"3.3.0\",\"scripts\":{\"clean\":\"yarn remove-definitions && yarn remove-dist && yarn remove-documentation\",\"build-documentation\":\"yarn remove-documentation && typedoc ./\",\"prepublishOnly\":\"yarn build\",\"pretest\":\"yarn build:cjs\",\"remove-definitions\":\"rimraf ./types\",\"remove-dist\":\"rimraf ./dist\",\"remove-documentation\":\"rimraf ./docs\",\"test:unit\":\"mocha **/cjs/**/*.spec.js\",\"test:e2e\":\"mocha **/cjs/**/*.ispec.js && karma start karma.conf.js\",\"test\":\"yarn test:unit\",\"build:cjs\":\"tsc -p tsconfig.json\",\"build:es\":\"tsc -p tsconfig.es.json\",\"build\":\"yarn build:cjs && yarn build:es\"},\"main\":\"./dist/cjs/index.js\",\"types\":\"./types/index.d.ts\",\"module\":\"./dist/es/index.js\",\"browser\":{\"./runtimeConfig\":\"./runtimeConfig.browser\"},\"react-native\":{\"./runtimeConfig\":\"./runtimeConfig.native\"},\"sideEffects\":false,\"dependencies\":{\"@aws-crypto/sha256-browser\":\"^1.0.0\",\"@aws-crypto/sha256-js\":\"^1.0.0\",\"@aws-sdk/config-resolver\":\"3.3.0\",\"@aws-sdk/credential-provider-node\":\"3.3.0\",\"@aws-sdk/eventstream-serde-browser\":\"3.3.0\",\"@aws-sdk/eventstream-serde-config-resolver\":\"3.3.0\",\"@aws-sdk/eventstream-serde-node\":\"3.3.0\",\"@aws-sdk/fetch-http-handler\":\"3.3.0\",\"@aws-sdk/hash-blob-browser\":\"3.3.0\",\"@aws-sdk/hash-node\":\"3.3.0\",\"@aws-sdk/hash-stream-node\":\"3.3.0\",\"@aws-sdk/invalid-dependency\":\"3.3.0\",\"@aws-sdk/md5-js\":\"3.3.0\",\"@aws-sdk/middleware-apply-body-checksum\":\"3.3.0\",\"@aws-sdk/middleware-bucket-endpoint\":\"3.3.0\",\"@aws-sdk/middleware-content-length\":\"3.3.0\",\"@aws-sdk/middleware-expect-continue\":\"3.3.0\",\"@aws-sdk/middleware-host-header\":\"3.3.0\",\"@aws-sdk/middleware-location-constraint\":\"3.3.0\",\"@aws-sdk/middleware-logger\":\"3.3.0\",\"@aws-sdk/middleware-retry\":\"3.3.0\",\"@aws-sdk/middleware-sdk-s3\":\"3.3.0\",\"@aws-sdk/middleware-serde\":\"3.3.0\",\"@aws-sdk/middleware-signing\":\"3.3.0\",\"@aws-sdk/middleware-ssec\":\"3.3.0\",\"@aws-sdk/middleware-stack\":\"3.1.0\",\"@aws-sdk/middleware-user-agent\":\"3.3.0\",\"@aws-sdk/node-config-provider\":\"3.3.0\",\"@aws-sdk/node-http-handler\":\"3.3.0\",\"@aws-sdk/protocol-http\":\"3.3.0\",\"@aws-sdk/smithy-client\":\"3.3.0\",\"@aws-sdk/types\":\"3.1.0\",\"@aws-sdk/url-parser\":\"3.3.0\",\"@aws-sdk/url-parser-native\":\"3.3.0\",\"@aws-sdk/util-base64-browser\":\"3.1.0\",\"@aws-sdk/util-base64-node\":\"3.1.0\",\"@aws-sdk/util-body-length-browser\":\"3.1.0\",\"@aws-sdk/util-body-length-node\":\"3.1.0\",\"@aws-sdk/util-user-agent-browser\":\"3.3.0\",\"@aws-sdk/util-user-agent-node\":\"3.3.0\",\"@aws-sdk/util-utf8-browser\":\"3.1.0\",\"@aws-sdk/util-utf8-node\":\"3.1.0\",\"@aws-sdk/util-waiter\":\"3.3.0\",\"@aws-sdk/xml-builder\":\"3.1.0\",\"fast-xml-parser\":\"^3.16.0\",\"tslib\":\"^2.0.0\"},\"devDependencies\":{\"@aws-sdk/client-documentation-generator\":\"3.1.0\",\"@types/chai\":\"^4.2.11\",\"@types/mocha\":\"^8.0.4\",\"@types/node\":\"^12.7.5\",\"jest\":\"^26.1.0\",\"rimraf\":\"^3.0.0\",\"typedoc\":\"^0.19.2\",\"typescript\":\"~4.1.2\"},\"engines\":{\"node\":\">=10.0.0\"},\"author\":{\"name\":\"AWS SDK for JavaScript Team\",\"url\":\"https://aws.amazon.com/javascript/\"},\"license\":\"Apache-2.0\",\"homepage\":\"https://github.com/aws/aws-sdk-js-v3/tree/master/clients/client-s3\",\"repository\":{\"type\":\"git\",\"url\":\"https://github.com/aws/aws-sdk-js-v3.git\",\"directory\":\"clients/client-s3\"}}");
 
 /***/ }),
 
@@ -10048,7 +10048,7 @@ const serializeAws_restXmlCreateStreamingDistributionWithTagsCommand = async (in
 exports.serializeAws_restXmlCreateStreamingDistributionWithTagsCommand = serializeAws_restXmlCreateStreamingDistributionWithTagsCommand;
 const serializeAws_restXmlDeleteCachePolicyCommand = async (input, context) => {
     const headers = {
-        ...(isSerializableHeaderValue(input.IfMatch) && { "If-Match": input.IfMatch }),
+        ...(isSerializableHeaderValue(input.IfMatch) && { "if-match": input.IfMatch }),
     };
     let resolvedPath = "/2020-05-31/cache-policy/{Id}";
     if (input.Id !== undefined) {
@@ -10076,7 +10076,7 @@ const serializeAws_restXmlDeleteCachePolicyCommand = async (input, context) => {
 exports.serializeAws_restXmlDeleteCachePolicyCommand = serializeAws_restXmlDeleteCachePolicyCommand;
 const serializeAws_restXmlDeleteCloudFrontOriginAccessIdentityCommand = async (input, context) => {
     const headers = {
-        ...(isSerializableHeaderValue(input.IfMatch) && { "If-Match": input.IfMatch }),
+        ...(isSerializableHeaderValue(input.IfMatch) && { "if-match": input.IfMatch }),
     };
     let resolvedPath = "/2020-05-31/origin-access-identity/cloudfront/{Id}";
     if (input.Id !== undefined) {
@@ -10104,7 +10104,7 @@ const serializeAws_restXmlDeleteCloudFrontOriginAccessIdentityCommand = async (i
 exports.serializeAws_restXmlDeleteCloudFrontOriginAccessIdentityCommand = serializeAws_restXmlDeleteCloudFrontOriginAccessIdentityCommand;
 const serializeAws_restXmlDeleteDistributionCommand = async (input, context) => {
     const headers = {
-        ...(isSerializableHeaderValue(input.IfMatch) && { "If-Match": input.IfMatch }),
+        ...(isSerializableHeaderValue(input.IfMatch) && { "if-match": input.IfMatch }),
     };
     let resolvedPath = "/2020-05-31/distribution/{Id}";
     if (input.Id !== undefined) {
@@ -10132,7 +10132,7 @@ const serializeAws_restXmlDeleteDistributionCommand = async (input, context) => 
 exports.serializeAws_restXmlDeleteDistributionCommand = serializeAws_restXmlDeleteDistributionCommand;
 const serializeAws_restXmlDeleteFieldLevelEncryptionConfigCommand = async (input, context) => {
     const headers = {
-        ...(isSerializableHeaderValue(input.IfMatch) && { "If-Match": input.IfMatch }),
+        ...(isSerializableHeaderValue(input.IfMatch) && { "if-match": input.IfMatch }),
     };
     let resolvedPath = "/2020-05-31/field-level-encryption/{Id}";
     if (input.Id !== undefined) {
@@ -10160,7 +10160,7 @@ const serializeAws_restXmlDeleteFieldLevelEncryptionConfigCommand = async (input
 exports.serializeAws_restXmlDeleteFieldLevelEncryptionConfigCommand = serializeAws_restXmlDeleteFieldLevelEncryptionConfigCommand;
 const serializeAws_restXmlDeleteFieldLevelEncryptionProfileCommand = async (input, context) => {
     const headers = {
-        ...(isSerializableHeaderValue(input.IfMatch) && { "If-Match": input.IfMatch }),
+        ...(isSerializableHeaderValue(input.IfMatch) && { "if-match": input.IfMatch }),
     };
     let resolvedPath = "/2020-05-31/field-level-encryption-profile/{Id}";
     if (input.Id !== undefined) {
@@ -10188,7 +10188,7 @@ const serializeAws_restXmlDeleteFieldLevelEncryptionProfileCommand = async (inpu
 exports.serializeAws_restXmlDeleteFieldLevelEncryptionProfileCommand = serializeAws_restXmlDeleteFieldLevelEncryptionProfileCommand;
 const serializeAws_restXmlDeleteKeyGroupCommand = async (input, context) => {
     const headers = {
-        ...(isSerializableHeaderValue(input.IfMatch) && { "If-Match": input.IfMatch }),
+        ...(isSerializableHeaderValue(input.IfMatch) && { "if-match": input.IfMatch }),
     };
     let resolvedPath = "/2020-05-31/key-group/{Id}";
     if (input.Id !== undefined) {
@@ -10242,7 +10242,7 @@ const serializeAws_restXmlDeleteMonitoringSubscriptionCommand = async (input, co
 exports.serializeAws_restXmlDeleteMonitoringSubscriptionCommand = serializeAws_restXmlDeleteMonitoringSubscriptionCommand;
 const serializeAws_restXmlDeleteOriginRequestPolicyCommand = async (input, context) => {
     const headers = {
-        ...(isSerializableHeaderValue(input.IfMatch) && { "If-Match": input.IfMatch }),
+        ...(isSerializableHeaderValue(input.IfMatch) && { "if-match": input.IfMatch }),
     };
     let resolvedPath = "/2020-05-31/origin-request-policy/{Id}";
     if (input.Id !== undefined) {
@@ -10270,7 +10270,7 @@ const serializeAws_restXmlDeleteOriginRequestPolicyCommand = async (input, conte
 exports.serializeAws_restXmlDeleteOriginRequestPolicyCommand = serializeAws_restXmlDeleteOriginRequestPolicyCommand;
 const serializeAws_restXmlDeletePublicKeyCommand = async (input, context) => {
     const headers = {
-        ...(isSerializableHeaderValue(input.IfMatch) && { "If-Match": input.IfMatch }),
+        ...(isSerializableHeaderValue(input.IfMatch) && { "if-match": input.IfMatch }),
     };
     let resolvedPath = "/2020-05-31/public-key/{Id}";
     if (input.Id !== undefined) {
@@ -10328,7 +10328,7 @@ const serializeAws_restXmlDeleteRealtimeLogConfigCommand = async (input, context
 exports.serializeAws_restXmlDeleteRealtimeLogConfigCommand = serializeAws_restXmlDeleteRealtimeLogConfigCommand;
 const serializeAws_restXmlDeleteStreamingDistributionCommand = async (input, context) => {
     const headers = {
-        ...(isSerializableHeaderValue(input.IfMatch) && { "If-Match": input.IfMatch }),
+        ...(isSerializableHeaderValue(input.IfMatch) && { "if-match": input.IfMatch }),
     };
     let resolvedPath = "/2020-05-31/streaming-distribution/{Id}";
     if (input.Id !== undefined) {
@@ -11406,7 +11406,7 @@ exports.serializeAws_restXmlUntagResourceCommand = serializeAws_restXmlUntagReso
 const serializeAws_restXmlUpdateCachePolicyCommand = async (input, context) => {
     const headers = {
         "content-type": "application/xml",
-        ...(isSerializableHeaderValue(input.IfMatch) && { "If-Match": input.IfMatch }),
+        ...(isSerializableHeaderValue(input.IfMatch) && { "if-match": input.IfMatch }),
     };
     let resolvedPath = "/2020-05-31/cache-policy/{Id}";
     if (input.Id !== undefined) {
@@ -11442,7 +11442,7 @@ exports.serializeAws_restXmlUpdateCachePolicyCommand = serializeAws_restXmlUpdat
 const serializeAws_restXmlUpdateCloudFrontOriginAccessIdentityCommand = async (input, context) => {
     const headers = {
         "content-type": "application/xml",
-        ...(isSerializableHeaderValue(input.IfMatch) && { "If-Match": input.IfMatch }),
+        ...(isSerializableHeaderValue(input.IfMatch) && { "if-match": input.IfMatch }),
     };
     let resolvedPath = "/2020-05-31/origin-access-identity/cloudfront/{Id}/config";
     if (input.Id !== undefined) {
@@ -11478,7 +11478,7 @@ exports.serializeAws_restXmlUpdateCloudFrontOriginAccessIdentityCommand = serial
 const serializeAws_restXmlUpdateDistributionCommand = async (input, context) => {
     const headers = {
         "content-type": "application/xml",
-        ...(isSerializableHeaderValue(input.IfMatch) && { "If-Match": input.IfMatch }),
+        ...(isSerializableHeaderValue(input.IfMatch) && { "if-match": input.IfMatch }),
     };
     let resolvedPath = "/2020-05-31/distribution/{Id}/config";
     if (input.Id !== undefined) {
@@ -11514,7 +11514,7 @@ exports.serializeAws_restXmlUpdateDistributionCommand = serializeAws_restXmlUpda
 const serializeAws_restXmlUpdateFieldLevelEncryptionConfigCommand = async (input, context) => {
     const headers = {
         "content-type": "application/xml",
-        ...(isSerializableHeaderValue(input.IfMatch) && { "If-Match": input.IfMatch }),
+        ...(isSerializableHeaderValue(input.IfMatch) && { "if-match": input.IfMatch }),
     };
     let resolvedPath = "/2020-05-31/field-level-encryption/{Id}/config";
     if (input.Id !== undefined) {
@@ -11550,7 +11550,7 @@ exports.serializeAws_restXmlUpdateFieldLevelEncryptionConfigCommand = serializeA
 const serializeAws_restXmlUpdateFieldLevelEncryptionProfileCommand = async (input, context) => {
     const headers = {
         "content-type": "application/xml",
-        ...(isSerializableHeaderValue(input.IfMatch) && { "If-Match": input.IfMatch }),
+        ...(isSerializableHeaderValue(input.IfMatch) && { "if-match": input.IfMatch }),
     };
     let resolvedPath = "/2020-05-31/field-level-encryption-profile/{Id}/config";
     if (input.Id !== undefined) {
@@ -11586,7 +11586,7 @@ exports.serializeAws_restXmlUpdateFieldLevelEncryptionProfileCommand = serialize
 const serializeAws_restXmlUpdateKeyGroupCommand = async (input, context) => {
     const headers = {
         "content-type": "application/xml",
-        ...(isSerializableHeaderValue(input.IfMatch) && { "If-Match": input.IfMatch }),
+        ...(isSerializableHeaderValue(input.IfMatch) && { "if-match": input.IfMatch }),
     };
     let resolvedPath = "/2020-05-31/key-group/{Id}";
     if (input.Id !== undefined) {
@@ -11622,7 +11622,7 @@ exports.serializeAws_restXmlUpdateKeyGroupCommand = serializeAws_restXmlUpdateKe
 const serializeAws_restXmlUpdateOriginRequestPolicyCommand = async (input, context) => {
     const headers = {
         "content-type": "application/xml",
-        ...(isSerializableHeaderValue(input.IfMatch) && { "If-Match": input.IfMatch }),
+        ...(isSerializableHeaderValue(input.IfMatch) && { "if-match": input.IfMatch }),
     };
     let resolvedPath = "/2020-05-31/origin-request-policy/{Id}";
     if (input.Id !== undefined) {
@@ -11658,7 +11658,7 @@ exports.serializeAws_restXmlUpdateOriginRequestPolicyCommand = serializeAws_rest
 const serializeAws_restXmlUpdatePublicKeyCommand = async (input, context) => {
     const headers = {
         "content-type": "application/xml",
-        ...(isSerializableHeaderValue(input.IfMatch) && { "If-Match": input.IfMatch }),
+        ...(isSerializableHeaderValue(input.IfMatch) && { "if-match": input.IfMatch }),
     };
     let resolvedPath = "/2020-05-31/public-key/{Id}/config";
     if (input.Id !== undefined) {
@@ -11744,7 +11744,7 @@ exports.serializeAws_restXmlUpdateRealtimeLogConfigCommand = serializeAws_restXm
 const serializeAws_restXmlUpdateStreamingDistributionCommand = async (input, context) => {
     const headers = {
         "content-type": "application/xml",
-        ...(isSerializableHeaderValue(input.IfMatch) && { "If-Match": input.IfMatch }),
+        ...(isSerializableHeaderValue(input.IfMatch) && { "if-match": input.IfMatch }),
     };
     let resolvedPath = "/2020-05-31/streaming-distribution/{Id}/config";
     if (input.Id !== undefined) {
@@ -24477,7 +24477,6 @@ const hash_node_1 = __nccwpck_require__(90791);
 const middleware_retry_1 = __nccwpck_require__(7000);
 const node_config_provider_1 = __nccwpck_require__(71124);
 const node_http_handler_1 = __nccwpck_require__(15168);
-const url_parser_node_1 = __nccwpck_require__(57974);
 const util_base64_node_1 = __nccwpck_require__(2091);
 const util_body_length_node_1 = __nccwpck_require__(40286);
 const util_user_agent_node_1 = __nccwpck_require__(64717);
@@ -24502,7 +24501,6 @@ exports.ClientDefaultValues = {
     requestHandler: new node_http_handler_1.NodeHttpHandler(),
     sha256: hash_node_1.Hash.bind(null, "sha256"),
     streamCollector: node_http_handler_1.streamCollector,
-    urlParser: url_parser_node_1.parseUrl,
     utf8Decoder: util_utf8_node_1.fromUtf8,
     utf8Encoder: util_utf8_node_1.toUtf8,
 };
@@ -24518,6 +24516,7 @@ exports.ClientDefaultValues = {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.ClientSharedValues = void 0;
 const endpoints_1 = __nccwpck_require__(7032);
+const url_parser_1 = __nccwpck_require__(99427);
 /**
  * @internal
  */
@@ -24527,6 +24526,7 @@ exports.ClientSharedValues = {
     logger: {},
     regionInfoProvider: endpoints_1.defaultRegionInfoProvider,
     serviceId: "CloudFront",
+    urlParser: url_parser_1.parseUrl,
 };
 //# sourceMappingURL=runtimeConfig.shared.js.map
 
@@ -38889,11 +38889,11 @@ exports.serializeAws_restXmlCompleteMultipartUploadCommand = serializeAws_restXm
 const serializeAws_restXmlCopyObjectCommand = async (input, context) => {
     const headers = {
         ...(isSerializableHeaderValue(input.ACL) && { "x-amz-acl": input.ACL }),
-        ...(isSerializableHeaderValue(input.CacheControl) && { "Cache-Control": input.CacheControl }),
-        ...(isSerializableHeaderValue(input.ContentDisposition) && { "Content-Disposition": input.ContentDisposition }),
-        ...(isSerializableHeaderValue(input.ContentEncoding) && { "Content-Encoding": input.ContentEncoding }),
-        ...(isSerializableHeaderValue(input.ContentLanguage) && { "Content-Language": input.ContentLanguage }),
-        ...(isSerializableHeaderValue(input.ContentType) && { "Content-Type": input.ContentType }),
+        ...(isSerializableHeaderValue(input.CacheControl) && { "cache-control": input.CacheControl }),
+        ...(isSerializableHeaderValue(input.ContentDisposition) && { "content-disposition": input.ContentDisposition }),
+        ...(isSerializableHeaderValue(input.ContentEncoding) && { "content-encoding": input.ContentEncoding }),
+        ...(isSerializableHeaderValue(input.ContentLanguage) && { "content-language": input.ContentLanguage }),
+        ...(isSerializableHeaderValue(input.ContentType) && { "content-type": input.ContentType }),
         ...(isSerializableHeaderValue(input.CopySource) && { "x-amz-copy-source": input.CopySource }),
         ...(isSerializableHeaderValue(input.CopySourceIfMatch) && {
             "x-amz-copy-source-if-match": input.CopySourceIfMatch,
@@ -38907,7 +38907,7 @@ const serializeAws_restXmlCopyObjectCommand = async (input, context) => {
         ...(isSerializableHeaderValue(input.CopySourceIfUnmodifiedSince) && {
             "x-amz-copy-source-if-unmodified-since": smithy_client_1.dateToUtcString(input.CopySourceIfUnmodifiedSince).toString(),
         }),
-        ...(isSerializableHeaderValue(input.Expires) && { Expires: smithy_client_1.dateToUtcString(input.Expires).toString() }),
+        ...(isSerializableHeaderValue(input.Expires) && { expires: smithy_client_1.dateToUtcString(input.Expires).toString() }),
         ...(isSerializableHeaderValue(input.GrantFullControl) && { "x-amz-grant-full-control": input.GrantFullControl }),
         ...(isSerializableHeaderValue(input.GrantRead) && { "x-amz-grant-read": input.GrantRead }),
         ...(isSerializableHeaderValue(input.GrantReadACP) && { "x-amz-grant-read-acp": input.GrantReadACP }),
@@ -38928,7 +38928,7 @@ const serializeAws_restXmlCopyObjectCommand = async (input, context) => {
             "x-amz-server-side-encryption-customer-key": input.SSECustomerKey,
         }),
         ...(isSerializableHeaderValue(input.SSECustomerKeyMD5) && {
-            "x-amz-server-side-encryption-customer-key-MD5": input.SSECustomerKeyMD5,
+            "x-amz-server-side-encryption-customer-key-md5": input.SSECustomerKeyMD5,
         }),
         ...(isSerializableHeaderValue(input.SSEKMSKeyId) && {
             "x-amz-server-side-encryption-aws-kms-key-id": input.SSEKMSKeyId,
@@ -38946,7 +38946,7 @@ const serializeAws_restXmlCopyObjectCommand = async (input, context) => {
             "x-amz-copy-source-server-side-encryption-customer-key": input.CopySourceSSECustomerKey,
         }),
         ...(isSerializableHeaderValue(input.CopySourceSSECustomerKeyMD5) && {
-            "x-amz-copy-source-server-side-encryption-customer-key-MD5": input.CopySourceSSECustomerKeyMD5,
+            "x-amz-copy-source-server-side-encryption-customer-key-md5": input.CopySourceSSECustomerKeyMD5,
         }),
         ...(isSerializableHeaderValue(input.RequestPayer) && { "x-amz-request-payer": input.RequestPayer }),
         ...(isSerializableHeaderValue(input.Tagging) && { "x-amz-tagging": input.Tagging }),
@@ -38964,10 +38964,10 @@ const serializeAws_restXmlCopyObjectCommand = async (input, context) => {
             "x-amz-source-expected-bucket-owner": input.ExpectedSourceBucketOwner,
         }),
         ...(input.Metadata !== undefined &&
-            Object.keys(input.Metadata).reduce((acc, suffix) => {
-                acc["x-amz-meta-" + suffix] = input.Metadata[suffix];
-                return acc;
-            }, {})),
+            Object.keys(input.Metadata).reduce((acc, suffix) => ({
+                ...acc,
+                [`x-amz-meta-${suffix.toLowerCase()}`]: input.Metadata[suffix],
+            }), {})),
     };
     let resolvedPath = "/{Bucket}/{Key+}";
     if (input.Bucket !== undefined) {
@@ -39057,12 +39057,12 @@ exports.serializeAws_restXmlCreateBucketCommand = serializeAws_restXmlCreateBuck
 const serializeAws_restXmlCreateMultipartUploadCommand = async (input, context) => {
     const headers = {
         ...(isSerializableHeaderValue(input.ACL) && { "x-amz-acl": input.ACL }),
-        ...(isSerializableHeaderValue(input.CacheControl) && { "Cache-Control": input.CacheControl }),
-        ...(isSerializableHeaderValue(input.ContentDisposition) && { "Content-Disposition": input.ContentDisposition }),
-        ...(isSerializableHeaderValue(input.ContentEncoding) && { "Content-Encoding": input.ContentEncoding }),
-        ...(isSerializableHeaderValue(input.ContentLanguage) && { "Content-Language": input.ContentLanguage }),
-        ...(isSerializableHeaderValue(input.ContentType) && { "Content-Type": input.ContentType }),
-        ...(isSerializableHeaderValue(input.Expires) && { Expires: smithy_client_1.dateToUtcString(input.Expires).toString() }),
+        ...(isSerializableHeaderValue(input.CacheControl) && { "cache-control": input.CacheControl }),
+        ...(isSerializableHeaderValue(input.ContentDisposition) && { "content-disposition": input.ContentDisposition }),
+        ...(isSerializableHeaderValue(input.ContentEncoding) && { "content-encoding": input.ContentEncoding }),
+        ...(isSerializableHeaderValue(input.ContentLanguage) && { "content-language": input.ContentLanguage }),
+        ...(isSerializableHeaderValue(input.ContentType) && { "content-type": input.ContentType }),
+        ...(isSerializableHeaderValue(input.Expires) && { expires: smithy_client_1.dateToUtcString(input.Expires).toString() }),
         ...(isSerializableHeaderValue(input.GrantFullControl) && { "x-amz-grant-full-control": input.GrantFullControl }),
         ...(isSerializableHeaderValue(input.GrantRead) && { "x-amz-grant-read": input.GrantRead }),
         ...(isSerializableHeaderValue(input.GrantReadACP) && { "x-amz-grant-read-acp": input.GrantReadACP }),
@@ -39081,7 +39081,7 @@ const serializeAws_restXmlCreateMultipartUploadCommand = async (input, context) 
             "x-amz-server-side-encryption-customer-key": input.SSECustomerKey,
         }),
         ...(isSerializableHeaderValue(input.SSECustomerKeyMD5) && {
-            "x-amz-server-side-encryption-customer-key-MD5": input.SSECustomerKeyMD5,
+            "x-amz-server-side-encryption-customer-key-md5": input.SSECustomerKeyMD5,
         }),
         ...(isSerializableHeaderValue(input.SSEKMSKeyId) && {
             "x-amz-server-side-encryption-aws-kms-key-id": input.SSEKMSKeyId,
@@ -39105,10 +39105,10 @@ const serializeAws_restXmlCreateMultipartUploadCommand = async (input, context) 
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
         ...(input.Metadata !== undefined &&
-            Object.keys(input.Metadata).reduce((acc, suffix) => {
-                acc["x-amz-meta-" + suffix] = input.Metadata[suffix];
-                return acc;
-            }, {})),
+            Object.keys(input.Metadata).reduce((acc, suffix) => ({
+                ...acc,
+                [`x-amz-meta-${suffix.toLowerCase()}`]: input.Metadata[suffix],
+            }), {})),
     };
     let resolvedPath = "/{Bucket}/{Key+}";
     if (input.Bucket !== undefined) {
@@ -40457,15 +40457,15 @@ const serializeAws_restXmlGetBucketWebsiteCommand = async (input, context) => {
 exports.serializeAws_restXmlGetBucketWebsiteCommand = serializeAws_restXmlGetBucketWebsiteCommand;
 const serializeAws_restXmlGetObjectCommand = async (input, context) => {
     const headers = {
-        ...(isSerializableHeaderValue(input.IfMatch) && { "If-Match": input.IfMatch }),
+        ...(isSerializableHeaderValue(input.IfMatch) && { "if-match": input.IfMatch }),
         ...(isSerializableHeaderValue(input.IfModifiedSince) && {
-            "If-Modified-Since": smithy_client_1.dateToUtcString(input.IfModifiedSince).toString(),
+            "if-modified-since": smithy_client_1.dateToUtcString(input.IfModifiedSince).toString(),
         }),
-        ...(isSerializableHeaderValue(input.IfNoneMatch) && { "If-None-Match": input.IfNoneMatch }),
+        ...(isSerializableHeaderValue(input.IfNoneMatch) && { "if-none-match": input.IfNoneMatch }),
         ...(isSerializableHeaderValue(input.IfUnmodifiedSince) && {
-            "If-Unmodified-Since": smithy_client_1.dateToUtcString(input.IfUnmodifiedSince).toString(),
+            "if-unmodified-since": smithy_client_1.dateToUtcString(input.IfUnmodifiedSince).toString(),
         }),
-        ...(isSerializableHeaderValue(input.Range) && { Range: input.Range }),
+        ...(isSerializableHeaderValue(input.Range) && { range: input.Range }),
         ...(isSerializableHeaderValue(input.SSECustomerAlgorithm) && {
             "x-amz-server-side-encryption-customer-algorithm": input.SSECustomerAlgorithm,
         }),
@@ -40473,7 +40473,7 @@ const serializeAws_restXmlGetObjectCommand = async (input, context) => {
             "x-amz-server-side-encryption-customer-key": input.SSECustomerKey,
         }),
         ...(isSerializableHeaderValue(input.SSECustomerKeyMD5) && {
-            "x-amz-server-side-encryption-customer-key-MD5": input.SSECustomerKeyMD5,
+            "x-amz-server-side-encryption-customer-key-md5": input.SSECustomerKeyMD5,
         }),
         ...(isSerializableHeaderValue(input.RequestPayer) && { "x-amz-request-payer": input.RequestPayer }),
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
@@ -40876,15 +40876,15 @@ const serializeAws_restXmlHeadBucketCommand = async (input, context) => {
 exports.serializeAws_restXmlHeadBucketCommand = serializeAws_restXmlHeadBucketCommand;
 const serializeAws_restXmlHeadObjectCommand = async (input, context) => {
     const headers = {
-        ...(isSerializableHeaderValue(input.IfMatch) && { "If-Match": input.IfMatch }),
+        ...(isSerializableHeaderValue(input.IfMatch) && { "if-match": input.IfMatch }),
         ...(isSerializableHeaderValue(input.IfModifiedSince) && {
-            "If-Modified-Since": smithy_client_1.dateToUtcString(input.IfModifiedSince).toString(),
+            "if-modified-since": smithy_client_1.dateToUtcString(input.IfModifiedSince).toString(),
         }),
-        ...(isSerializableHeaderValue(input.IfNoneMatch) && { "If-None-Match": input.IfNoneMatch }),
+        ...(isSerializableHeaderValue(input.IfNoneMatch) && { "if-none-match": input.IfNoneMatch }),
         ...(isSerializableHeaderValue(input.IfUnmodifiedSince) && {
-            "If-Unmodified-Since": smithy_client_1.dateToUtcString(input.IfUnmodifiedSince).toString(),
+            "if-unmodified-since": smithy_client_1.dateToUtcString(input.IfUnmodifiedSince).toString(),
         }),
-        ...(isSerializableHeaderValue(input.Range) && { Range: input.Range }),
+        ...(isSerializableHeaderValue(input.Range) && { range: input.Range }),
         ...(isSerializableHeaderValue(input.SSECustomerAlgorithm) && {
             "x-amz-server-side-encryption-customer-algorithm": input.SSECustomerAlgorithm,
         }),
@@ -40892,7 +40892,7 @@ const serializeAws_restXmlHeadObjectCommand = async (input, context) => {
             "x-amz-server-side-encryption-customer-key": input.SSECustomerKey,
         }),
         ...(isSerializableHeaderValue(input.SSECustomerKeyMD5) && {
-            "x-amz-server-side-encryption-customer-key-MD5": input.SSECustomerKeyMD5,
+            "x-amz-server-side-encryption-customer-key-md5": input.SSECustomerKeyMD5,
         }),
         ...(isSerializableHeaderValue(input.RequestPayer) && { "x-amz-request-payer": input.RequestPayer }),
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
@@ -41356,7 +41356,7 @@ const serializeAws_restXmlPutBucketAclCommand = async (input, context) => {
     const headers = {
         "content-type": "application/xml",
         ...(isSerializableHeaderValue(input.ACL) && { "x-amz-acl": input.ACL }),
-        ...(isSerializableHeaderValue(input.ContentMD5) && { "Content-MD5": input.ContentMD5 }),
+        ...(isSerializableHeaderValue(input.ContentMD5) && { "content-md5": input.ContentMD5 }),
         ...(isSerializableHeaderValue(input.GrantFullControl) && { "x-amz-grant-full-control": input.GrantFullControl }),
         ...(isSerializableHeaderValue(input.GrantRead) && { "x-amz-grant-read": input.GrantRead }),
         ...(isSerializableHeaderValue(input.GrantReadACP) && { "x-amz-grant-read-acp": input.GrantReadACP }),
@@ -41447,7 +41447,7 @@ exports.serializeAws_restXmlPutBucketAnalyticsConfigurationCommand = serializeAw
 const serializeAws_restXmlPutBucketCorsCommand = async (input, context) => {
     const headers = {
         "content-type": "application/xml",
-        ...(isSerializableHeaderValue(input.ContentMD5) && { "Content-MD5": input.ContentMD5 }),
+        ...(isSerializableHeaderValue(input.ContentMD5) && { "content-md5": input.ContentMD5 }),
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -41490,7 +41490,7 @@ exports.serializeAws_restXmlPutBucketCorsCommand = serializeAws_restXmlPutBucket
 const serializeAws_restXmlPutBucketEncryptionCommand = async (input, context) => {
     const headers = {
         "content-type": "application/xml",
-        ...(isSerializableHeaderValue(input.ContentMD5) && { "Content-MD5": input.ContentMD5 }),
+        ...(isSerializableHeaderValue(input.ContentMD5) && { "content-md5": input.ContentMD5 }),
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -41658,7 +41658,7 @@ exports.serializeAws_restXmlPutBucketLifecycleConfigurationCommand = serializeAw
 const serializeAws_restXmlPutBucketLoggingCommand = async (input, context) => {
     const headers = {
         "content-type": "application/xml",
-        ...(isSerializableHeaderValue(input.ContentMD5) && { "Content-MD5": input.ContentMD5 }),
+        ...(isSerializableHeaderValue(input.ContentMD5) && { "content-md5": input.ContentMD5 }),
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -41786,7 +41786,7 @@ exports.serializeAws_restXmlPutBucketNotificationConfigurationCommand = serializ
 const serializeAws_restXmlPutBucketOwnershipControlsCommand = async (input, context) => {
     const headers = {
         "content-type": "application/xml",
-        ...(isSerializableHeaderValue(input.ContentMD5) && { "Content-MD5": input.ContentMD5 }),
+        ...(isSerializableHeaderValue(input.ContentMD5) && { "content-md5": input.ContentMD5 }),
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -41829,7 +41829,7 @@ exports.serializeAws_restXmlPutBucketOwnershipControlsCommand = serializeAws_res
 const serializeAws_restXmlPutBucketPolicyCommand = async (input, context) => {
     const headers = {
         "content-type": "text/plain",
-        ...(isSerializableHeaderValue(input.ContentMD5) && { "Content-MD5": input.ContentMD5 }),
+        ...(isSerializableHeaderValue(input.ContentMD5) && { "content-md5": input.ContentMD5 }),
         ...(isSerializableHeaderValue(input.ConfirmRemoveSelfBucketAccess) && {
             "x-amz-confirm-remove-self-bucket-access": input.ConfirmRemoveSelfBucketAccess.toString(),
         }),
@@ -41873,7 +41873,7 @@ exports.serializeAws_restXmlPutBucketPolicyCommand = serializeAws_restXmlPutBuck
 const serializeAws_restXmlPutBucketReplicationCommand = async (input, context) => {
     const headers = {
         "content-type": "application/xml",
-        ...(isSerializableHeaderValue(input.ContentMD5) && { "Content-MD5": input.ContentMD5 }),
+        ...(isSerializableHeaderValue(input.ContentMD5) && { "content-md5": input.ContentMD5 }),
         ...(isSerializableHeaderValue(input.Token) && { "x-amz-bucket-object-lock-token": input.Token }),
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -41917,7 +41917,7 @@ exports.serializeAws_restXmlPutBucketReplicationCommand = serializeAws_restXmlPu
 const serializeAws_restXmlPutBucketRequestPaymentCommand = async (input, context) => {
     const headers = {
         "content-type": "application/xml",
-        ...(isSerializableHeaderValue(input.ContentMD5) && { "Content-MD5": input.ContentMD5 }),
+        ...(isSerializableHeaderValue(input.ContentMD5) && { "content-md5": input.ContentMD5 }),
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -41960,7 +41960,7 @@ exports.serializeAws_restXmlPutBucketRequestPaymentCommand = serializeAws_restXm
 const serializeAws_restXmlPutBucketTaggingCommand = async (input, context) => {
     const headers = {
         "content-type": "application/xml",
-        ...(isSerializableHeaderValue(input.ContentMD5) && { "Content-MD5": input.ContentMD5 }),
+        ...(isSerializableHeaderValue(input.ContentMD5) && { "content-md5": input.ContentMD5 }),
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -42003,7 +42003,7 @@ exports.serializeAws_restXmlPutBucketTaggingCommand = serializeAws_restXmlPutBuc
 const serializeAws_restXmlPutBucketVersioningCommand = async (input, context) => {
     const headers = {
         "content-type": "application/xml",
-        ...(isSerializableHeaderValue(input.ContentMD5) && { "Content-MD5": input.ContentMD5 }),
+        ...(isSerializableHeaderValue(input.ContentMD5) && { "content-md5": input.ContentMD5 }),
         ...(isSerializableHeaderValue(input.MFA) && { "x-amz-mfa": input.MFA }),
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -42047,7 +42047,7 @@ exports.serializeAws_restXmlPutBucketVersioningCommand = serializeAws_restXmlPut
 const serializeAws_restXmlPutBucketWebsiteCommand = async (input, context) => {
     const headers = {
         "content-type": "application/xml",
-        ...(isSerializableHeaderValue(input.ContentMD5) && { "Content-MD5": input.ContentMD5 }),
+        ...(isSerializableHeaderValue(input.ContentMD5) && { "content-md5": input.ContentMD5 }),
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -42091,14 +42091,14 @@ const serializeAws_restXmlPutObjectCommand = async (input, context) => {
     const headers = {
         "content-type": "application/octet-stream",
         ...(isSerializableHeaderValue(input.ACL) && { "x-amz-acl": input.ACL }),
-        ...(isSerializableHeaderValue(input.CacheControl) && { "Cache-Control": input.CacheControl }),
-        ...(isSerializableHeaderValue(input.ContentDisposition) && { "Content-Disposition": input.ContentDisposition }),
-        ...(isSerializableHeaderValue(input.ContentEncoding) && { "Content-Encoding": input.ContentEncoding }),
-        ...(isSerializableHeaderValue(input.ContentLanguage) && { "Content-Language": input.ContentLanguage }),
-        ...(isSerializableHeaderValue(input.ContentLength) && { "Content-Length": input.ContentLength.toString() }),
-        ...(isSerializableHeaderValue(input.ContentMD5) && { "Content-MD5": input.ContentMD5 }),
-        ...(isSerializableHeaderValue(input.ContentType) && { "Content-Type": input.ContentType }),
-        ...(isSerializableHeaderValue(input.Expires) && { Expires: smithy_client_1.dateToUtcString(input.Expires).toString() }),
+        ...(isSerializableHeaderValue(input.CacheControl) && { "cache-control": input.CacheControl }),
+        ...(isSerializableHeaderValue(input.ContentDisposition) && { "content-disposition": input.ContentDisposition }),
+        ...(isSerializableHeaderValue(input.ContentEncoding) && { "content-encoding": input.ContentEncoding }),
+        ...(isSerializableHeaderValue(input.ContentLanguage) && { "content-language": input.ContentLanguage }),
+        ...(isSerializableHeaderValue(input.ContentLength) && { "content-length": input.ContentLength.toString() }),
+        ...(isSerializableHeaderValue(input.ContentMD5) && { "content-md5": input.ContentMD5 }),
+        ...(isSerializableHeaderValue(input.ContentType) && { "content-type": input.ContentType }),
+        ...(isSerializableHeaderValue(input.Expires) && { expires: smithy_client_1.dateToUtcString(input.Expires).toString() }),
         ...(isSerializableHeaderValue(input.GrantFullControl) && { "x-amz-grant-full-control": input.GrantFullControl }),
         ...(isSerializableHeaderValue(input.GrantRead) && { "x-amz-grant-read": input.GrantRead }),
         ...(isSerializableHeaderValue(input.GrantReadACP) && { "x-amz-grant-read-acp": input.GrantReadACP }),
@@ -42117,7 +42117,7 @@ const serializeAws_restXmlPutObjectCommand = async (input, context) => {
             "x-amz-server-side-encryption-customer-key": input.SSECustomerKey,
         }),
         ...(isSerializableHeaderValue(input.SSECustomerKeyMD5) && {
-            "x-amz-server-side-encryption-customer-key-MD5": input.SSECustomerKeyMD5,
+            "x-amz-server-side-encryption-customer-key-md5": input.SSECustomerKeyMD5,
         }),
         ...(isSerializableHeaderValue(input.SSEKMSKeyId) && {
             "x-amz-server-side-encryption-aws-kms-key-id": input.SSEKMSKeyId,
@@ -42141,10 +42141,10 @@ const serializeAws_restXmlPutObjectCommand = async (input, context) => {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
         ...(input.Metadata !== undefined &&
-            Object.keys(input.Metadata).reduce((acc, suffix) => {
-                acc["x-amz-meta-" + suffix] = input.Metadata[suffix];
-                return acc;
-            }, {})),
+            Object.keys(input.Metadata).reduce((acc, suffix) => ({
+                ...acc,
+                [`x-amz-meta-${suffix.toLowerCase()}`]: input.Metadata[suffix],
+            }), {})),
     };
     let resolvedPath = "/{Bucket}/{Key+}";
     if (input.Bucket !== undefined) {
@@ -42196,7 +42196,7 @@ const serializeAws_restXmlPutObjectAclCommand = async (input, context) => {
     const headers = {
         "content-type": "application/xml",
         ...(isSerializableHeaderValue(input.ACL) && { "x-amz-acl": input.ACL }),
-        ...(isSerializableHeaderValue(input.ContentMD5) && { "Content-MD5": input.ContentMD5 }),
+        ...(isSerializableHeaderValue(input.ContentMD5) && { "content-md5": input.ContentMD5 }),
         ...(isSerializableHeaderValue(input.GrantFullControl) && { "x-amz-grant-full-control": input.GrantFullControl }),
         ...(isSerializableHeaderValue(input.GrantRead) && { "x-amz-grant-read": input.GrantRead }),
         ...(isSerializableHeaderValue(input.GrantReadACP) && { "x-amz-grant-read-acp": input.GrantReadACP }),
@@ -42260,7 +42260,7 @@ const serializeAws_restXmlPutObjectLegalHoldCommand = async (input, context) => 
     const headers = {
         "content-type": "application/xml",
         ...(isSerializableHeaderValue(input.RequestPayer) && { "x-amz-request-payer": input.RequestPayer }),
-        ...(isSerializableHeaderValue(input.ContentMD5) && { "Content-MD5": input.ContentMD5 }),
+        ...(isSerializableHeaderValue(input.ContentMD5) && { "content-md5": input.ContentMD5 }),
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -42319,7 +42319,7 @@ const serializeAws_restXmlPutObjectLockConfigurationCommand = async (input, cont
         "content-type": "application/xml",
         ...(isSerializableHeaderValue(input.RequestPayer) && { "x-amz-request-payer": input.RequestPayer }),
         ...(isSerializableHeaderValue(input.Token) && { "x-amz-bucket-object-lock-token": input.Token }),
-        ...(isSerializableHeaderValue(input.ContentMD5) && { "Content-MD5": input.ContentMD5 }),
+        ...(isSerializableHeaderValue(input.ContentMD5) && { "content-md5": input.ContentMD5 }),
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -42366,7 +42366,7 @@ const serializeAws_restXmlPutObjectRetentionCommand = async (input, context) => 
         ...(isSerializableHeaderValue(input.BypassGovernanceRetention) && {
             "x-amz-bypass-governance-retention": input.BypassGovernanceRetention.toString(),
         }),
-        ...(isSerializableHeaderValue(input.ContentMD5) && { "Content-MD5": input.ContentMD5 }),
+        ...(isSerializableHeaderValue(input.ContentMD5) && { "content-md5": input.ContentMD5 }),
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -42423,7 +42423,7 @@ exports.serializeAws_restXmlPutObjectRetentionCommand = serializeAws_restXmlPutO
 const serializeAws_restXmlPutObjectTaggingCommand = async (input, context) => {
     const headers = {
         "content-type": "application/xml",
-        ...(isSerializableHeaderValue(input.ContentMD5) && { "Content-MD5": input.ContentMD5 }),
+        ...(isSerializableHeaderValue(input.ContentMD5) && { "content-md5": input.ContentMD5 }),
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -42480,7 +42480,7 @@ exports.serializeAws_restXmlPutObjectTaggingCommand = serializeAws_restXmlPutObj
 const serializeAws_restXmlPutPublicAccessBlockCommand = async (input, context) => {
     const headers = {
         "content-type": "application/xml",
-        ...(isSerializableHeaderValue(input.ContentMD5) && { "Content-MD5": input.ContentMD5 }),
+        ...(isSerializableHeaderValue(input.ContentMD5) && { "content-md5": input.ContentMD5 }),
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
@@ -42587,7 +42587,7 @@ const serializeAws_restXmlSelectObjectContentCommand = async (input, context) =>
             "x-amz-server-side-encryption-customer-key": input.SSECustomerKey,
         }),
         ...(isSerializableHeaderValue(input.SSECustomerKeyMD5) && {
-            "x-amz-server-side-encryption-customer-key-MD5": input.SSECustomerKeyMD5,
+            "x-amz-server-side-encryption-customer-key-md5": input.SSECustomerKeyMD5,
         }),
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
@@ -42668,8 +42668,8 @@ exports.serializeAws_restXmlSelectObjectContentCommand = serializeAws_restXmlSel
 const serializeAws_restXmlUploadPartCommand = async (input, context) => {
     const headers = {
         "content-type": "application/octet-stream",
-        ...(isSerializableHeaderValue(input.ContentLength) && { "Content-Length": input.ContentLength.toString() }),
-        ...(isSerializableHeaderValue(input.ContentMD5) && { "Content-MD5": input.ContentMD5 }),
+        ...(isSerializableHeaderValue(input.ContentLength) && { "content-length": input.ContentLength.toString() }),
+        ...(isSerializableHeaderValue(input.ContentMD5) && { "content-md5": input.ContentMD5 }),
         ...(isSerializableHeaderValue(input.SSECustomerAlgorithm) && {
             "x-amz-server-side-encryption-customer-algorithm": input.SSECustomerAlgorithm,
         }),
@@ -42677,7 +42677,7 @@ const serializeAws_restXmlUploadPartCommand = async (input, context) => {
             "x-amz-server-side-encryption-customer-key": input.SSECustomerKey,
         }),
         ...(isSerializableHeaderValue(input.SSECustomerKeyMD5) && {
-            "x-amz-server-side-encryption-customer-key-MD5": input.SSECustomerKeyMD5,
+            "x-amz-server-side-encryption-customer-key-md5": input.SSECustomerKeyMD5,
         }),
         ...(isSerializableHeaderValue(input.RequestPayer) && { "x-amz-request-payer": input.RequestPayer }),
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
@@ -42755,7 +42755,7 @@ const serializeAws_restXmlUploadPartCopyCommand = async (input, context) => {
             "x-amz-server-side-encryption-customer-key": input.SSECustomerKey,
         }),
         ...(isSerializableHeaderValue(input.SSECustomerKeyMD5) && {
-            "x-amz-server-side-encryption-customer-key-MD5": input.SSECustomerKeyMD5,
+            "x-amz-server-side-encryption-customer-key-md5": input.SSECustomerKeyMD5,
         }),
         ...(isSerializableHeaderValue(input.CopySourceSSECustomerAlgorithm) && {
             "x-amz-copy-source-server-side-encryption-customer-algorithm": input.CopySourceSSECustomerAlgorithm,
@@ -42764,7 +42764,7 @@ const serializeAws_restXmlUploadPartCopyCommand = async (input, context) => {
             "x-amz-copy-source-server-side-encryption-customer-key": input.CopySourceSSECustomerKey,
         }),
         ...(isSerializableHeaderValue(input.CopySourceSSECustomerKeyMD5) && {
-            "x-amz-copy-source-server-side-encryption-customer-key-MD5": input.CopySourceSSECustomerKeyMD5,
+            "x-amz-copy-source-server-side-encryption-customer-key-md5": input.CopySourceSSECustomerKeyMD5,
         }),
         ...(isSerializableHeaderValue(input.RequestPayer) && { "x-amz-request-payer": input.RequestPayer }),
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
@@ -51236,7 +51236,6 @@ const middleware_bucket_endpoint_1 = __nccwpck_require__(99239);
 const middleware_retry_1 = __nccwpck_require__(7000);
 const node_config_provider_1 = __nccwpck_require__(71124);
 const node_http_handler_1 = __nccwpck_require__(15168);
-const url_parser_node_1 = __nccwpck_require__(57974);
 const util_base64_node_1 = __nccwpck_require__(2091);
 const util_body_length_node_1 = __nccwpck_require__(40286);
 const util_user_agent_node_1 = __nccwpck_require__(64717);
@@ -51264,7 +51263,6 @@ exports.ClientDefaultValues = {
     sha256: hash_node_1.Hash.bind(null, "sha256"),
     streamCollector: node_http_handler_1.streamCollector,
     streamHasher: hash_stream_node_1.fileStreamHasher,
-    urlParser: url_parser_node_1.parseUrl,
     useArnRegion: node_config_provider_1.loadConfig(middleware_bucket_endpoint_1.NODE_USE_ARN_REGION_CONFIG_OPTIONS),
     utf8Decoder: util_utf8_node_1.fromUtf8,
     utf8Encoder: util_utf8_node_1.toUtf8,
@@ -51281,6 +51279,7 @@ exports.ClientDefaultValues = {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.ClientSharedValues = void 0;
 const endpoints_1 = __nccwpck_require__(90133);
+const url_parser_1 = __nccwpck_require__(99427);
 /**
  * @internal
  */
@@ -51291,6 +51290,7 @@ exports.ClientSharedValues = {
     regionInfoProvider: endpoints_1.defaultRegionInfoProvider,
     serviceId: "S3",
     signingEscapePath: false,
+    urlParser: url_parser_1.parseUrl,
     useArnRegion: false,
 };
 //# sourceMappingURL=runtimeConfig.shared.js.map
@@ -62070,7 +62070,7 @@ function __classPrivateFieldSet(receiver, privateMap, value) {
 
 /***/ }),
 
-/***/ 57974:
+/***/ 99427:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -62079,7 +62079,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.parseUrl = void 0;
 const querystring_parser_1 = __nccwpck_require__(22026);
 const parseUrl = (url) => {
-    const { hostname = "localhost", pathname = "/", port, protocol = "https:", search } = new URL(url);
+    const { hostname, pathname, port, protocol, search } = new URL(url);
     let query;
     if (search) {
         query = querystring_parser_1.parseQueryString(search);
@@ -62093,7 +62093,7 @@ const parseUrl = (url) => {
     };
 };
 exports.parseUrl = parseUrl;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9zcmMvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQUEsb0VBQStEO0FBR3hELE1BQU0sUUFBUSxHQUFjLENBQUMsR0FBVyxFQUFZLEVBQUU7SUFDM0QsTUFBTSxFQUFFLFFBQVEsR0FBRyxXQUFXLEVBQUUsUUFBUSxHQUFHLEdBQUcsRUFBRSxJQUFJLEVBQUUsUUFBUSxHQUFHLFFBQVEsRUFBRSxNQUFNLEVBQUUsR0FBRyxJQUFJLEdBQUcsQ0FBQyxHQUFHLENBQUMsQ0FBQztJQUVuRyxJQUFJLEtBQW9DLENBQUM7SUFDekMsSUFBSSxNQUFNLEVBQUU7UUFDVixLQUFLLEdBQUcscUNBQWdCLENBQUMsTUFBTSxDQUFDLENBQUM7S0FDbEM7SUFFRCxPQUFPO1FBQ0wsUUFBUTtRQUNSLElBQUksRUFBRSxJQUFJLENBQUMsQ0FBQyxDQUFDLFFBQVEsQ0FBQyxJQUFJLENBQUMsQ0FBQyxDQUFDLENBQUMsU0FBUztRQUN2QyxRQUFRO1FBQ1IsSUFBSSxFQUFFLFFBQVE7UUFDZCxLQUFLO0tBQ04sQ0FBQztBQUNKLENBQUMsQ0FBQztBQWZXLFFBQUEsUUFBUSxZQWVuQiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IHBhcnNlUXVlcnlTdHJpbmcgfSBmcm9tIFwiQGF3cy1zZGsvcXVlcnlzdHJpbmctcGFyc2VyXCI7XG5pbXBvcnQgeyBFbmRwb2ludCwgUXVlcnlQYXJhbWV0ZXJCYWcsIFVybFBhcnNlciB9IGZyb20gXCJAYXdzLXNkay90eXBlc1wiO1xuXG5leHBvcnQgY29uc3QgcGFyc2VVcmw6IFVybFBhcnNlciA9ICh1cmw6IHN0cmluZyk6IEVuZHBvaW50ID0+IHtcbiAgY29uc3QgeyBob3N0bmFtZSA9IFwibG9jYWxob3N0XCIsIHBhdGhuYW1lID0gXCIvXCIsIHBvcnQsIHByb3RvY29sID0gXCJodHRwczpcIiwgc2VhcmNoIH0gPSBuZXcgVVJMKHVybCk7XG5cbiAgbGV0IHF1ZXJ5OiBRdWVyeVBhcmFtZXRlckJhZyB8IHVuZGVmaW5lZDtcbiAgaWYgKHNlYXJjaCkge1xuICAgIHF1ZXJ5ID0gcGFyc2VRdWVyeVN0cmluZyhzZWFyY2gpO1xuICB9XG5cbiAgcmV0dXJuIHtcbiAgICBob3N0bmFtZSxcbiAgICBwb3J0OiBwb3J0ID8gcGFyc2VJbnQocG9ydCkgOiB1bmRlZmluZWQsXG4gICAgcHJvdG9jb2wsXG4gICAgcGF0aDogcGF0aG5hbWUsXG4gICAgcXVlcnksXG4gIH07XG59O1xuIl19
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9zcmMvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQUEsb0VBQStEO0FBR3hELE1BQU0sUUFBUSxHQUFjLENBQUMsR0FBVyxFQUFZLEVBQUU7SUFDM0QsTUFBTSxFQUFFLFFBQVEsRUFBRSxRQUFRLEVBQUUsSUFBSSxFQUFFLFFBQVEsRUFBRSxNQUFNLEVBQUUsR0FBRyxJQUFJLEdBQUcsQ0FBQyxHQUFHLENBQUMsQ0FBQztJQUVwRSxJQUFJLEtBQW9DLENBQUM7SUFDekMsSUFBSSxNQUFNLEVBQUU7UUFDVixLQUFLLEdBQUcscUNBQWdCLENBQUMsTUFBTSxDQUFDLENBQUM7S0FDbEM7SUFFRCxPQUFPO1FBQ0wsUUFBUTtRQUNSLElBQUksRUFBRSxJQUFJLENBQUMsQ0FBQyxDQUFDLFFBQVEsQ0FBQyxJQUFJLENBQUMsQ0FBQyxDQUFDLENBQUMsU0FBUztRQUN2QyxRQUFRO1FBQ1IsSUFBSSxFQUFFLFFBQVE7UUFDZCxLQUFLO0tBQ04sQ0FBQztBQUNKLENBQUMsQ0FBQztBQWZXLFFBQUEsUUFBUSxZQWVuQiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IHBhcnNlUXVlcnlTdHJpbmcgfSBmcm9tIFwiQGF3cy1zZGsvcXVlcnlzdHJpbmctcGFyc2VyXCI7XG5pbXBvcnQgeyBFbmRwb2ludCwgUXVlcnlQYXJhbWV0ZXJCYWcsIFVybFBhcnNlciB9IGZyb20gXCJAYXdzLXNkay90eXBlc1wiO1xuXG5leHBvcnQgY29uc3QgcGFyc2VVcmw6IFVybFBhcnNlciA9ICh1cmw6IHN0cmluZyk6IEVuZHBvaW50ID0+IHtcbiAgY29uc3QgeyBob3N0bmFtZSwgcGF0aG5hbWUsIHBvcnQsIHByb3RvY29sLCBzZWFyY2ggfSA9IG5ldyBVUkwodXJsKTtcblxuICBsZXQgcXVlcnk6IFF1ZXJ5UGFyYW1ldGVyQmFnIHwgdW5kZWZpbmVkO1xuICBpZiAoc2VhcmNoKSB7XG4gICAgcXVlcnkgPSBwYXJzZVF1ZXJ5U3RyaW5nKHNlYXJjaCk7XG4gIH1cblxuICByZXR1cm4ge1xuICAgIGhvc3RuYW1lLFxuICAgIHBvcnQ6IHBvcnQgPyBwYXJzZUludChwb3J0KSA6IHVuZGVmaW5lZCxcbiAgICBwcm90b2NvbCxcbiAgICBwYXRoOiBwYXRobmFtZSxcbiAgICBxdWVyeSxcbiAgfTtcbn07XG4iXX0=
 
 /***/ }),
 
@@ -62729,7 +62729,8 @@ const exponentialBackoffWithJitter = (minDelay, maxDelay, attemptCeiling, attemp
 };
 const randomInRange = (min, max) => min + Math.random() * (max - min);
 /**
- * Function that runs indefinite polling as part of waiters.
+ * Function that runs polling as part of waiters. This will make one inital attempt and then
+ * subsequent attempts with an increasing delay.
  * @param params options passed to the waiter.
  * @param client AWS SDK Client
  * @param input client input
@@ -62737,6 +62738,10 @@ const randomInRange = (min, max) => min + Math.random() * (max - min);
  */
 const runPolling = async ({ minDelay, maxDelay, maxWaitTime, abortController, client }, input, acceptorChecks) => {
     var _a;
+    const { state } = await acceptorChecks(client, input);
+    if (state !== waiter_1.WaiterState.RETRY) {
+        return { state };
+    }
     let currentAttempt = 1;
     const waitUntil = Date.now() + maxWaitTime * 1000;
     // The max attempt number that the derived delay time tend to increase.
@@ -62761,7 +62766,7 @@ const runPolling = async ({ minDelay, maxDelay, maxWaitTime, abortController, cl
     }
 };
 exports.runPolling = runPolling;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicG9sbGVyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vc3JjL3BvbGxlci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFBQSx5Q0FBc0M7QUFDdEMscUNBQW9FO0FBRXBFOztHQUVHO0FBQ0gsTUFBTSw0QkFBNEIsR0FBRyxDQUFDLFFBQWdCLEVBQUUsUUFBZ0IsRUFBRSxjQUFzQixFQUFFLE9BQWUsRUFBRSxFQUFFO0lBQ25ILElBQUksT0FBTyxHQUFHLGNBQWM7UUFBRSxPQUFPLFFBQVEsQ0FBQztJQUM5QyxNQUFNLEtBQUssR0FBRyxRQUFRLEdBQUcsQ0FBQyxJQUFJLENBQUMsT0FBTyxHQUFHLENBQUMsQ0FBQyxDQUFDO0lBQzVDLE9BQU8sYUFBYSxDQUFDLFFBQVEsRUFBRSxLQUFLLENBQUMsQ0FBQztBQUN4QyxDQUFDLENBQUM7QUFFRixNQUFNLGFBQWEsR0FBRyxDQUFDLEdBQVcsRUFBRSxHQUFXLEVBQUUsRUFBRSxDQUFDLEdBQUcsR0FBRyxJQUFJLENBQUMsTUFBTSxFQUFFLEdBQUcsQ0FBQyxHQUFHLEdBQUcsR0FBRyxDQUFDLENBQUM7QUFFdEY7Ozs7OztHQU1HO0FBQ0ksTUFBTSxVQUFVLEdBQUcsS0FBSyxFQUM3QixFQUFFLFFBQVEsRUFBRSxRQUFRLEVBQUUsV0FBVyxFQUFFLGVBQWUsRUFBRSxNQUFNLEVBQXlCLEVBQ25GLEtBQVksRUFDWixjQUF1RSxFQUNoRCxFQUFFOztJQUN6QixJQUFJLGNBQWMsR0FBRyxDQUFDLENBQUM7SUFDdkIsTUFBTSxTQUFTLEdBQUcsSUFBSSxDQUFDLEdBQUcsRUFBRSxHQUFHLFdBQVcsR0FBRyxJQUFJLENBQUM7SUFDbEQsdUVBQXVFO0lBQ3ZFLHlEQUF5RDtJQUN6RCxNQUFNLGNBQWMsR0FBRyxJQUFJLENBQUMsR0FBRyxDQUFDLFFBQVEsR0FBRyxRQUFRLENBQUMsR0FBRyxJQUFJLENBQUMsR0FBRyxDQUFDLENBQUMsQ0FBQyxHQUFHLENBQUMsQ0FBQztJQUN2RSxPQUFPLElBQUksRUFBRTtRQUNYLFVBQUksZUFBZSxhQUFmLGVBQWUsdUJBQWYsZUFBZSxDQUFFLE1BQU0sMENBQUUsT0FBTyxFQUFFO1lBQ3BDLE9BQU8sRUFBRSxLQUFLLEVBQUUsb0JBQVcsQ0FBQyxPQUFPLEVBQUUsQ0FBQztTQUN2QztRQUNELE1BQU0sS0FBSyxHQUFHLDRCQUE0QixDQUFDLFFBQVEsRUFBRSxRQUFRLEVBQUUsY0FBYyxFQUFFLGNBQWMsQ0FBQyxDQUFDO1FBQy9GLGtIQUFrSDtRQUNsSCxrRkFBa0Y7UUFDbEYsSUFBSSxJQUFJLENBQUMsR0FBRyxFQUFFLEdBQUcsS0FBSyxHQUFHLElBQUksR0FBRyxTQUFTLEVBQUU7WUFDekMsT0FBTyxFQUFFLEtBQUssRUFBRSxvQkFBVyxDQUFDLE9BQU8sRUFBRSxDQUFDO1NBQ3ZDO1FBQ0QsTUFBTSxhQUFLLENBQUMsS0FBSyxDQUFDLENBQUM7UUFDbkIsTUFBTSxFQUFFLEtBQUssRUFBRSxHQUFHLE1BQU0sY0FBYyxDQUFDLE1BQU0sRUFBRSxLQUFLLENBQUMsQ0FBQztRQUN0RCxJQUFJLEtBQUssS0FBSyxvQkFBVyxDQUFDLEtBQUssRUFBRTtZQUMvQixPQUFPLEVBQUUsS0FBSyxFQUFFLENBQUM7U0FDbEI7UUFFRCxjQUFjLElBQUksQ0FBQyxDQUFDO0tBQ3JCO0FBQ0gsQ0FBQyxDQUFDO0FBNUJXLFFBQUEsVUFBVSxjQTRCckIiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBzbGVlcCB9IGZyb20gXCIuL3V0aWxzL3NsZWVwXCI7XG5pbXBvcnQgeyBXYWl0ZXJPcHRpb25zLCBXYWl0ZXJSZXN1bHQsIFdhaXRlclN0YXRlIH0gZnJvbSBcIi4vd2FpdGVyXCI7XG5cbi8qKlxuICogUmVmZXJlbmNlOiBodHRwczovL2F3c2xhYnMuZ2l0aHViLmlvL3NtaXRoeS8xLjAvc3BlYy93YWl0ZXJzLmh0bWwjd2FpdGVyLXJldHJpZXNcbiAqL1xuY29uc3QgZXhwb25lbnRpYWxCYWNrb2ZmV2l0aEppdHRlciA9IChtaW5EZWxheTogbnVtYmVyLCBtYXhEZWxheTogbnVtYmVyLCBhdHRlbXB0Q2VpbGluZzogbnVtYmVyLCBhdHRlbXB0OiBudW1iZXIpID0+IHtcbiAgaWYgKGF0dGVtcHQgPiBhdHRlbXB0Q2VpbGluZykgcmV0dXJuIG1heERlbGF5O1xuICBjb25zdCBkZWxheSA9IG1pbkRlbGF5ICogMiAqKiAoYXR0ZW1wdCAtIDEpO1xuICByZXR1cm4gcmFuZG9tSW5SYW5nZShtaW5EZWxheSwgZGVsYXkpO1xufTtcblxuY29uc3QgcmFuZG9tSW5SYW5nZSA9IChtaW46IG51bWJlciwgbWF4OiBudW1iZXIpID0+IG1pbiArIE1hdGgucmFuZG9tKCkgKiAobWF4IC0gbWluKTtcblxuLyoqXG4gKiBGdW5jdGlvbiB0aGF0IHJ1bnMgaW5kZWZpbml0ZSBwb2xsaW5nIGFzIHBhcnQgb2Ygd2FpdGVycy5cbiAqIEBwYXJhbSBwYXJhbXMgb3B0aW9ucyBwYXNzZWQgdG8gdGhlIHdhaXRlci5cbiAqIEBwYXJhbSBjbGllbnQgQVdTIFNESyBDbGllbnRcbiAqIEBwYXJhbSBpbnB1dCBjbGllbnQgaW5wdXRcbiAqIEBwYXJhbSBzdGF0ZUNoZWNrZXIgZnVuY3Rpb24gdGhhdCBjaGVja3MgdGhlIGFjY2VwdG9yIHN0YXRlcyBvbiBlYWNoIHBvbGwuXG4gKi9cbmV4cG9ydCBjb25zdCBydW5Qb2xsaW5nID0gYXN5bmMgPENsaWVudCwgSW5wdXQ+KFxuICB7IG1pbkRlbGF5LCBtYXhEZWxheSwgbWF4V2FpdFRpbWUsIGFib3J0Q29udHJvbGxlciwgY2xpZW50IH06IFdhaXRlck9wdGlvbnM8Q2xpZW50PixcbiAgaW5wdXQ6IElucHV0LFxuICBhY2NlcHRvckNoZWNrczogKGNsaWVudDogQ2xpZW50LCBpbnB1dDogSW5wdXQpID0+IFByb21pc2U8V2FpdGVyUmVzdWx0PlxuKTogUHJvbWlzZTxXYWl0ZXJSZXN1bHQ+ID0+IHtcbiAgbGV0IGN1cnJlbnRBdHRlbXB0ID0gMTtcbiAgY29uc3Qgd2FpdFVudGlsID0gRGF0ZS5ub3coKSArIG1heFdhaXRUaW1lICogMTAwMDtcbiAgLy8gVGhlIG1heCBhdHRlbXB0IG51bWJlciB0aGF0IHRoZSBkZXJpdmVkIGRlbGF5IHRpbWUgdGVuZCB0byBpbmNyZWFzZS5cbiAgLy8gUHJlLWNvbXB1dGUgdGhpcyBudW1iZXIgdG8gYXZvaWQgTnVtYmVyIHR5cGUgb3ZlcmZsb3cuXG4gIGNvbnN0IGF0dGVtcHRDZWlsaW5nID0gTWF0aC5sb2cobWF4RGVsYXkgLyBtaW5EZWxheSkgLyBNYXRoLmxvZygyKSArIDE7XG4gIHdoaWxlICh0cnVlKSB7XG4gICAgaWYgKGFib3J0Q29udHJvbGxlcj8uc2lnbmFsPy5hYm9ydGVkKSB7XG4gICAgICByZXR1cm4geyBzdGF0ZTogV2FpdGVyU3RhdGUuQUJPUlRFRCB9O1xuICAgIH1cbiAgICBjb25zdCBkZWxheSA9IGV4cG9uZW50aWFsQmFja29mZldpdGhKaXR0ZXIobWluRGVsYXksIG1heERlbGF5LCBhdHRlbXB0Q2VpbGluZywgY3VycmVudEF0dGVtcHQpO1xuICAgIC8vIFJlc29sdmUgdGhlIHByb21pc2UgZXhwbGljaXRseSBhdCB0aW1lb3V0IG9yIGFib3J0ZWQuIE90aGVyd2lzZSB0aGlzIHdoaWxlIGxvb3Agd2lsbCBrZWVwIG1ha2luZyBBUEkgY2FsbCB1bnRpbFxuICAgIC8vIGBhY2NlcHRvckNoZWNrYCByZXR1cm5zIG5vbi1yZXRyeSBzdGF0dXMsIGV2ZW4gd2l0aCB0aGUgUHJvbWlzZS5yYWNlKCkgb3V0c2lkZS5cbiAgICBpZiAoRGF0ZS5ub3coKSArIGRlbGF5ICogMTAwMCA+IHdhaXRVbnRpbCkge1xuICAgICAgcmV0dXJuIHsgc3RhdGU6IFdhaXRlclN0YXRlLlRJTUVPVVQgfTtcbiAgICB9XG4gICAgYXdhaXQgc2xlZXAoZGVsYXkpO1xuICAgIGNvbnN0IHsgc3RhdGUgfSA9IGF3YWl0IGFjY2VwdG9yQ2hlY2tzKGNsaWVudCwgaW5wdXQpO1xuICAgIGlmIChzdGF0ZSAhPT0gV2FpdGVyU3RhdGUuUkVUUlkpIHtcbiAgICAgIHJldHVybiB7IHN0YXRlIH07XG4gICAgfVxuXG4gICAgY3VycmVudEF0dGVtcHQgKz0gMTtcbiAgfVxufTtcbiJdfQ==
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicG9sbGVyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vc3JjL3BvbGxlci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFBQSx5Q0FBc0M7QUFDdEMscUNBQW9FO0FBRXBFOztHQUVHO0FBQ0gsTUFBTSw0QkFBNEIsR0FBRyxDQUFDLFFBQWdCLEVBQUUsUUFBZ0IsRUFBRSxjQUFzQixFQUFFLE9BQWUsRUFBRSxFQUFFO0lBQ25ILElBQUksT0FBTyxHQUFHLGNBQWM7UUFBRSxPQUFPLFFBQVEsQ0FBQztJQUM5QyxNQUFNLEtBQUssR0FBRyxRQUFRLEdBQUcsQ0FBQyxJQUFJLENBQUMsT0FBTyxHQUFHLENBQUMsQ0FBQyxDQUFDO0lBQzVDLE9BQU8sYUFBYSxDQUFDLFFBQVEsRUFBRSxLQUFLLENBQUMsQ0FBQztBQUN4QyxDQUFDLENBQUM7QUFFRixNQUFNLGFBQWEsR0FBRyxDQUFDLEdBQVcsRUFBRSxHQUFXLEVBQUUsRUFBRSxDQUFDLEdBQUcsR0FBRyxJQUFJLENBQUMsTUFBTSxFQUFFLEdBQUcsQ0FBQyxHQUFHLEdBQUcsR0FBRyxDQUFDLENBQUM7QUFFdEY7Ozs7Ozs7R0FPRztBQUNJLE1BQU0sVUFBVSxHQUFHLEtBQUssRUFDN0IsRUFBRSxRQUFRLEVBQUUsUUFBUSxFQUFFLFdBQVcsRUFBRSxlQUFlLEVBQUUsTUFBTSxFQUF5QixFQUNuRixLQUFZLEVBQ1osY0FBdUUsRUFDaEQsRUFBRTs7SUFDekIsTUFBTSxFQUFFLEtBQUssRUFBRSxHQUFHLE1BQU0sY0FBYyxDQUFDLE1BQU0sRUFBRSxLQUFLLENBQUMsQ0FBQztJQUN0RCxJQUFJLEtBQUssS0FBSyxvQkFBVyxDQUFDLEtBQUssRUFBRTtRQUMvQixPQUFPLEVBQUUsS0FBSyxFQUFFLENBQUM7S0FDbEI7SUFFRCxJQUFJLGNBQWMsR0FBRyxDQUFDLENBQUM7SUFDdkIsTUFBTSxTQUFTLEdBQUcsSUFBSSxDQUFDLEdBQUcsRUFBRSxHQUFHLFdBQVcsR0FBRyxJQUFJLENBQUM7SUFDbEQsdUVBQXVFO0lBQ3ZFLHlEQUF5RDtJQUN6RCxNQUFNLGNBQWMsR0FBRyxJQUFJLENBQUMsR0FBRyxDQUFDLFFBQVEsR0FBRyxRQUFRLENBQUMsR0FBRyxJQUFJLENBQUMsR0FBRyxDQUFDLENBQUMsQ0FBQyxHQUFHLENBQUMsQ0FBQztJQUN2RSxPQUFPLElBQUksRUFBRTtRQUNYLFVBQUksZUFBZSxhQUFmLGVBQWUsdUJBQWYsZUFBZSxDQUFFLE1BQU0sMENBQUUsT0FBTyxFQUFFO1lBQ3BDLE9BQU8sRUFBRSxLQUFLLEVBQUUsb0JBQVcsQ0FBQyxPQUFPLEVBQUUsQ0FBQztTQUN2QztRQUNELE1BQU0sS0FBSyxHQUFHLDRCQUE0QixDQUFDLFFBQVEsRUFBRSxRQUFRLEVBQUUsY0FBYyxFQUFFLGNBQWMsQ0FBQyxDQUFDO1FBQy9GLGtIQUFrSDtRQUNsSCxrRkFBa0Y7UUFDbEYsSUFBSSxJQUFJLENBQUMsR0FBRyxFQUFFLEdBQUcsS0FBSyxHQUFHLElBQUksR0FBRyxTQUFTLEVBQUU7WUFDekMsT0FBTyxFQUFFLEtBQUssRUFBRSxvQkFBVyxDQUFDLE9BQU8sRUFBRSxDQUFDO1NBQ3ZDO1FBQ0QsTUFBTSxhQUFLLENBQUMsS0FBSyxDQUFDLENBQUM7UUFDbkIsTUFBTSxFQUFFLEtBQUssRUFBRSxHQUFHLE1BQU0sY0FBYyxDQUFDLE1BQU0sRUFBRSxLQUFLLENBQUMsQ0FBQztRQUN0RCxJQUFJLEtBQUssS0FBSyxvQkFBVyxDQUFDLEtBQUssRUFBRTtZQUMvQixPQUFPLEVBQUUsS0FBSyxFQUFFLENBQUM7U0FDbEI7UUFFRCxjQUFjLElBQUksQ0FBQyxDQUFDO0tBQ3JCO0FBQ0gsQ0FBQyxDQUFDO0FBakNXLFFBQUEsVUFBVSxjQWlDckIiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBzbGVlcCB9IGZyb20gXCIuL3V0aWxzL3NsZWVwXCI7XG5pbXBvcnQgeyBXYWl0ZXJPcHRpb25zLCBXYWl0ZXJSZXN1bHQsIFdhaXRlclN0YXRlIH0gZnJvbSBcIi4vd2FpdGVyXCI7XG5cbi8qKlxuICogUmVmZXJlbmNlOiBodHRwczovL2F3c2xhYnMuZ2l0aHViLmlvL3NtaXRoeS8xLjAvc3BlYy93YWl0ZXJzLmh0bWwjd2FpdGVyLXJldHJpZXNcbiAqL1xuY29uc3QgZXhwb25lbnRpYWxCYWNrb2ZmV2l0aEppdHRlciA9IChtaW5EZWxheTogbnVtYmVyLCBtYXhEZWxheTogbnVtYmVyLCBhdHRlbXB0Q2VpbGluZzogbnVtYmVyLCBhdHRlbXB0OiBudW1iZXIpID0+IHtcbiAgaWYgKGF0dGVtcHQgPiBhdHRlbXB0Q2VpbGluZykgcmV0dXJuIG1heERlbGF5O1xuICBjb25zdCBkZWxheSA9IG1pbkRlbGF5ICogMiAqKiAoYXR0ZW1wdCAtIDEpO1xuICByZXR1cm4gcmFuZG9tSW5SYW5nZShtaW5EZWxheSwgZGVsYXkpO1xufTtcblxuY29uc3QgcmFuZG9tSW5SYW5nZSA9IChtaW46IG51bWJlciwgbWF4OiBudW1iZXIpID0+IG1pbiArIE1hdGgucmFuZG9tKCkgKiAobWF4IC0gbWluKTtcblxuLyoqXG4gKiBGdW5jdGlvbiB0aGF0IHJ1bnMgcG9sbGluZyBhcyBwYXJ0IG9mIHdhaXRlcnMuIFRoaXMgd2lsbCBtYWtlIG9uZSBpbml0YWwgYXR0ZW1wdCBhbmQgdGhlblxuICogc3Vic2VxdWVudCBhdHRlbXB0cyB3aXRoIGFuIGluY3JlYXNpbmcgZGVsYXkuXG4gKiBAcGFyYW0gcGFyYW1zIG9wdGlvbnMgcGFzc2VkIHRvIHRoZSB3YWl0ZXIuXG4gKiBAcGFyYW0gY2xpZW50IEFXUyBTREsgQ2xpZW50XG4gKiBAcGFyYW0gaW5wdXQgY2xpZW50IGlucHV0XG4gKiBAcGFyYW0gc3RhdGVDaGVja2VyIGZ1bmN0aW9uIHRoYXQgY2hlY2tzIHRoZSBhY2NlcHRvciBzdGF0ZXMgb24gZWFjaCBwb2xsLlxuICovXG5leHBvcnQgY29uc3QgcnVuUG9sbGluZyA9IGFzeW5jIDxDbGllbnQsIElucHV0PihcbiAgeyBtaW5EZWxheSwgbWF4RGVsYXksIG1heFdhaXRUaW1lLCBhYm9ydENvbnRyb2xsZXIsIGNsaWVudCB9OiBXYWl0ZXJPcHRpb25zPENsaWVudD4sXG4gIGlucHV0OiBJbnB1dCxcbiAgYWNjZXB0b3JDaGVja3M6IChjbGllbnQ6IENsaWVudCwgaW5wdXQ6IElucHV0KSA9PiBQcm9taXNlPFdhaXRlclJlc3VsdD5cbik6IFByb21pc2U8V2FpdGVyUmVzdWx0PiA9PiB7XG4gIGNvbnN0IHsgc3RhdGUgfSA9IGF3YWl0IGFjY2VwdG9yQ2hlY2tzKGNsaWVudCwgaW5wdXQpO1xuICBpZiAoc3RhdGUgIT09IFdhaXRlclN0YXRlLlJFVFJZKSB7XG4gICAgcmV0dXJuIHsgc3RhdGUgfTtcbiAgfVxuXG4gIGxldCBjdXJyZW50QXR0ZW1wdCA9IDE7XG4gIGNvbnN0IHdhaXRVbnRpbCA9IERhdGUubm93KCkgKyBtYXhXYWl0VGltZSAqIDEwMDA7XG4gIC8vIFRoZSBtYXggYXR0ZW1wdCBudW1iZXIgdGhhdCB0aGUgZGVyaXZlZCBkZWxheSB0aW1lIHRlbmQgdG8gaW5jcmVhc2UuXG4gIC8vIFByZS1jb21wdXRlIHRoaXMgbnVtYmVyIHRvIGF2b2lkIE51bWJlciB0eXBlIG92ZXJmbG93LlxuICBjb25zdCBhdHRlbXB0Q2VpbGluZyA9IE1hdGgubG9nKG1heERlbGF5IC8gbWluRGVsYXkpIC8gTWF0aC5sb2coMikgKyAxO1xuICB3aGlsZSAodHJ1ZSkge1xuICAgIGlmIChhYm9ydENvbnRyb2xsZXI/LnNpZ25hbD8uYWJvcnRlZCkge1xuICAgICAgcmV0dXJuIHsgc3RhdGU6IFdhaXRlclN0YXRlLkFCT1JURUQgfTtcbiAgICB9XG4gICAgY29uc3QgZGVsYXkgPSBleHBvbmVudGlhbEJhY2tvZmZXaXRoSml0dGVyKG1pbkRlbGF5LCBtYXhEZWxheSwgYXR0ZW1wdENlaWxpbmcsIGN1cnJlbnRBdHRlbXB0KTtcbiAgICAvLyBSZXNvbHZlIHRoZSBwcm9taXNlIGV4cGxpY2l0bHkgYXQgdGltZW91dCBvciBhYm9ydGVkLiBPdGhlcndpc2UgdGhpcyB3aGlsZSBsb29wIHdpbGwga2VlcCBtYWtpbmcgQVBJIGNhbGwgdW50aWxcbiAgICAvLyBgYWNjZXB0b3JDaGVja2AgcmV0dXJucyBub24tcmV0cnkgc3RhdHVzLCBldmVuIHdpdGggdGhlIFByb21pc2UucmFjZSgpIG91dHNpZGUuXG4gICAgaWYgKERhdGUubm93KCkgKyBkZWxheSAqIDEwMDAgPiB3YWl0VW50aWwpIHtcbiAgICAgIHJldHVybiB7IHN0YXRlOiBXYWl0ZXJTdGF0ZS5USU1FT1VUIH07XG4gICAgfVxuICAgIGF3YWl0IHNsZWVwKGRlbGF5KTtcbiAgICBjb25zdCB7IHN0YXRlIH0gPSBhd2FpdCBhY2NlcHRvckNoZWNrcyhjbGllbnQsIGlucHV0KTtcbiAgICBpZiAoc3RhdGUgIT09IFdhaXRlclN0YXRlLlJFVFJZKSB7XG4gICAgICByZXR1cm4geyBzdGF0ZSB9O1xuICAgIH1cblxuICAgIGN1cnJlbnRBdHRlbXB0ICs9IDE7XG4gIH1cbn07XG4iXX0=
 
 /***/ }),
 
