@@ -82,7 +82,7 @@ _Optional_. `Boolean` or the id of the cloudfront distribution, the default is `
 
 ### `wait`
 
-_Optional_. `Boolean`, if `true` then it would wait for the invalidation to complete, the default it `true`.
+_Optional_. `Boolean`, if `true` then it would wait for the invalidation to complete, the default is `true`.
 
 ### `AWS_REGION`
 
