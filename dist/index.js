@@ -39,7 +39,7 @@ class Action {
             this.buildCacheMap(input.location, input.cacheControl),
             this.listFiles(input.location)
         ]);
-        this.log(`Uploading to s3 bucket ${input.bucket}`);
+        this.log(`\\e[1;43mUploading to s3 bucket ${input.bucket}\\e[0m`);
         const uploads = files.map(async (file) => this.upload({
             location: input.location,
             bucket: input.bucket,
@@ -47,7 +47,7 @@ class Action {
             file
         }));
         await Promise.all(uploads);
-        this.log('Upload completed');
+        this.log('\\e[1;42mUpload completed\\e[0m');
         if (typeof input.invalidate === 'undefined' ||
             (input.invalidate || 'false').toString().toLowerCase() === 'false') {
             return;
