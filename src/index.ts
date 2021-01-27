@@ -1,5 +1,4 @@
-import { createReadStream } from 'fs';
-import { readdir, stat } from 'fs/promises';
+import { createReadStream, promises as fsPromises } from 'fs';
 import { join } from 'path';
 
 import { S3 } from '@aws-sdk/client-s3';
@@ -10,6 +9,8 @@ import globby from 'globby';
 import { load } from 'js-yaml';
 
 import { Action } from './action';
+
+const { readdir, stat } = fsPromises;
 
 const getValue = (key: string): string =>
   (getInput(key) || (process.env[key] as unknown)) as string;

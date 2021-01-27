@@ -199,7 +199,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const fs_1 = __nccwpck_require__(35747);
-const promises_1 = __nccwpck_require__(69225);
 const path_1 = __nccwpck_require__(85622);
 const client_s3_1 = __nccwpck_require__(89690);
 const client_cloudfront_1 = __nccwpck_require__(98322);
@@ -208,6 +207,7 @@ const mime_types_1 = __nccwpck_require__(43583);
 const globby_1 = __importDefault(__nccwpck_require__(43398));
 const js_yaml_1 = __nccwpck_require__(21917);
 const action_1 = __nccwpck_require__(5834);
+const { readdir, stat } = fs_1.promises;
 const getValue = (key) => (core_1.getInput(key) || process.env[key]);
 const location = core_1.getInput('location', { required: true });
 const bucket = core_1.getInput('bucket', { required: true });
@@ -234,8 +234,8 @@ const cf = new client_cloudfront_1.CloudFront({
 (async () => {
     try {
         await new action_1.Action({
-            readdir: promises_1.readdir,
-            stat: promises_1.stat,
+            readdir,
+            stat,
             createReadStream: fs_1.createReadStream,
             join: path_1.join
         }, s3, cf, {
@@ -77679,14 +77679,6 @@ module.exports = require("events");;
 
 "use strict";
 module.exports = require("fs");;
-
-/***/ }),
-
-/***/ 69225:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("fs/promises");;
 
 /***/ }),
 
