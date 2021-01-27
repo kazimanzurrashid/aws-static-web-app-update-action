@@ -57,11 +57,7 @@ class Action {
     private readonly glob: {
       match: (path: string, pattern: string | string[]) => Promise<string[]>;
     },
-    private readonly logger: {
-      startGroup(name: string): void;
-      log: (message: string) => void;
-      endGroup(): void;
-    }
+    private readonly log: (message: string) => void
   ) {}
 
   async run(input: RunInput): Promise<void> {
@@ -70,7 +66,7 @@ class Action {
       this.listFiles(input.location)
     ]);
 
-    this.logger.startGroup(`Uploading to s3 bucket ${input.bucket}`);
+    this.log(`Uploading to s3 bucket ${input.bucket}`);
 
     const uploads = files.map(async (file) =>
       this.upload({
@@ -83,7 +79,7 @@ class Action {
 
     await Promise.all(uploads);
 
-    this.logger.endGroup();
+    this.log('Upload completed');
 
     if (
       typeof input.invalidate === 'undefined' ||
@@ -175,11 +171,11 @@ class Action {
       params.ContentType = contentType;
     }
 
-    this.logger.log(`Uploading ${input.file}`);
+    this.log(`...Uploading ${input.file}`);
 
     await this.s3.putObject(params);
 
-    this.logger.log(`Uploaded ${input.file}`);
+    this.log(`...Uploaded ${input.file}`);
   }
 
   private async findDistributionId(
@@ -246,7 +242,7 @@ class Action {
             Id: id
           };
 
-          this.logger.log('Checking invalidation status');
+          this.log('...Checking invalidation status');
 
           try {
             const result = await this.cf.getInvalidation(params);
@@ -255,9 +251,11 @@ class Action {
               result.Invalidation &&
               result.Invalidation.Status === 'InProgress'
             ) {
-              return await poll(id);
+              await poll(id);
+              return;
             }
 
+            this.log('Invalidation completed');
             return resolve();
           } catch (error) {
             return reject(error);
@@ -277,17 +275,13 @@ class Action {
       }
     };
 
-    this.logger.startGroup(
-      `Invalidating cloudfront distribution ${distributionId}`
-    );
+    this.log(`Invalidating cloudfront distribution ${distributionId}`);
 
     const result = await this.cf.createInvalidation(params);
 
     if (wait && result.Invalidation && result.Invalidation.Id) {
       await poll(result.Invalidation.Id);
     }
-
-    this.logger.endGroup();
   }
 }
 

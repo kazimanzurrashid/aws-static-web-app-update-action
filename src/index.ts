@@ -4,7 +4,7 @@ import { promisify } from 'util';
 
 import { S3 } from '@aws-sdk/client-s3';
 import { CloudFront } from '@aws-sdk/client-cloudfront';
-import { getInput, setFailed, startGroup, info, endGroup } from '@actions/core';
+import { getInput, setFailed, info } from '@actions/core';
 import { lookup } from 'mime-types';
 import globby from 'globby';
 import { load } from 'js-yaml';
@@ -57,11 +57,7 @@ const cf = new CloudFront({
         match: async (path: string, pattern: string | string[]) =>
           globby(pattern, { cwd: path, onlyFiles: true })
       },
-      {
-        startGroup,
-        log: info,
-        endGroup
-      }
+      info
     ).run({
       location,
       bucket,
