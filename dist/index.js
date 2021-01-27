@@ -154,11 +154,10 @@ class Action {
                     try {
                         const result = await this.cf.getInvalidation(params);
                         if (result.Invalidation &&
-                            result.Invalidation.Status === 'Completed') {
-                            this.log('Invalidation completed');
-                            return resolve();
+                            result.Invalidation.Status === 'InProgress') {
+                            await poll(id);
                         }
-                        await poll(id);
+                        this.log('Invalidation completed');
                         return resolve();
                     }
                     catch (error) {

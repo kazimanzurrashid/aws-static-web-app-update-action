@@ -245,14 +245,12 @@ class Action {
 
             if (
               result.Invalidation &&
-              result.Invalidation.Status === 'Completed'
+              result.Invalidation.Status === 'InProgress'
             ) {
-              this.log('Invalidation completed');
-              return resolve();
+              await poll(id);
             }
 
-            await poll(id);
-
+            this.log('Invalidation completed');
             return resolve();
           } catch (error) {
             return reject(error);
