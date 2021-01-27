@@ -175,11 +175,11 @@ class Action {
       params.ContentType = contentType;
     }
 
-    this.logger.log(`...Uploading ${input.file}`);
+    this.logger.log(`Uploading ${input.file}`);
 
     await this.s3.putObject(params);
 
-    this.logger.log(`...Uploaded ${input.file}`);
+    this.logger.log(`Uploaded ${input.file}`);
   }
 
   private async findDistributionId(
@@ -246,7 +246,7 @@ class Action {
             Id: id
           };
 
-          this.logger.log('...Checking invalidation status');
+          this.logger.log('Checking invalidation status');
 
           try {
             const result = await this.cf.getInvalidation(params);
