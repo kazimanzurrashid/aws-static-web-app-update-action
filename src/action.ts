@@ -66,6 +66,8 @@ class Action {
       this.listFiles(input.location)
     ]);
 
+    this.log(`Uploading to s3 bucket ${input.bucket}`);
+
     const uploads = files.map(async (file) =>
       this.upload({
         location: input.location,
@@ -76,6 +78,8 @@ class Action {
     );
 
     await Promise.all(uploads);
+
+    this.log('Upload completed');
 
     if (
       typeof input.invalidate === 'undefined' ||
@@ -167,11 +171,11 @@ class Action {
       params.ContentType = contentType;
     }
 
-    this.log(`Uploading ${input.file}`);
+    this.log(`...Uploading ${input.file}`);
 
     await this.s3.putObject(params);
 
-    this.log(`Uploaded ${input.file}`);
+    this.log(`...Uploaded ${input.file}`);
   }
 
   private async findDistributionId(
@@ -271,7 +275,7 @@ class Action {
       }
     };
 
-    this.log(`Invalidating cloud front distribution ${distributionId}`);
+    this.log(`Invalidating cloudfront distribution ${distributionId}`);
 
     const result = await this.cf.createInvalidation(params);
 

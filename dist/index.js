@@ -39,6 +39,7 @@ class Action {
             this.buildCacheMap(input.location, input.cacheControl),
             this.listFiles(input.location)
         ]);
+        this.log(`Uploading to s3 bucket ${input.bucket}`);
         const uploads = files.map(async (file) => this.upload({
             location: input.location,
             bucket: input.bucket,
@@ -46,6 +47,7 @@ class Action {
             file
         }));
         await Promise.all(uploads);
+        this.log('Upload completed');
         if (typeof input.invalidate === 'undefined' ||
             (input.invalidate || 'false').toString().toLowerCase() === 'false') {
             return;
@@ -107,9 +109,9 @@ class Action {
         if (contentType) {
             params.ContentType = contentType;
         }
-        this.log(`Uploading ${input.file}`);
+        this.log(`...Uploading ${input.file}`);
         await this.s3.putObject(params);
-        this.log(`Uploaded ${input.file}`);
+        this.log(`...Uploaded ${input.file}`);
     }
     async findDistributionId(bucket, region) {
         var _a, _b, _c, _d, _e;
@@ -177,7 +179,7 @@ class Action {
                 }
             }
         };
-        this.log(`Invalidating cloud front distribution ${distributionId}`);
+        this.log(`Invalidating cloudfront distribution ${distributionId}`);
         const result = await this.cf.createInvalidation(params);
         if (wait && result.Invalidation && result.Invalidation.Id) {
             await poll(result.Invalidation.Id);
@@ -200,6 +202,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const fs_1 = __nccwpck_require__(35747);
 const path_1 = __nccwpck_require__(85622);
+const util_1 = __nccwpck_require__(31669);
 const client_s3_1 = __nccwpck_require__(89690);
 const client_cloudfront_1 = __nccwpck_require__(98322);
 const core_1 = __nccwpck_require__(42186);
@@ -207,7 +210,6 @@ const mime_types_1 = __nccwpck_require__(43583);
 const globby_1 = __importDefault(__nccwpck_require__(43398));
 const js_yaml_1 = __nccwpck_require__(21917);
 const action_1 = __nccwpck_require__(5834);
-const { readdir, stat } = fs_1.promises;
 const getValue = (key) => (core_1.getInput(key) || process.env[key]);
 const location = core_1.getInput('location', { required: true });
 const bucket = core_1.getInput('bucket', { required: true });
@@ -234,8 +236,8 @@ const cf = new client_cloudfront_1.CloudFront({
 (async () => {
     try {
         await new action_1.Action({
-            readdir,
-            stat,
+            readdir: util_1.promisify(fs_1.readdir),
+            stat: util_1.promisify(fs_1.stat),
             createReadStream: fs_1.createReadStream,
             join: path_1.join
         }, s3, cf, {

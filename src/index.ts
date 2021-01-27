@@ -1,5 +1,6 @@
-import { createReadStream, promises as fsPromises } from 'fs';
+import { createReadStream, readdir, stat } from 'fs';
 import { join } from 'path';
+import { promisify } from 'util';
 
 import { S3 } from '@aws-sdk/client-s3';
 import { CloudFront } from '@aws-sdk/client-cloudfront';
@@ -9,8 +10,6 @@ import globby from 'globby';
 import { load } from 'js-yaml';
 
 import { Action } from './action';
-
-const { readdir, stat } = fsPromises;
 
 const getValue = (key: string): string =>
   (getInput(key) || (process.env[key] as unknown)) as string;
@@ -44,8 +43,8 @@ const cf = new CloudFront({
   try {
     await new Action(
       {
-        readdir,
-        stat,
+        readdir: promisify(readdir),
+        stat: promisify(stat),
         createReadStream,
         join
       },
