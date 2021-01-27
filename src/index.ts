@@ -1,6 +1,6 @@
-import { createReadStream, readdir, stat } from 'fs';
+import { createReadStream } from 'fs';
+import { readdir, stat } from 'fs/promises';
 import { join } from 'path';
-import { promisify } from 'util';
 
 import { S3 } from '@aws-sdk/client-s3';
 import { CloudFront } from '@aws-sdk/client-cloudfront';
@@ -43,8 +43,8 @@ const cf = new CloudFront({
   try {
     await new Action(
       {
-        readdir: promisify(readdir),
-        stat: promisify(stat),
+        readdir,
+        stat,
         createReadStream,
         join
       },
