@@ -150,7 +150,7 @@ class Action {
                         DistributionId: distributionId,
                         Id: id
                     };
-                    this.log('Checking invalidation status');
+                    this.log('...Checking invalidation status');
                     try {
                         const result = await this.cf.getInvalidation(params);
                         if (result.Invalidation &&
@@ -177,7 +177,7 @@ class Action {
                 }
             }
         };
-        this.log(`Invalidating ${distributionId}`);
+        this.log(`Invalidating cloud front distribution ${distributionId}`);
         const result = await this.cf.createInvalidation(params);
         if (wait && result.Invalidation && result.Invalidation.Id) {
             await poll(result.Invalidation.Id);
