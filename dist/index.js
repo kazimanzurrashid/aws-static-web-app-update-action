@@ -26,20 +26,20 @@ module.exports = JSON.parse("{\"name\":\"@aws-sdk/client-s3\",\"description\":\"
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Action = void 0;
 class Action {
-    constructor(fs, s3, cf, mime, glob, log) {
+    constructor(fs, s3, cf, mime, glob, logger) {
         this.fs = fs;
         this.s3 = s3;
         this.cf = cf;
         this.mime = mime;
         this.glob = glob;
-        this.log = log;
+        this.logger = logger;
     }
     async run(input) {
         const [cacheMap, files] = await Promise.all([
             this.buildCacheMap(input.location, input.cacheControl),
             this.listFiles(input.location)
         ]);
-        this.log(`\\e[1;43mUploading to s3 bucket ${input.bucket}\\e[0m`);
+        this.logger.startGroup(`Uploading to s3 bucket ${input.bucket}`);
         const uploads = files.map(async (file) => this.upload({
             location: input.location,
             bucket: input.bucket,
@@ -47,7 +47,7 @@ class Action {
             file
         }));
         await Promise.all(uploads);
-        this.log('\\e[1;42mUpload completed\\e[0m');
+        this.logger.endGroup();
         if (typeof input.invalidate === 'undefined' ||
             (input.invalidate || 'false').toString().toLowerCase() === 'false') {
             return;
@@ -109,9 +109,9 @@ class Action {
         if (contentType) {
             params.ContentType = contentType;
         }
-        this.log(`...Uploading ${input.file}`);
+        this.logger.log(`...Uploading ${input.file}`);
         await this.s3.putObject(params);
-        this.log(`...Uploaded ${input.file}`);
+        this.logger.log(`...Uploaded ${input.file}`);
     }
     async findDistributionId(bucket, region) {
         var _a, _b, _c, _d, _e;
@@ -152,15 +152,13 @@ class Action {
                         DistributionId: distributionId,
                         Id: id
                     };
-                    this.log('...Checking invalidation status');
+                    this.logger.log('...Checking invalidation status');
                     try {
                         const result = await this.cf.getInvalidation(params);
                         if (result.Invalidation &&
                             result.Invalidation.Status === 'InProgress') {
-                            await poll(id);
-                            return;
+                            return await poll(id);
                         }
-                        this.log('Invalidation completed');
                         return resolve();
                     }
                     catch (error) {
@@ -179,11 +177,12 @@ class Action {
                 }
             }
         };
-        this.log(`Invalidating cloudfront distribution ${distributionId}`);
+        this.logger.startGroup(`Invalidating cloudfront distribution ${distributionId}`);
         const result = await this.cf.createInvalidation(params);
         if (wait && result.Invalidation && result.Invalidation.Id) {
             await poll(result.Invalidation.Id);
         }
+        this.logger.endGroup();
     }
 }
 exports.Action = Action;
@@ -244,7 +243,11 @@ const cf = new client_cloudfront_1.CloudFront({
             lookup: mime_types_1.lookup
         }, {
             match: async (path, pattern) => globby_1.default(pattern, { cwd: path, onlyFiles: true })
-        }, core_1.info).run({
+        }, {
+            startGroup: core_1.startGroup,
+            log: core_1.info,
+            endGroup: core_1.endGroup
+        }).run({
             location,
             bucket,
             cacheControl: cacheControl
