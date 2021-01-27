@@ -248,6 +248,7 @@ class Action {
               result.Invalidation.Status === 'InProgress'
             ) {
               await poll(id);
+              return;
             }
 
             this.log('Invalidation completed');
