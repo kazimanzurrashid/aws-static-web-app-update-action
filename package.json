@@ -17,8 +17,8 @@
   },
   "dependencies": {
     "@actions/core": "^1.2.6",
-    "@aws-sdk/client-cloudfront": "^3.3.0",
-    "@aws-sdk/client-s3": "^3.3.0",
+    "@aws-sdk/client-cloudfront": "^3.4.1",
+    "@aws-sdk/client-s3": "^3.4.1",
     "globby": "^11.0.2",
     "js-yaml": "^4.0.0",
     "mime-types": "^2.1.28"
@@ -29,7 +29,7 @@
     "@types/node": "^14.14.22",
     "@typescript-eslint/parser": "^4.14.1",
     "@vercel/ncc": "^0.27.0",
-    "eslint": "^7.18.0",
+    "eslint": "^7.19.0",
     "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-github": "^4.1.1",
     "eslint-plugin-prettier": "^3.3.1",
