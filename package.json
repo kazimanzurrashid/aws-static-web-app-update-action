@@ -22,7 +22,7 @@
     "@aws-sdk/node-config-provider": "^3.7.0",
     "globby": "^11.0.2",
     "js-yaml": "^4.0.0",
-    "mime-types": "^2.1.28"
+    "mime-types": "^2.1.29"
   },
   "devDependencies": {
     "@types/js-yaml": "^4.0.0",
