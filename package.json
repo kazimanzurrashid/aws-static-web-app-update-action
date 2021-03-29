@@ -20,7 +20,7 @@
     "@aws-sdk/client-cloudfront": "^3.9.0",
     "@aws-sdk/client-s3": "^3.9.0",
     "@aws-sdk/node-config-provider": "^3.8.0",
-    "globby": "^11.0.2",
+    "globby": "^11.0.3",
     "js-yaml": "^4.0.0",
     "mime-types": "^2.1.29"
   },
