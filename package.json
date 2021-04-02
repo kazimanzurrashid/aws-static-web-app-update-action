@@ -17,18 +17,18 @@
   },
   "dependencies": {
     "@actions/core": "^1.2.6",
-    "@aws-sdk/client-cloudfront": "^3.10.0",
-    "@aws-sdk/client-s3": "^3.10.0",
+    "@aws-sdk/client-cloudfront": "^3.11.0",
+    "@aws-sdk/client-s3": "^3.11.0",
     "@aws-sdk/node-config-provider": "^3.10.0",
     "globby": "^11.0.3",
     "js-yaml": "^4.0.0",
-    "mime-types": "^2.1.29"
+    "mime-types": "^2.1.30"
   },
   "devDependencies": {
     "@types/js-yaml": "^4.0.0",
     "@types/mime-types": "^2.1.0",
     "@types/node": "^14.14.37",
-    "@typescript-eslint/parser": "^4.19.0",
+    "@typescript-eslint/parser": "^4.20.0",
     "@vercel/ncc": "^0.27.0",
     "eslint": "^7.23.0",
     "eslint-config-prettier": "^8.1.0",
