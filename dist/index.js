@@ -5,7 +5,7 @@ require('./sourcemap-register.js');/******/ (() => { // webpackBootstrap
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-cloudfront","description":"AWS SDK for JavaScript Cloudfront Client for Node.js, Browser and React Native","version":"3.12.0","scripts":{"clean":"yarn remove-definitions && yarn remove-dist && yarn remove-documentation","build-documentation":"yarn remove-documentation && typedoc ./","prepublishOnly":"yarn build && downlevel-dts dist/types dist/types/ts3.4","remove-definitions":"rimraf ./types","remove-dist":"rimraf ./dist","remove-documentation":"rimraf ./docs","test":"exit 0","build:cjs":"tsc -p tsconfig.json","build:es":"tsc -p tsconfig.es.json","build":"yarn build:cjs && yarn build:es"},"main":"./dist/cjs/index.js","types":"./dist/types/index.d.ts","module":"./dist/es/index.js","browser":{"./runtimeConfig":"./runtimeConfig.browser"},"react-native":{"./runtimeConfig":"./runtimeConfig.native"},"sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"^1.0.0","@aws-crypto/sha256-js":"^1.0.0","@aws-sdk/client-sts":"3.12.0","@aws-sdk/config-resolver":"3.12.0","@aws-sdk/credential-provider-node":"3.12.0","@aws-sdk/fetch-http-handler":"3.12.0","@aws-sdk/hash-node":"3.12.0","@aws-sdk/invalid-dependency":"3.12.0","@aws-sdk/middleware-content-length":"3.12.0","@aws-sdk/middleware-host-header":"3.12.0","@aws-sdk/middleware-logger":"3.12.0","@aws-sdk/middleware-retry":"3.12.0","@aws-sdk/middleware-serde":"3.12.0","@aws-sdk/middleware-signing":"3.12.0","@aws-sdk/middleware-stack":"3.12.0","@aws-sdk/middleware-user-agent":"3.12.0","@aws-sdk/node-config-provider":"3.12.0","@aws-sdk/node-http-handler":"3.12.0","@aws-sdk/protocol-http":"3.12.0","@aws-sdk/smithy-client":"3.12.0","@aws-sdk/types":"3.12.0","@aws-sdk/url-parser":"3.12.0","@aws-sdk/url-parser-native":"3.12.0","@aws-sdk/util-base64-browser":"3.12.0","@aws-sdk/util-base64-node":"3.12.0","@aws-sdk/util-body-length-browser":"3.12.0","@aws-sdk/util-body-length-node":"3.12.0","@aws-sdk/util-user-agent-browser":"3.12.0","@aws-sdk/util-user-agent-node":"3.12.0","@aws-sdk/util-utf8-browser":"3.12.0","@aws-sdk/util-utf8-node":"3.12.0","@aws-sdk/util-waiter":"3.12.0","@aws-sdk/xml-builder":"3.12.0","fast-xml-parser":"3.19.0","tslib":"^2.0.0"},"devDependencies":{"@aws-sdk/client-documentation-generator":"3.12.0","@types/node":"^12.7.5","downlevel-dts":"0.7.0","jest":"^26.1.0","rimraf":"^3.0.0","ts-jest":"^26.4.1","typedoc":"^0.19.2","typescript":"~4.1.2"},"engines":{"node":">=10.0.0"},"typesVersions":{"<4.0":{"types/*":["types/ts3.4/*"]}},"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-cloudfront","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-cloudfront"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-cloudfront","description":"AWS SDK for JavaScript Cloudfront Client for Node.js, Browser and React Native","version":"3.13.1","scripts":{"clean":"yarn remove-definitions && yarn remove-dist && yarn remove-documentation","build-documentation":"yarn remove-documentation && typedoc ./","prepublishOnly":"yarn build && downlevel-dts dist/types dist/types/ts3.4","remove-definitions":"rimraf ./types","remove-dist":"rimraf ./dist","remove-documentation":"rimraf ./docs","test":"exit 0","build:cjs":"tsc -p tsconfig.json","build:es":"tsc -p tsconfig.es.json","build":"yarn build:cjs && yarn build:es"},"main":"./dist/cjs/index.js","types":"./dist/types/index.d.ts","module":"./dist/es/index.js","browser":{"./runtimeConfig":"./runtimeConfig.browser"},"react-native":{"./runtimeConfig":"./runtimeConfig.native"},"sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"^1.0.0","@aws-crypto/sha256-js":"^1.0.0","@aws-sdk/client-sts":"3.13.1","@aws-sdk/config-resolver":"3.13.1","@aws-sdk/credential-provider-node":"3.13.1","@aws-sdk/fetch-http-handler":"3.13.1","@aws-sdk/hash-node":"3.13.1","@aws-sdk/invalid-dependency":"3.13.1","@aws-sdk/middleware-content-length":"3.13.1","@aws-sdk/middleware-host-header":"3.13.1","@aws-sdk/middleware-logger":"3.13.1","@aws-sdk/middleware-retry":"3.13.1","@aws-sdk/middleware-serde":"3.13.1","@aws-sdk/middleware-signing":"3.13.1","@aws-sdk/middleware-stack":"3.13.1","@aws-sdk/middleware-user-agent":"3.13.1","@aws-sdk/node-config-provider":"3.13.1","@aws-sdk/node-http-handler":"3.13.1","@aws-sdk/protocol-http":"3.13.1","@aws-sdk/smithy-client":"3.13.1","@aws-sdk/types":"3.13.1","@aws-sdk/url-parser":"3.13.1","@aws-sdk/util-base64-browser":"3.13.1","@aws-sdk/util-base64-node":"3.13.1","@aws-sdk/util-body-length-browser":"3.13.1","@aws-sdk/util-body-length-node":"3.13.1","@aws-sdk/util-user-agent-browser":"3.13.1","@aws-sdk/util-user-agent-node":"3.13.1","@aws-sdk/util-utf8-browser":"3.13.1","@aws-sdk/util-utf8-node":"3.13.1","@aws-sdk/util-waiter":"3.13.1","@aws-sdk/xml-builder":"3.13.1","fast-xml-parser":"3.19.0","tslib":"^2.0.0"},"devDependencies":{"@aws-sdk/client-documentation-generator":"3.13.1","@types/node":"^12.7.5","downlevel-dts":"0.7.0","jest":"^26.1.0","rimraf":"^3.0.0","ts-jest":"^26.4.1","typedoc":"^0.19.2","typescript":"~4.2.4"},"engines":{"node":">=10.0.0"},"typesVersions":{"<4.0":{"types/*":["types/ts3.4/*"]}},"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-cloudfront","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-cloudfront"}}');
 
 /***/ }),
 
@@ -13,7 +13,7 @@ module.exports = JSON.parse('{"name":"@aws-sdk/client-cloudfront","description":
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-s3","description":"AWS SDK for JavaScript S3 Client for Node.js, Browser and React Native","version":"3.12.0","scripts":{"clean":"yarn remove-definitions && yarn remove-dist && yarn remove-documentation","build-documentation":"yarn remove-documentation && typedoc ./","prepublishOnly":"yarn build && downlevel-dts dist/types dist/types/ts3.4","remove-definitions":"rimraf ./types","remove-dist":"rimraf ./dist","remove-documentation":"rimraf ./docs","test:unit":"mocha **/cjs/**/*.spec.js","test:e2e":"mocha **/cjs/**/*.ispec.js && karma start karma.conf.js","test":"yarn test:unit","build:cjs":"tsc -p tsconfig.json","build:es":"tsc -p tsconfig.es.json","build":"yarn build:cjs && yarn build:es"},"main":"./dist/cjs/index.js","types":"./dist/types/index.d.ts","module":"./dist/es/index.js","browser":{"./runtimeConfig":"./runtimeConfig.browser"},"react-native":{"./runtimeConfig":"./runtimeConfig.native"},"sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"^1.0.0","@aws-crypto/sha256-js":"^1.0.0","@aws-sdk/client-sts":"3.12.0","@aws-sdk/config-resolver":"3.12.0","@aws-sdk/credential-provider-node":"3.12.0","@aws-sdk/eventstream-serde-browser":"3.12.0","@aws-sdk/eventstream-serde-config-resolver":"3.12.0","@aws-sdk/eventstream-serde-node":"3.12.0","@aws-sdk/fetch-http-handler":"3.12.0","@aws-sdk/hash-blob-browser":"3.12.0","@aws-sdk/hash-node":"3.12.0","@aws-sdk/hash-stream-node":"3.12.0","@aws-sdk/invalid-dependency":"3.12.0","@aws-sdk/md5-js":"3.12.0","@aws-sdk/middleware-apply-body-checksum":"3.12.0","@aws-sdk/middleware-bucket-endpoint":"3.12.0","@aws-sdk/middleware-content-length":"3.12.0","@aws-sdk/middleware-expect-continue":"3.12.0","@aws-sdk/middleware-host-header":"3.12.0","@aws-sdk/middleware-location-constraint":"3.12.0","@aws-sdk/middleware-logger":"3.12.0","@aws-sdk/middleware-retry":"3.12.0","@aws-sdk/middleware-sdk-s3":"3.12.0","@aws-sdk/middleware-serde":"3.12.0","@aws-sdk/middleware-signing":"3.12.0","@aws-sdk/middleware-ssec":"3.12.0","@aws-sdk/middleware-stack":"3.12.0","@aws-sdk/middleware-user-agent":"3.12.0","@aws-sdk/node-config-provider":"3.12.0","@aws-sdk/node-http-handler":"3.12.0","@aws-sdk/protocol-http":"3.12.0","@aws-sdk/smithy-client":"3.12.0","@aws-sdk/types":"3.12.0","@aws-sdk/url-parser":"3.12.0","@aws-sdk/url-parser-native":"3.12.0","@aws-sdk/util-base64-browser":"3.12.0","@aws-sdk/util-base64-node":"3.12.0","@aws-sdk/util-body-length-browser":"3.12.0","@aws-sdk/util-body-length-node":"3.12.0","@aws-sdk/util-user-agent-browser":"3.12.0","@aws-sdk/util-user-agent-node":"3.12.0","@aws-sdk/util-utf8-browser":"3.12.0","@aws-sdk/util-utf8-node":"3.12.0","@aws-sdk/util-waiter":"3.12.0","@aws-sdk/xml-builder":"3.12.0","fast-xml-parser":"3.19.0","tslib":"^2.0.0"},"devDependencies":{"@aws-sdk/client-documentation-generator":"3.12.0","@types/chai":"^4.2.11","@types/mocha":"^8.0.4","@types/node":"^12.7.5","downlevel-dts":"0.7.0","jest":"^26.1.0","rimraf":"^3.0.0","ts-jest":"^26.4.1","typedoc":"^0.19.2","typescript":"~4.1.2"},"engines":{"node":">=10.0.0"},"typesVersions":{"<4.0":{"types/*":["types/ts3.4/*"]}},"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-s3","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-s3"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-s3","description":"AWS SDK for JavaScript S3 Client for Node.js, Browser and React Native","version":"3.13.1","scripts":{"clean":"yarn remove-definitions && yarn remove-dist && yarn remove-documentation","build-documentation":"yarn remove-documentation && typedoc ./","prepublishOnly":"yarn build && downlevel-dts dist/types dist/types/ts3.4","remove-definitions":"rimraf ./types","remove-dist":"rimraf ./dist","remove-documentation":"rimraf ./docs","test:unit":"mocha **/cjs/**/*.spec.js","test:e2e":"mocha **/cjs/**/*.ispec.js && karma start karma.conf.js","test":"yarn test:unit","build:cjs":"tsc -p tsconfig.json","build:es":"tsc -p tsconfig.es.json","build":"yarn build:cjs && yarn build:es"},"main":"./dist/cjs/index.js","types":"./dist/types/index.d.ts","module":"./dist/es/index.js","browser":{"./runtimeConfig":"./runtimeConfig.browser"},"react-native":{"./runtimeConfig":"./runtimeConfig.native"},"sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"^1.0.0","@aws-crypto/sha256-js":"^1.0.0","@aws-sdk/client-sts":"3.13.1","@aws-sdk/config-resolver":"3.13.1","@aws-sdk/credential-provider-node":"3.13.1","@aws-sdk/eventstream-serde-browser":"3.13.1","@aws-sdk/eventstream-serde-config-resolver":"3.13.1","@aws-sdk/eventstream-serde-node":"3.13.1","@aws-sdk/fetch-http-handler":"3.13.1","@aws-sdk/hash-blob-browser":"3.13.1","@aws-sdk/hash-node":"3.13.1","@aws-sdk/hash-stream-node":"3.13.1","@aws-sdk/invalid-dependency":"3.13.1","@aws-sdk/md5-js":"3.13.1","@aws-sdk/middleware-apply-body-checksum":"3.13.1","@aws-sdk/middleware-bucket-endpoint":"3.13.1","@aws-sdk/middleware-content-length":"3.13.1","@aws-sdk/middleware-expect-continue":"3.13.1","@aws-sdk/middleware-host-header":"3.13.1","@aws-sdk/middleware-location-constraint":"3.13.1","@aws-sdk/middleware-logger":"3.13.1","@aws-sdk/middleware-retry":"3.13.1","@aws-sdk/middleware-sdk-s3":"3.13.1","@aws-sdk/middleware-serde":"3.13.1","@aws-sdk/middleware-signing":"3.13.1","@aws-sdk/middleware-ssec":"3.13.1","@aws-sdk/middleware-stack":"3.13.1","@aws-sdk/middleware-user-agent":"3.13.1","@aws-sdk/node-config-provider":"3.13.1","@aws-sdk/node-http-handler":"3.13.1","@aws-sdk/protocol-http":"3.13.1","@aws-sdk/smithy-client":"3.13.1","@aws-sdk/types":"3.13.1","@aws-sdk/url-parser":"3.13.1","@aws-sdk/util-base64-browser":"3.13.1","@aws-sdk/util-base64-node":"3.13.1","@aws-sdk/util-body-length-browser":"3.13.1","@aws-sdk/util-body-length-node":"3.13.1","@aws-sdk/util-user-agent-browser":"3.13.1","@aws-sdk/util-user-agent-node":"3.13.1","@aws-sdk/util-utf8-browser":"3.13.1","@aws-sdk/util-utf8-node":"3.13.1","@aws-sdk/util-waiter":"3.13.1","@aws-sdk/xml-builder":"3.13.1","fast-xml-parser":"3.19.0","tslib":"^2.0.0"},"devDependencies":{"@aws-sdk/client-documentation-generator":"3.13.1","@types/chai":"^4.2.11","@types/mocha":"^8.0.4","@types/node":"^12.7.5","downlevel-dts":"0.7.0","jest":"^26.1.0","rimraf":"^3.0.0","ts-jest":"^26.4.1","typedoc":"^0.19.2","typescript":"~4.2.4"},"engines":{"node":">=10.0.0"},"typesVersions":{"<4.0":{"types/*":["types/ts3.4/*"]}},"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-s3","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-s3"}}');
 
 /***/ }),
 
@@ -21,7 +21,7 @@ module.exports = JSON.parse('{"name":"@aws-sdk/client-s3","description":"AWS SDK
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-sso","description":"AWS SDK for JavaScript Sso Client for Node.js, Browser and React Native","version":"3.12.0","scripts":{"clean":"yarn remove-definitions && yarn remove-dist && yarn remove-documentation","build-documentation":"yarn remove-documentation && typedoc ./","prepublishOnly":"yarn build && downlevel-dts dist/types dist/types/ts3.4","remove-definitions":"rimraf ./types","remove-dist":"rimraf ./dist","remove-documentation":"rimraf ./docs","test":"exit 0","build:cjs":"tsc -p tsconfig.json","build:es":"tsc -p tsconfig.es.json","build":"yarn build:cjs && yarn build:es"},"main":"./dist/cjs/index.js","types":"./dist/types/index.d.ts","module":"./dist/es/index.js","browser":{"./runtimeConfig":"./runtimeConfig.browser"},"react-native":{"./runtimeConfig":"./runtimeConfig.native"},"sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"^1.0.0","@aws-crypto/sha256-js":"^1.0.0","@aws-sdk/config-resolver":"3.12.0","@aws-sdk/fetch-http-handler":"3.12.0","@aws-sdk/hash-node":"3.12.0","@aws-sdk/invalid-dependency":"3.12.0","@aws-sdk/middleware-content-length":"3.12.0","@aws-sdk/middleware-host-header":"3.12.0","@aws-sdk/middleware-logger":"3.12.0","@aws-sdk/middleware-retry":"3.12.0","@aws-sdk/middleware-serde":"3.12.0","@aws-sdk/middleware-stack":"3.12.0","@aws-sdk/middleware-user-agent":"3.12.0","@aws-sdk/node-config-provider":"3.12.0","@aws-sdk/node-http-handler":"3.12.0","@aws-sdk/protocol-http":"3.12.0","@aws-sdk/smithy-client":"3.12.0","@aws-sdk/types":"3.12.0","@aws-sdk/url-parser":"3.12.0","@aws-sdk/url-parser-native":"3.12.0","@aws-sdk/util-base64-browser":"3.12.0","@aws-sdk/util-base64-node":"3.12.0","@aws-sdk/util-body-length-browser":"3.12.0","@aws-sdk/util-body-length-node":"3.12.0","@aws-sdk/util-user-agent-browser":"3.12.0","@aws-sdk/util-user-agent-node":"3.12.0","@aws-sdk/util-utf8-browser":"3.12.0","@aws-sdk/util-utf8-node":"3.12.0","tslib":"^2.0.0"},"devDependencies":{"@aws-sdk/client-documentation-generator":"3.12.0","@types/node":"^12.7.5","downlevel-dts":"0.7.0","jest":"^26.1.0","rimraf":"^3.0.0","ts-jest":"^26.4.1","typedoc":"^0.19.2","typescript":"~4.1.2"},"engines":{"node":">=10.0.0"},"typesVersions":{"<4.0":{"types/*":["types/ts3.4/*"]}},"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sso","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sso"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-sso","description":"AWS SDK for JavaScript Sso Client for Node.js, Browser and React Native","version":"3.13.1","scripts":{"clean":"yarn remove-definitions && yarn remove-dist && yarn remove-documentation","build-documentation":"yarn remove-documentation && typedoc ./","prepublishOnly":"yarn build && downlevel-dts dist/types dist/types/ts3.4","remove-definitions":"rimraf ./types","remove-dist":"rimraf ./dist","remove-documentation":"rimraf ./docs","test":"exit 0","build:cjs":"tsc -p tsconfig.json","build:es":"tsc -p tsconfig.es.json","build":"yarn build:cjs && yarn build:es"},"main":"./dist/cjs/index.js","types":"./dist/types/index.d.ts","module":"./dist/es/index.js","browser":{"./runtimeConfig":"./runtimeConfig.browser"},"react-native":{"./runtimeConfig":"./runtimeConfig.native"},"sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"^1.0.0","@aws-crypto/sha256-js":"^1.0.0","@aws-sdk/config-resolver":"3.13.1","@aws-sdk/fetch-http-handler":"3.13.1","@aws-sdk/hash-node":"3.13.1","@aws-sdk/invalid-dependency":"3.13.1","@aws-sdk/middleware-content-length":"3.13.1","@aws-sdk/middleware-host-header":"3.13.1","@aws-sdk/middleware-logger":"3.13.1","@aws-sdk/middleware-retry":"3.13.1","@aws-sdk/middleware-serde":"3.13.1","@aws-sdk/middleware-stack":"3.13.1","@aws-sdk/middleware-user-agent":"3.13.1","@aws-sdk/node-config-provider":"3.13.1","@aws-sdk/node-http-handler":"3.13.1","@aws-sdk/protocol-http":"3.13.1","@aws-sdk/smithy-client":"3.13.1","@aws-sdk/types":"3.13.1","@aws-sdk/url-parser":"3.13.1","@aws-sdk/util-base64-browser":"3.13.1","@aws-sdk/util-base64-node":"3.13.1","@aws-sdk/util-body-length-browser":"3.13.1","@aws-sdk/util-body-length-node":"3.13.1","@aws-sdk/util-user-agent-browser":"3.13.1","@aws-sdk/util-user-agent-node":"3.13.1","@aws-sdk/util-utf8-browser":"3.13.1","@aws-sdk/util-utf8-node":"3.13.1","tslib":"^2.0.0"},"devDependencies":{"@aws-sdk/client-documentation-generator":"3.13.1","@types/node":"^12.7.5","downlevel-dts":"0.7.0","jest":"^26.1.0","rimraf":"^3.0.0","ts-jest":"^26.4.1","typedoc":"^0.19.2","typescript":"~4.2.4"},"engines":{"node":">=10.0.0"},"typesVersions":{"<4.0":{"types/*":["types/ts3.4/*"]}},"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sso","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sso"}}');
 
 /***/ }),
 
@@ -29,7 +29,7 @@ module.exports = JSON.parse('{"name":"@aws-sdk/client-sso","description":"AWS SD
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-sts","description":"AWS SDK for JavaScript Sts Client for Node.js, Browser and React Native","version":"3.12.0","scripts":{"clean":"yarn remove-definitions && yarn remove-dist && yarn remove-documentation","build-documentation":"yarn remove-documentation && typedoc ./","prepublishOnly":"yarn build && downlevel-dts dist/types dist/types/ts3.4","remove-definitions":"rimraf ./types","remove-dist":"rimraf ./dist","remove-documentation":"rimraf ./docs","test":"exit 0","build:cjs":"tsc -p tsconfig.json","build:es":"tsc -p tsconfig.es.json","build":"yarn build:cjs && yarn build:es"},"main":"./dist/cjs/index.js","types":"./dist/types/index.d.ts","module":"./dist/es/index.js","browser":{"./runtimeConfig":"./runtimeConfig.browser"},"react-native":{"./runtimeConfig":"./runtimeConfig.native"},"sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"^1.0.0","@aws-crypto/sha256-js":"^1.0.0","@aws-sdk/config-resolver":"3.12.0","@aws-sdk/credential-provider-node":"3.12.0","@aws-sdk/fetch-http-handler":"3.12.0","@aws-sdk/hash-node":"3.12.0","@aws-sdk/invalid-dependency":"3.12.0","@aws-sdk/middleware-content-length":"3.12.0","@aws-sdk/middleware-host-header":"3.12.0","@aws-sdk/middleware-logger":"3.12.0","@aws-sdk/middleware-retry":"3.12.0","@aws-sdk/middleware-sdk-sts":"3.12.0","@aws-sdk/middleware-serde":"3.12.0","@aws-sdk/middleware-signing":"3.12.0","@aws-sdk/middleware-stack":"3.12.0","@aws-sdk/middleware-user-agent":"3.12.0","@aws-sdk/node-config-provider":"3.12.0","@aws-sdk/node-http-handler":"3.12.0","@aws-sdk/protocol-http":"3.12.0","@aws-sdk/smithy-client":"3.12.0","@aws-sdk/types":"3.12.0","@aws-sdk/url-parser":"3.12.0","@aws-sdk/url-parser-native":"3.12.0","@aws-sdk/util-base64-browser":"3.12.0","@aws-sdk/util-base64-node":"3.12.0","@aws-sdk/util-body-length-browser":"3.12.0","@aws-sdk/util-body-length-node":"3.12.0","@aws-sdk/util-user-agent-browser":"3.12.0","@aws-sdk/util-user-agent-node":"3.12.0","@aws-sdk/util-utf8-browser":"3.12.0","@aws-sdk/util-utf8-node":"3.12.0","fast-xml-parser":"3.19.0","tslib":"^2.0.0"},"devDependencies":{"@aws-sdk/client-documentation-generator":"3.12.0","@types/node":"^12.7.5","downlevel-dts":"0.7.0","jest":"^26.1.0","rimraf":"^3.0.0","ts-jest":"^26.4.1","typedoc":"^0.19.2","typescript":"~4.1.2"},"engines":{"node":">=10.0.0"},"typesVersions":{"<4.0":{"types/*":["types/ts3.4/*"]}},"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sts","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sts"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-sts","description":"AWS SDK for JavaScript Sts Client for Node.js, Browser and React Native","version":"3.13.1","scripts":{"clean":"yarn remove-definitions && yarn remove-dist && yarn remove-documentation","build-documentation":"yarn remove-documentation && typedoc ./","prepublishOnly":"yarn build && downlevel-dts dist/types dist/types/ts3.4","remove-definitions":"rimraf ./types","remove-dist":"rimraf ./dist","remove-documentation":"rimraf ./docs","test":"exit 0","build:cjs":"tsc -p tsconfig.json","build:es":"tsc -p tsconfig.es.json","build":"yarn build:cjs && yarn build:es"},"main":"./dist/cjs/index.js","types":"./dist/types/index.d.ts","module":"./dist/es/index.js","browser":{"./runtimeConfig":"./runtimeConfig.browser"},"react-native":{"./runtimeConfig":"./runtimeConfig.native"},"sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"^1.0.0","@aws-crypto/sha256-js":"^1.0.0","@aws-sdk/config-resolver":"3.13.1","@aws-sdk/credential-provider-node":"3.13.1","@aws-sdk/fetch-http-handler":"3.13.1","@aws-sdk/hash-node":"3.13.1","@aws-sdk/invalid-dependency":"3.13.1","@aws-sdk/middleware-content-length":"3.13.1","@aws-sdk/middleware-host-header":"3.13.1","@aws-sdk/middleware-logger":"3.13.1","@aws-sdk/middleware-retry":"3.13.1","@aws-sdk/middleware-sdk-sts":"3.13.1","@aws-sdk/middleware-serde":"3.13.1","@aws-sdk/middleware-signing":"3.13.1","@aws-sdk/middleware-stack":"3.13.1","@aws-sdk/middleware-user-agent":"3.13.1","@aws-sdk/node-config-provider":"3.13.1","@aws-sdk/node-http-handler":"3.13.1","@aws-sdk/protocol-http":"3.13.1","@aws-sdk/smithy-client":"3.13.1","@aws-sdk/types":"3.13.1","@aws-sdk/url-parser":"3.13.1","@aws-sdk/util-base64-browser":"3.13.1","@aws-sdk/util-base64-node":"3.13.1","@aws-sdk/util-body-length-browser":"3.13.1","@aws-sdk/util-body-length-node":"3.13.1","@aws-sdk/util-user-agent-browser":"3.13.1","@aws-sdk/util-user-agent-node":"3.13.1","@aws-sdk/util-utf8-browser":"3.13.1","@aws-sdk/util-utf8-node":"3.13.1","fast-xml-parser":"3.19.0","tslib":"^2.0.0"},"devDependencies":{"@aws-sdk/client-documentation-generator":"3.13.1","@types/node":"^12.7.5","downlevel-dts":"0.7.0","jest":"^26.1.0","rimraf":"^3.0.0","ts-jest":"^26.4.1","typedoc":"^0.19.2","typescript":"~4.2.4"},"engines":{"node":">=10.0.0"},"typesVersions":{"<4.0":{"types/*":["types/ts3.4/*"]}},"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sts","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sts"}}');
 
 /***/ }),
 
@@ -3007,31 +3007,9 @@ const Aws_restXml_1 = __nccwpck_require__(60108);
 const middleware_serde_1 = __nccwpck_require__(86142);
 const smithy_client_1 = __nccwpck_require__(32223);
 /**
- * <p>Creates a new RTMP distribution. An RTMP distribution is similar to a web distribution,
- * 			but an RTMP distribution streams media files using the Adobe Real-Time Messaging Protocol
- * 			(RTMP) instead of serving files using HTTP. </p>
- * 		       <p>To create a new distribution, submit a <code>POST</code> request to the
- * 				<i>CloudFront API version</i>/distribution resource. The request body must include a
- * 			document with a <i>StreamingDistributionConfig</i> element. The response echoes
- * 			the <code>StreamingDistributionConfig</code> element and returns other information about the
- * 			RTMP distribution.</p>
- * 		       <p>To get the status of your request, use the <i>GET
- * 				StreamingDistribution</i> API action. When the value of <code>Enabled</code> is
- * 				<code>true</code> and the value of <code>Status</code> is <code>Deployed</code>, your
- * 			distribution is ready. A distribution usually deploys in less than 15 minutes.</p>
- * 		       <p>For more information about web distributions, see <a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-rtmp.html">Working with RTMP Distributions</a> in the
- * 				<i>Amazon CloudFront Developer Guide</i>.</p>
- * 		       <important>
- * 			         <p>Beginning with the 2012-05-05 version of the CloudFront API, we made substantial changes to
- * 				the format of the XML document that you include in the request body when you create or
- * 				update a web distribution or an RTMP distribution, and when you invalidate objects. With
- * 				previous versions of the API, we discovered that it was too easy to accidentally delete one
- * 				or more values for an element that accepts multiple values, for example, CNAMEs and trusted
- * 				signers. Our changes for the 2012-05-05 release are intended to prevent these accidental
- * 				deletions and to notify you when there's a mismatch between the number of values you say
- * 				you're specifying in the <code>Quantity</code> element and the number of values
- * 				specified.</p>
- * 		       </important>
+ * <p>This API is deprecated.
+ *             Amazon CloudFront is deprecating real-time messaging protocol (RTMP) distributions on December 31, 2020.
+ *             For more information, <a href="http://forums.aws.amazon.com/ann.jspa?annID=7356">read the announcement</a> on the Amazon CloudFront discussion forum.</p>
  */
 class CreateStreamingDistributionCommand extends smithy_client_1.Command {
     // Start section: command_properties
@@ -3085,7 +3063,9 @@ const Aws_restXml_1 = __nccwpck_require__(60108);
 const middleware_serde_1 = __nccwpck_require__(86142);
 const smithy_client_1 = __nccwpck_require__(32223);
 /**
- * <p>Create a new streaming distribution with tags.</p>
+ * <p>This API is deprecated.
+ *             Amazon CloudFront is deprecating real-time messaging protocol (RTMP) distributions on December 31, 2020.
+ *             For more information, <a href="http://forums.aws.amazon.com/ann.jspa?annID=7356">read the announcement</a> on the Amazon CloudFront discussion forum.</p>
  */
 class CreateStreamingDistributionWithTagsCommand extends smithy_client_1.Command {
     // Start section: command_properties
@@ -24512,6 +24492,7 @@ const RestoreObjectCommand_1 = __nccwpck_require__(88534);
 const SelectObjectContentCommand_1 = __nccwpck_require__(56919);
 const UploadPartCommand_1 = __nccwpck_require__(28185);
 const UploadPartCopyCommand_1 = __nccwpck_require__(4479);
+const WriteGetObjectResponseCommand_1 = __nccwpck_require__(65029);
 /**
  * <p></p>
  */
@@ -25790,6 +25771,20 @@ class S3 extends S3Client_1.S3Client {
             return this.send(command, optionsOrCb);
         }
     }
+    writeGetObjectResponse(args, optionsOrCb, cb) {
+        const command = new WriteGetObjectResponseCommand_1.WriteGetObjectResponseCommand(args);
+        if (typeof optionsOrCb === "function") {
+            this.send(command, optionsOrCb);
+        }
+        else if (typeof cb === "function") {
+            if (typeof optionsOrCb !== "object")
+                throw new Error(`Expect http options but get ${typeof optionsOrCb}`);
+            this.send(command, optionsOrCb || {}, cb);
+        }
+        else {
+            return this.send(command, optionsOrCb);
+        }
+    }
 }
 exports.S3 = S3;
 //# sourceMappingURL=S3.js.map
@@ -25872,16 +25867,16 @@ const middleware_bucket_endpoint_1 = __nccwpck_require__(99239);
 const middleware_serde_1 = __nccwpck_require__(86142);
 const smithy_client_1 = __nccwpck_require__(32223);
 /**
- * <p>This operation aborts a multipart upload. After a multipart upload is aborted, no
+ * <p>This action aborts a multipart upload. After a multipart upload is aborted, no
  *          additional parts can be uploaded using that upload ID. The storage consumed by any
  *          previously uploaded parts will be freed. However, if any part uploads are currently in
  *          progress, those part uploads might or might not succeed. As a result, it might be necessary
  *          to abort a given multipart upload multiple times in order to completely free all storage
  *          consumed by all parts. </p>
  *          <p>To verify that all parts have been removed, so you don't get charged for the part
- *          storage, you should call the <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_ListParts.html">ListParts</a> operation and ensure that
+ *          storage, you should call the <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_ListParts.html">ListParts</a> action and ensure that
  *          the parts list is empty.</p>
- *          <p>For information about permissions required to use the multipart upload API, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuAndPermissions.html">Multipart Upload API and
+ *          <p>For information about permissions required to use the multipart upload, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuAndPermissions.html">Multipart Upload and
  *          Permissions</a>.</p>
  *          <p>The following operations are related to <code>AbortMultipartUpload</code>:</p>
  *          <ul>
@@ -25970,10 +25965,10 @@ const smithy_client_1 = __nccwpck_require__(32223);
  * <p>Completes a multipart upload by assembling previously uploaded parts.</p>
  *          <p>You first initiate the multipart upload and then upload all parts using the <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_UploadPart.html">UploadPart</a>
  *          operation. After successfully uploading all relevant parts of an upload, you call this
- *          operation to complete the upload. Upon receiving this request, Amazon S3 concatenates all
+ *          action to complete the upload. Upon receiving this request, Amazon S3 concatenates all
  *          the parts in ascending order by part number to create a new object. In the Complete
  *          Multipart Upload request, you must provide the parts list. You must ensure that the parts
- *          list is complete. This operation concatenates the parts that you provide in the list. For
+ *          list is complete. This action concatenates the parts that you provide in the list. For
  *          each part in the list, you must provide the part number and the <code>ETag</code> value,
  *          returned after that part was uploaded.</p>
  *          <p>Processing of a Complete Multipart Upload request could take several minutes to
@@ -25986,7 +25981,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          to retry the failed requests. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/ErrorBestPractices.html">Amazon S3 Error Best Practices</a>.</p>
  *          <p>For more information about multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/uploadobjusingmpu.html">Uploading Objects Using Multipart
  *             Upload</a>.</p>
- *          <p>For information about permissions required to use the multipart upload API, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuAndPermissions.html">Multipart Upload API and
+ *          <p>For information about permissions required to use the multipart upload API, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuAndPermissions.html">Multipart Upload and
  *          Permissions</a>.</p>
  *
  *
@@ -26138,7 +26133,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  * <p>Creates a copy of an object that is already stored in Amazon S3.</p>
  *          <note>
  *             <p>You can store individual objects of up to 5 TB in Amazon S3. You create a copy of your
- *             object up to 5 GB in size in a single atomic operation using this API. However, to copy
+ *             object up to 5 GB in size in a single atomic action using this API. However, to copy
  *             an object greater than 5 GB, you must use the multipart upload Upload Part - Copy API.
  *             For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/CopyingObjctsUsingRESTMPUapi.html">Copy Object Using the REST Multipart Upload API</a>.</p>
  *          </note>
@@ -26148,7 +26143,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          that you want to copy the object from and the Region that you want to copy the object to
  *          must be enabled for your account.</p>
  *          <p>A copy request might return an error when Amazon S3 receives the copy request or while Amazon S3
- *          is copying the files. If the error occurs before the copy operation starts, you receive a
+ *          is copying the files. If the error occurs before the copy action starts, you receive a
  *          standard Amazon S3 error. If the error occurs during the copy operation, the error response is
  *          embedded in the <code>200 OK</code> response. This means that a <code>200 OK</code>
  *          response can contain either a success or an error. Design your application to parse the
@@ -26161,7 +26156,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *             body.</p>
  *          </note>
  *          <p>The copy request charge is based on the storage class and Region that you specify for
- *          the destination object. For pricing information, see <a href="https://aws.amazon.com/s3/pricing/">Amazon S3 pricing</a>.</p>
+ *          the destination object. For pricing information, see <a href="http://aws.amazon.com/s3/pricing/">Amazon S3 pricing</a>.</p>
  *          <important>
  *             <p>Amazon S3 transfer acceleration does not support cross-Region copies. If you request a
  *             cross-Region copy using a transfer acceleration endpoint, you get a 400 <code>Bad
@@ -26249,10 +26244,14 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          <p>
  *             <b>Server-side encryption</b>
  *          </p>
- *          <p>When you perform a CopyObject operation, you can optionally use the appropriate encryption-related headers to encrypt the object using server-side encryption with AWS managed encryption keys (SSE-S3 or SSE-KMS) or a customer-provided encryption key. With server-side encryption, Amazon S3 encrypts your data as it writes it to disks in its data centers and decrypts the data when you access it. For more information about server-side encryption, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/serv-side-encryption.html">Using
+ *          <p>When you perform a CopyObject operation, you can optionally use the appropriate encryption-related
+ *          headers to encrypt the object using server-side encryption with AWS managed encryption keys
+ *          (SSE-S3 or SSE-KMS) or a customer-provided encryption key. With server-side encryption, Amazon S3
+ *          encrypts your data as it writes it to disks in its data centers and decrypts the data when
+ *          you access it. For more information about server-side encryption, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/serv-side-encryption.html">Using
  *          Server-Side Encryption</a>.</p>
  *          <p>If a target object uses SSE-KMS, you can enable an S3 Bucket Key for the object. For more
- *          information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-key.html">Amazon S3 Bucket Keys</a> in the <i>Amazon Simple Storage Service Developer Guide</i>.</p>
+ *          information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-key.html">Amazon S3 Bucket Keys</a> in the <i>Amazon S3 User Guide</i>.</p>
  *          <p>
  *             <b>Access Control List (ACL)-Specific Request
  *          Headers</b>
@@ -26267,7 +26266,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          <p>
  *             <b>Storage Class Options</b>
  *          </p>
- *          <p>You can use the <code>CopyObject</code> operation to change the storage class of an
+ *          <p>You can use the <code>CopyObject</code> action to change the storage class of an
  *          object that is already stored in Amazon S3 using the <code>StorageClass</code> parameter. For
  *          more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html">Storage
  *             Classes</a> in the <i>Amazon S3 Service Developer Guide</i>.</p>
@@ -26526,7 +26525,7 @@ const middleware_serde_1 = __nccwpck_require__(86142);
 const middleware_ssec_1 = __nccwpck_require__(92701);
 const smithy_client_1 = __nccwpck_require__(32223);
 /**
- * <p>This operation initiates a multipart upload and returns an upload ID. This upload ID is
+ * <p>This action initiates a multipart upload and returns an upload ID. This upload ID is
  *          used to associate all of the parts in the specific multipart upload. You specify this
  *          upload ID in each of your subsequent upload part requests (see <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_UploadPart.html">UploadPart</a>). You also include this
  *          upload ID in the final request to either complete or abort the multipart upload
@@ -26537,11 +26536,11 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          <p>If you have configured a lifecycle rule to abort incomplete multipart uploads, the
  *          upload must complete within the number of days specified in the bucket lifecycle
  *          configuration. Otherwise, the incomplete multipart upload becomes eligible for an abort
- *          operation and Amazon S3 aborts the multipart upload. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html#mpu-abort-incomplete-mpu-lifecycle-config">Aborting
+ *          action and Amazon S3 aborts the multipart upload. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html#mpu-abort-incomplete-mpu-lifecycle-config">Aborting
  *             Incomplete Multipart Uploads Using a Bucket Lifecycle Policy</a>.</p>
  *
  *          <p>For information about the permissions required to use the multipart upload API, see
- *             <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuAndPermissions.html">Multipart Upload API and
+ *             <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuAndPermissions.html">Multipart Upload and
  *             Permissions</a>.</p>
  *
  *          <p>For request signing, multipart upload is just a series of regular requests. You initiate
@@ -26561,7 +26560,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          encrypts your data as it writes it to disks in its data centers and decrypts it when you
  *          access it. You can provide your own encryption key, or use AWS Key Management Service (AWS
  *          KMS) customer master keys (CMKs) or Amazon S3-managed encryption keys. If you choose to provide
- *          your own encryption key, the request headers you provide in <a href="AmazonS3/latest/API/API_UploadPart.html">UploadPart</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_UploadPartCopy.html">UploadPartCopy</a> requests must match the headers you used in the request to
+ *          your own encryption key, the request headers you provide in <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_UploadPart.html">UploadPart</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_UploadPartCopy.html">UploadPartCopy</a> requests must match the headers you used in the request to
  *          initiate the upload by using <code>CreateMultipartUpload</code>. </p>
  *          <p>To perform a multipart upload with encryption using an AWS KMS CMK, the requester must
  *          have permission to the <code>kms:Encrypt</code>, <code>kms:Decrypt</code>,
@@ -26849,7 +26848,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          <p>To use this operation, you must have permissions to perform the
  *             <code>s3:PutAnalyticsConfiguration</code> action. The bucket owner has this permission
  *          by default. The bucket owner can grant this permission to others. For more information
- *          about permissions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html">Managing Access Permissions to Your Amazon S3
+ *          about permissions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-access-control.html">Managing Access Permissions to Your Amazon S3
  *             Resources</a>.</p>
  *
  *          <p>For information about the Amazon S3 analytics feature, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/analytics-storage-class.html">Amazon S3 Analytics – Storage Class
@@ -27005,7 +27004,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *             <code>s3:PutBucketCORS</code> action. The bucket owner has this permission by default
  *          and can grant this permission to others. </p>
  *          <p>For information about <code>cors</code>, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html">Enabling
- *             Cross-Origin Resource Sharing</a> in the <i>Amazon Simple Storage Service Developer Guide</i>.</p>
+ *             Cross-Origin Resource Sharing</a> in the <i>Amazon S3 User Guide</i>.</p>
  *
  *          <p class="title">
  *             <b>Related Resources:</b>
@@ -27077,14 +27076,14 @@ const middleware_bucket_endpoint_1 = __nccwpck_require__(99239);
 const middleware_serde_1 = __nccwpck_require__(86142);
 const smithy_client_1 = __nccwpck_require__(32223);
 /**
- * <p>This implementation of the DELETE operation removes default encryption from the bucket.
+ * <p>This implementation of the DELETE action removes default encryption from the bucket.
  *          For information about the Amazon S3 default encryption feature, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html">Amazon S3 Default Bucket Encryption</a> in the
- *             <i>Amazon Simple Storage Service Developer Guide</i>.</p>
+ *             <i>Amazon S3 User Guide</i>.</p>
  *          <p>To use this operation, you must have permissions to perform the
  *             <code>s3:PutEncryptionConfiguration</code> action. The bucket owner has this permission
  *          by default. The bucket owner can grant this permission to others. For more information
- *          about permissions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html">Managing Access Permissions to your Amazon S3
- *             Resources</a> in the <i>Amazon Simple Storage Service Developer Guide</i>.</p>
+ *          about permissions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-access-control.html">Managing Access Permissions to your Amazon S3
+ *             Resources</a> in the <i>Amazon S3 User Guide</i>.</p>
  *
  *          <p class="title">
  *             <b>Related Resources</b>
@@ -27239,7 +27238,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          <p>To use this operation, you must have permissions to perform the
  *             <code>s3:PutInventoryConfiguration</code> action. The bucket owner has this permission
  *          by default. The bucket owner can grant this permission to others. For more information
- *          about permissions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html">Managing Access Permissions to Your Amazon S3
+ *          about permissions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-access-control.html">Managing Access Permissions to Your Amazon S3
  *             Resources</a>.</p>
  *          <p>For information about the Amazon S3 inventory feature, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-inventory.html">Amazon S3 Inventory</a>.</p>
  *          <p>Operations related to <code>DeleteBucketInventoryConfiguration</code> include: </p>
@@ -27403,7 +27402,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          <p> To use this operation, you must have permissions to perform the
  *             <code>s3:PutMetricsConfiguration</code> action. The bucket owner has this permission by
  *          default. The bucket owner can grant this permission to others. For more information about
- *          permissions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html">Managing Access Permissions to Your Amazon S3
+ *          permissions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-access-control.html">Managing Access Permissions to Your Amazon S3
  *             Resources</a>.</p>
  *
  *          <p>For information about CloudWatch request metrics for Amazon S3, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/cloudwatch-monitoring.html">Monitoring Metrics with Amazon CloudWatch</a>. </p>
@@ -27561,7 +27560,7 @@ const middleware_bucket_endpoint_1 = __nccwpck_require__(99239);
 const middleware_serde_1 = __nccwpck_require__(86142);
 const smithy_client_1 = __nccwpck_require__(32223);
 /**
- * <p>This implementation of the DELETE operation uses the policy subresource to delete the
+ * <p>This implementation of the DELETE action uses the policy subresource to delete the
  *          policy of a specified bucket. If you are using an identity other than the root user of the
  *          AWS account that owns the bucket, the calling identity must have the
  *             <code>DeleteBucketPolicy</code> permissions on the specified bucket and belong to the
@@ -27572,14 +27571,13 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          identity that belongs to the bucket owner's account, Amazon S3 returns a <code>405 Method Not
  *             Allowed</code> error. </p>
  *
- *
  *          <important>
  *             <p>As a security precaution, the root user of the AWS account that owns a bucket can
  *             always use this operation, even if the policy explicitly denies the root user the
  *             ability to perform this action.</p>
  *          </important>
  *
- *          <p>For more information about bucket policies, see <a href=" https://docs.aws.amazon.com/AmazonS3/latest/dev/using-iam-policies.html">Using Bucket Policies and
+ *          <p>For more information about bucket policies, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-iam-policies.html">Using Bucket Policies and
  *             UserPolicies</a>. </p>
  *          <p>The following operations are related to <code>DeleteBucketPolicy</code>
  *          </p>
@@ -27654,14 +27652,14 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          <p>To use this operation, you must have permissions to perform the
  *             <code>s3:PutReplicationConfiguration</code> action. The bucket owner has these
  *          permissions by default and can grant it to others. For more information about permissions,
- *          see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html">Managing Access Permissions to Your Amazon S3
+ *          see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-access-control.html">Managing Access Permissions to Your Amazon S3
  *             Resources</a>. </p>
  *          <note>
  *             <p>It can take a while for the deletion of a replication configuration to fully
  *             propagate.</p>
  *          </note>
  *
- *          <p> For information about replication configuration, see <a href=" https://docs.aws.amazon.com/AmazonS3/latest/dev/replication.html">Replication</a> in the <i>Amazon S3 Developer
+ *          <p> For information about replication configuration, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/replication.html">Replication</a> in the <i>Amazon S3 Developer
  *             Guide</i>. </p>
  *
  *          <p>The following operations are related to <code>DeleteBucketReplication</code>:</p>
@@ -27805,13 +27803,13 @@ const middleware_bucket_endpoint_1 = __nccwpck_require__(99239);
 const middleware_serde_1 = __nccwpck_require__(86142);
 const smithy_client_1 = __nccwpck_require__(32223);
 /**
- * <p>This operation removes the website configuration for a bucket. Amazon S3 returns a <code>200
+ * <p>This action removes the website configuration for a bucket. Amazon S3 returns a <code>200
  *             OK</code> response upon successfully deleting a website configuration on the specified
  *          bucket. You will get a <code>200 OK</code> response if the website configuration you are
  *          trying to delete does not exist on the bucket. Amazon S3 returns a <code>404</code> response if
  *          the bucket specified in the request does not exist.</p>
  *
- *          <p>This DELETE operation requires the <code>S3:DeleteBucketWebsite</code> permission. By
+ *          <p>This DELETE action requires the <code>S3:DeleteBucketWebsite</code> permission. By
  *          default, only the bucket owner can delete the website configuration attached to a bucket.
  *          However, bucket owners can grant other users permission to delete the website configuration
  *          by writing a bucket policy granting them the <code>S3:DeleteBucketWebsite</code>
@@ -27889,7 +27887,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
 /**
  * <p>Removes the null version (if there is one) of an object and inserts a delete marker,
  *          which becomes the latest version of the object. If there isn't a null version, Amazon S3 does
- *          not remove any objects.</p>
+ *          not remove any objects but will still respond that the command was successful.</p>
  *
  *          <p>To remove a specific version, you must be the bucket owner and you must use the version
  *          Id subresource. Using this subresource permanently deletes the version. If the object
@@ -27903,14 +27901,14 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *
  *          <p> For more information about MFA Delete, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMFADelete.html">Using MFA Delete</a>. To see sample requests that use versioning, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/RESTObjectDELETE.html#ExampleVersionObjectDelete">Sample Request</a>. </p>
  *
- *          <p>You can delete objects by explicitly calling the DELETE Object API or configure its
+ *          <p>You can delete objects by explicitly calling DELETE Object or configure its
  *          lifecycle (<a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutBucketLifecycle.html">PutBucketLifecycle</a>) to
  *          enable Amazon S3 to remove them for you. If you want to block users or accounts from removing or
  *          deleting objects from your bucket, you must deny them the <code>s3:DeleteObject</code>,
  *             <code>s3:DeleteObjectVersion</code>, and <code>s3:PutLifeCycleConfiguration</code>
  *          actions. </p>
  *
- *          <p>The following operation is related to <code>DeleteObject</code>:</p>
+ *          <p>The following action is related to <code>DeleteObject</code>:</p>
  *          <ul>
  *             <li>
  *                <p>
@@ -28054,25 +28052,25 @@ const middleware_bucket_endpoint_1 = __nccwpck_require__(99239);
 const middleware_serde_1 = __nccwpck_require__(86142);
 const smithy_client_1 = __nccwpck_require__(32223);
 /**
- * <p>This operation enables you to delete multiple objects from a bucket using a single HTTP
- *          request. If you know the object keys that you want to delete, then this operation provides
+ * <p>This action enables you to delete multiple objects from a bucket using a single HTTP
+ *          request. If you know the object keys that you want to delete, then this action provides
  *          a suitable alternative to sending individual delete requests, reducing per-request
  *          overhead.</p>
  *
  *          <p>The request contains a list of up to 1000 keys that you want to delete. In the XML, you
  *          provide the object key names, and optionally, version IDs if you want to delete a specific
  *          version of the object from a versioning-enabled bucket. For each key, Amazon S3 performs a
- *          delete operation and returns the result of that delete, success, or failure, in the
+ *          delete action and returns the result of that delete, success, or failure, in the
  *          response. Note that if the object specified in the request is not found, Amazon S3 returns the
  *          result as deleted.</p>
  *
- *          <p> The operation supports two modes for the response: verbose and quiet. By default, the
- *          operation uses verbose mode in which the response includes the result of deletion of each
+ *          <p> The action supports two modes for the response: verbose and quiet. By default, the
+ *          action uses verbose mode in which the response includes the result of deletion of each
  *          key in your request. In quiet mode the response includes only keys where the delete
- *          operation encountered an error. For a successful deletion, the operation does not return
+ *          action encountered an error. For a successful deletion, the action does not return
  *          any information about the delete in the response body.</p>
  *
- *          <p>When performing this operation on an MFA Delete enabled bucket, that attempts to delete
+ *          <p>When performing this action on an MFA Delete enabled bucket, that attempts to delete
  *          any versioned objects, you must include an MFA token. If you do not provide one, the entire
  *          request will fail, even if there are non-versioned objects you are trying to delete. If you
  *          provide an invalid token, whether there are versioned keys in the request or not, the
@@ -28169,7 +28167,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
 /**
  * <p>Removes the <code>PublicAccessBlock</code> configuration for an Amazon S3 bucket. To use this
  *          operation, you must have the <code>s3:PutBucketPublicAccessBlock</code> permission. For
- *          more information about permissions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html">Managing Access Permissions to Your Amazon S3
+ *          more information about permissions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-access-control.html">Managing Access Permissions to Your Amazon S3
  *             Resources</a>.</p>
  *
  *          <p>The following operations are related to <code>DeletePublicAccessBlock</code>:</p>
@@ -28251,15 +28249,15 @@ const middleware_bucket_endpoint_1 = __nccwpck_require__(99239);
 const middleware_serde_1 = __nccwpck_require__(86142);
 const smithy_client_1 = __nccwpck_require__(32223);
 /**
- * <p>This implementation of the GET operation uses the <code>accelerate</code> subresource to
+ * <p>This implementation of the GET action uses the <code>accelerate</code> subresource to
  *          return the Transfer Acceleration state of a bucket, which is either <code>Enabled</code> or
  *             <code>Suspended</code>. Amazon S3 Transfer Acceleration is a bucket-level feature that
  *          enables you to perform faster data transfers to and from Amazon S3.</p>
  *          <p>To use this operation, you must have permission to perform the
  *             <code>s3:GetAccelerateConfiguration</code> action. The bucket owner has this permission
  *          by default. The bucket owner can grant this permission to others. For more information
- *          about permissions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html">Managing Access Permissions to your Amazon S3
- *             Resources</a> in the <i>Amazon Simple Storage Service Developer Guide</i>.</p>
+ *          about permissions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-access-control.html">Managing Access Permissions to your Amazon S3
+ *             Resources</a> in the <i>Amazon S3 User Guide</i>.</p>
  *          <p>You set the Transfer Acceleration state of an existing bucket to <code>Enabled</code> or
  *             <code>Suspended</code> by using the <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutBucketAccelerateConfiguration.html">PutBucketAccelerateConfiguration</a> operation. </p>
  *          <p>A GET <code>accelerate</code> request does not return a state value for a bucket that
@@ -28267,7 +28265,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          has never been set on the bucket. </p>
  *
  *          <p>For more information about transfer acceleration, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/transfer-acceleration.html">Transfer Acceleration</a> in the
- *          Amazon Simple Storage Service Developer Guide.</p>
+ *          Amazon S3 User Guide.</p>
  *          <p class="title">
  *             <b>Related Resources</b>
  *          </p>
@@ -28333,7 +28331,7 @@ const middleware_bucket_endpoint_1 = __nccwpck_require__(99239);
 const middleware_serde_1 = __nccwpck_require__(86142);
 const smithy_client_1 = __nccwpck_require__(32223);
 /**
- * <p>This implementation of the <code>GET</code> operation uses the <code>acl</code>
+ * <p>This implementation of the <code>GET</code> action uses the <code>acl</code>
  *          subresource to return the access control list (ACL) of a bucket. To use <code>GET</code> to
  *          return the ACL of the bucket, you must have <code>READ_ACP</code> access to the bucket. If
  *             <code>READ_ACP</code> permission is granted to the anonymous user, you can return the
@@ -28404,15 +28402,15 @@ const middleware_bucket_endpoint_1 = __nccwpck_require__(99239);
 const middleware_serde_1 = __nccwpck_require__(86142);
 const smithy_client_1 = __nccwpck_require__(32223);
 /**
- * <p>This implementation of the GET operation returns an analytics configuration (identified
+ * <p>This implementation of the GET action returns an analytics configuration (identified
  *          by the analytics configuration ID) from the bucket.</p>
  *          <p>To use this operation, you must have permissions to perform the
  *             <code>s3:GetAnalyticsConfiguration</code> action. The bucket owner has this permission
  *          by default. The bucket owner can grant this permission to others. For more information
- *          about permissions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources"> Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html">Managing Access Permissions to Your Amazon S3
- *             Resources</a> in the <i>Amazon Simple Storage Service Developer Guide</i>. </p>
+ *          about permissions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources"> Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-access-control.html">Managing Access Permissions to Your Amazon S3
+ *             Resources</a> in the <i>Amazon S3 User Guide</i>. </p>
  *          <p>For information about Amazon S3 analytics feature, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/analytics-storage-class.html">Amazon S3 Analytics – Storage Class
- *             Analysis</a> in the <i>Amazon Simple Storage Service Developer Guide</i>.</p>
+ *             Analysis</a> in the <i>Amazon S3 User Guide</i>.</p>
  *
  *          <p class="title">
  *             <b>Related Resources</b>
@@ -28565,13 +28563,14 @@ const middleware_bucket_endpoint_1 = __nccwpck_require__(99239);
 const middleware_serde_1 = __nccwpck_require__(86142);
 const smithy_client_1 = __nccwpck_require__(32223);
 /**
- * <p>Returns the default encryption configuration for an Amazon S3 bucket. For information about
- *          the Amazon S3 default encryption feature, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html">Amazon S3 Default Bucket Encryption</a>.</p>
- *
+ * <p>Returns the default encryption configuration for an Amazon S3 bucket. If the bucket does not
+ *          have a default encryption configuration, GetBucketEncryption returns
+ *          <code>ServerSideEncryptionConfigurationNotFoundError</code>. </p>
+ *          <p>For information about the Amazon S3 default encryption feature, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html">Amazon S3 Default Bucket Encryption</a>.</p>
  *          <p> To use this operation, you must have permission to perform the
  *             <code>s3:GetEncryptionConfiguration</code> action. The bucket owner has this permission
  *          by default. The bucket owner can grant this permission to others. For more information
- *          about permissions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html">Managing Access Permissions to Your Amazon S3
+ *          about permissions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-access-control.html">Managing Access Permissions to Your Amazon S3
  *             Resources</a>.</p>
  *          <p>The following operations are related to <code>GetBucketEncryption</code>:</p>
  *          <ul>
@@ -28725,7 +28724,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          <p>To use this operation, you must have permissions to perform the
  *             <code>s3:GetInventoryConfiguration</code> action. The bucket owner has this permission
  *          by default and can grant this permission to others. For more information about permissions,
- *          see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html">Managing Access Permissions to Your Amazon S3
+ *          see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-access-control.html">Managing Access Permissions to Your Amazon S3
  *             Resources</a>.</p>
  *
  *          <p>For information about the Amazon S3 inventory feature, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-inventory.html">Amazon S3 Inventory</a>.</p>
@@ -28810,7 +28809,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *             this section describes the latest API. The response describes the new filter element
  *             that you can use to specify a filter to select a subset of objects to which the rule
  *             applies. If you are using a previous version of the lifecycle configuration, it still
- *             works. For the earlier API description, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetBucketLifecycle.html">GetBucketLifecycle</a>.</p>
+ *             works. For the earlier action, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetBucketLifecycle.html">GetBucketLifecycle</a>.</p>
  *          </note>
  *          <p>Returns the lifecycle configuration information set on the bucket. For information about
  *          lifecycle configuration, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html">Object
@@ -28819,7 +28818,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          <p>To use this operation, you must have permission to perform the
  *             <code>s3:GetLifecycleConfiguration</code> action. The bucket owner has this permission,
  *          by default. The bucket owner can grant this permission to others. For more information
- *          about permissions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html">Managing Access Permissions to Your Amazon S3
+ *          about permissions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-access-control.html">Managing Access Permissions to Your Amazon S3
  *             Resources</a>.</p>
  *
  *          <p>
@@ -29066,7 +29065,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          <p> To use this operation, you must have permissions to perform the
  *             <code>s3:GetMetricsConfiguration</code> action. The bucket owner has this permission by
  *          default. The bucket owner can grant this permission to others. For more information about
- *          permissions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html">Managing Access Permissions to Your Amazon S3
+ *          permissions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-access-control.html">Managing Access Permissions to Your Amazon S3
  *             Resources</a>.</p>
  *
  *          <p> For information about CloudWatch request metrics for Amazon S3, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/cloudwatch-monitoring.html">Monitoring Metrics with Amazon
@@ -29153,7 +29152,7 @@ const middleware_serde_1 = __nccwpck_require__(86142);
 const smithy_client_1 = __nccwpck_require__(32223);
 /**
  * <p>Returns the notification configuration of a bucket.</p>
- *          <p>If notifications are not enabled on the bucket, the operation returns an empty
+ *          <p>If notifications are not enabled on the bucket, the action returns an empty
  *             <code>NotificationConfiguration</code> element.</p>
  *
  *          <p>By default, you must be the bucket owner to read the notification configuration of a
@@ -29165,7 +29164,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          bucket, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html">Setting Up Notification of
  *             Bucket Events</a>. For more information about bucket policies, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-iam-policies.html">Using Bucket Policies</a>.</p>
  *
- *          <p>The following operation is related to <code>GetBucketNotification</code>:</p>
+ *          <p>The following action is related to <code>GetBucketNotification</code>:</p>
  *          <ul>
  *             <li>
  *                <p>
@@ -29320,7 +29319,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          <p>For more information about bucket policies, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-iam-policies.html">Using Bucket Policies and User
  *             Policies</a>.</p>
  *
- *          <p>The following operation is related to <code>GetBucketPolicy</code>:</p>
+ *          <p>The following action is related to <code>GetBucketPolicy</code>:</p>
  *          <ul>
  *             <li>
  *                <p>
@@ -29476,9 +29475,9 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *             result. </p>
  *          </note>
  *          <p> For information about replication configuration, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/replication.html">Replication</a> in the
- *             <i>Amazon Simple Storage Service Developer Guide</i>.</p>
+ *             <i>Amazon S3 User Guide</i>.</p>
  *
- *          <p>This operation requires permissions for the <code>s3:GetReplicationConfiguration</code>
+ *          <p>This action requires permissions for the <code>s3:GetReplicationConfiguration</code>
  *          action. For more information about permissions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-iam-policies.html">Using Bucket Policies and User
  *             Policies</a>.</p>
  *
@@ -29796,7 +29795,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          configure a bucket as website by adding a website configuration. For more information about
  *          hosting websites, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html">Hosting Websites on
  *             Amazon S3</a>. </p>
- *          <p>This GET operation requires the <code>S3:GetBucketWebsite</code> permission. By default,
+ *          <p>This GET action requires the <code>S3:GetBucketWebsite</code> permission. By default,
  *          only the bucket owner can read the bucket website configuration. However, bucket owners can
  *          allow other users to read the website configuration by writing a bucket policy granting
  *          them the <code>S3:GetBucketWebsite</code> permission.</p>
@@ -29976,7 +29975,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          <p>If the object you are retrieving is stored in the S3 Glacier or
  *          S3 Glacier Deep Archive storage class, or S3 Intelligent-Tiering Archive or
  *          S3 Intelligent-Tiering Deep Archive tiers, before you can retrieve the object you must first restore a
- *          copy using <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_RestoreObject.html">RestoreObject</a>. Otherwise, this operation returns an
+ *          copy using <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_RestoreObject.html">RestoreObject</a>. Otherwise, this action returns an
  *             <code>InvalidObjectStateError</code> error. For information about restoring archived
  *          objects, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/restoring-objects.html">Restoring Archived
  *             Objects</a>.</p>
@@ -30030,7 +30029,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          <p>
  *             <b>Versioning</b>
  *          </p>
- *          <p>By default, the GET operation returns the current version of an object. To return a
+ *          <p>By default, the GET action returns the current version of an object. To return a
  *          different version, use the <code>versionId</code> subresource.</p>
  *
  *          <note>
@@ -30358,7 +30357,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          subresource associated with the object.</p>
  *
  *          <p>To use this operation, you must have permission to perform the
- *             <code>s3:GetObjectTagging</code> action. By default, the GET operation returns
+ *             <code>s3:GetObjectTagging</code> action. By default, the GET action returns
  *          information about current version of an object. For a versioned bucket, you can have
  *          multiple versions of an object in your bucket. To retrieve tags of any other version, use
  *          the versionId query parameter. You also need permission for the
@@ -30369,11 +30368,16 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *
  *          <p> For information about the Amazon S3 object tagging feature, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-tagging.html">Object Tagging</a>.</p>
  *
- *          <p>The following operation is related to <code>GetObjectTagging</code>:</p>
+ *          <p>The following action is related to <code>GetObjectTagging</code>:</p>
  *          <ul>
  *             <li>
  *                <p>
  *                   <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutObjectTagging.html">PutObjectTagging</a>
+ *                </p>
+ *             </li>
+ *             <li>
+ *                <p>
+ *                   <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_DeleteObjectTagging.html">DeleteObjectTagging</a>
  *                </p>
  *             </li>
  *          </ul>
@@ -30441,7 +30445,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          </note>
  *          <p>To use GET, you must have READ access to the object.</p>
  *          <p>This action is not supported by Amazon S3 on Outposts.</p>
- *          <p>The following operation is related to <code>GetObjectTorrent</code>:</p>
+ *          <p>The following action is related to <code>GetObjectTorrent</code>:</p>
  *          <ul>
  *             <li>
  *                <p>
@@ -30599,14 +30603,18 @@ const middleware_bucket_endpoint_1 = __nccwpck_require__(99239);
 const middleware_serde_1 = __nccwpck_require__(86142);
 const smithy_client_1 = __nccwpck_require__(32223);
 /**
- * <p>This operation is useful to determine if a bucket exists and you have permission to
- *          access it. The operation returns a <code>200 OK</code> if the bucket exists and you have
- *          permission to access it. Otherwise, the operation might return responses such as <code>404
- *             Not Found</code> and <code>403 Forbidden</code>. </p>
+ * <p>This action is useful to determine if a bucket exists and you have permission to
+ *          access it. The action returns a <code>200 OK</code> if the bucket exists and you have
+ *          permission to access it.</p>
+ *
+ *
+ *          <p>If the bucket does not exist or you do not have permission to access it, the <code>HEAD</code> request
+ *          returns a generic <code>404 Not Found</code> or <code>403 Forbidden</code> code. A message body is not
+ *          included, so you cannot determine the exception beyond these error codes.</p>
  *
  *          <p>To use this operation, you must have permissions to perform the
  *             <code>s3:ListBucket</code> action. The bucket owner has this permission by default and
- *          can grant this permission to others. For more information about permissions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html">Managing Access Permissions to Your Amazon S3
+ *          can grant this permission to others. For more information about permissions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-access-control.html">Managing Access Permissions to Your Amazon S3
  *             Resources</a>.</p>
  */
 class HeadBucketCommand extends smithy_client_1.Command {
@@ -30664,13 +30672,15 @@ const middleware_serde_1 = __nccwpck_require__(86142);
 const middleware_ssec_1 = __nccwpck_require__(92701);
 const smithy_client_1 = __nccwpck_require__(32223);
 /**
- * <p>The HEAD operation retrieves metadata from an object without returning the object
- *          itself. This operation is useful if you're only interested in an object's metadata. To use
+ * <p>The HEAD action retrieves metadata from an object without returning the object
+ *          itself. This action is useful if you're only interested in an object's metadata. To use
  *          HEAD, you must have READ access to the object.</p>
  *
- *          <p>A <code>HEAD</code> request has the same options as a <code>GET</code> operation on an
+ *          <p>A <code>HEAD</code> request has the same options as a <code>GET</code> action on an
  *          object. The response is identical to the <code>GET</code> response except that there is no
- *          response body.</p>
+ *          response body. Because of this, if the <code>HEAD</code> request generates an error, it
+ *          returns a generic <code>404 Not Found</code> or <code>403 Forbidden</code> code. It is not
+ *          possible to retrieve the exact exception beyond these error codes.</p>
  *
  *          <p>If you encrypt an object by using server-side encryption with customer-provided
  *          encryption keys (SSE-C) when you store the object in Amazon S3, then when you retrieve the
@@ -30689,17 +30699,20 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          <p>For more information about SSE-C, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/ServerSideEncryptionCustomerKeys.html">Server-Side Encryption (Using
  *             Customer-Provided Encryption Keys)</a>.</p>
  *          <note>
- *             <p>Encryption request headers, like <code>x-amz-server-side-encryption</code>, should
+ *             <ul>
+ *                <li>
+ *                   <p>Encryption request headers, like <code>x-amz-server-side-encryption</code>, should
  *             not be sent for GET requests if your object uses server-side encryption with CMKs stored
  *             in AWS KMS (SSE-KMS) or server-side encryption with Amazon S3–managed encryption keys
  *             (SSE-S3). If your object does use these types of keys, you’ll get an HTTP 400 BadRequest
  *             error.</p>
+ *                </li>
+ *                <li>
+ *                   <p>
+ *                The last modified property in this case is the creation date of the object.</p>
+ *                </li>
+ *             </ul>
  *          </note>
- *
- *
- *
- *
- *
  *
  *
  *          <p>Request headers are limited to 8 KB in size. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/RESTCommonRequestHeaders.html">Common Request
@@ -30763,7 +30776,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *             </li>
  *          </ul>
  *
- *          <p>The following operation is related to <code>HeadObject</code>:</p>
+ *          <p>The following action is related to <code>HeadObject</code>:</p>
  *          <ul>
  *             <li>
  *                <p>
@@ -30830,7 +30843,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  * <p>Lists the analytics configurations for the bucket. You can have up to 1,000 analytics
  *          configurations per bucket.</p>
  *
- *          <p>This operation supports list pagination and does not return more than 100 configurations
+ *          <p>This action supports list pagination and does not return more than 100 configurations
  *          at a time. You should always check the <code>IsTruncated</code> element in the response. If
  *          there are no more configurations to list, <code>IsTruncated</code> is set to false. If
  *          there are more configurations to list, <code>IsTruncated</code> is set to true, and there
@@ -30842,7 +30855,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          <p>To use this operation, you must have permissions to perform the
  *             <code>s3:GetAnalyticsConfiguration</code> action. The bucket owner has this permission
  *          by default. The bucket owner can grant this permission to others. For more information
- *          about permissions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html">Managing Access Permissions to Your Amazon S3
+ *          about permissions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-access-control.html">Managing Access Permissions to Your Amazon S3
  *             Resources</a>.</p>
  *
  *          <p>For information about Amazon S3 analytics feature, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/analytics-storage-class.html">Amazon S3 Analytics – Storage Class
@@ -31003,7 +31016,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  * <p>Returns a list of inventory configurations for the bucket. You can have up to 1,000
  *          analytics configurations per bucket.</p>
  *
- *          <p>This operation supports list pagination and does not return more than 100 configurations
+ *          <p>This action supports list pagination and does not return more than 100 configurations
  *          at a time. Always check the <code>IsTruncated</code> element in the response. If there are
  *          no more configurations to list, <code>IsTruncated</code> is set to false. If there are more
  *          configurations to list, <code>IsTruncated</code> is set to true, and there is a value in
@@ -31014,7 +31027,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          <p> To use this operation, you must have permissions to perform the
  *             <code>s3:GetInventoryConfiguration</code> action. The bucket owner has this permission
  *          by default. The bucket owner can grant this permission to others. For more information
- *          about permissions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html">Managing Access Permissions to Your Amazon S3
+ *          about permissions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-access-control.html">Managing Access Permissions to Your Amazon S3
  *             Resources</a>.</p>
  *
  *          <p>For information about the Amazon S3 inventory feature, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-inventory.html">Amazon S3 Inventory</a>
@@ -31098,7 +31111,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          the request metrics of the bucket and do not provide information on daily storage metrics.
  *          You can have up to 1,000 configurations per bucket.</p>
  *
- *          <p>This operation supports list pagination and does not return more than 100 configurations
+ *          <p>This action supports list pagination and does not return more than 100 configurations
  *          at a time. Always check the <code>IsTruncated</code> element in the response. If there are
  *          no more configurations to list, <code>IsTruncated</code> is set to false. If there are more
  *          configurations to list, <code>IsTruncated</code> is set to true, and there is a value in
@@ -31109,7 +31122,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          <p>To use this operation, you must have permissions to perform the
  *             <code>s3:GetMetricsConfiguration</code> action. The bucket owner has this permission by
  *          default. The bucket owner can grant this permission to others. For more information about
- *          permissions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html">Managing Access Permissions to Your Amazon S3
+ *          permissions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-access-control.html">Managing Access Permissions to Your Amazon S3
  *             Resources</a>.</p>
  *
  *          <p>For more information about metrics configurations and CloudWatch request metrics, see
@@ -31244,11 +31257,11 @@ const middleware_bucket_endpoint_1 = __nccwpck_require__(99239);
 const middleware_serde_1 = __nccwpck_require__(86142);
 const smithy_client_1 = __nccwpck_require__(32223);
 /**
- * <p>This operation lists in-progress multipart uploads. An in-progress multipart upload is a
+ * <p>This action lists in-progress multipart uploads. An in-progress multipart upload is a
  *          multipart upload that has been initiated using the Initiate Multipart Upload request, but
  *          has not yet been completed or aborted.</p>
  *
- *          <p>This operation returns at most 1,000 multipart uploads in the response. 1,000 multipart
+ *          <p>This action returns at most 1,000 multipart uploads in the response. 1,000 multipart
  *          uploads is the maximum number of uploads a response can include, which is also the default
  *          value. You can further limit the number of uploads in a response by specifying the
  *             <code>max-uploads</code> parameter in the response. If additional multipart uploads
@@ -31264,7 +31277,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          <p>For more information on multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/uploadobjusingmpu.html">Uploading Objects Using Multipart
  *             Upload</a>.</p>
  *
- *          <p>For information on permissions required to use the multipart upload API, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuAndPermissions.html">Multipart Upload API and
+ *          <p>For information on permissions required to use the multipart upload API, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuAndPermissions.html">Multipart Upload and
  *          Permissions</a>.</p>
  *
  *          <p>The following operations are related to <code>ListMultipartUploads</code>:</p>
@@ -31352,7 +31365,13 @@ const smithy_client_1 = __nccwpck_require__(32223);
 /**
  * <p>Returns metadata about all versions of the objects in a bucket. You can also use request
  *          parameters as selection criteria to return metadata about a subset of all the object
- *          versions. </p>
+ *          versions.</p>
+ *          <important>
+ *             <p>
+ *             To use this operation, you must have permissions to perform the
+ *             <code>s3:ListBucketVersions</code> action. Be aware of the name difference.
+ *          </p>
+ *          </important>
  *          <note>
  *             <p> A 200 OK response can contain valid or invalid XML. Make sure to design your
  *             application to parse the contents of the response and handle it appropriately.</p>
@@ -31443,7 +31462,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          response can contain valid or invalid XML. Be sure to design your application to parse the
  *          contents of the response and handle it appropriately.</p>
  *          <important>
- *             <p>This API has been revised. We recommend that you use the newer version, <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_ListObjectsV2.html">ListObjectsV2</a>, when developing applications. For backward compatibility,
+ *             <p>This action has been revised. We recommend that you use the newer version, <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_ListObjectsV2.html">ListObjectsV2</a>, when developing applications. For backward compatibility,
  *             Amazon S3 continues to support <code>ListObjects</code>.</p>
  *          </important>
  *
@@ -31534,17 +31553,18 @@ const smithy_client_1 = __nccwpck_require__(32223);
  * <p>Returns some or all (up to 1,000) of the objects in a bucket. You can use the request
  *          parameters as selection criteria to return a subset of the objects in a bucket. A <code>200
  *             OK</code> response can contain valid or invalid XML. Make sure to design your
- *          application to parse the contents of the response and handle it appropriately.</p>
+ *          application to parse the contents of the response and handle it appropriately.
+ *          Objects are returned sorted in an ascending order of the respective key names in the list.</p>
  *
  *          <p>To use this operation, you must have READ access to the bucket.</p>
  *
- *          <p>To use this operation in an AWS Identity and Access Management (IAM) policy, you must
+ *          <p>To use this action in an AWS Identity and Access Management (IAM) policy, you must
  *          have permissions to perform the <code>s3:ListBucket</code> action. The bucket owner has
  *          this permission by default and can grant this permission to others. For more information
- *          about permissions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html">Managing Access Permissions to Your Amazon S3
+ *          about permissions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-access-control.html">Managing Access Permissions to Your Amazon S3
  *             Resources</a>.</p>
  *          <important>
- *             <p>This section describes the latest revision of the API. We recommend that you use this
+ *             <p>This section describes the latest revision of this action. We recommend that you use this
  *             revised API for application development. For backward compatibility, Amazon S3 continues to
  *             support the prior version of this API, <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_ListObjects.html">ListObjects</a>.</p>
  *          </important>
@@ -31638,7 +31658,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          <p>For more information on multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/uploadobjusingmpu.html">Uploading Objects Using Multipart
  *             Upload</a>.</p>
  *
- *          <p>For information on permissions required to use the multipart upload API, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuAndPermissions.html">Multipart Upload API and
+ *          <p>For information on permissions required to use the multipart upload API, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuAndPermissions.html">Multipart Upload and
  *          Permissions</a>.</p>
  *
  *          <p>The following operations are related to <code>ListParts</code>:</p>
@@ -31730,7 +31750,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          <p> To use this operation, you must have permission to perform the
  *          s3:PutAccelerateConfiguration action. The bucket owner has this permission by default. The
  *          bucket owner can grant this permission to others. For more information about permissions,
- *          see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html">Managing Access Permissions to Your Amazon S3
+ *          see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-access-control.html">Managing Access Permissions to Your Amazon S3
  *             Resources</a>.</p>
  *
  *          <p> The Transfer Acceleration state of a bucket can be set to one of the following two
@@ -31745,7 +31765,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          </ul>
  *
  *
- *          <p>The <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetBucketAccelerateConfiguration.html">GetBucketAccelerateConfiguration</a> operation returns the transfer acceleration
+ *          <p>The <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetBucketAccelerateConfiguration.html">GetBucketAccelerateConfiguration</a> action returns the transfer acceleration
  *          state of a bucket.</p>
  *
  *          <p>After setting the Transfer Acceleration state of a bucket to Enabled, it might take up
@@ -32092,7 +32112,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          <p>To use this operation, you must have permissions to perform the
  *             <code>s3:PutAnalyticsConfiguration</code> action. The bucket owner has this permission
  *          by default. The bucket owner can grant this permission to others. For more information
- *          about permissions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html">Managing Access Permissions to Your Amazon S3
+ *          about permissions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-access-control.html">Managing Access Permissions to Your Amazon S3
  *             Resources</a>.</p>
  *
  *
@@ -32278,7 +32298,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *             </li>
  *          </ul>
  *          <p> For more information about CORS, go to <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html">Enabling
- *             Cross-Origin Resource Sharing</a> in the <i>Amazon Simple Storage Service Developer Guide</i>.</p>
+ *             Cross-Origin Resource Sharing</a> in the <i>Amazon S3 User Guide</i>.</p>
  *
  *          <p class="title">
  *             <b>Related Resources</b>
@@ -32356,23 +32376,23 @@ const middleware_bucket_endpoint_1 = __nccwpck_require__(99239);
 const middleware_serde_1 = __nccwpck_require__(86142);
 const smithy_client_1 = __nccwpck_require__(32223);
 /**
- * <p>This operation uses the <code>encryption</code> subresource to configure default
+ * <p>This action uses the <code>encryption</code> subresource to configure default
  *          encryption and Amazon S3 Bucket Key for an existing bucket.</p>
  *          <p>Default encryption for a bucket can use server-side encryption with Amazon S3-managed keys
  *          (SSE-S3) or AWS KMS customer master keys (SSE-KMS). If you specify default encryption
  *          using SSE-KMS, you can also configure Amazon S3 Bucket Key. For information about default
  *          encryption, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html">Amazon S3 default bucket encryption</a>
- *          in the <i>Amazon Simple Storage Service Developer Guide</i>. For more information about S3 Bucket Keys,
- *          see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-key.html">Amazon S3 Bucket Keys</a> in the <i>Amazon Simple Storage Service Developer Guide</i>.</p>
+ *          in the <i>Amazon S3 User Guide</i>. For more information about S3 Bucket Keys,
+ *          see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-key.html">Amazon S3 Bucket Keys</a> in the <i>Amazon S3 User Guide</i>.</p>
  *          <important>
- *             <p>This operation requires AWS Signature Version 4. For more information, see <a href="sig-v4-authenticating-requests.html"> Authenticating Requests (AWS Signature
+ *             <p>This action requires AWS Signature Version 4. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-authenticating-requests.html"> Authenticating Requests (AWS Signature
  *                Version 4)</a>. </p>
  *          </important>
  *          <p>To use this operation, you must have permissions to perform the
  *             <code>s3:PutEncryptionConfiguration</code> action. The bucket owner has this permission
  *          by default. The bucket owner can grant this permission to others. For more information
- *          about permissions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html">Managing Access Permissions to Your Amazon S3
- *             Resources</a> in the Amazon Simple Storage Service Developer Guide. </p>
+ *          about permissions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-access-control.html">Managing Access Permissions to Your Amazon S3
+ *             Resources</a> in the Amazon S3 User Guide. </p>
  *
  *          <p class="title">
  *             <b>Related Resources</b>
@@ -32444,7 +32464,8 @@ const middleware_bucket_endpoint_1 = __nccwpck_require__(99239);
 const middleware_serde_1 = __nccwpck_require__(86142);
 const smithy_client_1 = __nccwpck_require__(32223);
 /**
- * <p>Puts a S3 Intelligent-Tiering configuration to the specified bucket.</p>
+ * <p>Puts a S3 Intelligent-Tiering configuration to the specified bucket.
+ *       You can have up to 1,000 S3 Intelligent-Tiering configurations per bucket.</p>
  *          <p>The S3 Intelligent-Tiering storage class is designed to optimize storage costs by automatically moving data to the most cost-effective storage access tier, without additional operational overhead. S3 Intelligent-Tiering delivers automatic cost savings by moving data between access tiers, when access patterns change.</p>
  *          <p>The S3 Intelligent-Tiering storage class is suitable for objects larger than 128 KB that you plan to store for at least 30 days. If the size of an object is less than 128 KB, it is not eligible for auto-tiering. Smaller objects can be stored, but they are always charged at the frequent access tier rates in the S3 Intelligent-Tiering storage class. </p>
  *          <p>If you delete an object before the end of the 30-day minimum storage duration period, you are charged for 30 days. For more information, see  <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html#sc-dynamic-data-access">Storage class for automatically optimizing frequently and infrequently accessed objects</a>.</p>
@@ -32465,6 +32486,65 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *                <p>
  *                   <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_ListBucketIntelligentTieringConfigurations.html">ListBucketIntelligentTieringConfigurations</a>
  *                </p>
+ *             </li>
+ *          </ul>
+ *          <note>
+ *             <p>You only need S3 Intelligent-Tiering enabled on a bucket if you want to automatically
+ *             move objects stored in the S3 Intelligent-Tiering storage class to the
+ *             Archive Access or Deep Archive Access tier.</p>
+ *          </note>
+ *
+ *          <p class="title">
+ *             <b>Special Errors</b>
+ *          </p>
+ *          <ul>
+ *             <li>
+ *                <p class="title">
+ *                   <b>HTTP 400 Bad Request Error</b>
+ *                </p>
+ *                <ul>
+ *                   <li>
+ *                      <p>
+ *                         <i>Code:</i> InvalidArgument</p>
+ *                   </li>
+ *                   <li>
+ *                      <p>
+ *                         <i>Cause:</i> Invalid Argument</p>
+ *                   </li>
+ *                </ul>
+ *             </li>
+ *             <li>
+ *                <p class="title">
+ *                   <b>HTTP 400 Bad Request Error</b>
+ *                </p>
+ *                <ul>
+ *                   <li>
+ *                      <p>
+ *                         <i>Code:</i> TooManyConfigurations</p>
+ *                   </li>
+ *                   <li>
+ *                      <p>
+ *                         <i>Cause:</i> You are attempting to create a new configuration
+ *                      but have already reached the 1,000-configuration limit. </p>
+ *                   </li>
+ *                </ul>
+ *             </li>
+ *             <li>
+ *                <p class="title">
+ *                   <b>HTTP 403 Forbidden Error</b>
+ *                </p>
+ *                <ul>
+ *                   <li>
+ *                      <p>
+ *                         <i>Code:</i> AccessDenied</p>
+ *                   </li>
+ *                   <li>
+ *                      <p>
+ *                         <i>Cause:</i> You are not the owner of the specified bucket,
+ *                      or you do not have the <code>s3:PutIntelligentTieringConfiguration</code> bucket
+ *                      permission to set the configuration on the bucket. </p>
+ *                   </li>
+ *                </ul>
  *             </li>
  *          </ul>
  */
@@ -32522,7 +32602,7 @@ const middleware_bucket_endpoint_1 = __nccwpck_require__(99239);
 const middleware_serde_1 = __nccwpck_require__(86142);
 const smithy_client_1 = __nccwpck_require__(32223);
 /**
- * <p>This implementation of the <code>PUT</code> operation adds an inventory configuration
+ * <p>This implementation of the <code>PUT</code> action adds an inventory configuration
  *          (identified by the inventory ID) to the bucket. You can have up to 1,000 inventory
  *          configurations per bucket. </p>
  *          <p>Amazon S3 inventory generates inventories of the objects in the bucket on a daily or weekly
@@ -32536,7 +32616,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          whether to generate the inventory daily or weekly. You can also configure what object
  *          metadata to include and whether to inventory all object versions or only current versions.
  *          For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-inventory.html">Amazon S3
- *             Inventory</a> in the Amazon Simple Storage Service Developer Guide.</p>
+ *             Inventory</a> in the Amazon S3 User Guide.</p>
  *          <important>
  *             <p>You must create a bucket policy on the <i>destination</i> bucket to
  *             grant permissions to Amazon S3 to write objects to the bucket in the defined location. For an
@@ -32546,8 +32626,8 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          <p>To use this operation, you must have permissions to perform the
  *             <code>s3:PutInventoryConfiguration</code> action. The bucket owner has this permission
  *          by default and can grant this permission to others. For more information about permissions,
- *          see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html">Managing Access Permissions to Your Amazon S3
- *             Resources</a> in the Amazon Simple Storage Service Developer Guide.</p>
+ *          see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-access-control.html">Managing Access Permissions to Your Amazon S3
+ *             Resources</a> in the Amazon S3 User Guide.</p>
  *
  *          <p class="title">
  *             <b>Special Errors</b>
@@ -32680,7 +32760,7 @@ const middleware_serde_1 = __nccwpck_require__(86142);
 const smithy_client_1 = __nccwpck_require__(32223);
 /**
  * <p>Creates a new lifecycle configuration for the bucket or replaces an existing lifecycle
- *          configuration. For information about lifecycle configuration, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html">Managing Access Permissions to Your Amazon S3
+ *          configuration. For information about lifecycle configuration, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-access-control.html">Managing Access Permissions to Your Amazon S3
  *             Resources</a>.</p>
  *
  *          <note>
@@ -32751,7 +32831,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          </ul>
  *
  *
- *          <p>For more information about permissions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html">Managing Access Permissions to Your Amazon S3
+ *          <p>For more information about permissions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-access-control.html">Managing Access Permissions to Your Amazon S3
  *             Resources</a>.</p>
  *
  *          <p>The following are related to <code>PutBucketLifecycleConfiguration</code>:</p>
@@ -32972,7 +33052,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          <p>To use this operation, you must have permissions to perform the
  *             <code>s3:PutMetricsConfiguration</code> action. The bucket owner has this permission by
  *          default. The bucket owner can grant this permission to others. For more information about
- *          permissions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html">Managing Access Permissions to Your Amazon S3
+ *          permissions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-access-control.html">Managing Access Permissions to Your Amazon S3
  *             Resources</a>.</p>
  *
  *          <p>For information about CloudWatch request metrics for Amazon S3, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/cloudwatch-monitoring.html">Monitoring Metrics with Amazon
@@ -32997,11 +33077,6 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *                </p>
  *             </li>
  *          </ul>
- *
- *
- *
- *
- *
  *
  *          <p>
  *             <code>GetBucketLifecycle</code> has the following special error:</p>
@@ -33093,7 +33168,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          <p>
  *             <code></NotificationConfiguration></code>
  *          </p>
- *          <p>This operation replaces the existing notification configuration with the configuration
+ *          <p>This action replaces the existing notification configuration with the configuration
  *          you include in the request body.</p>
  *
  *          <p>After Amazon S3 receives this request, it first verifies that any Amazon Simple Notification
@@ -33115,7 +33190,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *             <p>The PUT notification is an atomic operation. For example, suppose your notification
  *             configuration includes SNS topic, SQS queue, and Lambda function configurations. When
  *             you send a PUT request with this configuration, Amazon S3 sends test messages to your SNS
- *             topic. If the message fails, the entire PUT operation will fail, and Amazon S3 will not add
+ *             topic. If the message fails, the entire PUT action will fail, and Amazon S3 will not add
  *             the configuration to your bucket.</p>
  *          </note>
  *
@@ -33128,7 +33203,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          the <code>x-amz-sns-test-message-id</code> header containing the message ID of the test
  *          notification sent to the topic.</p>
  *
- *          <p>The following operation is related to
+ *          <p>The following action is related to
  *          <code>PutBucketNotificationConfiguration</code>:</p>
  *          <ul>
  *             <li>
@@ -33358,7 +33433,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  * <p> Creates a replication configuration or replaces an existing one. For more information,
  *          see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/replication.html">Replication</a> in the <i>Amazon S3 Developer Guide</i>. </p>
  *          <note>
- *             <p>To perform this operation, the user or role performing the operation must have the
+ *             <p>To perform this operation, the user or role performing the action must have the
  *                <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_passrole.html">iam:PassRole</a> permission.</p>
  *          </note>
  *          <p>Specify the replication configuration in the request body. In the replication
@@ -33387,7 +33462,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          <p>By default, a resource owner, in this case the AWS account that created the bucket, can
  *          perform this operation. The resource owner can also grant others permissions to perform the
  *          operation. For more information about permissions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-with-s3-actions.html">Specifying Permissions in a Policy</a>
- *          and <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html">Managing Access Permissions to Your
+ *          and <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-access-control.html">Managing Access Permissions to Your
  *             Amazon S3 Resources</a>.</p>
  *
  *          <p>
@@ -33566,7 +33641,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          </note>
  *          <p>To use this operation, you must have permissions to perform the
  *             <code>s3:PutBucketTagging</code> action. The bucket owner has this permission by default
- *          and can grant this permission to others. For more information about permissions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html">Managing Access Permissions to Your Amazon S3
+ *          and can grant this permission to others. For more information about permissions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-access-control.html">Managing Access Permissions to Your Amazon S3
  *             Resources</a>.</p>
  *
  *          <p>
@@ -33597,7 +33672,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *                </p>
  *                <ul>
  *                   <li>
- *                      <p>Description: A conflicting conditional operation is currently in progress
+ *                      <p>Description: A conflicting conditional action is currently in progress
  *                      against this resource. Please try again.</p>
  *                   </li>
  *                </ul>
@@ -33793,7 +33868,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          with website configuration information such as the file name of the index document and any
  *          redirect rules. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html">Hosting Websites on Amazon S3</a>.</p>
  *
- *          <p>This PUT operation requires the <code>S3:PutBucketWebsite</code> permission. By default,
+ *          <p>This PUT action requires the <code>S3:PutBucketWebsite</code> permission. By default,
  *          only the bucket owner can configure the website attached to a bucket; however, bucket
  *          owners can allow other users to set the website configuration by writing a bucket policy
  *          that grants them the <code>S3:PutBucketWebsite</code> permission.</p>
@@ -33913,7 +33988,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *
  *          <p>Amazon S3 has a limitation of 50 routing rules per website configuration. If you require more
  *          than 50 routing rules, you can use object redirect. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html">Configuring an
- *             Object Redirect</a> in the <i>Amazon Simple Storage Service Developer Guide</i>.</p>
+ *             Object Redirect</a> in the <i>Amazon S3 User Guide</i>.</p>
  */
 class PutBucketWebsiteCommand extends smithy_client_1.Command {
     // Start section: command_properties
@@ -33972,7 +34047,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  * <p>Uses the <code>acl</code> subresource to set the access control list (ACL) permissions
  *          for a new or existing object in an S3 bucket. You must have <code>WRITE_ACP</code>
  *          permission to set the ACL of an object. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#permissions">What
- *             permissions can I grant?</a> in the <i>Amazon Simple Storage Service Developer Guide</i>.</p>
+ *             permissions can I grant?</a> in the <i>Amazon S3 User Guide</i>.</p>
  *          <p>This action is not supported by Amazon S3 on Outposts.</p>
  *          <p>Depending on your application needs, you can choose to set
  *          the ACL on an object using either the request body or the headers. For example, if you have
@@ -34225,18 +34300,21 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *             <p> The <code>Content-MD5</code> header is required for any request to upload an object
  *             with a retention period configured using Amazon S3 Object Lock. For more information about
  *             Amazon S3 Object Lock, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html">Amazon S3 Object Lock Overview</a>
- *             in the <i>Amazon Simple Storage Service Developer Guide</i>. </p>
+ *             in the <i>Amazon S3 User Guide</i>. </p>
  *          </note>
  *
  *
  *          <p>
  *             <b>Server-side Encryption</b>
  *          </p>
- *          <p>You can optionally request server-side encryption. With server-side encryption, Amazon S3 encrypts your data as it writes it to disks in its data centers and decrypts the data
+ *          <p>You can optionally request server-side encryption. With server-side encryption, Amazon S3 encrypts
+ *          your data as it writes it to disks in its data centers and decrypts the data
  *          when you access it. You have the option to provide your own encryption key or use AWS
  *          managed encryption keys (SSE-S3 or SSE-KMS). For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingServerSideEncryption.html">Using Server-Side
  *             Encryption</a>.</p>
- *          <p>If you request server-side encryption using AWS Key Management Service (SSE-KMS), you can enable an S3 Bucket Key at the object-level. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-key.html">Amazon S3 Bucket Keys</a> in the <i>Amazon Simple Storage Service Developer Guide</i>.</p>
+ *          <p>If you request server-side encryption using AWS Key Management Service (SSE-KMS), you can enable
+ *          an S3 Bucket Key at the object-level. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-key.html">Amazon S3 Bucket Keys</a> in the
+ *          <i>Amazon S3 User Guide</i>.</p>
  *          <p>
  *             <b>Access Control List (ACL)-Specific Request
  *          Headers</b>
@@ -34341,18 +34419,10 @@ const middleware_bucket_endpoint_1 = __nccwpck_require__(99239);
 const middleware_serde_1 = __nccwpck_require__(86142);
 const smithy_client_1 = __nccwpck_require__(32223);
 /**
- * <p>Applies a Legal Hold configuration to the specified object.</p>
+ * <p>Applies a Legal Hold configuration to the specified object. For more information, see
+ *             <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html">Locking
+ *             Objects</a>.</p>
  *          <p>This action is not supported by Amazon S3 on Outposts.</p>
- *          <p class="title">
- *             <b>Related Resources</b>
- *          </p>
- *          <ul>
- *             <li>
- *                <p>
- *                   <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html">Locking Objects</a>
- *                </p>
- *             </li>
- *          </ul>
  */
 class PutObjectLegalHoldCommand extends smithy_client_1.Command {
     // Start section: command_properties
@@ -34410,23 +34480,25 @@ const smithy_client_1 = __nccwpck_require__(32223);
 /**
  * <p>Places an Object Lock configuration on the specified bucket. The rule specified in the
  *          Object Lock configuration will be applied by default to every new object placed in the
- *          specified bucket.</p>
+ *          specified bucket. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html">Locking Objects</a>.
+ *       </p>
  *          <note>
- *             <p>
- *                <code>DefaultRetention</code> requires either Days or Years. You can't specify both
- *             at the same time.</p>
+ *             <ul>
+ *                <li>
+ *                   <p>The <code>DefaultRetention</code> settings require both a mode and a
+ *                period.</p>
+ *                </li>
+ *                <li>
+ *                   <p>The <code>DefaultRetention</code> period can be either <code>Days</code>
+ *                or <code>Years</code> but you must select one. You cannot specify <code>Days</code>
+ *                and <code>Years</code> at the same time.</p>
+ *                </li>
+ *                <li>
+ *                   <p>You can only enable Object Lock for new buckets. If you want to turn on
+ *                Object Lock for an existing bucket, contact AWS Support.</p>
+ *                </li>
+ *             </ul>
  *          </note>
- *          <p class="title">
- *             <b>Related Resources</b>
- *          </p>
- *          <ul>
- *             <li>
- *                <p>
- *                   <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html">Locking
- *                   Objects</a>
- *                </p>
- *             </li>
- *          </ul>
  */
 class PutObjectLockConfigurationCommand extends smithy_client_1.Command {
     // Start section: command_properties
@@ -34482,18 +34554,9 @@ const middleware_bucket_endpoint_1 = __nccwpck_require__(99239);
 const middleware_serde_1 = __nccwpck_require__(86142);
 const smithy_client_1 = __nccwpck_require__(32223);
 /**
- * <p>Places an Object Retention configuration on an object.</p>
- *          <p>This action is not supported by Amazon S3 on Outposts.</p>
- *          <p class="title">
- *             <b>Related Resources</b>
+ * <p>Places an Object Retention configuration on an object. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html">Locking Objects</a>.
  *          </p>
- *          <ul>
- *             <li>
- *                <p>
- *                   <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html">Locking Objects</a>
- *                </p>
- *             </li>
- *          </ul>
+ *          <p>This action is not supported by Amazon S3 on Outposts.</p>
  */
 class PutObjectRetentionCommand extends smithy_client_1.Command {
     // Start section: command_properties
@@ -34610,7 +34673,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *                   </li>
  *                   <li>
  *                      <p>
- *                         <i>Cause: A conflicting conditional operation is currently in
+ *                         <i>Cause: A conflicting conditional action is currently in
  *                         progress against this resource. Please try again.</i>
  *                      </p>
  *                   </li>
@@ -34645,6 +34708,11 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *             <li>
  *                <p>
  *                   <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObjectTagging.html">GetObjectTagging</a>
+ *                </p>
+ *             </li>
+ *             <li>
+ *                <p>
+ *                   <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_DeleteObjectTagging.html">DeleteObjectTagging</a>
  *                </p>
  *             </li>
  *          </ul>
@@ -34819,8 +34887,8 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          </ul>
  *          <p>To use this operation, you must have permissions to perform the
  *             <code>s3:RestoreObject</code> action. The bucket owner has this permission by default
- *          and can grant this permission to others. For more information about permissions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html">Managing Access Permissions to Your Amazon S3
- *             Resources</a> in the <i>Amazon Simple Storage Service Developer Guide</i>.</p>
+ *          and can grant this permission to others. For more information about permissions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions Related to Bucket Subresource Operations</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-access-control.html">Managing Access Permissions to Your Amazon S3
+ *             Resources</a> in the <i>Amazon S3 User Guide</i>.</p>
  *          <p>
  *             <b>Querying Archives with Select Requests</b>
  *          </p>
@@ -34828,7 +34896,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          archived objects that are being queried by the select request must be formatted as
  *          uncompressed comma-separated values (CSV) files. You can run queries and custom analytics
  *          on your archived data without having to restore your data to a hotter Amazon S3 tier. For an
- *          overview about select requests, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/querying-glacier-archives.html">Querying Archived Objects</a> in the <i>Amazon Simple Storage Service Developer Guide</i>.</p>
+ *          overview about select requests, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/querying-glacier-archives.html">Querying Archived Objects</a> in the <i>Amazon S3 User Guide</i>.</p>
  *          <p>When making a select request, do the following:</p>
  *          <ul>
  *             <li>
@@ -34837,7 +34905,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *                being queried. The AWS account that initiates the job must have permissions to write
  *                to the S3 bucket. You can specify the storage class and encryption for the output
  *                objects stored in the bucket. For more information about output, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/querying-glacier-archives.html">Querying Archived Objects</a>
- *                in the <i>Amazon Simple Storage Service Developer Guide</i>.</p>
+ *                in the <i>Amazon S3 User Guide</i>.</p>
  *                <p>For more information about the <code>S3</code> structure in the request body, see
  *                the following:</p>
  *                <ul>
@@ -34849,14 +34917,14 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *                   <li>
  *                      <p>
  *                         <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/S3_ACLs_UsingACLs.html">Managing Access with
- *                         ACLs</a> in the <i>Amazon Simple Storage Service Developer Guide</i>
+ *                         ACLs</a> in the <i>Amazon S3 User Guide</i>
  *                      </p>
  *                   </li>
  *                   <li>
  *                      <p>
  *                         <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/serv-side-encryption.html">Protecting Data Using
  *                         Server-Side Encryption</a> in the
- *                      <i>Amazon Simple Storage Service Developer Guide</i>
+ *                      <i>Amazon S3 User Guide</i>
  *                      </p>
  *                   </li>
  *                </ul>
@@ -34894,7 +34962,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *             </li>
  *          </ul>
  *          <p>For more information about using SQL with S3 Glacier Select restore, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-glacier-select-sql-reference.html">SQL Reference for Amazon S3 Select and
- *             S3 Glacier Select</a> in the <i>Amazon Simple Storage Service Developer Guide</i>. </p>
+ *             S3 Glacier Select</a> in the <i>Amazon S3 User Guide</i>. </p>
  *          <p>When making a select request, you can also do the following:</p>
  *          <ul>
  *             <li>
@@ -34980,16 +35048,16 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *             </li>
  *          </ul>
  *          <p>For more information about archive retrieval options and provisioned capacity for
- *             <code>Expedited</code> data access, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/restoring-objects.html">Restoring Archived Objects</a> in the <i>Amazon Simple Storage Service Developer Guide</i>. </p>
+ *             <code>Expedited</code> data access, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/restoring-objects.html">Restoring Archived Objects</a> in the <i>Amazon S3 User Guide</i>. </p>
  *          <p>You can use Amazon S3 restore speed upgrade to change the restore speed to a faster speed
  *          while it is in progress. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/restoring-objects.html#restoring-objects-upgrade-tier.title.html">
  *             Upgrading the speed of an in-progress restore</a> in the
- *             <i>Amazon Simple Storage Service Developer Guide</i>. </p>
+ *             <i>Amazon S3 User Guide</i>. </p>
  *          <p>To get the status of object restoration, you can send a <code>HEAD</code> request.
  *          Operations return the <code>x-amz-restore</code> header, which provides information about
  *          the restoration status, in the response. You can use Amazon S3 event notifications to notify you
  *          when a restore is initiated or completed. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html">Configuring Amazon S3 Event Notifications</a> in
- *          the <i>Amazon Simple Storage Service Developer Guide</i>.</p>
+ *          the <i>Amazon S3 User Guide</i>.</p>
  *          <p>After restoring an archived object, you can update the restoration period by reissuing
  *          the request with a new period. Amazon S3 updates the restoration period relative to the current
  *          time and charges only for the request-there are no data transfer charges. You cannot
@@ -35000,11 +35068,11 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          request. For example, if you restore an object copy for 10 days, but the object is
  *          scheduled to expire in 3 days, Amazon S3 deletes the object in 3 days. For more information
  *          about lifecycle configuration, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutBucketLifecycleConfiguration.html">PutBucketLifecycleConfiguration</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html">Object Lifecycle Management</a> in
- *             <i>Amazon Simple Storage Service Developer Guide</i>.</p>
+ *             <i>Amazon S3 User Guide</i>.</p>
  *          <p>
  *             <b>Responses</b>
  *          </p>
- *          <p>A successful operation returns either the <code>200 OK</code> or <code>202
+ *          <p>A successful action returns either the <code>200 OK</code> or <code>202
  *             Accepted</code> status code. </p>
  *          <ul>
  *             <li>
@@ -35092,7 +35160,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *                <p>
  *                   <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-glacier-select-sql-reference.html">SQL Reference for
  *                   Amazon S3 Select and S3 Glacier Select </a> in the
- *                   <i>Amazon Simple Storage Service Developer Guide</i>
+ *                   <i>Amazon S3 User Guide</i>
  *                </p>
  *             </li>
  *          </ul>
@@ -35152,7 +35220,7 @@ const middleware_serde_1 = __nccwpck_require__(86142);
 const middleware_ssec_1 = __nccwpck_require__(92701);
 const smithy_client_1 = __nccwpck_require__(32223);
 /**
- * <p>This operation filters the contents of an Amazon S3 object based on a simple structured query
+ * <p>This action filters the contents of an Amazon S3 object based on a simple structured query
  *          language (SQL) statement. In the request, along with the SQL expression, you must also
  *          specify a data serialization format (JSON, CSV, or Apache Parquet) of the object. Amazon S3 uses
  *          this format to parse object data into records, and returns only records that match the
@@ -35161,16 +35229,16 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          <p>This action is not supported by Amazon S3 on Outposts.</p>
  *          <p>For more information about Amazon S3 Select,
  *          see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/selecting-content-from-objects.html">Selecting Content from
- *             Objects</a> in the <i>Amazon Simple Storage Service Developer Guide</i>.</p>
+ *             Objects</a> in the <i>Amazon S3 User Guide</i>.</p>
  *          <p>For more information about using SQL with Amazon S3 Select, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-glacier-select-sql-reference.html"> SQL Reference for Amazon S3 Select
- *             and S3 Glacier Select</a> in the <i>Amazon Simple Storage Service Developer Guide</i>.</p>
+ *             and S3 Glacier Select</a> in the <i>Amazon S3 User Guide</i>.</p>
  *          <p></p>
  *          <p>
  *             <b>Permissions</b>
  *          </p>
  *          <p>You must have <code>s3:GetObject</code> permission for this operation. Amazon S3 Select does
  *          not support anonymous access. For more information about permissions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-with-s3-actions.html">Specifying Permissions in a Policy</a>
- *          in the <i>Amazon Simple Storage Service Developer Guide</i>.</p>
+ *          in the <i>Amazon S3 User Guide</i>.</p>
  *          <p></p>
  *          <p>
  *             <i>Object Data Formats</i>
@@ -35203,13 +35271,13 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *                <p>For objects that are encrypted with customer-provided encryption keys (SSE-C), you
  *                must use HTTPS, and you must use the headers that are documented in the <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html">GetObject</a>. For more information about SSE-C, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/ServerSideEncryptionCustomerKeys.html">Server-Side Encryption
  *                   (Using Customer-Provided Encryption Keys)</a> in the
- *                   <i>Amazon Simple Storage Service Developer Guide</i>.</p>
+ *                   <i>Amazon S3 User Guide</i>.</p>
  *                <p>For objects that are encrypted with Amazon S3 managed encryption keys (SSE-S3) and
  *                customer master keys (CMKs) stored in AWS Key Management Service (SSE-KMS),
  *                server-side encryption is handled transparently, so you don't need to specify
  *                anything. For more information about server-side encryption, including SSE-S3 and
  *                SSE-KMS, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/serv-side-encryption.html">Protecting Data Using
- *                   Server-Side Encryption</a> in the <i>Amazon Simple Storage Service Developer Guide</i>.</p>
+ *                   Server-Side Encryption</a> in the <i>Amazon S3 User Guide</i>.</p>
  *             </li>
  *          </ul>
  *
@@ -35226,7 +35294,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          <p>
  *             <b>GetObject Support</b>
  *          </p>
- *          <p>The <code>SelectObjectContent</code> operation does not support the following
+ *          <p>The <code>SelectObjectContent</code> action does not support the following
  *             <code>GetObject</code> functionality. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html">GetObject</a>.</p>
  *          <ul>
  *             <li>
@@ -35239,7 +35307,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *                <p>GLACIER, DEEP_ARCHIVE and REDUCED_REDUNDANCY storage classes: You cannot specify
  *                the GLACIER, DEEP_ARCHIVE, or <code>REDUCED_REDUNDANCY</code> storage classes. For
  *                more information, about storage classes see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#storage-class-intro">Storage Classes</a>
- *                in the <i>Amazon Simple Storage Service Developer Guide</i>.</p>
+ *                in the <i>Amazon S3 User Guide</i>.</p>
  *             </li>
  *          </ul>
  *          <p></p>
@@ -35362,10 +35430,10 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          storage.</p>
  *
  *          <p>For more information on multipart uploads, go to <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html">Multipart Upload Overview</a> in the
- *             <i>Amazon Simple Storage Service Developer Guide </i>.</p>
+ *             <i>Amazon S3 User Guide </i>.</p>
  *          <p>For information on the permissions required to use the multipart upload API, go to
- *             <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuAndPermissions.html">Multipart Upload API and
- *             Permissions</a> in the <i>Amazon Simple Storage Service Developer Guide</i>.</p>
+ *             <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuAndPermissions.html">Multipart Upload and
+ *             Permissions</a> in the <i>Amazon S3 User Guide</i>.</p>
  *
  *          <p>You can optionally request server-side encryption where Amazon S3 encrypts your data as it
  *          writes it to disks in its data centers and decrypts it for you when you access it. You have
@@ -35373,7 +35441,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          keys. If you choose to provide your own encryption key, the request headers you provide in
  *          the request must match the headers you used in the request to initiate the upload by using
  *             <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_CreateMultipartUpload.html">CreateMultipartUpload</a>. For more information, go to <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingServerSideEncryption.html">Using Server-Side Encryption</a> in
- *          the <i>Amazon Simple Storage Service Developer Guide</i>.</p>
+ *          the <i>Amazon S3 User Guide</i>.</p>
  *
  *          <p>Server-side encryption is supported by the S3 Multipart Upload actions. Unless you are
  *          using a customer-provided encryption key, you don't need to specify the encryption
@@ -35529,10 +35597,10 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          request. </p>
  *          <p>The minimum allowable part size for a multipart upload is 5 MB. For more information
  *          about multipart upload limits, go to <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/qfacts.html">Quick
- *             Facts</a> in the <i>Amazon Simple Storage Service Developer Guide</i>. </p>
+ *             Facts</a> in the <i>Amazon S3 User Guide</i>. </p>
  *          <note>
  *             <p>Instead of using an existing object as part data, you might use the <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_UploadPart.html">UploadPart</a>
- *             operation and provide data in your request.</p>
+ *             action and provide data in your request.</p>
  *          </note>
  *
  *          <p>You must initiate a multipart upload before you can upload any part. In response to your
@@ -35544,17 +35612,17 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          <ul>
  *             <li>
  *                <p>For conceptual information about multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/uploadobjusingmpu.html">Uploading Objects Using Multipart
- *                   Upload</a> in the <i>Amazon Simple Storage Service Developer Guide</i>.</p>
+ *                   Upload</a> in the <i>Amazon S3 User Guide</i>.</p>
  *             </li>
  *             <li>
  *                <p>For information about permissions required to use the multipart upload API, see
- *                   <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuAndPermissions.html">Multipart Upload API and
- *                   Permissions</a> in the <i>Amazon Simple Storage Service Developer Guide</i>.</p>
+ *                   <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuAndPermissions.html">Multipart Upload  and
+ *                   Permissions</a> in the <i>Amazon S3 User Guide</i>.</p>
  *             </li>
  *             <li>
- *                <p>For information about copying objects using a single atomic operation vs. the
+ *                <p>For information about copying objects using a single atomic action vs. the
  *                multipart upload, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/ObjectOperations.html">Operations on
- *                   Objects</a> in the <i>Amazon Simple Storage Service Developer Guide</i>.</p>
+ *                   Objects</a> in the <i>Amazon S3 User Guide</i>.</p>
  *             </li>
  *             <li>
  *                <p>For information about using server-side encryption with customer-provided
@@ -35743,6 +35811,81 @@ class UploadPartCopyCommand extends smithy_client_1.Command {
 }
 exports.UploadPartCopyCommand = UploadPartCopyCommand;
 //# sourceMappingURL=UploadPartCopyCommand.js.map
+
+/***/ }),
+
+/***/ 65029:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.WriteGetObjectResponseCommand = void 0;
+const models_1_1 = __nccwpck_require__(55325);
+const Aws_restXml_1 = __nccwpck_require__(20257);
+const middleware_bucket_endpoint_1 = __nccwpck_require__(99239);
+const middleware_serde_1 = __nccwpck_require__(86142);
+const smithy_client_1 = __nccwpck_require__(32223);
+/**
+ * <p>Passes transformed
+ *          objects to a <code>GetObject</code> operation when using Object Lambda Access Points. For information about
+ *          Object Lambda Access Points, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/transforming-objects.html">Transforming objects with
+ *             Object Lambda Access Points</a> in the <i>Amazon S3 User Guide</i>.</p>
+ *          <p>This operation supports metadata that can be returned by <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html">GetObject</a>, in addition to
+ *             <code>RequestRoute</code>, <code>RequestToken</code>, <code>StatusCode</code>,
+ *             <code>ErrorCode</code>, and <code>ErrorMessage</code>. The <code>GetObject</code>
+ *          response metadata is supported so that the <code>WriteGetObjectResponse</code> caller,
+ *          typically an AWS Lambda function, can provide the same metadata when it internally invokes
+ *             <code>GetObject</code>. When <code>WriteGetObjectResponse</code> is called by a
+ *          customer-owned Lambda function, the metadata returned to the end user
+ *             <code>GetObject</code> call might differ from what Amazon S3 would normally return.</p>
+ *          <p>AWS provides some prebuilt Lambda functions that you can use with S3 Object Lambda to detect and redact
+ *           personally identifiable information (PII) and decompress S3 objects. These Lambda functions
+ *           are available in the AWS Serverless Application Repository, and can be selected through the AWS Management Console when you create your
+ *           Object Lambda Access Point.</p>
+ *          <p>Example 1: PII Access Control - This Lambda function uses Amazon Comprehend, a natural language processing (NLP) service using machine learning to find insights and relationships in text. It automatically detects personally identifiable information (PII) such as names, addresses, dates, credit card numbers, and social security numbers from documents in your Amazon S3 bucket. </p>
+ *          <p>Example 2: PII Redaction - This Lambda function uses Amazon Comprehend, a natural language processing (NLP) service using machine learning to find insights and relationships in text. It automatically redacts personally identifiable information (PII) such as names, addresses, dates, credit card numbers, and social security numbers from documents in your Amazon S3 bucket. </p>
+ *          <p>Example 3: Decompression - The Lambda function S3ObjectLambdaDecompression, is equipped to decompress objects stored in S3 in one of six compressed file formats including bzip2, gzip, snappy, zlib, zstandard and ZIP. </p>
+ *          <p>For information on how to view and use these functions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/olap-examples.html">Using AWS built Lambda functions</a> in the <i>Amazon S3 User Guide</i>.</p>
+ */
+class WriteGetObjectResponseCommand extends smithy_client_1.Command {
+    // Start section: command_properties
+    // End section: command_properties
+    constructor(input) {
+        // Start section: command_constructor
+        super();
+        this.input = input;
+        // End section: command_constructor
+    }
+    /**
+     * @internal
+     */
+    resolveMiddleware(clientStack, configuration, options) {
+        this.middlewareStack.use(middleware_serde_1.getSerdePlugin(configuration, this.serialize, this.deserialize));
+        this.middlewareStack.use(middleware_bucket_endpoint_1.getBucketEndpointPlugin(configuration));
+        const stack = clientStack.concat(this.middlewareStack);
+        const { logger } = configuration;
+        const clientName = "S3Client";
+        const commandName = "WriteGetObjectResponseCommand";
+        const handlerExecutionContext = {
+            logger,
+            clientName,
+            commandName,
+            inputFilterSensitiveLog: models_1_1.WriteGetObjectResponseRequest.filterSensitiveLog,
+            outputFilterSensitiveLog: (output) => output,
+        };
+        const { requestHandler } = configuration;
+        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
+    }
+    serialize(input, context) {
+        return Aws_restXml_1.serializeAws_restXmlWriteGetObjectResponseCommand(input, context);
+    }
+    deserialize(output, context) {
+        return Aws_restXml_1.deserializeAws_restXmlWriteGetObjectResponseCommand(output, context);
+    }
+}
+exports.WriteGetObjectResponseCommand = WriteGetObjectResponseCommand;
+//# sourceMappingURL=WriteGetObjectResponseCommand.js.map
 
 /***/ }),
 
@@ -36075,8 +36218,10 @@ tslib_1.__exportStar(__nccwpck_require__(13971), exports);
 tslib_1.__exportStar(__nccwpck_require__(99958), exports);
 tslib_1.__exportStar(__nccwpck_require__(43096), exports);
 tslib_1.__exportStar(__nccwpck_require__(51991), exports);
+tslib_1.__exportStar(__nccwpck_require__(49203), exports);
 tslib_1.__exportStar(__nccwpck_require__(44903), exports);
 tslib_1.__exportStar(__nccwpck_require__(10835), exports);
+tslib_1.__exportStar(__nccwpck_require__(1501), exports);
 tslib_1.__exportStar(__nccwpck_require__(84209), exports);
 tslib_1.__exportStar(__nccwpck_require__(73971), exports);
 tslib_1.__exportStar(__nccwpck_require__(98186), exports);
@@ -36118,6 +36263,7 @@ tslib_1.__exportStar(__nccwpck_require__(88534), exports);
 tslib_1.__exportStar(__nccwpck_require__(56919), exports);
 tslib_1.__exportStar(__nccwpck_require__(28185), exports);
 tslib_1.__exportStar(__nccwpck_require__(4479), exports);
+tslib_1.__exportStar(__nccwpck_require__(65029), exports);
 tslib_1.__exportStar(__nccwpck_require__(9898), exports);
 tslib_1.__exportStar(__nccwpck_require__(81722), exports);
 //# sourceMappingURL=index.js.map
@@ -36146,9 +36292,9 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.GetBucketAccelerateConfigurationOutput = exports.DeletePublicAccessBlockRequest = exports.DeleteObjectTaggingRequest = exports.DeleteObjectTaggingOutput = exports.DeleteObjectsRequest = exports.Delete = exports.ObjectIdentifier = exports.DeleteObjectsOutput = exports._Error = exports.DeletedObject = exports.DeleteObjectRequest = exports.DeleteObjectOutput = exports.DeleteBucketWebsiteRequest = exports.DeleteBucketTaggingRequest = exports.DeleteBucketReplicationRequest = exports.DeleteBucketPolicyRequest = exports.DeleteBucketOwnershipControlsRequest = exports.DeleteBucketMetricsConfigurationRequest = exports.DeleteBucketLifecycleRequest = exports.DeleteBucketInventoryConfigurationRequest = exports.DeleteBucketIntelligentTieringConfigurationRequest = exports.DeleteBucketEncryptionRequest = exports.DeleteBucketCorsRequest = exports.DeleteBucketAnalyticsConfigurationRequest = exports.DeleteBucketRequest = exports.CreateMultipartUploadRequest = exports.CreateMultipartUploadOutput = exports.CreateBucketRequest = exports.CreateBucketConfiguration = exports.CreateBucketOutput = exports.BucketAlreadyOwnedByYou = exports.BucketAlreadyExists = exports.ObjectNotInActiveTierError = exports.CopyObjectRequest = exports.CopyObjectOutput = exports.CopyObjectResult = exports.CompleteMultipartUploadRequest = exports.CompletedMultipartUpload = exports.CompletedPart = exports.CompleteMultipartUploadOutput = exports.AccessControlTranslation = exports.AccessControlPolicy = exports.Owner = exports.Grant = exports.Grantee = exports.AccelerateConfiguration = exports.NoSuchUpload = exports.AbortMultipartUploadRequest = exports.AbortMultipartUploadOutput = exports.AbortIncompleteMultipartUpload = void 0;
 exports.LoggingEnabled = exports.TargetGrant = exports.GetBucketLocationRequest = exports.GetBucketLocationOutput = exports.GetBucketLifecycleConfigurationRequest = exports.GetBucketLifecycleConfigurationOutput = exports.LifecycleRule = exports.Transition = exports.NoncurrentVersionTransition = exports.NoncurrentVersionExpiration = exports.LifecycleRuleFilter = exports.LifecycleRuleAndOperator = exports.LifecycleExpiration = exports.GetBucketInventoryConfigurationRequest = exports.GetBucketInventoryConfigurationOutput = exports.InventoryConfiguration = exports.InventorySchedule = exports.InventoryFilter = exports.InventoryDestination = exports.InventoryS3BucketDestination = exports.InventoryEncryption = exports.SSES3 = exports.SSEKMS = exports.GetBucketIntelligentTieringConfigurationRequest = exports.GetBucketIntelligentTieringConfigurationOutput = exports.IntelligentTieringConfiguration = exports.Tiering = exports.IntelligentTieringFilter = exports.IntelligentTieringAndOperator = exports.GetBucketEncryptionRequest = exports.GetBucketEncryptionOutput = exports.ServerSideEncryptionConfiguration = exports.ServerSideEncryptionRule = exports.ServerSideEncryptionByDefault = exports.GetBucketCorsRequest = exports.GetBucketCorsOutput = exports.CORSRule = exports.GetBucketAnalyticsConfigurationRequest = exports.GetBucketAnalyticsConfigurationOutput = exports.AnalyticsConfiguration = exports.StorageClassAnalysis = exports.StorageClassAnalysisDataExport = exports.AnalyticsExportDestination = exports.AnalyticsS3BucketDestination = exports.AnalyticsFilter = exports.AnalyticsAndOperator = exports.Tag = exports.GetBucketAclRequest = exports.GetBucketAclOutput = exports.GetBucketAccelerateConfigurationRequest = void 0;
 exports.Condition = exports.RedirectAllRequestsTo = exports.IndexDocument = exports.ErrorDocument = exports.GetBucketVersioningRequest = exports.GetBucketVersioningOutput = exports.GetBucketTaggingRequest = exports.GetBucketTaggingOutput = exports.GetBucketRequestPaymentRequest = exports.GetBucketRequestPaymentOutput = exports.GetBucketReplicationRequest = exports.GetBucketReplicationOutput = exports.ReplicationConfiguration = exports.ReplicationRule = exports.SourceSelectionCriteria = exports.SseKmsEncryptedObjects = exports.ReplicaModifications = exports.ReplicationRuleFilter = exports.ReplicationRuleAndOperator = exports.ExistingObjectReplication = exports.Destination = exports.ReplicationTime = exports.Metrics = exports.ReplicationTimeValue = exports.EncryptionConfiguration = exports.DeleteMarkerReplication = exports.GetBucketPolicyStatusRequest = exports.GetBucketPolicyStatusOutput = exports.PolicyStatus = exports.GetBucketPolicyRequest = exports.GetBucketPolicyOutput = exports.GetBucketOwnershipControlsRequest = exports.GetBucketOwnershipControlsOutput = exports.OwnershipControls = exports.OwnershipControlsRule = exports.NotificationConfiguration = exports.TopicConfiguration = exports.QueueConfiguration = exports.LambdaFunctionConfiguration = exports.NotificationConfigurationFilter = exports.S3KeyFilter = exports.FilterRule = exports.GetBucketNotificationConfigurationRequest = exports.GetBucketMetricsConfigurationRequest = exports.GetBucketMetricsConfigurationOutput = exports.MetricsConfiguration = exports.MetricsFilter = exports.MetricsAndOperator = exports.GetBucketLoggingRequest = exports.GetBucketLoggingOutput = void 0;
-exports.ListObjectsRequest = exports.ListObjectsOutput = exports._Object = exports.ListMultipartUploadsRequest = exports.ListMultipartUploadsOutput = exports.MultipartUpload = exports.Initiator = exports.CommonPrefix = exports.ListBucketsOutput = exports.Bucket = exports.ListBucketMetricsConfigurationsRequest = exports.ListBucketMetricsConfigurationsOutput = exports.ListBucketInventoryConfigurationsRequest = exports.ListBucketInventoryConfigurationsOutput = exports.ListBucketIntelligentTieringConfigurationsRequest = exports.ListBucketIntelligentTieringConfigurationsOutput = exports.ListBucketAnalyticsConfigurationsRequest = exports.ListBucketAnalyticsConfigurationsOutput = exports.HeadObjectRequest = exports.HeadObjectOutput = exports.NoSuchBucket = exports.HeadBucketRequest = exports.GetPublicAccessBlockRequest = exports.GetPublicAccessBlockOutput = exports.PublicAccessBlockConfiguration = exports.GetObjectTorrentRequest = exports.GetObjectTorrentOutput = exports.GetObjectTaggingRequest = exports.GetObjectTaggingOutput = exports.GetObjectRetentionRequest = exports.GetObjectRetentionOutput = exports.ObjectLockRetention = exports.GetObjectLockConfigurationRequest = exports.GetObjectLockConfigurationOutput = exports.ObjectLockConfiguration = exports.ObjectLockRule = exports.DefaultRetention = exports.GetObjectLegalHoldRequest = exports.GetObjectLegalHoldOutput = exports.ObjectLockLegalHold = exports.GetObjectAclRequest = exports.GetObjectAclOutput = exports.NoSuchKey = exports.InvalidObjectState = exports.GetObjectRequest = exports.GetObjectOutput = exports.GetBucketWebsiteRequest = exports.GetBucketWebsiteOutput = exports.RoutingRule = exports.Redirect = void 0;
-exports.GlacierJobParameters = exports.RestoreObjectOutput = exports.ObjectAlreadyInActiveTierError = exports.PutPublicAccessBlockRequest = exports.PutObjectTaggingRequest = exports.PutObjectTaggingOutput = exports.PutObjectRetentionRequest = exports.PutObjectRetentionOutput = exports.PutObjectLockConfigurationRequest = exports.PutObjectLockConfigurationOutput = exports.PutObjectLegalHoldRequest = exports.PutObjectLegalHoldOutput = exports.PutObjectAclRequest = exports.PutObjectAclOutput = exports.PutObjectRequest = exports.PutObjectOutput = exports.PutBucketWebsiteRequest = exports.WebsiteConfiguration = exports.PutBucketVersioningRequest = exports.VersioningConfiguration = exports.PutBucketTaggingRequest = exports.Tagging = exports.PutBucketRequestPaymentRequest = exports.RequestPaymentConfiguration = exports.PutBucketReplicationRequest = exports.PutBucketPolicyRequest = exports.PutBucketOwnershipControlsRequest = exports.PutBucketNotificationConfigurationRequest = exports.PutBucketMetricsConfigurationRequest = exports.PutBucketLoggingRequest = exports.BucketLoggingStatus = exports.PutBucketLifecycleConfigurationRequest = exports.BucketLifecycleConfiguration = exports.PutBucketInventoryConfigurationRequest = exports.PutBucketIntelligentTieringConfigurationRequest = exports.PutBucketEncryptionRequest = exports.PutBucketCorsRequest = exports.CORSConfiguration = exports.PutBucketAnalyticsConfigurationRequest = exports.PutBucketAclRequest = exports.PutBucketAccelerateConfigurationRequest = exports.ListPartsRequest = exports.ListPartsOutput = exports.Part = exports.ListObjectVersionsRequest = exports.ListObjectVersionsOutput = exports.ObjectVersion = exports.DeleteMarkerEntry = exports.ListObjectsV2Request = exports.ListObjectsV2Output = void 0;
-exports.Encryption = void 0;
+exports.ListObjectsRequest = exports.ListObjectsOutput = exports._Object = exports.ListMultipartUploadsRequest = exports.ListMultipartUploadsOutput = exports.MultipartUpload = exports.Initiator = exports.CommonPrefix = exports.ListBucketsOutput = exports.Bucket = exports.ListBucketMetricsConfigurationsRequest = exports.ListBucketMetricsConfigurationsOutput = exports.ListBucketInventoryConfigurationsRequest = exports.ListBucketInventoryConfigurationsOutput = exports.ListBucketIntelligentTieringConfigurationsRequest = exports.ListBucketIntelligentTieringConfigurationsOutput = exports.ListBucketAnalyticsConfigurationsRequest = exports.ListBucketAnalyticsConfigurationsOutput = exports.HeadObjectRequest = exports.HeadObjectOutput = exports.NotFound = exports.HeadBucketRequest = exports.GetPublicAccessBlockRequest = exports.GetPublicAccessBlockOutput = exports.PublicAccessBlockConfiguration = exports.GetObjectTorrentRequest = exports.GetObjectTorrentOutput = exports.GetObjectTaggingRequest = exports.GetObjectTaggingOutput = exports.GetObjectRetentionRequest = exports.GetObjectRetentionOutput = exports.ObjectLockRetention = exports.GetObjectLockConfigurationRequest = exports.GetObjectLockConfigurationOutput = exports.ObjectLockConfiguration = exports.ObjectLockRule = exports.DefaultRetention = exports.GetObjectLegalHoldRequest = exports.GetObjectLegalHoldOutput = exports.ObjectLockLegalHold = exports.GetObjectAclRequest = exports.GetObjectAclOutput = exports.NoSuchKey = exports.InvalidObjectState = exports.GetObjectRequest = exports.GetObjectOutput = exports.GetBucketWebsiteRequest = exports.GetBucketWebsiteOutput = exports.RoutingRule = exports.Redirect = void 0;
+exports.RestoreObjectOutput = exports.ObjectAlreadyInActiveTierError = exports.PutPublicAccessBlockRequest = exports.PutObjectTaggingRequest = exports.PutObjectTaggingOutput = exports.PutObjectRetentionRequest = exports.PutObjectRetentionOutput = exports.PutObjectLockConfigurationRequest = exports.PutObjectLockConfigurationOutput = exports.PutObjectLegalHoldRequest = exports.PutObjectLegalHoldOutput = exports.PutObjectAclRequest = exports.PutObjectAclOutput = exports.PutObjectRequest = exports.PutObjectOutput = exports.PutBucketWebsiteRequest = exports.WebsiteConfiguration = exports.PutBucketVersioningRequest = exports.VersioningConfiguration = exports.PutBucketTaggingRequest = exports.Tagging = exports.PutBucketRequestPaymentRequest = exports.RequestPaymentConfiguration = exports.PutBucketReplicationRequest = exports.PutBucketPolicyRequest = exports.PutBucketOwnershipControlsRequest = exports.PutBucketNotificationConfigurationRequest = exports.PutBucketMetricsConfigurationRequest = exports.PutBucketLoggingRequest = exports.BucketLoggingStatus = exports.PutBucketLifecycleConfigurationRequest = exports.BucketLifecycleConfiguration = exports.PutBucketInventoryConfigurationRequest = exports.PutBucketIntelligentTieringConfigurationRequest = exports.PutBucketEncryptionRequest = exports.PutBucketCorsRequest = exports.CORSConfiguration = exports.PutBucketAnalyticsConfigurationRequest = exports.PutBucketAclRequest = exports.PutBucketAccelerateConfigurationRequest = exports.ListPartsRequest = exports.ListPartsOutput = exports.Part = exports.ListObjectVersionsRequest = exports.ListObjectVersionsOutput = exports.ObjectVersion = exports.DeleteMarkerEntry = exports.ListObjectsV2Request = exports.ListObjectsV2Output = exports.NoSuchBucket = void 0;
+exports.GlacierJobParameters = void 0;
 const smithy_client_1 = __nccwpck_require__(32223);
 var AbortIncompleteMultipartUpload;
 (function (AbortIncompleteMultipartUpload) {
@@ -37335,12 +37481,12 @@ var HeadBucketRequest;
         ...obj,
     });
 })(HeadBucketRequest = exports.HeadBucketRequest || (exports.HeadBucketRequest = {}));
-var NoSuchBucket;
-(function (NoSuchBucket) {
-    NoSuchBucket.filterSensitiveLog = (obj) => ({
+var NotFound;
+(function (NotFound) {
+    NotFound.filterSensitiveLog = (obj) => ({
         ...obj,
     });
-})(NoSuchBucket = exports.NoSuchBucket || (exports.NoSuchBucket = {}));
+})(NotFound = exports.NotFound || (exports.NotFound = {}));
 var HeadObjectOutput;
 (function (HeadObjectOutput) {
     HeadObjectOutput.filterSensitiveLog = (obj) => ({
@@ -37472,6 +37618,12 @@ var ListObjectsRequest;
         ...obj,
     });
 })(ListObjectsRequest = exports.ListObjectsRequest || (exports.ListObjectsRequest = {}));
+var NoSuchBucket;
+(function (NoSuchBucket) {
+    NoSuchBucket.filterSensitiveLog = (obj) => ({
+        ...obj,
+    });
+})(NoSuchBucket = exports.NoSuchBucket || (exports.NoSuchBucket = {}));
 var ListObjectsV2Output;
 (function (ListObjectsV2Output) {
     ListObjectsV2Output.filterSensitiveLog = (obj) => ({
@@ -37796,13 +37948,6 @@ var GlacierJobParameters;
         ...obj,
     });
 })(GlacierJobParameters = exports.GlacierJobParameters || (exports.GlacierJobParameters = {}));
-var Encryption;
-(function (Encryption) {
-    Encryption.filterSensitiveLog = (obj) => ({
-        ...obj,
-        ...(obj.KMSKeyId && { KMSKeyId: smithy_client_1.SENSITIVE_STRING }),
-    });
-})(Encryption = exports.Encryption || (exports.Encryption = {}));
 //# sourceMappingURL=models_0.js.map
 
 /***/ }),
@@ -37813,9 +37958,15 @@ var Encryption;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.UploadPartCopyRequest = exports.UploadPartCopyOutput = exports.CopyPartResult = exports.UploadPartRequest = exports.UploadPartOutput = exports.SelectObjectContentRequest = exports.ScanRange = exports.RequestProgress = exports.SelectObjectContentOutput = exports.SelectObjectContentEventStream = exports.StatsEvent = exports.Stats = exports.RecordsEvent = exports.ProgressEvent = exports.Progress = exports.EndEvent = exports.ContinuationEvent = exports.RestoreObjectRequest = exports.RestoreRequest = exports.RestoreRequestType = exports.SelectParameters = exports.OutputSerialization = exports.JSONOutput = exports.CSVOutput = exports.QuoteFields = exports.InputSerialization = exports.ParquetInput = exports.JSONInput = exports.JSONType = exports.CSVInput = exports.FileHeaderInfo = exports.OutputLocation = exports.S3Location = exports.MetadataEntry = void 0;
-const models_0_1 = __nccwpck_require__(53473);
+exports.WriteGetObjectResponseRequest = exports.UploadPartCopyRequest = exports.UploadPartCopyOutput = exports.CopyPartResult = exports.UploadPartRequest = exports.UploadPartOutput = exports.SelectObjectContentRequest = exports.ScanRange = exports.RequestProgress = exports.SelectObjectContentOutput = exports.SelectObjectContentEventStream = exports.StatsEvent = exports.Stats = exports.RecordsEvent = exports.ProgressEvent = exports.Progress = exports.EndEvent = exports.ContinuationEvent = exports.RestoreObjectRequest = exports.RestoreRequest = exports.RestoreRequestType = exports.SelectParameters = exports.OutputSerialization = exports.JSONOutput = exports.CSVOutput = exports.QuoteFields = exports.InputSerialization = exports.ParquetInput = exports.JSONInput = exports.JSONType = exports.CSVInput = exports.FileHeaderInfo = exports.OutputLocation = exports.S3Location = exports.MetadataEntry = exports.Encryption = void 0;
 const smithy_client_1 = __nccwpck_require__(32223);
+var Encryption;
+(function (Encryption) {
+    Encryption.filterSensitiveLog = (obj) => ({
+        ...obj,
+        ...(obj.KMSKeyId && { KMSKeyId: smithy_client_1.SENSITIVE_STRING }),
+    });
+})(Encryption = exports.Encryption || (exports.Encryption = {}));
 var MetadataEntry;
 (function (MetadataEntry) {
     MetadataEntry.filterSensitiveLog = (obj) => ({
@@ -37826,7 +37977,7 @@ var S3Location;
 (function (S3Location) {
     S3Location.filterSensitiveLog = (obj) => ({
         ...obj,
-        ...(obj.Encryption && { Encryption: models_0_1.Encryption.filterSensitiveLog(obj.Encryption) }),
+        ...(obj.Encryption && { Encryption: Encryption.filterSensitiveLog(obj.Encryption) }),
     });
 })(S3Location = exports.S3Location || (exports.S3Location = {}));
 var OutputLocation;
@@ -38051,6 +38202,13 @@ var UploadPartCopyRequest;
         ...(obj.CopySourceSSECustomerKey && { CopySourceSSECustomerKey: smithy_client_1.SENSITIVE_STRING }),
     });
 })(UploadPartCopyRequest = exports.UploadPartCopyRequest || (exports.UploadPartCopyRequest = {}));
+var WriteGetObjectResponseRequest;
+(function (WriteGetObjectResponseRequest) {
+    WriteGetObjectResponseRequest.filterSensitiveLog = (obj) => ({
+        ...obj,
+        ...(obj.SSEKMSKeyId && { SSEKMSKeyId: smithy_client_1.SENSITIVE_STRING }),
+    });
+})(WriteGetObjectResponseRequest = exports.WriteGetObjectResponseRequest || (exports.WriteGetObjectResponseRequest = {}));
 //# sourceMappingURL=models_1.js.map
 
 /***/ }),
@@ -38178,9 +38336,9 @@ exports.paginateListParts = paginateListParts;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.serializeAws_restXmlGetPublicAccessBlockCommand = exports.serializeAws_restXmlGetObjectTorrentCommand = exports.serializeAws_restXmlGetObjectTaggingCommand = exports.serializeAws_restXmlGetObjectRetentionCommand = exports.serializeAws_restXmlGetObjectLockConfigurationCommand = exports.serializeAws_restXmlGetObjectLegalHoldCommand = exports.serializeAws_restXmlGetObjectAclCommand = exports.serializeAws_restXmlGetObjectCommand = exports.serializeAws_restXmlGetBucketWebsiteCommand = exports.serializeAws_restXmlGetBucketVersioningCommand = exports.serializeAws_restXmlGetBucketTaggingCommand = exports.serializeAws_restXmlGetBucketRequestPaymentCommand = exports.serializeAws_restXmlGetBucketReplicationCommand = exports.serializeAws_restXmlGetBucketPolicyStatusCommand = exports.serializeAws_restXmlGetBucketPolicyCommand = exports.serializeAws_restXmlGetBucketOwnershipControlsCommand = exports.serializeAws_restXmlGetBucketNotificationConfigurationCommand = exports.serializeAws_restXmlGetBucketMetricsConfigurationCommand = exports.serializeAws_restXmlGetBucketLoggingCommand = exports.serializeAws_restXmlGetBucketLocationCommand = exports.serializeAws_restXmlGetBucketLifecycleConfigurationCommand = exports.serializeAws_restXmlGetBucketInventoryConfigurationCommand = exports.serializeAws_restXmlGetBucketIntelligentTieringConfigurationCommand = exports.serializeAws_restXmlGetBucketEncryptionCommand = exports.serializeAws_restXmlGetBucketCorsCommand = exports.serializeAws_restXmlGetBucketAnalyticsConfigurationCommand = exports.serializeAws_restXmlGetBucketAclCommand = exports.serializeAws_restXmlGetBucketAccelerateConfigurationCommand = exports.serializeAws_restXmlDeletePublicAccessBlockCommand = exports.serializeAws_restXmlDeleteObjectTaggingCommand = exports.serializeAws_restXmlDeleteObjectsCommand = exports.serializeAws_restXmlDeleteObjectCommand = exports.serializeAws_restXmlDeleteBucketWebsiteCommand = exports.serializeAws_restXmlDeleteBucketTaggingCommand = exports.serializeAws_restXmlDeleteBucketReplicationCommand = exports.serializeAws_restXmlDeleteBucketPolicyCommand = exports.serializeAws_restXmlDeleteBucketOwnershipControlsCommand = exports.serializeAws_restXmlDeleteBucketMetricsConfigurationCommand = exports.serializeAws_restXmlDeleteBucketLifecycleCommand = exports.serializeAws_restXmlDeleteBucketInventoryConfigurationCommand = exports.serializeAws_restXmlDeleteBucketIntelligentTieringConfigurationCommand = exports.serializeAws_restXmlDeleteBucketEncryptionCommand = exports.serializeAws_restXmlDeleteBucketCorsCommand = exports.serializeAws_restXmlDeleteBucketAnalyticsConfigurationCommand = exports.serializeAws_restXmlDeleteBucketCommand = exports.serializeAws_restXmlCreateMultipartUploadCommand = exports.serializeAws_restXmlCreateBucketCommand = exports.serializeAws_restXmlCopyObjectCommand = exports.serializeAws_restXmlCompleteMultipartUploadCommand = exports.serializeAws_restXmlAbortMultipartUploadCommand = void 0;
-exports.deserializeAws_restXmlDeleteBucketEncryptionCommand = exports.deserializeAws_restXmlDeleteBucketCorsCommand = exports.deserializeAws_restXmlDeleteBucketAnalyticsConfigurationCommand = exports.deserializeAws_restXmlDeleteBucketCommand = exports.deserializeAws_restXmlCreateMultipartUploadCommand = exports.deserializeAws_restXmlCreateBucketCommand = exports.deserializeAws_restXmlCopyObjectCommand = exports.deserializeAws_restXmlCompleteMultipartUploadCommand = exports.deserializeAws_restXmlAbortMultipartUploadCommand = exports.serializeAws_restXmlUploadPartCopyCommand = exports.serializeAws_restXmlUploadPartCommand = exports.serializeAws_restXmlSelectObjectContentCommand = exports.serializeAws_restXmlRestoreObjectCommand = exports.serializeAws_restXmlPutPublicAccessBlockCommand = exports.serializeAws_restXmlPutObjectTaggingCommand = exports.serializeAws_restXmlPutObjectRetentionCommand = exports.serializeAws_restXmlPutObjectLockConfigurationCommand = exports.serializeAws_restXmlPutObjectLegalHoldCommand = exports.serializeAws_restXmlPutObjectAclCommand = exports.serializeAws_restXmlPutObjectCommand = exports.serializeAws_restXmlPutBucketWebsiteCommand = exports.serializeAws_restXmlPutBucketVersioningCommand = exports.serializeAws_restXmlPutBucketTaggingCommand = exports.serializeAws_restXmlPutBucketRequestPaymentCommand = exports.serializeAws_restXmlPutBucketReplicationCommand = exports.serializeAws_restXmlPutBucketPolicyCommand = exports.serializeAws_restXmlPutBucketOwnershipControlsCommand = exports.serializeAws_restXmlPutBucketNotificationConfigurationCommand = exports.serializeAws_restXmlPutBucketMetricsConfigurationCommand = exports.serializeAws_restXmlPutBucketLoggingCommand = exports.serializeAws_restXmlPutBucketLifecycleConfigurationCommand = exports.serializeAws_restXmlPutBucketInventoryConfigurationCommand = exports.serializeAws_restXmlPutBucketIntelligentTieringConfigurationCommand = exports.serializeAws_restXmlPutBucketEncryptionCommand = exports.serializeAws_restXmlPutBucketCorsCommand = exports.serializeAws_restXmlPutBucketAnalyticsConfigurationCommand = exports.serializeAws_restXmlPutBucketAclCommand = exports.serializeAws_restXmlPutBucketAccelerateConfigurationCommand = exports.serializeAws_restXmlListPartsCommand = exports.serializeAws_restXmlListObjectVersionsCommand = exports.serializeAws_restXmlListObjectsV2Command = exports.serializeAws_restXmlListObjectsCommand = exports.serializeAws_restXmlListMultipartUploadsCommand = exports.serializeAws_restXmlListBucketsCommand = exports.serializeAws_restXmlListBucketMetricsConfigurationsCommand = exports.serializeAws_restXmlListBucketInventoryConfigurationsCommand = exports.serializeAws_restXmlListBucketIntelligentTieringConfigurationsCommand = exports.serializeAws_restXmlListBucketAnalyticsConfigurationsCommand = exports.serializeAws_restXmlHeadObjectCommand = exports.serializeAws_restXmlHeadBucketCommand = void 0;
-exports.deserializeAws_restXmlListObjectsCommand = exports.deserializeAws_restXmlListMultipartUploadsCommand = exports.deserializeAws_restXmlListBucketsCommand = exports.deserializeAws_restXmlListBucketMetricsConfigurationsCommand = exports.deserializeAws_restXmlListBucketInventoryConfigurationsCommand = exports.deserializeAws_restXmlListBucketIntelligentTieringConfigurationsCommand = exports.deserializeAws_restXmlListBucketAnalyticsConfigurationsCommand = exports.deserializeAws_restXmlHeadObjectCommand = exports.deserializeAws_restXmlHeadBucketCommand = exports.deserializeAws_restXmlGetPublicAccessBlockCommand = exports.deserializeAws_restXmlGetObjectTorrentCommand = exports.deserializeAws_restXmlGetObjectTaggingCommand = exports.deserializeAws_restXmlGetObjectRetentionCommand = exports.deserializeAws_restXmlGetObjectLockConfigurationCommand = exports.deserializeAws_restXmlGetObjectLegalHoldCommand = exports.deserializeAws_restXmlGetObjectAclCommand = exports.deserializeAws_restXmlGetObjectCommand = exports.deserializeAws_restXmlGetBucketWebsiteCommand = exports.deserializeAws_restXmlGetBucketVersioningCommand = exports.deserializeAws_restXmlGetBucketTaggingCommand = exports.deserializeAws_restXmlGetBucketRequestPaymentCommand = exports.deserializeAws_restXmlGetBucketReplicationCommand = exports.deserializeAws_restXmlGetBucketPolicyStatusCommand = exports.deserializeAws_restXmlGetBucketPolicyCommand = exports.deserializeAws_restXmlGetBucketOwnershipControlsCommand = exports.deserializeAws_restXmlGetBucketNotificationConfigurationCommand = exports.deserializeAws_restXmlGetBucketMetricsConfigurationCommand = exports.deserializeAws_restXmlGetBucketLoggingCommand = exports.deserializeAws_restXmlGetBucketLocationCommand = exports.deserializeAws_restXmlGetBucketLifecycleConfigurationCommand = exports.deserializeAws_restXmlGetBucketInventoryConfigurationCommand = exports.deserializeAws_restXmlGetBucketIntelligentTieringConfigurationCommand = exports.deserializeAws_restXmlGetBucketEncryptionCommand = exports.deserializeAws_restXmlGetBucketCorsCommand = exports.deserializeAws_restXmlGetBucketAnalyticsConfigurationCommand = exports.deserializeAws_restXmlGetBucketAclCommand = exports.deserializeAws_restXmlGetBucketAccelerateConfigurationCommand = exports.deserializeAws_restXmlDeletePublicAccessBlockCommand = exports.deserializeAws_restXmlDeleteObjectTaggingCommand = exports.deserializeAws_restXmlDeleteObjectsCommand = exports.deserializeAws_restXmlDeleteObjectCommand = exports.deserializeAws_restXmlDeleteBucketWebsiteCommand = exports.deserializeAws_restXmlDeleteBucketTaggingCommand = exports.deserializeAws_restXmlDeleteBucketReplicationCommand = exports.deserializeAws_restXmlDeleteBucketPolicyCommand = exports.deserializeAws_restXmlDeleteBucketOwnershipControlsCommand = exports.deserializeAws_restXmlDeleteBucketMetricsConfigurationCommand = exports.deserializeAws_restXmlDeleteBucketLifecycleCommand = exports.deserializeAws_restXmlDeleteBucketInventoryConfigurationCommand = exports.deserializeAws_restXmlDeleteBucketIntelligentTieringConfigurationCommand = void 0;
-exports.deserializeAws_restXmlUploadPartCopyCommand = exports.deserializeAws_restXmlUploadPartCommand = exports.deserializeAws_restXmlSelectObjectContentCommand = exports.deserializeAws_restXmlRestoreObjectCommand = exports.deserializeAws_restXmlPutPublicAccessBlockCommand = exports.deserializeAws_restXmlPutObjectTaggingCommand = exports.deserializeAws_restXmlPutObjectRetentionCommand = exports.deserializeAws_restXmlPutObjectLockConfigurationCommand = exports.deserializeAws_restXmlPutObjectLegalHoldCommand = exports.deserializeAws_restXmlPutObjectAclCommand = exports.deserializeAws_restXmlPutObjectCommand = exports.deserializeAws_restXmlPutBucketWebsiteCommand = exports.deserializeAws_restXmlPutBucketVersioningCommand = exports.deserializeAws_restXmlPutBucketTaggingCommand = exports.deserializeAws_restXmlPutBucketRequestPaymentCommand = exports.deserializeAws_restXmlPutBucketReplicationCommand = exports.deserializeAws_restXmlPutBucketPolicyCommand = exports.deserializeAws_restXmlPutBucketOwnershipControlsCommand = exports.deserializeAws_restXmlPutBucketNotificationConfigurationCommand = exports.deserializeAws_restXmlPutBucketMetricsConfigurationCommand = exports.deserializeAws_restXmlPutBucketLoggingCommand = exports.deserializeAws_restXmlPutBucketLifecycleConfigurationCommand = exports.deserializeAws_restXmlPutBucketInventoryConfigurationCommand = exports.deserializeAws_restXmlPutBucketIntelligentTieringConfigurationCommand = exports.deserializeAws_restXmlPutBucketEncryptionCommand = exports.deserializeAws_restXmlPutBucketCorsCommand = exports.deserializeAws_restXmlPutBucketAnalyticsConfigurationCommand = exports.deserializeAws_restXmlPutBucketAclCommand = exports.deserializeAws_restXmlPutBucketAccelerateConfigurationCommand = exports.deserializeAws_restXmlListPartsCommand = exports.deserializeAws_restXmlListObjectVersionsCommand = exports.deserializeAws_restXmlListObjectsV2Command = void 0;
+exports.deserializeAws_restXmlDeleteBucketCorsCommand = exports.deserializeAws_restXmlDeleteBucketAnalyticsConfigurationCommand = exports.deserializeAws_restXmlDeleteBucketCommand = exports.deserializeAws_restXmlCreateMultipartUploadCommand = exports.deserializeAws_restXmlCreateBucketCommand = exports.deserializeAws_restXmlCopyObjectCommand = exports.deserializeAws_restXmlCompleteMultipartUploadCommand = exports.deserializeAws_restXmlAbortMultipartUploadCommand = exports.serializeAws_restXmlWriteGetObjectResponseCommand = exports.serializeAws_restXmlUploadPartCopyCommand = exports.serializeAws_restXmlUploadPartCommand = exports.serializeAws_restXmlSelectObjectContentCommand = exports.serializeAws_restXmlRestoreObjectCommand = exports.serializeAws_restXmlPutPublicAccessBlockCommand = exports.serializeAws_restXmlPutObjectTaggingCommand = exports.serializeAws_restXmlPutObjectRetentionCommand = exports.serializeAws_restXmlPutObjectLockConfigurationCommand = exports.serializeAws_restXmlPutObjectLegalHoldCommand = exports.serializeAws_restXmlPutObjectAclCommand = exports.serializeAws_restXmlPutObjectCommand = exports.serializeAws_restXmlPutBucketWebsiteCommand = exports.serializeAws_restXmlPutBucketVersioningCommand = exports.serializeAws_restXmlPutBucketTaggingCommand = exports.serializeAws_restXmlPutBucketRequestPaymentCommand = exports.serializeAws_restXmlPutBucketReplicationCommand = exports.serializeAws_restXmlPutBucketPolicyCommand = exports.serializeAws_restXmlPutBucketOwnershipControlsCommand = exports.serializeAws_restXmlPutBucketNotificationConfigurationCommand = exports.serializeAws_restXmlPutBucketMetricsConfigurationCommand = exports.serializeAws_restXmlPutBucketLoggingCommand = exports.serializeAws_restXmlPutBucketLifecycleConfigurationCommand = exports.serializeAws_restXmlPutBucketInventoryConfigurationCommand = exports.serializeAws_restXmlPutBucketIntelligentTieringConfigurationCommand = exports.serializeAws_restXmlPutBucketEncryptionCommand = exports.serializeAws_restXmlPutBucketCorsCommand = exports.serializeAws_restXmlPutBucketAnalyticsConfigurationCommand = exports.serializeAws_restXmlPutBucketAclCommand = exports.serializeAws_restXmlPutBucketAccelerateConfigurationCommand = exports.serializeAws_restXmlListPartsCommand = exports.serializeAws_restXmlListObjectVersionsCommand = exports.serializeAws_restXmlListObjectsV2Command = exports.serializeAws_restXmlListObjectsCommand = exports.serializeAws_restXmlListMultipartUploadsCommand = exports.serializeAws_restXmlListBucketsCommand = exports.serializeAws_restXmlListBucketMetricsConfigurationsCommand = exports.serializeAws_restXmlListBucketInventoryConfigurationsCommand = exports.serializeAws_restXmlListBucketIntelligentTieringConfigurationsCommand = exports.serializeAws_restXmlListBucketAnalyticsConfigurationsCommand = exports.serializeAws_restXmlHeadObjectCommand = exports.serializeAws_restXmlHeadBucketCommand = void 0;
+exports.deserializeAws_restXmlListMultipartUploadsCommand = exports.deserializeAws_restXmlListBucketsCommand = exports.deserializeAws_restXmlListBucketMetricsConfigurationsCommand = exports.deserializeAws_restXmlListBucketInventoryConfigurationsCommand = exports.deserializeAws_restXmlListBucketIntelligentTieringConfigurationsCommand = exports.deserializeAws_restXmlListBucketAnalyticsConfigurationsCommand = exports.deserializeAws_restXmlHeadObjectCommand = exports.deserializeAws_restXmlHeadBucketCommand = exports.deserializeAws_restXmlGetPublicAccessBlockCommand = exports.deserializeAws_restXmlGetObjectTorrentCommand = exports.deserializeAws_restXmlGetObjectTaggingCommand = exports.deserializeAws_restXmlGetObjectRetentionCommand = exports.deserializeAws_restXmlGetObjectLockConfigurationCommand = exports.deserializeAws_restXmlGetObjectLegalHoldCommand = exports.deserializeAws_restXmlGetObjectAclCommand = exports.deserializeAws_restXmlGetObjectCommand = exports.deserializeAws_restXmlGetBucketWebsiteCommand = exports.deserializeAws_restXmlGetBucketVersioningCommand = exports.deserializeAws_restXmlGetBucketTaggingCommand = exports.deserializeAws_restXmlGetBucketRequestPaymentCommand = exports.deserializeAws_restXmlGetBucketReplicationCommand = exports.deserializeAws_restXmlGetBucketPolicyStatusCommand = exports.deserializeAws_restXmlGetBucketPolicyCommand = exports.deserializeAws_restXmlGetBucketOwnershipControlsCommand = exports.deserializeAws_restXmlGetBucketNotificationConfigurationCommand = exports.deserializeAws_restXmlGetBucketMetricsConfigurationCommand = exports.deserializeAws_restXmlGetBucketLoggingCommand = exports.deserializeAws_restXmlGetBucketLocationCommand = exports.deserializeAws_restXmlGetBucketLifecycleConfigurationCommand = exports.deserializeAws_restXmlGetBucketInventoryConfigurationCommand = exports.deserializeAws_restXmlGetBucketIntelligentTieringConfigurationCommand = exports.deserializeAws_restXmlGetBucketEncryptionCommand = exports.deserializeAws_restXmlGetBucketCorsCommand = exports.deserializeAws_restXmlGetBucketAnalyticsConfigurationCommand = exports.deserializeAws_restXmlGetBucketAclCommand = exports.deserializeAws_restXmlGetBucketAccelerateConfigurationCommand = exports.deserializeAws_restXmlDeletePublicAccessBlockCommand = exports.deserializeAws_restXmlDeleteObjectTaggingCommand = exports.deserializeAws_restXmlDeleteObjectsCommand = exports.deserializeAws_restXmlDeleteObjectCommand = exports.deserializeAws_restXmlDeleteBucketWebsiteCommand = exports.deserializeAws_restXmlDeleteBucketTaggingCommand = exports.deserializeAws_restXmlDeleteBucketReplicationCommand = exports.deserializeAws_restXmlDeleteBucketPolicyCommand = exports.deserializeAws_restXmlDeleteBucketOwnershipControlsCommand = exports.deserializeAws_restXmlDeleteBucketMetricsConfigurationCommand = exports.deserializeAws_restXmlDeleteBucketLifecycleCommand = exports.deserializeAws_restXmlDeleteBucketInventoryConfigurationCommand = exports.deserializeAws_restXmlDeleteBucketIntelligentTieringConfigurationCommand = exports.deserializeAws_restXmlDeleteBucketEncryptionCommand = void 0;
+exports.deserializeAws_restXmlWriteGetObjectResponseCommand = exports.deserializeAws_restXmlUploadPartCopyCommand = exports.deserializeAws_restXmlUploadPartCommand = exports.deserializeAws_restXmlSelectObjectContentCommand = exports.deserializeAws_restXmlRestoreObjectCommand = exports.deserializeAws_restXmlPutPublicAccessBlockCommand = exports.deserializeAws_restXmlPutObjectTaggingCommand = exports.deserializeAws_restXmlPutObjectRetentionCommand = exports.deserializeAws_restXmlPutObjectLockConfigurationCommand = exports.deserializeAws_restXmlPutObjectLegalHoldCommand = exports.deserializeAws_restXmlPutObjectAclCommand = exports.deserializeAws_restXmlPutObjectCommand = exports.deserializeAws_restXmlPutBucketWebsiteCommand = exports.deserializeAws_restXmlPutBucketVersioningCommand = exports.deserializeAws_restXmlPutBucketTaggingCommand = exports.deserializeAws_restXmlPutBucketRequestPaymentCommand = exports.deserializeAws_restXmlPutBucketReplicationCommand = exports.deserializeAws_restXmlPutBucketPolicyCommand = exports.deserializeAws_restXmlPutBucketOwnershipControlsCommand = exports.deserializeAws_restXmlPutBucketNotificationConfigurationCommand = exports.deserializeAws_restXmlPutBucketMetricsConfigurationCommand = exports.deserializeAws_restXmlPutBucketLoggingCommand = exports.deserializeAws_restXmlPutBucketLifecycleConfigurationCommand = exports.deserializeAws_restXmlPutBucketInventoryConfigurationCommand = exports.deserializeAws_restXmlPutBucketIntelligentTieringConfigurationCommand = exports.deserializeAws_restXmlPutBucketEncryptionCommand = exports.deserializeAws_restXmlPutBucketCorsCommand = exports.deserializeAws_restXmlPutBucketAnalyticsConfigurationCommand = exports.deserializeAws_restXmlPutBucketAclCommand = exports.deserializeAws_restXmlPutBucketAccelerateConfigurationCommand = exports.deserializeAws_restXmlListPartsCommand = exports.deserializeAws_restXmlListObjectVersionsCommand = exports.deserializeAws_restXmlListObjectsV2Command = exports.deserializeAws_restXmlListObjectsCommand = void 0;
 const models_0_1 = __nccwpck_require__(53473);
 const protocol_http_1 = __nccwpck_require__(67498);
 const smithy_client_1 = __nccwpck_require__(32223);
@@ -38268,6 +38426,7 @@ const serializeAws_restXmlCompleteMultipartUploadCommand = async (input, context
         throw new Error("No value provided for input HTTP label: Key.");
     }
     const query = {
+        "x-id": "CompleteMultipartUpload",
         ...(input.UploadId !== undefined && { uploadId: input.UploadId }),
     };
     let body;
@@ -38541,6 +38700,7 @@ const serializeAws_restXmlCreateMultipartUploadCommand = async (input, context) 
     }
     const query = {
         uploads: "",
+        "x-id": "CreateMultipartUpload",
     };
     let body;
     const { hostname, protocol = "https", port } = await context.endpoint();
@@ -39072,6 +39232,7 @@ const serializeAws_restXmlDeleteObjectsCommand = async (input, context) => {
     }
     const query = {
         delete: "",
+        "x-id": "DeleteObjects",
     };
     let body;
     let contents;
@@ -39919,7 +40080,7 @@ const serializeAws_restXmlGetObjectCommand = async (input, context) => {
         ...(input.ResponseContentLanguage !== undefined && { "response-content-language": input.ResponseContentLanguage }),
         ...(input.ResponseContentType !== undefined && { "response-content-type": input.ResponseContentType }),
         ...(input.ResponseExpires !== undefined && {
-            "response-expires": (input.ResponseExpires.toISOString().split(".")[0] + "Z").toString(),
+            "response-expires": smithy_client_1.dateToUtcString(input.ResponseExpires).toString(),
         }),
         ...(input.VersionId !== undefined && { versionId: input.VersionId }),
         ...(input.PartNumber !== undefined && { partNumber: input.PartNumber.toString() }),
@@ -40124,6 +40285,7 @@ const serializeAws_restXmlGetObjectTaggingCommand = async (input, context) => {
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
+        ...(isSerializableHeaderValue(input.RequestPayer) && { "x-amz-request-payer": input.RequestPayer }),
     };
     let resolvedPath = "/{Bucket}/{Key+}";
     if (input.Bucket !== undefined) {
@@ -41832,6 +41994,7 @@ const serializeAws_restXmlPutObjectTaggingCommand = async (input, context) => {
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
+        ...(isSerializableHeaderValue(input.RequestPayer) && { "x-amz-request-payer": input.RequestPayer }),
     };
     let resolvedPath = "/{Bucket}/{Key+}";
     if (input.Bucket !== undefined) {
@@ -41959,6 +42122,7 @@ const serializeAws_restXmlRestoreObjectCommand = async (input, context) => {
     }
     const query = {
         restore: "",
+        "x-id": "RestoreObject",
         ...(input.VersionId !== undefined && { versionId: input.VersionId }),
     };
     let body;
@@ -42025,6 +42189,7 @@ const serializeAws_restXmlSelectObjectContentCommand = async (input, context) =>
     const query = {
         select: "",
         "select-type": "2",
+        "x-id": "SelectObjectContent",
     };
     let body;
     body = '<?xml version="1.0" encoding="UTF-8"?>';
@@ -42222,6 +42387,124 @@ const serializeAws_restXmlUploadPartCopyCommand = async (input, context) => {
     });
 };
 exports.serializeAws_restXmlUploadPartCopyCommand = serializeAws_restXmlUploadPartCopyCommand;
+const serializeAws_restXmlWriteGetObjectResponseCommand = async (input, context) => {
+    const headers = {
+        "content-type": "application/octet-stream",
+        "x-amz-content-sha256": "UNSIGNED-PAYLOAD",
+        ...(isSerializableHeaderValue(input.RequestRoute) && { "x-amz-request-route": input.RequestRoute }),
+        ...(isSerializableHeaderValue(input.RequestToken) && { "x-amz-request-token": input.RequestToken }),
+        ...(isSerializableHeaderValue(input.StatusCode) && { "x-amz-fwd-status": input.StatusCode.toString() }),
+        ...(isSerializableHeaderValue(input.ErrorCode) && { "x-amz-fwd-error-code": input.ErrorCode }),
+        ...(isSerializableHeaderValue(input.ErrorMessage) && { "x-amz-fwd-error-message": input.ErrorMessage }),
+        ...(isSerializableHeaderValue(input.AcceptRanges) && { "x-amz-fwd-header-accept-ranges": input.AcceptRanges }),
+        ...(isSerializableHeaderValue(input.CacheControl) && { "x-amz-fwd-header-cache-control": input.CacheControl }),
+        ...(isSerializableHeaderValue(input.ContentDisposition) && {
+            "x-amz-fwd-header-content-disposition": input.ContentDisposition,
+        }),
+        ...(isSerializableHeaderValue(input.ContentEncoding) && {
+            "x-amz-fwd-header-content-encoding": input.ContentEncoding,
+        }),
+        ...(isSerializableHeaderValue(input.ContentLanguage) && {
+            "x-amz-fwd-header-content-language": input.ContentLanguage,
+        }),
+        ...(isSerializableHeaderValue(input.ContentLength) && { "content-length": input.ContentLength.toString() }),
+        ...(isSerializableHeaderValue(input.ContentRange) && { "x-amz-fwd-header-content-range": input.ContentRange }),
+        ...(isSerializableHeaderValue(input.ContentType) && { "x-amz-fwd-header-content-type": input.ContentType }),
+        ...(isSerializableHeaderValue(input.DeleteMarker) && {
+            "x-amz-fwd-header-x-amz-delete-marker": input.DeleteMarker.toString(),
+        }),
+        ...(isSerializableHeaderValue(input.ETag) && { "x-amz-fwd-header-etag": input.ETag }),
+        ...(isSerializableHeaderValue(input.Expires) && {
+            "x-amz-fwd-header-expires": smithy_client_1.dateToUtcString(input.Expires).toString(),
+        }),
+        ...(isSerializableHeaderValue(input.Expiration) && { "x-amz-fwd-header-x-amz-expiration": input.Expiration }),
+        ...(isSerializableHeaderValue(input.LastModified) && {
+            "x-amz-fwd-header-last-modified": smithy_client_1.dateToUtcString(input.LastModified).toString(),
+        }),
+        ...(isSerializableHeaderValue(input.MissingMeta) && {
+            "x-amz-fwd-header-x-amz-missing-meta": input.MissingMeta.toString(),
+        }),
+        ...(isSerializableHeaderValue(input.ObjectLockMode) && {
+            "x-amz-fwd-header-x-amz-object-lock-mode": input.ObjectLockMode,
+        }),
+        ...(isSerializableHeaderValue(input.ObjectLockLegalHoldStatus) && {
+            "x-amz-fwd-header-x-amz-object-lock-legal-hold": input.ObjectLockLegalHoldStatus,
+        }),
+        ...(isSerializableHeaderValue(input.ObjectLockRetainUntilDate) && {
+            "x-amz-fwd-header-x-amz-object-lock-retain-until-date": (input.ObjectLockRetainUntilDate.toISOString().split(".")[0] + "Z").toString(),
+        }),
+        ...(isSerializableHeaderValue(input.PartsCount) && {
+            "x-amz-fwd-header-x-amz-mp-parts-count": input.PartsCount.toString(),
+        }),
+        ...(isSerializableHeaderValue(input.ReplicationStatus) && {
+            "x-amz-fwd-header-x-amz-replication-status": input.ReplicationStatus,
+        }),
+        ...(isSerializableHeaderValue(input.RequestCharged) && {
+            "x-amz-fwd-header-x-amz-request-charged": input.RequestCharged,
+        }),
+        ...(isSerializableHeaderValue(input.Restore) && { "x-amz-fwd-header-x-amz-restore": input.Restore }),
+        ...(isSerializableHeaderValue(input.ServerSideEncryption) && {
+            "x-amz-fwd-header-x-amz-server-side-encryption": input.ServerSideEncryption,
+        }),
+        ...(isSerializableHeaderValue(input.SSECustomerAlgorithm) && {
+            "x-amz-fwd-header-x-amz-server-side-encryption-customer-algorithm": input.SSECustomerAlgorithm,
+        }),
+        ...(isSerializableHeaderValue(input.SSEKMSKeyId) && {
+            "x-amz-fwd-header-x-amz-server-side-encryption-aws-kms-key-id": input.SSEKMSKeyId,
+        }),
+        ...(isSerializableHeaderValue(input.SSECustomerKeyMD5) && {
+            "x-amz-fwd-header-x-amz-server-side-encryption-customer-key-md5": input.SSECustomerKeyMD5,
+        }),
+        ...(isSerializableHeaderValue(input.StorageClass) && {
+            "x-amz-fwd-header-x-amz-storage-class": input.StorageClass,
+        }),
+        ...(isSerializableHeaderValue(input.TagCount) && {
+            "x-amz-fwd-header-x-amz-tagging-count": input.TagCount.toString(),
+        }),
+        ...(isSerializableHeaderValue(input.VersionId) && { "x-amz-fwd-header-x-amz-version-id": input.VersionId }),
+        ...(isSerializableHeaderValue(input.BucketKeyEnabled) && {
+            "x-amz-fwd-header-x-amz-server-side-encryption-bucket-key-enabled": input.BucketKeyEnabled.toString(),
+        }),
+        ...(input.Metadata !== undefined &&
+            Object.keys(input.Metadata).reduce((acc, suffix) => ({
+                ...acc,
+                [`x-amz-meta-${suffix.toLowerCase()}`]: input.Metadata[suffix],
+            }), {})),
+    };
+    let resolvedPath = "/WriteGetObjectResponse";
+    const query = {
+        "x-id": "WriteGetObjectResponse",
+    };
+    let body;
+    let contents;
+    if (input.Body !== undefined) {
+        contents = input.Body;
+        body = contents;
+    }
+    let { hostname: resolvedHostname } = await context.endpoint();
+    if (context.disableHostPrefix !== true) {
+        resolvedHostname = "{RequestRoute}." + resolvedHostname;
+        if (input.RequestRoute === undefined) {
+            throw new Error("Empty value provided for input host prefix: RequestRoute.");
+        }
+        resolvedHostname = resolvedHostname.replace("{RequestRoute}", input.RequestRoute);
+        if (!protocol_http_1.isValidHostname(resolvedHostname)) {
+            throw new Error("ValidationError: prefixed hostname must be hostname compatible.");
+        }
+    }
+    const { hostname, protocol = "https", port } = await context.endpoint();
+    return new protocol_http_1.HttpRequest({
+        protocol,
+        hostname: resolvedHostname,
+        port,
+        method: "POST",
+        headers,
+        path: resolvedPath,
+        query,
+        body,
+    });
+};
+exports.serializeAws_restXmlWriteGetObjectResponseCommand = serializeAws_restXmlWriteGetObjectResponseCommand;
 const deserializeAws_restXmlAbortMultipartUploadCommand = async (output, context) => {
     if (output.statusCode !== 204 && output.statusCode >= 300) {
         return deserializeAws_restXmlAbortMultipartUploadCommandError(output, context);
@@ -43764,10 +44047,8 @@ const deserializeAws_restXmlGetBucketPolicyCommand = async (output, context) => 
         $metadata: deserializeMetadata(output),
         Policy: undefined,
     };
-    const data = await parseBody(output.body, context);
-    if (data["Policy"] !== undefined) {
-        contents.Policy = data["Policy"];
-    }
+    const data = await collectBodyString(output.body, context);
+    contents.Policy = data;
     return Promise.resolve(contents);
 };
 exports.deserializeAws_restXmlGetBucketPolicyCommand = deserializeAws_restXmlGetBucketPolicyCommand;
@@ -44557,10 +44838,10 @@ const deserializeAws_restXmlHeadBucketCommandError = async (output, context) => 
     let errorCode = "UnknownError";
     errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
-        case "NoSuchBucket":
-        case "com.amazonaws.s3#NoSuchBucket":
+        case "NotFound":
+        case "com.amazonaws.s3#NotFound":
             response = {
-                ...(await deserializeAws_restXmlNoSuchBucketResponse(parsedOutput, context)),
+                ...(await deserializeAws_restXmlNotFoundResponse(parsedOutput, context)),
                 name: errorCode,
                 $metadata: deserializeMetadata(output),
             };
@@ -44726,10 +45007,10 @@ const deserializeAws_restXmlHeadObjectCommandError = async (output, context) => 
     let errorCode = "UnknownError";
     errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
-        case "NoSuchKey":
-        case "com.amazonaws.s3#NoSuchKey":
+        case "NotFound":
+        case "com.amazonaws.s3#NotFound":
             response = {
-                ...(await deserializeAws_restXmlNoSuchKeyResponse(parsedOutput, context)),
+                ...(await deserializeAws_restXmlNotFoundResponse(parsedOutput, context)),
                 name: errorCode,
                 $metadata: deserializeMetadata(output),
             };
@@ -46689,6 +46970,42 @@ const deserializeAws_restXmlUploadPartCopyCommandError = async (output, context)
     delete response.Message;
     return Promise.reject(Object.assign(new Error(message), response));
 };
+const deserializeAws_restXmlWriteGetObjectResponseCommand = async (output, context) => {
+    if (output.statusCode !== 200 && output.statusCode >= 300) {
+        return deserializeAws_restXmlWriteGetObjectResponseCommandError(output, context);
+    }
+    const contents = {
+        $metadata: deserializeMetadata(output),
+    };
+    await collectBody(output.body, context);
+    return Promise.resolve(contents);
+};
+exports.deserializeAws_restXmlWriteGetObjectResponseCommand = deserializeAws_restXmlWriteGetObjectResponseCommand;
+const deserializeAws_restXmlWriteGetObjectResponseCommandError = async (output, context) => {
+    const parsedOutput = {
+        ...output,
+        body: await parseBody(output.body, context),
+    };
+    let response;
+    let errorCode = "UnknownError";
+    errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
+    switch (errorCode) {
+        default:
+            const parsedBody = parsedOutput.body;
+            errorCode = parsedBody.code || parsedBody.Code || errorCode;
+            response = {
+                ...parsedBody,
+                name: `${errorCode}`,
+                message: parsedBody.message || parsedBody.Message || errorCode,
+                $fault: "client",
+                $metadata: deserializeMetadata(output),
+            };
+    }
+    const message = response.message || response.Message || errorCode;
+    response.message = message;
+    delete response.Message;
+    return Promise.reject(Object.assign(new Error(message), response));
+};
 const deserializeAws_restXmlSelectObjectContentEventStream_event = async (output, context) => {
     if (output["Records"] !== undefined) {
         return {
@@ -46796,6 +47113,15 @@ const deserializeAws_restXmlNoSuchKeyResponse = async (parsedOutput, context) =>
 const deserializeAws_restXmlNoSuchUploadResponse = async (parsedOutput, context) => {
     const contents = {
         name: "NoSuchUpload",
+        $fault: "client",
+        $metadata: deserializeMetadata(parsedOutput),
+    };
+    const data = parsedOutput.body;
+    return contents;
+};
+const deserializeAws_restXmlNotFoundResponse = async (parsedOutput, context) => {
+    const contents = {
+        name: "NotFound",
         $fault: "client",
         $metadata: deserializeMetadata(parsedOutput),
     };
@@ -47066,6 +47392,10 @@ const serializeAws_restXmlCORSConfiguration = (input, context) => {
 };
 const serializeAws_restXmlCORSRule = (input, context) => {
     const bodyNode = new xml_builder_1.XmlNode("CORSRule");
+    if (input.ID !== undefined && input.ID !== null) {
+        const node = new xml_builder_1.XmlNode("ID").addChildNode(new xml_builder_1.XmlText(input.ID)).withName("ID");
+        bodyNode.addChildNode(node);
+    }
     if (input.AllowedHeaders !== undefined && input.AllowedHeaders !== null) {
         const nodes = serializeAws_restXmlAllowedHeaders(input.AllowedHeaders, context);
         nodes.map((node) => {
@@ -49012,12 +49342,16 @@ const deserializeAws_restXmlCopyPartResult = (output, context) => {
 };
 const deserializeAws_restXmlCORSRule = (output, context) => {
     let contents = {
+        ID: undefined,
         AllowedHeaders: undefined,
         AllowedMethods: undefined,
         AllowedOrigins: undefined,
         ExposeHeaders: undefined,
         MaxAgeSeconds: undefined,
     };
+    if (output["ID"] !== undefined) {
+        contents.ID = output["ID"];
+    }
     if (output.AllowedHeader === "") {
         contents.AllowedHeaders = [];
     }
@@ -50718,7 +51052,11 @@ const checkState = async (client, input) => {
         let result = await client.send(new HeadBucketCommand_1.HeadBucketCommand(input));
         return { state: util_waiter_1.WaiterState.SUCCESS };
     }
-    catch (exception) { }
+    catch (exception) {
+        if (exception.name && exception.name == "NotFound") {
+            return { state: util_waiter_1.WaiterState.RETRY };
+        }
+    }
     return { state: util_waiter_1.WaiterState.RETRY };
 };
 /**
@@ -50732,6 +51070,40 @@ const waitForBucketExists = async (params, input) => {
 };
 exports.waitForBucketExists = waitForBucketExists;
 //# sourceMappingURL=waitForBucketExists.js.map
+
+/***/ }),
+
+/***/ 49203:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.waitForBucketNotExists = void 0;
+const HeadBucketCommand_1 = __nccwpck_require__(43096);
+const util_waiter_1 = __nccwpck_require__(6243);
+const checkState = async (client, input) => {
+    try {
+        let result = await client.send(new HeadBucketCommand_1.HeadBucketCommand(input));
+    }
+    catch (exception) {
+        if (exception.name && exception.name == "NotFound") {
+            return { state: util_waiter_1.WaiterState.SUCCESS };
+        }
+    }
+    return { state: util_waiter_1.WaiterState.RETRY };
+};
+/**
+ *
+ *  @param params : Waiter configuration options.
+ *  @param input : the input to HeadBucketCommand for polling.
+ */
+const waitForBucketNotExists = async (params, input) => {
+    const serviceDefaults = { minDelay: 5, maxDelay: 120 };
+    return util_waiter_1.createWaiter({ ...serviceDefaults, ...params }, input, checkState);
+};
+exports.waitForBucketNotExists = waitForBucketNotExists;
+//# sourceMappingURL=waitForBucketNotExists.js.map
 
 /***/ }),
 
@@ -50749,7 +51121,11 @@ const checkState = async (client, input) => {
         let result = await client.send(new HeadObjectCommand_1.HeadObjectCommand(input));
         return { state: util_waiter_1.WaiterState.SUCCESS };
     }
-    catch (exception) { }
+    catch (exception) {
+        if (exception.name && exception.name == "NotFound") {
+            return { state: util_waiter_1.WaiterState.RETRY };
+        }
+    }
     return { state: util_waiter_1.WaiterState.RETRY };
 };
 /**
@@ -50763,6 +51139,40 @@ const waitForObjectExists = async (params, input) => {
 };
 exports.waitForObjectExists = waitForObjectExists;
 //# sourceMappingURL=waitForObjectExists.js.map
+
+/***/ }),
+
+/***/ 1501:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.waitForObjectNotExists = void 0;
+const HeadObjectCommand_1 = __nccwpck_require__(44903);
+const util_waiter_1 = __nccwpck_require__(6243);
+const checkState = async (client, input) => {
+    try {
+        let result = await client.send(new HeadObjectCommand_1.HeadObjectCommand(input));
+    }
+    catch (exception) {
+        if (exception.name && exception.name == "NotFound") {
+            return { state: util_waiter_1.WaiterState.SUCCESS };
+        }
+    }
+    return { state: util_waiter_1.WaiterState.RETRY };
+};
+/**
+ *
+ *  @param params : Waiter configuration options.
+ *  @param input : the input to HeadObjectCommand for polling.
+ */
+const waitForObjectNotExists = async (params, input) => {
+    const serviceDefaults = { minDelay: 5, maxDelay: 120 };
+    return util_waiter_1.createWaiter({ ...serviceDefaults, ...params }, input, checkState);
+};
+exports.waitForObjectNotExists = waitForObjectNotExists;
+//# sourceMappingURL=waitForObjectNotExists.js.map
 
 /***/ }),
 
@@ -52364,38 +52774,13 @@ const middleware_signing_1 = __nccwpck_require__(82487);
 const smithy_client_1 = __nccwpck_require__(32223);
 /**
  * <p>Returns a set of temporary security credentials that you can use to access AWS
- *          resources that you might not normally have access to. These temporary credentials consist
- *          of an access key ID, a secret access key, and a security token. Typically, you use
- *             <code>AssumeRole</code> within your account or for cross-account access. For a
- *          comparison of <code>AssumeRole</code> with other API operations that produce temporary
- *          credentials, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_request.html">Requesting Temporary Security
- *             Credentials</a> and <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_request.html#stsapi_comparison">Comparing the
- *             AWS STS API operations</a> in the <i>IAM User Guide</i>.</p>
- *          <important>
- *             <p>You cannot use AWS account root user credentials to call <code>AssumeRole</code>.
- *             You must use credentials for an IAM user or an IAM role to call
- *                <code>AssumeRole</code>.</p>
- *          </important>
- *          <p>For cross-account access, imagine that you own multiple accounts and need to access
- *          resources in each account. You could create long-term credentials in each account to access
- *          those resources. However, managing all those credentials and remembering which one can
- *          access which account can be time consuming. Instead, you can create one set of long-term
- *          credentials in one account. Then use temporary security credentials to access all the other
- *          accounts by assuming roles in those accounts. For more information about roles, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html">IAM Roles</a> in the
- *             <i>IAM User Guide</i>. </p>
- *          <p>
- *             <b>Session Duration</b>
- *          </p>
- *          <p>By default, the temporary security credentials created by <code>AssumeRole</code> last
- *          for one hour. However, you can use the optional <code>DurationSeconds</code> parameter to
- *          specify the duration of your session. You can provide a value from 900 seconds (15 minutes)
- *          up to the maximum session duration setting for the role. This setting can have a value from
- *          1 hour to 12 hours. To learn how to view the maximum value for your role, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use.html#id_roles_use_view-role-max-session">View the
- *             Maximum Session Duration Setting for a Role</a> in the
- *             <i>IAM User Guide</i>. The maximum session duration limit applies when
- *          you use the <code>AssumeRole*</code> API operations or the <code>assume-role*</code> CLI
- *          commands. However the limit does not apply when you use those operations to create a
- *          console URL. For more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use.html">Using IAM Roles</a> in the
+ *             resources that you might not normally have access to. These temporary credentials
+ *             consist of an access key ID, a secret access key, and a security token. Typically, you
+ *             use <code>AssumeRole</code> within your account or for cross-account access. For a
+ *             comparison of <code>AssumeRole</code> with other API operations that produce temporary
+ *             credentials, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_request.html">Requesting Temporary Security
+ *                 Credentials</a> and <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_request.html#stsapi_comparison">Comparing
+ *                 the AWS STS API operations</a> in the
  *             <i>IAM User Guide</i>.</p>
  *          <p>
  *             <b>Permissions</b>
@@ -52407,7 +52792,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          <p>(Optional) You can pass inline or managed <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html#policies_session">session policies</a> to
  *          this operation. You can pass a single JSON policy document to use as an inline session
  *          policy. You can also specify up to 10 managed policies to use as managed session policies.
- *          The plain text that you use for both inline and managed session policies can't exceed 2,048
+ *          The plaintext that you use for both inline and managed session policies can't exceed 2,048
  *          characters. Passing policies to this operation returns new
  *          temporary credentials. The resulting session's permissions are the intersection of the
  *          role's identity-based policy and the session policies. You can use the role's temporary
@@ -52553,6 +52938,17 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          commands. However the limit does not apply when you use those operations to create a
  *          console URL. For more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use.html">Using IAM Roles</a> in the
  *             <i>IAM User Guide</i>.</p>
+ *          <note>
+ *            <p>
+ *                <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html#iam-term-role-chaining">Role chaining</a> limits your AWS CLI or AWS API
+ *                role session to a maximum of one hour. When you use the <code>AssumeRole</code> API
+ *                operation to assume a role, you can specify the duration of your role session with
+ *                the <code>DurationSeconds</code> parameter. You can specify a parameter value of up
+ *                to 43200 seconds (12 hours), depending on the maximum session duration setting for
+ *                your role. However, if you assume a role using role chaining and provide a
+ *                <code>DurationSeconds</code> parameter value greater than one hour, the
+ *                operation fails.</p>
+ *          </note>
  *          <p>
  *             <b>Permissions</b>
  *          </p>
@@ -52563,7 +52959,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          <p>(Optional) You can pass inline or managed <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html#policies_session">session policies</a> to
  *          this operation. You can pass a single JSON policy document to use as an inline session
  *          policy. You can also specify up to 10 managed policies to use as managed session policies.
- *          The plain text that you use for both inline and managed session policies can't exceed 2,048
+ *          The plaintext that you use for both inline and managed session policies can't exceed 2,048
  *          characters. Passing policies to this operation returns new
  *          temporary credentials. The resulting session's permissions are the intersection of the
  *          role's identity-based policy and the session policies. You can use the role's temporary
@@ -52590,7 +52986,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          session tags. Each session tag consists of a key name and an associated value. For more
  *          information about session tags, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_session-tags.html">Passing Session Tags in STS</a> in the
  *             <i>IAM User Guide</i>.</p>
- *          <p>You can pass up to 50 session tags. The plain text session tag keys can’t exceed 128
+ *          <p>You can pass up to 50 session tags. The plaintext session tag keys can’t exceed 128
  *          characters and the values can’t exceed 256 characters. For these and additional limits, see
  *             <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-limits.html#reference_iam-limits-entity-length">IAM
  *             and STS Character Limits</a> in the <i>IAM User Guide</i>.</p>
@@ -52598,14 +52994,14 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          <note>
  *             <p>An AWS conversion compresses the passed session policies and session tags into a
  *             packed binary format that has a separate limit. Your request can fail for this limit
- *             even if your plain text meets the other requirements. The <code>PackedPolicySize</code>
+ *             even if your plaintext meets the other requirements. The <code>PackedPolicySize</code>
  *             response element indicates by percentage how close the policies and tags for your
  *             request are to the upper size limit.
  *             </p>
  *          </note>
- *
- *          <p>You can pass a session tag with the same key as a tag that is attached to the role. When
- *          you do, session tags override the role's tags with the same key.</p>
+ *          <p>You can pass a session tag with the same key as a tag that is
+ *          attached to the role. When you do, session tags override the role's tags with the same
+ *          key.</p>
  *          <p>An administrator must grant you the permissions necessary to pass session tags. The
  *          administrator can also create granular permissions to allow you to pass only specific
  *          session tags. For more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_attribute-based-access-control.html">Tutorial: Using Tags
@@ -52751,7 +53147,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          <p>(Optional) You can pass inline or managed <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html#policies_session">session policies</a> to
  *          this operation. You can pass a single JSON policy document to use as an inline session
  *          policy. You can also specify up to 10 managed policies to use as managed session policies.
- *          The plain text that you use for both inline and managed session policies can't exceed 2,048
+ *          The plaintext that you use for both inline and managed session policies can't exceed 2,048
  *          characters. Passing policies to this operation returns new
  *          temporary credentials. The resulting session's permissions are the intersection of the
  *          role's identity-based policy and the session policies. You can use the role's temporary
@@ -52767,7 +53163,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          session tags. Each session tag consists of a key name and an associated value. For more
  *          information about session tags, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_session-tags.html">Passing Session Tags in STS</a> in the
  *             <i>IAM User Guide</i>.</p>
- *          <p>You can pass up to 50 session tags. The plain text session tag keys can’t exceed 128
+ *          <p>You can pass up to 50 session tags. The plaintext session tag keys can’t exceed 128
  *          characters and the values can’t exceed 256 characters. For these and additional limits, see
  *             <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-limits.html#reference_iam-limits-entity-length">IAM
  *             and STS Character Limits</a> in the <i>IAM User Guide</i>.</p>
@@ -52775,14 +53171,14 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          <note>
  *             <p>An AWS conversion compresses the passed session policies and session tags into a
  *             packed binary format that has a separate limit. Your request can fail for this limit
- *             even if your plain text meets the other requirements. The <code>PackedPolicySize</code>
+ *             even if your plaintext meets the other requirements. The <code>PackedPolicySize</code>
  *             response element indicates by percentage how close the policies and tags for your
  *             request are to the upper size limit.
  *             </p>
  *          </note>
- *
- *          <p>You can pass a session tag with the same key as a tag that is attached to the role. When
- *          you do, the session tag overrides the role tag with the same key.</p>
+ *          <p>You can pass a session tag with the same key as a tag that is
+ *          attached to the role. When you do, the session tag overrides the role tag with the same
+ *          key.</p>
  *          <p>An administrator must grant you the permissions necessary to pass session tags. The
  *          administrator can also create granular permissions to allow you to pass only specific
  *          session tags. For more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_attribute-based-access-control.html">Tutorial: Using Tags
@@ -52802,7 +53198,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          <important>
  *             <p>Calling <code>AssumeRoleWithWebIdentity</code> can result in an entry in your
  *             AWS CloudTrail logs. The entry includes the <a href="http://openid.net/specs/openid-connect-core-1_0.html#Claims">Subject</a> of
- *             the provided Web Identity Token. We recommend that you avoid using any personally
+ *             the provided web identity token. We recommend that you avoid using any personally
  *             identifiable information (PII) in this field. For example, you could instead use a GUID
  *             or a pairwise identifier, as <a href="http://openid.net/specs/openid-connect-core-1_0.html#SubjectIDTypes">suggested
  *                in the OIDC specification</a>.</p>
@@ -52816,8 +53212,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *             </li>
  *             <li>
  *                <p>
- *                   <a href="https://aws.amazon.com/blogs/aws/the-aws-web-identity-federation-playground/">
- *                   Web Identity Federation Playground</a>. Walk through the process of
+ *                   <a href="https://aws.amazon.com/blogs/aws/the-aws-web-identity-federation-playground/"> Web Identity Federation Playground</a>. Walk through the process of
  *                authenticating through Login with Amazon, Facebook, or Google, getting temporary
  *                security credentials, and then using those credentials to make a request to AWS.
  *             </p>
@@ -52983,23 +53378,23 @@ const middleware_signing_1 = __nccwpck_require__(82487);
 const smithy_client_1 = __nccwpck_require__(32223);
 /**
  * <p>Returns the account identifier for the specified access key ID.</p>
- *          <p>Access keys consist of two parts: an access key ID (for example,
- *             <code>AKIAIOSFODNN7EXAMPLE</code>) and a secret access key (for example,
- *             <code>wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY</code>). For more information about
- *          access keys, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html">Managing Access Keys for IAM
- *             Users</a> in the <i>IAM User Guide</i>.</p>
- *          <p>When you pass an access key ID to this operation, it returns the ID of the AWS account
- *          to which the keys belong. Access key IDs beginning with <code>AKIA</code> are long-term
- *          credentials for an IAM user or the AWS account root user. Access key IDs beginning with
- *             <code>ASIA</code> are temporary credentials that are created using STS operations. If
- *          the account in the response belongs to you, you can sign in as the root user and review
- *          your root user access keys. Then, you can pull a <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_getting-report.html">credentials report</a> to
- *          learn which IAM user owns the keys. To learn who requested the temporary credentials for
- *          an <code>ASIA</code> access key, view the STS events in your <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/cloudtrail-integration.html">CloudTrail logs</a> in the
- *             <i>IAM User Guide</i>.</p>
- *          <p>This operation does not indicate the state of the access key. The key might be active,
- *          inactive, or deleted. Active keys might not have permissions to perform an operation.
- *          Providing a deleted access key might return an error that the key doesn't exist.</p>
+ *         <p>Access keys consist of two parts: an access key ID (for example,
+ *                 <code>AKIAIOSFODNN7EXAMPLE</code>) and a secret access key (for example,
+ *                 <code>wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY</code>). For more information about
+ *             access keys, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html">Managing Access Keys for IAM
+ *                 Users</a> in the <i>IAM User Guide</i>.</p>
+ *         <p>When you pass an access key ID to this operation, it returns the ID of the AWS
+ *             account to which the keys belong. Access key IDs beginning with <code>AKIA</code> are
+ *             long-term credentials for an IAM user or the AWS account root user. Access key IDs
+ *             beginning with <code>ASIA</code> are temporary credentials that are created using STS
+ *             operations. If the account in the response belongs to you, you can sign in as the root
+ *             user and review your root user access keys. Then, you can pull a <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_getting-report.html">credentials report</a> to learn which IAM user owns the keys. To learn who
+ *             requested the temporary credentials for an <code>ASIA</code> access key, view the STS
+ *             events in your <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/cloudtrail-integration.html">CloudTrail logs</a> in the
+ *                 <i>IAM User Guide</i>.</p>
+ *         <p>This operation does not indicate the state of the access key. The key might be active,
+ *             inactive, or deleted. Active keys might not have permissions to perform an operation.
+ *             Providing a deleted access key might return an error that the key doesn't exist.</p>
  */
 class GetAccessKeyInfoCommand extends smithy_client_1.Command {
     // Start section: command_properties
@@ -53056,15 +53451,15 @@ const middleware_signing_1 = __nccwpck_require__(82487);
 const smithy_client_1 = __nccwpck_require__(32223);
 /**
  * <p>Returns details about the IAM user or role whose credentials are used to call the
- *          operation.</p>
- *          <note>
+ *             operation.</p>
+ *         <note>
  *             <p>No permissions are required to perform this operation. If an administrator adds a
- *             policy to your IAM user or role that explicitly denies access to the
- *                <code>sts:GetCallerIdentity</code> action, you can still perform this operation.
- *             Permissions are not required because the same information is returned when an IAM user
- *             or role is denied access. To view an example response, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/troubleshoot_general.html#troubleshoot_general_access-denied-delete-mfa">I Am Not Authorized to Perform: iam:DeleteVirtualMFADevice</a> in the
- *                <i>IAM User Guide</i>.</p>
- *          </note>
+ *                 policy to your IAM user or role that explicitly denies access to the
+ *                     <code>sts:GetCallerIdentity</code> action, you can still perform this operation.
+ *                 Permissions are not required because the same information is returned when an IAM
+ *                 user or role is denied access. To view an example response, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/troubleshoot_general.html#troubleshoot_general_access-denied-delete-mfa">I Am Not Authorized to Perform: iam:DeleteVirtualMFADevice</a> in the
+ *                     <i>IAM User Guide</i>.</p>
+ *         </note>
  */
 class GetCallerIdentityCommand extends smithy_client_1.Command {
     // Start section: command_properties
@@ -53157,7 +53552,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          AWS service except the following:</p>
  *          <ul>
  *             <li>
- *                <p>You cannot call any IAM operations using the AWS CLI or the AWS API.  </p>
+ *                <p>You cannot call any IAM operations using the AWS CLI or the AWS API. </p>
  *             </li>
  *             <li>
  *                <p>You cannot call any STS operations except <code>GetCallerIdentity</code>.</p>
@@ -53166,7 +53561,7 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          <p>You must pass an inline or managed <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html#policies_session">session policy</a> to
  *          this operation. You can pass a single JSON policy document to use as an inline session
  *          policy. You can also specify up to 10 managed policies to use as managed session policies.
- *          The plain text that you use for both inline and managed session policies can't exceed 2,048
+ *          The plaintext that you use for both inline and managed session policies can't exceed 2,048
  *          characters.</p>
  *          <p>Though the session policy parameters are optional, if you do not pass a policy, then the
  *          resulting federated user session has no permissions. When you pass session policies, the
@@ -53187,18 +53582,78 @@ const smithy_client_1 = __nccwpck_require__(32223);
  *          <p>(Optional) You can pass tag key-value pairs to your session. These are called session
  *          tags. For more information about session tags, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_session-tags.html">Passing Session Tags in STS</a> in the
  *             <i>IAM User Guide</i>.</p>
- *          <p>An administrator must grant you the permissions necessary to pass session tags. The
- *          administrator can also create granular permissions to allow you to pass only specific
- *          session tags. For more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_attribute-based-access-control.html">Tutorial: Using Tags
- *             for Attribute-Based Access Control</a> in the
- *          <i>IAM User Guide</i>.</p>
- *          <p>Tag key–value pairs are not case sensitive, but case is preserved. This means that you
- *          cannot have separate <code>Department</code> and <code>department</code> tag keys. Assume
- *          that the user that you are federating has the
- *             <code>Department</code>=<code>Marketing</code> tag and you pass the
- *             <code>department</code>=<code>engineering</code> session tag. <code>Department</code>
- *          and <code>department</code> are not saved as separate tags, and the session tag passed in
- *          the request takes precedence over the user tag.</p>
+ *         <note>
+ *             <p>You can create a mobile-based or browser-based app that can authenticate users
+ *                 using a web identity provider like Login with Amazon, Facebook, Google, or an OpenID
+ *                 Connect-compatible identity provider. In this case, we recommend that you use <a href="http://aws.amazon.com/cognito/">Amazon Cognito</a> or
+ *                     <code>AssumeRoleWithWebIdentity</code>. For more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_request.html#api_assumerolewithwebidentity">Federation Through a Web-based Identity Provider</a> in the
+ *                     <i>IAM User Guide</i>.</p>
+ *         </note>
+ *         <p>You can also call <code>GetFederationToken</code> using the security credentials of an
+ *             AWS account root user, but we do not recommend it. Instead, we recommend that you
+ *             create an IAM user for the purpose of the proxy application. Then attach a policy to
+ *             the IAM user that limits federated users to only the actions and resources that they
+ *             need to access. For more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html">IAM Best Practices</a> in the
+ *                 <i>IAM User Guide</i>. </p>
+ *         <p>
+ *             <b>Session duration</b>
+ *          </p>
+ *         <p>The temporary credentials are valid for the specified duration, from 900 seconds (15
+ *             minutes) up to a maximum of 129,600 seconds (36 hours). The default session duration is
+ *             43,200 seconds (12 hours). Temporary credentials that are obtained by using AWS
+ *             account root user credentials have a maximum duration of 3,600 seconds (1 hour).</p>
+ *         <p>
+ *             <b>Permissions</b>
+ *         </p>
+ *         <p>You can use the temporary credentials created by <code>GetFederationToken</code> in
+ *             any AWS service except the following:</p>
+ *         <ul>
+ *             <li>
+ *                 <p>You cannot call any IAM operations using the AWS CLI or the AWS API.
+ *                 </p>
+ *             </li>
+ *             <li>
+ *                 <p>You cannot call any STS operations except
+ *                     <code>GetCallerIdentity</code>.</p>
+ *             </li>
+ *          </ul>
+ *         <p>You must pass an inline or managed <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html#policies_session">session policy</a> to
+ *             this operation. You can pass a single JSON policy document to use as an inline session
+ *             policy. You can also specify up to 10 managed policies to use as managed session
+ *             policies. The plain text that you use for both inline and managed session policies can't
+ *             exceed 2,048 characters.</p>
+ *         <p>Though the session policy parameters are optional, if you do not pass a policy, then
+ *             the resulting federated user session has no permissions. When you pass session policies,
+ *             the session permissions are the intersection of the IAM user policies and the session
+ *             policies that you pass. This gives you a way to further restrict the permissions for a
+ *             federated user. You cannot use session policies to grant more permissions than those
+ *             that are defined in the permissions policy of the IAM user. For more information, see
+ *                 <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html#policies_session">Session Policies</a>
+ *             in the <i>IAM User Guide</i>. For information about using
+ *                 <code>GetFederationToken</code> to create temporary security credentials, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_request.html#api_getfederationtoken">GetFederationToken—Federation Through a Custom Identity Broker</a>. </p>
+ *         <p>You can use the credentials to access a resource that has a resource-based policy. If
+ *             that policy specifically references the federated user session in the
+ *                 <code>Principal</code> element of the policy, the session has the permissions
+ *             allowed by the policy. These permissions are granted in addition to the permissions
+ *             granted by the session policies.</p>
+ *         <p>
+ *             <b>Tags</b>
+ *          </p>
+ *         <p>(Optional) You can pass tag key-value pairs to your session. These are called session
+ *             tags. For more information about session tags, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_session-tags.html">Passing Session Tags in STS</a> in
+ *             the <i>IAM User Guide</i>.</p>
+ *         <p>An administrator must grant you the permissions necessary to pass session tags. The
+ *             administrator can also create granular permissions to allow you to pass only specific
+ *             session tags. For more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_attribute-based-access-control.html">Tutorial: Using
+ *                 Tags for Attribute-Based Access Control</a> in the
+ *                 <i>IAM User Guide</i>.</p>
+ *         <p>Tag key–value pairs are not case sensitive, but case is preserved. This means that you
+ *             cannot have separate <code>Department</code> and <code>department</code> tag keys.
+ *             Assume that the user that you are federating has the
+ *                 <code>Department</code>=<code>Marketing</code> tag and you pass the
+ *                 <code>department</code>=<code>engineering</code> session tag.
+ *                 <code>Department</code> and <code>department</code> are not saved as separate tags,
+ *             and the session tag passed in the request takes precedence over the user tag.</p>
  */
 class GetFederationTokenCommand extends smithy_client_1.Command {
     // Start section: command_properties
@@ -54734,6 +55189,9 @@ const serializeAws_queryAssumeRoleRequest = (input, context) => {
     if (input.TokenCode !== undefined && input.TokenCode !== null) {
         entries["TokenCode"] = input.TokenCode;
     }
+    if (input.SourceIdentity !== undefined && input.SourceIdentity !== null) {
+        entries["SourceIdentity"] = input.SourceIdentity;
+    }
     return entries;
 };
 const serializeAws_queryAssumeRoleWithSAMLRequest = (input, context) => {
@@ -54926,6 +55384,7 @@ const deserializeAws_queryAssumeRoleResponse = (output, context) => {
         Credentials: undefined,
         AssumedRoleUser: undefined,
         PackedPolicySize: undefined,
+        SourceIdentity: undefined,
     };
     if (output["Credentials"] !== undefined) {
         contents.Credentials = deserializeAws_queryCredentials(output["Credentials"], context);
@@ -54935,6 +55394,9 @@ const deserializeAws_queryAssumeRoleResponse = (output, context) => {
     }
     if (output["PackedPolicySize"] !== undefined) {
         contents.PackedPolicySize = parseInt(output["PackedPolicySize"]);
+    }
+    if (output["SourceIdentity"] !== undefined) {
+        contents.SourceIdentity = output["SourceIdentity"];
     }
     return contents;
 };
@@ -54948,6 +55410,7 @@ const deserializeAws_queryAssumeRoleWithSAMLResponse = (output, context) => {
         Issuer: undefined,
         Audience: undefined,
         NameQualifier: undefined,
+        SourceIdentity: undefined,
     };
     if (output["Credentials"] !== undefined) {
         contents.Credentials = deserializeAws_queryCredentials(output["Credentials"], context);
@@ -54973,6 +55436,9 @@ const deserializeAws_queryAssumeRoleWithSAMLResponse = (output, context) => {
     if (output["NameQualifier"] !== undefined) {
         contents.NameQualifier = output["NameQualifier"];
     }
+    if (output["SourceIdentity"] !== undefined) {
+        contents.SourceIdentity = output["SourceIdentity"];
+    }
     return contents;
 };
 const deserializeAws_queryAssumeRoleWithWebIdentityResponse = (output, context) => {
@@ -54983,6 +55449,7 @@ const deserializeAws_queryAssumeRoleWithWebIdentityResponse = (output, context) 
         PackedPolicySize: undefined,
         Provider: undefined,
         Audience: undefined,
+        SourceIdentity: undefined,
     };
     if (output["Credentials"] !== undefined) {
         contents.Credentials = deserializeAws_queryCredentials(output["Credentials"], context);
@@ -55001,6 +55468,9 @@ const deserializeAws_queryAssumeRoleWithWebIdentityResponse = (output, context) 
     }
     if (output["Audience"] !== undefined) {
         contents.Audience = output["Audience"];
+    }
+    if (output["SourceIdentity"] !== undefined) {
+        contents.SourceIdentity = output["SourceIdentity"];
     }
     return contents;
 };
@@ -55363,7 +55833,7 @@ const getEndPointFromRegion = async (input) => {
     }
     return input.urlParser(`${tls ? "https:" : "http:"}//${hostname}`);
 };
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRW5kcG9pbnRzQ29uZmlnLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vc3JjL0VuZHBvaW50c0NvbmZpZy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUF5Qk8sTUFBTSxzQkFBc0IsR0FBRyxDQUNwQyxLQUFvRCxFQUN2QixFQUFFOztJQUFDLE9BQUEsQ0FBQztRQUNqQyxHQUFHLEtBQUs7UUFDUixHQUFHLFFBQUUsS0FBSyxDQUFDLEdBQUcsbUNBQUksSUFBSTtRQUN0QixRQUFRLEVBQUUsS0FBSyxDQUFDLFFBQVEsQ0FBQyxDQUFDLENBQUMsaUJBQWlCLENBQUMsS0FBSyxDQUFDLENBQUMsQ0FBQyxDQUFDLEdBQUcsRUFBRSxDQUFDLHFCQUFxQixDQUFDLEtBQUssQ0FBQztRQUN4RixnQkFBZ0IsRUFBRSxLQUFLLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxJQUFJLENBQUMsQ0FBQyxDQUFDLEtBQUs7S0FDaEQsQ0FBQyxDQUFBO0NBQUEsQ0FBQztBQVBVLFFBQUEsc0JBQXNCLDBCQU9oQztBQUVILE1BQU0saUJBQWlCLEdBQUcsQ0FBQyxLQUFnRCxFQUFzQixFQUFFO0lBQ2pHLE1BQU0sRUFBRSxRQUFRLEVBQUUsU0FBUyxFQUFFLEdBQUcsS0FBSyxDQUFDO0lBQ3RDLElBQUksT0FBTyxRQUFRLEtBQUssUUFBUSxFQUFFO1FBQ2hDLE1BQU0sV0FBVyxHQUFHLE9BQU8sQ0FBQyxPQUFPLENBQUMsU0FBUyxDQUFDLFFBQVEsQ0FBQyxDQUFDLENBQUM7UUFDekQsT0FBTyxHQUFHLEVBQUUsQ0FBQyxXQUFXLENBQUM7S0FDMUI7U0FBTSxJQUFJLE9BQU8sUUFBUSxLQUFLLFFBQVEsRUFBRTtRQUN2QyxNQUFNLFdBQVcsR0FBRyxPQUFPLENBQUMsT0FBTyxDQUFDLFFBQVEsQ0FBQyxDQUFDO1FBQzlDLE9BQU8sR0FBRyxFQUFFLENBQUMsV0FBVyxDQUFDO0tBQzFCO0lBQ0QsT0FBTyxRQUFTLENBQUM7QUFDbkIsQ0FBQyxDQUFDO0FBRUYsTUFBTSxxQkFBcUIsR0FBRyxLQUFLLEVBQUUsS0FBZ0QsRUFBRSxFQUFFOztJQUN2RixNQUFNLEVBQUUsR0FBRyxHQUFHLElBQUksRUFBRSxHQUFHLEtBQUssQ0FBQztJQUM3QixNQUFNLE1BQU0sR0FBRyxNQUFNLEtBQUssQ0FBQyxNQUFNLEVBQUUsQ0FBQztJQUVwQyxNQUFNLFlBQVksR0FBRyxJQUFJLE1BQU0sQ0FBQywwREFBMEQsQ0FBQyxDQUFDO0lBQzVGLElBQUksQ0FBQyxZQUFZLENBQUMsSUFBSSxDQUFDLE1BQU0sQ0FBQyxFQUFFO1FBQzlCLE1BQU0sSUFBSSxLQUFLLENBQUMsaUNBQWlDLENBQUMsQ0FBQztLQUNwRDtJQUVELE1BQU0sRUFBRSxRQUFRLEVBQUUsU0FBRyxDQUFDLE1BQU0sS0FBSyxDQUFDLGtCQUFrQixDQUFDLE1BQU0sQ0FBQyxDQUFDLG1DQUFJLEVBQUUsQ0FBQztJQUNwRSxJQUFJLENBQUMsUUFBUSxFQUFFO1FBQ2IsTUFBTSxJQUFJLEtBQUssQ0FBQyw0Q0FBNEMsQ0FBQyxDQUFDO0tBQy9EO0lBRUQsT0FBTyxLQUFLLENBQUMsU0FBUyxDQUFDLEdBQUcsR0FBRyxDQUFDLENBQUMsQ0FBQyxRQUFRLENBQUMsQ0FBQyxDQUFDLE9BQU8sS0FBSyxRQUFRLEVBQUUsQ0FBQyxDQUFDO0FBQ3JFLENBQUMsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IEVuZHBvaW50LCBQcm92aWRlciwgUmVnaW9uSW5mb1Byb3ZpZGVyLCBVcmxQYXJzZXIgfSBmcm9tIFwiQGF3cy1zZGsvdHlwZXNcIjtcblxuZXhwb3J0IGludGVyZmFjZSBFbmRwb2ludHNJbnB1dENvbmZpZyB7XG4gIC8qKlxuICAgKiBUaGUgZnVsbHkgcXVhbGlmaWVkIGVuZHBvaW50IG9mIHRoZSB3ZWJzZXJ2aWNlLiBUaGlzIGlzIG9ubHkgcmVxdWlyZWQgd2hlbiB1c2luZyBhIGN1c3RvbSBlbmRwb2ludCAoZm9yIGV4YW1wbGUsIHdoZW4gdXNpbmcgYSBsb2NhbCB2ZXJzaW9uIG9mIFMzKS5cbiAgICovXG4gIGVuZHBvaW50Pzogc3RyaW5nIHwgRW5kcG9pbnQgfCBQcm92aWRlcjxFbmRwb2ludD47XG5cbiAgLyoqXG4gICAqIFdoZXRoZXIgVExTIGlzIGVuYWJsZWQgZm9yIHJlcXVlc3RzLlxuICAgKi9cbiAgdGxzPzogYm9vbGVhbjtcbn1cblxuaW50ZXJmYWNlIFByZXZpb3VzbHlSZXNvbHZlZCB7XG4gIHJlZ2lvbkluZm9Qcm92aWRlcjogUmVnaW9uSW5mb1Byb3ZpZGVyO1xuICB1cmxQYXJzZXI6IFVybFBhcnNlcjtcbiAgcmVnaW9uOiBQcm92aWRlcjxzdHJpbmc+O1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIEVuZHBvaW50c1Jlc29sdmVkQ29uZmlnIGV4dGVuZHMgUmVxdWlyZWQ8RW5kcG9pbnRzSW5wdXRDb25maWc+IHtcbiAgZW5kcG9pbnQ6IFByb3ZpZGVyPEVuZHBvaW50PjtcbiAgaXNDdXN0b21FbmRwb2ludDogYm9vbGVhbjtcbn1cblxuZXhwb3J0IGNvbnN0IHJlc29sdmVFbmRwb2ludHNDb25maWcgPSA8VD4oXG4gIGlucHV0OiBUICYgRW5kcG9pbnRzSW5wdXRDb25maWcgJiBQcmV2aW91c2x5UmVzb2x2ZWRcbik6IFQgJiBFbmRwb2ludHNSZXNvbHZlZENvbmZpZyA9PiAoe1xuICAuLi5pbnB1dCxcbiAgdGxzOiBpbnB1dC50bHMgPz8gdHJ1ZSxcbiAgZW5kcG9pbnQ6IGlucHV0LmVuZHBvaW50ID8gbm9ybWFsaXplRW5kcG9pbnQoaW5wdXQpIDogKCkgPT4gZ2V0RW5kUG9pbnRGcm9tUmVnaW9uKGlucHV0KSxcbiAgaXNDdXN0b21FbmRwb2ludDogaW5wdXQuZW5kcG9pbnQgPyB0cnVlIDogZmFsc2UsXG59KTtcblxuY29uc3Qgbm9ybWFsaXplRW5kcG9pbnQgPSAoaW5wdXQ6IEVuZHBvaW50c0lucHV0Q29uZmlnICYgUHJldmlvdXNseVJlc29sdmVkKTogUHJvdmlkZXI8RW5kcG9pbnQ+ID0+IHtcbiAgY29uc3QgeyBlbmRwb2ludCwgdXJsUGFyc2VyIH0gPSBpbnB1dDtcbiAgaWYgKHR5cGVvZiBlbmRwb2ludCA9PT0gXCJzdHJpbmdcIikge1xuICAgIGNvbnN0IHByb21pc2lmaWVkID0gUHJvbWlzZS5yZXNvbHZlKHVybFBhcnNlcihlbmRwb2ludCkpO1xuICAgIHJldHVybiAoKSA9PiBwcm9taXNpZmllZDtcbiAgfSBlbHNlIGlmICh0eXBlb2YgZW5kcG9pbnQgPT09IFwib2JqZWN0XCIpIHtcbiAgICBjb25zdCBwcm9taXNpZmllZCA9IFByb21pc2UucmVzb2x2ZShlbmRwb2ludCk7XG4gICAgcmV0dXJuICgpID0+IHByb21pc2lmaWVkO1xuICB9XG4gIHJldHVybiBlbmRwb2ludCE7XG59O1xuXG5jb25zdCBnZXRFbmRQb2ludEZyb21SZWdpb24gPSBhc3luYyAoaW5wdXQ6IEVuZHBvaW50c0lucHV0Q29uZmlnICYgUHJldmlvdXNseVJlc29sdmVkKSA9PiB7XG4gIGNvbnN0IHsgdGxzID0gdHJ1ZSB9ID0gaW5wdXQ7XG4gIGNvbnN0IHJlZ2lvbiA9IGF3YWl0IGlucHV0LnJlZ2lvbigpO1xuXG4gIGNvbnN0IGRuc0hvc3RSZWdleCA9IG5ldyBSZWdFeHAoL14oW2EtekEtWjAtOV18W2EtekEtWjAtOV1bYS16QS1aMC05LV17MCw2MX1bYS16QS1aMC05XSkkLyk7XG4gIGlmICghZG5zSG9zdFJlZ2V4LnRlc3QocmVnaW9uKSkge1xuICAgIHRocm93IG5ldyBFcnJvcihcIkludmFsaWQgcmVnaW9uIGluIGNsaWVudCBjb25maWdcIik7XG4gIH1cblxuICBjb25zdCB7IGhvc3RuYW1lIH0gPSAoYXdhaXQgaW5wdXQucmVnaW9uSW5mb1Byb3ZpZGVyKHJlZ2lvbikpID8/IHt9O1xuICBpZiAoIWhvc3RuYW1lKSB7XG4gICAgdGhyb3cgbmV3IEVycm9yKFwiQ2Fubm90IHJlc29sdmUgaG9zdG5hbWUgZnJvbSBjbGllbnQgY29uZmlnXCIpO1xuICB9XG5cbiAgcmV0dXJuIGlucHV0LnVybFBhcnNlcihgJHt0bHMgPyBcImh0dHBzOlwiIDogXCJodHRwOlwifS8vJHtob3N0bmFtZX1gKTtcbn07XG4iXX0=
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRW5kcG9pbnRzQ29uZmlnLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vc3JjL0VuZHBvaW50c0NvbmZpZy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUF5Qk8sTUFBTSxzQkFBc0IsR0FBRyxDQUNwQyxLQUFvRCxFQUN2QixFQUFFOztJQUFDLE9BQUEsQ0FBQztRQUNqQyxHQUFHLEtBQUs7UUFDUixHQUFHLEVBQUUsTUFBQSxLQUFLLENBQUMsR0FBRyxtQ0FBSSxJQUFJO1FBQ3RCLFFBQVEsRUFBRSxLQUFLLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxpQkFBaUIsQ0FBQyxLQUFLLENBQUMsQ0FBQyxDQUFDLENBQUMsR0FBRyxFQUFFLENBQUMscUJBQXFCLENBQUMsS0FBSyxDQUFDO1FBQ3hGLGdCQUFnQixFQUFFLEtBQUssQ0FBQyxRQUFRLENBQUMsQ0FBQyxDQUFDLElBQUksQ0FBQyxDQUFDLENBQUMsS0FBSztLQUNoRCxDQUFDLENBQUE7Q0FBQSxDQUFDO0FBUFUsUUFBQSxzQkFBc0IsMEJBT2hDO0FBRUgsTUFBTSxpQkFBaUIsR0FBRyxDQUFDLEtBQWdELEVBQXNCLEVBQUU7SUFDakcsTUFBTSxFQUFFLFFBQVEsRUFBRSxTQUFTLEVBQUUsR0FBRyxLQUFLLENBQUM7SUFDdEMsSUFBSSxPQUFPLFFBQVEsS0FBSyxRQUFRLEVBQUU7UUFDaEMsTUFBTSxXQUFXLEdBQUcsT0FBTyxDQUFDLE9BQU8sQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQztRQUN6RCxPQUFPLEdBQUcsRUFBRSxDQUFDLFdBQVcsQ0FBQztLQUMxQjtTQUFNLElBQUksT0FBTyxRQUFRLEtBQUssUUFBUSxFQUFFO1FBQ3ZDLE1BQU0sV0FBVyxHQUFHLE9BQU8sQ0FBQyxPQUFPLENBQUMsUUFBUSxDQUFDLENBQUM7UUFDOUMsT0FBTyxHQUFHLEVBQUUsQ0FBQyxXQUFXLENBQUM7S0FDMUI7SUFDRCxPQUFPLFFBQVMsQ0FBQztBQUNuQixDQUFDLENBQUM7QUFFRixNQUFNLHFCQUFxQixHQUFHLEtBQUssRUFBRSxLQUFnRCxFQUFFLEVBQUU7O0lBQ3ZGLE1BQU0sRUFBRSxHQUFHLEdBQUcsSUFBSSxFQUFFLEdBQUcsS0FBSyxDQUFDO0lBQzdCLE1BQU0sTUFBTSxHQUFHLE1BQU0sS0FBSyxDQUFDLE1BQU0sRUFBRSxDQUFDO0lBRXBDLE1BQU0sWUFBWSxHQUFHLElBQUksTUFBTSxDQUFDLDBEQUEwRCxDQUFDLENBQUM7SUFDNUYsSUFBSSxDQUFDLFlBQVksQ0FBQyxJQUFJLENBQUMsTUFBTSxDQUFDLEVBQUU7UUFDOUIsTUFBTSxJQUFJLEtBQUssQ0FBQyxpQ0FBaUMsQ0FBQyxDQUFDO0tBQ3BEO0lBRUQsTUFBTSxFQUFFLFFBQVEsRUFBRSxHQUFHLE1BQUEsQ0FBQyxNQUFNLEtBQUssQ0FBQyxrQkFBa0IsQ0FBQyxNQUFNLENBQUMsQ0FBQyxtQ0FBSSxFQUFFLENBQUM7SUFDcEUsSUFBSSxDQUFDLFFBQVEsRUFBRTtRQUNiLE1BQU0sSUFBSSxLQUFLLENBQUMsNENBQTRDLENBQUMsQ0FBQztLQUMvRDtJQUVELE9BQU8sS0FBSyxDQUFDLFNBQVMsQ0FBQyxHQUFHLEdBQUcsQ0FBQyxDQUFDLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxPQUFPLEtBQUssUUFBUSxFQUFFLENBQUMsQ0FBQztBQUNyRSxDQUFDLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBFbmRwb2ludCwgUHJvdmlkZXIsIFJlZ2lvbkluZm9Qcm92aWRlciwgVXJsUGFyc2VyIH0gZnJvbSBcIkBhd3Mtc2RrL3R5cGVzXCI7XG5cbmV4cG9ydCBpbnRlcmZhY2UgRW5kcG9pbnRzSW5wdXRDb25maWcge1xuICAvKipcbiAgICogVGhlIGZ1bGx5IHF1YWxpZmllZCBlbmRwb2ludCBvZiB0aGUgd2Vic2VydmljZS4gVGhpcyBpcyBvbmx5IHJlcXVpcmVkIHdoZW4gdXNpbmcgYSBjdXN0b20gZW5kcG9pbnQgKGZvciBleGFtcGxlLCB3aGVuIHVzaW5nIGEgbG9jYWwgdmVyc2lvbiBvZiBTMykuXG4gICAqL1xuICBlbmRwb2ludD86IHN0cmluZyB8IEVuZHBvaW50IHwgUHJvdmlkZXI8RW5kcG9pbnQ+O1xuXG4gIC8qKlxuICAgKiBXaGV0aGVyIFRMUyBpcyBlbmFibGVkIGZvciByZXF1ZXN0cy5cbiAgICovXG4gIHRscz86IGJvb2xlYW47XG59XG5cbmludGVyZmFjZSBQcmV2aW91c2x5UmVzb2x2ZWQge1xuICByZWdpb25JbmZvUHJvdmlkZXI6IFJlZ2lvbkluZm9Qcm92aWRlcjtcbiAgdXJsUGFyc2VyOiBVcmxQYXJzZXI7XG4gIHJlZ2lvbjogUHJvdmlkZXI8c3RyaW5nPjtcbn1cblxuZXhwb3J0IGludGVyZmFjZSBFbmRwb2ludHNSZXNvbHZlZENvbmZpZyBleHRlbmRzIFJlcXVpcmVkPEVuZHBvaW50c0lucHV0Q29uZmlnPiB7XG4gIGVuZHBvaW50OiBQcm92aWRlcjxFbmRwb2ludD47XG4gIGlzQ3VzdG9tRW5kcG9pbnQ6IGJvb2xlYW47XG59XG5cbmV4cG9ydCBjb25zdCByZXNvbHZlRW5kcG9pbnRzQ29uZmlnID0gPFQ+KFxuICBpbnB1dDogVCAmIEVuZHBvaW50c0lucHV0Q29uZmlnICYgUHJldmlvdXNseVJlc29sdmVkXG4pOiBUICYgRW5kcG9pbnRzUmVzb2x2ZWRDb25maWcgPT4gKHtcbiAgLi4uaW5wdXQsXG4gIHRsczogaW5wdXQudGxzID8/IHRydWUsXG4gIGVuZHBvaW50OiBpbnB1dC5lbmRwb2ludCA/IG5vcm1hbGl6ZUVuZHBvaW50KGlucHV0KSA6ICgpID0+IGdldEVuZFBvaW50RnJvbVJlZ2lvbihpbnB1dCksXG4gIGlzQ3VzdG9tRW5kcG9pbnQ6IGlucHV0LmVuZHBvaW50ID8gdHJ1ZSA6IGZhbHNlLFxufSk7XG5cbmNvbnN0IG5vcm1hbGl6ZUVuZHBvaW50ID0gKGlucHV0OiBFbmRwb2ludHNJbnB1dENvbmZpZyAmIFByZXZpb3VzbHlSZXNvbHZlZCk6IFByb3ZpZGVyPEVuZHBvaW50PiA9PiB7XG4gIGNvbnN0IHsgZW5kcG9pbnQsIHVybFBhcnNlciB9ID0gaW5wdXQ7XG4gIGlmICh0eXBlb2YgZW5kcG9pbnQgPT09IFwic3RyaW5nXCIpIHtcbiAgICBjb25zdCBwcm9taXNpZmllZCA9IFByb21pc2UucmVzb2x2ZSh1cmxQYXJzZXIoZW5kcG9pbnQpKTtcbiAgICByZXR1cm4gKCkgPT4gcHJvbWlzaWZpZWQ7XG4gIH0gZWxzZSBpZiAodHlwZW9mIGVuZHBvaW50ID09PSBcIm9iamVjdFwiKSB7XG4gICAgY29uc3QgcHJvbWlzaWZpZWQgPSBQcm9taXNlLnJlc29sdmUoZW5kcG9pbnQpO1xuICAgIHJldHVybiAoKSA9PiBwcm9taXNpZmllZDtcbiAgfVxuICByZXR1cm4gZW5kcG9pbnQhO1xufTtcblxuY29uc3QgZ2V0RW5kUG9pbnRGcm9tUmVnaW9uID0gYXN5bmMgKGlucHV0OiBFbmRwb2ludHNJbnB1dENvbmZpZyAmIFByZXZpb3VzbHlSZXNvbHZlZCkgPT4ge1xuICBjb25zdCB7IHRscyA9IHRydWUgfSA9IGlucHV0O1xuICBjb25zdCByZWdpb24gPSBhd2FpdCBpbnB1dC5yZWdpb24oKTtcblxuICBjb25zdCBkbnNIb3N0UmVnZXggPSBuZXcgUmVnRXhwKC9eKFthLXpBLVowLTldfFthLXpBLVowLTldW2EtekEtWjAtOS1dezAsNjF9W2EtekEtWjAtOV0pJC8pO1xuICBpZiAoIWRuc0hvc3RSZWdleC50ZXN0KHJlZ2lvbikpIHtcbiAgICB0aHJvdyBuZXcgRXJyb3IoXCJJbnZhbGlkIHJlZ2lvbiBpbiBjbGllbnQgY29uZmlnXCIpO1xuICB9XG5cbiAgY29uc3QgeyBob3N0bmFtZSB9ID0gKGF3YWl0IGlucHV0LnJlZ2lvbkluZm9Qcm92aWRlcihyZWdpb24pKSA/PyB7fTtcbiAgaWYgKCFob3N0bmFtZSkge1xuICAgIHRocm93IG5ldyBFcnJvcihcIkNhbm5vdCByZXNvbHZlIGhvc3RuYW1lIGZyb20gY2xpZW50IGNvbmZpZ1wiKTtcbiAgfVxuXG4gIHJldHVybiBpbnB1dC51cmxQYXJzZXIoYCR7dGxzID8gXCJodHRwczpcIiA6IFwiaHR0cDpcIn0vLyR7aG9zdG5hbWV9YCk7XG59O1xuIl19
 
 /***/ }),
 
@@ -55774,6 +56244,8 @@ exports.retry = retry;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getMasterProfileName = exports.parseKnownFiles = exports.fromIni = exports.ENV_PROFILE = void 0;
+const credential_provider_env_1 = __nccwpck_require__(55886);
+const credential_provider_imds_1 = __nccwpck_require__(21732);
 const credential_provider_web_identity_1 = __nccwpck_require__(61961);
 const property_provider_1 = __nccwpck_require__(1014);
 const shared_ini_file_loader_1 = __nccwpck_require__(4847);
@@ -55789,13 +56261,14 @@ const isWebIdentityProfile = (arg) => Boolean(arg) &&
     typeof arg.web_identity_token_file === "string" &&
     typeof arg.role_arn === "string" &&
     ["undefined", "string"].indexOf(typeof arg.role_session_name) > -1;
-const isAssumeRoleWithSourceProfile = (arg) => Boolean(arg) &&
+const isAssumeRoleProfile = (arg) => Boolean(arg) &&
     typeof arg === "object" &&
     typeof arg.role_arn === "string" &&
-    typeof arg.source_profile === "string" &&
     ["undefined", "string"].indexOf(typeof arg.role_session_name) > -1 &&
     ["undefined", "string"].indexOf(typeof arg.external_id) > -1 &&
     ["undefined", "string"].indexOf(typeof arg.mfa_serial) > -1;
+const isAssumeRoleWithSourceProfile = (arg) => isAssumeRoleProfile(arg) && typeof arg.source_profile === "string" && typeof arg.credential_source === "undefined";
+const isAssumeRoleWithProviderProfile = (arg) => isAssumeRoleProfile(arg) && typeof arg.credential_source === "string" && typeof arg.source_profile === "undefined";
 /**
  * Creates a credential provider that will read from ini files and supports
  * role assumption and multi-factor authentication.
@@ -55835,20 +56308,22 @@ const resolveProfileData = async (profileName, profiles, options, visitedProfile
     }
     // If this is the first profile visited, role assumption keys should be
     // given precedence over static credentials.
-    if (isAssumeRoleWithSourceProfile(data)) {
-        const { external_id: ExternalId, mfa_serial, role_arn: RoleArn, role_session_name: RoleSessionName = "aws-sdk-js-" + Date.now(), source_profile, } = data;
+    if (isAssumeRoleWithSourceProfile(data) || isAssumeRoleWithProviderProfile(data)) {
+        const { external_id: ExternalId, mfa_serial, role_arn: RoleArn, role_session_name: RoleSessionName = "aws-sdk-js-" + Date.now(), source_profile, credential_source, } = data;
         if (!options.roleAssumer) {
             throw new property_provider_1.ProviderError(`Profile ${profileName} requires a role to be assumed, but no` + ` role assumption callback was provided.`, false);
         }
-        if (source_profile in visitedProfiles) {
+        if (source_profile && source_profile in visitedProfiles) {
             throw new property_provider_1.ProviderError(`Detected a cycle attempting to resolve credentials for profile` +
                 ` ${exports.getMasterProfileName(options)}. Profiles visited: ` +
                 Object.keys(visitedProfiles).join(", "), false);
         }
-        const sourceCreds = resolveProfileData(source_profile, profiles, options, {
-            ...visitedProfiles,
-            [source_profile]: true,
-        });
+        const sourceCreds = source_profile
+            ? resolveProfileData(source_profile, profiles, options, {
+                ...visitedProfiles,
+                [source_profile]: true,
+            })
+            : resolveCredentialSource(credential_source, profileName)();
         const params = { RoleArn, RoleSessionName, ExternalId };
         if (mfa_serial) {
             if (!options.mfaCodeProvider) {
@@ -55876,6 +56351,27 @@ const resolveProfileData = async (profileName, profiles, options, visitedProfile
     // `source_profile` key).
     throw new property_provider_1.ProviderError(`Profile ${profileName} could not be found or parsed in shared` + ` credentials file.`);
 };
+/**
+ * Resolve the `credential_source` entry from the profile, and return the
+ * credential providers respectively. No memoization is needed for the
+ * credential source providers because memoization should be added outside the
+ * fromIni() provider. The source credential needs to be refreshed every time
+ * fromIni() is called.
+ */
+const resolveCredentialSource = (credentialSource, profileName) => {
+    const sourceProvidersMap = {
+        EcsContainer: credential_provider_imds_1.fromContainerMetadata,
+        Ec2InstanceMetadata: credential_provider_imds_1.fromInstanceMetadata,
+        Environment: credential_provider_env_1.fromEnv,
+    };
+    if (credentialSource in sourceProvidersMap) {
+        return sourceProvidersMap[credentialSource]();
+    }
+    else {
+        throw new property_provider_1.ProviderError(`Unsupported credential source in profile ${profileName}. Got ${credentialSource}, ` +
+            `expected EcsContainer or Ec2InstanceMetadata or Environment.`);
+    }
+};
 const resolveStaticCredentials = (profile) => Promise.resolve({
     accessKeyId: profile.aws_access_key_id,
     secretAccessKey: profile.aws_secret_access_key,
@@ -55887,7 +56383,7 @@ const resolveWebIdentityCredentials = async (profile, options) => credential_pro
     roleSessionName: profile.role_session_name,
     roleAssumerWithWebIdentity: options.roleAssumerWithWebIdentity,
 })();
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9zcmMvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQUEsZ0dBQTJHO0FBQzNHLGtFQUEyRDtBQUMzRCw0RUFNeUM7QUFHekMsTUFBTSxlQUFlLEdBQUcsU0FBUyxDQUFDO0FBQ3JCLFFBQUEsV0FBVyxHQUFHLGFBQWEsQ0FBQztBQXNGekMsTUFBTSxvQkFBb0IsR0FBRyxDQUFDLEdBQVEsRUFBNkIsRUFBRSxDQUNuRSxPQUFPLENBQUMsR0FBRyxDQUFDO0lBQ1osT0FBTyxHQUFHLEtBQUssUUFBUTtJQUN2QixPQUFPLEdBQUcsQ0FBQyxpQkFBaUIsS0FBSyxRQUFRO0lBQ3pDLE9BQU8sR0FBRyxDQUFDLHFCQUFxQixLQUFLLFFBQVE7SUFDN0MsQ0FBQyxXQUFXLEVBQUUsUUFBUSxDQUFDLENBQUMsT0FBTyxDQUFDLE9BQU8sR0FBRyxDQUFDLGlCQUFpQixDQUFDLEdBQUcsQ0FBQyxDQUFDLENBQUM7QUFRckUsTUFBTSxvQkFBb0IsR0FBRyxDQUFDLEdBQVEsRUFBNkIsRUFBRSxDQUNuRSxPQUFPLENBQUMsR0FBRyxDQUFDO0lBQ1osT0FBTyxHQUFHLEtBQUssUUFBUTtJQUN2QixPQUFPLEdBQUcsQ0FBQyx1QkFBdUIsS0FBSyxRQUFRO0lBQy9DLE9BQU8sR0FBRyxDQUFDLFFBQVEsS0FBSyxRQUFRO0lBQ2hDLENBQUMsV0FBVyxFQUFFLFFBQVEsQ0FBQyxDQUFDLE9BQU8sQ0FBQyxPQUFPLEdBQUcsQ0FBQyxpQkFBaUIsQ0FBQyxHQUFHLENBQUMsQ0FBQyxDQUFDO0FBTXJFLE1BQU0sNkJBQTZCLEdBQUcsQ0FBQyxHQUFRLEVBQTRCLEVBQUUsQ0FDM0UsT0FBTyxDQUFDLEdBQUcsQ0FBQztJQUNaLE9BQU8sR0FBRyxLQUFLLFFBQVE7SUFDdkIsT0FBTyxHQUFHLENBQUMsUUFBUSxLQUFLLFFBQVE7SUFDaEMsT0FBTyxHQUFHLENBQUMsY0FBYyxLQUFLLFFBQVE7SUFDdEMsQ0FBQyxXQUFXLEVBQUUsUUFBUSxDQUFDLENBQUMsT0FBTyxDQUFDLE9BQU8sR0FBRyxDQUFDLGlCQUFpQixDQUFDLEdBQUcsQ0FBQyxDQUFDO0lBQ2xFLENBQUMsV0FBVyxFQUFFLFFBQVEsQ0FBQyxDQUFDLE9BQU8sQ0FBQyxPQUFPLEdBQUcsQ0FBQyxXQUFXLENBQUMsR0FBRyxDQUFDLENBQUM7SUFDNUQsQ0FBQyxXQUFXLEVBQUUsUUFBUSxDQUFDLENBQUMsT0FBTyxDQUFDLE9BQU8sR0FBRyxDQUFDLFVBQVUsQ0FBQyxHQUFHLENBQUMsQ0FBQyxDQUFDO0FBRTlEOzs7R0FHRztBQUNJLE1BQU0sT0FBTyxHQUFHLENBQUMsT0FBb0IsRUFBRSxFQUFzQixFQUFFLENBQUMsS0FBSyxJQUFJLEVBQUU7SUFDaEYsTUFBTSxRQUFRLEdBQUcsTUFBTSx1QkFBZSxDQUFDLElBQUksQ0FBQyxDQUFDO0lBQzdDLE9BQU8sa0JBQWtCLENBQUMsNEJBQW9CLENBQUMsSUFBSSxDQUFDLEVBQUUsUUFBUSxFQUFFLElBQUksQ0FBQyxDQUFDO0FBQ3hFLENBQUMsQ0FBQztBQUhXLFFBQUEsT0FBTyxXQUdsQjtBQUVGOzs7OztHQUtHO0FBQ0ksTUFBTSxlQUFlLEdBQUcsS0FBSyxFQUFFLElBQXVCLEVBQTBCLEVBQUU7SUFDdkYsTUFBTSxFQUFFLFlBQVksR0FBRyw4Q0FBcUIsQ0FBQyxJQUFJLENBQUMsRUFBRSxHQUFHLElBQUksQ0FBQztJQUU1RCxNQUFNLFdBQVcsR0FBRyxNQUFNLFlBQVksQ0FBQztJQUN2QyxPQUFPO1FBQ0wsR0FBRyxXQUFXLENBQUMsVUFBVTtRQUN6QixHQUFHLFdBQVcsQ0FBQyxlQUFlO0tBQy9CLENBQUM7QUFDSixDQUFDLENBQUM7QUFSVyxRQUFBLGVBQWUsbUJBUTFCO0FBRUY7O0dBRUc7QUFDSSxNQUFNLG9CQUFvQixHQUFHLENBQUMsSUFBMEIsRUFBVSxFQUFFLENBQ3pFLElBQUksQ0FBQyxPQUFPLElBQUksT0FBTyxDQUFDLEdBQUcsQ0FBQyxtQkFBVyxDQUFDLElBQUksZUFBZSxDQUFDO0FBRGpELFFBQUEsb0JBQW9CLHdCQUM2QjtBQUU5RCxNQUFNLGtCQUFrQixHQUFHLEtBQUssRUFDOUIsV0FBbUIsRUFDbkIsUUFBdUIsRUFDdkIsT0FBb0IsRUFDcEIsa0JBQW1ELEVBQUUsRUFDL0IsRUFBRTtJQUN4QixNQUFNLElBQUksR0FBRyxRQUFRLENBQUMsV0FBVyxDQUFDLENBQUM7SUFFbkMseUVBQXlFO0lBQ3pFLHFFQUFxRTtJQUNyRSwwRUFBMEU7SUFDMUUsSUFBSSxNQUFNLENBQUMsSUFBSSxDQUFDLGVBQWUsQ0FBQyxDQUFDLE1BQU0sR0FBRyxDQUFDLElBQUksb0JBQW9CLENBQUMsSUFBSSxDQUFDLEVBQUU7UUFDekUsT0FBTyx3QkFBd0IsQ0FBQyxJQUFJLENBQUMsQ0FBQztLQUN2QztJQUVELHVFQUF1RTtJQUN2RSw0Q0FBNEM7SUFDNUMsSUFBSSw2QkFBNkIsQ0FBQyxJQUFJLENBQUMsRUFBRTtRQUN2QyxNQUFNLEVBQ0osV0FBVyxFQUFFLFVBQVUsRUFDdkIsVUFBVSxFQUNWLFFBQVEsRUFBRSxPQUFPLEVBQ2pCLGlCQUFpQixFQUFFLGVBQWUsR0FBRyxhQUFhLEdBQUcsSUFBSSxDQUFDLEdBQUcsRUFBRSxFQUMvRCxjQUFjLEdBQ2YsR0FBRyxJQUFJLENBQUM7UUFFVCxJQUFJLENBQUMsT0FBTyxDQUFDLFdBQVcsRUFBRTtZQUN4QixNQUFNLElBQUksaUNBQWEsQ0FDckIsV0FBVyxXQUFXLHdDQUF3QyxHQUFHLHlDQUF5QyxFQUMxRyxLQUFLLENBQ04sQ0FBQztTQUNIO1FBRUQsSUFBSSxjQUFjLElBQUksZUFBZSxFQUFFO1lBQ3JDLE1BQU0sSUFBSSxpQ0FBYSxDQUNyQixnRUFBZ0U7Z0JBQzlELElBQUksNEJBQW9CLENBQUMsT0FBTyxDQUFDLHNCQUFzQjtnQkFDdkQsTUFBTSxDQUFDLElBQUksQ0FBQyxlQUFlLENBQUMsQ0FBQyxJQUFJLENBQUMsSUFBSSxDQUFDLEVBQ3pDLEtBQUssQ0FDTixDQUFDO1NBQ0g7UUFFRCxNQUFNLFdBQVcsR0FBRyxrQkFBa0IsQ0FBQyxjQUFjLEVBQUUsUUFBUSxFQUFFLE9BQU8sRUFBRTtZQUN4RSxHQUFHLGVBQWU7WUFDbEIsQ0FBQyxjQUFjLENBQUMsRUFBRSxJQUFJO1NBQ3ZCLENBQUMsQ0FBQztRQUNILE1BQU0sTUFBTSxHQUFxQixFQUFFLE9BQU8sRUFBRSxlQUFlLEVBQUUsVUFBVSxFQUFFLENBQUM7UUFDMUUsSUFBSSxVQUFVLEVBQUU7WUFDZCxJQUFJLENBQUMsT0FBTyxDQUFDLGVBQWUsRUFBRTtnQkFDNUIsTUFBTSxJQUFJLGlDQUFhLENBQ3JCLFdBQVcsV0FBVyx3Q0FBd0MsR0FBRyx5Q0FBeUMsRUFDMUcsS0FBSyxDQUNOLENBQUM7YUFDSDtZQUNELE1BQU0sQ0FBQyxZQUFZLEdBQUcsVUFBVSxDQUFDO1lBQ2pDLE1BQU0sQ0FBQyxTQUFTLEdBQUcsTUFBTSxPQUFPLENBQUMsZUFBZSxDQUFDLFVBQVUsQ0FBQyxDQUFDO1NBQzlEO1FBRUQsT0FBTyxPQUFPLENBQUMsV0FBVyxDQUFDLE1BQU0sV0FBVyxFQUFFLE1BQU0sQ0FBQyxDQUFDO0tBQ3ZEO0lBRUQsb0VBQW9FO0lBQ3BFLHlDQUF5QztJQUN6QyxJQUFJLG9CQUFvQixDQUFDLElBQUksQ0FBQyxFQUFFO1FBQzlCLE9BQU8sd0JBQXdCLENBQUMsSUFBSSxDQUFDLENBQUM7S0FDdkM7SUFFRCxvRUFBb0U7SUFDcEUsb0VBQW9FO0lBQ3BFLElBQUksb0JBQW9CLENBQUMsSUFBSSxDQUFDLEVBQUU7UUFDOUIsT0FBTyw2QkFBNkIsQ0FBQyxJQUFJLEVBQUUsT0FBTyxDQUFDLENBQUM7S0FDckQ7SUFFRCx5RUFBeUU7SUFDekUsNEVBQTRFO0lBQzVFLHdFQUF3RTtJQUN4RSwwRUFBMEU7SUFDMUUseUJBQXlCO0lBQ3pCLE1BQU0sSUFBSSxpQ0FBYSxDQUFDLFdBQVcsV0FBVyx5Q0FBeUMsR0FBRyxvQkFBb0IsQ0FBQyxDQUFDO0FBQ2xILENBQUMsQ0FBQztBQUVGLE1BQU0sd0JBQXdCLEdBQUcsQ0FBQyxPQUEyQixFQUF3QixFQUFFLENBQ3JGLE9BQU8sQ0FBQyxPQUFPLENBQUM7SUFDZCxXQUFXLEVBQUUsT0FBTyxDQUFDLGlCQUFpQjtJQUN0QyxlQUFlLEVBQUUsT0FBTyxDQUFDLHFCQUFxQjtJQUM5QyxZQUFZLEVBQUUsT0FBTyxDQUFDLGlCQUFpQjtDQUN4QyxDQUFDLENBQUM7QUFFTCxNQUFNLDZCQUE2QixHQUFHLEtBQUssRUFBRSxPQUEyQixFQUFFLE9BQW9CLEVBQXdCLEVBQUUsQ0FDdEgsZ0RBQWEsQ0FBQztJQUNaLG9CQUFvQixFQUFFLE9BQU8sQ0FBQyx1QkFBdUI7SUFDckQsT0FBTyxFQUFFLE9BQU8sQ0FBQyxRQUFRO0lBQ3pCLGVBQWUsRUFBRSxPQUFPLENBQUMsaUJBQWlCO0lBQzFDLDBCQUEwQixFQUFFLE9BQU8sQ0FBQywwQkFBMEI7Q0FDL0QsQ0FBQyxFQUFFLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBBc3N1bWVSb2xlV2l0aFdlYklkZW50aXR5UGFyYW1zLCBmcm9tVG9rZW5GaWxlIH0gZnJvbSBcIkBhd3Mtc2RrL2NyZWRlbnRpYWwtcHJvdmlkZXItd2ViLWlkZW50aXR5XCI7XG5pbXBvcnQgeyBQcm92aWRlckVycm9yIH0gZnJvbSBcIkBhd3Mtc2RrL3Byb3BlcnR5LXByb3ZpZGVyXCI7XG5pbXBvcnQge1xuICBsb2FkU2hhcmVkQ29uZmlnRmlsZXMsXG4gIFBhcnNlZEluaURhdGEsXG4gIFByb2ZpbGUsXG4gIFNoYXJlZENvbmZpZ0ZpbGVzLFxuICBTaGFyZWRDb25maWdJbml0LFxufSBmcm9tIFwiQGF3cy1zZGsvc2hhcmVkLWluaS1maWxlLWxvYWRlclwiO1xuaW1wb3J0IHsgQ3JlZGVudGlhbFByb3ZpZGVyLCBDcmVkZW50aWFscyB9IGZyb20gXCJAYXdzLXNkay90eXBlc1wiO1xuXG5jb25zdCBERUZBVUxUX1BST0ZJTEUgPSBcImRlZmF1bHRcIjtcbmV4cG9ydCBjb25zdCBFTlZfUFJPRklMRSA9IFwiQVdTX1BST0ZJTEVcIjtcblxuLyoqXG4gKiBAc2VlIGh0dHA6Ly9kb2NzLmF3cy5hbWF6b24uY29tL0FXU0phdmFTY3JpcHRTREsvbGF0ZXN0L0FXUy9TVFMuaHRtbCNhc3N1bWVSb2xlLXByb3BlcnR5XG4gKiBUT0RPIHVwZGF0ZSB0aGUgYWJvdmUgdG8gbGluayB0byBWMyBkb2NzXG4gKi9cbmV4cG9ydCBpbnRlcmZhY2UgQXNzdW1lUm9sZVBhcmFtcyB7XG4gIC8qKlxuICAgKiBUaGUgaWRlbnRpZmllciBvZiB0aGUgcm9sZSB0byBiZSBhc3N1bWVkLlxuICAgKi9cbiAgUm9sZUFybjogc3RyaW5nO1xuXG4gIC8qKlxuICAgKiBBIG5hbWUgZm9yIHRoZSBhc3N1bWVkIHJvbGUgc2Vzc2lvbi5cbiAgICovXG4gIFJvbGVTZXNzaW9uTmFtZTogc3RyaW5nO1xuXG4gIC8qKlxuICAgKiBBIHVuaXF1ZSBpZGVudGlmaWVyIHRoYXQgaXMgdXNlZCBieSB0aGlyZCBwYXJ0aWVzIHdoZW4gYXNzdW1pbmcgcm9sZXMgaW5cbiAgICogdGhlaXIgY3VzdG9tZXJzJyBhY2NvdW50cy5cbiAgICovXG4gIEV4dGVybmFsSWQ/OiBzdHJpbmc7XG5cbiAgLyoqXG4gICAqIFRoZSBpZGVudGlmaWNhdGlvbiBudW1iZXIgb2YgdGhlIE1GQSBkZXZpY2UgdGhhdCBpcyBhc3NvY2lhdGVkIHdpdGggdGhlXG4gICAqIHVzZXIgd2hvIGlzIG1ha2luZyB0aGUgYEFzc3VtZVJvbGVgIGNhbGwuXG4gICAqL1xuICBTZXJpYWxOdW1iZXI/OiBzdHJpbmc7XG5cbiAgLyoqXG4gICAqIFRoZSB2YWx1ZSBwcm92aWRlZCBieSB0aGUgTUZBIGRldmljZS5cbiAgICovXG4gIFRva2VuQ29kZT86IHN0cmluZztcbn1cblxuZXhwb3J0IGludGVyZmFjZSBTb3VyY2VQcm9maWxlSW5pdCBleHRlbmRzIFNoYXJlZENvbmZpZ0luaXQge1xuICAvKipcbiAgICogVGhlIGNvbmZpZ3VyYXRpb24gcHJvZmlsZSB0byB1c2UuXG4gICAqL1xuICBwcm9maWxlPzogc3RyaW5nO1xuXG4gIC8qKlxuICAgKiBBIHByb21pc2UgdGhhdCB3aWxsIGJlIHJlc29sdmVkIHdpdGggbG9hZGVkIGFuZCBwYXJzZWQgY3JlZGVudGlhbHMgZmlsZXMuXG4gICAqIFVzZWQgdG8gYXZvaWQgbG9hZGluZyBzaGFyZWQgY29uZmlnIGZpbGVzIG11bHRpcGxlIHRpbWVzLlxuICAgKlxuICAgKiBAaW50ZXJuYWxcbiAgICovXG4gIGxvYWRlZENvbmZpZz86IFByb21pc2U8U2hhcmVkQ29uZmlnRmlsZXM+O1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIEZyb21JbmlJbml0IGV4dGVuZHMgU291cmNlUHJvZmlsZUluaXQge1xuICAvKipcbiAgICogQSBmdW5jdGlvbiB0aGF0IHJldHVybnMgYSBwcm9taXNlIGZ1bGZpbGxlZCB3aXRoIGFuIE1GQSB0b2tlbiBjb2RlIGZvclxuICAgKiB0aGUgcHJvdmlkZWQgTUZBIFNlcmlhbCBjb2RlLiBJZiBhIHByb2ZpbGUgcmVxdWlyZXMgYW4gTUZBIGNvZGUgYW5kXG4gICAqIGBtZmFDb2RlUHJvdmlkZXJgIGlzIG5vdCBhIHZhbGlkIGZ1bmN0aW9uLCB0aGUgY3JlZGVudGlhbCBwcm92aWRlclxuICAgKiBwcm9taXNlIHdpbGwgYmUgcmVqZWN0ZWQuXG4gICAqXG4gICAqIEBwYXJhbSBtZmFTZXJpYWwgVGhlIHNlcmlhbCBjb2RlIG9mIHRoZSBNRkEgZGV2aWNlIHNwZWNpZmllZC5cbiAgICovXG4gIG1mYUNvZGVQcm92aWRlcj86IChtZmFTZXJpYWw6IHN0cmluZykgPT4gUHJvbWlzZTxzdHJpbmc+O1xuXG4gIC8qKlxuICAgKiBBIGZ1bmN0aW9uIHRoYXQgYXNzdW1lcyBhIHJvbGUgYW5kIHJldHVybnMgYSBwcm9taXNlIGZ1bGZpbGxlZCB3aXRoXG4gICAqIGNyZWRlbnRpYWxzIGZvciB0aGUgYXNzdW1lZCByb2xlLlxuICAgKlxuICAgKiBAcGFyYW0gc291cmNlQ3JlZHMgVGhlIGNyZWRlbnRpYWxzIHdpdGggd2hpY2ggdG8gYXNzdW1lIGEgcm9sZS5cbiAgICogQHBhcmFtIHBhcmFtc1xuICAgKi9cbiAgcm9sZUFzc3VtZXI/OiAoc291cmNlQ3JlZHM6IENyZWRlbnRpYWxzLCBwYXJhbXM6IEFzc3VtZVJvbGVQYXJhbXMpID0+IFByb21pc2U8Q3JlZGVudGlhbHM+O1xuXG4gIC8qKlxuICAgKiBBIGZ1bmN0aW9uIHRoYXQgYXNzdW1lcyBhIHJvbGUgd2l0aCB3ZWIgaWRlbnRpdHkgYW5kIHJldHVybnMgYSBwcm9taXNlIGZ1bGZpbGxlZCB3aXRoXG4gICAqIGNyZWRlbnRpYWxzIGZvciB0aGUgYXNzdW1lZCByb2xlLlxuICAgKlxuICAgKiBAcGFyYW0gc291cmNlQ3JlZHMgVGhlIGNyZWRlbnRpYWxzIHdpdGggd2hpY2ggdG8gYXNzdW1lIGEgcm9sZS5cbiAgICogQHBhcmFtIHBhcmFtc1xuICAgKi9cbiAgcm9sZUFzc3VtZXJXaXRoV2ViSWRlbnRpdHk/OiAocGFyYW1zOiBBc3N1bWVSb2xlV2l0aFdlYklkZW50aXR5UGFyYW1zKSA9PiBQcm9taXNlPENyZWRlbnRpYWxzPjtcbn1cblxuaW50ZXJmYWNlIFN0YXRpY0NyZWRzUHJvZmlsZSBleHRlbmRzIFByb2ZpbGUge1xuICBhd3NfYWNjZXNzX2tleV9pZDogc3RyaW5nO1xuICBhd3Nfc2VjcmV0X2FjY2Vzc19rZXk6IHN0cmluZztcbiAgYXdzX3Nlc3Npb25fdG9rZW4/OiBzdHJpbmc7XG59XG5cbmNvbnN0IGlzU3RhdGljQ3JlZHNQcm9maWxlID0gKGFyZzogYW55KTogYXJnIGlzIFN0YXRpY0NyZWRzUHJvZmlsZSA9PlxuICBCb29sZWFuKGFyZykgJiZcbiAgdHlwZW9mIGFyZyA9PT0gXCJvYmplY3RcIiAmJlxuICB0eXBlb2YgYXJnLmF3c19hY2Nlc3Nfa2V5X2lkID09PSBcInN0cmluZ1wiICYmXG4gIHR5cGVvZiBhcmcuYXdzX3NlY3JldF9hY2Nlc3Nfa2V5ID09PSBcInN0cmluZ1wiICYmXG4gIFtcInVuZGVmaW5lZFwiLCBcInN0cmluZ1wiXS5pbmRleE9mKHR5cGVvZiBhcmcuYXdzX3Nlc3Npb25fdG9rZW4pID4gLTE7XG5cbmludGVyZmFjZSBXZWJJZGVudGl0eVByb2ZpbGUgZXh0ZW5kcyBQcm9maWxlIHtcbiAgd2ViX2lkZW50aXR5X3Rva2VuX2ZpbGU6IHN0cmluZztcbiAgcm9sZV9hcm46IHN0cmluZztcbiAgcm9sZV9zZXNzaW9uX25hbWU/OiBzdHJpbmc7XG59XG5cbmNvbnN0IGlzV2ViSWRlbnRpdHlQcm9maWxlID0gKGFyZzogYW55KTogYXJnIGlzIFdlYklkZW50aXR5UHJvZmlsZSA9PlxuICBCb29sZWFuKGFyZykgJiZcbiAgdHlwZW9mIGFyZyA9PT0gXCJvYmplY3RcIiAmJlxuICB0eXBlb2YgYXJnLndlYl9pZGVudGl0eV90b2tlbl9maWxlID09PSBcInN0cmluZ1wiICYmXG4gIHR5cGVvZiBhcmcucm9sZV9hcm4gPT09IFwic3RyaW5nXCIgJiZcbiAgW1widW5kZWZpbmVkXCIsIFwic3RyaW5nXCJdLmluZGV4T2YodHlwZW9mIGFyZy5yb2xlX3Nlc3Npb25fbmFtZSkgPiAtMTtcbmludGVyZmFjZSBBc3N1bWVSb2xlUHJvZmlsZSBleHRlbmRzIFByb2ZpbGUge1xuICByb2xlX2Fybjogc3RyaW5nO1xuICBzb3VyY2VfcHJvZmlsZTogc3RyaW5nO1xufVxuXG5jb25zdCBpc0Fzc3VtZVJvbGVXaXRoU291cmNlUHJvZmlsZSA9IChhcmc6IGFueSk6IGFyZyBpcyBBc3N1bWVSb2xlUHJvZmlsZSA9PlxuICBCb29sZWFuKGFyZykgJiZcbiAgdHlwZW9mIGFyZyA9PT0gXCJvYmplY3RcIiAmJlxuICB0eXBlb2YgYXJnLnJvbGVfYXJuID09PSBcInN0cmluZ1wiICYmXG4gIHR5cGVvZiBhcmcuc291cmNlX3Byb2ZpbGUgPT09IFwic3RyaW5nXCIgJiZcbiAgW1widW5kZWZpbmVkXCIsIFwic3RyaW5nXCJdLmluZGV4T2YodHlwZW9mIGFyZy5yb2xlX3Nlc3Npb25fbmFtZSkgPiAtMSAmJlxuICBbXCJ1bmRlZmluZWRcIiwgXCJzdHJpbmdcIl0uaW5kZXhPZih0eXBlb2YgYXJnLmV4dGVybmFsX2lkKSA+IC0xICYmXG4gIFtcInVuZGVmaW5lZFwiLCBcInN0cmluZ1wiXS5pbmRleE9mKHR5cGVvZiBhcmcubWZhX3NlcmlhbCkgPiAtMTtcblxuLyoqXG4gKiBDcmVhdGVzIGEgY3JlZGVudGlhbCBwcm92aWRlciB0aGF0IHdpbGwgcmVhZCBmcm9tIGluaSBmaWxlcyBhbmQgc3VwcG9ydHNcbiAqIHJvbGUgYXNzdW1wdGlvbiBhbmQgbXVsdGktZmFjdG9yIGF1dGhlbnRpY2F0aW9uLlxuICovXG5leHBvcnQgY29uc3QgZnJvbUluaSA9IChpbml0OiBGcm9tSW5pSW5pdCA9IHt9KTogQ3JlZGVudGlhbFByb3ZpZGVyID0+IGFzeW5jICgpID0+IHtcbiAgY29uc3QgcHJvZmlsZXMgPSBhd2FpdCBwYXJzZUtub3duRmlsZXMoaW5pdCk7XG4gIHJldHVybiByZXNvbHZlUHJvZmlsZURhdGEoZ2V0TWFzdGVyUHJvZmlsZU5hbWUoaW5pdCksIHByb2ZpbGVzLCBpbml0KTtcbn07XG5cbi8qKlxuICogTG9hZCBwcm9maWxlcyBmcm9tIGNyZWRlbnRpYWxzIGFuZCBjb25maWcgSU5JIGZpbGVzIGFuZCBub3JtYWxpemUgdGhlbSBpbnRvIGFcbiAqIHNpbmdsZSBwcm9maWxlIGxpc3QuXG4gKlxuICogQGludGVybmFsXG4gKi9cbmV4cG9ydCBjb25zdCBwYXJzZUtub3duRmlsZXMgPSBhc3luYyAoaW5pdDogU291cmNlUHJvZmlsZUluaXQpOiBQcm9taXNlPFBhcnNlZEluaURhdGE+ID0+IHtcbiAgY29uc3QgeyBsb2FkZWRDb25maWcgPSBsb2FkU2hhcmVkQ29uZmlnRmlsZXMoaW5pdCkgfSA9IGluaXQ7XG5cbiAgY29uc3QgcGFyc2VkRmlsZXMgPSBhd2FpdCBsb2FkZWRDb25maWc7XG4gIHJldHVybiB7XG4gICAgLi4ucGFyc2VkRmlsZXMuY29uZmlnRmlsZSxcbiAgICAuLi5wYXJzZWRGaWxlcy5jcmVkZW50aWFsc0ZpbGUsXG4gIH07XG59O1xuXG4vKipcbiAqIEBpbnRlcm5hbFxuICovXG5leHBvcnQgY29uc3QgZ2V0TWFzdGVyUHJvZmlsZU5hbWUgPSAoaW5pdDogeyBwcm9maWxlPzogc3RyaW5nIH0pOiBzdHJpbmcgPT5cbiAgaW5pdC5wcm9maWxlIHx8IHByb2Nlc3MuZW52W0VOVl9QUk9GSUxFXSB8fCBERUZBVUxUX1BST0ZJTEU7XG5cbmNvbnN0IHJlc29sdmVQcm9maWxlRGF0YSA9IGFzeW5jIChcbiAgcHJvZmlsZU5hbWU6IHN0cmluZyxcbiAgcHJvZmlsZXM6IFBhcnNlZEluaURhdGEsXG4gIG9wdGlvbnM6IEZyb21JbmlJbml0LFxuICB2aXNpdGVkUHJvZmlsZXM6IHsgW3Byb2ZpbGVOYW1lOiBzdHJpbmddOiB0cnVlIH0gPSB7fVxuKTogUHJvbWlzZTxDcmVkZW50aWFscz4gPT4ge1xuICBjb25zdCBkYXRhID0gcHJvZmlsZXNbcHJvZmlsZU5hbWVdO1xuXG4gIC8vIElmIHRoaXMgaXMgbm90IHRoZSBmaXJzdCBwcm9maWxlIHZpc2l0ZWQsIHN0YXRpYyBjcmVkZW50aWFscyBzaG91bGQgYmVcbiAgLy8gcHJlZmVycmVkIG92ZXIgcm9sZSBhc3N1bXB0aW9uIG1ldGFkYXRhLiBUaGlzIHNwZWNpYWwgdHJlYXRtZW50IG9mXG4gIC8vIHNlY29uZCBhbmQgc3Vic2VxdWVudCBob3BzIGlzIHRvIGVuc3VyZSBjb21wYXRpYmlsaXR5IHdpdGggdGhlIEFXUyBDTEkuXG4gIGlmIChPYmplY3Qua2V5cyh2aXNpdGVkUHJvZmlsZXMpLmxlbmd0aCA+IDAgJiYgaXNTdGF0aWNDcmVkc1Byb2ZpbGUoZGF0YSkpIHtcbiAgICByZXR1cm4gcmVzb2x2ZVN0YXRpY0NyZWRlbnRpYWxzKGRhdGEpO1xuICB9XG5cbiAgLy8gSWYgdGhpcyBpcyB0aGUgZmlyc3QgcHJvZmlsZSB2aXNpdGVkLCByb2xlIGFzc3VtcHRpb24ga2V5cyBzaG91bGQgYmVcbiAgLy8gZ2l2ZW4gcHJlY2VkZW5jZSBvdmVyIHN0YXRpYyBjcmVkZW50aWFscy5cbiAgaWYgKGlzQXNzdW1lUm9sZVdpdGhTb3VyY2VQcm9maWxlKGRhdGEpKSB7XG4gICAgY29uc3Qge1xuICAgICAgZXh0ZXJuYWxfaWQ6IEV4dGVybmFsSWQsXG4gICAgICBtZmFfc2VyaWFsLFxuICAgICAgcm9sZV9hcm46IFJvbGVBcm4sXG4gICAgICByb2xlX3Nlc3Npb25fbmFtZTogUm9sZVNlc3Npb25OYW1lID0gXCJhd3Mtc2RrLWpzLVwiICsgRGF0ZS5ub3coKSxcbiAgICAgIHNvdXJjZV9wcm9maWxlLFxuICAgIH0gPSBkYXRhO1xuXG4gICAgaWYgKCFvcHRpb25zLnJvbGVBc3N1bWVyKSB7XG4gICAgICB0aHJvdyBuZXcgUHJvdmlkZXJFcnJvcihcbiAgICAgICAgYFByb2ZpbGUgJHtwcm9maWxlTmFtZX0gcmVxdWlyZXMgYSByb2xlIHRvIGJlIGFzc3VtZWQsIGJ1dCBub2AgKyBgIHJvbGUgYXNzdW1wdGlvbiBjYWxsYmFjayB3YXMgcHJvdmlkZWQuYCxcbiAgICAgICAgZmFsc2VcbiAgICAgICk7XG4gICAgfVxuXG4gICAgaWYgKHNvdXJjZV9wcm9maWxlIGluIHZpc2l0ZWRQcm9maWxlcykge1xuICAgICAgdGhyb3cgbmV3IFByb3ZpZGVyRXJyb3IoXG4gICAgICAgIGBEZXRlY3RlZCBhIGN5Y2xlIGF0dGVtcHRpbmcgdG8gcmVzb2x2ZSBjcmVkZW50aWFscyBmb3IgcHJvZmlsZWAgK1xuICAgICAgICAgIGAgJHtnZXRNYXN0ZXJQcm9maWxlTmFtZShvcHRpb25zKX0uIFByb2ZpbGVzIHZpc2l0ZWQ6IGAgK1xuICAgICAgICAgIE9iamVjdC5rZXlzKHZpc2l0ZWRQcm9maWxlcykuam9pbihcIiwgXCIpLFxuICAgICAgICBmYWxzZVxuICAgICAgKTtcbiAgICB9XG5cbiAgICBjb25zdCBzb3VyY2VDcmVkcyA9IHJlc29sdmVQcm9maWxlRGF0YShzb3VyY2VfcHJvZmlsZSwgcHJvZmlsZXMsIG9wdGlvbnMsIHtcbiAgICAgIC4uLnZpc2l0ZWRQcm9maWxlcyxcbiAgICAgIFtzb3VyY2VfcHJvZmlsZV06IHRydWUsXG4gICAgfSk7XG4gICAgY29uc3QgcGFyYW1zOiBBc3N1bWVSb2xlUGFyYW1zID0geyBSb2xlQXJuLCBSb2xlU2Vzc2lvbk5hbWUsIEV4dGVybmFsSWQgfTtcbiAgICBpZiAobWZhX3NlcmlhbCkge1xuICAgICAgaWYgKCFvcHRpb25zLm1mYUNvZGVQcm92aWRlcikge1xuICAgICAgICB0aHJvdyBuZXcgUHJvdmlkZXJFcnJvcihcbiAgICAgICAgICBgUHJvZmlsZSAke3Byb2ZpbGVOYW1lfSByZXF1aXJlcyBtdWx0aS1mYWN0b3IgYXV0aGVudGljYXRpb24sYCArIGAgYnV0IG5vIE1GQSBjb2RlIGNhbGxiYWNrIHdhcyBwcm92aWRlZC5gLFxuICAgICAgICAgIGZhbHNlXG4gICAgICAgICk7XG4gICAgICB9XG4gICAgICBwYXJhbXMuU2VyaWFsTnVtYmVyID0gbWZhX3NlcmlhbDtcbiAgICAgIHBhcmFtcy5Ub2tlbkNvZGUgPSBhd2FpdCBvcHRpb25zLm1mYUNvZGVQcm92aWRlcihtZmFfc2VyaWFsKTtcbiAgICB9XG5cbiAgICByZXR1cm4gb3B0aW9ucy5yb2xlQXNzdW1lcihhd2FpdCBzb3VyY2VDcmVkcywgcGFyYW1zKTtcbiAgfVxuXG4gIC8vIElmIG5vIHJvbGUgYXNzdW1wdGlvbiBtZXRhZGF0YSBpcyBwcmVzZW50LCBhdHRlbXB0IHRvIGxvYWQgc3RhdGljXG4gIC8vIGNyZWRlbnRpYWxzIGZyb20gdGhlIHNlbGVjdGVkIHByb2ZpbGUuXG4gIGlmIChpc1N0YXRpY0NyZWRzUHJvZmlsZShkYXRhKSkge1xuICAgIHJldHVybiByZXNvbHZlU3RhdGljQ3JlZGVudGlhbHMoZGF0YSk7XG4gIH1cblxuICAvLyBJZiBubyBzdGF0aWMgY3JlZGVudGlhbHMgYXJlIHByZXNlbnQsIGF0dGVtcHQgdG8gYXNzdW1lIHJvbGUgd2l0aFxuICAvLyB3ZWIgaWRlbnRpdHkgaWYgd2ViX2lkZW50aXR5X3Rva2VuX2ZpbGUgYW5kIHJvbGVfYXJuIGlzIGF2YWlsYWJsZVxuICBpZiAoaXNXZWJJZGVudGl0eVByb2ZpbGUoZGF0YSkpIHtcbiAgICByZXR1cm4gcmVzb2x2ZVdlYklkZW50aXR5Q3JlZGVudGlhbHMoZGF0YSwgb3B0aW9ucyk7XG4gIH1cblxuICAvLyBJZiB0aGUgcHJvZmlsZSBjYW5ub3QgYmUgcGFyc2VkIG9yIGNvbnRhaW5zIG5laXRoZXIgc3RhdGljIGNyZWRlbnRpYWxzXG4gIC8vIG5vciByb2xlIGFzc3VtcHRpb24gbWV0YWRhdGEsIHRocm93IGFuIGVycm9yLiBUaGlzIHNob3VsZCBiZSBjb25zaWRlcmVkIGFcbiAgLy8gdGVybWluYWwgcmVzb2x1dGlvbiBlcnJvciBpZiBhIHByb2ZpbGUgaGFzIGJlZW4gc3BlY2lmaWVkIGJ5IHRoZSB1c2VyXG4gIC8vICh3aGV0aGVyIHZpYSBhIHBhcmFtZXRlciwgYW4gZW52aXJvbm1lbnQgdmFyaWFibGUsIG9yIGFub3RoZXIgcHJvZmlsZSdzXG4gIC8vIGBzb3VyY2VfcHJvZmlsZWAga2V5KS5cbiAgdGhyb3cgbmV3IFByb3ZpZGVyRXJyb3IoYFByb2ZpbGUgJHtwcm9maWxlTmFtZX0gY291bGQgbm90IGJlIGZvdW5kIG9yIHBhcnNlZCBpbiBzaGFyZWRgICsgYCBjcmVkZW50aWFscyBmaWxlLmApO1xufTtcblxuY29uc3QgcmVzb2x2ZVN0YXRpY0NyZWRlbnRpYWxzID0gKHByb2ZpbGU6IFN0YXRpY0NyZWRzUHJvZmlsZSk6IFByb21pc2U8Q3JlZGVudGlhbHM+ID0+XG4gIFByb21pc2UucmVzb2x2ZSh7XG4gICAgYWNjZXNzS2V5SWQ6IHByb2ZpbGUuYXdzX2FjY2Vzc19rZXlfaWQsXG4gICAgc2VjcmV0QWNjZXNzS2V5OiBwcm9maWxlLmF3c19zZWNyZXRfYWNjZXNzX2tleSxcbiAgICBzZXNzaW9uVG9rZW46IHByb2ZpbGUuYXdzX3Nlc3Npb25fdG9rZW4sXG4gIH0pO1xuXG5jb25zdCByZXNvbHZlV2ViSWRlbnRpdHlDcmVkZW50aWFscyA9IGFzeW5jIChwcm9maWxlOiBXZWJJZGVudGl0eVByb2ZpbGUsIG9wdGlvbnM6IEZyb21JbmlJbml0KTogUHJvbWlzZTxDcmVkZW50aWFscz4gPT5cbiAgZnJvbVRva2VuRmlsZSh7XG4gICAgd2ViSWRlbnRpdHlUb2tlbkZpbGU6IHByb2ZpbGUud2ViX2lkZW50aXR5X3Rva2VuX2ZpbGUsXG4gICAgcm9sZUFybjogcHJvZmlsZS5yb2xlX2FybixcbiAgICByb2xlU2Vzc2lvbk5hbWU6IHByb2ZpbGUucm9sZV9zZXNzaW9uX25hbWUsXG4gICAgcm9sZUFzc3VtZXJXaXRoV2ViSWRlbnRpdHk6IG9wdGlvbnMucm9sZUFzc3VtZXJXaXRoV2ViSWRlbnRpdHksXG4gIH0pKCk7XG4iXX0=
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9zcmMvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQUEsOEVBQTJEO0FBQzNELGdGQUFnRztBQUNoRyxnR0FBMkc7QUFDM0csa0VBQTJEO0FBQzNELDRFQU15QztBQUd6QyxNQUFNLGVBQWUsR0FBRyxTQUFTLENBQUM7QUFDckIsUUFBQSxXQUFXLEdBQUcsYUFBYSxDQUFDO0FBc0Z6QyxNQUFNLG9CQUFvQixHQUFHLENBQUMsR0FBUSxFQUE2QixFQUFFLENBQ25FLE9BQU8sQ0FBQyxHQUFHLENBQUM7SUFDWixPQUFPLEdBQUcsS0FBSyxRQUFRO0lBQ3ZCLE9BQU8sR0FBRyxDQUFDLGlCQUFpQixLQUFLLFFBQVE7SUFDekMsT0FBTyxHQUFHLENBQUMscUJBQXFCLEtBQUssUUFBUTtJQUM3QyxDQUFDLFdBQVcsRUFBRSxRQUFRLENBQUMsQ0FBQyxPQUFPLENBQUMsT0FBTyxHQUFHLENBQUMsaUJBQWlCLENBQUMsR0FBRyxDQUFDLENBQUMsQ0FBQztBQVFyRSxNQUFNLG9CQUFvQixHQUFHLENBQUMsR0FBUSxFQUE2QixFQUFFLENBQ25FLE9BQU8sQ0FBQyxHQUFHLENBQUM7SUFDWixPQUFPLEdBQUcsS0FBSyxRQUFRO0lBQ3ZCLE9BQU8sR0FBRyxDQUFDLHVCQUF1QixLQUFLLFFBQVE7SUFDL0MsT0FBTyxHQUFHLENBQUMsUUFBUSxLQUFLLFFBQVE7SUFDaEMsQ0FBQyxXQUFXLEVBQUUsUUFBUSxDQUFDLENBQUMsT0FBTyxDQUFDLE9BQU8sR0FBRyxDQUFDLGlCQUFpQixDQUFDLEdBQUcsQ0FBQyxDQUFDLENBQUM7QUFZckUsTUFBTSxtQkFBbUIsR0FBRyxDQUFDLEdBQVEsRUFBRSxFQUFFLENBQ3ZDLE9BQU8sQ0FBQyxHQUFHLENBQUM7SUFDWixPQUFPLEdBQUcsS0FBSyxRQUFRO0lBQ3ZCLE9BQU8sR0FBRyxDQUFDLFFBQVEsS0FBSyxRQUFRO0lBQ2hDLENBQUMsV0FBVyxFQUFFLFFBQVEsQ0FBQyxDQUFDLE9BQU8sQ0FBQyxPQUFPLEdBQUcsQ0FBQyxpQkFBaUIsQ0FBQyxHQUFHLENBQUMsQ0FBQztJQUNsRSxDQUFDLFdBQVcsRUFBRSxRQUFRLENBQUMsQ0FBQyxPQUFPLENBQUMsT0FBTyxHQUFHLENBQUMsV0FBVyxDQUFDLEdBQUcsQ0FBQyxDQUFDO0lBQzVELENBQUMsV0FBVyxFQUFFLFFBQVEsQ0FBQyxDQUFDLE9BQU8sQ0FBQyxPQUFPLEdBQUcsQ0FBQyxVQUFVLENBQUMsR0FBRyxDQUFDLENBQUMsQ0FBQztBQUU5RCxNQUFNLDZCQUE2QixHQUFHLENBQUMsR0FBUSxFQUFzQyxFQUFFLENBQ3JGLG1CQUFtQixDQUFDLEdBQUcsQ0FBQyxJQUFJLE9BQU8sR0FBRyxDQUFDLGNBQWMsS0FBSyxRQUFRLElBQUksT0FBTyxHQUFHLENBQUMsaUJBQWlCLEtBQUssV0FBVyxDQUFDO0FBRXJILE1BQU0sK0JBQStCLEdBQUcsQ0FBQyxHQUFRLEVBQXdDLEVBQUUsQ0FDekYsbUJBQW1CLENBQUMsR0FBRyxDQUFDLElBQUksT0FBTyxHQUFHLENBQUMsaUJBQWlCLEtBQUssUUFBUSxJQUFJLE9BQU8sR0FBRyxDQUFDLGNBQWMsS0FBSyxXQUFXLENBQUM7QUFFckg7OztHQUdHO0FBQ0ksTUFBTSxPQUFPLEdBQUcsQ0FBQyxPQUFvQixFQUFFLEVBQXNCLEVBQUUsQ0FBQyxLQUFLLElBQUksRUFBRTtJQUNoRixNQUFNLFFBQVEsR0FBRyxNQUFNLHVCQUFlLENBQUMsSUFBSSxDQUFDLENBQUM7SUFDN0MsT0FBTyxrQkFBa0IsQ0FBQyw0QkFBb0IsQ0FBQyxJQUFJLENBQUMsRUFBRSxRQUFRLEVBQUUsSUFBSSxDQUFDLENBQUM7QUFDeEUsQ0FBQyxDQUFDO0FBSFcsUUFBQSxPQUFPLFdBR2xCO0FBRUY7Ozs7O0dBS0c7QUFDSSxNQUFNLGVBQWUsR0FBRyxLQUFLLEVBQUUsSUFBdUIsRUFBMEIsRUFBRTtJQUN2RixNQUFNLEVBQUUsWUFBWSxHQUFHLDhDQUFxQixDQUFDLElBQUksQ0FBQyxFQUFFLEdBQUcsSUFBSSxDQUFDO0lBRTVELE1BQU0sV0FBVyxHQUFHLE1BQU0sWUFBWSxDQUFDO0lBQ3ZDLE9BQU87UUFDTCxHQUFHLFdBQVcsQ0FBQyxVQUFVO1FBQ3pCLEdBQUcsV0FBVyxDQUFDLGVBQWU7S0FDL0IsQ0FBQztBQUNKLENBQUMsQ0FBQztBQVJXLFFBQUEsZUFBZSxtQkFRMUI7QUFFRjs7R0FFRztBQUNJLE1BQU0sb0JBQW9CLEdBQUcsQ0FBQyxJQUEwQixFQUFVLEVBQUUsQ0FDekUsSUFBSSxDQUFDLE9BQU8sSUFBSSxPQUFPLENBQUMsR0FBRyxDQUFDLG1CQUFXLENBQUMsSUFBSSxlQUFlLENBQUM7QUFEakQsUUFBQSxvQkFBb0Isd0JBQzZCO0FBRTlELE1BQU0sa0JBQWtCLEdBQUcsS0FBSyxFQUM5QixXQUFtQixFQUNuQixRQUF1QixFQUN2QixPQUFvQixFQUNwQixrQkFBbUQsRUFBRSxFQUMvQixFQUFFO0lBQ3hCLE1BQU0sSUFBSSxHQUFHLFFBQVEsQ0FBQyxXQUFXLENBQUMsQ0FBQztJQUVuQyx5RUFBeUU7SUFDekUscUVBQXFFO0lBQ3JFLDBFQUEwRTtJQUMxRSxJQUFJLE1BQU0sQ0FBQyxJQUFJLENBQUMsZUFBZSxDQUFDLENBQUMsTUFBTSxHQUFHLENBQUMsSUFBSSxvQkFBb0IsQ0FBQyxJQUFJLENBQUMsRUFBRTtRQUN6RSxPQUFPLHdCQUF3QixDQUFDLElBQUksQ0FBQyxDQUFDO0tBQ3ZDO0lBRUQsdUVBQXVFO0lBQ3ZFLDRDQUE0QztJQUM1QyxJQUFJLDZCQUE2QixDQUFDLElBQUksQ0FBQyxJQUFJLCtCQUErQixDQUFDLElBQUksQ0FBQyxFQUFFO1FBQ2hGLE1BQU0sRUFDSixXQUFXLEVBQUUsVUFBVSxFQUN2QixVQUFVLEVBQ1YsUUFBUSxFQUFFLE9BQU8sRUFDakIsaUJBQWlCLEVBQUUsZUFBZSxHQUFHLGFBQWEsR0FBRyxJQUFJLENBQUMsR0FBRyxFQUFFLEVBQy9ELGNBQWMsRUFDZCxpQkFBaUIsR0FDbEIsR0FBRyxJQUFJLENBQUM7UUFFVCxJQUFJLENBQUMsT0FBTyxDQUFDLFdBQVcsRUFBRTtZQUN4QixNQUFNLElBQUksaUNBQWEsQ0FDckIsV0FBVyxXQUFXLHdDQUF3QyxHQUFHLHlDQUF5QyxFQUMxRyxLQUFLLENBQ04sQ0FBQztTQUNIO1FBRUQsSUFBSSxjQUFjLElBQUksY0FBYyxJQUFJLGVBQWUsRUFBRTtZQUN2RCxNQUFNLElBQUksaUNBQWEsQ0FDckIsZ0VBQWdFO2dCQUM5RCxJQUFJLDRCQUFvQixDQUFDLE9BQU8sQ0FBQyxzQkFBc0I7Z0JBQ3ZELE1BQU0sQ0FBQyxJQUFJLENBQUMsZUFBZSxDQUFDLENBQUMsSUFBSSxDQUFDLElBQUksQ0FBQyxFQUN6QyxLQUFLLENBQ04sQ0FBQztTQUNIO1FBRUQsTUFBTSxXQUFXLEdBQUcsY0FBYztZQUNoQyxDQUFDLENBQUMsa0JBQWtCLENBQUMsY0FBYyxFQUFFLFFBQVEsRUFBRSxPQUFPLEVBQUU7Z0JBQ3BELEdBQUcsZUFBZTtnQkFDbEIsQ0FBQyxjQUFjLENBQUMsRUFBRSxJQUFJO2FBQ3ZCLENBQUM7WUFDSixDQUFDLENBQUMsdUJBQXVCLENBQUMsaUJBQWtCLEVBQUUsV0FBVyxDQUFDLEVBQUUsQ0FBQztRQUUvRCxNQUFNLE1BQU0sR0FBcUIsRUFBRSxPQUFPLEVBQUUsZUFBZSxFQUFFLFVBQVUsRUFBRSxDQUFDO1FBQzFFLElBQUksVUFBVSxFQUFFO1lBQ2QsSUFBSSxDQUFDLE9BQU8sQ0FBQyxlQUFlLEVBQUU7Z0JBQzVCLE1BQU0sSUFBSSxpQ0FBYSxDQUNyQixXQUFXLFdBQVcsd0NBQXdDLEdBQUcseUNBQXlDLEVBQzFHLEtBQUssQ0FDTixDQUFDO2FBQ0g7WUFDRCxNQUFNLENBQUMsWUFBWSxHQUFHLFVBQVUsQ0FBQztZQUNqQyxNQUFNLENBQUMsU0FBUyxHQUFHLE1BQU0sT0FBTyxDQUFDLGVBQWUsQ0FBQyxVQUFVLENBQUMsQ0FBQztTQUM5RDtRQUVELE9BQU8sT0FBTyxDQUFDLFdBQVcsQ0FBQyxNQUFNLFdBQVcsRUFBRSxNQUFNLENBQUMsQ0FBQztLQUN2RDtJQUVELG9FQUFvRTtJQUNwRSx5Q0FBeUM7SUFDekMsSUFBSSxvQkFBb0IsQ0FBQyxJQUFJLENBQUMsRUFBRTtRQUM5QixPQUFPLHdCQUF3QixDQUFDLElBQUksQ0FBQyxDQUFDO0tBQ3ZDO0lBRUQsb0VBQW9FO0lBQ3BFLG9FQUFvRTtJQUNwRSxJQUFJLG9CQUFvQixDQUFDLElBQUksQ0FBQyxFQUFFO1FBQzlCLE9BQU8sNkJBQTZCLENBQUMsSUFBSSxFQUFFLE9BQU8sQ0FBQyxDQUFDO0tBQ3JEO0lBRUQseUVBQXlFO0lBQ3pFLDRFQUE0RTtJQUM1RSx3RUFBd0U7SUFDeEUsMEVBQTBFO0lBQzFFLHlCQUF5QjtJQUN6QixNQUFNLElBQUksaUNBQWEsQ0FBQyxXQUFXLFdBQVcseUNBQXlDLEdBQUcsb0JBQW9CLENBQUMsQ0FBQztBQUNsSCxDQUFDLENBQUM7QUFFRjs7Ozs7O0dBTUc7QUFDSCxNQUFNLHVCQUF1QixHQUFHLENBQUMsZ0JBQXdCLEVBQUUsV0FBbUIsRUFBc0IsRUFBRTtJQUNwRyxNQUFNLGtCQUFrQixHQUFpRDtRQUN2RSxZQUFZLEVBQUUsZ0RBQXFCO1FBQ25DLG1CQUFtQixFQUFFLCtDQUFvQjtRQUN6QyxXQUFXLEVBQUUsaUNBQU87S0FDckIsQ0FBQztJQUNGLElBQUksZ0JBQWdCLElBQUksa0JBQWtCLEVBQUU7UUFDMUMsT0FBTyxrQkFBa0IsQ0FBQyxnQkFBZ0IsQ0FBQyxFQUFFLENBQUM7S0FDL0M7U0FBTTtRQUNMLE1BQU0sSUFBSSxpQ0FBYSxDQUNyQiw0Q0FBNEMsV0FBVyxTQUFTLGdCQUFnQixJQUFJO1lBQ2xGLDhEQUE4RCxDQUNqRSxDQUFDO0tBQ0g7QUFDSCxDQUFDLENBQUM7QUFFRixNQUFNLHdCQUF3QixHQUFHLENBQUMsT0FBMkIsRUFBd0IsRUFBRSxDQUNyRixPQUFPLENBQUMsT0FBTyxDQUFDO0lBQ2QsV0FBVyxFQUFFLE9BQU8sQ0FBQyxpQkFBaUI7SUFDdEMsZUFBZSxFQUFFLE9BQU8sQ0FBQyxxQkFBcUI7SUFDOUMsWUFBWSxFQUFFLE9BQU8sQ0FBQyxpQkFBaUI7Q0FDeEMsQ0FBQyxDQUFDO0FBRUwsTUFBTSw2QkFBNkIsR0FBRyxLQUFLLEVBQUUsT0FBMkIsRUFBRSxPQUFvQixFQUF3QixFQUFFLENBQ3RILGdEQUFhLENBQUM7SUFDWixvQkFBb0IsRUFBRSxPQUFPLENBQUMsdUJBQXVCO0lBQ3JELE9BQU8sRUFBRSxPQUFPLENBQUMsUUFBUTtJQUN6QixlQUFlLEVBQUUsT0FBTyxDQUFDLGlCQUFpQjtJQUMxQywwQkFBMEIsRUFBRSxPQUFPLENBQUMsMEJBQTBCO0NBQy9ELENBQUMsRUFBRSxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgZnJvbUVudiB9IGZyb20gXCJAYXdzLXNkay9jcmVkZW50aWFsLXByb3ZpZGVyLWVudlwiO1xuaW1wb3J0IHsgZnJvbUNvbnRhaW5lck1ldGFkYXRhLCBmcm9tSW5zdGFuY2VNZXRhZGF0YSB9IGZyb20gXCJAYXdzLXNkay9jcmVkZW50aWFsLXByb3ZpZGVyLWltZHNcIjtcbmltcG9ydCB7IEFzc3VtZVJvbGVXaXRoV2ViSWRlbnRpdHlQYXJhbXMsIGZyb21Ub2tlbkZpbGUgfSBmcm9tIFwiQGF3cy1zZGsvY3JlZGVudGlhbC1wcm92aWRlci13ZWItaWRlbnRpdHlcIjtcbmltcG9ydCB7IFByb3ZpZGVyRXJyb3IgfSBmcm9tIFwiQGF3cy1zZGsvcHJvcGVydHktcHJvdmlkZXJcIjtcbmltcG9ydCB7XG4gIGxvYWRTaGFyZWRDb25maWdGaWxlcyxcbiAgUGFyc2VkSW5pRGF0YSxcbiAgUHJvZmlsZSxcbiAgU2hhcmVkQ29uZmlnRmlsZXMsXG4gIFNoYXJlZENvbmZpZ0luaXQsXG59IGZyb20gXCJAYXdzLXNkay9zaGFyZWQtaW5pLWZpbGUtbG9hZGVyXCI7XG5pbXBvcnQgeyBDcmVkZW50aWFsUHJvdmlkZXIsIENyZWRlbnRpYWxzIH0gZnJvbSBcIkBhd3Mtc2RrL3R5cGVzXCI7XG5cbmNvbnN0IERFRkFVTFRfUFJPRklMRSA9IFwiZGVmYXVsdFwiO1xuZXhwb3J0IGNvbnN0IEVOVl9QUk9GSUxFID0gXCJBV1NfUFJPRklMRVwiO1xuXG4vKipcbiAqIEBzZWUgaHR0cDovL2RvY3MuYXdzLmFtYXpvbi5jb20vQVdTSmF2YVNjcmlwdFNESy9sYXRlc3QvQVdTL1NUUy5odG1sI2Fzc3VtZVJvbGUtcHJvcGVydHlcbiAqIFRPRE8gdXBkYXRlIHRoZSBhYm92ZSB0byBsaW5rIHRvIFYzIGRvY3NcbiAqL1xuZXhwb3J0IGludGVyZmFjZSBBc3N1bWVSb2xlUGFyYW1zIHtcbiAgLyoqXG4gICAqIFRoZSBpZGVudGlmaWVyIG9mIHRoZSByb2xlIHRvIGJlIGFzc3VtZWQuXG4gICAqL1xuICBSb2xlQXJuOiBzdHJpbmc7XG5cbiAgLyoqXG4gICAqIEEgbmFtZSBmb3IgdGhlIGFzc3VtZWQgcm9sZSBzZXNzaW9uLlxuICAgKi9cbiAgUm9sZVNlc3Npb25OYW1lOiBzdHJpbmc7XG5cbiAgLyoqXG4gICAqIEEgdW5pcXVlIGlkZW50aWZpZXIgdGhhdCBpcyB1c2VkIGJ5IHRoaXJkIHBhcnRpZXMgd2hlbiBhc3N1bWluZyByb2xlcyBpblxuICAgKiB0aGVpciBjdXN0b21lcnMnIGFjY291bnRzLlxuICAgKi9cbiAgRXh0ZXJuYWxJZD86IHN0cmluZztcblxuICAvKipcbiAgICogVGhlIGlkZW50aWZpY2F0aW9uIG51bWJlciBvZiB0aGUgTUZBIGRldmljZSB0aGF0IGlzIGFzc29jaWF0ZWQgd2l0aCB0aGVcbiAgICogdXNlciB3aG8gaXMgbWFraW5nIHRoZSBgQXNzdW1lUm9sZWAgY2FsbC5cbiAgICovXG4gIFNlcmlhbE51bWJlcj86IHN0cmluZztcblxuICAvKipcbiAgICogVGhlIHZhbHVlIHByb3ZpZGVkIGJ5IHRoZSBNRkEgZGV2aWNlLlxuICAgKi9cbiAgVG9rZW5Db2RlPzogc3RyaW5nO1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIFNvdXJjZVByb2ZpbGVJbml0IGV4dGVuZHMgU2hhcmVkQ29uZmlnSW5pdCB7XG4gIC8qKlxuICAgKiBUaGUgY29uZmlndXJhdGlvbiBwcm9maWxlIHRvIHVzZS5cbiAgICovXG4gIHByb2ZpbGU/OiBzdHJpbmc7XG5cbiAgLyoqXG4gICAqIEEgcHJvbWlzZSB0aGF0IHdpbGwgYmUgcmVzb2x2ZWQgd2l0aCBsb2FkZWQgYW5kIHBhcnNlZCBjcmVkZW50aWFscyBmaWxlcy5cbiAgICogVXNlZCB0byBhdm9pZCBsb2FkaW5nIHNoYXJlZCBjb25maWcgZmlsZXMgbXVsdGlwbGUgdGltZXMuXG4gICAqXG4gICAqIEBpbnRlcm5hbFxuICAgKi9cbiAgbG9hZGVkQ29uZmlnPzogUHJvbWlzZTxTaGFyZWRDb25maWdGaWxlcz47XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgRnJvbUluaUluaXQgZXh0ZW5kcyBTb3VyY2VQcm9maWxlSW5pdCB7XG4gIC8qKlxuICAgKiBBIGZ1bmN0aW9uIHRoYXQgcmV0dXJucyBhIHByb21pc2UgZnVsZmlsbGVkIHdpdGggYW4gTUZBIHRva2VuIGNvZGUgZm9yXG4gICAqIHRoZSBwcm92aWRlZCBNRkEgU2VyaWFsIGNvZGUuIElmIGEgcHJvZmlsZSByZXF1aXJlcyBhbiBNRkEgY29kZSBhbmRcbiAgICogYG1mYUNvZGVQcm92aWRlcmAgaXMgbm90IGEgdmFsaWQgZnVuY3Rpb24sIHRoZSBjcmVkZW50aWFsIHByb3ZpZGVyXG4gICAqIHByb21pc2Ugd2lsbCBiZSByZWplY3RlZC5cbiAgICpcbiAgICogQHBhcmFtIG1mYVNlcmlhbCBUaGUgc2VyaWFsIGNvZGUgb2YgdGhlIE1GQSBkZXZpY2Ugc3BlY2lmaWVkLlxuICAgKi9cbiAgbWZhQ29kZVByb3ZpZGVyPzogKG1mYVNlcmlhbDogc3RyaW5nKSA9PiBQcm9taXNlPHN0cmluZz47XG5cbiAgLyoqXG4gICAqIEEgZnVuY3Rpb24gdGhhdCBhc3N1bWVzIGEgcm9sZSBhbmQgcmV0dXJucyBhIHByb21pc2UgZnVsZmlsbGVkIHdpdGhcbiAgICogY3JlZGVudGlhbHMgZm9yIHRoZSBhc3N1bWVkIHJvbGUuXG4gICAqXG4gICAqIEBwYXJhbSBzb3VyY2VDcmVkcyBUaGUgY3JlZGVudGlhbHMgd2l0aCB3aGljaCB0byBhc3N1bWUgYSByb2xlLlxuICAgKiBAcGFyYW0gcGFyYW1zXG4gICAqL1xuICByb2xlQXNzdW1lcj86IChzb3VyY2VDcmVkczogQ3JlZGVudGlhbHMsIHBhcmFtczogQXNzdW1lUm9sZVBhcmFtcykgPT4gUHJvbWlzZTxDcmVkZW50aWFscz47XG5cbiAgLyoqXG4gICAqIEEgZnVuY3Rpb24gdGhhdCBhc3N1bWVzIGEgcm9sZSB3aXRoIHdlYiBpZGVudGl0eSBhbmQgcmV0dXJucyBhIHByb21pc2UgZnVsZmlsbGVkIHdpdGhcbiAgICogY3JlZGVudGlhbHMgZm9yIHRoZSBhc3N1bWVkIHJvbGUuXG4gICAqXG4gICAqIEBwYXJhbSBzb3VyY2VDcmVkcyBUaGUgY3JlZGVudGlhbHMgd2l0aCB3aGljaCB0byBhc3N1bWUgYSByb2xlLlxuICAgKiBAcGFyYW0gcGFyYW1zXG4gICAqL1xuICByb2xlQXNzdW1lcldpdGhXZWJJZGVudGl0eT86IChwYXJhbXM6IEFzc3VtZVJvbGVXaXRoV2ViSWRlbnRpdHlQYXJhbXMpID0+IFByb21pc2U8Q3JlZGVudGlhbHM+O1xufVxuXG5pbnRlcmZhY2UgU3RhdGljQ3JlZHNQcm9maWxlIGV4dGVuZHMgUHJvZmlsZSB7XG4gIGF3c19hY2Nlc3Nfa2V5X2lkOiBzdHJpbmc7XG4gIGF3c19zZWNyZXRfYWNjZXNzX2tleTogc3RyaW5nO1xuICBhd3Nfc2Vzc2lvbl90b2tlbj86IHN0cmluZztcbn1cblxuY29uc3QgaXNTdGF0aWNDcmVkc1Byb2ZpbGUgPSAoYXJnOiBhbnkpOiBhcmcgaXMgU3RhdGljQ3JlZHNQcm9maWxlID0+XG4gIEJvb2xlYW4oYXJnKSAmJlxuICB0eXBlb2YgYXJnID09PSBcIm9iamVjdFwiICYmXG4gIHR5cGVvZiBhcmcuYXdzX2FjY2Vzc19rZXlfaWQgPT09IFwic3RyaW5nXCIgJiZcbiAgdHlwZW9mIGFyZy5hd3Nfc2VjcmV0X2FjY2Vzc19rZXkgPT09IFwic3RyaW5nXCIgJiZcbiAgW1widW5kZWZpbmVkXCIsIFwic3RyaW5nXCJdLmluZGV4T2YodHlwZW9mIGFyZy5hd3Nfc2Vzc2lvbl90b2tlbikgPiAtMTtcblxuaW50ZXJmYWNlIFdlYklkZW50aXR5UHJvZmlsZSBleHRlbmRzIFByb2ZpbGUge1xuICB3ZWJfaWRlbnRpdHlfdG9rZW5fZmlsZTogc3RyaW5nO1xuICByb2xlX2Fybjogc3RyaW5nO1xuICByb2xlX3Nlc3Npb25fbmFtZT86IHN0cmluZztcbn1cblxuY29uc3QgaXNXZWJJZGVudGl0eVByb2ZpbGUgPSAoYXJnOiBhbnkpOiBhcmcgaXMgV2ViSWRlbnRpdHlQcm9maWxlID0+XG4gIEJvb2xlYW4oYXJnKSAmJlxuICB0eXBlb2YgYXJnID09PSBcIm9iamVjdFwiICYmXG4gIHR5cGVvZiBhcmcud2ViX2lkZW50aXR5X3Rva2VuX2ZpbGUgPT09IFwic3RyaW5nXCIgJiZcbiAgdHlwZW9mIGFyZy5yb2xlX2FybiA9PT0gXCJzdHJpbmdcIiAmJlxuICBbXCJ1bmRlZmluZWRcIiwgXCJzdHJpbmdcIl0uaW5kZXhPZih0eXBlb2YgYXJnLnJvbGVfc2Vzc2lvbl9uYW1lKSA+IC0xO1xuXG5pbnRlcmZhY2UgQXNzdW1lUm9sZVdpdGhTb3VyY2VQcm9maWxlIGV4dGVuZHMgUHJvZmlsZSB7XG4gIHJvbGVfYXJuOiBzdHJpbmc7XG4gIHNvdXJjZV9wcm9maWxlOiBzdHJpbmc7XG59XG5cbmludGVyZmFjZSBBc3N1bWVSb2xlV2l0aFByb3ZpZGVyUHJvZmlsZSBleHRlbmRzIFByb2ZpbGUge1xuICByb2xlX2Fybjogc3RyaW5nO1xuICBjcmVkZW50aWFsX3NvdXJjZTogc3RyaW5nO1xufVxuXG5jb25zdCBpc0Fzc3VtZVJvbGVQcm9maWxlID0gKGFyZzogYW55KSA9PlxuICBCb29sZWFuKGFyZykgJiZcbiAgdHlwZW9mIGFyZyA9PT0gXCJvYmplY3RcIiAmJlxuICB0eXBlb2YgYXJnLnJvbGVfYXJuID09PSBcInN0cmluZ1wiICYmXG4gIFtcInVuZGVmaW5lZFwiLCBcInN0cmluZ1wiXS5pbmRleE9mKHR5cGVvZiBhcmcucm9sZV9zZXNzaW9uX25hbWUpID4gLTEgJiZcbiAgW1widW5kZWZpbmVkXCIsIFwic3RyaW5nXCJdLmluZGV4T2YodHlwZW9mIGFyZy5leHRlcm5hbF9pZCkgPiAtMSAmJlxuICBbXCJ1bmRlZmluZWRcIiwgXCJzdHJpbmdcIl0uaW5kZXhPZih0eXBlb2YgYXJnLm1mYV9zZXJpYWwpID4gLTE7XG5cbmNvbnN0IGlzQXNzdW1lUm9sZVdpdGhTb3VyY2VQcm9maWxlID0gKGFyZzogYW55KTogYXJnIGlzIEFzc3VtZVJvbGVXaXRoU291cmNlUHJvZmlsZSA9PlxuICBpc0Fzc3VtZVJvbGVQcm9maWxlKGFyZykgJiYgdHlwZW9mIGFyZy5zb3VyY2VfcHJvZmlsZSA9PT0gXCJzdHJpbmdcIiAmJiB0eXBlb2YgYXJnLmNyZWRlbnRpYWxfc291cmNlID09PSBcInVuZGVmaW5lZFwiO1xuXG5jb25zdCBpc0Fzc3VtZVJvbGVXaXRoUHJvdmlkZXJQcm9maWxlID0gKGFyZzogYW55KTogYXJnIGlzIEFzc3VtZVJvbGVXaXRoUHJvdmlkZXJQcm9maWxlID0+XG4gIGlzQXNzdW1lUm9sZVByb2ZpbGUoYXJnKSAmJiB0eXBlb2YgYXJnLmNyZWRlbnRpYWxfc291cmNlID09PSBcInN0cmluZ1wiICYmIHR5cGVvZiBhcmcuc291cmNlX3Byb2ZpbGUgPT09IFwidW5kZWZpbmVkXCI7XG5cbi8qKlxuICogQ3JlYXRlcyBhIGNyZWRlbnRpYWwgcHJvdmlkZXIgdGhhdCB3aWxsIHJlYWQgZnJvbSBpbmkgZmlsZXMgYW5kIHN1cHBvcnRzXG4gKiByb2xlIGFzc3VtcHRpb24gYW5kIG11bHRpLWZhY3RvciBhdXRoZW50aWNhdGlvbi5cbiAqL1xuZXhwb3J0IGNvbnN0IGZyb21JbmkgPSAoaW5pdDogRnJvbUluaUluaXQgPSB7fSk6IENyZWRlbnRpYWxQcm92aWRlciA9PiBhc3luYyAoKSA9PiB7XG4gIGNvbnN0IHByb2ZpbGVzID0gYXdhaXQgcGFyc2VLbm93bkZpbGVzKGluaXQpO1xuICByZXR1cm4gcmVzb2x2ZVByb2ZpbGVEYXRhKGdldE1hc3RlclByb2ZpbGVOYW1lKGluaXQpLCBwcm9maWxlcywgaW5pdCk7XG59O1xuXG4vKipcbiAqIExvYWQgcHJvZmlsZXMgZnJvbSBjcmVkZW50aWFscyBhbmQgY29uZmlnIElOSSBmaWxlcyBhbmQgbm9ybWFsaXplIHRoZW0gaW50byBhXG4gKiBzaW5nbGUgcHJvZmlsZSBsaXN0LlxuICpcbiAqIEBpbnRlcm5hbFxuICovXG5leHBvcnQgY29uc3QgcGFyc2VLbm93bkZpbGVzID0gYXN5bmMgKGluaXQ6IFNvdXJjZVByb2ZpbGVJbml0KTogUHJvbWlzZTxQYXJzZWRJbmlEYXRhPiA9PiB7XG4gIGNvbnN0IHsgbG9hZGVkQ29uZmlnID0gbG9hZFNoYXJlZENvbmZpZ0ZpbGVzKGluaXQpIH0gPSBpbml0O1xuXG4gIGNvbnN0IHBhcnNlZEZpbGVzID0gYXdhaXQgbG9hZGVkQ29uZmlnO1xuICByZXR1cm4ge1xuICAgIC4uLnBhcnNlZEZpbGVzLmNvbmZpZ0ZpbGUsXG4gICAgLi4ucGFyc2VkRmlsZXMuY3JlZGVudGlhbHNGaWxlLFxuICB9O1xufTtcblxuLyoqXG4gKiBAaW50ZXJuYWxcbiAqL1xuZXhwb3J0IGNvbnN0IGdldE1hc3RlclByb2ZpbGVOYW1lID0gKGluaXQ6IHsgcHJvZmlsZT86IHN0cmluZyB9KTogc3RyaW5nID0+XG4gIGluaXQucHJvZmlsZSB8fCBwcm9jZXNzLmVudltFTlZfUFJPRklMRV0gfHwgREVGQVVMVF9QUk9GSUxFO1xuXG5jb25zdCByZXNvbHZlUHJvZmlsZURhdGEgPSBhc3luYyAoXG4gIHByb2ZpbGVOYW1lOiBzdHJpbmcsXG4gIHByb2ZpbGVzOiBQYXJzZWRJbmlEYXRhLFxuICBvcHRpb25zOiBGcm9tSW5pSW5pdCxcbiAgdmlzaXRlZFByb2ZpbGVzOiB7IFtwcm9maWxlTmFtZTogc3RyaW5nXTogdHJ1ZSB9ID0ge31cbik6IFByb21pc2U8Q3JlZGVudGlhbHM+ID0+IHtcbiAgY29uc3QgZGF0YSA9IHByb2ZpbGVzW3Byb2ZpbGVOYW1lXTtcblxuICAvLyBJZiB0aGlzIGlzIG5vdCB0aGUgZmlyc3QgcHJvZmlsZSB2aXNpdGVkLCBzdGF0aWMgY3JlZGVudGlhbHMgc2hvdWxkIGJlXG4gIC8vIHByZWZlcnJlZCBvdmVyIHJvbGUgYXNzdW1wdGlvbiBtZXRhZGF0YS4gVGhpcyBzcGVjaWFsIHRyZWF0bWVudCBvZlxuICAvLyBzZWNvbmQgYW5kIHN1YnNlcXVlbnQgaG9wcyBpcyB0byBlbnN1cmUgY29tcGF0aWJpbGl0eSB3aXRoIHRoZSBBV1MgQ0xJLlxuICBpZiAoT2JqZWN0LmtleXModmlzaXRlZFByb2ZpbGVzKS5sZW5ndGggPiAwICYmIGlzU3RhdGljQ3JlZHNQcm9maWxlKGRhdGEpKSB7XG4gICAgcmV0dXJuIHJlc29sdmVTdGF0aWNDcmVkZW50aWFscyhkYXRhKTtcbiAgfVxuXG4gIC8vIElmIHRoaXMgaXMgdGhlIGZpcnN0IHByb2ZpbGUgdmlzaXRlZCwgcm9sZSBhc3N1bXB0aW9uIGtleXMgc2hvdWxkIGJlXG4gIC8vIGdpdmVuIHByZWNlZGVuY2Ugb3ZlciBzdGF0aWMgY3JlZGVudGlhbHMuXG4gIGlmIChpc0Fzc3VtZVJvbGVXaXRoU291cmNlUHJvZmlsZShkYXRhKSB8fCBpc0Fzc3VtZVJvbGVXaXRoUHJvdmlkZXJQcm9maWxlKGRhdGEpKSB7XG4gICAgY29uc3Qge1xuICAgICAgZXh0ZXJuYWxfaWQ6IEV4dGVybmFsSWQsXG4gICAgICBtZmFfc2VyaWFsLFxuICAgICAgcm9sZV9hcm46IFJvbGVBcm4sXG4gICAgICByb2xlX3Nlc3Npb25fbmFtZTogUm9sZVNlc3Npb25OYW1lID0gXCJhd3Mtc2RrLWpzLVwiICsgRGF0ZS5ub3coKSxcbiAgICAgIHNvdXJjZV9wcm9maWxlLFxuICAgICAgY3JlZGVudGlhbF9zb3VyY2UsXG4gICAgfSA9IGRhdGE7XG5cbiAgICBpZiAoIW9wdGlvbnMucm9sZUFzc3VtZXIpIHtcbiAgICAgIHRocm93IG5ldyBQcm92aWRlckVycm9yKFxuICAgICAgICBgUHJvZmlsZSAke3Byb2ZpbGVOYW1lfSByZXF1aXJlcyBhIHJvbGUgdG8gYmUgYXNzdW1lZCwgYnV0IG5vYCArIGAgcm9sZSBhc3N1bXB0aW9uIGNhbGxiYWNrIHdhcyBwcm92aWRlZC5gLFxuICAgICAgICBmYWxzZVxuICAgICAgKTtcbiAgICB9XG5cbiAgICBpZiAoc291cmNlX3Byb2ZpbGUgJiYgc291cmNlX3Byb2ZpbGUgaW4gdmlzaXRlZFByb2ZpbGVzKSB7XG4gICAgICB0aHJvdyBuZXcgUHJvdmlkZXJFcnJvcihcbiAgICAgICAgYERldGVjdGVkIGEgY3ljbGUgYXR0ZW1wdGluZyB0byByZXNvbHZlIGNyZWRlbnRpYWxzIGZvciBwcm9maWxlYCArXG4gICAgICAgICAgYCAke2dldE1hc3RlclByb2ZpbGVOYW1lKG9wdGlvbnMpfS4gUHJvZmlsZXMgdmlzaXRlZDogYCArXG4gICAgICAgICAgT2JqZWN0LmtleXModmlzaXRlZFByb2ZpbGVzKS5qb2luKFwiLCBcIiksXG4gICAgICAgIGZhbHNlXG4gICAgICApO1xuICAgIH1cblxuICAgIGNvbnN0IHNvdXJjZUNyZWRzID0gc291cmNlX3Byb2ZpbGVcbiAgICAgID8gcmVzb2x2ZVByb2ZpbGVEYXRhKHNvdXJjZV9wcm9maWxlLCBwcm9maWxlcywgb3B0aW9ucywge1xuICAgICAgICAgIC4uLnZpc2l0ZWRQcm9maWxlcyxcbiAgICAgICAgICBbc291cmNlX3Byb2ZpbGVdOiB0cnVlLFxuICAgICAgICB9KVxuICAgICAgOiByZXNvbHZlQ3JlZGVudGlhbFNvdXJjZShjcmVkZW50aWFsX3NvdXJjZSEsIHByb2ZpbGVOYW1lKSgpO1xuXG4gICAgY29uc3QgcGFyYW1zOiBBc3N1bWVSb2xlUGFyYW1zID0geyBSb2xlQXJuLCBSb2xlU2Vzc2lvbk5hbWUsIEV4dGVybmFsSWQgfTtcbiAgICBpZiAobWZhX3NlcmlhbCkge1xuICAgICAgaWYgKCFvcHRpb25zLm1mYUNvZGVQcm92aWRlcikge1xuICAgICAgICB0aHJvdyBuZXcgUHJvdmlkZXJFcnJvcihcbiAgICAgICAgICBgUHJvZmlsZSAke3Byb2ZpbGVOYW1lfSByZXF1aXJlcyBtdWx0aS1mYWN0b3IgYXV0aGVudGljYXRpb24sYCArIGAgYnV0IG5vIE1GQSBjb2RlIGNhbGxiYWNrIHdhcyBwcm92aWRlZC5gLFxuICAgICAgICAgIGZhbHNlXG4gICAgICAgICk7XG4gICAgICB9XG4gICAgICBwYXJhbXMuU2VyaWFsTnVtYmVyID0gbWZhX3NlcmlhbDtcbiAgICAgIHBhcmFtcy5Ub2tlbkNvZGUgPSBhd2FpdCBvcHRpb25zLm1mYUNvZGVQcm92aWRlcihtZmFfc2VyaWFsKTtcbiAgICB9XG5cbiAgICByZXR1cm4gb3B0aW9ucy5yb2xlQXNzdW1lcihhd2FpdCBzb3VyY2VDcmVkcywgcGFyYW1zKTtcbiAgfVxuXG4gIC8vIElmIG5vIHJvbGUgYXNzdW1wdGlvbiBtZXRhZGF0YSBpcyBwcmVzZW50LCBhdHRlbXB0IHRvIGxvYWQgc3RhdGljXG4gIC8vIGNyZWRlbnRpYWxzIGZyb20gdGhlIHNlbGVjdGVkIHByb2ZpbGUuXG4gIGlmIChpc1N0YXRpY0NyZWRzUHJvZmlsZShkYXRhKSkge1xuICAgIHJldHVybiByZXNvbHZlU3RhdGljQ3JlZGVudGlhbHMoZGF0YSk7XG4gIH1cblxuICAvLyBJZiBubyBzdGF0aWMgY3JlZGVudGlhbHMgYXJlIHByZXNlbnQsIGF0dGVtcHQgdG8gYXNzdW1lIHJvbGUgd2l0aFxuICAvLyB3ZWIgaWRlbnRpdHkgaWYgd2ViX2lkZW50aXR5X3Rva2VuX2ZpbGUgYW5kIHJvbGVfYXJuIGlzIGF2YWlsYWJsZVxuICBpZiAoaXNXZWJJZGVudGl0eVByb2ZpbGUoZGF0YSkpIHtcbiAgICByZXR1cm4gcmVzb2x2ZVdlYklkZW50aXR5Q3JlZGVudGlhbHMoZGF0YSwgb3B0aW9ucyk7XG4gIH1cblxuICAvLyBJZiB0aGUgcHJvZmlsZSBjYW5ub3QgYmUgcGFyc2VkIG9yIGNvbnRhaW5zIG5laXRoZXIgc3RhdGljIGNyZWRlbnRpYWxzXG4gIC8vIG5vciByb2xlIGFzc3VtcHRpb24gbWV0YWRhdGEsIHRocm93IGFuIGVycm9yLiBUaGlzIHNob3VsZCBiZSBjb25zaWRlcmVkIGFcbiAgLy8gdGVybWluYWwgcmVzb2x1dGlvbiBlcnJvciBpZiBhIHByb2ZpbGUgaGFzIGJlZW4gc3BlY2lmaWVkIGJ5IHRoZSB1c2VyXG4gIC8vICh3aGV0aGVyIHZpYSBhIHBhcmFtZXRlciwgYW4gZW52aXJvbm1lbnQgdmFyaWFibGUsIG9yIGFub3RoZXIgcHJvZmlsZSdzXG4gIC8vIGBzb3VyY2VfcHJvZmlsZWAga2V5KS5cbiAgdGhyb3cgbmV3IFByb3ZpZGVyRXJyb3IoYFByb2ZpbGUgJHtwcm9maWxlTmFtZX0gY291bGQgbm90IGJlIGZvdW5kIG9yIHBhcnNlZCBpbiBzaGFyZWRgICsgYCBjcmVkZW50aWFscyBmaWxlLmApO1xufTtcblxuLyoqXG4gKiBSZXNvbHZlIHRoZSBgY3JlZGVudGlhbF9zb3VyY2VgIGVudHJ5IGZyb20gdGhlIHByb2ZpbGUsIGFuZCByZXR1cm4gdGhlXG4gKiBjcmVkZW50aWFsIHByb3ZpZGVycyByZXNwZWN0aXZlbHkuIE5vIG1lbW9pemF0aW9uIGlzIG5lZWRlZCBmb3IgdGhlXG4gKiBjcmVkZW50aWFsIHNvdXJjZSBwcm92aWRlcnMgYmVjYXVzZSBtZW1vaXphdGlvbiBzaG91bGQgYmUgYWRkZWQgb3V0c2lkZSB0aGVcbiAqIGZyb21JbmkoKSBwcm92aWRlci4gVGhlIHNvdXJjZSBjcmVkZW50aWFsIG5lZWRzIHRvIGJlIHJlZnJlc2hlZCBldmVyeSB0aW1lXG4gKiBmcm9tSW5pKCkgaXMgY2FsbGVkLlxuICovXG5jb25zdCByZXNvbHZlQ3JlZGVudGlhbFNvdXJjZSA9IChjcmVkZW50aWFsU291cmNlOiBzdHJpbmcsIHByb2ZpbGVOYW1lOiBzdHJpbmcpOiBDcmVkZW50aWFsUHJvdmlkZXIgPT4ge1xuICBjb25zdCBzb3VyY2VQcm92aWRlcnNNYXA6IHsgW25hbWU6IHN0cmluZ106ICgpID0+IENyZWRlbnRpYWxQcm92aWRlciB9ID0ge1xuICAgIEVjc0NvbnRhaW5lcjogZnJvbUNvbnRhaW5lck1ldGFkYXRhLFxuICAgIEVjMkluc3RhbmNlTWV0YWRhdGE6IGZyb21JbnN0YW5jZU1ldGFkYXRhLFxuICAgIEVudmlyb25tZW50OiBmcm9tRW52LFxuICB9O1xuICBpZiAoY3JlZGVudGlhbFNvdXJjZSBpbiBzb3VyY2VQcm92aWRlcnNNYXApIHtcbiAgICByZXR1cm4gc291cmNlUHJvdmlkZXJzTWFwW2NyZWRlbnRpYWxTb3VyY2VdKCk7XG4gIH0gZWxzZSB7XG4gICAgdGhyb3cgbmV3IFByb3ZpZGVyRXJyb3IoXG4gICAgICBgVW5zdXBwb3J0ZWQgY3JlZGVudGlhbCBzb3VyY2UgaW4gcHJvZmlsZSAke3Byb2ZpbGVOYW1lfS4gR290ICR7Y3JlZGVudGlhbFNvdXJjZX0sIGAgK1xuICAgICAgICBgZXhwZWN0ZWQgRWNzQ29udGFpbmVyIG9yIEVjMkluc3RhbmNlTWV0YWRhdGEgb3IgRW52aXJvbm1lbnQuYFxuICAgICk7XG4gIH1cbn07XG5cbmNvbnN0IHJlc29sdmVTdGF0aWNDcmVkZW50aWFscyA9IChwcm9maWxlOiBTdGF0aWNDcmVkc1Byb2ZpbGUpOiBQcm9taXNlPENyZWRlbnRpYWxzPiA9PlxuICBQcm9taXNlLnJlc29sdmUoe1xuICAgIGFjY2Vzc0tleUlkOiBwcm9maWxlLmF3c19hY2Nlc3Nfa2V5X2lkLFxuICAgIHNlY3JldEFjY2Vzc0tleTogcHJvZmlsZS5hd3Nfc2VjcmV0X2FjY2Vzc19rZXksXG4gICAgc2Vzc2lvblRva2VuOiBwcm9maWxlLmF3c19zZXNzaW9uX3Rva2VuLFxuICB9KTtcblxuY29uc3QgcmVzb2x2ZVdlYklkZW50aXR5Q3JlZGVudGlhbHMgPSBhc3luYyAocHJvZmlsZTogV2ViSWRlbnRpdHlQcm9maWxlLCBvcHRpb25zOiBGcm9tSW5pSW5pdCk6IFByb21pc2U8Q3JlZGVudGlhbHM+ID0+XG4gIGZyb21Ub2tlbkZpbGUoe1xuICAgIHdlYklkZW50aXR5VG9rZW5GaWxlOiBwcm9maWxlLndlYl9pZGVudGl0eV90b2tlbl9maWxlLFxuICAgIHJvbGVBcm46IHByb2ZpbGUucm9sZV9hcm4sXG4gICAgcm9sZVNlc3Npb25OYW1lOiBwcm9maWxlLnJvbGVfc2Vzc2lvbl9uYW1lLFxuICAgIHJvbGVBc3N1bWVyV2l0aFdlYklkZW50aXR5OiBvcHRpb25zLnJvbGVBc3N1bWVyV2l0aFdlYklkZW50aXR5LFxuICB9KSgpO1xuIl19
 
 /***/ }),
 
@@ -58124,7 +58620,7 @@ class StandardRetryStrategy {
     }
 }
 exports.StandardRetryStrategy = StandardRetryStrategy;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZGVmYXVsdFN0cmF0ZWd5LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vc3JjL2RlZmF1bHRTdHJhdGVneS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFBQSwwREFBcUQ7QUFDckQsd0ZBQTBFO0FBRzFFLCtCQUEwQjtBQUUxQiwyQ0FNcUI7QUFDckIsMkRBQTJEO0FBQzNELGlEQUFxRDtBQUNyRCxpREFBcUQ7QUFFckQ7OztHQUdHO0FBQ1UsUUFBQSxvQkFBb0IsR0FBRyxDQUFDLENBQUM7QUFFdEM7O0dBRUc7QUFDVSxRQUFBLGtCQUFrQixHQUFHLFVBQVUsQ0FBQztBQW9EN0MsTUFBYSxxQkFBcUI7SUFNaEMsWUFBNkIsbUJBQXFDLEVBQUUsT0FBc0M7O1FBQTdFLHdCQUFtQixHQUFuQixtQkFBbUIsQ0FBa0I7UUFGbEQsU0FBSSxHQUFHLDBCQUFrQixDQUFDO1FBR3hDLElBQUksQ0FBQyxZQUFZLFNBQUcsT0FBTyxhQUFQLE9BQU8sdUJBQVAsT0FBTyxDQUFFLFlBQVksbUNBQUksa0NBQW1CLENBQUM7UUFDakUsSUFBSSxDQUFDLFlBQVksU0FBRyxPQUFPLGFBQVAsT0FBTyx1QkFBUCxPQUFPLENBQUUsWUFBWSxtQ0FBSSxrQ0FBbUIsQ0FBQztRQUNqRSxJQUFJLENBQUMsVUFBVSxTQUFHLE9BQU8sYUFBUCxPQUFPLHVCQUFQLE9BQU8sQ0FBRSxVQUFVLG1DQUFJLHdDQUFvQixDQUFDLGdDQUFvQixDQUFDLENBQUM7SUFDdEYsQ0FBQztJQUVPLFdBQVcsQ0FBQyxLQUFlLEVBQUUsUUFBZ0IsRUFBRSxXQUFtQjtRQUN4RSxPQUFPLFFBQVEsR0FBRyxXQUFXLElBQUksSUFBSSxDQUFDLFlBQVksQ0FBQyxLQUFLLENBQUMsSUFBSSxJQUFJLENBQUMsVUFBVSxDQUFDLGNBQWMsQ0FBQyxLQUFLLENBQUMsQ0FBQztJQUNyRyxDQUFDO0lBRU8sS0FBSyxDQUFDLGNBQWM7UUFDMUIsSUFBSSxXQUFtQixDQUFDO1FBQ3hCLElBQUk7WUFDRixXQUFXLEdBQUcsTUFBTSxJQUFJLENBQUMsbUJBQW1CLEVBQUUsQ0FBQztTQUNoRDtRQUFDLE9BQU8sS0FBSyxFQUFFO1lBQ2QsV0FBVyxHQUFHLDRCQUFvQixDQUFDO1NBQ3BDO1FBQ0QsT0FBTyxXQUFXLENBQUM7SUFDckIsQ0FBQztJQUVELEtBQUssQ0FBQyxLQUFLLENBQ1QsSUFBbUMsRUFDbkMsSUFBcUM7UUFFckMsSUFBSSxnQkFBZ0IsQ0FBQztRQUNyQixJQUFJLFFBQVEsR0FBRyxDQUFDLENBQUM7UUFDakIsSUFBSSxVQUFVLEdBQUcsQ0FBQyxDQUFDO1FBRW5CLE1BQU0sV0FBVyxHQUFHLE1BQU0sSUFBSSxDQUFDLGNBQWMsRUFBRSxDQUFDO1FBRWhELE1BQU0sRUFBRSxPQUFPLEVBQUUsR0FBRyxJQUFJLENBQUM7UUFDekIsSUFBSSwyQkFBVyxDQUFDLFVBQVUsQ0FBQyxPQUFPLENBQUMsRUFBRTtZQUNuQyxPQUFPLENBQUMsT0FBTyxDQUFDLGdDQUFvQixDQUFDLEdBQUcsU0FBRSxFQUFFLENBQUM7U0FDOUM7UUFFRCxPQUFPLElBQUksRUFBRTtZQUNYLElBQUk7Z0JBQ0YsSUFBSSwyQkFBVyxDQUFDLFVBQVUsQ0FBQyxPQUFPLENBQUMsRUFBRTtvQkFDbkMsT0FBTyxDQUFDLE9BQU8sQ0FBQywwQkFBYyxDQUFDLEdBQUcsV0FBVyxRQUFRLEdBQUcsQ0FBQyxTQUFTLFdBQVcsRUFBRSxDQUFDO2lCQUNqRjtnQkFDRCxNQUFNLEVBQUUsUUFBUSxFQUFFLE1BQU0sRUFBRSxHQUFHLE1BQU0sSUFBSSxDQUFDLElBQUksQ0FBQyxDQUFDO2dCQUU5QyxJQUFJLENBQUMsVUFBVSxDQUFDLGtCQUFrQixDQUFDLGdCQUFnQixDQUFDLENBQUM7Z0JBQ3JELE1BQU0sQ0FBQyxTQUFTLENBQUMsUUFBUSxHQUFHLFFBQVEsR0FBRyxDQUFDLENBQUM7Z0JBQ3pDLE1BQU0sQ0FBQyxTQUFTLENBQUMsZUFBZSxHQUFHLFVBQVUsQ0FBQztnQkFFOUMsT0FBTyxFQUFFLFFBQVEsRUFBRSxNQUFNLEVBQUUsQ0FBQzthQUM3QjtZQUFDLE9BQU8sR0FBRyxFQUFFO2dCQUNaLFFBQVEsRUFBRSxDQUFDO2dCQUNYLElBQUksSUFBSSxDQUFDLFdBQVcsQ0FBQyxHQUFlLEVBQUUsUUFBUSxFQUFFLFdBQVcsQ0FBQyxFQUFFO29CQUM1RCxnQkFBZ0IsR0FBRyxJQUFJLENBQUMsVUFBVSxDQUFDLG1CQUFtQixDQUFDLEdBQUcsQ0FBQyxDQUFDO29CQUM1RCxNQUFNLEtBQUssR0FBRyxJQUFJLENBQUMsWUFBWSxDQUM3QixnREFBaUIsQ0FBQyxHQUFHLENBQUMsQ0FBQyxDQUFDLENBQUMsdUNBQTJCLENBQUMsQ0FBQyxDQUFDLG9DQUF3QixFQUMvRSxRQUFRLENBQ1QsQ0FBQztvQkFDRixVQUFVLElBQUksS0FBSyxDQUFDO29CQUVwQixNQUFNLElBQUksT0FBTyxDQUFDLENBQUMsT0FBTyxFQUFFLEVBQUUsQ0FBQyxVQUFVLENBQUMsT0FBTyxFQUFFLEtBQUssQ0FBQyxDQUFDLENBQUM7b0JBQzNELFNBQVM7aUJBQ1Y7Z0JBRUQsSUFBSSxDQUFDLEdBQUcsQ0FBQyxTQUFTLEVBQUU7b0JBQ2xCLEdBQUcsQ0FBQyxTQUFTLEdBQUcsRUFBRSxDQUFDO2lCQUNwQjtnQkFFRCxHQUFHLENBQUMsU0FBUyxDQUFDLFFBQVEsR0FBRyxRQUFRLENBQUM7Z0JBQ2xDLEdBQUcsQ0FBQyxTQUFTLENBQUMsZUFBZSxHQUFHLFVBQVUsQ0FBQztnQkFDM0MsTUFBTSxHQUFHLENBQUM7YUFDWDtTQUNGO0lBQ0gsQ0FBQztDQUNGO0FBN0VELHNEQTZFQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IEh0dHBSZXF1ZXN0IH0gZnJvbSBcIkBhd3Mtc2RrL3Byb3RvY29sLWh0dHBcIjtcbmltcG9ydCB7IGlzVGhyb3R0bGluZ0Vycm9yIH0gZnJvbSBcIkBhd3Mtc2RrL3NlcnZpY2UtZXJyb3ItY2xhc3NpZmljYXRpb25cIjtcbmltcG9ydCB7IFNka0Vycm9yIH0gZnJvbSBcIkBhd3Mtc2RrL3NtaXRoeS1jbGllbnRcIjtcbmltcG9ydCB7IEZpbmFsaXplSGFuZGxlciwgRmluYWxpemVIYW5kbGVyQXJndW1lbnRzLCBNZXRhZGF0YUJlYXJlciwgUHJvdmlkZXIsIFJldHJ5U3RyYXRlZ3kgfSBmcm9tIFwiQGF3cy1zZGsvdHlwZXNcIjtcbmltcG9ydCB7IHY0IH0gZnJvbSBcInV1aWRcIjtcblxuaW1wb3J0IHtcbiAgREVGQVVMVF9SRVRSWV9ERUxBWV9CQVNFLFxuICBJTklUSUFMX1JFVFJZX1RPS0VOUyxcbiAgSU5WT0NBVElPTl9JRF9IRUFERVIsXG4gIFJFUVVFU1RfSEVBREVSLFxuICBUSFJPVFRMSU5HX1JFVFJZX0RFTEFZX0JBU0UsXG59IGZyb20gXCIuL2NvbnN0YW50c1wiO1xuaW1wb3J0IHsgZ2V0RGVmYXVsdFJldHJ5UXVvdGEgfSBmcm9tIFwiLi9kZWZhdWx0UmV0cnlRdW90YVwiO1xuaW1wb3J0IHsgZGVmYXVsdERlbGF5RGVjaWRlciB9IGZyb20gXCIuL2RlbGF5RGVjaWRlclwiO1xuaW1wb3J0IHsgZGVmYXVsdFJldHJ5RGVjaWRlciB9IGZyb20gXCIuL3JldHJ5RGVjaWRlclwiO1xuXG4vKipcbiAqIFRoZSBkZWZhdWx0IHZhbHVlIGZvciBob3cgbWFueSBIVFRQIHJlcXVlc3RzIGFuIFNESyBzaG91bGQgbWFrZSBmb3IgYVxuICogc2luZ2xlIFNESyBvcGVyYXRpb24gaW52b2NhdGlvbiBiZWZvcmUgZ2l2aW5nIHVwXG4gKi9cbmV4cG9ydCBjb25zdCBERUZBVUxUX01BWF9BVFRFTVBUUyA9IDM7XG5cbi8qKlxuICogVGhlIGRlZmF1bHQgcmV0cnkgYWxnb3JpdGhtIHRvIHVzZS5cbiAqL1xuZXhwb3J0IGNvbnN0IERFRkFVTFRfUkVUUllfTU9ERSA9IFwic3RhbmRhcmRcIjtcblxuLyoqXG4gKiBEZXRlcm1pbmVzIHdoZXRoZXIgYW4gZXJyb3IgaXMgcmV0cnlhYmxlIGJhc2VkIG9uIHRoZSBudW1iZXIgb2YgcmV0cmllc1xuICogYWxyZWFkeSBhdHRlbXB0ZWQsIHRoZSBIVFRQIHN0YXR1cyBjb2RlLCBhbmQgdGhlIGVycm9yIHJlY2VpdmVkIChpZiBhbnkpLlxuICpcbiAqIEBwYXJhbSBlcnJvciAgICAgICAgIFRoZSBlcnJvciBlbmNvdW50ZXJlZC5cbiAqL1xuZXhwb3J0IGludGVyZmFjZSBSZXRyeURlY2lkZXIge1xuICAoZXJyb3I6IFNka0Vycm9yKTogYm9vbGVhbjtcbn1cblxuLyoqXG4gKiBEZXRlcm1pbmVzIHRoZSBudW1iZXIgb2YgbWlsbGlzZWNvbmRzIHRvIHdhaXQgYmVmb3JlIHJldHJ5aW5nIGFuIGFjdGlvbi5cbiAqXG4gKiBAcGFyYW0gZGVsYXlCYXNlIFRoZSBiYXNlIGRlbGF5IChpbiBtaWxsaXNlY29uZHMpLlxuICogQHBhcmFtIGF0dGVtcHRzICBUaGUgbnVtYmVyIG9mIHRpbWVzIHRoZSBhY3Rpb24gaGFzIGFscmVhZHkgYmVlbiB0cmllZC5cbiAqL1xuZXhwb3J0IGludGVyZmFjZSBEZWxheURlY2lkZXIge1xuICAoZGVsYXlCYXNlOiBudW1iZXIsIGF0dGVtcHRzOiBudW1iZXIpOiBudW1iZXI7XG59XG5cbi8qKlxuICogSW50ZXJmYWNlIHRoYXQgc3BlY2lmaWVzIHRoZSByZXRyeSBxdW90YSBiZWhhdmlvci5cbiAqL1xuZXhwb3J0IGludGVyZmFjZSBSZXRyeVF1b3RhIHtcbiAgLyoqXG4gICAqIHJldHVybnMgdHJ1ZSBpZiByZXRyeSB0b2tlbnMgYXJlIGF2YWlsYWJsZSBmcm9tIHRoZSByZXRyeSBxdW90YSBidWNrZXQuXG4gICAqL1xuICBoYXNSZXRyeVRva2VuczogKGVycm9yOiBTZGtFcnJvcikgPT4gYm9vbGVhbjtcblxuICAvKipcbiAgICogcmV0dXJucyB0b2tlbiBhbW91bnQgZnJvbSB0aGUgcmV0cnkgcXVvdGEgYnVja2V0LlxuICAgKiB0aHJvd3MgZXJyb3IgaXMgcmV0cnkgdG9rZW5zIGFyZSBub3QgYXZhaWxhYmxlLlxuICAgKi9cbiAgcmV0cmlldmVSZXRyeVRva2VuczogKGVycm9yOiBTZGtFcnJvcikgPT4gbnVtYmVyO1xuXG4gIC8qKlxuICAgKiByZWxlYXNlcyB0b2tlbnMgYmFjayB0byB0aGUgcmV0cnkgcXVvdGEuXG4gICAqL1xuICByZWxlYXNlUmV0cnlUb2tlbnM6IChyZWxlYXNlQ2FwYWNpdHlBbW91bnQ/OiBudW1iZXIpID0+IHZvaWQ7XG59XG5cbi8qKlxuICogU3RyYXRlZ3kgb3B0aW9ucyB0byBiZSBwYXNzZWQgdG8gU3RhbmRhcmRSZXRyeVN0cmF0ZWd5XG4gKi9cbmV4cG9ydCBpbnRlcmZhY2UgU3RhbmRhcmRSZXRyeVN0cmF0ZWd5T3B0aW9ucyB7XG4gIHJldHJ5RGVjaWRlcj86IFJldHJ5RGVjaWRlcjtcbiAgZGVsYXlEZWNpZGVyPzogRGVsYXlEZWNpZGVyO1xuICByZXRyeVF1b3RhPzogUmV0cnlRdW90YTtcbn1cblxuZXhwb3J0IGNsYXNzIFN0YW5kYXJkUmV0cnlTdHJhdGVneSBpbXBsZW1lbnRzIFJldHJ5U3RyYXRlZ3kge1xuICBwcml2YXRlIHJldHJ5RGVjaWRlcjogUmV0cnlEZWNpZGVyO1xuICBwcml2YXRlIGRlbGF5RGVjaWRlcjogRGVsYXlEZWNpZGVyO1xuICBwcml2YXRlIHJldHJ5UXVvdGE6IFJldHJ5UXVvdGE7XG4gIHB1YmxpYyByZWFkb25seSBtb2RlID0gREVGQVVMVF9SRVRSWV9NT0RFO1xuXG4gIGNvbnN0cnVjdG9yKHByaXZhdGUgcmVhZG9ubHkgbWF4QXR0ZW1wdHNQcm92aWRlcjogUHJvdmlkZXI8bnVtYmVyPiwgb3B0aW9ucz86IFN0YW5kYXJkUmV0cnlTdHJhdGVneU9wdGlvbnMpIHtcbiAgICB0aGlzLnJldHJ5RGVjaWRlciA9IG9wdGlvbnM/LnJldHJ5RGVjaWRlciA/PyBkZWZhdWx0UmV0cnlEZWNpZGVyO1xuICAgIHRoaXMuZGVsYXlEZWNpZGVyID0gb3B0aW9ucz8uZGVsYXlEZWNpZGVyID8/IGRlZmF1bHREZWxheURlY2lkZXI7XG4gICAgdGhpcy5yZXRyeVF1b3RhID0gb3B0aW9ucz8ucmV0cnlRdW90YSA/PyBnZXREZWZhdWx0UmV0cnlRdW90YShJTklUSUFMX1JFVFJZX1RPS0VOUyk7XG4gIH1cblxuICBwcml2YXRlIHNob3VsZFJldHJ5KGVycm9yOiBTZGtFcnJvciwgYXR0ZW1wdHM6IG51bWJlciwgbWF4QXR0ZW1wdHM6IG51bWJlcikge1xuICAgIHJldHVybiBhdHRlbXB0cyA8IG1heEF0dGVtcHRzICYmIHRoaXMucmV0cnlEZWNpZGVyKGVycm9yKSAmJiB0aGlzLnJldHJ5UXVvdGEuaGFzUmV0cnlUb2tlbnMoZXJyb3IpO1xuICB9XG5cbiAgcHJpdmF0ZSBhc3luYyBnZXRNYXhBdHRlbXB0cygpIHtcbiAgICBsZXQgbWF4QXR0ZW1wdHM6IG51bWJlcjtcbiAgICB0cnkge1xuICAgICAgbWF4QXR0ZW1wdHMgPSBhd2FpdCB0aGlzLm1heEF0dGVtcHRzUHJvdmlkZXIoKTtcbiAgICB9IGNhdGNoIChlcnJvcikge1xuICAgICAgbWF4QXR0ZW1wdHMgPSBERUZBVUxUX01BWF9BVFRFTVBUUztcbiAgICB9XG4gICAgcmV0dXJuIG1heEF0dGVtcHRzO1xuICB9XG5cbiAgYXN5bmMgcmV0cnk8SW5wdXQgZXh0ZW5kcyBvYmplY3QsIE91cHV0IGV4dGVuZHMgTWV0YWRhdGFCZWFyZXI+KFxuICAgIG5leHQ6IEZpbmFsaXplSGFuZGxlcjxJbnB1dCwgT3VwdXQ+LFxuICAgIGFyZ3M6IEZpbmFsaXplSGFuZGxlckFyZ3VtZW50czxJbnB1dD5cbiAgKSB7XG4gICAgbGV0IHJldHJ5VG9rZW5BbW91bnQ7XG4gICAgbGV0IGF0dGVtcHRzID0gMDtcbiAgICBsZXQgdG90YWxEZWxheSA9IDA7XG5cbiAgICBjb25zdCBtYXhBdHRlbXB0cyA9IGF3YWl0IHRoaXMuZ2V0TWF4QXR0ZW1wdHMoKTtcblxuICAgIGNvbnN0IHsgcmVxdWVzdCB9ID0gYXJncztcbiAgICBpZiAoSHR0cFJlcXVlc3QuaXNJbnN0YW5jZShyZXF1ZXN0KSkge1xuICAgICAgcmVxdWVzdC5oZWFkZXJzW0lOVk9DQVRJT05fSURfSEVBREVSXSA9IHY0KCk7XG4gICAgfVxuXG4gICAgd2hpbGUgKHRydWUpIHtcbiAgICAgIHRyeSB7XG4gICAgICAgIGlmIChIdHRwUmVxdWVzdC5pc0luc3RhbmNlKHJlcXVlc3QpKSB7XG4gICAgICAgICAgcmVxdWVzdC5oZWFkZXJzW1JFUVVFU1RfSEVBREVSXSA9IGBhdHRlbXB0PSR7YXR0ZW1wdHMgKyAxfTsgbWF4PSR7bWF4QXR0ZW1wdHN9YDtcbiAgICAgICAgfVxuICAgICAgICBjb25zdCB7IHJlc3BvbnNlLCBvdXRwdXQgfSA9IGF3YWl0IG5leHQoYXJncyk7XG5cbiAgICAgICAgdGhpcy5yZXRyeVF1b3RhLnJlbGVhc2VSZXRyeVRva2VucyhyZXRyeVRva2VuQW1vdW50KTtcbiAgICAgICAgb3V0cHV0LiRtZXRhZGF0YS5hdHRlbXB0cyA9IGF0dGVtcHRzICsgMTtcbiAgICAgICAgb3V0cHV0LiRtZXRhZGF0YS50b3RhbFJldHJ5RGVsYXkgPSB0b3RhbERlbGF5O1xuXG4gICAgICAgIHJldHVybiB7IHJlc3BvbnNlLCBvdXRwdXQgfTtcbiAgICAgIH0gY2F0Y2ggKGVycikge1xuICAgICAgICBhdHRlbXB0cysrO1xuICAgICAgICBpZiAodGhpcy5zaG91bGRSZXRyeShlcnIgYXMgU2RrRXJyb3IsIGF0dGVtcHRzLCBtYXhBdHRlbXB0cykpIHtcbiAgICAgICAgICByZXRyeVRva2VuQW1vdW50ID0gdGhpcy5yZXRyeVF1b3RhLnJldHJpZXZlUmV0cnlUb2tlbnMoZXJyKTtcbiAgICAgICAgICBjb25zdCBkZWxheSA9IHRoaXMuZGVsYXlEZWNpZGVyKFxuICAgICAgICAgICAgaXNUaHJvdHRsaW5nRXJyb3IoZXJyKSA/IFRIUk9UVExJTkdfUkVUUllfREVMQVlfQkFTRSA6IERFRkFVTFRfUkVUUllfREVMQVlfQkFTRSxcbiAgICAgICAgICAgIGF0dGVtcHRzXG4gICAgICAgICAgKTtcbiAgICAgICAgICB0b3RhbERlbGF5ICs9IGRlbGF5O1xuXG4gICAgICAgICAgYXdhaXQgbmV3IFByb21pc2UoKHJlc29sdmUpID0+IHNldFRpbWVvdXQocmVzb2x2ZSwgZGVsYXkpKTtcbiAgICAgICAgICBjb250aW51ZTtcbiAgICAgICAgfVxuXG4gICAgICAgIGlmICghZXJyLiRtZXRhZGF0YSkge1xuICAgICAgICAgIGVyci4kbWV0YWRhdGEgPSB7fTtcbiAgICAgICAgfVxuXG4gICAgICAgIGVyci4kbWV0YWRhdGEuYXR0ZW1wdHMgPSBhdHRlbXB0cztcbiAgICAgICAgZXJyLiRtZXRhZGF0YS50b3RhbFJldHJ5RGVsYXkgPSB0b3RhbERlbGF5O1xuICAgICAgICB0aHJvdyBlcnI7XG4gICAgICB9XG4gICAgfVxuICB9XG59XG4iXX0=
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZGVmYXVsdFN0cmF0ZWd5LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vc3JjL2RlZmF1bHRTdHJhdGVneS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFBQSwwREFBcUQ7QUFDckQsd0ZBQTBFO0FBRzFFLCtCQUEwQjtBQUUxQiwyQ0FNcUI7QUFDckIsMkRBQTJEO0FBQzNELGlEQUFxRDtBQUNyRCxpREFBcUQ7QUFFckQ7OztHQUdHO0FBQ1UsUUFBQSxvQkFBb0IsR0FBRyxDQUFDLENBQUM7QUFFdEM7O0dBRUc7QUFDVSxRQUFBLGtCQUFrQixHQUFHLFVBQVUsQ0FBQztBQW9EN0MsTUFBYSxxQkFBcUI7SUFNaEMsWUFBNkIsbUJBQXFDLEVBQUUsT0FBc0M7O1FBQTdFLHdCQUFtQixHQUFuQixtQkFBbUIsQ0FBa0I7UUFGbEQsU0FBSSxHQUFHLDBCQUFrQixDQUFDO1FBR3hDLElBQUksQ0FBQyxZQUFZLEdBQUcsTUFBQSxPQUFPLGFBQVAsT0FBTyx1QkFBUCxPQUFPLENBQUUsWUFBWSxtQ0FBSSxrQ0FBbUIsQ0FBQztRQUNqRSxJQUFJLENBQUMsWUFBWSxHQUFHLE1BQUEsT0FBTyxhQUFQLE9BQU8sdUJBQVAsT0FBTyxDQUFFLFlBQVksbUNBQUksa0NBQW1CLENBQUM7UUFDakUsSUFBSSxDQUFDLFVBQVUsR0FBRyxNQUFBLE9BQU8sYUFBUCxPQUFPLHVCQUFQLE9BQU8sQ0FBRSxVQUFVLG1DQUFJLHdDQUFvQixDQUFDLGdDQUFvQixDQUFDLENBQUM7SUFDdEYsQ0FBQztJQUVPLFdBQVcsQ0FBQyxLQUFlLEVBQUUsUUFBZ0IsRUFBRSxXQUFtQjtRQUN4RSxPQUFPLFFBQVEsR0FBRyxXQUFXLElBQUksSUFBSSxDQUFDLFlBQVksQ0FBQyxLQUFLLENBQUMsSUFBSSxJQUFJLENBQUMsVUFBVSxDQUFDLGNBQWMsQ0FBQyxLQUFLLENBQUMsQ0FBQztJQUNyRyxDQUFDO0lBRU8sS0FBSyxDQUFDLGNBQWM7UUFDMUIsSUFBSSxXQUFtQixDQUFDO1FBQ3hCLElBQUk7WUFDRixXQUFXLEdBQUcsTUFBTSxJQUFJLENBQUMsbUJBQW1CLEVBQUUsQ0FBQztTQUNoRDtRQUFDLE9BQU8sS0FBSyxFQUFFO1lBQ2QsV0FBVyxHQUFHLDRCQUFvQixDQUFDO1NBQ3BDO1FBQ0QsT0FBTyxXQUFXLENBQUM7SUFDckIsQ0FBQztJQUVELEtBQUssQ0FBQyxLQUFLLENBQ1QsSUFBbUMsRUFDbkMsSUFBcUM7UUFFckMsSUFBSSxnQkFBZ0IsQ0FBQztRQUNyQixJQUFJLFFBQVEsR0FBRyxDQUFDLENBQUM7UUFDakIsSUFBSSxVQUFVLEdBQUcsQ0FBQyxDQUFDO1FBRW5CLE1BQU0sV0FBVyxHQUFHLE1BQU0sSUFBSSxDQUFDLGNBQWMsRUFBRSxDQUFDO1FBRWhELE1BQU0sRUFBRSxPQUFPLEVBQUUsR0FBRyxJQUFJLENBQUM7UUFDekIsSUFBSSwyQkFBVyxDQUFDLFVBQVUsQ0FBQyxPQUFPLENBQUMsRUFBRTtZQUNuQyxPQUFPLENBQUMsT0FBTyxDQUFDLGdDQUFvQixDQUFDLEdBQUcsU0FBRSxFQUFFLENBQUM7U0FDOUM7UUFFRCxPQUFPLElBQUksRUFBRTtZQUNYLElBQUk7Z0JBQ0YsSUFBSSwyQkFBVyxDQUFDLFVBQVUsQ0FBQyxPQUFPLENBQUMsRUFBRTtvQkFDbkMsT0FBTyxDQUFDLE9BQU8sQ0FBQywwQkFBYyxDQUFDLEdBQUcsV0FBVyxRQUFRLEdBQUcsQ0FBQyxTQUFTLFdBQVcsRUFBRSxDQUFDO2lCQUNqRjtnQkFDRCxNQUFNLEVBQUUsUUFBUSxFQUFFLE1BQU0sRUFBRSxHQUFHLE1BQU0sSUFBSSxDQUFDLElBQUksQ0FBQyxDQUFDO2dCQUU5QyxJQUFJLENBQUMsVUFBVSxDQUFDLGtCQUFrQixDQUFDLGdCQUFnQixDQUFDLENBQUM7Z0JBQ3JELE1BQU0sQ0FBQyxTQUFTLENBQUMsUUFBUSxHQUFHLFFBQVEsR0FBRyxDQUFDLENBQUM7Z0JBQ3pDLE1BQU0sQ0FBQyxTQUFTLENBQUMsZUFBZSxHQUFHLFVBQVUsQ0FBQztnQkFFOUMsT0FBTyxFQUFFLFFBQVEsRUFBRSxNQUFNLEVBQUUsQ0FBQzthQUM3QjtZQUFDLE9BQU8sR0FBRyxFQUFFO2dCQUNaLFFBQVEsRUFBRSxDQUFDO2dCQUNYLElBQUksSUFBSSxDQUFDLFdBQVcsQ0FBQyxHQUFlLEVBQUUsUUFBUSxFQUFFLFdBQVcsQ0FBQyxFQUFFO29CQUM1RCxnQkFBZ0IsR0FBRyxJQUFJLENBQUMsVUFBVSxDQUFDLG1CQUFtQixDQUFDLEdBQUcsQ0FBQyxDQUFDO29CQUM1RCxNQUFNLEtBQUssR0FBRyxJQUFJLENBQUMsWUFBWSxDQUM3QixnREFBaUIsQ0FBQyxHQUFHLENBQUMsQ0FBQyxDQUFDLENBQUMsdUNBQTJCLENBQUMsQ0FBQyxDQUFDLG9DQUF3QixFQUMvRSxRQUFRLENBQ1QsQ0FBQztvQkFDRixVQUFVLElBQUksS0FBSyxDQUFDO29CQUVwQixNQUFNLElBQUksT0FBTyxDQUFDLENBQUMsT0FBTyxFQUFFLEVBQUUsQ0FBQyxVQUFVLENBQUMsT0FBTyxFQUFFLEtBQUssQ0FBQyxDQUFDLENBQUM7b0JBQzNELFNBQVM7aUJBQ1Y7Z0JBRUQsSUFBSSxDQUFDLEdBQUcsQ0FBQyxTQUFTLEVBQUU7b0JBQ2xCLEdBQUcsQ0FBQyxTQUFTLEdBQUcsRUFBRSxDQUFDO2lCQUNwQjtnQkFFRCxHQUFHLENBQUMsU0FBUyxDQUFDLFFBQVEsR0FBRyxRQUFRLENBQUM7Z0JBQ2xDLEdBQUcsQ0FBQyxTQUFTLENBQUMsZUFBZSxHQUFHLFVBQVUsQ0FBQztnQkFDM0MsTUFBTSxHQUFHLENBQUM7YUFDWDtTQUNGO0lBQ0gsQ0FBQztDQUNGO0FBN0VELHNEQTZFQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IEh0dHBSZXF1ZXN0IH0gZnJvbSBcIkBhd3Mtc2RrL3Byb3RvY29sLWh0dHBcIjtcbmltcG9ydCB7IGlzVGhyb3R0bGluZ0Vycm9yIH0gZnJvbSBcIkBhd3Mtc2RrL3NlcnZpY2UtZXJyb3ItY2xhc3NpZmljYXRpb25cIjtcbmltcG9ydCB7IFNka0Vycm9yIH0gZnJvbSBcIkBhd3Mtc2RrL3NtaXRoeS1jbGllbnRcIjtcbmltcG9ydCB7IEZpbmFsaXplSGFuZGxlciwgRmluYWxpemVIYW5kbGVyQXJndW1lbnRzLCBNZXRhZGF0YUJlYXJlciwgUHJvdmlkZXIsIFJldHJ5U3RyYXRlZ3kgfSBmcm9tIFwiQGF3cy1zZGsvdHlwZXNcIjtcbmltcG9ydCB7IHY0IH0gZnJvbSBcInV1aWRcIjtcblxuaW1wb3J0IHtcbiAgREVGQVVMVF9SRVRSWV9ERUxBWV9CQVNFLFxuICBJTklUSUFMX1JFVFJZX1RPS0VOUyxcbiAgSU5WT0NBVElPTl9JRF9IRUFERVIsXG4gIFJFUVVFU1RfSEVBREVSLFxuICBUSFJPVFRMSU5HX1JFVFJZX0RFTEFZX0JBU0UsXG59IGZyb20gXCIuL2NvbnN0YW50c1wiO1xuaW1wb3J0IHsgZ2V0RGVmYXVsdFJldHJ5UXVvdGEgfSBmcm9tIFwiLi9kZWZhdWx0UmV0cnlRdW90YVwiO1xuaW1wb3J0IHsgZGVmYXVsdERlbGF5RGVjaWRlciB9IGZyb20gXCIuL2RlbGF5RGVjaWRlclwiO1xuaW1wb3J0IHsgZGVmYXVsdFJldHJ5RGVjaWRlciB9IGZyb20gXCIuL3JldHJ5RGVjaWRlclwiO1xuXG4vKipcbiAqIFRoZSBkZWZhdWx0IHZhbHVlIGZvciBob3cgbWFueSBIVFRQIHJlcXVlc3RzIGFuIFNESyBzaG91bGQgbWFrZSBmb3IgYVxuICogc2luZ2xlIFNESyBvcGVyYXRpb24gaW52b2NhdGlvbiBiZWZvcmUgZ2l2aW5nIHVwXG4gKi9cbmV4cG9ydCBjb25zdCBERUZBVUxUX01BWF9BVFRFTVBUUyA9IDM7XG5cbi8qKlxuICogVGhlIGRlZmF1bHQgcmV0cnkgYWxnb3JpdGhtIHRvIHVzZS5cbiAqL1xuZXhwb3J0IGNvbnN0IERFRkFVTFRfUkVUUllfTU9ERSA9IFwic3RhbmRhcmRcIjtcblxuLyoqXG4gKiBEZXRlcm1pbmVzIHdoZXRoZXIgYW4gZXJyb3IgaXMgcmV0cnlhYmxlIGJhc2VkIG9uIHRoZSBudW1iZXIgb2YgcmV0cmllc1xuICogYWxyZWFkeSBhdHRlbXB0ZWQsIHRoZSBIVFRQIHN0YXR1cyBjb2RlLCBhbmQgdGhlIGVycm9yIHJlY2VpdmVkIChpZiBhbnkpLlxuICpcbiAqIEBwYXJhbSBlcnJvciAgICAgICAgIFRoZSBlcnJvciBlbmNvdW50ZXJlZC5cbiAqL1xuZXhwb3J0IGludGVyZmFjZSBSZXRyeURlY2lkZXIge1xuICAoZXJyb3I6IFNka0Vycm9yKTogYm9vbGVhbjtcbn1cblxuLyoqXG4gKiBEZXRlcm1pbmVzIHRoZSBudW1iZXIgb2YgbWlsbGlzZWNvbmRzIHRvIHdhaXQgYmVmb3JlIHJldHJ5aW5nIGFuIGFjdGlvbi5cbiAqXG4gKiBAcGFyYW0gZGVsYXlCYXNlIFRoZSBiYXNlIGRlbGF5IChpbiBtaWxsaXNlY29uZHMpLlxuICogQHBhcmFtIGF0dGVtcHRzICBUaGUgbnVtYmVyIG9mIHRpbWVzIHRoZSBhY3Rpb24gaGFzIGFscmVhZHkgYmVlbiB0cmllZC5cbiAqL1xuZXhwb3J0IGludGVyZmFjZSBEZWxheURlY2lkZXIge1xuICAoZGVsYXlCYXNlOiBudW1iZXIsIGF0dGVtcHRzOiBudW1iZXIpOiBudW1iZXI7XG59XG5cbi8qKlxuICogSW50ZXJmYWNlIHRoYXQgc3BlY2lmaWVzIHRoZSByZXRyeSBxdW90YSBiZWhhdmlvci5cbiAqL1xuZXhwb3J0IGludGVyZmFjZSBSZXRyeVF1b3RhIHtcbiAgLyoqXG4gICAqIHJldHVybnMgdHJ1ZSBpZiByZXRyeSB0b2tlbnMgYXJlIGF2YWlsYWJsZSBmcm9tIHRoZSByZXRyeSBxdW90YSBidWNrZXQuXG4gICAqL1xuICBoYXNSZXRyeVRva2VuczogKGVycm9yOiBTZGtFcnJvcikgPT4gYm9vbGVhbjtcblxuICAvKipcbiAgICogcmV0dXJucyB0b2tlbiBhbW91bnQgZnJvbSB0aGUgcmV0cnkgcXVvdGEgYnVja2V0LlxuICAgKiB0aHJvd3MgZXJyb3IgaXMgcmV0cnkgdG9rZW5zIGFyZSBub3QgYXZhaWxhYmxlLlxuICAgKi9cbiAgcmV0cmlldmVSZXRyeVRva2VuczogKGVycm9yOiBTZGtFcnJvcikgPT4gbnVtYmVyO1xuXG4gIC8qKlxuICAgKiByZWxlYXNlcyB0b2tlbnMgYmFjayB0byB0aGUgcmV0cnkgcXVvdGEuXG4gICAqL1xuICByZWxlYXNlUmV0cnlUb2tlbnM6IChyZWxlYXNlQ2FwYWNpdHlBbW91bnQ/OiBudW1iZXIpID0+IHZvaWQ7XG59XG5cbi8qKlxuICogU3RyYXRlZ3kgb3B0aW9ucyB0byBiZSBwYXNzZWQgdG8gU3RhbmRhcmRSZXRyeVN0cmF0ZWd5XG4gKi9cbmV4cG9ydCBpbnRlcmZhY2UgU3RhbmRhcmRSZXRyeVN0cmF0ZWd5T3B0aW9ucyB7XG4gIHJldHJ5RGVjaWRlcj86IFJldHJ5RGVjaWRlcjtcbiAgZGVsYXlEZWNpZGVyPzogRGVsYXlEZWNpZGVyO1xuICByZXRyeVF1b3RhPzogUmV0cnlRdW90YTtcbn1cblxuZXhwb3J0IGNsYXNzIFN0YW5kYXJkUmV0cnlTdHJhdGVneSBpbXBsZW1lbnRzIFJldHJ5U3RyYXRlZ3kge1xuICBwcml2YXRlIHJldHJ5RGVjaWRlcjogUmV0cnlEZWNpZGVyO1xuICBwcml2YXRlIGRlbGF5RGVjaWRlcjogRGVsYXlEZWNpZGVyO1xuICBwcml2YXRlIHJldHJ5UXVvdGE6IFJldHJ5UXVvdGE7XG4gIHB1YmxpYyByZWFkb25seSBtb2RlID0gREVGQVVMVF9SRVRSWV9NT0RFO1xuXG4gIGNvbnN0cnVjdG9yKHByaXZhdGUgcmVhZG9ubHkgbWF4QXR0ZW1wdHNQcm92aWRlcjogUHJvdmlkZXI8bnVtYmVyPiwgb3B0aW9ucz86IFN0YW5kYXJkUmV0cnlTdHJhdGVneU9wdGlvbnMpIHtcbiAgICB0aGlzLnJldHJ5RGVjaWRlciA9IG9wdGlvbnM/LnJldHJ5RGVjaWRlciA/PyBkZWZhdWx0UmV0cnlEZWNpZGVyO1xuICAgIHRoaXMuZGVsYXlEZWNpZGVyID0gb3B0aW9ucz8uZGVsYXlEZWNpZGVyID8/IGRlZmF1bHREZWxheURlY2lkZXI7XG4gICAgdGhpcy5yZXRyeVF1b3RhID0gb3B0aW9ucz8ucmV0cnlRdW90YSA/PyBnZXREZWZhdWx0UmV0cnlRdW90YShJTklUSUFMX1JFVFJZX1RPS0VOUyk7XG4gIH1cblxuICBwcml2YXRlIHNob3VsZFJldHJ5KGVycm9yOiBTZGtFcnJvciwgYXR0ZW1wdHM6IG51bWJlciwgbWF4QXR0ZW1wdHM6IG51bWJlcikge1xuICAgIHJldHVybiBhdHRlbXB0cyA8IG1heEF0dGVtcHRzICYmIHRoaXMucmV0cnlEZWNpZGVyKGVycm9yKSAmJiB0aGlzLnJldHJ5UXVvdGEuaGFzUmV0cnlUb2tlbnMoZXJyb3IpO1xuICB9XG5cbiAgcHJpdmF0ZSBhc3luYyBnZXRNYXhBdHRlbXB0cygpIHtcbiAgICBsZXQgbWF4QXR0ZW1wdHM6IG51bWJlcjtcbiAgICB0cnkge1xuICAgICAgbWF4QXR0ZW1wdHMgPSBhd2FpdCB0aGlzLm1heEF0dGVtcHRzUHJvdmlkZXIoKTtcbiAgICB9IGNhdGNoIChlcnJvcikge1xuICAgICAgbWF4QXR0ZW1wdHMgPSBERUZBVUxUX01BWF9BVFRFTVBUUztcbiAgICB9XG4gICAgcmV0dXJuIG1heEF0dGVtcHRzO1xuICB9XG5cbiAgYXN5bmMgcmV0cnk8SW5wdXQgZXh0ZW5kcyBvYmplY3QsIE91cHV0IGV4dGVuZHMgTWV0YWRhdGFCZWFyZXI+KFxuICAgIG5leHQ6IEZpbmFsaXplSGFuZGxlcjxJbnB1dCwgT3VwdXQ+LFxuICAgIGFyZ3M6IEZpbmFsaXplSGFuZGxlckFyZ3VtZW50czxJbnB1dD5cbiAgKSB7XG4gICAgbGV0IHJldHJ5VG9rZW5BbW91bnQ7XG4gICAgbGV0IGF0dGVtcHRzID0gMDtcbiAgICBsZXQgdG90YWxEZWxheSA9IDA7XG5cbiAgICBjb25zdCBtYXhBdHRlbXB0cyA9IGF3YWl0IHRoaXMuZ2V0TWF4QXR0ZW1wdHMoKTtcblxuICAgIGNvbnN0IHsgcmVxdWVzdCB9ID0gYXJncztcbiAgICBpZiAoSHR0cFJlcXVlc3QuaXNJbnN0YW5jZShyZXF1ZXN0KSkge1xuICAgICAgcmVxdWVzdC5oZWFkZXJzW0lOVk9DQVRJT05fSURfSEVBREVSXSA9IHY0KCk7XG4gICAgfVxuXG4gICAgd2hpbGUgKHRydWUpIHtcbiAgICAgIHRyeSB7XG4gICAgICAgIGlmIChIdHRwUmVxdWVzdC5pc0luc3RhbmNlKHJlcXVlc3QpKSB7XG4gICAgICAgICAgcmVxdWVzdC5oZWFkZXJzW1JFUVVFU1RfSEVBREVSXSA9IGBhdHRlbXB0PSR7YXR0ZW1wdHMgKyAxfTsgbWF4PSR7bWF4QXR0ZW1wdHN9YDtcbiAgICAgICAgfVxuICAgICAgICBjb25zdCB7IHJlc3BvbnNlLCBvdXRwdXQgfSA9IGF3YWl0IG5leHQoYXJncyk7XG5cbiAgICAgICAgdGhpcy5yZXRyeVF1b3RhLnJlbGVhc2VSZXRyeVRva2VucyhyZXRyeVRva2VuQW1vdW50KTtcbiAgICAgICAgb3V0cHV0LiRtZXRhZGF0YS5hdHRlbXB0cyA9IGF0dGVtcHRzICsgMTtcbiAgICAgICAgb3V0cHV0LiRtZXRhZGF0YS50b3RhbFJldHJ5RGVsYXkgPSB0b3RhbERlbGF5O1xuXG4gICAgICAgIHJldHVybiB7IHJlc3BvbnNlLCBvdXRwdXQgfTtcbiAgICAgIH0gY2F0Y2ggKGVycikge1xuICAgICAgICBhdHRlbXB0cysrO1xuICAgICAgICBpZiAodGhpcy5zaG91bGRSZXRyeShlcnIgYXMgU2RrRXJyb3IsIGF0dGVtcHRzLCBtYXhBdHRlbXB0cykpIHtcbiAgICAgICAgICByZXRyeVRva2VuQW1vdW50ID0gdGhpcy5yZXRyeVF1b3RhLnJldHJpZXZlUmV0cnlUb2tlbnMoZXJyKTtcbiAgICAgICAgICBjb25zdCBkZWxheSA9IHRoaXMuZGVsYXlEZWNpZGVyKFxuICAgICAgICAgICAgaXNUaHJvdHRsaW5nRXJyb3IoZXJyKSA/IFRIUk9UVExJTkdfUkVUUllfREVMQVlfQkFTRSA6IERFRkFVTFRfUkVUUllfREVMQVlfQkFTRSxcbiAgICAgICAgICAgIGF0dGVtcHRzXG4gICAgICAgICAgKTtcbiAgICAgICAgICB0b3RhbERlbGF5ICs9IGRlbGF5O1xuXG4gICAgICAgICAgYXdhaXQgbmV3IFByb21pc2UoKHJlc29sdmUpID0+IHNldFRpbWVvdXQocmVzb2x2ZSwgZGVsYXkpKTtcbiAgICAgICAgICBjb250aW51ZTtcbiAgICAgICAgfVxuXG4gICAgICAgIGlmICghZXJyLiRtZXRhZGF0YSkge1xuICAgICAgICAgIGVyci4kbWV0YWRhdGEgPSB7fTtcbiAgICAgICAgfVxuXG4gICAgICAgIGVyci4kbWV0YWRhdGEuYXR0ZW1wdHMgPSBhdHRlbXB0cztcbiAgICAgICAgZXJyLiRtZXRhZGF0YS50b3RhbFJldHJ5RGVsYXkgPSB0b3RhbERlbGF5O1xuICAgICAgICB0aHJvdyBlcnI7XG4gICAgICB9XG4gICAgfVxuICB9XG59XG4iXX0=
 
 /***/ }),
 
@@ -58243,7 +58739,7 @@ const getRetryPlugin = (options) => ({
     },
 });
 exports.getRetryPlugin = getRetryPlugin;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicmV0cnlNaWRkbGV3YXJlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vc3JjL3JldHJ5TWlkZGxld2FyZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFhTyxNQUFNLGVBQWUsR0FBRyxDQUFDLE9BQTRCLEVBQUUsRUFBRSxDQUFDLENBQy9ELElBQWtDLEVBQ2xDLE9BQWdDLEVBQ0YsRUFBRSxDQUFDLEtBQUssRUFDdEMsSUFBbUMsRUFDSyxFQUFFOztJQUMxQyxVQUFJLE9BQU8sYUFBUCxPQUFPLHVCQUFQLE9BQU8sQ0FBRSxhQUFhLDBDQUFFLElBQUk7UUFDOUIsT0FBTyxDQUFDLFNBQVMsR0FBRyxDQUFDLEdBQUcsQ0FBQyxPQUFPLENBQUMsU0FBUyxJQUFJLEVBQUUsQ0FBQyxFQUFFLENBQUMsZ0JBQWdCLEVBQUUsT0FBTyxDQUFDLGFBQWEsQ0FBQyxJQUFJLENBQUMsQ0FBQyxDQUFDO0lBQ3JHLE9BQU8sT0FBTyxDQUFDLGFBQWEsQ0FBQyxLQUFLLENBQUMsSUFBSSxFQUFFLElBQUksQ0FBQyxDQUFDO0FBQ2pELENBQUMsQ0FBQztBQVRXLFFBQUEsZUFBZSxtQkFTMUI7QUFFVyxRQUFBLHNCQUFzQixHQUFxRDtJQUN0RixJQUFJLEVBQUUsaUJBQWlCO0lBQ3ZCLElBQUksRUFBRSxDQUFDLE9BQU8sQ0FBQztJQUNmLElBQUksRUFBRSxpQkFBaUI7SUFDdkIsUUFBUSxFQUFFLE1BQU07SUFDaEIsUUFBUSxFQUFFLElBQUk7Q0FDZixDQUFDO0FBRUssTUFBTSxjQUFjLEdBQUcsQ0FBQyxPQUE0QixFQUF1QixFQUFFLENBQUMsQ0FBQztJQUNwRixZQUFZLEVBQUUsQ0FBQyxXQUFXLEVBQUUsRUFBRTtRQUM1QixXQUFXLENBQUMsR0FBRyxDQUFDLHVCQUFlLENBQUMsT0FBTyxDQUFDLEVBQUUsOEJBQXNCLENBQUMsQ0FBQztJQUNwRSxDQUFDO0NBQ0YsQ0FBQyxDQUFDO0FBSlUsUUFBQSxjQUFjLGtCQUl4QiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7XG4gIEFic29sdXRlTG9jYXRpb24sXG4gIEZpbmFsaXplSGFuZGxlcixcbiAgRmluYWxpemVIYW5kbGVyQXJndW1lbnRzLFxuICBGaW5hbGl6ZUhhbmRsZXJPdXRwdXQsXG4gIEZpbmFsaXplUmVxdWVzdEhhbmRsZXJPcHRpb25zLFxuICBIYW5kbGVyRXhlY3V0aW9uQ29udGV4dCxcbiAgTWV0YWRhdGFCZWFyZXIsXG4gIFBsdWdnYWJsZSxcbn0gZnJvbSBcIkBhd3Mtc2RrL3R5cGVzXCI7XG5cbmltcG9ydCB7IFJldHJ5UmVzb2x2ZWRDb25maWcgfSBmcm9tIFwiLi9jb25maWd1cmF0aW9uc1wiO1xuXG5leHBvcnQgY29uc3QgcmV0cnlNaWRkbGV3YXJlID0gKG9wdGlvbnM6IFJldHJ5UmVzb2x2ZWRDb25maWcpID0+IDxPdXRwdXQgZXh0ZW5kcyBNZXRhZGF0YUJlYXJlciA9IE1ldGFkYXRhQmVhcmVyPihcbiAgbmV4dDogRmluYWxpemVIYW5kbGVyPGFueSwgT3V0cHV0PixcbiAgY29udGV4dDogSGFuZGxlckV4ZWN1dGlvbkNvbnRleHRcbik6IEZpbmFsaXplSGFuZGxlcjxhbnksIE91dHB1dD4gPT4gYXN5bmMgKFxuICBhcmdzOiBGaW5hbGl6ZUhhbmRsZXJBcmd1bWVudHM8YW55PlxuKTogUHJvbWlzZTxGaW5hbGl6ZUhhbmRsZXJPdXRwdXQ8T3V0cHV0Pj4gPT4ge1xuICBpZiAob3B0aW9ucz8ucmV0cnlTdHJhdGVneT8ubW9kZSlcbiAgICBjb250ZXh0LnVzZXJBZ2VudCA9IFsuLi4oY29udGV4dC51c2VyQWdlbnQgfHwgW10pLCBbXCJjZmcvcmV0cnktbW9kZVwiLCBvcHRpb25zLnJldHJ5U3RyYXRlZ3kubW9kZV1dO1xuICByZXR1cm4gb3B0aW9ucy5yZXRyeVN0cmF0ZWd5LnJldHJ5KG5leHQsIGFyZ3MpO1xufTtcblxuZXhwb3J0IGNvbnN0IHJldHJ5TWlkZGxld2FyZU9wdGlvbnM6IEZpbmFsaXplUmVxdWVzdEhhbmRsZXJPcHRpb25zICYgQWJzb2x1dGVMb2NhdGlvbiA9IHtcbiAgbmFtZTogXCJyZXRyeU1pZGRsZXdhcmVcIixcbiAgdGFnczogW1wiUkVUUllcIl0sXG4gIHN0ZXA6IFwiZmluYWxpemVSZXF1ZXN0XCIsXG4gIHByaW9yaXR5OiBcImhpZ2hcIixcbiAgb3ZlcnJpZGU6IHRydWUsXG59O1xuXG5leHBvcnQgY29uc3QgZ2V0UmV0cnlQbHVnaW4gPSAob3B0aW9uczogUmV0cnlSZXNvbHZlZENvbmZpZyk6IFBsdWdnYWJsZTxhbnksIGFueT4gPT4gKHtcbiAgYXBwbHlUb1N0YWNrOiAoY2xpZW50U3RhY2spID0+IHtcbiAgICBjbGllbnRTdGFjay5hZGQocmV0cnlNaWRkbGV3YXJlKG9wdGlvbnMpLCByZXRyeU1pZGRsZXdhcmVPcHRpb25zKTtcbiAgfSxcbn0pO1xuIl19
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicmV0cnlNaWRkbGV3YXJlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vc3JjL3JldHJ5TWlkZGxld2FyZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFhTyxNQUFNLGVBQWUsR0FBRyxDQUFDLE9BQTRCLEVBQUUsRUFBRSxDQUFDLENBQy9ELElBQWtDLEVBQ2xDLE9BQWdDLEVBQ0YsRUFBRSxDQUFDLEtBQUssRUFDdEMsSUFBbUMsRUFDSyxFQUFFOztJQUMxQyxJQUFJLE1BQUEsT0FBTyxhQUFQLE9BQU8sdUJBQVAsT0FBTyxDQUFFLGFBQWEsMENBQUUsSUFBSTtRQUM5QixPQUFPLENBQUMsU0FBUyxHQUFHLENBQUMsR0FBRyxDQUFDLE9BQU8sQ0FBQyxTQUFTLElBQUksRUFBRSxDQUFDLEVBQUUsQ0FBQyxnQkFBZ0IsRUFBRSxPQUFPLENBQUMsYUFBYSxDQUFDLElBQUksQ0FBQyxDQUFDLENBQUM7SUFDckcsT0FBTyxPQUFPLENBQUMsYUFBYSxDQUFDLEtBQUssQ0FBQyxJQUFJLEVBQUUsSUFBSSxDQUFDLENBQUM7QUFDakQsQ0FBQyxDQUFDO0FBVFcsUUFBQSxlQUFlLG1CQVMxQjtBQUVXLFFBQUEsc0JBQXNCLEdBQXFEO0lBQ3RGLElBQUksRUFBRSxpQkFBaUI7SUFDdkIsSUFBSSxFQUFFLENBQUMsT0FBTyxDQUFDO0lBQ2YsSUFBSSxFQUFFLGlCQUFpQjtJQUN2QixRQUFRLEVBQUUsTUFBTTtJQUNoQixRQUFRLEVBQUUsSUFBSTtDQUNmLENBQUM7QUFFSyxNQUFNLGNBQWMsR0FBRyxDQUFDLE9BQTRCLEVBQXVCLEVBQUUsQ0FBQyxDQUFDO0lBQ3BGLFlBQVksRUFBRSxDQUFDLFdBQVcsRUFBRSxFQUFFO1FBQzVCLFdBQVcsQ0FBQyxHQUFHLENBQUMsdUJBQWUsQ0FBQyxPQUFPLENBQUMsRUFBRSw4QkFBc0IsQ0FBQyxDQUFDO0lBQ3BFLENBQUM7Q0FDRixDQUFDLENBQUM7QUFKVSxRQUFBLGNBQWMsa0JBSXhCIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHtcbiAgQWJzb2x1dGVMb2NhdGlvbixcbiAgRmluYWxpemVIYW5kbGVyLFxuICBGaW5hbGl6ZUhhbmRsZXJBcmd1bWVudHMsXG4gIEZpbmFsaXplSGFuZGxlck91dHB1dCxcbiAgRmluYWxpemVSZXF1ZXN0SGFuZGxlck9wdGlvbnMsXG4gIEhhbmRsZXJFeGVjdXRpb25Db250ZXh0LFxuICBNZXRhZGF0YUJlYXJlcixcbiAgUGx1Z2dhYmxlLFxufSBmcm9tIFwiQGF3cy1zZGsvdHlwZXNcIjtcblxuaW1wb3J0IHsgUmV0cnlSZXNvbHZlZENvbmZpZyB9IGZyb20gXCIuL2NvbmZpZ3VyYXRpb25zXCI7XG5cbmV4cG9ydCBjb25zdCByZXRyeU1pZGRsZXdhcmUgPSAob3B0aW9uczogUmV0cnlSZXNvbHZlZENvbmZpZykgPT4gPE91dHB1dCBleHRlbmRzIE1ldGFkYXRhQmVhcmVyID0gTWV0YWRhdGFCZWFyZXI+KFxuICBuZXh0OiBGaW5hbGl6ZUhhbmRsZXI8YW55LCBPdXRwdXQ+LFxuICBjb250ZXh0OiBIYW5kbGVyRXhlY3V0aW9uQ29udGV4dFxuKTogRmluYWxpemVIYW5kbGVyPGFueSwgT3V0cHV0PiA9PiBhc3luYyAoXG4gIGFyZ3M6IEZpbmFsaXplSGFuZGxlckFyZ3VtZW50czxhbnk+XG4pOiBQcm9taXNlPEZpbmFsaXplSGFuZGxlck91dHB1dDxPdXRwdXQ+PiA9PiB7XG4gIGlmIChvcHRpb25zPy5yZXRyeVN0cmF0ZWd5Py5tb2RlKVxuICAgIGNvbnRleHQudXNlckFnZW50ID0gWy4uLihjb250ZXh0LnVzZXJBZ2VudCB8fCBbXSksIFtcImNmZy9yZXRyeS1tb2RlXCIsIG9wdGlvbnMucmV0cnlTdHJhdGVneS5tb2RlXV07XG4gIHJldHVybiBvcHRpb25zLnJldHJ5U3RyYXRlZ3kucmV0cnkobmV4dCwgYXJncyk7XG59O1xuXG5leHBvcnQgY29uc3QgcmV0cnlNaWRkbGV3YXJlT3B0aW9uczogRmluYWxpemVSZXF1ZXN0SGFuZGxlck9wdGlvbnMgJiBBYnNvbHV0ZUxvY2F0aW9uID0ge1xuICBuYW1lOiBcInJldHJ5TWlkZGxld2FyZVwiLFxuICB0YWdzOiBbXCJSRVRSWVwiXSxcbiAgc3RlcDogXCJmaW5hbGl6ZVJlcXVlc3RcIixcbiAgcHJpb3JpdHk6IFwiaGlnaFwiLFxuICBvdmVycmlkZTogdHJ1ZSxcbn07XG5cbmV4cG9ydCBjb25zdCBnZXRSZXRyeVBsdWdpbiA9IChvcHRpb25zOiBSZXRyeVJlc29sdmVkQ29uZmlnKTogUGx1Z2dhYmxlPGFueSwgYW55PiA9PiAoe1xuICBhcHBseVRvU3RhY2s6IChjbGllbnRTdGFjaykgPT4ge1xuICAgIGNsaWVudFN0YWNrLmFkZChyZXRyeU1pZGRsZXdhcmUob3B0aW9ucyksIHJldHJ5TWlkZGxld2FyZU9wdGlvbnMpO1xuICB9LFxufSk7XG4iXX0=
 
 /***/ }),
 
@@ -59094,7 +59590,7 @@ const getUserAgentPlugin = (config) => ({
     },
 });
 exports.getUserAgentPlugin = getUserAgentPlugin;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidXNlci1hZ2VudC1taWRkbGV3YXJlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vc3JjL3VzZXItYWdlbnQtbWlkZGxld2FyZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFBQSwwREFBcUQ7QUFjckQsMkNBQW1GO0FBRW5GOzs7Ozs7Ozs7OztHQVdHO0FBQ0ksTUFBTSxtQkFBbUIsR0FBRyxDQUFDLE9BQWdDLEVBQUUsRUFBRSxDQUFDLENBQ3ZFLElBQTRCLEVBQzVCLE9BQWdDLEVBQ1IsRUFBRSxDQUFDLEtBQUssRUFBRSxJQUFnQyxFQUF1QyxFQUFFOztJQUMzRyxNQUFNLEVBQUUsT0FBTyxFQUFFLEdBQUcsSUFBSSxDQUFDO0lBQ3pCLElBQUksQ0FBQywyQkFBVyxDQUFDLFVBQVUsQ0FBQyxPQUFPLENBQUM7UUFBRSxPQUFPLElBQUksQ0FBQyxJQUFJLENBQUMsQ0FBQztJQUN4RCxNQUFNLEVBQUUsT0FBTyxFQUFFLEdBQUcsT0FBTyxDQUFDO0lBQzVCLE1BQU0sU0FBUyxHQUFHLE9BQUEsT0FBTyxhQUFQLE9BQU8sdUJBQVAsT0FBTyxDQUFFLFNBQVMsMENBQUUsR0FBRyxDQUFDLGVBQWUsTUFBSyxFQUFFLENBQUM7SUFDakUsTUFBTSxnQkFBZ0IsR0FBRyxDQUFDLE1BQU0sT0FBTyxDQUFDLHdCQUF3QixFQUFFLENBQUMsQ0FBQyxHQUFHLENBQUMsZUFBZSxDQUFDLENBQUM7SUFDekYsTUFBTSxlQUFlLEdBQUcsT0FBQSxPQUFPLGFBQVAsT0FBTyx1QkFBUCxPQUFPLENBQUUsZUFBZSwwQ0FBRSxHQUFHLENBQUMsZUFBZSxNQUFLLEVBQUUsQ0FBQztJQUM3RSw4Q0FBOEM7SUFDOUMsT0FBTyxDQUFDLDRCQUFnQixDQUFDLEdBQUcsQ0FBQyxHQUFHLGdCQUFnQixFQUFFLEdBQUcsU0FBUyxFQUFFLEdBQUcsZUFBZSxDQUFDLENBQUMsSUFBSSxDQUFDLGlCQUFLLENBQUMsQ0FBQztJQUNoRyxnRUFBZ0U7SUFDaEUsTUFBTSxhQUFhLEdBQUc7UUFDcEIsR0FBRyxnQkFBZ0IsQ0FBQyxNQUFNLENBQUMsQ0FBQyxPQUFPLEVBQUUsRUFBRSxDQUFDLE9BQU8sQ0FBQyxVQUFVLENBQUMsVUFBVSxDQUFDLENBQUM7UUFDdkUsR0FBRyxlQUFlO0tBQ25CLENBQUMsSUFBSSxDQUFDLGlCQUFLLENBQUMsQ0FBQztJQUNkLElBQUksT0FBTyxDQUFDLE9BQU8sS0FBSyxTQUFTLElBQUksYUFBYSxFQUFFO1FBQ2xELE9BQU8sQ0FBQyxzQkFBVSxDQUFDLEdBQUcsT0FBTyxDQUFDLHNCQUFVLENBQUMsQ0FBQyxDQUFDLENBQUMsR0FBRyxPQUFPLENBQUMsc0JBQVUsQ0FBQyxJQUFJLGFBQWEsRUFBRSxDQUFDLENBQUMsQ0FBQyxhQUFhLENBQUM7S0FDdkc7SUFFRCxPQUFPLElBQUksQ0FBQztRQUNWLEdBQUcsSUFBSTtRQUNQLE9BQU87S0FDUixDQUFDLENBQUM7QUFDTCxDQUFDLENBQUM7QUF6QlcsUUFBQSxtQkFBbUIsdUJBeUI5QjtBQUVGOzs7O0dBSUc7QUFDSCxNQUFNLGVBQWUsR0FBRyxDQUFDLENBQUMsSUFBSSxFQUFFLE9BQU8sQ0FBZ0IsRUFBVSxFQUFFO0lBQ2pFLE1BQU0sb0JBQW9CLEdBQUcsSUFBSSxDQUFDLE9BQU8sQ0FBQyxHQUFHLENBQUMsQ0FBQztJQUMvQyxNQUFNLE1BQU0sR0FBRyxJQUFJLENBQUMsU0FBUyxDQUFDLENBQUMsRUFBRSxvQkFBb0IsQ0FBQyxDQUFDLENBQUMsa0NBQWtDO0lBQzFGLElBQUksTUFBTSxHQUFHLElBQUksQ0FBQyxTQUFTLENBQUMsb0JBQW9CLEdBQUcsQ0FBQyxDQUFDLENBQUM7SUFDdEQsSUFBSSxNQUFNLEtBQUssS0FBSyxFQUFFO1FBQ3BCLE1BQU0sR0FBRyxNQUFNLENBQUMsV0FBVyxFQUFFLENBQUM7S0FDL0I7SUFDRCxPQUFPLENBQUMsTUFBTSxFQUFFLE1BQU0sRUFBRSxPQUFPLENBQUM7U0FDN0IsTUFBTSxDQUFDLENBQUMsSUFBSSxFQUFFLEVBQUUsQ0FBQyxJQUFJLElBQUksSUFBSSxDQUFDLE1BQU0sR0FBRyxDQUFDLENBQUM7U0FDekMsR0FBRyxDQUFDLENBQUMsSUFBSSxFQUFFLEVBQUUsQ0FBQyxJQUFJLGFBQUosSUFBSSx1QkFBSixJQUFJLENBQUUsT0FBTyxDQUFDLDJCQUFlLEVBQUUsR0FBRyxDQUFDLENBQUM7U0FDbEQsSUFBSSxDQUFDLEdBQUcsQ0FBQyxDQUFDO0FBQ2YsQ0FBQyxDQUFDO0FBRVcsUUFBQSw2QkFBNkIsR0FBMkM7SUFDbkYsSUFBSSxFQUFFLHdCQUF3QjtJQUM5QixJQUFJLEVBQUUsT0FBTztJQUNiLFFBQVEsRUFBRSxLQUFLO0lBQ2YsSUFBSSxFQUFFLENBQUMsZ0JBQWdCLEVBQUUsWUFBWSxDQUFDO0lBQ3RDLFFBQVEsRUFBRSxJQUFJO0NBQ2YsQ0FBQztBQUVLLE1BQU0sa0JBQWtCLEdBQUcsQ0FBQyxNQUErQixFQUF1QixFQUFFLENBQUMsQ0FBQztJQUMzRixZQUFZLEVBQUUsQ0FBQyxXQUFXLEVBQUUsRUFBRTtRQUM1QixXQUFXLENBQUMsR0FBRyxDQUFDLDJCQUFtQixDQUFDLE1BQU0sQ0FBQyxFQUFFLHFDQUE2QixDQUFDLENBQUM7SUFDOUUsQ0FBQztDQUNGLENBQUMsQ0FBQztBQUpVLFFBQUEsa0JBQWtCLHNCQUk1QiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IEh0dHBSZXF1ZXN0IH0gZnJvbSBcIkBhd3Mtc2RrL3Byb3RvY29sLWh0dHBcIjtcbmltcG9ydCB7XG4gIEFic29sdXRlTG9jYXRpb24sXG4gIEJ1aWxkSGFuZGxlcixcbiAgQnVpbGRIYW5kbGVyQXJndW1lbnRzLFxuICBCdWlsZEhhbmRsZXJPcHRpb25zLFxuICBCdWlsZEhhbmRsZXJPdXRwdXQsXG4gIEhhbmRsZXJFeGVjdXRpb25Db250ZXh0LFxuICBNZXRhZGF0YUJlYXJlcixcbiAgUGx1Z2dhYmxlLFxuICBVc2VyQWdlbnRQYWlyLFxufSBmcm9tIFwiQGF3cy1zZGsvdHlwZXNcIjtcblxuaW1wb3J0IHsgVXNlckFnZW50UmVzb2x2ZWRDb25maWcgfSBmcm9tIFwiLi9jb25maWd1cmF0aW9uc1wiO1xuaW1wb3J0IHsgU1BBQ0UsIFVBX0VTQ0FQRV9SRUdFWCwgVVNFUl9BR0VOVCwgWF9BTVpfVVNFUl9BR0VOVCB9IGZyb20gXCIuL2NvbnN0YW50c1wiO1xuXG4vKipcbiAqIEJ1aWxkIHVzZXIgYWdlbnQgaGVhZGVyIHNlY3Rpb25zIGZyb206XG4gKiAxLiBydW50aW1lLXNwZWNpZmljIGRlZmF1bHQgdXNlciBhZ2VudCBwcm92aWRlcjtcbiAqIDIuIGN1c3RvbSB1c2VyIGFnZW50IGZyb20gYGN1c3RvbVVzZXJBZ2VudGAgY2xpZW50IGNvbmZpZztcbiAqIDMuIGhhbmRsZXIgZXhlY3V0aW9uIGNvbnRleHQgc2V0IGJ5IGludGVybmFsIFNESyBjb21wb25lbnRzO1xuICogVGhlIGJ1aWx0IHVzZXIgYWdlbnQgd2lsbCBiZSBzZXQgdG8gYHgtYW16LXVzZXItYWdlbnRgIGhlYWRlciBmb3IgQUxMIHRoZVxuICogcnVudGltZXMuXG4gKiBQbGVhc2Ugbm90ZSB0aGF0IGFueSBvdmVycmlkZSB0byB0aGUgYHVzZXItYWdlbnRgIG9yIGB4LWFtei11c2VyLWFnZW50YCBoZWFkZXJcbiAqIGluIHRoZSBIVFRQIHJlcXVlc3QgaXMgZGlzY291cmFnZWQuIFBsZWFzZSB1c2UgYGN1c3RvbVVzZXJBZ2VudGAgY2xpZW50XG4gKiBjb25maWcgb3IgbWlkZGxld2FyZSBzZXR0aW5nIHRoZSBgdXNlckFnZW50YCBjb250ZXh0IHRvIGdlbmVyYXRlIGRlc2lyZWQgdXNlclxuICogYWdlbnQuXG4gKi9cbmV4cG9ydCBjb25zdCB1c2VyQWdlbnRNaWRkbGV3YXJlID0gKG9wdGlvbnM6IFVzZXJBZ2VudFJlc29sdmVkQ29uZmlnKSA9PiA8T3V0cHV0IGV4dGVuZHMgTWV0YWRhdGFCZWFyZXI+KFxuICBuZXh0OiBCdWlsZEhhbmRsZXI8YW55LCBhbnk+LFxuICBjb250ZXh0OiBIYW5kbGVyRXhlY3V0aW9uQ29udGV4dFxuKTogQnVpbGRIYW5kbGVyPGFueSwgYW55PiA9PiBhc3luYyAoYXJnczogQnVpbGRIYW5kbGVyQXJndW1lbnRzPGFueT4pOiBQcm9taXNlPEJ1aWxkSGFuZGxlck91dHB1dDxPdXRwdXQ+PiA9PiB7XG4gIGNvbnN0IHsgcmVxdWVzdCB9ID0gYXJncztcbiAgaWYgKCFIdHRwUmVxdWVzdC5pc0luc3RhbmNlKHJlcXVlc3QpKSByZXR1cm4gbmV4dChhcmdzKTtcbiAgY29uc3QgeyBoZWFkZXJzIH0gPSByZXF1ZXN0O1xuICBjb25zdCB1c2VyQWdlbnQgPSBjb250ZXh0Py51c2VyQWdlbnQ/Lm1hcChlc2NhcGVVc2VyQWdlbnQpIHx8IFtdO1xuICBjb25zdCBkZWZhdWx0VXNlckFnZW50ID0gKGF3YWl0IG9wdGlvbnMuZGVmYXVsdFVzZXJBZ2VudFByb3ZpZGVyKCkpLm1hcChlc2NhcGVVc2VyQWdlbnQpO1xuICBjb25zdCBjdXN0b21Vc2VyQWdlbnQgPSBvcHRpb25zPy5jdXN0b21Vc2VyQWdlbnQ/Lm1hcChlc2NhcGVVc2VyQWdlbnQpIHx8IFtdO1xuICAvLyBTZXQgdmFsdWUgdG8gQVdTLXNwZWNpZmljIHVzZXIgYWdlbnQgaGVhZGVyXG4gIGhlYWRlcnNbWF9BTVpfVVNFUl9BR0VOVF0gPSBbLi4uZGVmYXVsdFVzZXJBZ2VudCwgLi4udXNlckFnZW50LCAuLi5jdXN0b21Vc2VyQWdlbnRdLmpvaW4oU1BBQ0UpO1xuICAvLyBHZXQgdmFsdWUgdG8gYmUgc2VudCB3aXRoIG5vbi1BV1Mtc3BlY2lmaWMgdXNlciBhZ2VudCBoZWFkZXIuXG4gIGNvbnN0IG5vcm1hbFVBVmFsdWUgPSBbXG4gICAgLi4uZGVmYXVsdFVzZXJBZ2VudC5maWx0ZXIoKHNlY3Rpb24pID0+IHNlY3Rpb24uc3RhcnRzV2l0aChcImF3cy1zZGstXCIpKSxcbiAgICAuLi5jdXN0b21Vc2VyQWdlbnQsXG4gIF0uam9pbihTUEFDRSk7XG4gIGlmIChvcHRpb25zLnJ1bnRpbWUgIT09IFwiYnJvd3NlclwiICYmIG5vcm1hbFVBVmFsdWUpIHtcbiAgICBoZWFkZXJzW1VTRVJfQUdFTlRdID0gaGVhZGVyc1tVU0VSX0FHRU5UXSA/IGAke2hlYWRlcnNbVVNFUl9BR0VOVF19ICR7bm9ybWFsVUFWYWx1ZX1gIDogbm9ybWFsVUFWYWx1ZTtcbiAgfVxuXG4gIHJldHVybiBuZXh0KHtcbiAgICAuLi5hcmdzLFxuICAgIHJlcXVlc3QsXG4gIH0pO1xufTtcblxuLyoqXG4gKiBFc2NhcGUgdGhlIGVhY2ggcGFpciBhY2NvcmRpbmcgdG8gaHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzUyMzQgYW5kIGpvaW4gdGhlIHBhaXIgd2l0aCBwYXR0ZXJuIGBuYW1lL3ZlcnNpb25gLlxuICogVXNlciBhZ2VudCBuYW1lIG1heSBpbmNsdWRlIHByZWZpeCBsaWtlIGBtZC9gLCBgYXBpL2AsIGBvcy9gIGV0Yy4sIHdlIHNob3VsZCBub3QgZXNjYXBlIHRoZSBgL2AgYWZ0ZXIgdGhlIHByZWZpeC5cbiAqIEBwcml2YXRlXG4gKi9cbmNvbnN0IGVzY2FwZVVzZXJBZ2VudCA9IChbbmFtZSwgdmVyc2lvbl06IFVzZXJBZ2VudFBhaXIpOiBzdHJpbmcgPT4ge1xuICBjb25zdCBwcmVmaXhTZXBhcmF0b3JJbmRleCA9IG5hbWUuaW5kZXhPZihcIi9cIik7XG4gIGNvbnN0IHByZWZpeCA9IG5hbWUuc3Vic3RyaW5nKDAsIHByZWZpeFNlcGFyYXRvckluZGV4KTsgLy8gSWYgbm8gcHJlZml4LCBwcmVmaXggaXMganVzdCBcIlwiXG4gIGxldCB1YU5hbWUgPSBuYW1lLnN1YnN0cmluZyhwcmVmaXhTZXBhcmF0b3JJbmRleCArIDEpO1xuICBpZiAocHJlZml4ID09PSBcImFwaVwiKSB7XG4gICAgdWFOYW1lID0gdWFOYW1lLnRvTG93ZXJDYXNlKCk7XG4gIH1cbiAgcmV0dXJuIFtwcmVmaXgsIHVhTmFtZSwgdmVyc2lvbl1cbiAgICAuZmlsdGVyKChpdGVtKSA9PiBpdGVtICYmIGl0ZW0ubGVuZ3RoID4gMClcbiAgICAubWFwKChpdGVtKSA9PiBpdGVtPy5yZXBsYWNlKFVBX0VTQ0FQRV9SRUdFWCwgXCJfXCIpKVxuICAgIC5qb2luKFwiL1wiKTtcbn07XG5cbmV4cG9ydCBjb25zdCBnZXRVc2VyQWdlbnRNaWRkbGV3YXJlT3B0aW9uczogQnVpbGRIYW5kbGVyT3B0aW9ucyAmIEFic29sdXRlTG9jYXRpb24gPSB7XG4gIG5hbWU6IFwiZ2V0VXNlckFnZW50TWlkZGxld2FyZVwiLFxuICBzdGVwOiBcImJ1aWxkXCIsXG4gIHByaW9yaXR5OiBcImxvd1wiLFxuICB0YWdzOiBbXCJTRVRfVVNFUl9BR0VOVFwiLCBcIlVTRVJfQUdFTlRcIl0sXG4gIG92ZXJyaWRlOiB0cnVlLFxufTtcblxuZXhwb3J0IGNvbnN0IGdldFVzZXJBZ2VudFBsdWdpbiA9IChjb25maWc6IFVzZXJBZ2VudFJlc29sdmVkQ29uZmlnKTogUGx1Z2dhYmxlPGFueSwgYW55PiA9PiAoe1xuICBhcHBseVRvU3RhY2s6IChjbGllbnRTdGFjaykgPT4ge1xuICAgIGNsaWVudFN0YWNrLmFkZCh1c2VyQWdlbnRNaWRkbGV3YXJlKGNvbmZpZyksIGdldFVzZXJBZ2VudE1pZGRsZXdhcmVPcHRpb25zKTtcbiAgfSxcbn0pO1xuIl19
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidXNlci1hZ2VudC1taWRkbGV3YXJlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vc3JjL3VzZXItYWdlbnQtbWlkZGxld2FyZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFBQSwwREFBcUQ7QUFjckQsMkNBQW1GO0FBRW5GOzs7Ozs7Ozs7OztHQVdHO0FBQ0ksTUFBTSxtQkFBbUIsR0FBRyxDQUFDLE9BQWdDLEVBQUUsRUFBRSxDQUFDLENBQ3ZFLElBQTRCLEVBQzVCLE9BQWdDLEVBQ1IsRUFBRSxDQUFDLEtBQUssRUFBRSxJQUFnQyxFQUF1QyxFQUFFOztJQUMzRyxNQUFNLEVBQUUsT0FBTyxFQUFFLEdBQUcsSUFBSSxDQUFDO0lBQ3pCLElBQUksQ0FBQywyQkFBVyxDQUFDLFVBQVUsQ0FBQyxPQUFPLENBQUM7UUFBRSxPQUFPLElBQUksQ0FBQyxJQUFJLENBQUMsQ0FBQztJQUN4RCxNQUFNLEVBQUUsT0FBTyxFQUFFLEdBQUcsT0FBTyxDQUFDO0lBQzVCLE1BQU0sU0FBUyxHQUFHLENBQUEsTUFBQSxPQUFPLGFBQVAsT0FBTyx1QkFBUCxPQUFPLENBQUUsU0FBUywwQ0FBRSxHQUFHLENBQUMsZUFBZSxDQUFDLEtBQUksRUFBRSxDQUFDO0lBQ2pFLE1BQU0sZ0JBQWdCLEdBQUcsQ0FBQyxNQUFNLE9BQU8sQ0FBQyx3QkFBd0IsRUFBRSxDQUFDLENBQUMsR0FBRyxDQUFDLGVBQWUsQ0FBQyxDQUFDO0lBQ3pGLE1BQU0sZUFBZSxHQUFHLENBQUEsTUFBQSxPQUFPLGFBQVAsT0FBTyx1QkFBUCxPQUFPLENBQUUsZUFBZSwwQ0FBRSxHQUFHLENBQUMsZUFBZSxDQUFDLEtBQUksRUFBRSxDQUFDO0lBQzdFLDhDQUE4QztJQUM5QyxPQUFPLENBQUMsNEJBQWdCLENBQUMsR0FBRyxDQUFDLEdBQUcsZ0JBQWdCLEVBQUUsR0FBRyxTQUFTLEVBQUUsR0FBRyxlQUFlLENBQUMsQ0FBQyxJQUFJLENBQUMsaUJBQUssQ0FBQyxDQUFDO0lBQ2hHLGdFQUFnRTtJQUNoRSxNQUFNLGFBQWEsR0FBRztRQUNwQixHQUFHLGdCQUFnQixDQUFDLE1BQU0sQ0FBQyxDQUFDLE9BQU8sRUFBRSxFQUFFLENBQUMsT0FBTyxDQUFDLFVBQVUsQ0FBQyxVQUFVLENBQUMsQ0FBQztRQUN2RSxHQUFHLGVBQWU7S0FDbkIsQ0FBQyxJQUFJLENBQUMsaUJBQUssQ0FBQyxDQUFDO0lBQ2QsSUFBSSxPQUFPLENBQUMsT0FBTyxLQUFLLFNBQVMsSUFBSSxhQUFhLEVBQUU7UUFDbEQsT0FBTyxDQUFDLHNCQUFVLENBQUMsR0FBRyxPQUFPLENBQUMsc0JBQVUsQ0FBQyxDQUFDLENBQUMsQ0FBQyxHQUFHLE9BQU8sQ0FBQyxzQkFBVSxDQUFDLElBQUksYUFBYSxFQUFFLENBQUMsQ0FBQyxDQUFDLGFBQWEsQ0FBQztLQUN2RztJQUVELE9BQU8sSUFBSSxDQUFDO1FBQ1YsR0FBRyxJQUFJO1FBQ1AsT0FBTztLQUNSLENBQUMsQ0FBQztBQUNMLENBQUMsQ0FBQztBQXpCVyxRQUFBLG1CQUFtQix1QkF5QjlCO0FBRUY7Ozs7R0FJRztBQUNILE1BQU0sZUFBZSxHQUFHLENBQUMsQ0FBQyxJQUFJLEVBQUUsT0FBTyxDQUFnQixFQUFVLEVBQUU7SUFDakUsTUFBTSxvQkFBb0IsR0FBRyxJQUFJLENBQUMsT0FBTyxDQUFDLEdBQUcsQ0FBQyxDQUFDO0lBQy9DLE1BQU0sTUFBTSxHQUFHLElBQUksQ0FBQyxTQUFTLENBQUMsQ0FBQyxFQUFFLG9CQUFvQixDQUFDLENBQUMsQ0FBQyxrQ0FBa0M7SUFDMUYsSUFBSSxNQUFNLEdBQUcsSUFBSSxDQUFDLFNBQVMsQ0FBQyxvQkFBb0IsR0FBRyxDQUFDLENBQUMsQ0FBQztJQUN0RCxJQUFJLE1BQU0sS0FBSyxLQUFLLEVBQUU7UUFDcEIsTUFBTSxHQUFHLE1BQU0sQ0FBQyxXQUFXLEVBQUUsQ0FBQztLQUMvQjtJQUNELE9BQU8sQ0FBQyxNQUFNLEVBQUUsTUFBTSxFQUFFLE9BQU8sQ0FBQztTQUM3QixNQUFNLENBQUMsQ0FBQyxJQUFJLEVBQUUsRUFBRSxDQUFDLElBQUksSUFBSSxJQUFJLENBQUMsTUFBTSxHQUFHLENBQUMsQ0FBQztTQUN6QyxHQUFHLENBQUMsQ0FBQyxJQUFJLEVBQUUsRUFBRSxDQUFDLElBQUksYUFBSixJQUFJLHVCQUFKLElBQUksQ0FBRSxPQUFPLENBQUMsMkJBQWUsRUFBRSxHQUFHLENBQUMsQ0FBQztTQUNsRCxJQUFJLENBQUMsR0FBRyxDQUFDLENBQUM7QUFDZixDQUFDLENBQUM7QUFFVyxRQUFBLDZCQUE2QixHQUEyQztJQUNuRixJQUFJLEVBQUUsd0JBQXdCO0lBQzlCLElBQUksRUFBRSxPQUFPO0lBQ2IsUUFBUSxFQUFFLEtBQUs7SUFDZixJQUFJLEVBQUUsQ0FBQyxnQkFBZ0IsRUFBRSxZQUFZLENBQUM7SUFDdEMsUUFBUSxFQUFFLElBQUk7Q0FDZixDQUFDO0FBRUssTUFBTSxrQkFBa0IsR0FBRyxDQUFDLE1BQStCLEVBQXVCLEVBQUUsQ0FBQyxDQUFDO0lBQzNGLFlBQVksRUFBRSxDQUFDLFdBQVcsRUFBRSxFQUFFO1FBQzVCLFdBQVcsQ0FBQyxHQUFHLENBQUMsMkJBQW1CLENBQUMsTUFBTSxDQUFDLEVBQUUscUNBQTZCLENBQUMsQ0FBQztJQUM5RSxDQUFDO0NBQ0YsQ0FBQyxDQUFDO0FBSlUsUUFBQSxrQkFBa0Isc0JBSTVCIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgSHR0cFJlcXVlc3QgfSBmcm9tIFwiQGF3cy1zZGsvcHJvdG9jb2wtaHR0cFwiO1xuaW1wb3J0IHtcbiAgQWJzb2x1dGVMb2NhdGlvbixcbiAgQnVpbGRIYW5kbGVyLFxuICBCdWlsZEhhbmRsZXJBcmd1bWVudHMsXG4gIEJ1aWxkSGFuZGxlck9wdGlvbnMsXG4gIEJ1aWxkSGFuZGxlck91dHB1dCxcbiAgSGFuZGxlckV4ZWN1dGlvbkNvbnRleHQsXG4gIE1ldGFkYXRhQmVhcmVyLFxuICBQbHVnZ2FibGUsXG4gIFVzZXJBZ2VudFBhaXIsXG59IGZyb20gXCJAYXdzLXNkay90eXBlc1wiO1xuXG5pbXBvcnQgeyBVc2VyQWdlbnRSZXNvbHZlZENvbmZpZyB9IGZyb20gXCIuL2NvbmZpZ3VyYXRpb25zXCI7XG5pbXBvcnQgeyBTUEFDRSwgVUFfRVNDQVBFX1JFR0VYLCBVU0VSX0FHRU5ULCBYX0FNWl9VU0VSX0FHRU5UIH0gZnJvbSBcIi4vY29uc3RhbnRzXCI7XG5cbi8qKlxuICogQnVpbGQgdXNlciBhZ2VudCBoZWFkZXIgc2VjdGlvbnMgZnJvbTpcbiAqIDEuIHJ1bnRpbWUtc3BlY2lmaWMgZGVmYXVsdCB1c2VyIGFnZW50IHByb3ZpZGVyO1xuICogMi4gY3VzdG9tIHVzZXIgYWdlbnQgZnJvbSBgY3VzdG9tVXNlckFnZW50YCBjbGllbnQgY29uZmlnO1xuICogMy4gaGFuZGxlciBleGVjdXRpb24gY29udGV4dCBzZXQgYnkgaW50ZXJuYWwgU0RLIGNvbXBvbmVudHM7XG4gKiBUaGUgYnVpbHQgdXNlciBhZ2VudCB3aWxsIGJlIHNldCB0byBgeC1hbXotdXNlci1hZ2VudGAgaGVhZGVyIGZvciBBTEwgdGhlXG4gKiBydW50aW1lcy5cbiAqIFBsZWFzZSBub3RlIHRoYXQgYW55IG92ZXJyaWRlIHRvIHRoZSBgdXNlci1hZ2VudGAgb3IgYHgtYW16LXVzZXItYWdlbnRgIGhlYWRlclxuICogaW4gdGhlIEhUVFAgcmVxdWVzdCBpcyBkaXNjb3VyYWdlZC4gUGxlYXNlIHVzZSBgY3VzdG9tVXNlckFnZW50YCBjbGllbnRcbiAqIGNvbmZpZyBvciBtaWRkbGV3YXJlIHNldHRpbmcgdGhlIGB1c2VyQWdlbnRgIGNvbnRleHQgdG8gZ2VuZXJhdGUgZGVzaXJlZCB1c2VyXG4gKiBhZ2VudC5cbiAqL1xuZXhwb3J0IGNvbnN0IHVzZXJBZ2VudE1pZGRsZXdhcmUgPSAob3B0aW9uczogVXNlckFnZW50UmVzb2x2ZWRDb25maWcpID0+IDxPdXRwdXQgZXh0ZW5kcyBNZXRhZGF0YUJlYXJlcj4oXG4gIG5leHQ6IEJ1aWxkSGFuZGxlcjxhbnksIGFueT4sXG4gIGNvbnRleHQ6IEhhbmRsZXJFeGVjdXRpb25Db250ZXh0XG4pOiBCdWlsZEhhbmRsZXI8YW55LCBhbnk+ID0+IGFzeW5jIChhcmdzOiBCdWlsZEhhbmRsZXJBcmd1bWVudHM8YW55Pik6IFByb21pc2U8QnVpbGRIYW5kbGVyT3V0cHV0PE91dHB1dD4+ID0+IHtcbiAgY29uc3QgeyByZXF1ZXN0IH0gPSBhcmdzO1xuICBpZiAoIUh0dHBSZXF1ZXN0LmlzSW5zdGFuY2UocmVxdWVzdCkpIHJldHVybiBuZXh0KGFyZ3MpO1xuICBjb25zdCB7IGhlYWRlcnMgfSA9IHJlcXVlc3Q7XG4gIGNvbnN0IHVzZXJBZ2VudCA9IGNvbnRleHQ/LnVzZXJBZ2VudD8ubWFwKGVzY2FwZVVzZXJBZ2VudCkgfHwgW107XG4gIGNvbnN0IGRlZmF1bHRVc2VyQWdlbnQgPSAoYXdhaXQgb3B0aW9ucy5kZWZhdWx0VXNlckFnZW50UHJvdmlkZXIoKSkubWFwKGVzY2FwZVVzZXJBZ2VudCk7XG4gIGNvbnN0IGN1c3RvbVVzZXJBZ2VudCA9IG9wdGlvbnM/LmN1c3RvbVVzZXJBZ2VudD8ubWFwKGVzY2FwZVVzZXJBZ2VudCkgfHwgW107XG4gIC8vIFNldCB2YWx1ZSB0byBBV1Mtc3BlY2lmaWMgdXNlciBhZ2VudCBoZWFkZXJcbiAgaGVhZGVyc1tYX0FNWl9VU0VSX0FHRU5UXSA9IFsuLi5kZWZhdWx0VXNlckFnZW50LCAuLi51c2VyQWdlbnQsIC4uLmN1c3RvbVVzZXJBZ2VudF0uam9pbihTUEFDRSk7XG4gIC8vIEdldCB2YWx1ZSB0byBiZSBzZW50IHdpdGggbm9uLUFXUy1zcGVjaWZpYyB1c2VyIGFnZW50IGhlYWRlci5cbiAgY29uc3Qgbm9ybWFsVUFWYWx1ZSA9IFtcbiAgICAuLi5kZWZhdWx0VXNlckFnZW50LmZpbHRlcigoc2VjdGlvbikgPT4gc2VjdGlvbi5zdGFydHNXaXRoKFwiYXdzLXNkay1cIikpLFxuICAgIC4uLmN1c3RvbVVzZXJBZ2VudCxcbiAgXS5qb2luKFNQQUNFKTtcbiAgaWYgKG9wdGlvbnMucnVudGltZSAhPT0gXCJicm93c2VyXCIgJiYgbm9ybWFsVUFWYWx1ZSkge1xuICAgIGhlYWRlcnNbVVNFUl9BR0VOVF0gPSBoZWFkZXJzW1VTRVJfQUdFTlRdID8gYCR7aGVhZGVyc1tVU0VSX0FHRU5UXX0gJHtub3JtYWxVQVZhbHVlfWAgOiBub3JtYWxVQVZhbHVlO1xuICB9XG5cbiAgcmV0dXJuIG5leHQoe1xuICAgIC4uLmFyZ3MsXG4gICAgcmVxdWVzdCxcbiAgfSk7XG59O1xuXG4vKipcbiAqIEVzY2FwZSB0aGUgZWFjaCBwYWlyIGFjY29yZGluZyB0byBodHRwczovL3Rvb2xzLmlldGYub3JnL2h0bWwvcmZjNTIzNCBhbmQgam9pbiB0aGUgcGFpciB3aXRoIHBhdHRlcm4gYG5hbWUvdmVyc2lvbmAuXG4gKiBVc2VyIGFnZW50IG5hbWUgbWF5IGluY2x1ZGUgcHJlZml4IGxpa2UgYG1kL2AsIGBhcGkvYCwgYG9zL2AgZXRjLiwgd2Ugc2hvdWxkIG5vdCBlc2NhcGUgdGhlIGAvYCBhZnRlciB0aGUgcHJlZml4LlxuICogQHByaXZhdGVcbiAqL1xuY29uc3QgZXNjYXBlVXNlckFnZW50ID0gKFtuYW1lLCB2ZXJzaW9uXTogVXNlckFnZW50UGFpcik6IHN0cmluZyA9PiB7XG4gIGNvbnN0IHByZWZpeFNlcGFyYXRvckluZGV4ID0gbmFtZS5pbmRleE9mKFwiL1wiKTtcbiAgY29uc3QgcHJlZml4ID0gbmFtZS5zdWJzdHJpbmcoMCwgcHJlZml4U2VwYXJhdG9ySW5kZXgpOyAvLyBJZiBubyBwcmVmaXgsIHByZWZpeCBpcyBqdXN0IFwiXCJcbiAgbGV0IHVhTmFtZSA9IG5hbWUuc3Vic3RyaW5nKHByZWZpeFNlcGFyYXRvckluZGV4ICsgMSk7XG4gIGlmIChwcmVmaXggPT09IFwiYXBpXCIpIHtcbiAgICB1YU5hbWUgPSB1YU5hbWUudG9Mb3dlckNhc2UoKTtcbiAgfVxuICByZXR1cm4gW3ByZWZpeCwgdWFOYW1lLCB2ZXJzaW9uXVxuICAgIC5maWx0ZXIoKGl0ZW0pID0+IGl0ZW0gJiYgaXRlbS5sZW5ndGggPiAwKVxuICAgIC5tYXAoKGl0ZW0pID0+IGl0ZW0/LnJlcGxhY2UoVUFfRVNDQVBFX1JFR0VYLCBcIl9cIikpXG4gICAgLmpvaW4oXCIvXCIpO1xufTtcblxuZXhwb3J0IGNvbnN0IGdldFVzZXJBZ2VudE1pZGRsZXdhcmVPcHRpb25zOiBCdWlsZEhhbmRsZXJPcHRpb25zICYgQWJzb2x1dGVMb2NhdGlvbiA9IHtcbiAgbmFtZTogXCJnZXRVc2VyQWdlbnRNaWRkbGV3YXJlXCIsXG4gIHN0ZXA6IFwiYnVpbGRcIixcbiAgcHJpb3JpdHk6IFwibG93XCIsXG4gIHRhZ3M6IFtcIlNFVF9VU0VSX0FHRU5UXCIsIFwiVVNFUl9BR0VOVFwiXSxcbiAgb3ZlcnJpZGU6IHRydWUsXG59O1xuXG5leHBvcnQgY29uc3QgZ2V0VXNlckFnZW50UGx1Z2luID0gKGNvbmZpZzogVXNlckFnZW50UmVzb2x2ZWRDb25maWcpOiBQbHVnZ2FibGU8YW55LCBhbnk+ID0+ICh7XG4gIGFwcGx5VG9TdGFjazogKGNsaWVudFN0YWNrKSA9PiB7XG4gICAgY2xpZW50U3RhY2suYWRkKHVzZXJBZ2VudE1pZGRsZXdhcmUoY29uZmlnKSwgZ2V0VXNlckFnZW50TWlkZGxld2FyZU9wdGlvbnMpO1xuICB9LFxufSk7XG4iXX0=
 
 /***/ }),
 
@@ -59962,7 +60458,7 @@ exports.THROTTLING_ERROR_CODES = [
     "Throttling",
     "ThrottlingException",
     "TooManyRequestsException",
-    "TransactionInProgressException",
+    "TransactionInProgressException", // DynamoDB
 ];
 /**
  * Error codes that indicate transient issues
@@ -59972,7 +60468,7 @@ exports.TRANSIENT_ERROR_CODES = ["AbortError", "TimeoutError", "RequestTimeout",
  * Error codes that indicate transient issues
  */
 exports.TRANSIENT_ERROR_STATUS_CODES = [500, 502, 503, 504];
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY29uc3RhbnRzLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vc3JjL2NvbnN0YW50cy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFBQTs7Ozs7O0dBTUc7QUFDVSxRQUFBLHNCQUFzQixHQUFHO0lBQ3BDLGFBQWE7SUFDYiwyQkFBMkI7SUFDM0IsZ0JBQWdCO0lBQ2hCLG9CQUFvQjtJQUNwQixzQkFBc0I7SUFDdEIsdUJBQXVCO0NBQ3hCLENBQUM7QUFFRjs7OztHQUlHO0FBQ1UsUUFBQSxzQkFBc0IsR0FBRztJQUNwQyx3QkFBd0I7SUFDeEIsdUJBQXVCO0lBQ3ZCLHdCQUF3QjtJQUN4Qix5QkFBeUI7SUFDekIsd0NBQXdDO0lBQ3hDLHNCQUFzQjtJQUN0QixrQkFBa0I7SUFDbEIsMkJBQTJCO0lBQzNCLFVBQVU7SUFDVixvQkFBb0I7SUFDcEIsWUFBWTtJQUNaLHFCQUFxQjtJQUNyQiwwQkFBMEI7SUFDMUIsZ0NBQWdDO0NBQ2pDLENBQUM7QUFFRjs7R0FFRztBQUNVLFFBQUEscUJBQXFCLEdBQUcsQ0FBQyxZQUFZLEVBQUUsY0FBYyxFQUFFLGdCQUFnQixFQUFFLHlCQUF5QixDQUFDLENBQUM7QUFFakg7O0dBRUc7QUFDVSxRQUFBLDRCQUE0QixHQUFHLENBQUMsR0FBRyxFQUFFLEdBQUcsRUFBRSxHQUFHLEVBQUUsR0FBRyxDQUFDLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKipcbiAqIEVycm9ycyBlbmNvdW50ZXJlZCB3aGVuIHRoZSBjbGllbnQgY2xvY2sgYW5kIHNlcnZlciBjbG9jayBjYW5ub3QgYWdyZWUgb24gdGhlXG4gKiBjdXJyZW50IHRpbWUuXG4gKlxuICogVGhlc2UgZXJyb3JzIGFyZSByZXRyeWFibGUsIGFzc3VtaW5nIHRoZSBTREsgaGFzIGVuYWJsZWQgY2xvY2sgc2tld1xuICogY29ycmVjdGlvbi5cbiAqL1xuZXhwb3J0IGNvbnN0IENMT0NLX1NLRVdfRVJST1JfQ09ERVMgPSBbXG4gIFwiQXV0aEZhaWx1cmVcIixcbiAgXCJJbnZhbGlkU2lnbmF0dXJlRXhjZXB0aW9uXCIsXG4gIFwiUmVxdWVzdEV4cGlyZWRcIixcbiAgXCJSZXF1ZXN0SW5UaGVGdXR1cmVcIixcbiAgXCJSZXF1ZXN0VGltZVRvb1NrZXdlZFwiLFxuICBcIlNpZ25hdHVyZURvZXNOb3RNYXRjaFwiLFxuXTtcblxuLyoqXG4gKiBFcnJvcnMgdGhhdCBpbmRpY2F0ZSB0aGUgU0RLIGlzIGJlaW5nIHRocm90dGxlZC5cbiAqXG4gKiBUaGVzZSBlcnJvcnMgYXJlIGFsd2F5cyByZXRyeWFibGUuXG4gKi9cbmV4cG9ydCBjb25zdCBUSFJPVFRMSU5HX0VSUk9SX0NPREVTID0gW1xuICBcIkJhbmR3aWR0aExpbWl0RXhjZWVkZWRcIixcbiAgXCJFQzJUaHJvdHRsZWRFeGNlcHRpb25cIixcbiAgXCJMaW1pdEV4Y2VlZGVkRXhjZXB0aW9uXCIsXG4gIFwiUHJpb3JSZXF1ZXN0Tm90Q29tcGxldGVcIixcbiAgXCJQcm92aXNpb25lZFRocm91Z2hwdXRFeGNlZWRlZEV4Y2VwdGlvblwiLFxuICBcIlJlcXVlc3RMaW1pdEV4Y2VlZGVkXCIsXG4gIFwiUmVxdWVzdFRocm90dGxlZFwiLFxuICBcIlJlcXVlc3RUaHJvdHRsZWRFeGNlcHRpb25cIixcbiAgXCJTbG93RG93blwiLFxuICBcIlRocm90dGxlZEV4Y2VwdGlvblwiLFxuICBcIlRocm90dGxpbmdcIixcbiAgXCJUaHJvdHRsaW5nRXhjZXB0aW9uXCIsXG4gIFwiVG9vTWFueVJlcXVlc3RzRXhjZXB0aW9uXCIsXG4gIFwiVHJhbnNhY3Rpb25JblByb2dyZXNzRXhjZXB0aW9uXCIsIC8vIER5bmFtb0RCXG5dO1xuXG4vKipcbiAqIEVycm9yIGNvZGVzIHRoYXQgaW5kaWNhdGUgdHJhbnNpZW50IGlzc3Vlc1xuICovXG5leHBvcnQgY29uc3QgVFJBTlNJRU5UX0VSUk9SX0NPREVTID0gW1wiQWJvcnRFcnJvclwiLCBcIlRpbWVvdXRFcnJvclwiLCBcIlJlcXVlc3RUaW1lb3V0XCIsIFwiUmVxdWVzdFRpbWVvdXRFeGNlcHRpb25cIl07XG5cbi8qKlxuICogRXJyb3IgY29kZXMgdGhhdCBpbmRpY2F0ZSB0cmFuc2llbnQgaXNzdWVzXG4gKi9cbmV4cG9ydCBjb25zdCBUUkFOU0lFTlRfRVJST1JfU1RBVFVTX0NPREVTID0gWzUwMCwgNTAyLCA1MDMsIDUwNF07XG4iXX0=
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY29uc3RhbnRzLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vc3JjL2NvbnN0YW50cy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFBQTs7Ozs7O0dBTUc7QUFDVSxRQUFBLHNCQUFzQixHQUFHO0lBQ3BDLGFBQWE7SUFDYiwyQkFBMkI7SUFDM0IsZ0JBQWdCO0lBQ2hCLG9CQUFvQjtJQUNwQixzQkFBc0I7SUFDdEIsdUJBQXVCO0NBQ3hCLENBQUM7QUFFRjs7OztHQUlHO0FBQ1UsUUFBQSxzQkFBc0IsR0FBRztJQUNwQyx3QkFBd0I7SUFDeEIsdUJBQXVCO0lBQ3ZCLHdCQUF3QjtJQUN4Qix5QkFBeUI7SUFDekIsd0NBQXdDO0lBQ3hDLHNCQUFzQjtJQUN0QixrQkFBa0I7SUFDbEIsMkJBQTJCO0lBQzNCLFVBQVU7SUFDVixvQkFBb0I7SUFDcEIsWUFBWTtJQUNaLHFCQUFxQjtJQUNyQiwwQkFBMEI7SUFDMUIsZ0NBQWdDLEVBQUUsV0FBVztDQUM5QyxDQUFDO0FBRUY7O0dBRUc7QUFDVSxRQUFBLHFCQUFxQixHQUFHLENBQUMsWUFBWSxFQUFFLGNBQWMsRUFBRSxnQkFBZ0IsRUFBRSx5QkFBeUIsQ0FBQyxDQUFDO0FBRWpIOztHQUVHO0FBQ1UsUUFBQSw0QkFBNEIsR0FBRyxDQUFDLEdBQUcsRUFBRSxHQUFHLEVBQUUsR0FBRyxFQUFFLEdBQUcsQ0FBQyxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiLyoqXG4gKiBFcnJvcnMgZW5jb3VudGVyZWQgd2hlbiB0aGUgY2xpZW50IGNsb2NrIGFuZCBzZXJ2ZXIgY2xvY2sgY2Fubm90IGFncmVlIG9uIHRoZVxuICogY3VycmVudCB0aW1lLlxuICpcbiAqIFRoZXNlIGVycm9ycyBhcmUgcmV0cnlhYmxlLCBhc3N1bWluZyB0aGUgU0RLIGhhcyBlbmFibGVkIGNsb2NrIHNrZXdcbiAqIGNvcnJlY3Rpb24uXG4gKi9cbmV4cG9ydCBjb25zdCBDTE9DS19TS0VXX0VSUk9SX0NPREVTID0gW1xuICBcIkF1dGhGYWlsdXJlXCIsXG4gIFwiSW52YWxpZFNpZ25hdHVyZUV4Y2VwdGlvblwiLFxuICBcIlJlcXVlc3RFeHBpcmVkXCIsXG4gIFwiUmVxdWVzdEluVGhlRnV0dXJlXCIsXG4gIFwiUmVxdWVzdFRpbWVUb29Ta2V3ZWRcIixcbiAgXCJTaWduYXR1cmVEb2VzTm90TWF0Y2hcIixcbl07XG5cbi8qKlxuICogRXJyb3JzIHRoYXQgaW5kaWNhdGUgdGhlIFNESyBpcyBiZWluZyB0aHJvdHRsZWQuXG4gKlxuICogVGhlc2UgZXJyb3JzIGFyZSBhbHdheXMgcmV0cnlhYmxlLlxuICovXG5leHBvcnQgY29uc3QgVEhST1RUTElOR19FUlJPUl9DT0RFUyA9IFtcbiAgXCJCYW5kd2lkdGhMaW1pdEV4Y2VlZGVkXCIsXG4gIFwiRUMyVGhyb3R0bGVkRXhjZXB0aW9uXCIsXG4gIFwiTGltaXRFeGNlZWRlZEV4Y2VwdGlvblwiLFxuICBcIlByaW9yUmVxdWVzdE5vdENvbXBsZXRlXCIsXG4gIFwiUHJvdmlzaW9uZWRUaHJvdWdocHV0RXhjZWVkZWRFeGNlcHRpb25cIixcbiAgXCJSZXF1ZXN0TGltaXRFeGNlZWRlZFwiLFxuICBcIlJlcXVlc3RUaHJvdHRsZWRcIixcbiAgXCJSZXF1ZXN0VGhyb3R0bGVkRXhjZXB0aW9uXCIsXG4gIFwiU2xvd0Rvd25cIixcbiAgXCJUaHJvdHRsZWRFeGNlcHRpb25cIixcbiAgXCJUaHJvdHRsaW5nXCIsXG4gIFwiVGhyb3R0bGluZ0V4Y2VwdGlvblwiLFxuICBcIlRvb01hbnlSZXF1ZXN0c0V4Y2VwdGlvblwiLFxuICBcIlRyYW5zYWN0aW9uSW5Qcm9ncmVzc0V4Y2VwdGlvblwiLCAvLyBEeW5hbW9EQlxuXTtcblxuLyoqXG4gKiBFcnJvciBjb2RlcyB0aGF0IGluZGljYXRlIHRyYW5zaWVudCBpc3N1ZXNcbiAqL1xuZXhwb3J0IGNvbnN0IFRSQU5TSUVOVF9FUlJPUl9DT0RFUyA9IFtcIkFib3J0RXJyb3JcIiwgXCJUaW1lb3V0RXJyb3JcIiwgXCJSZXF1ZXN0VGltZW91dFwiLCBcIlJlcXVlc3RUaW1lb3V0RXhjZXB0aW9uXCJdO1xuXG4vKipcbiAqIEVycm9yIGNvZGVzIHRoYXQgaW5kaWNhdGUgdHJhbnNpZW50IGlzc3Vlc1xuICovXG5leHBvcnQgY29uc3QgVFJBTlNJRU5UX0VSUk9SX1NUQVRVU19DT0RFUyA9IFs1MDAsIDUwMiwgNTAzLCA1MDRdO1xuIl19
 
 /***/ }),
 
@@ -60001,7 +60497,7 @@ const isTransientError = (error) => {
         constants_1.TRANSIENT_ERROR_STATUS_CODES.includes(((_a = error.$metadata) === null || _a === void 0 ? void 0 : _a.httpStatusCode) || 0);
 };
 exports.isTransientError = isTransientError;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9zcmMvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBRUEsMkNBS3FCO0FBRWQsTUFBTSxrQkFBa0IsR0FBRyxDQUFDLEtBQWUsRUFBRSxFQUFFLENBQUMsS0FBSyxDQUFDLFVBQVUsS0FBSyxTQUFTLENBQUM7QUFBekUsUUFBQSxrQkFBa0Isc0JBQXVEO0FBRS9FLE1BQU0sZ0JBQWdCLEdBQUcsQ0FBQyxLQUFlLEVBQUUsRUFBRSxDQUFDLGtDQUFzQixDQUFDLFFBQVEsQ0FBQyxLQUFLLENBQUMsSUFBSSxDQUFDLENBQUM7QUFBcEYsUUFBQSxnQkFBZ0Isb0JBQW9FO0FBRTFGLE1BQU0saUJBQWlCLEdBQUcsQ0FBQyxLQUFlLEVBQUUsRUFBRTs7SUFDbkQsT0FBQSxPQUFBLEtBQUssQ0FBQyxTQUFTLDBDQUFFLGNBQWMsTUFBSyxHQUFHO1FBQ3ZDLGtDQUFzQixDQUFDLFFBQVEsQ0FBQyxLQUFLLENBQUMsSUFBSSxDQUFDO1FBQzNDLE9BQUEsS0FBSyxDQUFDLFVBQVUsMENBQUUsVUFBVSxLQUFJLElBQUksQ0FBQTtDQUFBLENBQUM7QUFIMUIsUUFBQSxpQkFBaUIscUJBR1M7QUFFaEMsTUFBTSxnQkFBZ0IsR0FBRyxDQUFDLEtBQWUsRUFBRSxFQUFFOztJQUNsRCxPQUFBLGlDQUFxQixDQUFDLFFBQVEsQ0FBQyxLQUFLLENBQUMsSUFBSSxDQUFDO1FBQzFDLHdDQUE0QixDQUFDLFFBQVEsQ0FBQyxPQUFBLEtBQUssQ0FBQyxTQUFTLDBDQUFFLGNBQWMsS0FBSSxDQUFDLENBQUMsQ0FBQTtDQUFBLENBQUM7QUFGakUsUUFBQSxnQkFBZ0Isb0JBRWlEIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgU2RrRXJyb3IgfSBmcm9tIFwiQGF3cy1zZGsvc21pdGh5LWNsaWVudFwiO1xuXG5pbXBvcnQge1xuICBDTE9DS19TS0VXX0VSUk9SX0NPREVTLFxuICBUSFJPVFRMSU5HX0VSUk9SX0NPREVTLFxuICBUUkFOU0lFTlRfRVJST1JfQ09ERVMsXG4gIFRSQU5TSUVOVF9FUlJPUl9TVEFUVVNfQ09ERVMsXG59IGZyb20gXCIuL2NvbnN0YW50c1wiO1xuXG5leHBvcnQgY29uc3QgaXNSZXRyeWFibGVCeVRyYWl0ID0gKGVycm9yOiBTZGtFcnJvcikgPT4gZXJyb3IuJHJldHJ5YWJsZSAhPT0gdW5kZWZpbmVkO1xuXG5leHBvcnQgY29uc3QgaXNDbG9ja1NrZXdFcnJvciA9IChlcnJvcjogU2RrRXJyb3IpID0+IENMT0NLX1NLRVdfRVJST1JfQ09ERVMuaW5jbHVkZXMoZXJyb3IubmFtZSk7XG5cbmV4cG9ydCBjb25zdCBpc1Rocm90dGxpbmdFcnJvciA9IChlcnJvcjogU2RrRXJyb3IpID0+XG4gIGVycm9yLiRtZXRhZGF0YT8uaHR0cFN0YXR1c0NvZGUgPT09IDQyOSB8fFxuICBUSFJPVFRMSU5HX0VSUk9SX0NPREVTLmluY2x1ZGVzKGVycm9yLm5hbWUpIHx8XG4gIGVycm9yLiRyZXRyeWFibGU/LnRocm90dGxpbmcgPT0gdHJ1ZTtcblxuZXhwb3J0IGNvbnN0IGlzVHJhbnNpZW50RXJyb3IgPSAoZXJyb3I6IFNka0Vycm9yKSA9PlxuICBUUkFOU0lFTlRfRVJST1JfQ09ERVMuaW5jbHVkZXMoZXJyb3IubmFtZSkgfHxcbiAgVFJBTlNJRU5UX0VSUk9SX1NUQVRVU19DT0RFUy5pbmNsdWRlcyhlcnJvci4kbWV0YWRhdGE/Lmh0dHBTdGF0dXNDb2RlIHx8IDApO1xuIl19
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9zcmMvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBRUEsMkNBS3FCO0FBRWQsTUFBTSxrQkFBa0IsR0FBRyxDQUFDLEtBQWUsRUFBRSxFQUFFLENBQUMsS0FBSyxDQUFDLFVBQVUsS0FBSyxTQUFTLENBQUM7QUFBekUsUUFBQSxrQkFBa0Isc0JBQXVEO0FBRS9FLE1BQU0sZ0JBQWdCLEdBQUcsQ0FBQyxLQUFlLEVBQUUsRUFBRSxDQUFDLGtDQUFzQixDQUFDLFFBQVEsQ0FBQyxLQUFLLENBQUMsSUFBSSxDQUFDLENBQUM7QUFBcEYsUUFBQSxnQkFBZ0Isb0JBQW9FO0FBRTFGLE1BQU0saUJBQWlCLEdBQUcsQ0FBQyxLQUFlLEVBQUUsRUFBRTs7SUFDbkQsT0FBQSxDQUFBLE1BQUEsS0FBSyxDQUFDLFNBQVMsMENBQUUsY0FBYyxNQUFLLEdBQUc7UUFDdkMsa0NBQXNCLENBQUMsUUFBUSxDQUFDLEtBQUssQ0FBQyxJQUFJLENBQUM7UUFDM0MsQ0FBQSxNQUFBLEtBQUssQ0FBQyxVQUFVLDBDQUFFLFVBQVUsS0FBSSxJQUFJLENBQUE7Q0FBQSxDQUFDO0FBSDFCLFFBQUEsaUJBQWlCLHFCQUdTO0FBRWhDLE1BQU0sZ0JBQWdCLEdBQUcsQ0FBQyxLQUFlLEVBQUUsRUFBRTs7SUFDbEQsT0FBQSxpQ0FBcUIsQ0FBQyxRQUFRLENBQUMsS0FBSyxDQUFDLElBQUksQ0FBQztRQUMxQyx3Q0FBNEIsQ0FBQyxRQUFRLENBQUMsQ0FBQSxNQUFBLEtBQUssQ0FBQyxTQUFTLDBDQUFFLGNBQWMsS0FBSSxDQUFDLENBQUMsQ0FBQTtDQUFBLENBQUM7QUFGakUsUUFBQSxnQkFBZ0Isb0JBRWlEIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgU2RrRXJyb3IgfSBmcm9tIFwiQGF3cy1zZGsvc21pdGh5LWNsaWVudFwiO1xuXG5pbXBvcnQge1xuICBDTE9DS19TS0VXX0VSUk9SX0NPREVTLFxuICBUSFJPVFRMSU5HX0VSUk9SX0NPREVTLFxuICBUUkFOU0lFTlRfRVJST1JfQ09ERVMsXG4gIFRSQU5TSUVOVF9FUlJPUl9TVEFUVVNfQ09ERVMsXG59IGZyb20gXCIuL2NvbnN0YW50c1wiO1xuXG5leHBvcnQgY29uc3QgaXNSZXRyeWFibGVCeVRyYWl0ID0gKGVycm9yOiBTZGtFcnJvcikgPT4gZXJyb3IuJHJldHJ5YWJsZSAhPT0gdW5kZWZpbmVkO1xuXG5leHBvcnQgY29uc3QgaXNDbG9ja1NrZXdFcnJvciA9IChlcnJvcjogU2RrRXJyb3IpID0+IENMT0NLX1NLRVdfRVJST1JfQ09ERVMuaW5jbHVkZXMoZXJyb3IubmFtZSk7XG5cbmV4cG9ydCBjb25zdCBpc1Rocm90dGxpbmdFcnJvciA9IChlcnJvcjogU2RrRXJyb3IpID0+XG4gIGVycm9yLiRtZXRhZGF0YT8uaHR0cFN0YXR1c0NvZGUgPT09IDQyOSB8fFxuICBUSFJPVFRMSU5HX0VSUk9SX0NPREVTLmluY2x1ZGVzKGVycm9yLm5hbWUpIHx8XG4gIGVycm9yLiRyZXRyeWFibGU/LnRocm90dGxpbmcgPT0gdHJ1ZTtcblxuZXhwb3J0IGNvbnN0IGlzVHJhbnNpZW50RXJyb3IgPSAoZXJyb3I6IFNka0Vycm9yKSA9PlxuICBUUkFOU0lFTlRfRVJST1JfQ09ERVMuaW5jbHVkZXMoZXJyb3IubmFtZSkgfHxcbiAgVFJBTlNJRU5UX0VSUk9SX1NUQVRVU19DT0RFUy5pbmNsdWRlcyhlcnJvci4kbWV0YWRhdGE/Lmh0dHBTdGF0dXNDb2RlIHx8IDApO1xuIl19
 
 /***/ }),
 
@@ -60447,7 +60943,8 @@ function getCanonicalHeaders({ headers }, unsignableHeaders, signableHeaders) {
     const canonical = {};
     for (const headerName of Object.keys(headers).sort()) {
         const canonicalHeaderName = headerName.toLowerCase();
-        if (canonicalHeaderName in constants_1.ALWAYS_UNSIGNABLE_HEADERS || (unsignableHeaders === null || unsignableHeaders === void 0 ? void 0 : unsignableHeaders.has(canonicalHeaderName)) ||
+        if (canonicalHeaderName in constants_1.ALWAYS_UNSIGNABLE_HEADERS ||
+            (unsignableHeaders === null || unsignableHeaders === void 0 ? void 0 : unsignableHeaders.has(canonicalHeaderName)) ||
             constants_1.PROXY_HEADER_PATTERN.test(canonicalHeaderName) ||
             constants_1.SEC_HEADER_PATTERN.test(canonicalHeaderName)) {
             if (!signableHeaders || (signableHeaders && !signableHeaders.has(canonicalHeaderName))) {
@@ -60459,7 +60956,7 @@ function getCanonicalHeaders({ headers }, unsignableHeaders, signableHeaders) {
     return canonical;
 }
 exports.getCanonicalHeaders = getCanonicalHeaders;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZ2V0Q2Fub25pY2FsSGVhZGVycy5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9nZXRDYW5vbmljYWxIZWFkZXJzLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7OztBQUVBLDJDQUFrRztBQUVsRzs7R0FFRztBQUNILFNBQWdCLG1CQUFtQixDQUNqQyxFQUFFLE9BQU8sRUFBZSxFQUN4QixpQkFBK0IsRUFDL0IsZUFBNkI7SUFFN0IsTUFBTSxTQUFTLEdBQWMsRUFBRSxDQUFDO0lBQ2hDLEtBQUssTUFBTSxVQUFVLElBQUksTUFBTSxDQUFDLElBQUksQ0FBQyxPQUFPLENBQUMsQ0FBQyxJQUFJLEVBQUUsRUFBRTtRQUNwRCxNQUFNLG1CQUFtQixHQUFHLFVBQVUsQ0FBQyxXQUFXLEVBQUUsQ0FBQztRQUNyRCxJQUNFLG1CQUFtQixJQUFJLHFDQUF5QixLQUNoRCxpQkFBaUIsYUFBakIsaUJBQWlCLHVCQUFqQixpQkFBaUIsQ0FBRSxHQUFHLENBQUMsbUJBQW1CLEVBQUM7WUFDM0MsZ0NBQW9CLENBQUMsSUFBSSxDQUFDLG1CQUFtQixDQUFDO1lBQzlDLDhCQUFrQixDQUFDLElBQUksQ0FBQyxtQkFBbUIsQ0FBQyxFQUM1QztZQUNBLElBQUksQ0FBQyxlQUFlLElBQUksQ0FBQyxlQUFlLElBQUksQ0FBQyxlQUFlLENBQUMsR0FBRyxDQUFDLG1CQUFtQixDQUFDLENBQUMsRUFBRTtnQkFDdEYsU0FBUzthQUNWO1NBQ0Y7UUFFRCxTQUFTLENBQUMsbUJBQW1CLENBQUMsR0FBRyxPQUFPLENBQUMsVUFBVSxDQUFDLENBQUMsSUFBSSxFQUFFLENBQUMsT0FBTyxDQUFDLE1BQU0sRUFBRSxHQUFHLENBQUMsQ0FBQztLQUNsRjtJQUVELE9BQU8sU0FBUyxDQUFDO0FBQ25CLENBQUM7QUF2QkQsa0RBdUJDIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgSGVhZGVyQmFnLCBIdHRwUmVxdWVzdCB9IGZyb20gXCJAYXdzLXNkay90eXBlc1wiO1xuXG5pbXBvcnQgeyBBTFdBWVNfVU5TSUdOQUJMRV9IRUFERVJTLCBQUk9YWV9IRUFERVJfUEFUVEVSTiwgU0VDX0hFQURFUl9QQVRURVJOIH0gZnJvbSBcIi4vY29uc3RhbnRzXCI7XG5cbi8qKlxuICogQGludGVybmFsXG4gKi9cbmV4cG9ydCBmdW5jdGlvbiBnZXRDYW5vbmljYWxIZWFkZXJzKFxuICB7IGhlYWRlcnMgfTogSHR0cFJlcXVlc3QsXG4gIHVuc2lnbmFibGVIZWFkZXJzPzogU2V0PHN0cmluZz4sXG4gIHNpZ25hYmxlSGVhZGVycz86IFNldDxzdHJpbmc+XG4pOiBIZWFkZXJCYWcge1xuICBjb25zdCBjYW5vbmljYWw6IEhlYWRlckJhZyA9IHt9O1xuICBmb3IgKGNvbnN0IGhlYWRlck5hbWUgb2YgT2JqZWN0LmtleXMoaGVhZGVycykuc29ydCgpKSB7XG4gICAgY29uc3QgY2Fub25pY2FsSGVhZGVyTmFtZSA9IGhlYWRlck5hbWUudG9Mb3dlckNhc2UoKTtcbiAgICBpZiAoXG4gICAgICBjYW5vbmljYWxIZWFkZXJOYW1lIGluIEFMV0FZU19VTlNJR05BQkxFX0hFQURFUlMgfHxcbiAgICAgIHVuc2lnbmFibGVIZWFkZXJzPy5oYXMoY2Fub25pY2FsSGVhZGVyTmFtZSkgfHxcbiAgICAgIFBST1hZX0hFQURFUl9QQVRURVJOLnRlc3QoY2Fub25pY2FsSGVhZGVyTmFtZSkgfHxcbiAgICAgIFNFQ19IRUFERVJfUEFUVEVSTi50ZXN0KGNhbm9uaWNhbEhlYWRlck5hbWUpXG4gICAgKSB7XG4gICAgICBpZiAoIXNpZ25hYmxlSGVhZGVycyB8fCAoc2lnbmFibGVIZWFkZXJzICYmICFzaWduYWJsZUhlYWRlcnMuaGFzKGNhbm9uaWNhbEhlYWRlck5hbWUpKSkge1xuICAgICAgICBjb250aW51ZTtcbiAgICAgIH1cbiAgICB9XG5cbiAgICBjYW5vbmljYWxbY2Fub25pY2FsSGVhZGVyTmFtZV0gPSBoZWFkZXJzW2hlYWRlck5hbWVdLnRyaW0oKS5yZXBsYWNlKC9cXHMrL2csIFwiIFwiKTtcbiAgfVxuXG4gIHJldHVybiBjYW5vbmljYWw7XG59XG4iXX0=
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZ2V0Q2Fub25pY2FsSGVhZGVycy5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9nZXRDYW5vbmljYWxIZWFkZXJzLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7OztBQUVBLDJDQUFrRztBQUVsRzs7R0FFRztBQUNILFNBQWdCLG1CQUFtQixDQUNqQyxFQUFFLE9BQU8sRUFBZSxFQUN4QixpQkFBK0IsRUFDL0IsZUFBNkI7SUFFN0IsTUFBTSxTQUFTLEdBQWMsRUFBRSxDQUFDO0lBQ2hDLEtBQUssTUFBTSxVQUFVLElBQUksTUFBTSxDQUFDLElBQUksQ0FBQyxPQUFPLENBQUMsQ0FBQyxJQUFJLEVBQUUsRUFBRTtRQUNwRCxNQUFNLG1CQUFtQixHQUFHLFVBQVUsQ0FBQyxXQUFXLEVBQUUsQ0FBQztRQUNyRCxJQUNFLG1CQUFtQixJQUFJLHFDQUF5QjthQUNoRCxpQkFBaUIsYUFBakIsaUJBQWlCLHVCQUFqQixpQkFBaUIsQ0FBRSxHQUFHLENBQUMsbUJBQW1CLENBQUMsQ0FBQTtZQUMzQyxnQ0FBb0IsQ0FBQyxJQUFJLENBQUMsbUJBQW1CLENBQUM7WUFDOUMsOEJBQWtCLENBQUMsSUFBSSxDQUFDLG1CQUFtQixDQUFDLEVBQzVDO1lBQ0EsSUFBSSxDQUFDLGVBQWUsSUFBSSxDQUFDLGVBQWUsSUFBSSxDQUFDLGVBQWUsQ0FBQyxHQUFHLENBQUMsbUJBQW1CLENBQUMsQ0FBQyxFQUFFO2dCQUN0RixTQUFTO2FBQ1Y7U0FDRjtRQUVELFNBQVMsQ0FBQyxtQkFBbUIsQ0FBQyxHQUFHLE9BQU8sQ0FBQyxVQUFVLENBQUMsQ0FBQyxJQUFJLEVBQUUsQ0FBQyxPQUFPLENBQUMsTUFBTSxFQUFFLEdBQUcsQ0FBQyxDQUFDO0tBQ2xGO0lBRUQsT0FBTyxTQUFTLENBQUM7QUFDbkIsQ0FBQztBQXZCRCxrREF1QkMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBIZWFkZXJCYWcsIEh0dHBSZXF1ZXN0IH0gZnJvbSBcIkBhd3Mtc2RrL3R5cGVzXCI7XG5cbmltcG9ydCB7IEFMV0FZU19VTlNJR05BQkxFX0hFQURFUlMsIFBST1hZX0hFQURFUl9QQVRURVJOLCBTRUNfSEVBREVSX1BBVFRFUk4gfSBmcm9tIFwiLi9jb25zdGFudHNcIjtcblxuLyoqXG4gKiBAaW50ZXJuYWxcbiAqL1xuZXhwb3J0IGZ1bmN0aW9uIGdldENhbm9uaWNhbEhlYWRlcnMoXG4gIHsgaGVhZGVycyB9OiBIdHRwUmVxdWVzdCxcbiAgdW5zaWduYWJsZUhlYWRlcnM/OiBTZXQ8c3RyaW5nPixcbiAgc2lnbmFibGVIZWFkZXJzPzogU2V0PHN0cmluZz5cbik6IEhlYWRlckJhZyB7XG4gIGNvbnN0IGNhbm9uaWNhbDogSGVhZGVyQmFnID0ge307XG4gIGZvciAoY29uc3QgaGVhZGVyTmFtZSBvZiBPYmplY3Qua2V5cyhoZWFkZXJzKS5zb3J0KCkpIHtcbiAgICBjb25zdCBjYW5vbmljYWxIZWFkZXJOYW1lID0gaGVhZGVyTmFtZS50b0xvd2VyQ2FzZSgpO1xuICAgIGlmIChcbiAgICAgIGNhbm9uaWNhbEhlYWRlck5hbWUgaW4gQUxXQVlTX1VOU0lHTkFCTEVfSEVBREVSUyB8fFxuICAgICAgdW5zaWduYWJsZUhlYWRlcnM/LmhhcyhjYW5vbmljYWxIZWFkZXJOYW1lKSB8fFxuICAgICAgUFJPWFlfSEVBREVSX1BBVFRFUk4udGVzdChjYW5vbmljYWxIZWFkZXJOYW1lKSB8fFxuICAgICAgU0VDX0hFQURFUl9QQVRURVJOLnRlc3QoY2Fub25pY2FsSGVhZGVyTmFtZSlcbiAgICApIHtcbiAgICAgIGlmICghc2lnbmFibGVIZWFkZXJzIHx8IChzaWduYWJsZUhlYWRlcnMgJiYgIXNpZ25hYmxlSGVhZGVycy5oYXMoY2Fub25pY2FsSGVhZGVyTmFtZSkpKSB7XG4gICAgICAgIGNvbnRpbnVlO1xuICAgICAgfVxuICAgIH1cblxuICAgIGNhbm9uaWNhbFtjYW5vbmljYWxIZWFkZXJOYW1lXSA9IGhlYWRlcnNbaGVhZGVyTmFtZV0udHJpbSgpLnJlcGxhY2UoL1xccysvZywgXCIgXCIpO1xuICB9XG5cbiAgcmV0dXJuIGNhbm9uaWNhbDtcbn1cbiJdfQ==
 
 /***/ }),
 
@@ -60604,7 +61101,7 @@ function moveHeadersToQuery(request, options = {}) {
     };
 }
 exports.moveHeadersToQuery = moveHeadersToQuery;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibW92ZUhlYWRlcnNUb1F1ZXJ5LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vc3JjL21vdmVIZWFkZXJzVG9RdWVyeS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFFQSxpREFBOEM7QUFFOUM7O0dBRUc7QUFDSCxTQUFnQixrQkFBa0IsQ0FDaEMsT0FBb0IsRUFDcEIsVUFBZ0QsRUFBRTs7SUFFbEQsTUFBTSxFQUFFLE9BQU8sRUFBRSxLQUFLLEdBQUcsRUFBdUIsRUFBRSxHQUNoRCxPQUFRLE9BQWUsQ0FBQyxLQUFLLEtBQUssVUFBVSxDQUFDLENBQUMsQ0FBRSxPQUFlLENBQUMsS0FBSyxFQUFFLENBQUMsQ0FBQyxDQUFDLDJCQUFZLENBQUMsT0FBTyxDQUFDLENBQUM7SUFDbEcsS0FBSyxNQUFNLElBQUksSUFBSSxNQUFNLENBQUMsSUFBSSxDQUFDLE9BQU8sQ0FBQyxFQUFFO1FBQ3ZDLE1BQU0sS0FBSyxHQUFHLElBQUksQ0FBQyxXQUFXLEVBQUUsQ0FBQztRQUNqQyxJQUFJLEtBQUssQ0FBQyxNQUFNLENBQUMsQ0FBQyxFQUFFLENBQUMsQ0FBQyxLQUFLLFFBQVEsSUFBSSxRQUFDLE9BQU8sQ0FBQyxrQkFBa0IsMENBQUUsR0FBRyxDQUFDLEtBQUssRUFBQyxFQUFFO1lBQzlFLEtBQUssQ0FBQyxJQUFJLENBQUMsR0FBRyxPQUFPLENBQUMsSUFBSSxDQUFDLENBQUM7WUFDNUIsT0FBTyxPQUFPLENBQUMsSUFBSSxDQUFDLENBQUM7U0FDdEI7S0FDRjtJQUVELE9BQU87UUFDTCxHQUFHLE9BQU87UUFDVixPQUFPO1FBQ1AsS0FBSztLQUNOLENBQUM7QUFDSixDQUFDO0FBbkJELGdEQW1CQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IEh0dHBSZXF1ZXN0LCBRdWVyeVBhcmFtZXRlckJhZyB9IGZyb20gXCJAYXdzLXNkay90eXBlc1wiO1xuXG5pbXBvcnQgeyBjbG9uZVJlcXVlc3QgfSBmcm9tIFwiLi9jbG9uZVJlcXVlc3RcIjtcblxuLyoqXG4gKiBAaW50ZXJuYWxcbiAqL1xuZXhwb3J0IGZ1bmN0aW9uIG1vdmVIZWFkZXJzVG9RdWVyeShcbiAgcmVxdWVzdDogSHR0cFJlcXVlc3QsXG4gIG9wdGlvbnM6IHsgdW5ob2lzdGFibGVIZWFkZXJzPzogU2V0PHN0cmluZz4gfSA9IHt9XG4pOiBIdHRwUmVxdWVzdCAmIHsgcXVlcnk6IFF1ZXJ5UGFyYW1ldGVyQmFnIH0ge1xuICBjb25zdCB7IGhlYWRlcnMsIHF1ZXJ5ID0ge30gYXMgUXVlcnlQYXJhbWV0ZXJCYWcgfSA9XG4gICAgdHlwZW9mIChyZXF1ZXN0IGFzIGFueSkuY2xvbmUgPT09IFwiZnVuY3Rpb25cIiA/IChyZXF1ZXN0IGFzIGFueSkuY2xvbmUoKSA6IGNsb25lUmVxdWVzdChyZXF1ZXN0KTtcbiAgZm9yIChjb25zdCBuYW1lIG9mIE9iamVjdC5rZXlzKGhlYWRlcnMpKSB7XG4gICAgY29uc3QgbG5hbWUgPSBuYW1lLnRvTG93ZXJDYXNlKCk7XG4gICAgaWYgKGxuYW1lLnN1YnN0cigwLCA2KSA9PT0gXCJ4LWFtei1cIiAmJiAhb3B0aW9ucy51bmhvaXN0YWJsZUhlYWRlcnM/LmhhcyhsbmFtZSkpIHtcbiAgICAgIHF1ZXJ5W25hbWVdID0gaGVhZGVyc1tuYW1lXTtcbiAgICAgIGRlbGV0ZSBoZWFkZXJzW25hbWVdO1xuICAgIH1cbiAgfVxuXG4gIHJldHVybiB7XG4gICAgLi4ucmVxdWVzdCxcbiAgICBoZWFkZXJzLFxuICAgIHF1ZXJ5LFxuICB9O1xufVxuIl19
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibW92ZUhlYWRlcnNUb1F1ZXJ5LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vc3JjL21vdmVIZWFkZXJzVG9RdWVyeS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFFQSxpREFBOEM7QUFFOUM7O0dBRUc7QUFDSCxTQUFnQixrQkFBa0IsQ0FDaEMsT0FBb0IsRUFDcEIsVUFBZ0QsRUFBRTs7SUFFbEQsTUFBTSxFQUFFLE9BQU8sRUFBRSxLQUFLLEdBQUcsRUFBdUIsRUFBRSxHQUNoRCxPQUFRLE9BQWUsQ0FBQyxLQUFLLEtBQUssVUFBVSxDQUFDLENBQUMsQ0FBRSxPQUFlLENBQUMsS0FBSyxFQUFFLENBQUMsQ0FBQyxDQUFDLDJCQUFZLENBQUMsT0FBTyxDQUFDLENBQUM7SUFDbEcsS0FBSyxNQUFNLElBQUksSUFBSSxNQUFNLENBQUMsSUFBSSxDQUFDLE9BQU8sQ0FBQyxFQUFFO1FBQ3ZDLE1BQU0sS0FBSyxHQUFHLElBQUksQ0FBQyxXQUFXLEVBQUUsQ0FBQztRQUNqQyxJQUFJLEtBQUssQ0FBQyxNQUFNLENBQUMsQ0FBQyxFQUFFLENBQUMsQ0FBQyxLQUFLLFFBQVEsSUFBSSxDQUFDLENBQUEsTUFBQSxPQUFPLENBQUMsa0JBQWtCLDBDQUFFLEdBQUcsQ0FBQyxLQUFLLENBQUMsQ0FBQSxFQUFFO1lBQzlFLEtBQUssQ0FBQyxJQUFJLENBQUMsR0FBRyxPQUFPLENBQUMsSUFBSSxDQUFDLENBQUM7WUFDNUIsT0FBTyxPQUFPLENBQUMsSUFBSSxDQUFDLENBQUM7U0FDdEI7S0FDRjtJQUVELE9BQU87UUFDTCxHQUFHLE9BQU87UUFDVixPQUFPO1FBQ1AsS0FBSztLQUNOLENBQUM7QUFDSixDQUFDO0FBbkJELGdEQW1CQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IEh0dHBSZXF1ZXN0LCBRdWVyeVBhcmFtZXRlckJhZyB9IGZyb20gXCJAYXdzLXNkay90eXBlc1wiO1xuXG5pbXBvcnQgeyBjbG9uZVJlcXVlc3QgfSBmcm9tIFwiLi9jbG9uZVJlcXVlc3RcIjtcblxuLyoqXG4gKiBAaW50ZXJuYWxcbiAqL1xuZXhwb3J0IGZ1bmN0aW9uIG1vdmVIZWFkZXJzVG9RdWVyeShcbiAgcmVxdWVzdDogSHR0cFJlcXVlc3QsXG4gIG9wdGlvbnM6IHsgdW5ob2lzdGFibGVIZWFkZXJzPzogU2V0PHN0cmluZz4gfSA9IHt9XG4pOiBIdHRwUmVxdWVzdCAmIHsgcXVlcnk6IFF1ZXJ5UGFyYW1ldGVyQmFnIH0ge1xuICBjb25zdCB7IGhlYWRlcnMsIHF1ZXJ5ID0ge30gYXMgUXVlcnlQYXJhbWV0ZXJCYWcgfSA9XG4gICAgdHlwZW9mIChyZXF1ZXN0IGFzIGFueSkuY2xvbmUgPT09IFwiZnVuY3Rpb25cIiA/IChyZXF1ZXN0IGFzIGFueSkuY2xvbmUoKSA6IGNsb25lUmVxdWVzdChyZXF1ZXN0KTtcbiAgZm9yIChjb25zdCBuYW1lIG9mIE9iamVjdC5rZXlzKGhlYWRlcnMpKSB7XG4gICAgY29uc3QgbG5hbWUgPSBuYW1lLnRvTG93ZXJDYXNlKCk7XG4gICAgaWYgKGxuYW1lLnN1YnN0cigwLCA2KSA9PT0gXCJ4LWFtei1cIiAmJiAhb3B0aW9ucy51bmhvaXN0YWJsZUhlYWRlcnM/LmhhcyhsbmFtZSkpIHtcbiAgICAgIHF1ZXJ5W25hbWVdID0gaGVhZGVyc1tuYW1lXTtcbiAgICAgIGRlbGV0ZSBoZWFkZXJzW25hbWVdO1xuICAgIH1cbiAgfVxuXG4gIHJldHVybiB7XG4gICAgLi4ucmVxdWVzdCxcbiAgICBoZWFkZXJzLFxuICAgIHF1ZXJ5LFxuICB9O1xufVxuIl19
 
 /***/ }),
 
@@ -61467,7 +61964,7 @@ const runPolling = async ({ minDelay, maxDelay, maxWaitTime, abortController, cl
     }
 };
 exports.runPolling = runPolling;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicG9sbGVyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vc3JjL3BvbGxlci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFBQSx5Q0FBc0M7QUFDdEMscUNBQW9FO0FBRXBFOztHQUVHO0FBQ0gsTUFBTSw0QkFBNEIsR0FBRyxDQUFDLFFBQWdCLEVBQUUsUUFBZ0IsRUFBRSxjQUFzQixFQUFFLE9BQWUsRUFBRSxFQUFFO0lBQ25ILElBQUksT0FBTyxHQUFHLGNBQWM7UUFBRSxPQUFPLFFBQVEsQ0FBQztJQUM5QyxNQUFNLEtBQUssR0FBRyxRQUFRLEdBQUcsQ0FBQyxJQUFJLENBQUMsT0FBTyxHQUFHLENBQUMsQ0FBQyxDQUFDO0lBQzVDLE9BQU8sYUFBYSxDQUFDLFFBQVEsRUFBRSxLQUFLLENBQUMsQ0FBQztBQUN4QyxDQUFDLENBQUM7QUFFRixNQUFNLGFBQWEsR0FBRyxDQUFDLEdBQVcsRUFBRSxHQUFXLEVBQUUsRUFBRSxDQUFDLEdBQUcsR0FBRyxJQUFJLENBQUMsTUFBTSxFQUFFLEdBQUcsQ0FBQyxHQUFHLEdBQUcsR0FBRyxDQUFDLENBQUM7QUFFdEY7Ozs7Ozs7R0FPRztBQUNJLE1BQU0sVUFBVSxHQUFHLEtBQUssRUFDN0IsRUFBRSxRQUFRLEVBQUUsUUFBUSxFQUFFLFdBQVcsRUFBRSxlQUFlLEVBQUUsTUFBTSxFQUF5QixFQUNuRixLQUFZLEVBQ1osY0FBdUUsRUFDaEQsRUFBRTs7SUFDekIsTUFBTSxFQUFFLEtBQUssRUFBRSxHQUFHLE1BQU0sY0FBYyxDQUFDLE1BQU0sRUFBRSxLQUFLLENBQUMsQ0FBQztJQUN0RCxJQUFJLEtBQUssS0FBSyxvQkFBVyxDQUFDLEtBQUssRUFBRTtRQUMvQixPQUFPLEVBQUUsS0FBSyxFQUFFLENBQUM7S0FDbEI7SUFFRCxJQUFJLGNBQWMsR0FBRyxDQUFDLENBQUM7SUFDdkIsTUFBTSxTQUFTLEdBQUcsSUFBSSxDQUFDLEdBQUcsRUFBRSxHQUFHLFdBQVcsR0FBRyxJQUFJLENBQUM7SUFDbEQsdUVBQXVFO0lBQ3ZFLHlEQUF5RDtJQUN6RCxNQUFNLGNBQWMsR0FBRyxJQUFJLENBQUMsR0FBRyxDQUFDLFFBQVEsR0FBRyxRQUFRLENBQUMsR0FBRyxJQUFJLENBQUMsR0FBRyxDQUFDLENBQUMsQ0FBQyxHQUFHLENBQUMsQ0FBQztJQUN2RSxPQUFPLElBQUksRUFBRTtRQUNYLFVBQUksZUFBZSxhQUFmLGVBQWUsdUJBQWYsZUFBZSxDQUFFLE1BQU0sMENBQUUsT0FBTyxFQUFFO1lBQ3BDLE9BQU8sRUFBRSxLQUFLLEVBQUUsb0JBQVcsQ0FBQyxPQUFPLEVBQUUsQ0FBQztTQUN2QztRQUNELE1BQU0sS0FBSyxHQUFHLDRCQUE0QixDQUFDLFFBQVEsRUFBRSxRQUFRLEVBQUUsY0FBYyxFQUFFLGNBQWMsQ0FBQyxDQUFDO1FBQy9GLGtIQUFrSDtRQUNsSCxrRkFBa0Y7UUFDbEYsSUFBSSxJQUFJLENBQUMsR0FBRyxFQUFFLEdBQUcsS0FBSyxHQUFHLElBQUksR0FBRyxTQUFTLEVBQUU7WUFDekMsT0FBTyxFQUFFLEtBQUssRUFBRSxvQkFBVyxDQUFDLE9BQU8sRUFBRSxDQUFDO1NBQ3ZDO1FBQ0QsTUFBTSxhQUFLLENBQUMsS0FBSyxDQUFDLENBQUM7UUFDbkIsTUFBTSxFQUFFLEtBQUssRUFBRSxHQUFHLE1BQU0sY0FBYyxDQUFDLE1BQU0sRUFBRSxLQUFLLENBQUMsQ0FBQztRQUN0RCxJQUFJLEtBQUssS0FBSyxvQkFBVyxDQUFDLEtBQUssRUFBRTtZQUMvQixPQUFPLEVBQUUsS0FBSyxFQUFFLENBQUM7U0FDbEI7UUFFRCxjQUFjLElBQUksQ0FBQyxDQUFDO0tBQ3JCO0FBQ0gsQ0FBQyxDQUFDO0FBakNXLFFBQUEsVUFBVSxjQWlDckIiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBzbGVlcCB9IGZyb20gXCIuL3V0aWxzL3NsZWVwXCI7XG5pbXBvcnQgeyBXYWl0ZXJPcHRpb25zLCBXYWl0ZXJSZXN1bHQsIFdhaXRlclN0YXRlIH0gZnJvbSBcIi4vd2FpdGVyXCI7XG5cbi8qKlxuICogUmVmZXJlbmNlOiBodHRwczovL2F3c2xhYnMuZ2l0aHViLmlvL3NtaXRoeS8xLjAvc3BlYy93YWl0ZXJzLmh0bWwjd2FpdGVyLXJldHJpZXNcbiAqL1xuY29uc3QgZXhwb25lbnRpYWxCYWNrb2ZmV2l0aEppdHRlciA9IChtaW5EZWxheTogbnVtYmVyLCBtYXhEZWxheTogbnVtYmVyLCBhdHRlbXB0Q2VpbGluZzogbnVtYmVyLCBhdHRlbXB0OiBudW1iZXIpID0+IHtcbiAgaWYgKGF0dGVtcHQgPiBhdHRlbXB0Q2VpbGluZykgcmV0dXJuIG1heERlbGF5O1xuICBjb25zdCBkZWxheSA9IG1pbkRlbGF5ICogMiAqKiAoYXR0ZW1wdCAtIDEpO1xuICByZXR1cm4gcmFuZG9tSW5SYW5nZShtaW5EZWxheSwgZGVsYXkpO1xufTtcblxuY29uc3QgcmFuZG9tSW5SYW5nZSA9IChtaW46IG51bWJlciwgbWF4OiBudW1iZXIpID0+IG1pbiArIE1hdGgucmFuZG9tKCkgKiAobWF4IC0gbWluKTtcblxuLyoqXG4gKiBGdW5jdGlvbiB0aGF0IHJ1bnMgcG9sbGluZyBhcyBwYXJ0IG9mIHdhaXRlcnMuIFRoaXMgd2lsbCBtYWtlIG9uZSBpbml0YWwgYXR0ZW1wdCBhbmQgdGhlblxuICogc3Vic2VxdWVudCBhdHRlbXB0cyB3aXRoIGFuIGluY3JlYXNpbmcgZGVsYXkuXG4gKiBAcGFyYW0gcGFyYW1zIG9wdGlvbnMgcGFzc2VkIHRvIHRoZSB3YWl0ZXIuXG4gKiBAcGFyYW0gY2xpZW50IEFXUyBTREsgQ2xpZW50XG4gKiBAcGFyYW0gaW5wdXQgY2xpZW50IGlucHV0XG4gKiBAcGFyYW0gc3RhdGVDaGVja2VyIGZ1bmN0aW9uIHRoYXQgY2hlY2tzIHRoZSBhY2NlcHRvciBzdGF0ZXMgb24gZWFjaCBwb2xsLlxuICovXG5leHBvcnQgY29uc3QgcnVuUG9sbGluZyA9IGFzeW5jIDxDbGllbnQsIElucHV0PihcbiAgeyBtaW5EZWxheSwgbWF4RGVsYXksIG1heFdhaXRUaW1lLCBhYm9ydENvbnRyb2xsZXIsIGNsaWVudCB9OiBXYWl0ZXJPcHRpb25zPENsaWVudD4sXG4gIGlucHV0OiBJbnB1dCxcbiAgYWNjZXB0b3JDaGVja3M6IChjbGllbnQ6IENsaWVudCwgaW5wdXQ6IElucHV0KSA9PiBQcm9taXNlPFdhaXRlclJlc3VsdD5cbik6IFByb21pc2U8V2FpdGVyUmVzdWx0PiA9PiB7XG4gIGNvbnN0IHsgc3RhdGUgfSA9IGF3YWl0IGFjY2VwdG9yQ2hlY2tzKGNsaWVudCwgaW5wdXQpO1xuICBpZiAoc3RhdGUgIT09IFdhaXRlclN0YXRlLlJFVFJZKSB7XG4gICAgcmV0dXJuIHsgc3RhdGUgfTtcbiAgfVxuXG4gIGxldCBjdXJyZW50QXR0ZW1wdCA9IDE7XG4gIGNvbnN0IHdhaXRVbnRpbCA9IERhdGUubm93KCkgKyBtYXhXYWl0VGltZSAqIDEwMDA7XG4gIC8vIFRoZSBtYXggYXR0ZW1wdCBudW1iZXIgdGhhdCB0aGUgZGVyaXZlZCBkZWxheSB0aW1lIHRlbmQgdG8gaW5jcmVhc2UuXG4gIC8vIFByZS1jb21wdXRlIHRoaXMgbnVtYmVyIHRvIGF2b2lkIE51bWJlciB0eXBlIG92ZXJmbG93LlxuICBjb25zdCBhdHRlbXB0Q2VpbGluZyA9IE1hdGgubG9nKG1heERlbGF5IC8gbWluRGVsYXkpIC8gTWF0aC5sb2coMikgKyAxO1xuICB3aGlsZSAodHJ1ZSkge1xuICAgIGlmIChhYm9ydENvbnRyb2xsZXI/LnNpZ25hbD8uYWJvcnRlZCkge1xuICAgICAgcmV0dXJuIHsgc3RhdGU6IFdhaXRlclN0YXRlLkFCT1JURUQgfTtcbiAgICB9XG4gICAgY29uc3QgZGVsYXkgPSBleHBvbmVudGlhbEJhY2tvZmZXaXRoSml0dGVyKG1pbkRlbGF5LCBtYXhEZWxheSwgYXR0ZW1wdENlaWxpbmcsIGN1cnJlbnRBdHRlbXB0KTtcbiAgICAvLyBSZXNvbHZlIHRoZSBwcm9taXNlIGV4cGxpY2l0bHkgYXQgdGltZW91dCBvciBhYm9ydGVkLiBPdGhlcndpc2UgdGhpcyB3aGlsZSBsb29wIHdpbGwga2VlcCBtYWtpbmcgQVBJIGNhbGwgdW50aWxcbiAgICAvLyBgYWNjZXB0b3JDaGVja2AgcmV0dXJucyBub24tcmV0cnkgc3RhdHVzLCBldmVuIHdpdGggdGhlIFByb21pc2UucmFjZSgpIG91dHNpZGUuXG4gICAgaWYgKERhdGUubm93KCkgKyBkZWxheSAqIDEwMDAgPiB3YWl0VW50aWwpIHtcbiAgICAgIHJldHVybiB7IHN0YXRlOiBXYWl0ZXJTdGF0ZS5USU1FT1VUIH07XG4gICAgfVxuICAgIGF3YWl0IHNsZWVwKGRlbGF5KTtcbiAgICBjb25zdCB7IHN0YXRlIH0gPSBhd2FpdCBhY2NlcHRvckNoZWNrcyhjbGllbnQsIGlucHV0KTtcbiAgICBpZiAoc3RhdGUgIT09IFdhaXRlclN0YXRlLlJFVFJZKSB7XG4gICAgICByZXR1cm4geyBzdGF0ZSB9O1xuICAgIH1cblxuICAgIGN1cnJlbnRBdHRlbXB0ICs9IDE7XG4gIH1cbn07XG4iXX0=
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicG9sbGVyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vc3JjL3BvbGxlci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFBQSx5Q0FBc0M7QUFDdEMscUNBQW9FO0FBRXBFOztHQUVHO0FBQ0gsTUFBTSw0QkFBNEIsR0FBRyxDQUFDLFFBQWdCLEVBQUUsUUFBZ0IsRUFBRSxjQUFzQixFQUFFLE9BQWUsRUFBRSxFQUFFO0lBQ25ILElBQUksT0FBTyxHQUFHLGNBQWM7UUFBRSxPQUFPLFFBQVEsQ0FBQztJQUM5QyxNQUFNLEtBQUssR0FBRyxRQUFRLEdBQUcsQ0FBQyxJQUFJLENBQUMsT0FBTyxHQUFHLENBQUMsQ0FBQyxDQUFDO0lBQzVDLE9BQU8sYUFBYSxDQUFDLFFBQVEsRUFBRSxLQUFLLENBQUMsQ0FBQztBQUN4QyxDQUFDLENBQUM7QUFFRixNQUFNLGFBQWEsR0FBRyxDQUFDLEdBQVcsRUFBRSxHQUFXLEVBQUUsRUFBRSxDQUFDLEdBQUcsR0FBRyxJQUFJLENBQUMsTUFBTSxFQUFFLEdBQUcsQ0FBQyxHQUFHLEdBQUcsR0FBRyxDQUFDLENBQUM7QUFFdEY7Ozs7Ozs7R0FPRztBQUNJLE1BQU0sVUFBVSxHQUFHLEtBQUssRUFDN0IsRUFBRSxRQUFRLEVBQUUsUUFBUSxFQUFFLFdBQVcsRUFBRSxlQUFlLEVBQUUsTUFBTSxFQUF5QixFQUNuRixLQUFZLEVBQ1osY0FBdUUsRUFDaEQsRUFBRTs7SUFDekIsTUFBTSxFQUFFLEtBQUssRUFBRSxHQUFHLE1BQU0sY0FBYyxDQUFDLE1BQU0sRUFBRSxLQUFLLENBQUMsQ0FBQztJQUN0RCxJQUFJLEtBQUssS0FBSyxvQkFBVyxDQUFDLEtBQUssRUFBRTtRQUMvQixPQUFPLEVBQUUsS0FBSyxFQUFFLENBQUM7S0FDbEI7SUFFRCxJQUFJLGNBQWMsR0FBRyxDQUFDLENBQUM7SUFDdkIsTUFBTSxTQUFTLEdBQUcsSUFBSSxDQUFDLEdBQUcsRUFBRSxHQUFHLFdBQVcsR0FBRyxJQUFJLENBQUM7SUFDbEQsdUVBQXVFO0lBQ3ZFLHlEQUF5RDtJQUN6RCxNQUFNLGNBQWMsR0FBRyxJQUFJLENBQUMsR0FBRyxDQUFDLFFBQVEsR0FBRyxRQUFRLENBQUMsR0FBRyxJQUFJLENBQUMsR0FBRyxDQUFDLENBQUMsQ0FBQyxHQUFHLENBQUMsQ0FBQztJQUN2RSxPQUFPLElBQUksRUFBRTtRQUNYLElBQUksTUFBQSxlQUFlLGFBQWYsZUFBZSx1QkFBZixlQUFlLENBQUUsTUFBTSwwQ0FBRSxPQUFPLEVBQUU7WUFDcEMsT0FBTyxFQUFFLEtBQUssRUFBRSxvQkFBVyxDQUFDLE9BQU8sRUFBRSxDQUFDO1NBQ3ZDO1FBQ0QsTUFBTSxLQUFLLEdBQUcsNEJBQTRCLENBQUMsUUFBUSxFQUFFLFFBQVEsRUFBRSxjQUFjLEVBQUUsY0FBYyxDQUFDLENBQUM7UUFDL0Ysa0hBQWtIO1FBQ2xILGtGQUFrRjtRQUNsRixJQUFJLElBQUksQ0FBQyxHQUFHLEVBQUUsR0FBRyxLQUFLLEdBQUcsSUFBSSxHQUFHLFNBQVMsRUFBRTtZQUN6QyxPQUFPLEVBQUUsS0FBSyxFQUFFLG9CQUFXLENBQUMsT0FBTyxFQUFFLENBQUM7U0FDdkM7UUFDRCxNQUFNLGFBQUssQ0FBQyxLQUFLLENBQUMsQ0FBQztRQUNuQixNQUFNLEVBQUUsS0FBSyxFQUFFLEdBQUcsTUFBTSxjQUFjLENBQUMsTUFBTSxFQUFFLEtBQUssQ0FBQyxDQUFDO1FBQ3RELElBQUksS0FBSyxLQUFLLG9CQUFXLENBQUMsS0FBSyxFQUFFO1lBQy9CLE9BQU8sRUFBRSxLQUFLLEVBQUUsQ0FBQztTQUNsQjtRQUVELGNBQWMsSUFBSSxDQUFDLENBQUM7S0FDckI7QUFDSCxDQUFDLENBQUM7QUFqQ1csUUFBQSxVQUFVLGNBaUNyQiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IHNsZWVwIH0gZnJvbSBcIi4vdXRpbHMvc2xlZXBcIjtcbmltcG9ydCB7IFdhaXRlck9wdGlvbnMsIFdhaXRlclJlc3VsdCwgV2FpdGVyU3RhdGUgfSBmcm9tIFwiLi93YWl0ZXJcIjtcblxuLyoqXG4gKiBSZWZlcmVuY2U6IGh0dHBzOi8vYXdzbGFicy5naXRodWIuaW8vc21pdGh5LzEuMC9zcGVjL3dhaXRlcnMuaHRtbCN3YWl0ZXItcmV0cmllc1xuICovXG5jb25zdCBleHBvbmVudGlhbEJhY2tvZmZXaXRoSml0dGVyID0gKG1pbkRlbGF5OiBudW1iZXIsIG1heERlbGF5OiBudW1iZXIsIGF0dGVtcHRDZWlsaW5nOiBudW1iZXIsIGF0dGVtcHQ6IG51bWJlcikgPT4ge1xuICBpZiAoYXR0ZW1wdCA+IGF0dGVtcHRDZWlsaW5nKSByZXR1cm4gbWF4RGVsYXk7XG4gIGNvbnN0IGRlbGF5ID0gbWluRGVsYXkgKiAyICoqIChhdHRlbXB0IC0gMSk7XG4gIHJldHVybiByYW5kb21JblJhbmdlKG1pbkRlbGF5LCBkZWxheSk7XG59O1xuXG5jb25zdCByYW5kb21JblJhbmdlID0gKG1pbjogbnVtYmVyLCBtYXg6IG51bWJlcikgPT4gbWluICsgTWF0aC5yYW5kb20oKSAqIChtYXggLSBtaW4pO1xuXG4vKipcbiAqIEZ1bmN0aW9uIHRoYXQgcnVucyBwb2xsaW5nIGFzIHBhcnQgb2Ygd2FpdGVycy4gVGhpcyB3aWxsIG1ha2Ugb25lIGluaXRhbCBhdHRlbXB0IGFuZCB0aGVuXG4gKiBzdWJzZXF1ZW50IGF0dGVtcHRzIHdpdGggYW4gaW5jcmVhc2luZyBkZWxheS5cbiAqIEBwYXJhbSBwYXJhbXMgb3B0aW9ucyBwYXNzZWQgdG8gdGhlIHdhaXRlci5cbiAqIEBwYXJhbSBjbGllbnQgQVdTIFNESyBDbGllbnRcbiAqIEBwYXJhbSBpbnB1dCBjbGllbnQgaW5wdXRcbiAqIEBwYXJhbSBzdGF0ZUNoZWNrZXIgZnVuY3Rpb24gdGhhdCBjaGVja3MgdGhlIGFjY2VwdG9yIHN0YXRlcyBvbiBlYWNoIHBvbGwuXG4gKi9cbmV4cG9ydCBjb25zdCBydW5Qb2xsaW5nID0gYXN5bmMgPENsaWVudCwgSW5wdXQ+KFxuICB7IG1pbkRlbGF5LCBtYXhEZWxheSwgbWF4V2FpdFRpbWUsIGFib3J0Q29udHJvbGxlciwgY2xpZW50IH06IFdhaXRlck9wdGlvbnM8Q2xpZW50PixcbiAgaW5wdXQ6IElucHV0LFxuICBhY2NlcHRvckNoZWNrczogKGNsaWVudDogQ2xpZW50LCBpbnB1dDogSW5wdXQpID0+IFByb21pc2U8V2FpdGVyUmVzdWx0PlxuKTogUHJvbWlzZTxXYWl0ZXJSZXN1bHQ+ID0+IHtcbiAgY29uc3QgeyBzdGF0ZSB9ID0gYXdhaXQgYWNjZXB0b3JDaGVja3MoY2xpZW50LCBpbnB1dCk7XG4gIGlmIChzdGF0ZSAhPT0gV2FpdGVyU3RhdGUuUkVUUlkpIHtcbiAgICByZXR1cm4geyBzdGF0ZSB9O1xuICB9XG5cbiAgbGV0IGN1cnJlbnRBdHRlbXB0ID0gMTtcbiAgY29uc3Qgd2FpdFVudGlsID0gRGF0ZS5ub3coKSArIG1heFdhaXRUaW1lICogMTAwMDtcbiAgLy8gVGhlIG1heCBhdHRlbXB0IG51bWJlciB0aGF0IHRoZSBkZXJpdmVkIGRlbGF5IHRpbWUgdGVuZCB0byBpbmNyZWFzZS5cbiAgLy8gUHJlLWNvbXB1dGUgdGhpcyBudW1iZXIgdG8gYXZvaWQgTnVtYmVyIHR5cGUgb3ZlcmZsb3cuXG4gIGNvbnN0IGF0dGVtcHRDZWlsaW5nID0gTWF0aC5sb2cobWF4RGVsYXkgLyBtaW5EZWxheSkgLyBNYXRoLmxvZygyKSArIDE7XG4gIHdoaWxlICh0cnVlKSB7XG4gICAgaWYgKGFib3J0Q29udHJvbGxlcj8uc2lnbmFsPy5hYm9ydGVkKSB7XG4gICAgICByZXR1cm4geyBzdGF0ZTogV2FpdGVyU3RhdGUuQUJPUlRFRCB9O1xuICAgIH1cbiAgICBjb25zdCBkZWxheSA9IGV4cG9uZW50aWFsQmFja29mZldpdGhKaXR0ZXIobWluRGVsYXksIG1heERlbGF5LCBhdHRlbXB0Q2VpbGluZywgY3VycmVudEF0dGVtcHQpO1xuICAgIC8vIFJlc29sdmUgdGhlIHByb21pc2UgZXhwbGljaXRseSBhdCB0aW1lb3V0IG9yIGFib3J0ZWQuIE90aGVyd2lzZSB0aGlzIHdoaWxlIGxvb3Agd2lsbCBrZWVwIG1ha2luZyBBUEkgY2FsbCB1bnRpbFxuICAgIC8vIGBhY2NlcHRvckNoZWNrYCByZXR1cm5zIG5vbi1yZXRyeSBzdGF0dXMsIGV2ZW4gd2l0aCB0aGUgUHJvbWlzZS5yYWNlKCkgb3V0c2lkZS5cbiAgICBpZiAoRGF0ZS5ub3coKSArIGRlbGF5ICogMTAwMCA+IHdhaXRVbnRpbCkge1xuICAgICAgcmV0dXJuIHsgc3RhdGU6IFdhaXRlclN0YXRlLlRJTUVPVVQgfTtcbiAgICB9XG4gICAgYXdhaXQgc2xlZXAoZGVsYXkpO1xuICAgIGNvbnN0IHsgc3RhdGUgfSA9IGF3YWl0IGFjY2VwdG9yQ2hlY2tzKGNsaWVudCwgaW5wdXQpO1xuICAgIGlmIChzdGF0ZSAhPT0gV2FpdGVyU3RhdGUuUkVUUlkpIHtcbiAgICAgIHJldHVybiB7IHN0YXRlIH07XG4gICAgfVxuXG4gICAgY3VycmVudEF0dGVtcHQgKz0gMTtcbiAgfVxufTtcbiJdfQ==
 
 /***/ }),
 
@@ -75717,19 +76214,17 @@ var __createBinding;
         return (mod && mod.__esModule) ? mod : { "default": mod };
     };
 
-    __classPrivateFieldGet = function (receiver, privateMap) {
-        if (!privateMap.has(receiver)) {
-            throw new TypeError("attempted to get private field on non-instance");
-        }
-        return privateMap.get(receiver);
+    __classPrivateFieldGet = function (receiver, state, kind, f) {
+        if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
+        if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+        return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
     };
 
-    __classPrivateFieldSet = function (receiver, privateMap, value) {
-        if (!privateMap.has(receiver)) {
-            throw new TypeError("attempted to set private field on non-instance");
-        }
-        privateMap.set(receiver, value);
-        return value;
+    __classPrivateFieldSet = function (receiver, state, value, kind, f) {
+        if (kind === "m") throw new TypeError("Private method is not writable");
+        if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
+        if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+        return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
     };
 
     exporter("__extends", __extends);
