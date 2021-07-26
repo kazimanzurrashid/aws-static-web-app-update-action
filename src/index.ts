@@ -6,7 +6,7 @@ import { S3 } from '@aws-sdk/client-s3';
 import { CloudFront } from '@aws-sdk/client-cloudfront';
 import { getInput, setFailed, info } from '@actions/core';
 import { lookup } from 'mime-types';
-import globby from 'globby';
+import { globby } from 'globby';
 import { load } from 'js-yaml';
 
 import { Action } from './action';
