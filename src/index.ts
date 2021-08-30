@@ -69,6 +69,6 @@ const cf = new CloudFront({
       wait
     });
   } catch (error) {
-    setFailed(error);
+    setFailed(error as Error);
   }
 })();
