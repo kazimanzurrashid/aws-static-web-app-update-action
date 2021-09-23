@@ -2,8 +2,21 @@ import { createReadStream, readdir, stat } from 'fs';
 import { join } from 'path';
 import { promisify } from 'util';
 
-import { S3 } from '@aws-sdk/client-s3';
-import { CloudFront } from '@aws-sdk/client-cloudfront';
+import { S3, PutObjectCommand } from '@aws-sdk/client-s3';
+
+import {
+  CloudFront,
+  CreateInvalidationCommand,
+  ListDistributionsCommand,
+  GetInvalidationCommand
+} from '@aws-sdk/client-cloudfront';
+
+import {
+  ListDistributionsResult,
+  GetInvalidationResult,
+  CreateInvalidationResult
+} from '@aws-sdk/client-cloudfront/models';
+
 import { getInput, setFailed, info } from '@actions/core';
 import { lookup } from 'mime-types';
 import { globby } from 'globby';
@@ -48,8 +61,22 @@ const cf = new CloudFront({
         createReadStream,
         join
       },
-      s3,
-      cf,
+      {
+        putObject: async (args: PutObjectCommand): Promise<void> => {
+          await s3.send(args);
+        }
+      },
+      {
+        listDistributions: async (
+          args: ListDistributionsCommand
+        ): Promise<ListDistributionsResult> => cf.send(args),
+        getInvalidation: async (
+          args: GetInvalidationCommand
+        ): Promise<GetInvalidationResult> => cf.send(args),
+        createInvalidation: async (
+          args: CreateInvalidationCommand
+        ): Promise<CreateInvalidationResult> => cf.send(args)
+      },
       {
         lookup
       },

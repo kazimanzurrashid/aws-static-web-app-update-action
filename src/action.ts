@@ -1,13 +1,17 @@
 import { ReadStream, Stats } from 'fs';
 
-import { PutObjectOutput, PutObjectRequest } from '@aws-sdk/client-s3/models';
+import { PutObjectCommand } from '@aws-sdk/client-s3';
+
 import {
-  CreateInvalidationRequest,
-  CreateInvalidationResult,
-  GetInvalidationRequest,
+  CreateInvalidationCommand,
+  GetInvalidationCommand,
+  ListDistributionsCommand
+} from '@aws-sdk/client-cloudfront';
+
+import {
+  ListDistributionsResult,
   GetInvalidationResult,
-  ListDistributionsRequest,
-  ListDistributionsResult
+  CreateInvalidationResult
 } from '@aws-sdk/client-cloudfront/models';
 
 interface Input {
@@ -36,19 +40,19 @@ class Action {
       join: (...paths: string[]) => string;
     },
     private readonly s3: {
-      putObject: (args: PutObjectRequest) => Promise<PutObjectOutput>;
+      putObject: (args: PutObjectCommand) => Promise<void>;
     },
     private readonly cf: {
       listDistributions: (
-        args: ListDistributionsRequest
+        args: ListDistributionsCommand
       ) => Promise<ListDistributionsResult>;
 
       getInvalidation: (
-        args: GetInvalidationRequest
+        args: GetInvalidationCommand
       ) => Promise<GetInvalidationResult>;
 
       createInvalidation: (
-        args: CreateInvalidationRequest
+        args: CreateInvalidationCommand
       ) => Promise<CreateInvalidationResult>;
     },
     private readonly mime: {
@@ -155,25 +159,17 @@ class Action {
       .substring(input.location.length - 1)
       .replace(/\\/g, '/');
 
-    const params: PutObjectRequest = {
+    const cmd = new PutObjectCommand({
       Bucket: input.bucket,
       Key: key,
-      Body: this.fs.createReadStream(input.file)
-    };
-
-    if (input.cacheControl) {
-      params.CacheControl = input.cacheControl;
-    }
-
-    const contentType = this.mime.lookup(key);
-
-    if (contentType) {
-      params.ContentType = contentType;
-    }
+      Body: this.fs.createReadStream(input.file),
+      CacheControl: input.cacheControl,
+      ContentType: this.mime.lookup(key) as string
+    });
 
     this.log(`...Uploading ${input.file}`);
 
-    await this.s3.putObject(params);
+    await this.s3.putObject(cmd);
 
     this.log(`...Uploaded ${input.file}`);
   }
@@ -193,12 +189,12 @@ class Action {
     let nextMarker: string | undefined = undefined;
 
     do {
-      const params: ListDistributionsRequest = {
+      const cmd: ListDistributionsCommand = new ListDistributionsCommand({
         Marker: nextMarker,
-        MaxItems: 100
-      };
+        MaxItems: 10
+      });
 
-      const result = await this.cf.listDistributions(params);
+      const result = await this.cf.listDistributions(cmd);
 
       let match = result.DistributionList?.Items?.find(
         (item) =>
@@ -237,15 +233,15 @@ class Action {
     const poll = async (id: string): Promise<void> => {
       return new Promise((resolve, reject) => {
         setTimeout(async () => {
-          const params: GetInvalidationRequest = {
+          const cmd = new GetInvalidationCommand({
             DistributionId: distributionId,
             Id: id
-          };
+          });
 
           this.log('...Checking invalidation status');
 
           try {
-            const result = await this.cf.getInvalidation(params);
+            const result = await this.cf.getInvalidation(cmd);
 
             if (
               result.Invalidation &&
@@ -264,7 +260,7 @@ class Action {
       });
     };
 
-    const params: CreateInvalidationRequest = {
+    const cmd = new CreateInvalidationCommand({
       DistributionId: distributionId,
       InvalidationBatch: {
         CallerReference: process.env.GITHUB_SHA,
@@ -273,11 +269,11 @@ class Action {
           Items: ['/*']
         }
       }
-    };
+    });
 
     this.log(`Invalidating cloudfront distribution ${distributionId}`);
 
-    const result = await this.cf.createInvalidation(params);
+    const result = await this.cf.createInvalidation(cmd);
 
     if (wait && result.Invalidation && result.Invalidation.Id) {
       await poll(result.Invalidation.Id);
