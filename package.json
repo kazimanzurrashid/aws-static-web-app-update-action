@@ -24,7 +24,7 @@
     "mime-types": "^2.1.31"
   },
   "devDependencies": {
-    "@types/js-yaml": "^4.0.3",
+    "@types/js-yaml": "^4.0.4",
     "@types/mime-types": "^2.1.1",
     "@types/node": "^16.10.2",
     "@typescript-eslint/eslint-plugin": "^4.32.0",
