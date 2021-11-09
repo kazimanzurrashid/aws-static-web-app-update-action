@@ -8,14 +8,11 @@ import {
   CloudFront,
   CreateInvalidationCommand,
   ListDistributionsCommand,
-  GetInvalidationCommand
-} from '@aws-sdk/client-cloudfront';
-
-import {
+  GetInvalidationCommand,
   ListDistributionsResult,
   GetInvalidationResult,
   CreateInvalidationResult
-} from '@aws-sdk/client-cloudfront/models';
+} from '@aws-sdk/client-cloudfront';
 
 import { getInput, setFailed, info } from '@actions/core';
 import { lookup } from 'mime-types';

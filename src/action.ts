@@ -5,14 +5,11 @@ import { PutObjectCommand } from '@aws-sdk/client-s3';
 import {
   CreateInvalidationCommand,
   GetInvalidationCommand,
-  ListDistributionsCommand
-} from '@aws-sdk/client-cloudfront';
-
-import {
+  ListDistributionsCommand,
   ListDistributionsResult,
   GetInvalidationResult,
   CreateInvalidationResult
-} from '@aws-sdk/client-cloudfront/models';
+} from '@aws-sdk/client-cloudfront';
 
 interface Input {
   location: string;
@@ -233,7 +230,7 @@ class Action {
     const poll = async (id: string): Promise<void> => {
       return new Promise((resolve, reject) => {
         setTimeout(async () => {
-          const cmd = new GetInvalidationCommand({
+          const getInvalidationCommand = new GetInvalidationCommand({
             DistributionId: distributionId,
             Id: id
           });
@@ -241,11 +238,13 @@ class Action {
           this.log('...Checking invalidation status');
 
           try {
-            const result = await this.cf.getInvalidation(cmd);
+            const getInvalidationResult = await this.cf.getInvalidation(
+              getInvalidationCommand
+            );
 
             if (
-              result.Invalidation &&
-              result.Invalidation.Status === 'InProgress'
+              getInvalidationResult.Invalidation &&
+              getInvalidationResult.Invalidation.Status === 'InProgress'
             ) {
               await poll(id);
               return;
@@ -260,7 +259,7 @@ class Action {
       });
     };
 
-    const cmd = new CreateInvalidationCommand({
+    const createInvalidationCommand = new CreateInvalidationCommand({
       DistributionId: distributionId,
       InvalidationBatch: {
         CallerReference: process.env.GITHUB_SHA,
@@ -273,10 +272,16 @@ class Action {
 
     this.log(`Invalidating cloudfront distribution ${distributionId}`);
 
-    const result = await this.cf.createInvalidation(cmd);
+    const createInvalidationResult = await this.cf.createInvalidation(
+      createInvalidationCommand
+    );
 
-    if (wait && result.Invalidation && result.Invalidation.Id) {
-      await poll(result.Invalidation.Id);
+    if (
+      wait &&
+      createInvalidationResult.Invalidation &&
+      createInvalidationResult.Invalidation.Id
+    ) {
+      await poll(createInvalidationResult.Invalidation.Id);
     }
   }
 }
