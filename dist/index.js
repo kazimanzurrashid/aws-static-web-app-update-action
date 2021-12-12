@@ -1993,18 +1993,19 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.uint32ArrayFrom = void 0;
 // IE 11 does not support Array.from, so we do it manually
 function uint32ArrayFrom(a_lookUpTable) {
-    if (!Array.from) {
+    if (!Uint32Array.from) {
         var return_array = new Uint32Array(a_lookUpTable.length);
         var a_index = 0;
         while (a_index < a_lookUpTable.length) {
             return_array[a_index] = a_lookUpTable[a_index];
+            a_index += 1;
         }
         return return_array;
     }
     return Uint32Array.from(a_lookUpTable);
 }
 exports.uint32ArrayFrom = uint32ArrayFrom;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidWludDMyQXJyYXlGcm9tLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vc3JjL3VpbnQzMkFycmF5RnJvbS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQUEsb0VBQW9FO0FBQ3BFLHNDQUFzQzs7O0FBRXRDLDBEQUEwRDtBQUMxRCxTQUFnQixlQUFlLENBQUMsYUFBNEI7SUFDMUQsSUFBSSxDQUFDLEtBQUssQ0FBQyxJQUFJLEVBQUU7UUFDZixJQUFNLFlBQVksR0FBRyxJQUFJLFdBQVcsQ0FBQyxhQUFhLENBQUMsTUFBTSxDQUFDLENBQUE7UUFDMUQsSUFBSSxPQUFPLEdBQUcsQ0FBQyxDQUFBO1FBQ2YsT0FBTyxPQUFPLEdBQUcsYUFBYSxDQUFDLE1BQU0sRUFBRTtZQUNyQyxZQUFZLENBQUMsT0FBTyxDQUFDLEdBQUcsYUFBYSxDQUFDLE9BQU8sQ0FBQyxDQUFBO1NBQy9DO1FBQ0QsT0FBTyxZQUFZLENBQUE7S0FDcEI7SUFDRCxPQUFPLFdBQVcsQ0FBQyxJQUFJLENBQUMsYUFBYSxDQUFDLENBQUE7QUFDeEMsQ0FBQztBQVZELDBDQVVDIiwic291cmNlc0NvbnRlbnQiOlsiLy8gQ29weXJpZ2h0IEFtYXpvbi5jb20gSW5jLiBvciBpdHMgYWZmaWxpYXRlcy4gQWxsIFJpZ2h0cyBSZXNlcnZlZC5cbi8vIFNQRFgtTGljZW5zZS1JZGVudGlmaWVyOiBBcGFjaGUtMi4wXG5cbi8vIElFIDExIGRvZXMgbm90IHN1cHBvcnQgQXJyYXkuZnJvbSwgc28gd2UgZG8gaXQgbWFudWFsbHlcbmV4cG9ydCBmdW5jdGlvbiB1aW50MzJBcnJheUZyb20oYV9sb29rVXBUYWJsZTogQXJyYXk8bnVtYmVyPik6IFVpbnQzMkFycmF5IHtcbiAgaWYgKCFBcnJheS5mcm9tKSB7XG4gICAgY29uc3QgcmV0dXJuX2FycmF5ID0gbmV3IFVpbnQzMkFycmF5KGFfbG9va1VwVGFibGUubGVuZ3RoKVxuICAgIGxldCBhX2luZGV4ID0gMFxuICAgIHdoaWxlIChhX2luZGV4IDwgYV9sb29rVXBUYWJsZS5sZW5ndGgpIHtcbiAgICAgIHJldHVybl9hcnJheVthX2luZGV4XSA9IGFfbG9va1VwVGFibGVbYV9pbmRleF1cbiAgICB9XG4gICAgcmV0dXJuIHJldHVybl9hcnJheVxuICB9XG4gIHJldHVybiBVaW50MzJBcnJheS5mcm9tKGFfbG9va1VwVGFibGUpXG59XG4iXX0=
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidWludDMyQXJyYXlGcm9tLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vc3JjL3VpbnQzMkFycmF5RnJvbS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQUEsb0VBQW9FO0FBQ3BFLHNDQUFzQzs7O0FBRXRDLDBEQUEwRDtBQUMxRCxTQUFnQixlQUFlLENBQUMsYUFBNEI7SUFDMUQsSUFBSSxDQUFDLFdBQVcsQ0FBQyxJQUFJLEVBQUU7UUFDckIsSUFBTSxZQUFZLEdBQUcsSUFBSSxXQUFXLENBQUMsYUFBYSxDQUFDLE1BQU0sQ0FBQyxDQUFBO1FBQzFELElBQUksT0FBTyxHQUFHLENBQUMsQ0FBQTtRQUNmLE9BQU8sT0FBTyxHQUFHLGFBQWEsQ0FBQyxNQUFNLEVBQUU7WUFDckMsWUFBWSxDQUFDLE9BQU8sQ0FBQyxHQUFHLGFBQWEsQ0FBQyxPQUFPLENBQUMsQ0FBQTtZQUM5QyxPQUFPLElBQUksQ0FBQyxDQUFBO1NBQ2I7UUFDRCxPQUFPLFlBQVksQ0FBQTtLQUNwQjtJQUNELE9BQU8sV0FBVyxDQUFDLElBQUksQ0FBQyxhQUFhLENBQUMsQ0FBQTtBQUN4QyxDQUFDO0FBWEQsMENBV0MiLCJzb3VyY2VzQ29udGVudCI6WyIvLyBDb3B5cmlnaHQgQW1hem9uLmNvbSBJbmMuIG9yIGl0cyBhZmZpbGlhdGVzLiBBbGwgUmlnaHRzIFJlc2VydmVkLlxuLy8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IEFwYWNoZS0yLjBcblxuLy8gSUUgMTEgZG9lcyBub3Qgc3VwcG9ydCBBcnJheS5mcm9tLCBzbyB3ZSBkbyBpdCBtYW51YWxseVxuZXhwb3J0IGZ1bmN0aW9uIHVpbnQzMkFycmF5RnJvbShhX2xvb2tVcFRhYmxlOiBBcnJheTxudW1iZXI+KTogVWludDMyQXJyYXkge1xuICBpZiAoIVVpbnQzMkFycmF5LmZyb20pIHtcbiAgICBjb25zdCByZXR1cm5fYXJyYXkgPSBuZXcgVWludDMyQXJyYXkoYV9sb29rVXBUYWJsZS5sZW5ndGgpXG4gICAgbGV0IGFfaW5kZXggPSAwXG4gICAgd2hpbGUgKGFfaW5kZXggPCBhX2xvb2tVcFRhYmxlLmxlbmd0aCkge1xuICAgICAgcmV0dXJuX2FycmF5W2FfaW5kZXhdID0gYV9sb29rVXBUYWJsZVthX2luZGV4XVxuICAgICAgYV9pbmRleCArPSAxXG4gICAgfVxuICAgIHJldHVybiByZXR1cm5fYXJyYXlcbiAgfVxuICByZXR1cm4gVWludDMyQXJyYXkuZnJvbShhX2xvb2tVcFRhYmxlKVxufVxuIl19
 
 /***/ }),
 
@@ -35452,10 +35453,10 @@ tslib_1.__exportStar(__nccwpck_require__(6958), exports);
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.GetBucketAccelerateConfigurationOutput = exports.DeletePublicAccessBlockRequest = exports.DeleteObjectTaggingRequest = exports.DeleteObjectTaggingOutput = exports.DeleteObjectsRequest = exports.Delete = exports.ObjectIdentifier = exports.DeleteObjectsOutput = exports._Error = exports.DeletedObject = exports.DeleteObjectRequest = exports.DeleteObjectOutput = exports.DeleteBucketWebsiteRequest = exports.DeleteBucketTaggingRequest = exports.DeleteBucketReplicationRequest = exports.DeleteBucketPolicyRequest = exports.DeleteBucketOwnershipControlsRequest = exports.DeleteBucketMetricsConfigurationRequest = exports.DeleteBucketLifecycleRequest = exports.DeleteBucketInventoryConfigurationRequest = exports.DeleteBucketIntelligentTieringConfigurationRequest = exports.DeleteBucketEncryptionRequest = exports.DeleteBucketCorsRequest = exports.DeleteBucketAnalyticsConfigurationRequest = exports.DeleteBucketRequest = exports.CreateMultipartUploadRequest = exports.CreateMultipartUploadOutput = exports.CreateBucketRequest = exports.CreateBucketConfiguration = exports.CreateBucketOutput = exports.BucketAlreadyOwnedByYou = exports.BucketAlreadyExists = exports.ObjectNotInActiveTierError = exports.CopyObjectRequest = exports.CopyObjectOutput = exports.CopyObjectResult = exports.CompleteMultipartUploadRequest = exports.CompletedMultipartUpload = exports.CompletedPart = exports.CompleteMultipartUploadOutput = exports.AccessControlTranslation = exports.AccessControlPolicy = exports.Owner = exports.Grant = exports.Grantee = exports.AccelerateConfiguration = exports.NoSuchUpload = exports.AbortMultipartUploadRequest = exports.AbortMultipartUploadOutput = exports.AbortIncompleteMultipartUpload = void 0;
 exports.LoggingEnabled = exports.TargetGrant = exports.GetBucketLocationRequest = exports.GetBucketLocationOutput = exports.GetBucketLifecycleConfigurationRequest = exports.GetBucketLifecycleConfigurationOutput = exports.LifecycleRule = exports.Transition = exports.NoncurrentVersionTransition = exports.NoncurrentVersionExpiration = exports.LifecycleRuleFilter = exports.LifecycleRuleAndOperator = exports.LifecycleExpiration = exports.GetBucketInventoryConfigurationRequest = exports.GetBucketInventoryConfigurationOutput = exports.InventoryConfiguration = exports.InventorySchedule = exports.InventoryFilter = exports.InventoryDestination = exports.InventoryS3BucketDestination = exports.InventoryEncryption = exports.SSES3 = exports.SSEKMS = exports.GetBucketIntelligentTieringConfigurationRequest = exports.GetBucketIntelligentTieringConfigurationOutput = exports.IntelligentTieringConfiguration = exports.Tiering = exports.IntelligentTieringFilter = exports.IntelligentTieringAndOperator = exports.GetBucketEncryptionRequest = exports.GetBucketEncryptionOutput = exports.ServerSideEncryptionConfiguration = exports.ServerSideEncryptionRule = exports.ServerSideEncryptionByDefault = exports.GetBucketCorsRequest = exports.GetBucketCorsOutput = exports.CORSRule = exports.GetBucketAnalyticsConfigurationRequest = exports.GetBucketAnalyticsConfigurationOutput = exports.AnalyticsConfiguration = exports.StorageClassAnalysis = exports.StorageClassAnalysisDataExport = exports.AnalyticsExportDestination = exports.AnalyticsS3BucketDestination = exports.AnalyticsFilter = exports.AnalyticsAndOperator = exports.Tag = exports.GetBucketAclRequest = exports.GetBucketAclOutput = exports.GetBucketAccelerateConfigurationRequest = void 0;
-exports.Condition = exports.RedirectAllRequestsTo = exports.IndexDocument = exports.ErrorDocument = exports.GetBucketVersioningRequest = exports.GetBucketVersioningOutput = exports.GetBucketTaggingRequest = exports.GetBucketTaggingOutput = exports.GetBucketRequestPaymentRequest = exports.GetBucketRequestPaymentOutput = exports.GetBucketReplicationRequest = exports.GetBucketReplicationOutput = exports.ReplicationConfiguration = exports.ReplicationRule = exports.SourceSelectionCriteria = exports.SseKmsEncryptedObjects = exports.ReplicaModifications = exports.ReplicationRuleFilter = exports.ReplicationRuleAndOperator = exports.ExistingObjectReplication = exports.Destination = exports.ReplicationTime = exports.Metrics = exports.ReplicationTimeValue = exports.EncryptionConfiguration = exports.DeleteMarkerReplication = exports.GetBucketPolicyStatusRequest = exports.GetBucketPolicyStatusOutput = exports.PolicyStatus = exports.GetBucketPolicyRequest = exports.GetBucketPolicyOutput = exports.GetBucketOwnershipControlsRequest = exports.GetBucketOwnershipControlsOutput = exports.OwnershipControls = exports.OwnershipControlsRule = exports.NotificationConfiguration = exports.TopicConfiguration = exports.QueueConfiguration = exports.LambdaFunctionConfiguration = exports.NotificationConfigurationFilter = exports.S3KeyFilter = exports.FilterRule = exports.GetBucketNotificationConfigurationRequest = exports.GetBucketMetricsConfigurationRequest = exports.GetBucketMetricsConfigurationOutput = exports.MetricsConfiguration = exports.MetricsFilter = exports.MetricsAndOperator = exports.GetBucketLoggingRequest = exports.GetBucketLoggingOutput = void 0;
-exports.ListObjectsRequest = exports.ListObjectsOutput = exports._Object = exports.ListMultipartUploadsRequest = exports.ListMultipartUploadsOutput = exports.MultipartUpload = exports.Initiator = exports.CommonPrefix = exports.ListBucketsOutput = exports.Bucket = exports.ListBucketMetricsConfigurationsRequest = exports.ListBucketMetricsConfigurationsOutput = exports.ListBucketInventoryConfigurationsRequest = exports.ListBucketInventoryConfigurationsOutput = exports.ListBucketIntelligentTieringConfigurationsRequest = exports.ListBucketIntelligentTieringConfigurationsOutput = exports.ListBucketAnalyticsConfigurationsRequest = exports.ListBucketAnalyticsConfigurationsOutput = exports.HeadObjectRequest = exports.HeadObjectOutput = exports.NotFound = exports.HeadBucketRequest = exports.GetPublicAccessBlockRequest = exports.GetPublicAccessBlockOutput = exports.PublicAccessBlockConfiguration = exports.GetObjectTorrentRequest = exports.GetObjectTorrentOutput = exports.GetObjectTaggingRequest = exports.GetObjectTaggingOutput = exports.GetObjectRetentionRequest = exports.GetObjectRetentionOutput = exports.ObjectLockRetention = exports.GetObjectLockConfigurationRequest = exports.GetObjectLockConfigurationOutput = exports.ObjectLockConfiguration = exports.ObjectLockRule = exports.DefaultRetention = exports.GetObjectLegalHoldRequest = exports.GetObjectLegalHoldOutput = exports.ObjectLockLegalHold = exports.GetObjectAclRequest = exports.GetObjectAclOutput = exports.NoSuchKey = exports.InvalidObjectState = exports.GetObjectRequest = exports.GetObjectOutput = exports.GetBucketWebsiteRequest = exports.GetBucketWebsiteOutput = exports.RoutingRule = exports.Redirect = void 0;
-exports.RestoreObjectOutput = exports.ObjectAlreadyInActiveTierError = exports.PutPublicAccessBlockRequest = exports.PutObjectTaggingRequest = exports.PutObjectTaggingOutput = exports.PutObjectRetentionRequest = exports.PutObjectRetentionOutput = exports.PutObjectLockConfigurationRequest = exports.PutObjectLockConfigurationOutput = exports.PutObjectLegalHoldRequest = exports.PutObjectLegalHoldOutput = exports.PutObjectAclRequest = exports.PutObjectAclOutput = exports.PutObjectRequest = exports.PutObjectOutput = exports.PutBucketWebsiteRequest = exports.WebsiteConfiguration = exports.PutBucketVersioningRequest = exports.VersioningConfiguration = exports.PutBucketTaggingRequest = exports.Tagging = exports.PutBucketRequestPaymentRequest = exports.RequestPaymentConfiguration = exports.PutBucketReplicationRequest = exports.PutBucketPolicyRequest = exports.PutBucketOwnershipControlsRequest = exports.PutBucketNotificationConfigurationRequest = exports.PutBucketMetricsConfigurationRequest = exports.PutBucketLoggingRequest = exports.BucketLoggingStatus = exports.PutBucketLifecycleConfigurationRequest = exports.BucketLifecycleConfiguration = exports.PutBucketInventoryConfigurationRequest = exports.PutBucketIntelligentTieringConfigurationRequest = exports.PutBucketEncryptionRequest = exports.PutBucketCorsRequest = exports.CORSConfiguration = exports.PutBucketAnalyticsConfigurationRequest = exports.PutBucketAclRequest = exports.PutBucketAccelerateConfigurationRequest = exports.ListPartsRequest = exports.ListPartsOutput = exports.Part = exports.ListObjectVersionsRequest = exports.ListObjectVersionsOutput = exports.ObjectVersion = exports.DeleteMarkerEntry = exports.ListObjectsV2Request = exports.ListObjectsV2Output = exports.NoSuchBucket = void 0;
-exports.GlacierJobParameters = void 0;
+exports.RedirectAllRequestsTo = exports.IndexDocument = exports.ErrorDocument = exports.GetBucketVersioningRequest = exports.GetBucketVersioningOutput = exports.GetBucketTaggingRequest = exports.GetBucketTaggingOutput = exports.GetBucketRequestPaymentRequest = exports.GetBucketRequestPaymentOutput = exports.GetBucketReplicationRequest = exports.GetBucketReplicationOutput = exports.ReplicationConfiguration = exports.ReplicationRule = exports.SourceSelectionCriteria = exports.SseKmsEncryptedObjects = exports.ReplicaModifications = exports.ReplicationRuleFilter = exports.ReplicationRuleAndOperator = exports.ExistingObjectReplication = exports.Destination = exports.ReplicationTime = exports.Metrics = exports.ReplicationTimeValue = exports.EncryptionConfiguration = exports.DeleteMarkerReplication = exports.GetBucketPolicyStatusRequest = exports.GetBucketPolicyStatusOutput = exports.PolicyStatus = exports.GetBucketPolicyRequest = exports.GetBucketPolicyOutput = exports.GetBucketOwnershipControlsRequest = exports.GetBucketOwnershipControlsOutput = exports.OwnershipControls = exports.OwnershipControlsRule = exports.NotificationConfiguration = exports.TopicConfiguration = exports.QueueConfiguration = exports.LambdaFunctionConfiguration = exports.NotificationConfigurationFilter = exports.S3KeyFilter = exports.FilterRule = exports.EventBridgeConfiguration = exports.GetBucketNotificationConfigurationRequest = exports.GetBucketMetricsConfigurationRequest = exports.GetBucketMetricsConfigurationOutput = exports.MetricsConfiguration = exports.MetricsFilter = exports.MetricsAndOperator = exports.GetBucketLoggingRequest = exports.GetBucketLoggingOutput = void 0;
+exports.ListObjectsOutput = exports._Object = exports.ListMultipartUploadsRequest = exports.ListMultipartUploadsOutput = exports.MultipartUpload = exports.Initiator = exports.CommonPrefix = exports.ListBucketsOutput = exports.Bucket = exports.ListBucketMetricsConfigurationsRequest = exports.ListBucketMetricsConfigurationsOutput = exports.ListBucketInventoryConfigurationsRequest = exports.ListBucketInventoryConfigurationsOutput = exports.ListBucketIntelligentTieringConfigurationsRequest = exports.ListBucketIntelligentTieringConfigurationsOutput = exports.ListBucketAnalyticsConfigurationsRequest = exports.ListBucketAnalyticsConfigurationsOutput = exports.HeadObjectRequest = exports.HeadObjectOutput = exports.NotFound = exports.HeadBucketRequest = exports.GetPublicAccessBlockRequest = exports.GetPublicAccessBlockOutput = exports.PublicAccessBlockConfiguration = exports.GetObjectTorrentRequest = exports.GetObjectTorrentOutput = exports.GetObjectTaggingRequest = exports.GetObjectTaggingOutput = exports.GetObjectRetentionRequest = exports.GetObjectRetentionOutput = exports.ObjectLockRetention = exports.GetObjectLockConfigurationRequest = exports.GetObjectLockConfigurationOutput = exports.ObjectLockConfiguration = exports.ObjectLockRule = exports.DefaultRetention = exports.GetObjectLegalHoldRequest = exports.GetObjectLegalHoldOutput = exports.ObjectLockLegalHold = exports.GetObjectAclRequest = exports.GetObjectAclOutput = exports.NoSuchKey = exports.InvalidObjectState = exports.GetObjectRequest = exports.GetObjectOutput = exports.GetBucketWebsiteRequest = exports.GetBucketWebsiteOutput = exports.RoutingRule = exports.Redirect = exports.Condition = void 0;
+exports.ObjectAlreadyInActiveTierError = exports.PutPublicAccessBlockRequest = exports.PutObjectTaggingRequest = exports.PutObjectTaggingOutput = exports.PutObjectRetentionRequest = exports.PutObjectRetentionOutput = exports.PutObjectLockConfigurationRequest = exports.PutObjectLockConfigurationOutput = exports.PutObjectLegalHoldRequest = exports.PutObjectLegalHoldOutput = exports.PutObjectAclRequest = exports.PutObjectAclOutput = exports.PutObjectRequest = exports.PutObjectOutput = exports.PutBucketWebsiteRequest = exports.WebsiteConfiguration = exports.PutBucketVersioningRequest = exports.VersioningConfiguration = exports.PutBucketTaggingRequest = exports.Tagging = exports.PutBucketRequestPaymentRequest = exports.RequestPaymentConfiguration = exports.PutBucketReplicationRequest = exports.PutBucketPolicyRequest = exports.PutBucketOwnershipControlsRequest = exports.PutBucketNotificationConfigurationRequest = exports.PutBucketMetricsConfigurationRequest = exports.PutBucketLoggingRequest = exports.BucketLoggingStatus = exports.PutBucketLifecycleConfigurationRequest = exports.BucketLifecycleConfiguration = exports.PutBucketInventoryConfigurationRequest = exports.PutBucketIntelligentTieringConfigurationRequest = exports.PutBucketEncryptionRequest = exports.PutBucketCorsRequest = exports.CORSConfiguration = exports.PutBucketAnalyticsConfigurationRequest = exports.PutBucketAclRequest = exports.PutBucketAccelerateConfigurationRequest = exports.ListPartsRequest = exports.ListPartsOutput = exports.Part = exports.ListObjectVersionsRequest = exports.ListObjectVersionsOutput = exports.ObjectVersion = exports.DeleteMarkerEntry = exports.ListObjectsV2Request = exports.ListObjectsV2Output = exports.NoSuchBucket = exports.ListObjectsRequest = void 0;
+exports.RestoreObjectOutput = void 0;
 const smithy_client_1 = __nccwpck_require__(4963);
 var AbortIncompleteMultipartUpload;
 (function (AbortIncompleteMultipartUpload) {
@@ -36048,6 +36049,10 @@ var LifecycleRuleFilter;
             return visitor.Prefix(value.Prefix);
         if (value.Tag !== undefined)
             return visitor.Tag(value.Tag);
+        if (value.ObjectSizeGreaterThan !== undefined)
+            return visitor.ObjectSizeGreaterThan(value.ObjectSizeGreaterThan);
+        if (value.ObjectSizeLessThan !== undefined)
+            return visitor.ObjectSizeLessThan(value.ObjectSizeLessThan);
         if (value.And !== undefined)
             return visitor.And(value.And);
         return visitor._(value.$unknown[0], value.$unknown[1]);
@@ -36057,6 +36062,10 @@ var LifecycleRuleFilter;
             return { Prefix: obj.Prefix };
         if (obj.Tag !== undefined)
             return { Tag: Tag.filterSensitiveLog(obj.Tag) };
+        if (obj.ObjectSizeGreaterThan !== undefined)
+            return { ObjectSizeGreaterThan: obj.ObjectSizeGreaterThan };
+        if (obj.ObjectSizeLessThan !== undefined)
+            return { ObjectSizeLessThan: obj.ObjectSizeLessThan };
         if (obj.And !== undefined)
             return { And: LifecycleRuleAndOperator.filterSensitiveLog(obj.And) };
         if (obj.$unknown !== undefined)
@@ -36197,6 +36206,12 @@ var GetBucketNotificationConfigurationRequest;
         ...obj,
     });
 })(GetBucketNotificationConfigurationRequest = exports.GetBucketNotificationConfigurationRequest || (exports.GetBucketNotificationConfigurationRequest = {}));
+var EventBridgeConfiguration;
+(function (EventBridgeConfiguration) {
+    EventBridgeConfiguration.filterSensitiveLog = (obj) => ({
+        ...obj,
+    });
+})(EventBridgeConfiguration = exports.EventBridgeConfiguration || (exports.EventBridgeConfiguration = {}));
 var FilterRule;
 (function (FilterRule) {
     FilterRule.filterSensitiveLog = (obj) => ({
@@ -37107,12 +37122,6 @@ var RestoreObjectOutput;
         ...obj,
     });
 })(RestoreObjectOutput = exports.RestoreObjectOutput || (exports.RestoreObjectOutput = {}));
-var GlacierJobParameters;
-(function (GlacierJobParameters) {
-    GlacierJobParameters.filterSensitiveLog = (obj) => ({
-        ...obj,
-    });
-})(GlacierJobParameters = exports.GlacierJobParameters || (exports.GlacierJobParameters = {}));
 
 
 /***/ }),
@@ -37123,8 +37132,14 @@ var GlacierJobParameters;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.WriteGetObjectResponseRequest = exports.UploadPartCopyRequest = exports.UploadPartCopyOutput = exports.CopyPartResult = exports.UploadPartRequest = exports.UploadPartOutput = exports.SelectObjectContentRequest = exports.ScanRange = exports.RequestProgress = exports.SelectObjectContentOutput = exports.SelectObjectContentEventStream = exports.StatsEvent = exports.Stats = exports.RecordsEvent = exports.ProgressEvent = exports.Progress = exports.EndEvent = exports.ContinuationEvent = exports.RestoreObjectRequest = exports.RestoreRequest = exports.RestoreRequestType = exports.SelectParameters = exports.OutputSerialization = exports.JSONOutput = exports.CSVOutput = exports.QuoteFields = exports.InputSerialization = exports.ParquetInput = exports.JSONInput = exports.JSONType = exports.CSVInput = exports.FileHeaderInfo = exports.OutputLocation = exports.S3Location = exports.MetadataEntry = exports.Encryption = void 0;
+exports.WriteGetObjectResponseRequest = exports.UploadPartCopyRequest = exports.UploadPartCopyOutput = exports.CopyPartResult = exports.UploadPartRequest = exports.UploadPartOutput = exports.SelectObjectContentRequest = exports.ScanRange = exports.RequestProgress = exports.SelectObjectContentOutput = exports.SelectObjectContentEventStream = exports.StatsEvent = exports.Stats = exports.RecordsEvent = exports.ProgressEvent = exports.Progress = exports.EndEvent = exports.ContinuationEvent = exports.RestoreObjectRequest = exports.RestoreRequest = exports.RestoreRequestType = exports.SelectParameters = exports.OutputSerialization = exports.JSONOutput = exports.CSVOutput = exports.QuoteFields = exports.InputSerialization = exports.ParquetInput = exports.JSONInput = exports.JSONType = exports.CSVInput = exports.FileHeaderInfo = exports.OutputLocation = exports.S3Location = exports.MetadataEntry = exports.Encryption = exports.GlacierJobParameters = void 0;
 const smithy_client_1 = __nccwpck_require__(4963);
+var GlacierJobParameters;
+(function (GlacierJobParameters) {
+    GlacierJobParameters.filterSensitiveLog = (obj) => ({
+        ...obj,
+    });
+})(GlacierJobParameters = exports.GlacierJobParameters || (exports.GlacierJobParameters = {}));
 var Encryption;
 (function (Encryption) {
     Encryption.filterSensitiveLog = (obj) => ({
@@ -37751,6 +37766,7 @@ const serializeAws_restXmlCreateBucketCommand = async (input, context) => {
         ...(isSerializableHeaderValue(input.ObjectLockEnabledForBucket) && {
             "x-amz-bucket-object-lock-enabled": input.ObjectLockEnabledForBucket.toString(),
         }),
+        ...(isSerializableHeaderValue(input.ObjectOwnership) && { "x-amz-object-ownership": input.ObjectOwnership }),
     };
     let resolvedPath = `${(basePath === null || basePath === void 0 ? void 0 : basePath.endsWith("/")) ? basePath.slice(0, -1) : basePath || ""}` + "/{Bucket}";
     if (input.Bucket !== undefined) {
@@ -40518,6 +40534,9 @@ const serializeAws_restXmlPutBucketNotificationConfigurationCommand = async (inp
         ...(isSerializableHeaderValue(input.ExpectedBucketOwner) && {
             "x-amz-expected-bucket-owner": input.ExpectedBucketOwner,
         }),
+        ...(isSerializableHeaderValue(input.SkipDestinationValidation) && {
+            "x-amz-skip-destination-validation": input.SkipDestinationValidation.toString(),
+        }),
     };
     let resolvedPath = `${(basePath === null || basePath === void 0 ? void 0 : basePath.endsWith("/")) ? basePath.slice(0, -1) : basePath || ""}` + "/{Bucket}";
     if (input.Bucket !== undefined) {
@@ -43209,11 +43228,15 @@ const deserializeAws_restXmlGetBucketNotificationConfigurationCommand = async (o
     }
     const contents = {
         $metadata: deserializeMetadata(output),
+        EventBridgeConfiguration: undefined,
         LambdaFunctionConfigurations: undefined,
         QueueConfigurations: undefined,
         TopicConfigurations: undefined,
     };
     const data = smithy_client_1.expectNonNull(smithy_client_1.expectObject(await parseBody(output.body, context)), "body");
+    if (data["EventBridgeConfiguration"] !== undefined) {
+        contents.EventBridgeConfiguration = deserializeAws_restXmlEventBridgeConfiguration(data["EventBridgeConfiguration"], context);
+    }
     if (data.CloudFunctionConfiguration === "") {
         contents.LambdaFunctionConfigurations = [];
     }
@@ -46897,6 +46920,10 @@ const serializeAws_restXmlErrorDocument = (input, context) => {
     }
     return bodyNode;
 };
+const serializeAws_restXmlEventBridgeConfiguration = (input, context) => {
+    const bodyNode = new xml_builder_1.XmlNode("EventBridgeConfiguration");
+    return bodyNode;
+};
 const serializeAws_restXmlEventList = (input, context) => {
     return input
         .filter((e) => e != null)
@@ -47333,6 +47360,18 @@ const serializeAws_restXmlLifecycleRuleAndOperator = (input, context) => {
             bodyNode.addChildNode(node);
         });
     }
+    if (input.ObjectSizeGreaterThan !== undefined && input.ObjectSizeGreaterThan !== null) {
+        const node = new xml_builder_1.XmlNode("ObjectSizeGreaterThanBytes")
+            .addChildNode(new xml_builder_1.XmlText(String(input.ObjectSizeGreaterThan)))
+            .withName("ObjectSizeGreaterThan");
+        bodyNode.addChildNode(node);
+    }
+    if (input.ObjectSizeLessThan !== undefined && input.ObjectSizeLessThan !== null) {
+        const node = new xml_builder_1.XmlNode("ObjectSizeLessThanBytes")
+            .addChildNode(new xml_builder_1.XmlText(String(input.ObjectSizeLessThan)))
+            .withName("ObjectSizeLessThan");
+        bodyNode.addChildNode(node);
+    }
     return bodyNode;
 };
 const serializeAws_restXmlLifecycleRuleFilter = (input, context) => {
@@ -47344,6 +47383,18 @@ const serializeAws_restXmlLifecycleRuleFilter = (input, context) => {
         },
         Tag: (value) => {
             const node = serializeAws_restXmlTag(value, context).withName("Tag");
+            bodyNode.addChildNode(node);
+        },
+        ObjectSizeGreaterThan: (value) => {
+            const node = new xml_builder_1.XmlNode("ObjectSizeGreaterThanBytes")
+                .addChildNode(new xml_builder_1.XmlText(String(value)))
+                .withName("ObjectSizeGreaterThan");
+            bodyNode.addChildNode(node);
+        },
+        ObjectSizeLessThan: (value) => {
+            const node = new xml_builder_1.XmlNode("ObjectSizeLessThanBytes")
+                .addChildNode(new xml_builder_1.XmlText(String(value)))
+                .withName("ObjectSizeLessThan");
             bodyNode.addChildNode(node);
         },
         And: (value) => {
@@ -47483,6 +47534,12 @@ const serializeAws_restXmlNoncurrentVersionExpiration = (input, context) => {
             .withName("NoncurrentDays");
         bodyNode.addChildNode(node);
     }
+    if (input.NewerNoncurrentVersions !== undefined && input.NewerNoncurrentVersions !== null) {
+        const node = new xml_builder_1.XmlNode("VersionCount")
+            .addChildNode(new xml_builder_1.XmlText(String(input.NewerNoncurrentVersions)))
+            .withName("NewerNoncurrentVersions");
+        bodyNode.addChildNode(node);
+    }
     return bodyNode;
 };
 const serializeAws_restXmlNoncurrentVersionTransition = (input, context) => {
@@ -47497,6 +47554,12 @@ const serializeAws_restXmlNoncurrentVersionTransition = (input, context) => {
         const node = new xml_builder_1.XmlNode("TransitionStorageClass")
             .addChildNode(new xml_builder_1.XmlText(input.StorageClass))
             .withName("StorageClass");
+        bodyNode.addChildNode(node);
+    }
+    if (input.NewerNoncurrentVersions !== undefined && input.NewerNoncurrentVersions !== null) {
+        const node = new xml_builder_1.XmlNode("VersionCount")
+            .addChildNode(new xml_builder_1.XmlText(String(input.NewerNoncurrentVersions)))
+            .withName("NewerNoncurrentVersions");
         bodyNode.addChildNode(node);
     }
     return bodyNode;
@@ -47534,6 +47597,10 @@ const serializeAws_restXmlNotificationConfiguration = (input, context) => {
             node = node.withName("CloudFunctionConfiguration");
             bodyNode.addChildNode(node);
         });
+    }
+    if (input.EventBridgeConfiguration !== undefined && input.EventBridgeConfiguration !== null) {
+        const node = serializeAws_restXmlEventBridgeConfiguration(input.EventBridgeConfiguration, context).withName("EventBridgeConfiguration");
+        bodyNode.addChildNode(node);
     }
     return bodyNode;
 };
@@ -48844,6 +48911,10 @@ const deserializeAws_restXmlErrors = (output, context) => {
         return deserializeAws_restXml_Error(entry, context);
     });
 };
+const deserializeAws_restXmlEventBridgeConfiguration = (output, context) => {
+    const contents = {};
+    return contents;
+};
 const deserializeAws_restXmlEventList = (output, context) => {
     return (output || [])
         .filter((e) => e != null)
@@ -49256,6 +49327,8 @@ const deserializeAws_restXmlLifecycleRuleAndOperator = (output, context) => {
     const contents = {
         Prefix: undefined,
         Tags: undefined,
+        ObjectSizeGreaterThan: undefined,
+        ObjectSizeLessThan: undefined,
     };
     if (output["Prefix"] !== undefined) {
         contents.Prefix = smithy_client_1.expectString(output["Prefix"]);
@@ -49265,6 +49338,12 @@ const deserializeAws_restXmlLifecycleRuleAndOperator = (output, context) => {
     }
     if (output["Tag"] !== undefined) {
         contents.Tags = deserializeAws_restXmlTagSet(smithy_client_1.getArrayIfSingleItem(output["Tag"]), context);
+    }
+    if (output["ObjectSizeGreaterThan"] !== undefined) {
+        contents.ObjectSizeGreaterThan = smithy_client_1.strictParseLong(output["ObjectSizeGreaterThan"]);
+    }
+    if (output["ObjectSizeLessThan"] !== undefined) {
+        contents.ObjectSizeLessThan = smithy_client_1.strictParseLong(output["ObjectSizeLessThan"]);
     }
     return contents;
 };
@@ -49277,6 +49356,16 @@ const deserializeAws_restXmlLifecycleRuleFilter = (output, context) => {
     if (output["Tag"] !== undefined) {
         return {
             Tag: deserializeAws_restXmlTag(output["Tag"], context),
+        };
+    }
+    if (output["ObjectSizeGreaterThan"] !== undefined) {
+        return {
+            ObjectSizeGreaterThan: smithy_client_1.strictParseLong(output["ObjectSizeGreaterThan"]),
+        };
+    }
+    if (output["ObjectSizeLessThan"] !== undefined) {
+        return {
+            ObjectSizeLessThan: smithy_client_1.strictParseLong(output["ObjectSizeLessThan"]),
         };
     }
     if (output["And"] !== undefined) {
@@ -49437,9 +49526,13 @@ const deserializeAws_restXmlMultipartUploadList = (output, context) => {
 const deserializeAws_restXmlNoncurrentVersionExpiration = (output, context) => {
     const contents = {
         NoncurrentDays: undefined,
+        NewerNoncurrentVersions: undefined,
     };
     if (output["NoncurrentDays"] !== undefined) {
         contents.NoncurrentDays = smithy_client_1.strictParseInt32(output["NoncurrentDays"]);
+    }
+    if (output["NewerNoncurrentVersions"] !== undefined) {
+        contents.NewerNoncurrentVersions = smithy_client_1.strictParseInt32(output["NewerNoncurrentVersions"]);
     }
     return contents;
 };
@@ -49447,12 +49540,16 @@ const deserializeAws_restXmlNoncurrentVersionTransition = (output, context) => {
     const contents = {
         NoncurrentDays: undefined,
         StorageClass: undefined,
+        NewerNoncurrentVersions: undefined,
     };
     if (output["NoncurrentDays"] !== undefined) {
         contents.NoncurrentDays = smithy_client_1.strictParseInt32(output["NoncurrentDays"]);
     }
     if (output["StorageClass"] !== undefined) {
         contents.StorageClass = smithy_client_1.expectString(output["StorageClass"]);
+    }
+    if (output["NewerNoncurrentVersions"] !== undefined) {
+        contents.NewerNoncurrentVersions = smithy_client_1.strictParseInt32(output["NewerNoncurrentVersions"]);
     }
     return contents;
 };
@@ -80187,7 +80284,7 @@ const isDynamicPattern = (patterns, options) => [patterns].flat()
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-cloudfront","description":"AWS SDK for JavaScript Cloudfront Client for Node.js, Browser and React Native","version":"3.42.0","scripts":{"build":"yarn build:cjs && yarn build:es && yarn build:types","build:cjs":"tsc -p tsconfig.json","build:docs":"yarn clean:docs && typedoc ./","build:es":"tsc -p tsconfig.es.json","build:types":"tsc -p tsconfig.types.json","clean":"yarn clean:dist && yarn clean:docs","clean:dist":"rimraf ./dist","clean:docs":"rimraf ./docs","downlevel-dts":"downlevel-dts dist-types dist-types/ts3.4","test":"exit 0"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"2.0.0","@aws-crypto/sha256-js":"2.0.0","@aws-sdk/client-sts":"3.42.0","@aws-sdk/config-resolver":"3.40.0","@aws-sdk/credential-provider-node":"3.41.0","@aws-sdk/fetch-http-handler":"3.40.0","@aws-sdk/hash-node":"3.40.0","@aws-sdk/invalid-dependency":"3.40.0","@aws-sdk/middleware-content-length":"3.40.0","@aws-sdk/middleware-host-header":"3.40.0","@aws-sdk/middleware-logger":"3.40.0","@aws-sdk/middleware-retry":"3.40.0","@aws-sdk/middleware-serde":"3.40.0","@aws-sdk/middleware-signing":"3.40.0","@aws-sdk/middleware-stack":"3.40.0","@aws-sdk/middleware-user-agent":"3.40.0","@aws-sdk/node-config-provider":"3.40.0","@aws-sdk/node-http-handler":"3.40.0","@aws-sdk/protocol-http":"3.40.0","@aws-sdk/smithy-client":"3.41.0","@aws-sdk/types":"3.40.0","@aws-sdk/url-parser":"3.40.0","@aws-sdk/util-base64-browser":"3.37.0","@aws-sdk/util-base64-node":"3.37.0","@aws-sdk/util-body-length-browser":"3.37.0","@aws-sdk/util-body-length-node":"3.37.0","@aws-sdk/util-user-agent-browser":"3.40.0","@aws-sdk/util-user-agent-node":"3.40.0","@aws-sdk/util-utf8-browser":"3.37.0","@aws-sdk/util-utf8-node":"3.37.0","@aws-sdk/util-waiter":"3.40.0","@aws-sdk/xml-builder":"3.37.0","entities":"2.2.0","fast-xml-parser":"3.19.0","tslib":"^2.3.0"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.38.0","@types/node":"^12.7.5","downlevel-dts":"0.7.0","jest":"^26.1.0","rimraf":"^3.0.0","ts-jest":"^26.4.1","typedoc":"^0.19.2","typescript":"~4.3.5"},"engines":{"node":">=10.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-cloudfront","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-cloudfront"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-cloudfront","description":"AWS SDK for JavaScript Cloudfront Client for Node.js, Browser and React Native","version":"3.43.0","scripts":{"build":"yarn build:cjs && yarn build:es && yarn build:types","build:cjs":"tsc -p tsconfig.json","build:docs":"yarn clean:docs && typedoc ./","build:es":"tsc -p tsconfig.es.json","build:types":"tsc -p tsconfig.types.json","clean":"yarn clean:dist && yarn clean:docs","clean:dist":"rimraf ./dist","clean:docs":"rimraf ./docs","downlevel-dts":"downlevel-dts dist-types dist-types/ts3.4","test":"exit 0"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"2.0.0","@aws-crypto/sha256-js":"2.0.0","@aws-sdk/client-sts":"3.43.0","@aws-sdk/config-resolver":"3.40.0","@aws-sdk/credential-provider-node":"3.41.0","@aws-sdk/fetch-http-handler":"3.40.0","@aws-sdk/hash-node":"3.40.0","@aws-sdk/invalid-dependency":"3.40.0","@aws-sdk/middleware-content-length":"3.40.0","@aws-sdk/middleware-host-header":"3.40.0","@aws-sdk/middleware-logger":"3.40.0","@aws-sdk/middleware-retry":"3.40.0","@aws-sdk/middleware-serde":"3.40.0","@aws-sdk/middleware-signing":"3.40.0","@aws-sdk/middleware-stack":"3.40.0","@aws-sdk/middleware-user-agent":"3.40.0","@aws-sdk/node-config-provider":"3.40.0","@aws-sdk/node-http-handler":"3.40.0","@aws-sdk/protocol-http":"3.40.0","@aws-sdk/smithy-client":"3.41.0","@aws-sdk/types":"3.40.0","@aws-sdk/url-parser":"3.40.0","@aws-sdk/util-base64-browser":"3.37.0","@aws-sdk/util-base64-node":"3.37.0","@aws-sdk/util-body-length-browser":"3.37.0","@aws-sdk/util-body-length-node":"3.37.0","@aws-sdk/util-user-agent-browser":"3.40.0","@aws-sdk/util-user-agent-node":"3.40.0","@aws-sdk/util-utf8-browser":"3.37.0","@aws-sdk/util-utf8-node":"3.37.0","@aws-sdk/util-waiter":"3.40.0","@aws-sdk/xml-builder":"3.37.0","entities":"2.2.0","fast-xml-parser":"3.19.0","tslib":"^2.3.0"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.38.0","@types/node":"^12.7.5","downlevel-dts":"0.7.0","jest":"^26.1.0","rimraf":"^3.0.0","ts-jest":"^26.4.1","typedoc":"^0.19.2","typescript":"~4.3.5"},"engines":{"node":">=10.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-cloudfront","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-cloudfront"}}');
 
 /***/ }),
 
@@ -80195,7 +80292,7 @@ module.exports = JSON.parse('{"name":"@aws-sdk/client-cloudfront","description":
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-s3","description":"AWS SDK for JavaScript S3 Client for Node.js, Browser and React Native","version":"3.42.0","scripts":{"build":"yarn build:cjs && yarn build:es && yarn build:types","build:cjs":"tsc -p tsconfig.json","build:docs":"yarn clean:docs && typedoc ./","build:es":"tsc -p tsconfig.es.json","build:types":"tsc -p tsconfig.types.json","clean":"yarn clean:dist && yarn clean:docs","clean:dist":"rimraf ./dist","clean:docs":"rimraf ./docs","downlevel-dts":"downlevel-dts dist-types dist-types/ts3.4","test":"yarn test:unit","test:e2e":"ts-mocha test/**/*.ispec.ts && karma start karma.conf.js","test:unit":"ts-mocha test/**/*.spec.ts"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"2.0.0","@aws-crypto/sha256-js":"2.0.0","@aws-sdk/client-sts":"3.42.0","@aws-sdk/config-resolver":"3.40.0","@aws-sdk/credential-provider-node":"3.41.0","@aws-sdk/eventstream-serde-browser":"3.40.0","@aws-sdk/eventstream-serde-config-resolver":"3.40.0","@aws-sdk/eventstream-serde-node":"3.40.0","@aws-sdk/fetch-http-handler":"3.40.0","@aws-sdk/hash-blob-browser":"3.40.0","@aws-sdk/hash-node":"3.40.0","@aws-sdk/hash-stream-node":"3.40.0","@aws-sdk/invalid-dependency":"3.40.0","@aws-sdk/md5-js":"3.40.0","@aws-sdk/middleware-apply-body-checksum":"3.40.0","@aws-sdk/middleware-bucket-endpoint":"3.41.0","@aws-sdk/middleware-content-length":"3.40.0","@aws-sdk/middleware-expect-continue":"3.40.0","@aws-sdk/middleware-host-header":"3.40.0","@aws-sdk/middleware-location-constraint":"3.40.0","@aws-sdk/middleware-logger":"3.40.0","@aws-sdk/middleware-retry":"3.40.0","@aws-sdk/middleware-sdk-s3":"3.41.0","@aws-sdk/middleware-serde":"3.40.0","@aws-sdk/middleware-signing":"3.40.0","@aws-sdk/middleware-ssec":"3.40.0","@aws-sdk/middleware-stack":"3.40.0","@aws-sdk/middleware-user-agent":"3.40.0","@aws-sdk/node-config-provider":"3.40.0","@aws-sdk/node-http-handler":"3.40.0","@aws-sdk/protocol-http":"3.40.0","@aws-sdk/smithy-client":"3.41.0","@aws-sdk/types":"3.40.0","@aws-sdk/url-parser":"3.40.0","@aws-sdk/util-base64-browser":"3.37.0","@aws-sdk/util-base64-node":"3.37.0","@aws-sdk/util-body-length-browser":"3.37.0","@aws-sdk/util-body-length-node":"3.37.0","@aws-sdk/util-user-agent-browser":"3.40.0","@aws-sdk/util-user-agent-node":"3.40.0","@aws-sdk/util-utf8-browser":"3.37.0","@aws-sdk/util-utf8-node":"3.37.0","@aws-sdk/util-waiter":"3.40.0","@aws-sdk/xml-builder":"3.37.0","entities":"2.2.0","fast-xml-parser":"3.19.0","tslib":"^2.3.0"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.38.0","@types/chai":"^4.2.11","@types/mocha":"^8.0.4","@types/node":"^12.7.5","downlevel-dts":"0.7.0","jest":"^26.1.0","rimraf":"^3.0.0","ts-jest":"^26.4.1","typedoc":"^0.19.2","typescript":"~4.3.5"},"engines":{"node":">=10.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-s3","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-s3"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-s3","description":"AWS SDK for JavaScript S3 Client for Node.js, Browser and React Native","version":"3.44.0","scripts":{"build":"yarn build:cjs && yarn build:es && yarn build:types","build:cjs":"tsc -p tsconfig.json","build:docs":"yarn clean:docs && typedoc ./","build:es":"tsc -p tsconfig.es.json","build:types":"tsc -p tsconfig.types.json","clean":"yarn clean:dist && yarn clean:docs","clean:dist":"rimraf ./dist","clean:docs":"rimraf ./docs","downlevel-dts":"downlevel-dts dist-types dist-types/ts3.4","test":"yarn test:unit","test:e2e":"ts-mocha test/**/*.ispec.ts && karma start karma.conf.js","test:unit":"ts-mocha test/**/*.spec.ts"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"2.0.0","@aws-crypto/sha256-js":"2.0.0","@aws-sdk/client-sts":"3.43.0","@aws-sdk/config-resolver":"3.40.0","@aws-sdk/credential-provider-node":"3.41.0","@aws-sdk/eventstream-serde-browser":"3.40.0","@aws-sdk/eventstream-serde-config-resolver":"3.40.0","@aws-sdk/eventstream-serde-node":"3.40.0","@aws-sdk/fetch-http-handler":"3.40.0","@aws-sdk/hash-blob-browser":"3.40.0","@aws-sdk/hash-node":"3.40.0","@aws-sdk/hash-stream-node":"3.40.0","@aws-sdk/invalid-dependency":"3.40.0","@aws-sdk/md5-js":"3.40.0","@aws-sdk/middleware-apply-body-checksum":"3.40.0","@aws-sdk/middleware-bucket-endpoint":"3.41.0","@aws-sdk/middleware-content-length":"3.40.0","@aws-sdk/middleware-expect-continue":"3.40.0","@aws-sdk/middleware-host-header":"3.40.0","@aws-sdk/middleware-location-constraint":"3.40.0","@aws-sdk/middleware-logger":"3.40.0","@aws-sdk/middleware-retry":"3.40.0","@aws-sdk/middleware-sdk-s3":"3.41.0","@aws-sdk/middleware-serde":"3.40.0","@aws-sdk/middleware-signing":"3.40.0","@aws-sdk/middleware-ssec":"3.40.0","@aws-sdk/middleware-stack":"3.40.0","@aws-sdk/middleware-user-agent":"3.40.0","@aws-sdk/node-config-provider":"3.40.0","@aws-sdk/node-http-handler":"3.40.0","@aws-sdk/protocol-http":"3.40.0","@aws-sdk/smithy-client":"3.41.0","@aws-sdk/types":"3.40.0","@aws-sdk/url-parser":"3.40.0","@aws-sdk/util-base64-browser":"3.37.0","@aws-sdk/util-base64-node":"3.37.0","@aws-sdk/util-body-length-browser":"3.37.0","@aws-sdk/util-body-length-node":"3.37.0","@aws-sdk/util-user-agent-browser":"3.40.0","@aws-sdk/util-user-agent-node":"3.40.0","@aws-sdk/util-utf8-browser":"3.37.0","@aws-sdk/util-utf8-node":"3.37.0","@aws-sdk/util-waiter":"3.40.0","@aws-sdk/xml-builder":"3.37.0","entities":"2.2.0","fast-xml-parser":"3.19.0","tslib":"^2.3.0"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.38.0","@types/chai":"^4.2.11","@types/mocha":"^8.0.4","@types/node":"^12.7.5","downlevel-dts":"0.7.0","jest":"^26.1.0","rimraf":"^3.0.0","ts-jest":"^26.4.1","typedoc":"^0.19.2","typescript":"~4.3.5"},"engines":{"node":">=10.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-s3","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-s3"}}');
 
 /***/ }),
 
@@ -80211,7 +80308,7 @@ module.exports = JSON.parse('{"name":"@aws-sdk/client-sso","description":"AWS SD
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-sts","description":"AWS SDK for JavaScript Sts Client for Node.js, Browser and React Native","version":"3.42.0","scripts":{"build":"yarn build:cjs && yarn build:es && yarn build:types","build:cjs":"tsc -p tsconfig.json","build:docs":"yarn clean:docs && typedoc ./","build:es":"tsc -p tsconfig.es.json","build:types":"tsc -p tsconfig.types.json","clean":"yarn clean:dist && yarn clean:docs","clean:dist":"rimraf ./dist","clean:docs":"rimraf ./docs","downlevel-dts":"downlevel-dts dist-types dist-types/ts3.4","test":"exit 0"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"2.0.0","@aws-crypto/sha256-js":"2.0.0","@aws-sdk/config-resolver":"3.40.0","@aws-sdk/credential-provider-node":"3.41.0","@aws-sdk/fetch-http-handler":"3.40.0","@aws-sdk/hash-node":"3.40.0","@aws-sdk/invalid-dependency":"3.40.0","@aws-sdk/middleware-content-length":"3.40.0","@aws-sdk/middleware-host-header":"3.40.0","@aws-sdk/middleware-logger":"3.40.0","@aws-sdk/middleware-retry":"3.40.0","@aws-sdk/middleware-sdk-sts":"3.40.0","@aws-sdk/middleware-serde":"3.40.0","@aws-sdk/middleware-signing":"3.40.0","@aws-sdk/middleware-stack":"3.40.0","@aws-sdk/middleware-user-agent":"3.40.0","@aws-sdk/node-config-provider":"3.40.0","@aws-sdk/node-http-handler":"3.40.0","@aws-sdk/protocol-http":"3.40.0","@aws-sdk/smithy-client":"3.41.0","@aws-sdk/types":"3.40.0","@aws-sdk/url-parser":"3.40.0","@aws-sdk/util-base64-browser":"3.37.0","@aws-sdk/util-base64-node":"3.37.0","@aws-sdk/util-body-length-browser":"3.37.0","@aws-sdk/util-body-length-node":"3.37.0","@aws-sdk/util-user-agent-browser":"3.40.0","@aws-sdk/util-user-agent-node":"3.40.0","@aws-sdk/util-utf8-browser":"3.37.0","@aws-sdk/util-utf8-node":"3.37.0","entities":"2.2.0","fast-xml-parser":"3.19.0","tslib":"^2.3.0"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.38.0","@types/node":"^12.7.5","downlevel-dts":"0.7.0","jest":"^26.1.0","rimraf":"^3.0.0","ts-jest":"^26.4.1","typedoc":"^0.19.2","typescript":"~4.3.5"},"engines":{"node":">=10.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sts","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sts"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-sts","description":"AWS SDK for JavaScript Sts Client for Node.js, Browser and React Native","version":"3.43.0","scripts":{"build":"yarn build:cjs && yarn build:es && yarn build:types","build:cjs":"tsc -p tsconfig.json","build:docs":"yarn clean:docs && typedoc ./","build:es":"tsc -p tsconfig.es.json","build:types":"tsc -p tsconfig.types.json","clean":"yarn clean:dist && yarn clean:docs","clean:dist":"rimraf ./dist","clean:docs":"rimraf ./docs","downlevel-dts":"downlevel-dts dist-types dist-types/ts3.4","test":"exit 0"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"2.0.0","@aws-crypto/sha256-js":"2.0.0","@aws-sdk/config-resolver":"3.40.0","@aws-sdk/credential-provider-node":"3.41.0","@aws-sdk/fetch-http-handler":"3.40.0","@aws-sdk/hash-node":"3.40.0","@aws-sdk/invalid-dependency":"3.40.0","@aws-sdk/middleware-content-length":"3.40.0","@aws-sdk/middleware-host-header":"3.40.0","@aws-sdk/middleware-logger":"3.40.0","@aws-sdk/middleware-retry":"3.40.0","@aws-sdk/middleware-sdk-sts":"3.40.0","@aws-sdk/middleware-serde":"3.40.0","@aws-sdk/middleware-signing":"3.40.0","@aws-sdk/middleware-stack":"3.40.0","@aws-sdk/middleware-user-agent":"3.40.0","@aws-sdk/node-config-provider":"3.40.0","@aws-sdk/node-http-handler":"3.40.0","@aws-sdk/protocol-http":"3.40.0","@aws-sdk/smithy-client":"3.41.0","@aws-sdk/types":"3.40.0","@aws-sdk/url-parser":"3.40.0","@aws-sdk/util-base64-browser":"3.37.0","@aws-sdk/util-base64-node":"3.37.0","@aws-sdk/util-body-length-browser":"3.37.0","@aws-sdk/util-body-length-node":"3.37.0","@aws-sdk/util-user-agent-browser":"3.40.0","@aws-sdk/util-user-agent-node":"3.40.0","@aws-sdk/util-utf8-browser":"3.37.0","@aws-sdk/util-utf8-node":"3.37.0","entities":"2.2.0","fast-xml-parser":"3.19.0","tslib":"^2.3.0"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.38.0","@types/node":"^12.7.5","downlevel-dts":"0.7.0","jest":"^26.1.0","rimraf":"^3.0.0","ts-jest":"^26.4.1","typedoc":"^0.19.2","typescript":"~4.3.5"},"engines":{"node":">=10.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sts","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sts"}}');
 
 /***/ }),
 
@@ -80219,7 +80316,7 @@ module.exports = JSON.parse('{"name":"@aws-sdk/client-sts","description":"AWS SD
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"aws-crt","version":"1.10.2","description":"NodeJS/browser bindings to the aws-c-* libraries","homepage":"https://github.com/awslabs/aws-crt-nodejs","repository":"github:awslabs/aws-crt-nodejs","contributors":["AWS Common Runtime Team <aws-sdk-common-runtime@amazon.com>"],"license":"Apache-2.0","main":"./dist/index.js","browser":"./dist.browser/browser.js","types":"./dist/index.d.ts","scripts":{"tsc":"node ./scripts/tsc.js","test":"npm run test:native","test:node":"npm run test:native","test:native":"npx jest --runInBand --verbose --config test/native/jest.config.js --forceExit","test:browser":"npx jest --runInBand --verbose --config test/browser/jest.config.js --forceExit","test:browser:ci":"npm run install:puppeteer && npm run test:browser","install:puppeteer":"npm install --save-dev jest-puppeteer puppeteer @types/puppeteer","prepare":"node ./scripts/tsc.js && node ./scripts/build.js","install":"node ./scripts/install.js"},"devDependencies":{"typedoc-plugin-external-module-name":"^4.0.6","typedoc-plugin-remove-references":"^0.0.5","@types/crypto-js":"^3.1.43","@types/jest":"^27.0.1","@types/node":"^10.17.54","@types/puppeteer":"^5.4.3","@types/uuid":"^3.4.8","@types/ws":"^6.0.4","aws-sdk":"^2.848.0","jest":"^27.2.1","jest-puppeteer":"^5.0.4","jest-runtime":"^27.2.1","puppeteer":"^3.3.0","ts-jest":"^27.0.5","typedoc":"^0.17.8","typedoc-plugin-as-member-of":"^1.0.2","typescript":"^3.9.9","uuid":"^8.3.2","yargs":"^13.3.2"},"dependencies":{"axios":"^0.21.4","cmake-js":"6.1.0","crypto-js":"^4.0.0","fastestsmallesttextencoderdecoder":"^1.0.22","mqtt":"^4.2.8","tar":"^6.1.11","websocket-stream":"^5.5.2"}}');
+module.exports = JSON.parse('{"name":"aws-crt","version":"1.10.5","description":"NodeJS/browser bindings to the aws-c-* libraries","homepage":"https://github.com/awslabs/aws-crt-nodejs","repository":"github:awslabs/aws-crt-nodejs","contributors":["AWS Common Runtime Team <aws-sdk-common-runtime@amazon.com>"],"license":"Apache-2.0","main":"./dist/index.js","browser":"./dist.browser/browser.js","types":"./dist/index.d.ts","scripts":{"tsc":"node ./scripts/tsc.js","test":"npm run test:native","test:node":"npm run test:native","test:native":"npx jest --runInBand --verbose --config test/native/jest.config.js --forceExit","test:browser":"npx jest --runInBand --verbose --config test/browser/jest.config.js --forceExit","test:browser:ci":"npm run install:puppeteer && npm run test:browser","install:puppeteer":"npm install --save-dev jest-puppeteer puppeteer @types/puppeteer","prepare":"node ./scripts/tsc.js && node ./scripts/build.js","install":"node ./scripts/install.js"},"devDependencies":{"@types/crypto-js":"^3.1.43","@types/jest":"^27.0.1","@types/node":"^10.17.54","@types/puppeteer":"^5.4.4","@types/uuid":"^3.4.8","@types/ws":"^7.4.7","aws-sdk":"^2.848.0","jest":"^27.2.1","jest-puppeteer":"^5.0.4","jest-runtime":"^27.2.1","puppeteer":"^3.3.0","ts-jest":"^27.0.5","typedoc":"^0.17.8","typedoc-plugin-as-member-of":"^1.0.2","typedoc-plugin-external-module-name":"^4.0.6","typedoc-plugin-remove-references":"^0.0.5","typescript":"^3.9.9","uuid":"^8.3.2","yargs":"^17.2.1"},"dependencies":{"axios":"^0.21.4","cmake-js":"6.3.0","crypto-js":"^4.0.0","fastestsmallesttextencoderdecoder":"^1.0.22","@httptoolkit/websocket-stream":"^6.0.0","mqtt":"^4.2.8","tar":"^6.1.11","ws":"^7.5.5"}}');
 
 /***/ }),
 
