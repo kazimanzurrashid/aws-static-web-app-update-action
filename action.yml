@@ -32,5 +32,5 @@ inputs:
     description: 'Optional if not specified fallbacks to environment variable'
     required: false
 runs:
-  using: 'node12'
+  using: 'node16'
   main: 'dist/index.js'
