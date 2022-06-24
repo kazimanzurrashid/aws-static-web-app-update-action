@@ -597,6 +597,13 @@ Object.defineProperty(exports, "summary", ({ enumerable: true, get: function () 
  */
 var summary_2 = __nccwpck_require__(81327);
 Object.defineProperty(exports, "markdownSummary", ({ enumerable: true, get: function () { return summary_2.markdownSummary; } }));
+/**
+ * Path exports
+ */
+var path_utils_1 = __nccwpck_require__(2981);
+Object.defineProperty(exports, "toPosixPath", ({ enumerable: true, get: function () { return path_utils_1.toPosixPath; } }));
+Object.defineProperty(exports, "toWin32Path", ({ enumerable: true, get: function () { return path_utils_1.toWin32Path; } }));
+Object.defineProperty(exports, "toPlatformPath", ({ enumerable: true, get: function () { return path_utils_1.toPlatformPath; } }));
 //# sourceMappingURL=core.js.map
 
 /***/ }),
@@ -731,6 +738,71 @@ class OidcClient {
 }
 exports.OidcClient = OidcClient;
 //# sourceMappingURL=oidc-utils.js.map
+
+/***/ }),
+
+/***/ 2981:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.toPlatformPath = exports.toWin32Path = exports.toPosixPath = void 0;
+const path = __importStar(__nccwpck_require__(71017));
+/**
+ * toPosixPath converts the given path to the posix form. On Windows, \\ will be
+ * replaced with /.
+ *
+ * @param pth. Path to transform.
+ * @return string Posix path.
+ */
+function toPosixPath(pth) {
+    return pth.replace(/[\\]/g, '/');
+}
+exports.toPosixPath = toPosixPath;
+/**
+ * toWin32Path converts the given path to the win32 form. On Linux, / will be
+ * replaced with \\.
+ *
+ * @param pth. Path to transform.
+ * @return string Win32 path.
+ */
+function toWin32Path(pth) {
+    return pth.replace(/[/]/g, '\\');
+}
+exports.toWin32Path = toWin32Path;
+/**
+ * toPlatformPath converts the given path to a platform-specific path. It does
+ * this by replacing instances of / and \ with the platform-specific path
+ * separator.
+ *
+ * @param pth The path to platformize.
+ * @return string The platform-specific path.
+ */
+function toPlatformPath(pth) {
+    return pth.replace(/[/\\]/g, path.sep);
+}
+exports.toPlatformPath = toPlatformPath;
+//# sourceMappingURL=path-utils.js.map
 
 /***/ }),
 
@@ -4218,6 +4290,7 @@ const config_resolver_1 = __nccwpck_require__(56153);
 const middleware_content_length_1 = __nccwpck_require__(42245);
 const middleware_host_header_1 = __nccwpck_require__(22545);
 const middleware_logger_1 = __nccwpck_require__(20014);
+const middleware_recursion_detection_1 = __nccwpck_require__(85525);
 const middleware_retry_1 = __nccwpck_require__(96064);
 const middleware_signing_1 = __nccwpck_require__(14935);
 const middleware_user_agent_1 = __nccwpck_require__(64688);
@@ -4238,6 +4311,7 @@ class CloudFrontClient extends smithy_client_1.Client {
         this.middlewareStack.use((0, middleware_content_length_1.getContentLengthPlugin)(this.config));
         this.middlewareStack.use((0, middleware_host_header_1.getHostHeaderPlugin)(this.config));
         this.middlewareStack.use((0, middleware_logger_1.getLoggerPlugin)(this.config));
+        this.middlewareStack.use((0, middleware_recursion_detection_1.getRecursionDetectionPlugin)(this.config));
         this.middlewareStack.use((0, middleware_signing_1.getAwsAuthPlugin)(this.config));
         this.middlewareStack.use((0, middleware_user_agent_1.getUserAgentPlugin)(this.config));
     }
@@ -23938,7 +24012,7 @@ const deserializeAws_restXmlActiveTrustedKeyGroups = (output, context) => {
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["KeyGroup"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["KeyGroup"] !== undefined) {
         contents.Items = deserializeAws_restXmlKGKeyPairIdsList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["KeyGroup"]), context);
     }
     return contents;
@@ -23958,7 +24032,7 @@ const deserializeAws_restXmlActiveTrustedSigners = (output, context) => {
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["Signer"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["Signer"] !== undefined) {
         contents.Items = deserializeAws_restXmlSignerList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["Signer"]), context);
     }
     return contents;
@@ -23974,7 +24048,7 @@ const deserializeAws_restXmlAliases = (output, context) => {
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["CNAME"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["CNAME"] !== undefined) {
         contents.Items = deserializeAws_restXmlAliasList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["CNAME"]), context);
     }
     return contents;
@@ -24024,7 +24098,7 @@ const deserializeAws_restXmlAllowedMethods = (output, context) => {
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["Method"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["Method"] !== undefined) {
         contents.Items = deserializeAws_restXmlMethodsList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["Method"]), context);
     }
     if (output["CachedMethods"] !== undefined) {
@@ -24144,7 +24218,7 @@ const deserializeAws_restXmlCacheBehaviors = (output, context) => {
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["CacheBehavior"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["CacheBehavior"] !== undefined) {
         contents.Items = deserializeAws_restXmlCacheBehaviorList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["CacheBehavior"]), context);
     }
     return contents;
@@ -24160,7 +24234,7 @@ const deserializeAws_restXmlCachedMethods = (output, context) => {
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["Method"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["Method"] !== undefined) {
         contents.Items = deserializeAws_restXmlMethodsList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["Method"]), context);
     }
     return contents;
@@ -24256,7 +24330,7 @@ const deserializeAws_restXmlCachePolicyList = (output, context) => {
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["CachePolicySummary"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["CachePolicySummary"] !== undefined) {
         contents.Items = deserializeAws_restXmlCachePolicySummaryList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["CachePolicySummary"]), context);
     }
     return contents;
@@ -24354,7 +24428,7 @@ const deserializeAws_restXmlCloudFrontOriginAccessIdentityList = (output, contex
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["CloudFrontOriginAccessIdentitySummary"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["CloudFrontOriginAccessIdentitySummary"] !== undefined) {
         contents.Items = deserializeAws_restXmlCloudFrontOriginAccessIdentitySummaryList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["CloudFrontOriginAccessIdentitySummary"]), context);
     }
     return contents;
@@ -24432,7 +24506,7 @@ const deserializeAws_restXmlConflictingAliasesList = (output, context) => {
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["ConflictingAlias"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["ConflictingAlias"] !== undefined) {
         contents.Items = deserializeAws_restXmlConflictingAliases((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["ConflictingAlias"]), context);
     }
     return contents;
@@ -24488,7 +24562,7 @@ const deserializeAws_restXmlContentTypeProfiles = (output, context) => {
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["ContentTypeProfile"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["ContentTypeProfile"] !== undefined) {
         contents.Items = deserializeAws_restXmlContentTypeProfileList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["ContentTypeProfile"]), context);
     }
     return contents;
@@ -24514,7 +24588,7 @@ const deserializeAws_restXmlCookieNames = (output, context) => {
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["Name"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["Name"] !== undefined) {
         contents.Items = deserializeAws_restXmlCookieNameList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["Name"]), context);
     }
     return contents;
@@ -24574,7 +24648,7 @@ const deserializeAws_restXmlCustomErrorResponses = (output, context) => {
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["CustomErrorResponse"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["CustomErrorResponse"] !== undefined) {
         contents.Items = deserializeAws_restXmlCustomErrorResponseList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["CustomErrorResponse"]), context);
     }
     return contents;
@@ -24590,7 +24664,7 @@ const deserializeAws_restXmlCustomHeaders = (output, context) => {
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["OriginCustomHeader"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["OriginCustomHeader"] !== undefined) {
         contents.Items = deserializeAws_restXmlOriginCustomHeadersList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["OriginCustomHeader"]), context);
     }
     return contents;
@@ -24744,7 +24818,8 @@ const deserializeAws_restXmlDistribution = (output, context) => {
     if (output.AliasICPRecordals === "") {
         contents.AliasICPRecordals = [];
     }
-    if (output["AliasICPRecordals"] !== undefined && output["AliasICPRecordals"]["AliasICPRecordal"] !== undefined) {
+    else if (output["AliasICPRecordals"] !== undefined &&
+        output["AliasICPRecordals"]["AliasICPRecordal"] !== undefined) {
         contents.AliasICPRecordals = deserializeAws_restXmlAliasICPRecordals((0, smithy_client_1.getArrayIfSingleItem)(output["AliasICPRecordals"]["AliasICPRecordal"]), context);
     }
     return contents;
@@ -24849,7 +24924,7 @@ const deserializeAws_restXmlDistributionIdList = (output, context) => {
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["DistributionId"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["DistributionId"] !== undefined) {
         contents.Items = deserializeAws_restXmlDistributionIdListSummary((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["DistributionId"]), context);
     }
     return contents;
@@ -24891,7 +24966,7 @@ const deserializeAws_restXmlDistributionList = (output, context) => {
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["DistributionSummary"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["DistributionSummary"] !== undefined) {
         contents.Items = deserializeAws_restXmlDistributionSummaryList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["DistributionSummary"]), context);
     }
     return contents;
@@ -24979,7 +25054,8 @@ const deserializeAws_restXmlDistributionSummary = (output, context) => {
     if (output.AliasICPRecordals === "") {
         contents.AliasICPRecordals = [];
     }
-    if (output["AliasICPRecordals"] !== undefined && output["AliasICPRecordals"]["AliasICPRecordal"] !== undefined) {
+    else if (output["AliasICPRecordals"] !== undefined &&
+        output["AliasICPRecordals"]["AliasICPRecordal"] !== undefined) {
         contents.AliasICPRecordals = deserializeAws_restXmlAliasICPRecordals((0, smithy_client_1.getArrayIfSingleItem)(output["AliasICPRecordals"]["AliasICPRecordal"]), context);
     }
     return contents;
@@ -25005,7 +25081,7 @@ const deserializeAws_restXmlEncryptionEntities = (output, context) => {
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["EncryptionEntity"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["EncryptionEntity"] !== undefined) {
         contents.Items = deserializeAws_restXmlEncryptionEntityList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["EncryptionEntity"]), context);
     }
     return contents;
@@ -25117,7 +25193,7 @@ const deserializeAws_restXmlFieldLevelEncryptionList = (output, context) => {
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["FieldLevelEncryptionSummary"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["FieldLevelEncryptionSummary"] !== undefined) {
         contents.Items = deserializeAws_restXmlFieldLevelEncryptionSummaryList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["FieldLevelEncryptionSummary"]), context);
     }
     return contents;
@@ -25179,7 +25255,7 @@ const deserializeAws_restXmlFieldLevelEncryptionProfileList = (output, context) 
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["FieldLevelEncryptionProfileSummary"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["FieldLevelEncryptionProfileSummary"] !== undefined) {
         contents.Items = deserializeAws_restXmlFieldLevelEncryptionProfileSummaryList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["FieldLevelEncryptionProfileSummary"]), context);
     }
     return contents;
@@ -25285,7 +25361,7 @@ const deserializeAws_restXmlFieldPatterns = (output, context) => {
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["FieldPattern"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["FieldPattern"] !== undefined) {
         contents.Items = deserializeAws_restXmlFieldPatternList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["FieldPattern"]), context);
     }
     return contents;
@@ -25345,7 +25421,7 @@ const deserializeAws_restXmlFunctionAssociations = (output, context) => {
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["FunctionAssociation"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["FunctionAssociation"] !== undefined) {
         contents.Items = deserializeAws_restXmlFunctionAssociationList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["FunctionAssociation"]), context);
     }
     return contents;
@@ -25392,7 +25468,7 @@ const deserializeAws_restXmlFunctionList = (output, context) => {
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["FunctionSummary"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["FunctionSummary"] !== undefined) {
         contents.Items = deserializeAws_restXmlFunctionSummaryList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["FunctionSummary"]), context);
     }
     return contents;
@@ -25464,7 +25540,7 @@ const deserializeAws_restXmlGeoRestriction = (output, context) => {
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["Location"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["Location"] !== undefined) {
         contents.Items = deserializeAws_restXmlLocationList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["Location"]), context);
     }
     return contents;
@@ -25490,7 +25566,7 @@ const deserializeAws_restXmlHeaders = (output, context) => {
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["Name"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["Name"] !== undefined) {
         contents.Items = deserializeAws_restXmlHeaderList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["Name"]), context);
     }
     return contents;
@@ -25556,7 +25632,7 @@ const deserializeAws_restXmlInvalidationList = (output, context) => {
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["InvalidationSummary"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["InvalidationSummary"] !== undefined) {
         contents.Items = deserializeAws_restXmlInvalidationSummaryList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["InvalidationSummary"]), context);
     }
     return contents;
@@ -25617,7 +25693,7 @@ const deserializeAws_restXmlKeyGroupConfig = (output, context) => {
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["PublicKey"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["PublicKey"] !== undefined) {
         contents.Items = deserializeAws_restXmlPublicKeyIdList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["PublicKey"]), context);
     }
     if (output["Comment"] !== undefined) {
@@ -25644,7 +25720,7 @@ const deserializeAws_restXmlKeyGroupList = (output, context) => {
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["KeyGroupSummary"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["KeyGroupSummary"] !== undefined) {
         contents.Items = deserializeAws_restXmlKeyGroupSummaryList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["KeyGroupSummary"]), context);
     }
     return contents;
@@ -25689,7 +25765,7 @@ const deserializeAws_restXmlKeyPairIds = (output, context) => {
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["KeyPairId"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["KeyPairId"] !== undefined) {
         contents.Items = deserializeAws_restXmlKeyPairIdList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["KeyPairId"]), context);
     }
     return contents;
@@ -25768,7 +25844,7 @@ const deserializeAws_restXmlLambdaFunctionAssociations = (output, context) => {
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["LambdaFunctionAssociation"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["LambdaFunctionAssociation"] !== undefined) {
         contents.Items = deserializeAws_restXmlLambdaFunctionAssociationList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["LambdaFunctionAssociation"]), context);
     }
     return contents;
@@ -25953,7 +26029,7 @@ const deserializeAws_restXmlOriginGroupMembers = (output, context) => {
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["OriginGroupMember"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["OriginGroupMember"] !== undefined) {
         contents.Items = deserializeAws_restXmlOriginGroupMemberList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["OriginGroupMember"]), context);
     }
     return contents;
@@ -25969,7 +26045,7 @@ const deserializeAws_restXmlOriginGroups = (output, context) => {
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["OriginGroup"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["OriginGroup"] !== undefined) {
         contents.Items = deserializeAws_restXmlOriginGroupList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["OriginGroup"]), context);
     }
     return contents;
@@ -26071,7 +26147,7 @@ const deserializeAws_restXmlOriginRequestPolicyList = (output, context) => {
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["OriginRequestPolicySummary"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["OriginRequestPolicySummary"] !== undefined) {
         contents.Items = deserializeAws_restXmlOriginRequestPolicySummaryList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["OriginRequestPolicySummary"]), context);
     }
     return contents;
@@ -26123,7 +26199,7 @@ const deserializeAws_restXmlOrigins = (output, context) => {
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["Origin"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["Origin"] !== undefined) {
         contents.Items = deserializeAws_restXmlOriginList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["Origin"]), context);
     }
     return contents;
@@ -26152,7 +26228,7 @@ const deserializeAws_restXmlOriginSslProtocols = (output, context) => {
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["SslProtocol"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["SslProtocol"] !== undefined) {
         contents.Items = deserializeAws_restXmlSslProtocolsList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["SslProtocol"]), context);
     }
     return contents;
@@ -26203,7 +26279,7 @@ const deserializeAws_restXmlPaths = (output, context) => {
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["Path"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["Path"] !== undefined) {
         contents.Items = deserializeAws_restXmlPathList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["Path"]), context);
     }
     return contents;
@@ -26275,7 +26351,7 @@ const deserializeAws_restXmlPublicKeyList = (output, context) => {
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["PublicKeySummary"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["PublicKeySummary"] !== undefined) {
         contents.Items = deserializeAws_restXmlPublicKeySummaryList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["PublicKeySummary"]), context);
     }
     return contents;
@@ -26362,7 +26438,7 @@ const deserializeAws_restXmlQueryArgProfiles = (output, context) => {
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["QueryArgProfile"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["QueryArgProfile"] !== undefined) {
         contents.Items = deserializeAws_restXmlQueryArgProfileList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["QueryArgProfile"]), context);
     }
     return contents;
@@ -26378,7 +26454,7 @@ const deserializeAws_restXmlQueryStringCacheKeys = (output, context) => {
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["Name"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["Name"] !== undefined) {
         contents.Items = deserializeAws_restXmlQueryStringCacheKeysList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["Name"]), context);
     }
     return contents;
@@ -26404,7 +26480,7 @@ const deserializeAws_restXmlQueryStringNames = (output, context) => {
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["Name"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["Name"] !== undefined) {
         contents.Items = deserializeAws_restXmlQueryStringNamesList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["Name"]), context);
     }
     return contents;
@@ -26439,13 +26515,13 @@ const deserializeAws_restXmlRealtimeLogConfig = (output, context) => {
     if (output.EndPoints === "") {
         contents.EndPoints = [];
     }
-    if (output["EndPoints"] !== undefined && output["EndPoints"]["member"] !== undefined) {
+    else if (output["EndPoints"] !== undefined && output["EndPoints"]["member"] !== undefined) {
         contents.EndPoints = deserializeAws_restXmlEndPointList((0, smithy_client_1.getArrayIfSingleItem)(output["EndPoints"]["member"]), context);
     }
     if (output.Fields === "") {
         contents.Fields = [];
     }
-    if (output["Fields"] !== undefined && output["Fields"]["Field"] !== undefined) {
+    else if (output["Fields"] !== undefined && output["Fields"]["Field"] !== undefined) {
         contents.Fields = deserializeAws_restXmlFieldList((0, smithy_client_1.getArrayIfSingleItem)(output["Fields"]["Field"]), context);
     }
     return contents;
@@ -26474,7 +26550,7 @@ const deserializeAws_restXmlRealtimeLogConfigs = (output, context) => {
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["member"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["member"] !== undefined) {
         contents.Items = deserializeAws_restXmlRealtimeLogConfigList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["member"]), context);
     }
     if (output["IsTruncated"] !== undefined) {
@@ -26525,7 +26601,7 @@ const deserializeAws_restXmlResponseHeadersPolicyAccessControlAllowHeaders = (ou
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["Header"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["Header"] !== undefined) {
         contents.Items = deserializeAws_restXmlAccessControlAllowHeadersList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["Header"]), context);
     }
     return contents;
@@ -26541,7 +26617,7 @@ const deserializeAws_restXmlResponseHeadersPolicyAccessControlAllowMethods = (ou
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["Method"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["Method"] !== undefined) {
         contents.Items = deserializeAws_restXmlAccessControlAllowMethodsList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["Method"]), context);
     }
     return contents;
@@ -26557,7 +26633,7 @@ const deserializeAws_restXmlResponseHeadersPolicyAccessControlAllowOrigins = (ou
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["Origin"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["Origin"] !== undefined) {
         contents.Items = deserializeAws_restXmlAccessControlAllowOriginsList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["Origin"]), context);
     }
     return contents;
@@ -26573,7 +26649,7 @@ const deserializeAws_restXmlResponseHeadersPolicyAccessControlExposeHeaders = (o
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["Header"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["Header"] !== undefined) {
         contents.Items = deserializeAws_restXmlAccessControlExposeHeadersList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["Header"]), context);
     }
     return contents;
@@ -26700,7 +26776,7 @@ const deserializeAws_restXmlResponseHeadersPolicyCustomHeadersConfig = (output, 
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["ResponseHeadersPolicyCustomHeader"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["ResponseHeadersPolicyCustomHeader"] !== undefined) {
         contents.Items = deserializeAws_restXmlResponseHeadersPolicyCustomHeaderList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["ResponseHeadersPolicyCustomHeader"]), context);
     }
     return contents;
@@ -26737,7 +26813,7 @@ const deserializeAws_restXmlResponseHeadersPolicyList = (output, context) => {
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["ResponseHeadersPolicySummary"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["ResponseHeadersPolicySummary"] !== undefined) {
         contents.Items = deserializeAws_restXmlResponseHeadersPolicySummaryList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["ResponseHeadersPolicySummary"]), context);
     }
     return contents;
@@ -26947,7 +27023,7 @@ const deserializeAws_restXmlStatusCodes = (output, context) => {
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["StatusCode"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["StatusCode"] !== undefined) {
         contents.Items = deserializeAws_restXmlStatusCodeList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["StatusCode"]), context);
     }
     return contents;
@@ -27049,7 +27125,7 @@ const deserializeAws_restXmlStreamingDistributionList = (output, context) => {
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["StreamingDistributionSummary"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["StreamingDistributionSummary"] !== undefined) {
         contents.Items = deserializeAws_restXmlStreamingDistributionSummaryList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["StreamingDistributionSummary"]), context);
     }
     return contents;
@@ -27160,7 +27236,7 @@ const deserializeAws_restXmlTags = (output, context) => {
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["Tag"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["Tag"] !== undefined) {
         contents.Items = deserializeAws_restXmlTagList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["Tag"]), context);
     }
     return contents;
@@ -27182,7 +27258,7 @@ const deserializeAws_restXmlTestResult = (output, context) => {
     if (output.FunctionExecutionLogs === "") {
         contents.FunctionExecutionLogs = [];
     }
-    if (output["FunctionExecutionLogs"] !== undefined && output["FunctionExecutionLogs"]["member"] !== undefined) {
+    else if (output["FunctionExecutionLogs"] !== undefined && output["FunctionExecutionLogs"]["member"] !== undefined) {
         contents.FunctionExecutionLogs = deserializeAws_restXmlFunctionExecutionLogList((0, smithy_client_1.getArrayIfSingleItem)(output["FunctionExecutionLogs"]["member"]), context);
     }
     if (output["FunctionErrorMessage"] !== undefined) {
@@ -27218,7 +27294,7 @@ const deserializeAws_restXmlTrustedKeyGroups = (output, context) => {
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["KeyGroup"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["KeyGroup"] !== undefined) {
         contents.Items = deserializeAws_restXmlTrustedKeyGroupIdList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["KeyGroup"]), context);
     }
     return contents;
@@ -27238,7 +27314,7 @@ const deserializeAws_restXmlTrustedSigners = (output, context) => {
     if (output.Items === "") {
         contents.Items = [];
     }
-    if (output["Items"] !== undefined && output["Items"]["AwsAccountNumber"] !== undefined) {
+    else if (output["Items"] !== undefined && output["Items"]["AwsAccountNumber"] !== undefined) {
         contents.Items = deserializeAws_restXmlAwsAccountNumberList((0, smithy_client_1.getArrayIfSingleItem)(output["Items"]["AwsAccountNumber"]), context);
     }
     return contents;
@@ -28985,6 +29061,7 @@ const middleware_content_length_1 = __nccwpck_require__(42245);
 const middleware_expect_continue_1 = __nccwpck_require__(81990);
 const middleware_host_header_1 = __nccwpck_require__(22545);
 const middleware_logger_1 = __nccwpck_require__(20014);
+const middleware_recursion_detection_1 = __nccwpck_require__(85525);
 const middleware_retry_1 = __nccwpck_require__(96064);
 const middleware_sdk_s3_1 = __nccwpck_require__(81139);
 const middleware_signing_1 = __nccwpck_require__(14935);
@@ -29008,9 +29085,9 @@ class S3Client extends smithy_client_1.Client {
         this.middlewareStack.use((0, middleware_content_length_1.getContentLengthPlugin)(this.config));
         this.middlewareStack.use((0, middleware_host_header_1.getHostHeaderPlugin)(this.config));
         this.middlewareStack.use((0, middleware_logger_1.getLoggerPlugin)(this.config));
+        this.middlewareStack.use((0, middleware_recursion_detection_1.getRecursionDetectionPlugin)(this.config));
         this.middlewareStack.use((0, middleware_signing_1.getAwsAuthPlugin)(this.config));
         this.middlewareStack.use((0, middleware_sdk_s3_1.getValidateBucketNamePlugin)(this.config));
-        this.middlewareStack.use((0, middleware_sdk_s3_1.getUseRegionalEndpointPlugin)(this.config));
         this.middlewareStack.use((0, middleware_expect_continue_1.getAddExpectContinuePlugin)(this.config));
         this.middlewareStack.use((0, middleware_user_agent_1.getUserAgentPlugin)(this.config));
     }
@@ -33429,6 +33506,7 @@ exports.UploadPartCopyCommand = UploadPartCopyCommand;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.WriteGetObjectResponseCommand = void 0;
+const middleware_sdk_s3_1 = __nccwpck_require__(81139);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(6958);
@@ -33440,6 +33518,7 @@ class WriteGetObjectResponseCommand extends smithy_client_1.Command {
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
+        this.middlewareStack.use((0, middleware_sdk_s3_1.getWriteGetObjectResponseEndpointPlugin)(configuration));
         const stack = clientStack.concat(this.middlewareStack);
         const { logger } = configuration;
         const clientName = "S3Client";
@@ -41488,13 +41567,13 @@ const deserializeAws_restXmlDeleteObjectsCommand = async (output, context) => {
     if (data.Deleted === "") {
         contents.Deleted = [];
     }
-    if (data["Deleted"] !== undefined) {
+    else if (data["Deleted"] !== undefined) {
         contents.Deleted = deserializeAws_restXmlDeletedObjects((0, smithy_client_1.getArrayIfSingleItem)(data["Deleted"]), context);
     }
     if (data.Error === "") {
         contents.Errors = [];
     }
-    if (data["Error"] !== undefined) {
+    else if (data["Error"] !== undefined) {
         contents.Errors = deserializeAws_restXmlErrors((0, smithy_client_1.getArrayIfSingleItem)(data["Error"]), context);
     }
     return Promise.resolve(contents);
@@ -41630,7 +41709,7 @@ const deserializeAws_restXmlGetBucketAclCommand = async (output, context) => {
     if (data.AccessControlList === "") {
         contents.Grants = [];
     }
-    if (data["AccessControlList"] !== undefined && data["AccessControlList"]["Grant"] !== undefined) {
+    else if (data["AccessControlList"] !== undefined && data["AccessControlList"]["Grant"] !== undefined) {
         contents.Grants = deserializeAws_restXmlGrants((0, smithy_client_1.getArrayIfSingleItem)(data["AccessControlList"]["Grant"]), context);
     }
     if (data["Owner"] !== undefined) {
@@ -41702,7 +41781,7 @@ const deserializeAws_restXmlGetBucketCorsCommand = async (output, context) => {
     if (data.CORSRule === "") {
         contents.CORSRules = [];
     }
-    if (data["CORSRule"] !== undefined) {
+    else if (data["CORSRule"] !== undefined) {
         contents.CORSRules = deserializeAws_restXmlCORSRules((0, smithy_client_1.getArrayIfSingleItem)(data["CORSRule"]), context);
     }
     return Promise.resolve(contents);
@@ -41835,7 +41914,7 @@ const deserializeAws_restXmlGetBucketLifecycleConfigurationCommand = async (outp
     if (data.Rule === "") {
         contents.Rules = [];
     }
-    if (data["Rule"] !== undefined) {
+    else if (data["Rule"] !== undefined) {
         contents.Rules = deserializeAws_restXmlLifecycleRules((0, smithy_client_1.getArrayIfSingleItem)(data["Rule"]), context);
     }
     return Promise.resolve(contents);
@@ -41978,19 +42057,19 @@ const deserializeAws_restXmlGetBucketNotificationConfigurationCommand = async (o
     if (data.CloudFunctionConfiguration === "") {
         contents.LambdaFunctionConfigurations = [];
     }
-    if (data["CloudFunctionConfiguration"] !== undefined) {
+    else if (data["CloudFunctionConfiguration"] !== undefined) {
         contents.LambdaFunctionConfigurations = deserializeAws_restXmlLambdaFunctionConfigurationList((0, smithy_client_1.getArrayIfSingleItem)(data["CloudFunctionConfiguration"]), context);
     }
     if (data.QueueConfiguration === "") {
         contents.QueueConfigurations = [];
     }
-    if (data["QueueConfiguration"] !== undefined) {
+    else if (data["QueueConfiguration"] !== undefined) {
         contents.QueueConfigurations = deserializeAws_restXmlQueueConfigurationList((0, smithy_client_1.getArrayIfSingleItem)(data["QueueConfiguration"]), context);
     }
     if (data.TopicConfiguration === "") {
         contents.TopicConfigurations = [];
     }
-    if (data["TopicConfiguration"] !== undefined) {
+    else if (data["TopicConfiguration"] !== undefined) {
         contents.TopicConfigurations = deserializeAws_restXmlTopicConfigurationList((0, smithy_client_1.getArrayIfSingleItem)(data["TopicConfiguration"]), context);
     }
     return Promise.resolve(contents);
@@ -42189,7 +42268,7 @@ const deserializeAws_restXmlGetBucketTaggingCommand = async (output, context) =>
     if (data.TagSet === "") {
         contents.TagSet = [];
     }
-    if (data["TagSet"] !== undefined && data["TagSet"]["Tag"] !== undefined) {
+    else if (data["TagSet"] !== undefined && data["TagSet"]["Tag"] !== undefined) {
         contents.TagSet = deserializeAws_restXmlTagSet((0, smithy_client_1.getArrayIfSingleItem)(data["TagSet"]["Tag"]), context);
     }
     return Promise.resolve(contents);
@@ -42276,7 +42355,7 @@ const deserializeAws_restXmlGetBucketWebsiteCommand = async (output, context) =>
     if (data.RoutingRules === "") {
         contents.RoutingRules = [];
     }
-    if (data["RoutingRules"] !== undefined && data["RoutingRules"]["RoutingRule"] !== undefined) {
+    else if (data["RoutingRules"] !== undefined && data["RoutingRules"]["RoutingRule"] !== undefined) {
         contents.RoutingRules = deserializeAws_restXmlRoutingRules((0, smithy_client_1.getArrayIfSingleItem)(data["RoutingRules"]["RoutingRule"]), context);
     }
     return Promise.resolve(contents);
@@ -42501,7 +42580,7 @@ const deserializeAws_restXmlGetObjectAclCommand = async (output, context) => {
     if (data.AccessControlList === "") {
         contents.Grants = [];
     }
-    if (data["AccessControlList"] !== undefined && data["AccessControlList"]["Grant"] !== undefined) {
+    else if (data["AccessControlList"] !== undefined && data["AccessControlList"]["Grant"] !== undefined) {
         contents.Grants = deserializeAws_restXmlGrants((0, smithy_client_1.getArrayIfSingleItem)(data["AccessControlList"]["Grant"]), context);
     }
     if (data["Owner"] !== undefined) {
@@ -42713,7 +42792,7 @@ const deserializeAws_restXmlGetObjectTaggingCommand = async (output, context) =>
     if (data.TagSet === "") {
         contents.TagSet = [];
     }
-    if (data["TagSet"] !== undefined && data["TagSet"]["Tag"] !== undefined) {
+    else if (data["TagSet"] !== undefined && data["TagSet"]["Tag"] !== undefined) {
         contents.TagSet = deserializeAws_restXmlTagSet((0, smithy_client_1.getArrayIfSingleItem)(data["TagSet"]["Tag"]), context);
     }
     return Promise.resolve(contents);
@@ -43028,7 +43107,7 @@ const deserializeAws_restXmlListBucketAnalyticsConfigurationsCommand = async (ou
     if (data.AnalyticsConfiguration === "") {
         contents.AnalyticsConfigurationList = [];
     }
-    if (data["AnalyticsConfiguration"] !== undefined) {
+    else if (data["AnalyticsConfiguration"] !== undefined) {
         contents.AnalyticsConfigurationList = deserializeAws_restXmlAnalyticsConfigurationList((0, smithy_client_1.getArrayIfSingleItem)(data["AnalyticsConfiguration"]), context);
     }
     if (data["ContinuationToken"] !== undefined) {
@@ -43080,7 +43159,7 @@ const deserializeAws_restXmlListBucketIntelligentTieringConfigurationsCommand = 
     if (data.IntelligentTieringConfiguration === "") {
         contents.IntelligentTieringConfigurationList = [];
     }
-    if (data["IntelligentTieringConfiguration"] !== undefined) {
+    else if (data["IntelligentTieringConfiguration"] !== undefined) {
         contents.IntelligentTieringConfigurationList = deserializeAws_restXmlIntelligentTieringConfigurationList((0, smithy_client_1.getArrayIfSingleItem)(data["IntelligentTieringConfiguration"]), context);
     }
     if (data["IsTruncated"] !== undefined) {
@@ -43129,7 +43208,7 @@ const deserializeAws_restXmlListBucketInventoryConfigurationsCommand = async (ou
     if (data.InventoryConfiguration === "") {
         contents.InventoryConfigurationList = [];
     }
-    if (data["InventoryConfiguration"] !== undefined) {
+    else if (data["InventoryConfiguration"] !== undefined) {
         contents.InventoryConfigurationList = deserializeAws_restXmlInventoryConfigurationList((0, smithy_client_1.getArrayIfSingleItem)(data["InventoryConfiguration"]), context);
     }
     if (data["IsTruncated"] !== undefined) {
@@ -43181,7 +43260,7 @@ const deserializeAws_restXmlListBucketMetricsConfigurationsCommand = async (outp
     if (data.MetricsConfiguration === "") {
         contents.MetricsConfigurationList = [];
     }
-    if (data["MetricsConfiguration"] !== undefined) {
+    else if (data["MetricsConfiguration"] !== undefined) {
         contents.MetricsConfigurationList = deserializeAws_restXmlMetricsConfigurationList((0, smithy_client_1.getArrayIfSingleItem)(data["MetricsConfiguration"]), context);
     }
     if (data["NextContinuationToken"] !== undefined) {
@@ -43222,7 +43301,7 @@ const deserializeAws_restXmlListBucketsCommand = async (output, context) => {
     if (data.Buckets === "") {
         contents.Buckets = [];
     }
-    if (data["Buckets"] !== undefined && data["Buckets"]["Bucket"] !== undefined) {
+    else if (data["Buckets"] !== undefined && data["Buckets"]["Bucket"] !== undefined) {
         contents.Buckets = deserializeAws_restXmlBuckets((0, smithy_client_1.getArrayIfSingleItem)(data["Buckets"]["Bucket"]), context);
     }
     if (data["Owner"] !== undefined) {
@@ -43276,7 +43355,7 @@ const deserializeAws_restXmlListMultipartUploadsCommand = async (output, context
     if (data.CommonPrefixes === "") {
         contents.CommonPrefixes = [];
     }
-    if (data["CommonPrefixes"] !== undefined) {
+    else if (data["CommonPrefixes"] !== undefined) {
         contents.CommonPrefixes = deserializeAws_restXmlCommonPrefixList((0, smithy_client_1.getArrayIfSingleItem)(data["CommonPrefixes"]), context);
     }
     if (data["Delimiter"] !== undefined) {
@@ -43309,7 +43388,7 @@ const deserializeAws_restXmlListMultipartUploadsCommand = async (output, context
     if (data.Upload === "") {
         contents.Uploads = [];
     }
-    if (data["Upload"] !== undefined) {
+    else if (data["Upload"] !== undefined) {
         contents.Uploads = deserializeAws_restXmlMultipartUploadList((0, smithy_client_1.getArrayIfSingleItem)(data["Upload"]), context);
     }
     return Promise.resolve(contents);
@@ -43355,13 +43434,13 @@ const deserializeAws_restXmlListObjectsCommand = async (output, context) => {
     if (data.CommonPrefixes === "") {
         contents.CommonPrefixes = [];
     }
-    if (data["CommonPrefixes"] !== undefined) {
+    else if (data["CommonPrefixes"] !== undefined) {
         contents.CommonPrefixes = deserializeAws_restXmlCommonPrefixList((0, smithy_client_1.getArrayIfSingleItem)(data["CommonPrefixes"]), context);
     }
     if (data.Contents === "") {
         contents.Contents = [];
     }
-    if (data["Contents"] !== undefined) {
+    else if (data["Contents"] !== undefined) {
         contents.Contents = deserializeAws_restXmlObjectList((0, smithy_client_1.getArrayIfSingleItem)(data["Contents"]), context);
     }
     if (data["Delimiter"] !== undefined) {
@@ -43436,13 +43515,13 @@ const deserializeAws_restXmlListObjectsV2Command = async (output, context) => {
     if (data.CommonPrefixes === "") {
         contents.CommonPrefixes = [];
     }
-    if (data["CommonPrefixes"] !== undefined) {
+    else if (data["CommonPrefixes"] !== undefined) {
         contents.CommonPrefixes = deserializeAws_restXmlCommonPrefixList((0, smithy_client_1.getArrayIfSingleItem)(data["CommonPrefixes"]), context);
     }
     if (data.Contents === "") {
         contents.Contents = [];
     }
-    if (data["Contents"] !== undefined) {
+    else if (data["Contents"] !== undefined) {
         contents.Contents = deserializeAws_restXmlObjectList((0, smithy_client_1.getArrayIfSingleItem)(data["Contents"]), context);
     }
     if (data["ContinuationToken"] !== undefined) {
@@ -43524,13 +43603,13 @@ const deserializeAws_restXmlListObjectVersionsCommand = async (output, context) 
     if (data.CommonPrefixes === "") {
         contents.CommonPrefixes = [];
     }
-    if (data["CommonPrefixes"] !== undefined) {
+    else if (data["CommonPrefixes"] !== undefined) {
         contents.CommonPrefixes = deserializeAws_restXmlCommonPrefixList((0, smithy_client_1.getArrayIfSingleItem)(data["CommonPrefixes"]), context);
     }
     if (data.DeleteMarker === "") {
         contents.DeleteMarkers = [];
     }
-    if (data["DeleteMarker"] !== undefined) {
+    else if (data["DeleteMarker"] !== undefined) {
         contents.DeleteMarkers = deserializeAws_restXmlDeleteMarkers((0, smithy_client_1.getArrayIfSingleItem)(data["DeleteMarker"]), context);
     }
     if (data["Delimiter"] !== undefined) {
@@ -43566,7 +43645,7 @@ const deserializeAws_restXmlListObjectVersionsCommand = async (output, context) 
     if (data.Version === "") {
         contents.Versions = [];
     }
-    if (data["Version"] !== undefined) {
+    else if (data["Version"] !== undefined) {
         contents.Versions = deserializeAws_restXmlObjectVersionList((0, smithy_client_1.getArrayIfSingleItem)(data["Version"]), context);
     }
     return Promise.resolve(contents);
@@ -43653,7 +43732,7 @@ const deserializeAws_restXmlListPartsCommand = async (output, context) => {
     if (data.Part === "") {
         contents.Parts = [];
     }
-    if (data["Part"] !== undefined) {
+    else if (data["Part"] !== undefined) {
         contents.Parts = deserializeAws_restXmlParts((0, smithy_client_1.getArrayIfSingleItem)(data["Part"]), context);
     }
     if (data["StorageClass"] !== undefined) {
@@ -47013,7 +47092,7 @@ const deserializeAws_restXmlAnalyticsAndOperator = (output, context) => {
     if (output.Tag === "") {
         contents.Tags = [];
     }
-    if (output["Tag"] !== undefined) {
+    else if (output["Tag"] !== undefined) {
         contents.Tags = deserializeAws_restXmlTagSet((0, smithy_client_1.getArrayIfSingleItem)(output["Tag"]), context);
     }
     return contents;
@@ -47027,7 +47106,9 @@ const deserializeAws_restXmlAnalyticsConfiguration = (output, context) => {
     if (output["Id"] !== undefined) {
         contents.Id = (0, smithy_client_1.expectString)(output["Id"]);
     }
-    if (output["Filter"] !== undefined) {
+    if (output.Filter === "") {
+    }
+    else if (output["Filter"] !== undefined) {
         contents.Filter = deserializeAws_restXmlAnalyticsFilter((0, smithy_client_1.expectUnion)(output["Filter"]), context);
     }
     if (output["StorageClassAnalysis"] !== undefined) {
@@ -47256,25 +47337,25 @@ const deserializeAws_restXmlCORSRule = (output, context) => {
     if (output.AllowedHeader === "") {
         contents.AllowedHeaders = [];
     }
-    if (output["AllowedHeader"] !== undefined) {
+    else if (output["AllowedHeader"] !== undefined) {
         contents.AllowedHeaders = deserializeAws_restXmlAllowedHeaders((0, smithy_client_1.getArrayIfSingleItem)(output["AllowedHeader"]), context);
     }
     if (output.AllowedMethod === "") {
         contents.AllowedMethods = [];
     }
-    if (output["AllowedMethod"] !== undefined) {
+    else if (output["AllowedMethod"] !== undefined) {
         contents.AllowedMethods = deserializeAws_restXmlAllowedMethods((0, smithy_client_1.getArrayIfSingleItem)(output["AllowedMethod"]), context);
     }
     if (output.AllowedOrigin === "") {
         contents.AllowedOrigins = [];
     }
-    if (output["AllowedOrigin"] !== undefined) {
+    else if (output["AllowedOrigin"] !== undefined) {
         contents.AllowedOrigins = deserializeAws_restXmlAllowedOrigins((0, smithy_client_1.getArrayIfSingleItem)(output["AllowedOrigin"]), context);
     }
     if (output.ExposeHeader === "") {
         contents.ExposeHeaders = [];
     }
-    if (output["ExposeHeader"] !== undefined) {
+    else if (output["ExposeHeader"] !== undefined) {
         contents.ExposeHeaders = deserializeAws_restXmlExposeHeaders((0, smithy_client_1.getArrayIfSingleItem)(output["ExposeHeader"]), context);
     }
     if (output["MaxAgeSeconds"] !== undefined) {
@@ -47553,7 +47634,7 @@ const deserializeAws_restXmlGetObjectAttributesParts = (output, context) => {
     if (output.Part === "") {
         contents.Parts = [];
     }
-    if (output["Part"] !== undefined) {
+    else if (output["Part"] !== undefined) {
         contents.Parts = deserializeAws_restXmlPartsList((0, smithy_client_1.getArrayIfSingleItem)(output["Part"]), context);
     }
     return contents;
@@ -47639,7 +47720,7 @@ const deserializeAws_restXmlIntelligentTieringAndOperator = (output, context) =>
     if (output.Tag === "") {
         contents.Tags = [];
     }
-    if (output["Tag"] !== undefined) {
+    else if (output["Tag"] !== undefined) {
         contents.Tags = deserializeAws_restXmlTagSet((0, smithy_client_1.getArrayIfSingleItem)(output["Tag"]), context);
     }
     return contents;
@@ -47663,7 +47744,7 @@ const deserializeAws_restXmlIntelligentTieringConfiguration = (output, context) 
     if (output.Tiering === "") {
         contents.Tierings = [];
     }
-    if (output["Tiering"] !== undefined) {
+    else if (output["Tiering"] !== undefined) {
         contents.Tierings = deserializeAws_restXmlTieringList((0, smithy_client_1.getArrayIfSingleItem)(output["Tiering"]), context);
     }
     return contents;
@@ -47723,7 +47804,7 @@ const deserializeAws_restXmlInventoryConfiguration = (output, context) => {
     if (output.OptionalFields === "") {
         contents.OptionalFields = [];
     }
-    if (output["OptionalFields"] !== undefined && output["OptionalFields"]["Field"] !== undefined) {
+    else if (output["OptionalFields"] !== undefined && output["OptionalFields"]["Field"] !== undefined) {
         contents.OptionalFields = deserializeAws_restXmlInventoryOptionalFields((0, smithy_client_1.getArrayIfSingleItem)(output["OptionalFields"]["Field"]), context);
     }
     if (output["Schedule"] !== undefined) {
@@ -47832,7 +47913,7 @@ const deserializeAws_restXmlLambdaFunctionConfiguration = (output, context) => {
     if (output.Event === "") {
         contents.Events = [];
     }
-    if (output["Event"] !== undefined) {
+    else if (output["Event"] !== undefined) {
         contents.Events = deserializeAws_restXmlEventList((0, smithy_client_1.getArrayIfSingleItem)(output["Event"]), context);
     }
     if (output["Filter"] !== undefined) {
@@ -47888,7 +47969,9 @@ const deserializeAws_restXmlLifecycleRule = (output, context) => {
     if (output["Prefix"] !== undefined) {
         contents.Prefix = (0, smithy_client_1.expectString)(output["Prefix"]);
     }
-    if (output["Filter"] !== undefined) {
+    if (output.Filter === "") {
+    }
+    else if (output["Filter"] !== undefined) {
         contents.Filter = deserializeAws_restXmlLifecycleRuleFilter((0, smithy_client_1.expectUnion)(output["Filter"]), context);
     }
     if (output["Status"] !== undefined) {
@@ -47897,13 +47980,13 @@ const deserializeAws_restXmlLifecycleRule = (output, context) => {
     if (output.Transition === "") {
         contents.Transitions = [];
     }
-    if (output["Transition"] !== undefined) {
+    else if (output["Transition"] !== undefined) {
         contents.Transitions = deserializeAws_restXmlTransitionList((0, smithy_client_1.getArrayIfSingleItem)(output["Transition"]), context);
     }
     if (output.NoncurrentVersionTransition === "") {
         contents.NoncurrentVersionTransitions = [];
     }
-    if (output["NoncurrentVersionTransition"] !== undefined) {
+    else if (output["NoncurrentVersionTransition"] !== undefined) {
         contents.NoncurrentVersionTransitions = deserializeAws_restXmlNoncurrentVersionTransitionList((0, smithy_client_1.getArrayIfSingleItem)(output["NoncurrentVersionTransition"]), context);
     }
     if (output["NoncurrentVersionExpiration"] !== undefined) {
@@ -47927,7 +48010,7 @@ const deserializeAws_restXmlLifecycleRuleAndOperator = (output, context) => {
     if (output.Tag === "") {
         contents.Tags = [];
     }
-    if (output["Tag"] !== undefined) {
+    else if (output["Tag"] !== undefined) {
         contents.Tags = deserializeAws_restXmlTagSet((0, smithy_client_1.getArrayIfSingleItem)(output["Tag"]), context);
     }
     if (output["ObjectSizeGreaterThan"] !== undefined) {
@@ -47988,7 +48071,7 @@ const deserializeAws_restXmlLoggingEnabled = (output, context) => {
     if (output.TargetGrants === "") {
         contents.TargetGrants = [];
     }
-    if (output["TargetGrants"] !== undefined && output["TargetGrants"]["Grant"] !== undefined) {
+    else if (output["TargetGrants"] !== undefined && output["TargetGrants"]["Grant"] !== undefined) {
         contents.TargetGrants = deserializeAws_restXmlTargetGrants((0, smithy_client_1.getArrayIfSingleItem)(output["TargetGrants"]["Grant"]), context);
     }
     if (output["TargetPrefix"] !== undefined) {
@@ -48021,7 +48104,7 @@ const deserializeAws_restXmlMetricsAndOperator = (output, context) => {
     if (output.Tag === "") {
         contents.Tags = [];
     }
-    if (output["Tag"] !== undefined) {
+    else if (output["Tag"] !== undefined) {
         contents.Tags = deserializeAws_restXmlTagSet((0, smithy_client_1.getArrayIfSingleItem)(output["Tag"]), context);
     }
     if (output["AccessPointArn"] !== undefined) {
@@ -48037,7 +48120,9 @@ const deserializeAws_restXmlMetricsConfiguration = (output, context) => {
     if (output["Id"] !== undefined) {
         contents.Id = (0, smithy_client_1.expectString)(output["Id"]);
     }
-    if (output["Filter"] !== undefined) {
+    if (output.Filter === "") {
+    }
+    else if (output["Filter"] !== undefined) {
         contents.Filter = deserializeAws_restXmlMetricsFilter((0, smithy_client_1.expectUnion)(output["Filter"]), context);
     }
     return contents;
@@ -48189,7 +48274,7 @@ const deserializeAws_restXml_Object = (output, context) => {
     if (output.ChecksumAlgorithm === "") {
         contents.ChecksumAlgorithm = [];
     }
-    if (output["ChecksumAlgorithm"] !== undefined) {
+    else if (output["ChecksumAlgorithm"] !== undefined) {
         contents.ChecksumAlgorithm = deserializeAws_restXmlChecksumAlgorithmList((0, smithy_client_1.getArrayIfSingleItem)(output["ChecksumAlgorithm"]), context);
     }
     if (output["Size"] !== undefined) {
@@ -48304,7 +48389,7 @@ const deserializeAws_restXmlObjectVersion = (output, context) => {
     if (output.ChecksumAlgorithm === "") {
         contents.ChecksumAlgorithm = [];
     }
-    if (output["ChecksumAlgorithm"] !== undefined) {
+    else if (output["ChecksumAlgorithm"] !== undefined) {
         contents.ChecksumAlgorithm = deserializeAws_restXmlChecksumAlgorithmList((0, smithy_client_1.getArrayIfSingleItem)(output["ChecksumAlgorithm"]), context);
     }
     if (output["Size"] !== undefined) {
@@ -48360,7 +48445,7 @@ const deserializeAws_restXmlOwnershipControls = (output, context) => {
     if (output.Rule === "") {
         contents.Rules = [];
     }
-    if (output["Rule"] !== undefined) {
+    else if (output["Rule"] !== undefined) {
         contents.Rules = deserializeAws_restXmlOwnershipControlsRules((0, smithy_client_1.getArrayIfSingleItem)(output["Rule"]), context);
     }
     return contents;
@@ -48513,7 +48598,7 @@ const deserializeAws_restXmlQueueConfiguration = (output, context) => {
     if (output.Event === "") {
         contents.Events = [];
     }
-    if (output["Event"] !== undefined) {
+    else if (output["Event"] !== undefined) {
         contents.Events = deserializeAws_restXmlEventList((0, smithy_client_1.getArrayIfSingleItem)(output["Event"]), context);
     }
     if (output["Filter"] !== undefined) {
@@ -48598,7 +48683,7 @@ const deserializeAws_restXmlReplicationConfiguration = (output, context) => {
     if (output.Rule === "") {
         contents.Rules = [];
     }
-    if (output["Rule"] !== undefined) {
+    else if (output["Rule"] !== undefined) {
         contents.Rules = deserializeAws_restXmlReplicationRules((0, smithy_client_1.getArrayIfSingleItem)(output["Rule"]), context);
     }
     return contents;
@@ -48624,7 +48709,9 @@ const deserializeAws_restXmlReplicationRule = (output, context) => {
     if (output["Prefix"] !== undefined) {
         contents.Prefix = (0, smithy_client_1.expectString)(output["Prefix"]);
     }
-    if (output["Filter"] !== undefined) {
+    if (output.Filter === "") {
+    }
+    else if (output["Filter"] !== undefined) {
         contents.Filter = deserializeAws_restXmlReplicationRuleFilter((0, smithy_client_1.expectUnion)(output["Filter"]), context);
     }
     if (output["Status"] !== undefined) {
@@ -48655,7 +48742,7 @@ const deserializeAws_restXmlReplicationRuleAndOperator = (output, context) => {
     if (output.Tag === "") {
         contents.Tags = [];
     }
-    if (output["Tag"] !== undefined) {
+    else if (output["Tag"] !== undefined) {
         contents.Tags = deserializeAws_restXmlTagSet((0, smithy_client_1.getArrayIfSingleItem)(output["Tag"]), context);
     }
     return contents;
@@ -48740,7 +48827,7 @@ const deserializeAws_restXmlS3KeyFilter = (output, context) => {
     if (output.FilterRule === "") {
         contents.FilterRules = [];
     }
-    if (output["FilterRule"] !== undefined) {
+    else if (output["FilterRule"] !== undefined) {
         contents.FilterRules = deserializeAws_restXmlFilterRuleList((0, smithy_client_1.getArrayIfSingleItem)(output["FilterRule"]), context);
     }
     return contents;
@@ -48793,7 +48880,7 @@ const deserializeAws_restXmlServerSideEncryptionConfiguration = (output, context
     if (output.Rule === "") {
         contents.Rules = [];
     }
-    if (output["Rule"] !== undefined) {
+    else if (output["Rule"] !== undefined) {
         contents.Rules = deserializeAws_restXmlServerSideEncryptionRules((0, smithy_client_1.getArrayIfSingleItem)(output["Rule"]), context);
     }
     return contents;
@@ -48989,7 +49076,7 @@ const deserializeAws_restXmlTopicConfiguration = (output, context) => {
     if (output.Event === "") {
         contents.Events = [];
     }
-    if (output["Event"] !== undefined) {
+    else if (output["Event"] !== undefined) {
         contents.Events = deserializeAws_restXmlEventList((0, smithy_client_1.getArrayIfSingleItem)(output["Event"]), context);
     }
     if (output["Filter"] !== undefined) {
@@ -49442,6 +49529,7 @@ const config_resolver_1 = __nccwpck_require__(56153);
 const middleware_content_length_1 = __nccwpck_require__(42245);
 const middleware_host_header_1 = __nccwpck_require__(22545);
 const middleware_logger_1 = __nccwpck_require__(20014);
+const middleware_recursion_detection_1 = __nccwpck_require__(85525);
 const middleware_retry_1 = __nccwpck_require__(96064);
 const middleware_user_agent_1 = __nccwpck_require__(64688);
 const smithy_client_1 = __nccwpck_require__(4963);
@@ -49460,6 +49548,7 @@ class SSOClient extends smithy_client_1.Client {
         this.middlewareStack.use((0, middleware_content_length_1.getContentLengthPlugin)(this.config));
         this.middlewareStack.use((0, middleware_host_header_1.getHostHeaderPlugin)(this.config));
         this.middlewareStack.use((0, middleware_logger_1.getLoggerPlugin)(this.config));
+        this.middlewareStack.use((0, middleware_recursion_detection_1.getRecursionDetectionPlugin)(this.config));
         this.middlewareStack.use((0, middleware_user_agent_1.getUserAgentPlugin)(this.config));
     }
     destroy() {
@@ -49751,6 +49840,15 @@ const regionHash = {
             },
         ],
         signingRegion: "eu-north-1",
+    },
+    "eu-south-1": {
+        variants: [
+            {
+                hostname: "portal.sso.eu-south-1.amazonaws.com",
+                tags: [],
+            },
+        ],
+        signingRegion: "eu-south-1",
     },
     "eu-west-1": {
         variants: [
@@ -50916,6 +51014,7 @@ const config_resolver_1 = __nccwpck_require__(56153);
 const middleware_content_length_1 = __nccwpck_require__(42245);
 const middleware_host_header_1 = __nccwpck_require__(22545);
 const middleware_logger_1 = __nccwpck_require__(20014);
+const middleware_recursion_detection_1 = __nccwpck_require__(85525);
 const middleware_retry_1 = __nccwpck_require__(96064);
 const middleware_sdk_sts_1 = __nccwpck_require__(55959);
 const middleware_user_agent_1 = __nccwpck_require__(64688);
@@ -50936,6 +51035,7 @@ class STSClient extends smithy_client_1.Client {
         this.middlewareStack.use((0, middleware_content_length_1.getContentLengthPlugin)(this.config));
         this.middlewareStack.use((0, middleware_host_header_1.getHostHeaderPlugin)(this.config));
         this.middlewareStack.use((0, middleware_logger_1.getLoggerPlugin)(this.config));
+        this.middlewareStack.use((0, middleware_recursion_detection_1.getRecursionDetectionPlugin)(this.config));
         this.middlewareStack.use((0, middleware_user_agent_1.getUserAgentPlugin)(this.config));
     }
     destroy() {
@@ -56594,6 +56694,53 @@ exports.getLoggerPlugin = getLoggerPlugin;
 
 /***/ }),
 
+/***/ 85525:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.getRecursionDetectionPlugin = exports.addRecursionDetectionMiddlewareOptions = exports.recursionDetectionMiddleware = void 0;
+const protocol_http_1 = __nccwpck_require__(70223);
+const TRACE_ID_HEADER_NAME = "X-Amzn-Trace-Id";
+const ENV_LAMBDA_FUNCTION_NAME = "AWS_LAMBDA_FUNCTION_NAME";
+const ENV_TRACE_ID = "_X_AMZN_TRACE_ID";
+const recursionDetectionMiddleware = (options) => (next) => async (args) => {
+    const { request } = args;
+    if (!protocol_http_1.HttpRequest.isInstance(request) ||
+        options.runtime !== "node" ||
+        request.headers.hasOwnProperty(TRACE_ID_HEADER_NAME)) {
+        return next(args);
+    }
+    const functionName = process.env[ENV_LAMBDA_FUNCTION_NAME];
+    const traceId = process.env[ENV_TRACE_ID];
+    const nonEmptyString = (str) => typeof str === "string" && str.length > 0;
+    if (nonEmptyString(functionName) && nonEmptyString(traceId)) {
+        request.headers[TRACE_ID_HEADER_NAME] = traceId;
+    }
+    return next({
+        ...args,
+        request,
+    });
+};
+exports.recursionDetectionMiddleware = recursionDetectionMiddleware;
+exports.addRecursionDetectionMiddlewareOptions = {
+    step: "build",
+    tags: ["RECURSION_DETECTION"],
+    name: "recursionDetectionMiddleware",
+    override: true,
+    priority: "low",
+};
+const getRecursionDetectionPlugin = (options) => ({
+    applyToStack: (clientStack) => {
+        clientStack.add((0, exports.recursionDetectionMiddleware)(options), exports.addRecursionDetectionMiddlewareOptions);
+    },
+});
+exports.getRecursionDetectionPlugin = getRecursionDetectionPlugin;
+
+
+/***/ }),
+
 /***/ 47328:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
@@ -57163,8 +57310,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 const tslib_1 = __nccwpck_require__(4351);
 tslib_1.__exportStar(__nccwpck_require__(51671), exports);
 tslib_1.__exportStar(__nccwpck_require__(10404), exports);
-tslib_1.__exportStar(__nccwpck_require__(92812), exports);
 tslib_1.__exportStar(__nccwpck_require__(56777), exports);
+tslib_1.__exportStar(__nccwpck_require__(1997), exports);
 
 
 /***/ }),
@@ -57223,43 +57370,6 @@ exports.getThrow200ExceptionsPlugin = getThrow200ExceptionsPlugin;
 
 /***/ }),
 
-/***/ 92812:
-/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.getUseRegionalEndpointPlugin = exports.useRegionalEndpointMiddlewareOptions = exports.useRegionalEndpointMiddleware = void 0;
-const protocol_http_1 = __nccwpck_require__(70223);
-const useRegionalEndpointMiddleware = (config) => (next) => async (args) => {
-    const { request } = args;
-    if (!protocol_http_1.HttpRequest.isInstance(request) || config.isCustomEndpoint)
-        return next({ ...args });
-    if (request.hostname === "s3.amazonaws.com") {
-        request.hostname = "s3.us-east-1.amazonaws.com";
-    }
-    else if ("aws-global" === (await config.region())) {
-        request.hostname = "s3.amazonaws.com";
-    }
-    return next({ ...args });
-};
-exports.useRegionalEndpointMiddleware = useRegionalEndpointMiddleware;
-exports.useRegionalEndpointMiddlewareOptions = {
-    step: "build",
-    tags: ["USE_REGIONAL_ENDPOINT", "S3"],
-    name: "useRegionalEndpointMiddleware",
-    override: true,
-};
-const getUseRegionalEndpointPlugin = (config) => ({
-    applyToStack: (clientStack) => {
-        clientStack.add((0, exports.useRegionalEndpointMiddleware)(config), exports.useRegionalEndpointMiddlewareOptions);
-    },
-});
-exports.getUseRegionalEndpointPlugin = getUseRegionalEndpointPlugin;
-
-
-/***/ }),
-
 /***/ 56777:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
@@ -57292,6 +57402,57 @@ const getValidateBucketNamePlugin = (unused) => ({
     },
 });
 exports.getValidateBucketNamePlugin = getValidateBucketNamePlugin;
+
+
+/***/ }),
+
+/***/ 1997:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.getWriteGetObjectResponseEndpointPlugin = exports.writeGetObjectResponseEndpointMiddlewareOptions = exports.writeGetObjectResponseEndpointMiddleware = void 0;
+const middleware_bucket_endpoint_1 = __nccwpck_require__(96689);
+const protocol_http_1 = __nccwpck_require__(70223);
+const writeGetObjectResponseEndpointMiddleware = (config) => (next, context) => async (args) => {
+    const { region: regionProvider, isCustomEndpoint, disableHostPrefix } = config;
+    const region = await regionProvider();
+    const { request, input } = args;
+    if (!protocol_http_1.HttpRequest.isInstance(request))
+        return next({ ...args });
+    let hostname = request.hostname;
+    if (hostname.endsWith("s3.amazonaws.com") || hostname.endsWith("s3-external-1.amazonaws.com")) {
+        return next({ ...args });
+    }
+    if (!isCustomEndpoint) {
+        const [, suffix] = (0, middleware_bucket_endpoint_1.getSuffixForArnEndpoint)(request.hostname);
+        hostname = `s3-object-lambda.${region}.${suffix}`;
+    }
+    if (!disableHostPrefix && input.RequestRoute) {
+        hostname = `${input.RequestRoute}.${hostname}`;
+    }
+    request.hostname = hostname;
+    context["signing_service"] = "s3-object-lambda";
+    if (config.runtime === "node" && !request.headers["content-length"]) {
+        request.headers["transfer-encoding"] = "chunked";
+    }
+    return next({ ...args });
+};
+exports.writeGetObjectResponseEndpointMiddleware = writeGetObjectResponseEndpointMiddleware;
+exports.writeGetObjectResponseEndpointMiddlewareOptions = {
+    relation: "after",
+    toMiddleware: "contentLengthMiddleware",
+    tags: ["WRITE_GET_OBJECT_RESPONSE", "S3", "ENDPOINT"],
+    name: "writeGetObjectResponseEndpointMiddleware",
+    override: true,
+};
+const getWriteGetObjectResponseEndpointPlugin = (config) => ({
+    applyToStack: (clientStack) => {
+        clientStack.addRelativeTo((0, exports.writeGetObjectResponseEndpointMiddleware)(config), exports.writeGetObjectResponseEndpointMiddlewareOptions);
+    },
+});
+exports.getWriteGetObjectResponseEndpointPlugin = getWriteGetObjectResponseEndpointPlugin;
 
 
 /***/ }),
@@ -59178,19 +59339,26 @@ const parseIni = (iniData) => {
     const map = {};
     let currentSection;
     for (let line of iniData.split(/\r?\n/)) {
-        line = line.split(/(^|\s)[;#]/)[0];
-        const section = line.match(/^\s*\[([^\[\]]+)]\s*$/);
-        if (section) {
-            currentSection = section[1];
+        line = line.split(/(^|\s)[;#]/)[0].trim();
+        const isSection = line[0] === "[" && line[line.length - 1] === "]";
+        if (isSection) {
+            currentSection = line.substring(1, line.length - 1);
             if (profileNameBlockList.includes(currentSection)) {
                 throw new Error(`Found invalid profile name "${currentSection}"`);
             }
         }
         else if (currentSection) {
-            const item = line.match(/^\s*(.+?)\s*=\s*(.+?)\s*$/);
-            if (item) {
+            const indexOfEqualsSign = line.indexOf("=");
+            const start = 0;
+            const end = line.length - 1;
+            const isAssignment = indexOfEqualsSign !== -1 && indexOfEqualsSign !== start && indexOfEqualsSign !== end;
+            if (isAssignment) {
+                const [name, value] = [
+                    line.substring(0, indexOfEqualsSign).trim(),
+                    line.substring(indexOfEqualsSign + 1).trim(),
+                ];
                 map[currentSection] = map[currentSection] || {};
-                map[currentSection][item[1]] = item[2];
+                map[currentSection][name] = value;
             }
         }
     }
@@ -77305,7 +77473,7 @@ const generateGlobTasksSync = normalizeArgumentsSync(generateTasksSync);
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-cloudfront","description":"AWS SDK for JavaScript Cloudfront Client for Node.js, Browser and React Native","version":"3.100.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"2.0.0","@aws-crypto/sha256-js":"2.0.0","@aws-sdk/client-sts":"3.100.0","@aws-sdk/config-resolver":"3.80.0","@aws-sdk/credential-provider-node":"3.100.0","@aws-sdk/fetch-http-handler":"3.78.0","@aws-sdk/hash-node":"3.78.0","@aws-sdk/invalid-dependency":"3.78.0","@aws-sdk/middleware-content-length":"3.78.0","@aws-sdk/middleware-host-header":"3.78.0","@aws-sdk/middleware-logger":"3.78.0","@aws-sdk/middleware-retry":"3.80.0","@aws-sdk/middleware-serde":"3.78.0","@aws-sdk/middleware-signing":"3.78.0","@aws-sdk/middleware-stack":"3.78.0","@aws-sdk/middleware-user-agent":"3.78.0","@aws-sdk/node-config-provider":"3.80.0","@aws-sdk/node-http-handler":"3.94.0","@aws-sdk/protocol-http":"3.78.0","@aws-sdk/smithy-client":"3.99.0","@aws-sdk/types":"3.78.0","@aws-sdk/url-parser":"3.78.0","@aws-sdk/util-base64-browser":"3.58.0","@aws-sdk/util-base64-node":"3.55.0","@aws-sdk/util-body-length-browser":"3.55.0","@aws-sdk/util-body-length-node":"3.55.0","@aws-sdk/util-defaults-mode-browser":"3.99.0","@aws-sdk/util-defaults-mode-node":"3.99.0","@aws-sdk/util-user-agent-browser":"3.78.0","@aws-sdk/util-user-agent-node":"3.80.0","@aws-sdk/util-utf8-browser":"3.55.0","@aws-sdk/util-utf8-node":"3.55.0","@aws-sdk/util-waiter":"3.78.0","@aws-sdk/xml-builder":"3.55.0","entities":"2.2.0","fast-xml-parser":"3.19.0","tslib":"^2.3.1"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.58.0","@tsconfig/recommended":"1.0.1","@types/node":"^12.7.5","concurrently":"7.0.0","downlevel-dts":"0.7.0","rimraf":"3.0.2","typedoc":"0.19.2","typescript":"~4.6.2"},"engines":{"node":">=12.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-cloudfront","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-cloudfront"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-cloudfront","description":"AWS SDK for JavaScript Cloudfront Client for Node.js, Browser and React Native","version":"3.112.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"2.0.0","@aws-crypto/sha256-js":"2.0.0","@aws-sdk/client-sts":"3.112.0","@aws-sdk/config-resolver":"3.110.0","@aws-sdk/credential-provider-node":"3.112.0","@aws-sdk/fetch-http-handler":"3.110.0","@aws-sdk/hash-node":"3.110.0","@aws-sdk/invalid-dependency":"3.110.0","@aws-sdk/middleware-content-length":"3.110.0","@aws-sdk/middleware-host-header":"3.110.0","@aws-sdk/middleware-logger":"3.110.0","@aws-sdk/middleware-recursion-detection":"3.110.0","@aws-sdk/middleware-retry":"3.110.0","@aws-sdk/middleware-serde":"3.110.0","@aws-sdk/middleware-signing":"3.110.0","@aws-sdk/middleware-stack":"3.110.0","@aws-sdk/middleware-user-agent":"3.110.0","@aws-sdk/node-config-provider":"3.110.0","@aws-sdk/node-http-handler":"3.110.0","@aws-sdk/protocol-http":"3.110.0","@aws-sdk/smithy-client":"3.110.0","@aws-sdk/types":"3.110.0","@aws-sdk/url-parser":"3.110.0","@aws-sdk/util-base64-browser":"3.109.0","@aws-sdk/util-base64-node":"3.55.0","@aws-sdk/util-body-length-browser":"3.55.0","@aws-sdk/util-body-length-node":"3.55.0","@aws-sdk/util-defaults-mode-browser":"3.110.0","@aws-sdk/util-defaults-mode-node":"3.110.0","@aws-sdk/util-user-agent-browser":"3.110.0","@aws-sdk/util-user-agent-node":"3.110.0","@aws-sdk/util-utf8-browser":"3.109.0","@aws-sdk/util-utf8-node":"3.109.0","@aws-sdk/util-waiter":"3.110.0","@aws-sdk/xml-builder":"3.109.0","entities":"2.2.0","fast-xml-parser":"3.19.0","tslib":"^2.3.1"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.58.0","@tsconfig/recommended":"1.0.1","@types/node":"^12.7.5","concurrently":"7.0.0","downlevel-dts":"0.7.0","rimraf":"3.0.2","typedoc":"0.19.2","typescript":"~4.6.2"},"engines":{"node":">=12.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-cloudfront","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-cloudfront"}}');
 
 /***/ }),
 
@@ -77313,7 +77481,7 @@ module.exports = JSON.parse('{"name":"@aws-sdk/client-cloudfront","description":
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-s3","description":"AWS SDK for JavaScript S3 Client for Node.js, Browser and React Native","version":"3.100.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","test":"yarn test:unit","test:e2e":"ts-mocha test/**/*.ispec.ts && karma start karma.conf.js","test:unit":"ts-mocha test/**/*.spec.ts"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha1-browser":"2.0.0","@aws-crypto/sha256-browser":"2.0.0","@aws-crypto/sha256-js":"2.0.0","@aws-sdk/client-sts":"3.100.0","@aws-sdk/config-resolver":"3.80.0","@aws-sdk/credential-provider-node":"3.100.0","@aws-sdk/eventstream-serde-browser":"3.78.0","@aws-sdk/eventstream-serde-config-resolver":"3.78.0","@aws-sdk/eventstream-serde-node":"3.78.0","@aws-sdk/fetch-http-handler":"3.78.0","@aws-sdk/hash-blob-browser":"3.78.0","@aws-sdk/hash-node":"3.78.0","@aws-sdk/hash-stream-node":"3.78.0","@aws-sdk/invalid-dependency":"3.78.0","@aws-sdk/md5-js":"3.78.0","@aws-sdk/middleware-bucket-endpoint":"3.80.0","@aws-sdk/middleware-content-length":"3.78.0","@aws-sdk/middleware-expect-continue":"3.78.0","@aws-sdk/middleware-flexible-checksums":"3.78.0","@aws-sdk/middleware-host-header":"3.78.0","@aws-sdk/middleware-location-constraint":"3.78.0","@aws-sdk/middleware-logger":"3.78.0","@aws-sdk/middleware-retry":"3.80.0","@aws-sdk/middleware-sdk-s3":"3.86.0","@aws-sdk/middleware-serde":"3.78.0","@aws-sdk/middleware-signing":"3.78.0","@aws-sdk/middleware-ssec":"3.78.0","@aws-sdk/middleware-stack":"3.78.0","@aws-sdk/middleware-user-agent":"3.78.0","@aws-sdk/node-config-provider":"3.80.0","@aws-sdk/node-http-handler":"3.94.0","@aws-sdk/protocol-http":"3.78.0","@aws-sdk/signature-v4-multi-region":"3.88.0","@aws-sdk/smithy-client":"3.99.0","@aws-sdk/types":"3.78.0","@aws-sdk/url-parser":"3.78.0","@aws-sdk/util-base64-browser":"3.58.0","@aws-sdk/util-base64-node":"3.55.0","@aws-sdk/util-body-length-browser":"3.55.0","@aws-sdk/util-body-length-node":"3.55.0","@aws-sdk/util-defaults-mode-browser":"3.99.0","@aws-sdk/util-defaults-mode-node":"3.99.0","@aws-sdk/util-stream-browser":"3.78.0","@aws-sdk/util-stream-node":"3.78.0","@aws-sdk/util-user-agent-browser":"3.78.0","@aws-sdk/util-user-agent-node":"3.80.0","@aws-sdk/util-utf8-browser":"3.55.0","@aws-sdk/util-utf8-node":"3.55.0","@aws-sdk/util-waiter":"3.78.0","@aws-sdk/xml-builder":"3.55.0","entities":"2.2.0","fast-xml-parser":"3.19.0","tslib":"^2.3.1"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.58.0","@tsconfig/recommended":"1.0.1","@types/chai":"^4.2.11","@types/mocha":"^8.0.4","@types/node":"^12.7.5","concurrently":"7.0.0","downlevel-dts":"0.7.0","rimraf":"3.0.2","typedoc":"0.19.2","typescript":"~4.6.2"},"engines":{"node":">=12.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-s3","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-s3"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-s3","description":"AWS SDK for JavaScript S3 Client for Node.js, Browser and React Native","version":"3.117.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","test":"yarn test:unit","test:e2e":"ts-mocha test/**/*.ispec.ts && karma start karma.conf.js","test:unit":"ts-mocha test/**/*.spec.ts"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha1-browser":"2.0.0","@aws-crypto/sha256-browser":"2.0.0","@aws-crypto/sha256-js":"2.0.0","@aws-sdk/client-sts":"3.112.0","@aws-sdk/config-resolver":"3.110.0","@aws-sdk/credential-provider-node":"3.112.0","@aws-sdk/eventstream-serde-browser":"3.110.0","@aws-sdk/eventstream-serde-config-resolver":"3.110.0","@aws-sdk/eventstream-serde-node":"3.110.0","@aws-sdk/fetch-http-handler":"3.110.0","@aws-sdk/hash-blob-browser":"3.110.0","@aws-sdk/hash-node":"3.110.0","@aws-sdk/hash-stream-node":"3.110.0","@aws-sdk/invalid-dependency":"3.110.0","@aws-sdk/md5-js":"3.110.0","@aws-sdk/middleware-bucket-endpoint":"3.110.0","@aws-sdk/middleware-content-length":"3.110.0","@aws-sdk/middleware-expect-continue":"3.113.0","@aws-sdk/middleware-flexible-checksums":"3.110.0","@aws-sdk/middleware-host-header":"3.110.0","@aws-sdk/middleware-location-constraint":"3.110.0","@aws-sdk/middleware-logger":"3.110.0","@aws-sdk/middleware-recursion-detection":"3.110.0","@aws-sdk/middleware-retry":"3.110.0","@aws-sdk/middleware-sdk-s3":"3.110.0","@aws-sdk/middleware-serde":"3.110.0","@aws-sdk/middleware-signing":"3.110.0","@aws-sdk/middleware-ssec":"3.110.0","@aws-sdk/middleware-stack":"3.110.0","@aws-sdk/middleware-user-agent":"3.110.0","@aws-sdk/node-config-provider":"3.110.0","@aws-sdk/node-http-handler":"3.110.0","@aws-sdk/protocol-http":"3.110.0","@aws-sdk/signature-v4-multi-region":"3.110.0","@aws-sdk/smithy-client":"3.110.0","@aws-sdk/types":"3.110.0","@aws-sdk/url-parser":"3.110.0","@aws-sdk/util-base64-browser":"3.109.0","@aws-sdk/util-base64-node":"3.55.0","@aws-sdk/util-body-length-browser":"3.55.0","@aws-sdk/util-body-length-node":"3.55.0","@aws-sdk/util-defaults-mode-browser":"3.110.0","@aws-sdk/util-defaults-mode-node":"3.110.0","@aws-sdk/util-stream-browser":"3.110.0","@aws-sdk/util-stream-node":"3.110.0","@aws-sdk/util-user-agent-browser":"3.110.0","@aws-sdk/util-user-agent-node":"3.110.0","@aws-sdk/util-utf8-browser":"3.109.0","@aws-sdk/util-utf8-node":"3.109.0","@aws-sdk/util-waiter":"3.110.0","@aws-sdk/xml-builder":"3.109.0","entities":"2.2.0","fast-xml-parser":"3.19.0","tslib":"^2.3.1"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.58.0","@tsconfig/recommended":"1.0.1","@types/chai":"^4.2.11","@types/mocha":"^8.0.4","@types/node":"^12.7.5","concurrently":"7.0.0","downlevel-dts":"0.7.0","rimraf":"3.0.2","typedoc":"0.19.2","typescript":"~4.6.2"},"engines":{"node":">=12.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-s3","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-s3"}}');
 
 /***/ }),
 
@@ -77321,7 +77489,7 @@ module.exports = JSON.parse('{"name":"@aws-sdk/client-s3","description":"AWS SDK
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-sso","description":"AWS SDK for JavaScript Sso Client for Node.js, Browser and React Native","version":"3.100.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"2.0.0","@aws-crypto/sha256-js":"2.0.0","@aws-sdk/config-resolver":"3.80.0","@aws-sdk/fetch-http-handler":"3.78.0","@aws-sdk/hash-node":"3.78.0","@aws-sdk/invalid-dependency":"3.78.0","@aws-sdk/middleware-content-length":"3.78.0","@aws-sdk/middleware-host-header":"3.78.0","@aws-sdk/middleware-logger":"3.78.0","@aws-sdk/middleware-retry":"3.80.0","@aws-sdk/middleware-serde":"3.78.0","@aws-sdk/middleware-stack":"3.78.0","@aws-sdk/middleware-user-agent":"3.78.0","@aws-sdk/node-config-provider":"3.80.0","@aws-sdk/node-http-handler":"3.94.0","@aws-sdk/protocol-http":"3.78.0","@aws-sdk/smithy-client":"3.99.0","@aws-sdk/types":"3.78.0","@aws-sdk/url-parser":"3.78.0","@aws-sdk/util-base64-browser":"3.58.0","@aws-sdk/util-base64-node":"3.55.0","@aws-sdk/util-body-length-browser":"3.55.0","@aws-sdk/util-body-length-node":"3.55.0","@aws-sdk/util-defaults-mode-browser":"3.99.0","@aws-sdk/util-defaults-mode-node":"3.99.0","@aws-sdk/util-user-agent-browser":"3.78.0","@aws-sdk/util-user-agent-node":"3.80.0","@aws-sdk/util-utf8-browser":"3.55.0","@aws-sdk/util-utf8-node":"3.55.0","tslib":"^2.3.1"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.58.0","@tsconfig/recommended":"1.0.1","@types/node":"^12.7.5","concurrently":"7.0.0","downlevel-dts":"0.7.0","rimraf":"3.0.2","typedoc":"0.19.2","typescript":"~4.6.2"},"engines":{"node":">=12.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sso","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sso"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-sso","description":"AWS SDK for JavaScript Sso Client for Node.js, Browser and React Native","version":"3.112.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"2.0.0","@aws-crypto/sha256-js":"2.0.0","@aws-sdk/config-resolver":"3.110.0","@aws-sdk/fetch-http-handler":"3.110.0","@aws-sdk/hash-node":"3.110.0","@aws-sdk/invalid-dependency":"3.110.0","@aws-sdk/middleware-content-length":"3.110.0","@aws-sdk/middleware-host-header":"3.110.0","@aws-sdk/middleware-logger":"3.110.0","@aws-sdk/middleware-recursion-detection":"3.110.0","@aws-sdk/middleware-retry":"3.110.0","@aws-sdk/middleware-serde":"3.110.0","@aws-sdk/middleware-stack":"3.110.0","@aws-sdk/middleware-user-agent":"3.110.0","@aws-sdk/node-config-provider":"3.110.0","@aws-sdk/node-http-handler":"3.110.0","@aws-sdk/protocol-http":"3.110.0","@aws-sdk/smithy-client":"3.110.0","@aws-sdk/types":"3.110.0","@aws-sdk/url-parser":"3.110.0","@aws-sdk/util-base64-browser":"3.109.0","@aws-sdk/util-base64-node":"3.55.0","@aws-sdk/util-body-length-browser":"3.55.0","@aws-sdk/util-body-length-node":"3.55.0","@aws-sdk/util-defaults-mode-browser":"3.110.0","@aws-sdk/util-defaults-mode-node":"3.110.0","@aws-sdk/util-user-agent-browser":"3.110.0","@aws-sdk/util-user-agent-node":"3.110.0","@aws-sdk/util-utf8-browser":"3.109.0","@aws-sdk/util-utf8-node":"3.109.0","tslib":"^2.3.1"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.58.0","@tsconfig/recommended":"1.0.1","@types/node":"^12.7.5","concurrently":"7.0.0","downlevel-dts":"0.7.0","rimraf":"3.0.2","typedoc":"0.19.2","typescript":"~4.6.2"},"engines":{"node":">=12.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sso","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sso"}}');
 
 /***/ }),
 
@@ -77329,7 +77497,7 @@ module.exports = JSON.parse('{"name":"@aws-sdk/client-sso","description":"AWS SD
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-sts","description":"AWS SDK for JavaScript Sts Client for Node.js, Browser and React Native","version":"3.100.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"2.0.0","@aws-crypto/sha256-js":"2.0.0","@aws-sdk/config-resolver":"3.80.0","@aws-sdk/credential-provider-node":"3.100.0","@aws-sdk/fetch-http-handler":"3.78.0","@aws-sdk/hash-node":"3.78.0","@aws-sdk/invalid-dependency":"3.78.0","@aws-sdk/middleware-content-length":"3.78.0","@aws-sdk/middleware-host-header":"3.78.0","@aws-sdk/middleware-logger":"3.78.0","@aws-sdk/middleware-retry":"3.80.0","@aws-sdk/middleware-sdk-sts":"3.78.0","@aws-sdk/middleware-serde":"3.78.0","@aws-sdk/middleware-signing":"3.78.0","@aws-sdk/middleware-stack":"3.78.0","@aws-sdk/middleware-user-agent":"3.78.0","@aws-sdk/node-config-provider":"3.80.0","@aws-sdk/node-http-handler":"3.94.0","@aws-sdk/protocol-http":"3.78.0","@aws-sdk/smithy-client":"3.99.0","@aws-sdk/types":"3.78.0","@aws-sdk/url-parser":"3.78.0","@aws-sdk/util-base64-browser":"3.58.0","@aws-sdk/util-base64-node":"3.55.0","@aws-sdk/util-body-length-browser":"3.55.0","@aws-sdk/util-body-length-node":"3.55.0","@aws-sdk/util-defaults-mode-browser":"3.99.0","@aws-sdk/util-defaults-mode-node":"3.99.0","@aws-sdk/util-user-agent-browser":"3.78.0","@aws-sdk/util-user-agent-node":"3.80.0","@aws-sdk/util-utf8-browser":"3.55.0","@aws-sdk/util-utf8-node":"3.55.0","entities":"2.2.0","fast-xml-parser":"3.19.0","tslib":"^2.3.1"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.58.0","@tsconfig/recommended":"1.0.1","@types/node":"^12.7.5","concurrently":"7.0.0","downlevel-dts":"0.7.0","rimraf":"3.0.2","typedoc":"0.19.2","typescript":"~4.6.2"},"engines":{"node":">=12.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sts","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sts"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-sts","description":"AWS SDK for JavaScript Sts Client for Node.js, Browser and React Native","version":"3.112.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"2.0.0","@aws-crypto/sha256-js":"2.0.0","@aws-sdk/config-resolver":"3.110.0","@aws-sdk/credential-provider-node":"3.112.0","@aws-sdk/fetch-http-handler":"3.110.0","@aws-sdk/hash-node":"3.110.0","@aws-sdk/invalid-dependency":"3.110.0","@aws-sdk/middleware-content-length":"3.110.0","@aws-sdk/middleware-host-header":"3.110.0","@aws-sdk/middleware-logger":"3.110.0","@aws-sdk/middleware-recursion-detection":"3.110.0","@aws-sdk/middleware-retry":"3.110.0","@aws-sdk/middleware-sdk-sts":"3.110.0","@aws-sdk/middleware-serde":"3.110.0","@aws-sdk/middleware-signing":"3.110.0","@aws-sdk/middleware-stack":"3.110.0","@aws-sdk/middleware-user-agent":"3.110.0","@aws-sdk/node-config-provider":"3.110.0","@aws-sdk/node-http-handler":"3.110.0","@aws-sdk/protocol-http":"3.110.0","@aws-sdk/smithy-client":"3.110.0","@aws-sdk/types":"3.110.0","@aws-sdk/url-parser":"3.110.0","@aws-sdk/util-base64-browser":"3.109.0","@aws-sdk/util-base64-node":"3.55.0","@aws-sdk/util-body-length-browser":"3.55.0","@aws-sdk/util-body-length-node":"3.55.0","@aws-sdk/util-defaults-mode-browser":"3.110.0","@aws-sdk/util-defaults-mode-node":"3.110.0","@aws-sdk/util-user-agent-browser":"3.110.0","@aws-sdk/util-user-agent-node":"3.110.0","@aws-sdk/util-utf8-browser":"3.109.0","@aws-sdk/util-utf8-node":"3.109.0","entities":"2.2.0","fast-xml-parser":"3.19.0","tslib":"^2.3.1"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.58.0","@tsconfig/recommended":"1.0.1","@types/node":"^12.7.5","concurrently":"7.0.0","downlevel-dts":"0.7.0","rimraf":"3.0.2","typedoc":"0.19.2","typescript":"~4.6.2"},"engines":{"node":">=12.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sts","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sts"}}');
 
 /***/ }),
 
