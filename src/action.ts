@@ -2,13 +2,16 @@ import { ReadStream, Stats } from 'fs';
 
 import { PutObjectCommand } from '@aws-sdk/client-s3';
 
+import type {
+  ListDistributionsCommandOutput,
+  GetInvalidationCommandOutput,
+  CreateInvalidationCommandOutput
+} from '@aws-sdk/client-cloudfront';
+
 import {
   CreateInvalidationCommand,
   GetInvalidationCommand,
-  ListDistributionsCommand,
-  ListDistributionsResult,
-  GetInvalidationResult,
-  CreateInvalidationResult
+  ListDistributionsCommand
 } from '@aws-sdk/client-cloudfront';
 
 interface Input {
@@ -42,15 +45,15 @@ class Action {
     private readonly cf: {
       listDistributions: (
         args: ListDistributionsCommand
-      ) => Promise<ListDistributionsResult>;
+      ) => Promise<ListDistributionsCommandOutput>;
 
       getInvalidation: (
         args: GetInvalidationCommand
-      ) => Promise<GetInvalidationResult>;
+      ) => Promise<GetInvalidationCommandOutput>;
 
       createInvalidation: (
         args: CreateInvalidationCommand
-      ) => Promise<CreateInvalidationResult>;
+      ) => Promise<CreateInvalidationCommandOutput>;
     },
     private readonly mime: {
       lookup: (filenameOrExt: string) => string | false;

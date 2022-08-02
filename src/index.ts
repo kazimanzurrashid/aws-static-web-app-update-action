@@ -4,14 +4,15 @@ import { join } from 'path';
 
 import { S3, PutObjectCommand } from '@aws-sdk/client-s3';
 
-import {
-  CloudFront,
+import { CloudFront } from '@aws-sdk/client-cloudfront';
+
+import type {
   CreateInvalidationCommand,
   ListDistributionsCommand,
   GetInvalidationCommand,
-  ListDistributionsResult,
-  GetInvalidationResult,
-  CreateInvalidationResult
+  ListDistributionsCommandOutput,
+  GetInvalidationCommandOutput,
+  CreateInvalidationCommandOutput
 } from '@aws-sdk/client-cloudfront';
 
 import { getInput, setFailed, info } from '@actions/core';
@@ -66,13 +67,13 @@ const cf = new CloudFront({
       {
         listDistributions: async (
           args: ListDistributionsCommand
-        ): Promise<ListDistributionsResult> => cf.send(args),
+        ): Promise<ListDistributionsCommandOutput> => cf.send(args),
         getInvalidation: async (
           args: GetInvalidationCommand
-        ): Promise<GetInvalidationResult> => cf.send(args),
+        ): Promise<GetInvalidationCommandOutput> => cf.send(args),
         createInvalidation: async (
           args: CreateInvalidationCommand
-        ): Promise<CreateInvalidationResult> => cf.send(args)
+        ): Promise<CreateInvalidationCommandOutput> => cf.send(args)
       },
       {
         lookup
