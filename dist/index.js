@@ -312,7 +312,6 @@ const file_command_1 = __nccwpck_require__(717);
 const utils_1 = __nccwpck_require__(5278);
 const os = __importStar(__nccwpck_require__(22037));
 const path = __importStar(__nccwpck_require__(71017));
-const uuid_1 = __nccwpck_require__(75840);
 const oidc_utils_1 = __nccwpck_require__(98041);
 /**
  * The code to exit an action
@@ -342,20 +341,9 @@ function exportVariable(name, val) {
     process.env[name] = convertedVal;
     const filePath = process.env['GITHUB_ENV'] || '';
     if (filePath) {
-        const delimiter = `ghadelimiter_${uuid_1.v4()}`;
-        // These should realistically never happen, but just in case someone finds a way to exploit uuid generation let's not allow keys or values that contain the delimiter.
-        if (name.includes(delimiter)) {
-            throw new Error(`Unexpected input: name should not contain the delimiter "${delimiter}"`);
-        }
-        if (convertedVal.includes(delimiter)) {
-            throw new Error(`Unexpected input: value should not contain the delimiter "${delimiter}"`);
-        }
-        const commandValue = `${name}<<${delimiter}${os.EOL}${convertedVal}${os.EOL}${delimiter}`;
-        file_command_1.issueCommand('ENV', commandValue);
+        return file_command_1.issueFileCommand('ENV', file_command_1.prepareKeyValueMessage(name, val));
     }
-    else {
-        command_1.issueCommand('set-env', { name }, convertedVal);
-    }
+    command_1.issueCommand('set-env', { name }, convertedVal);
 }
 exports.exportVariable = exportVariable;
 /**
@@ -373,7 +361,7 @@ exports.setSecret = setSecret;
 function addPath(inputPath) {
     const filePath = process.env['GITHUB_PATH'] || '';
     if (filePath) {
-        file_command_1.issueCommand('PATH', inputPath);
+        file_command_1.issueFileCommand('PATH', inputPath);
     }
     else {
         command_1.issueCommand('add-path', {}, inputPath);
@@ -413,7 +401,10 @@ function getMultilineInput(name, options) {
     const inputs = getInput(name, options)
         .split('\n')
         .filter(x => x !== '');
-    return inputs;
+    if (options && options.trimWhitespace === false) {
+        return inputs;
+    }
+    return inputs.map(input => input.trim());
 }
 exports.getMultilineInput = getMultilineInput;
 /**
@@ -446,8 +437,12 @@ exports.getBooleanInput = getBooleanInput;
  */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function setOutput(name, value) {
+    const filePath = process.env['GITHUB_OUTPUT'] || '';
+    if (filePath) {
+        return file_command_1.issueFileCommand('OUTPUT', file_command_1.prepareKeyValueMessage(name, value));
+    }
     process.stdout.write(os.EOL);
-    command_1.issueCommand('set-output', { name }, value);
+    command_1.issueCommand('set-output', { name }, utils_1.toCommandValue(value));
 }
 exports.setOutput = setOutput;
 /**
@@ -576,7 +571,11 @@ exports.group = group;
  */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function saveState(name, value) {
-    command_1.issueCommand('save-state', { name }, value);
+    const filePath = process.env['GITHUB_STATE'] || '';
+    if (filePath) {
+        return file_command_1.issueFileCommand('STATE', file_command_1.prepareKeyValueMessage(name, value));
+    }
+    command_1.issueCommand('save-state', { name }, utils_1.toCommandValue(value));
 }
 exports.saveState = saveState;
 /**
@@ -642,13 +641,14 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.issueCommand = void 0;
+exports.prepareKeyValueMessage = exports.issueFileCommand = void 0;
 // We use any as a valid input type
 /* eslint-disable @typescript-eslint/no-explicit-any */
 const fs = __importStar(__nccwpck_require__(57147));
 const os = __importStar(__nccwpck_require__(22037));
+const uuid_1 = __nccwpck_require__(75840);
 const utils_1 = __nccwpck_require__(5278);
-function issueCommand(command, message) {
+function issueFileCommand(command, message) {
     const filePath = process.env[`GITHUB_${command}`];
     if (!filePath) {
         throw new Error(`Unable to find environment variable for file command ${command}`);
@@ -660,7 +660,22 @@ function issueCommand(command, message) {
         encoding: 'utf8'
     });
 }
-exports.issueCommand = issueCommand;
+exports.issueFileCommand = issueFileCommand;
+function prepareKeyValueMessage(key, value) {
+    const delimiter = `ghadelimiter_${uuid_1.v4()}`;
+    const convertedValue = utils_1.toCommandValue(value);
+    // These should realistically never happen, but just in case someone finds a
+    // way to exploit uuid generation let's not allow keys or values that contain
+    // the delimiter.
+    if (key.includes(delimiter)) {
+        throw new Error(`Unexpected input: name should not contain the delimiter "${delimiter}"`);
+    }
+    if (convertedValue.includes(delimiter)) {
+        throw new Error(`Unexpected input: value should not contain the delimiter "${delimiter}"`);
+    }
+    return `${key}<<${delimiter}${os.EOL}${convertedValue}${os.EOL}${delimiter}`;
+}
+exports.prepareKeyValueMessage = prepareKeyValueMessage;
 //# sourceMappingURL=file-command.js.map
 
 /***/ }),
@@ -14981,7 +14996,7 @@ exports.deserializeAws_restXmlAssociateAliasCommand = deserializeAws_restXmlAsso
 const deserializeAws_restXmlAssociateAliasCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -15027,7 +15042,7 @@ exports.deserializeAws_restXmlCreateCachePolicyCommand = deserializeAws_restXmlC
 const deserializeAws_restXmlCreateCachePolicyCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -15082,7 +15097,7 @@ exports.deserializeAws_restXmlCreateCloudFrontOriginAccessIdentityCommand = dese
 const deserializeAws_restXmlCreateCloudFrontOriginAccessIdentityCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -15128,7 +15143,7 @@ exports.deserializeAws_restXmlCreateDistributionCommand = deserializeAws_restXml
 const deserializeAws_restXmlCreateDistributionCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -15348,7 +15363,7 @@ exports.deserializeAws_restXmlCreateDistributionWithTagsCommand = deserializeAws
 const deserializeAws_restXmlCreateDistributionWithTagsCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -15430,12 +15445,12 @@ const deserializeAws_restXmlCreateDistributionWithTagsCommandError = async (outp
         case "InvalidResponseCode":
         case "com.amazonaws.cloudfront#InvalidResponseCode":
             throw await deserializeAws_restXmlInvalidResponseCodeResponse(parsedOutput, context);
-        case "InvalidTagging":
-        case "com.amazonaws.cloudfront#InvalidTagging":
-            throw await deserializeAws_restXmlInvalidTaggingResponse(parsedOutput, context);
         case "InvalidTTLOrder":
         case "com.amazonaws.cloudfront#InvalidTTLOrder":
             throw await deserializeAws_restXmlInvalidTTLOrderResponse(parsedOutput, context);
+        case "InvalidTagging":
+        case "com.amazonaws.cloudfront#InvalidTagging":
+            throw await deserializeAws_restXmlInvalidTaggingResponse(parsedOutput, context);
         case "InvalidViewerCertificate":
         case "com.amazonaws.cloudfront#InvalidViewerCertificate":
             throw await deserializeAws_restXmlInvalidViewerCertificateResponse(parsedOutput, context);
@@ -15565,7 +15580,7 @@ exports.deserializeAws_restXmlCreateFieldLevelEncryptionConfigCommand = deserial
 const deserializeAws_restXmlCreateFieldLevelEncryptionConfigCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -15620,7 +15635,7 @@ exports.deserializeAws_restXmlCreateFieldLevelEncryptionProfileCommand = deseria
 const deserializeAws_restXmlCreateFieldLevelEncryptionProfileCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -15675,7 +15690,7 @@ exports.deserializeAws_restXmlCreateFunctionCommand = deserializeAws_restXmlCrea
 const deserializeAws_restXmlCreateFunctionCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -15720,7 +15735,7 @@ exports.deserializeAws_restXmlCreateInvalidationCommand = deserializeAws_restXml
 const deserializeAws_restXmlCreateInvalidationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -15772,7 +15787,7 @@ exports.deserializeAws_restXmlCreateKeyGroupCommand = deserializeAws_restXmlCrea
 const deserializeAws_restXmlCreateKeyGroupCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -15813,7 +15828,7 @@ exports.deserializeAws_restXmlCreateMonitoringSubscriptionCommand = deserializeA
 const deserializeAws_restXmlCreateMonitoringSubscriptionCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -15856,7 +15871,7 @@ exports.deserializeAws_restXmlCreateOriginAccessControlCommand = deserializeAws_
 const deserializeAws_restXmlCreateOriginAccessControlCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -15896,7 +15911,7 @@ exports.deserializeAws_restXmlCreateOriginRequestPolicyCommand = deserializeAws_
 const deserializeAws_restXmlCreateOriginRequestPolicyCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -15951,7 +15966,7 @@ exports.deserializeAws_restXmlCreatePublicKeyCommand = deserializeAws_restXmlCre
 const deserializeAws_restXmlCreatePublicKeyCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -15991,7 +16006,7 @@ exports.deserializeAws_restXmlCreateRealtimeLogConfigCommand = deserializeAws_re
 const deserializeAws_restXmlCreateRealtimeLogConfigCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -16034,7 +16049,7 @@ exports.deserializeAws_restXmlCreateResponseHeadersPolicyCommand = deserializeAw
 const deserializeAws_restXmlCreateResponseHeadersPolicyCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -16086,7 +16101,7 @@ exports.deserializeAws_restXmlCreateStreamingDistributionCommand = deserializeAw
 const deserializeAws_restXmlCreateStreamingDistributionCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -16156,7 +16171,7 @@ exports.deserializeAws_restXmlCreateStreamingDistributionWithTagsCommand = deser
 const deserializeAws_restXmlCreateStreamingDistributionWithTagsCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -16226,7 +16241,7 @@ exports.deserializeAws_restXmlDeleteCachePolicyCommand = deserializeAws_restXmlD
 const deserializeAws_restXmlDeleteCachePolicyCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -16272,7 +16287,7 @@ exports.deserializeAws_restXmlDeleteCloudFrontOriginAccessIdentityCommand = dese
 const deserializeAws_restXmlDeleteCloudFrontOriginAccessIdentityCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -16315,7 +16330,7 @@ exports.deserializeAws_restXmlDeleteDistributionCommand = deserializeAws_restXml
 const deserializeAws_restXmlDeleteDistributionCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -16358,7 +16373,7 @@ exports.deserializeAws_restXmlDeleteFieldLevelEncryptionConfigCommand = deserial
 const deserializeAws_restXmlDeleteFieldLevelEncryptionConfigCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -16401,7 +16416,7 @@ exports.deserializeAws_restXmlDeleteFieldLevelEncryptionProfileCommand = deseria
 const deserializeAws_restXmlDeleteFieldLevelEncryptionProfileCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -16444,7 +16459,7 @@ exports.deserializeAws_restXmlDeleteFunctionCommand = deserializeAws_restXmlDele
 const deserializeAws_restXmlDeleteFunctionCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -16487,7 +16502,7 @@ exports.deserializeAws_restXmlDeleteKeyGroupCommand = deserializeAws_restXmlDele
 const deserializeAws_restXmlDeleteKeyGroupCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -16527,7 +16542,7 @@ exports.deserializeAws_restXmlDeleteMonitoringSubscriptionCommand = deserializeA
 const deserializeAws_restXmlDeleteMonitoringSubscriptionCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -16567,7 +16582,7 @@ exports.deserializeAws_restXmlDeleteOriginAccessControlCommand = deserializeAws_
 const deserializeAws_restXmlDeleteOriginAccessControlCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -16610,7 +16625,7 @@ exports.deserializeAws_restXmlDeleteOriginRequestPolicyCommand = deserializeAws_
 const deserializeAws_restXmlDeleteOriginRequestPolicyCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -16656,7 +16671,7 @@ exports.deserializeAws_restXmlDeletePublicKeyCommand = deserializeAws_restXmlDel
 const deserializeAws_restXmlDeletePublicKeyCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -16699,7 +16714,7 @@ exports.deserializeAws_restXmlDeleteRealtimeLogConfigCommand = deserializeAws_re
 const deserializeAws_restXmlDeleteRealtimeLogConfigCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -16739,7 +16754,7 @@ exports.deserializeAws_restXmlDeleteResponseHeadersPolicyCommand = deserializeAw
 const deserializeAws_restXmlDeleteResponseHeadersPolicyCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -16785,7 +16800,7 @@ exports.deserializeAws_restXmlDeleteStreamingDistributionCommand = deserializeAw
 const deserializeAws_restXmlDeleteStreamingDistributionCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -16830,7 +16845,7 @@ exports.deserializeAws_restXmlDescribeFunctionCommand = deserializeAws_restXmlDe
 const deserializeAws_restXmlDescribeFunctionCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -16866,7 +16881,7 @@ exports.deserializeAws_restXmlGetCachePolicyCommand = deserializeAws_restXmlGetC
 const deserializeAws_restXmlGetCachePolicyCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -16902,7 +16917,7 @@ exports.deserializeAws_restXmlGetCachePolicyConfigCommand = deserializeAws_restX
 const deserializeAws_restXmlGetCachePolicyConfigCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -16938,7 +16953,7 @@ exports.deserializeAws_restXmlGetCloudFrontOriginAccessIdentityCommand = deseria
 const deserializeAws_restXmlGetCloudFrontOriginAccessIdentityCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -16974,7 +16989,7 @@ exports.deserializeAws_restXmlGetCloudFrontOriginAccessIdentityConfigCommand = d
 const deserializeAws_restXmlGetCloudFrontOriginAccessIdentityConfigCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -17010,7 +17025,7 @@ exports.deserializeAws_restXmlGetDistributionCommand = deserializeAws_restXmlGet
 const deserializeAws_restXmlGetDistributionCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -17046,7 +17061,7 @@ exports.deserializeAws_restXmlGetDistributionConfigCommand = deserializeAws_rest
 const deserializeAws_restXmlGetDistributionConfigCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -17082,7 +17097,7 @@ exports.deserializeAws_restXmlGetFieldLevelEncryptionCommand = deserializeAws_re
 const deserializeAws_restXmlGetFieldLevelEncryptionCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -17118,7 +17133,7 @@ exports.deserializeAws_restXmlGetFieldLevelEncryptionConfigCommand = deserialize
 const deserializeAws_restXmlGetFieldLevelEncryptionConfigCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -17154,7 +17169,7 @@ exports.deserializeAws_restXmlGetFieldLevelEncryptionProfileCommand = deserializ
 const deserializeAws_restXmlGetFieldLevelEncryptionProfileCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -17190,7 +17205,7 @@ exports.deserializeAws_restXmlGetFieldLevelEncryptionProfileConfigCommand = dese
 const deserializeAws_restXmlGetFieldLevelEncryptionProfileConfigCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -17227,7 +17242,7 @@ exports.deserializeAws_restXmlGetFunctionCommand = deserializeAws_restXmlGetFunc
 const deserializeAws_restXmlGetFunctionCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -17262,7 +17277,7 @@ exports.deserializeAws_restXmlGetInvalidationCommand = deserializeAws_restXmlGet
 const deserializeAws_restXmlGetInvalidationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -17301,7 +17316,7 @@ exports.deserializeAws_restXmlGetKeyGroupCommand = deserializeAws_restXmlGetKeyG
 const deserializeAws_restXmlGetKeyGroupCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -17334,7 +17349,7 @@ exports.deserializeAws_restXmlGetKeyGroupConfigCommand = deserializeAws_restXmlG
 const deserializeAws_restXmlGetKeyGroupConfigCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -17366,7 +17381,7 @@ exports.deserializeAws_restXmlGetMonitoringSubscriptionCommand = deserializeAws_
 const deserializeAws_restXmlGetMonitoringSubscriptionCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -17408,7 +17423,7 @@ exports.deserializeAws_restXmlGetOriginAccessControlCommand = deserializeAws_res
 const deserializeAws_restXmlGetOriginAccessControlCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -17444,7 +17459,7 @@ exports.deserializeAws_restXmlGetOriginAccessControlConfigCommand = deserializeA
 const deserializeAws_restXmlGetOriginAccessControlConfigCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -17480,7 +17495,7 @@ exports.deserializeAws_restXmlGetOriginRequestPolicyCommand = deserializeAws_res
 const deserializeAws_restXmlGetOriginRequestPolicyCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -17516,7 +17531,7 @@ exports.deserializeAws_restXmlGetOriginRequestPolicyConfigCommand = deserializeA
 const deserializeAws_restXmlGetOriginRequestPolicyConfigCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -17552,7 +17567,7 @@ exports.deserializeAws_restXmlGetPublicKeyCommand = deserializeAws_restXmlGetPub
 const deserializeAws_restXmlGetPublicKeyCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -17588,7 +17603,7 @@ exports.deserializeAws_restXmlGetPublicKeyConfigCommand = deserializeAws_restXml
 const deserializeAws_restXmlGetPublicKeyConfigCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -17625,7 +17640,7 @@ exports.deserializeAws_restXmlGetRealtimeLogConfigCommand = deserializeAws_restX
 const deserializeAws_restXmlGetRealtimeLogConfigCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -17664,7 +17679,7 @@ exports.deserializeAws_restXmlGetResponseHeadersPolicyCommand = deserializeAws_r
 const deserializeAws_restXmlGetResponseHeadersPolicyCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -17700,7 +17715,7 @@ exports.deserializeAws_restXmlGetResponseHeadersPolicyConfigCommand = deserializ
 const deserializeAws_restXmlGetResponseHeadersPolicyConfigCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -17736,7 +17751,7 @@ exports.deserializeAws_restXmlGetStreamingDistributionCommand = deserializeAws_r
 const deserializeAws_restXmlGetStreamingDistributionCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -17772,7 +17787,7 @@ exports.deserializeAws_restXmlGetStreamingDistributionConfigCommand = deserializ
 const deserializeAws_restXmlGetStreamingDistributionConfigCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -17807,7 +17822,7 @@ exports.deserializeAws_restXmlListCachePoliciesCommand = deserializeAws_restXmlL
 const deserializeAws_restXmlListCachePoliciesCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -17845,7 +17860,7 @@ exports.deserializeAws_restXmlListCloudFrontOriginAccessIdentitiesCommand = dese
 const deserializeAws_restXmlListCloudFrontOriginAccessIdentitiesCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -17877,7 +17892,7 @@ exports.deserializeAws_restXmlListConflictingAliasesCommand = deserializeAws_res
 const deserializeAws_restXmlListConflictingAliasesCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -17912,7 +17927,7 @@ exports.deserializeAws_restXmlListDistributionsCommand = deserializeAws_restXmlL
 const deserializeAws_restXmlListDistributionsCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -17944,7 +17959,7 @@ exports.deserializeAws_restXmlListDistributionsByCachePolicyIdCommand = deserial
 const deserializeAws_restXmlListDistributionsByCachePolicyIdCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -17982,7 +17997,7 @@ exports.deserializeAws_restXmlListDistributionsByKeyGroupCommand = deserializeAw
 const deserializeAws_restXmlListDistributionsByKeyGroupCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -18017,7 +18032,7 @@ exports.deserializeAws_restXmlListDistributionsByOriginRequestPolicyIdCommand = 
 const deserializeAws_restXmlListDistributionsByOriginRequestPolicyIdCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -18055,7 +18070,7 @@ exports.deserializeAws_restXmlListDistributionsByRealtimeLogConfigCommand = dese
 const deserializeAws_restXmlListDistributionsByRealtimeLogConfigCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -18087,7 +18102,7 @@ exports.deserializeAws_restXmlListDistributionsByResponseHeadersPolicyIdCommand 
 const deserializeAws_restXmlListDistributionsByResponseHeadersPolicyIdCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -18125,7 +18140,7 @@ exports.deserializeAws_restXmlListDistributionsByWebACLIdCommand = deserializeAw
 const deserializeAws_restXmlListDistributionsByWebACLIdCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -18160,7 +18175,7 @@ exports.deserializeAws_restXmlListFieldLevelEncryptionConfigsCommand = deseriali
 const deserializeAws_restXmlListFieldLevelEncryptionConfigsCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -18192,7 +18207,7 @@ exports.deserializeAws_restXmlListFieldLevelEncryptionProfilesCommand = deserial
 const deserializeAws_restXmlListFieldLevelEncryptionProfilesCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -18224,7 +18239,7 @@ exports.deserializeAws_restXmlListFunctionsCommand = deserializeAws_restXmlListF
 const deserializeAws_restXmlListFunctionsCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -18259,7 +18274,7 @@ exports.deserializeAws_restXmlListInvalidationsCommand = deserializeAws_restXmlL
 const deserializeAws_restXmlListInvalidationsCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -18297,7 +18312,7 @@ exports.deserializeAws_restXmlListKeyGroupsCommand = deserializeAws_restXmlListK
 const deserializeAws_restXmlListKeyGroupsCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -18329,7 +18344,7 @@ exports.deserializeAws_restXmlListOriginAccessControlsCommand = deserializeAws_r
 const deserializeAws_restXmlListOriginAccessControlsCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -18361,7 +18376,7 @@ exports.deserializeAws_restXmlListOriginRequestPoliciesCommand = deserializeAws_
 const deserializeAws_restXmlListOriginRequestPoliciesCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -18399,7 +18414,7 @@ exports.deserializeAws_restXmlListPublicKeysCommand = deserializeAws_restXmlList
 const deserializeAws_restXmlListPublicKeysCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -18431,7 +18446,7 @@ exports.deserializeAws_restXmlListRealtimeLogConfigsCommand = deserializeAws_res
 const deserializeAws_restXmlListRealtimeLogConfigsCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -18469,7 +18484,7 @@ exports.deserializeAws_restXmlListResponseHeadersPoliciesCommand = deserializeAw
 const deserializeAws_restXmlListResponseHeadersPoliciesCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -18507,7 +18522,7 @@ exports.deserializeAws_restXmlListStreamingDistributionsCommand = deserializeAws
 const deserializeAws_restXmlListStreamingDistributionsCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -18539,7 +18554,7 @@ exports.deserializeAws_restXmlListTagsForResourceCommand = deserializeAws_restXm
 const deserializeAws_restXmlListTagsForResourceCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -18580,7 +18595,7 @@ exports.deserializeAws_restXmlPublishFunctionCommand = deserializeAws_restXmlPub
 const deserializeAws_restXmlPublishFunctionCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -18623,7 +18638,7 @@ exports.deserializeAws_restXmlTagResourceCommand = deserializeAws_restXmlTagReso
 const deserializeAws_restXmlTagResourceCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -18664,7 +18679,7 @@ exports.deserializeAws_restXmlTestFunctionCommand = deserializeAws_restXmlTestFu
 const deserializeAws_restXmlTestFunctionCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -18707,7 +18722,7 @@ exports.deserializeAws_restXmlUntagResourceCommand = deserializeAws_restXmlUntag
 const deserializeAws_restXmlUntagResourceCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -18749,7 +18764,7 @@ exports.deserializeAws_restXmlUpdateCachePolicyCommand = deserializeAws_restXmlU
 const deserializeAws_restXmlUpdateCachePolicyCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -18812,7 +18827,7 @@ exports.deserializeAws_restXmlUpdateCloudFrontOriginAccessIdentityCommand = dese
 const deserializeAws_restXmlUpdateCloudFrontOriginAccessIdentityCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -18866,7 +18881,7 @@ exports.deserializeAws_restXmlUpdateDistributionCommand = deserializeAws_restXml
 const deserializeAws_restXmlUpdateDistributionCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -19082,7 +19097,7 @@ exports.deserializeAws_restXmlUpdateFieldLevelEncryptionConfigCommand = deserial
 const deserializeAws_restXmlUpdateFieldLevelEncryptionConfigCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -19145,7 +19160,7 @@ exports.deserializeAws_restXmlUpdateFieldLevelEncryptionProfileCommand = deseria
 const deserializeAws_restXmlUpdateFieldLevelEncryptionProfileCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -19211,7 +19226,7 @@ exports.deserializeAws_restXmlUpdateFunctionCommand = deserializeAws_restXmlUpda
 const deserializeAws_restXmlUpdateFunctionCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -19259,7 +19274,7 @@ exports.deserializeAws_restXmlUpdateKeyGroupCommand = deserializeAws_restXmlUpda
 const deserializeAws_restXmlUpdateKeyGroupCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -19307,7 +19322,7 @@ exports.deserializeAws_restXmlUpdateOriginAccessControlCommand = deserializeAws_
 const deserializeAws_restXmlUpdateOriginAccessControlCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -19358,7 +19373,7 @@ exports.deserializeAws_restXmlUpdateOriginRequestPolicyCommand = deserializeAws_
 const deserializeAws_restXmlUpdateOriginRequestPolicyCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -19421,7 +19436,7 @@ exports.deserializeAws_restXmlUpdatePublicKeyCommand = deserializeAws_restXmlUpd
 const deserializeAws_restXmlUpdatePublicKeyCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -19473,7 +19488,7 @@ exports.deserializeAws_restXmlUpdateRealtimeLogConfigCommand = deserializeAws_re
 const deserializeAws_restXmlUpdateRealtimeLogConfigCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -19512,7 +19527,7 @@ exports.deserializeAws_restXmlUpdateResponseHeadersPolicyCommand = deserializeAw
 const deserializeAws_restXmlUpdateResponseHeadersPolicyCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -19572,7 +19587,7 @@ exports.deserializeAws_restXmlUpdateStreamingDistributionCommand = deserializeAw
 const deserializeAws_restXmlUpdateStreamingDistributionCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -26684,6 +26699,14 @@ const parseBody = (streamBody, context) => collectBodyString(streamBody, context
     }
     return {};
 });
+const parseErrorBody = async (errorBody, context) => {
+    var _a;
+    const value = await parseBody(errorBody, context);
+    if (value.Error) {
+        value.Error.message = (_a = value.Error.message) !== null && _a !== void 0 ? _a : value.Error.Message;
+    }
+    return value;
+};
 const loadRestXmlErrorCode = (output, data) => {
     if (data.Error.Code !== undefined) {
         return data.Error.Code;
@@ -38117,7 +38140,7 @@ exports.deserializeAws_restXmlAbortMultipartUploadCommand = deserializeAws_restX
 const deserializeAws_restXmlAbortMultipartUploadCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -38181,7 +38204,7 @@ exports.deserializeAws_restXmlCompleteMultipartUploadCommand = deserializeAws_re
 const deserializeAws_restXmlCompleteMultipartUploadCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -38220,7 +38243,7 @@ exports.deserializeAws_restXmlCopyObjectCommand = deserializeAws_restXmlCopyObje
 const deserializeAws_restXmlCopyObjectCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -38252,7 +38275,7 @@ exports.deserializeAws_restXmlCreateBucketCommand = deserializeAws_restXmlCreate
 const deserializeAws_restXmlCreateBucketCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -38311,7 +38334,7 @@ exports.deserializeAws_restXmlCreateMultipartUploadCommand = deserializeAws_rest
 const deserializeAws_restXmlCreateMultipartUploadCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -38336,7 +38359,7 @@ exports.deserializeAws_restXmlDeleteBucketCommand = deserializeAws_restXmlDelete
 const deserializeAws_restXmlDeleteBucketCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -38361,7 +38384,7 @@ exports.deserializeAws_restXmlDeleteBucketAnalyticsConfigurationCommand = deseri
 const deserializeAws_restXmlDeleteBucketAnalyticsConfigurationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -38386,7 +38409,7 @@ exports.deserializeAws_restXmlDeleteBucketCorsCommand = deserializeAws_restXmlDe
 const deserializeAws_restXmlDeleteBucketCorsCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -38411,7 +38434,7 @@ exports.deserializeAws_restXmlDeleteBucketEncryptionCommand = deserializeAws_res
 const deserializeAws_restXmlDeleteBucketEncryptionCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -38436,7 +38459,7 @@ exports.deserializeAws_restXmlDeleteBucketIntelligentTieringConfigurationCommand
 const deserializeAws_restXmlDeleteBucketIntelligentTieringConfigurationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -38461,7 +38484,7 @@ exports.deserializeAws_restXmlDeleteBucketInventoryConfigurationCommand = deseri
 const deserializeAws_restXmlDeleteBucketInventoryConfigurationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -38486,7 +38509,7 @@ exports.deserializeAws_restXmlDeleteBucketLifecycleCommand = deserializeAws_rest
 const deserializeAws_restXmlDeleteBucketLifecycleCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -38511,7 +38534,7 @@ exports.deserializeAws_restXmlDeleteBucketMetricsConfigurationCommand = deserial
 const deserializeAws_restXmlDeleteBucketMetricsConfigurationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -38536,7 +38559,7 @@ exports.deserializeAws_restXmlDeleteBucketOwnershipControlsCommand = deserialize
 const deserializeAws_restXmlDeleteBucketOwnershipControlsCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -38561,7 +38584,7 @@ exports.deserializeAws_restXmlDeleteBucketPolicyCommand = deserializeAws_restXml
 const deserializeAws_restXmlDeleteBucketPolicyCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -38586,7 +38609,7 @@ exports.deserializeAws_restXmlDeleteBucketReplicationCommand = deserializeAws_re
 const deserializeAws_restXmlDeleteBucketReplicationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -38611,7 +38634,7 @@ exports.deserializeAws_restXmlDeleteBucketTaggingCommand = deserializeAws_restXm
 const deserializeAws_restXmlDeleteBucketTaggingCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -38636,7 +38659,7 @@ exports.deserializeAws_restXmlDeleteBucketWebsiteCommand = deserializeAws_restXm
 const deserializeAws_restXmlDeleteBucketWebsiteCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -38667,7 +38690,7 @@ exports.deserializeAws_restXmlDeleteObjectCommand = deserializeAws_restXmlDelete
 const deserializeAws_restXmlDeleteObjectCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -38705,7 +38728,7 @@ exports.deserializeAws_restXmlDeleteObjectsCommand = deserializeAws_restXmlDelet
 const deserializeAws_restXmlDeleteObjectsCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -38731,7 +38754,7 @@ exports.deserializeAws_restXmlDeleteObjectTaggingCommand = deserializeAws_restXm
 const deserializeAws_restXmlDeleteObjectTaggingCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -38756,7 +38779,7 @@ exports.deserializeAws_restXmlDeletePublicAccessBlockCommand = deserializeAws_re
 const deserializeAws_restXmlDeletePublicAccessBlockCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -38784,7 +38807,7 @@ exports.deserializeAws_restXmlGetBucketAccelerateConfigurationCommand = deserial
 const deserializeAws_restXmlGetBucketAccelerateConfigurationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -38818,7 +38841,7 @@ exports.deserializeAws_restXmlGetBucketAclCommand = deserializeAws_restXmlGetBuc
 const deserializeAws_restXmlGetBucketAclCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -38844,7 +38867,7 @@ exports.deserializeAws_restXmlGetBucketAnalyticsConfigurationCommand = deseriali
 const deserializeAws_restXmlGetBucketAnalyticsConfigurationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -38875,7 +38898,7 @@ exports.deserializeAws_restXmlGetBucketCorsCommand = deserializeAws_restXmlGetBu
 const deserializeAws_restXmlGetBucketCorsCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -38901,7 +38924,7 @@ exports.deserializeAws_restXmlGetBucketEncryptionCommand = deserializeAws_restXm
 const deserializeAws_restXmlGetBucketEncryptionCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -38927,7 +38950,7 @@ exports.deserializeAws_restXmlGetBucketIntelligentTieringConfigurationCommand = 
 const deserializeAws_restXmlGetBucketIntelligentTieringConfigurationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -38953,7 +38976,7 @@ exports.deserializeAws_restXmlGetBucketInventoryConfigurationCommand = deseriali
 const deserializeAws_restXmlGetBucketInventoryConfigurationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -38984,7 +39007,7 @@ exports.deserializeAws_restXmlGetBucketLifecycleConfigurationCommand = deseriali
 const deserializeAws_restXmlGetBucketLifecycleConfigurationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -39012,7 +39035,7 @@ exports.deserializeAws_restXmlGetBucketLocationCommand = deserializeAws_restXmlG
 const deserializeAws_restXmlGetBucketLocationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -39040,7 +39063,7 @@ exports.deserializeAws_restXmlGetBucketLoggingCommand = deserializeAws_restXmlGe
 const deserializeAws_restXmlGetBucketLoggingCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -39066,7 +39089,7 @@ exports.deserializeAws_restXmlGetBucketMetricsConfigurationCommand = deserialize
 const deserializeAws_restXmlGetBucketMetricsConfigurationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -39112,7 +39135,7 @@ exports.deserializeAws_restXmlGetBucketNotificationConfigurationCommand = deseri
 const deserializeAws_restXmlGetBucketNotificationConfigurationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -39138,7 +39161,7 @@ exports.deserializeAws_restXmlGetBucketOwnershipControlsCommand = deserializeAws
 const deserializeAws_restXmlGetBucketOwnershipControlsCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -39164,7 +39187,7 @@ exports.deserializeAws_restXmlGetBucketPolicyCommand = deserializeAws_restXmlGet
 const deserializeAws_restXmlGetBucketPolicyCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -39190,7 +39213,7 @@ exports.deserializeAws_restXmlGetBucketPolicyStatusCommand = deserializeAws_rest
 const deserializeAws_restXmlGetBucketPolicyStatusCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -39216,7 +39239,7 @@ exports.deserializeAws_restXmlGetBucketReplicationCommand = deserializeAws_restX
 const deserializeAws_restXmlGetBucketReplicationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -39244,7 +39267,7 @@ exports.deserializeAws_restXmlGetBucketRequestPaymentCommand = deserializeAws_re
 const deserializeAws_restXmlGetBucketRequestPaymentCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -39275,7 +39298,7 @@ exports.deserializeAws_restXmlGetBucketTaggingCommand = deserializeAws_restXmlGe
 const deserializeAws_restXmlGetBucketTaggingCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -39306,7 +39329,7 @@ exports.deserializeAws_restXmlGetBucketVersioningCommand = deserializeAws_restXm
 const deserializeAws_restXmlGetBucketVersioningCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -39346,7 +39369,7 @@ exports.deserializeAws_restXmlGetBucketWebsiteCommand = deserializeAws_restXmlGe
 const deserializeAws_restXmlGetBucketWebsiteCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -39442,7 +39465,7 @@ exports.deserializeAws_restXmlGetObjectCommand = deserializeAws_restXmlGetObject
 const deserializeAws_restXmlGetObjectCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -39486,7 +39509,7 @@ exports.deserializeAws_restXmlGetObjectAclCommand = deserializeAws_restXmlGetObj
 const deserializeAws_restXmlGetObjectAclCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -39542,7 +39565,7 @@ exports.deserializeAws_restXmlGetObjectAttributesCommand = deserializeAws_restXm
 const deserializeAws_restXmlGetObjectAttributesCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -39574,7 +39597,7 @@ exports.deserializeAws_restXmlGetObjectLegalHoldCommand = deserializeAws_restXml
 const deserializeAws_restXmlGetObjectLegalHoldCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -39600,7 +39623,7 @@ exports.deserializeAws_restXmlGetObjectLockConfigurationCommand = deserializeAws
 const deserializeAws_restXmlGetObjectLockConfigurationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -39626,7 +39649,7 @@ exports.deserializeAws_restXmlGetObjectRetentionCommand = deserializeAws_restXml
 const deserializeAws_restXmlGetObjectRetentionCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -39658,7 +39681,7 @@ exports.deserializeAws_restXmlGetObjectTaggingCommand = deserializeAws_restXmlGe
 const deserializeAws_restXmlGetObjectTaggingCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -39685,7 +39708,7 @@ exports.deserializeAws_restXmlGetObjectTorrentCommand = deserializeAws_restXmlGe
 const deserializeAws_restXmlGetObjectTorrentCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -39711,7 +39734,7 @@ exports.deserializeAws_restXmlGetPublicAccessBlockCommand = deserializeAws_restX
 const deserializeAws_restXmlGetPublicAccessBlockCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -39736,7 +39759,7 @@ exports.deserializeAws_restXmlHeadBucketCommand = deserializeAws_restXmlHeadBuck
 const deserializeAws_restXmlHeadBucketCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -39833,7 +39856,7 @@ exports.deserializeAws_restXmlHeadObjectCommand = deserializeAws_restXmlHeadObje
 const deserializeAws_restXmlHeadObjectCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -39879,7 +39902,7 @@ exports.deserializeAws_restXmlListBucketAnalyticsConfigurationsCommand = deseria
 const deserializeAws_restXmlListBucketAnalyticsConfigurationsCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -39919,7 +39942,7 @@ exports.deserializeAws_restXmlListBucketIntelligentTieringConfigurationsCommand 
 const deserializeAws_restXmlListBucketIntelligentTieringConfigurationsCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -39959,7 +39982,7 @@ exports.deserializeAws_restXmlListBucketInventoryConfigurationsCommand = deseria
 const deserializeAws_restXmlListBucketInventoryConfigurationsCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -39999,7 +40022,7 @@ exports.deserializeAws_restXmlListBucketMetricsConfigurationsCommand = deseriali
 const deserializeAws_restXmlListBucketMetricsConfigurationsCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -40033,7 +40056,7 @@ exports.deserializeAws_restXmlListBucketsCommand = deserializeAws_restXmlListBuc
 const deserializeAws_restXmlListBucketsCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -40100,7 +40123,7 @@ exports.deserializeAws_restXmlListMultipartUploadsCommand = deserializeAws_restX
 const deserializeAws_restXmlListMultipartUploadsCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -40161,7 +40184,7 @@ exports.deserializeAws_restXmlListObjectsCommand = deserializeAws_restXmlListObj
 const deserializeAws_restXmlListObjectsCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -40234,7 +40257,7 @@ exports.deserializeAws_restXmlListObjectsV2Command = deserializeAws_restXmlListO
 const deserializeAws_restXmlListObjectsV2CommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -40313,7 +40336,7 @@ exports.deserializeAws_restXmlListObjectVersionsCommand = deserializeAws_restXml
 const deserializeAws_restXmlListObjectVersionsCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -40383,7 +40406,7 @@ exports.deserializeAws_restXmlListPartsCommand = deserializeAws_restXmlListParts
 const deserializeAws_restXmlListPartsCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -40408,7 +40431,7 @@ exports.deserializeAws_restXmlPutBucketAccelerateConfigurationCommand = deserial
 const deserializeAws_restXmlPutBucketAccelerateConfigurationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -40433,7 +40456,7 @@ exports.deserializeAws_restXmlPutBucketAclCommand = deserializeAws_restXmlPutBuc
 const deserializeAws_restXmlPutBucketAclCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -40458,7 +40481,7 @@ exports.deserializeAws_restXmlPutBucketAnalyticsConfigurationCommand = deseriali
 const deserializeAws_restXmlPutBucketAnalyticsConfigurationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -40483,7 +40506,7 @@ exports.deserializeAws_restXmlPutBucketCorsCommand = deserializeAws_restXmlPutBu
 const deserializeAws_restXmlPutBucketCorsCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -40508,7 +40531,7 @@ exports.deserializeAws_restXmlPutBucketEncryptionCommand = deserializeAws_restXm
 const deserializeAws_restXmlPutBucketEncryptionCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -40533,7 +40556,7 @@ exports.deserializeAws_restXmlPutBucketIntelligentTieringConfigurationCommand = 
 const deserializeAws_restXmlPutBucketIntelligentTieringConfigurationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -40558,7 +40581,7 @@ exports.deserializeAws_restXmlPutBucketInventoryConfigurationCommand = deseriali
 const deserializeAws_restXmlPutBucketInventoryConfigurationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -40583,7 +40606,7 @@ exports.deserializeAws_restXmlPutBucketLifecycleConfigurationCommand = deseriali
 const deserializeAws_restXmlPutBucketLifecycleConfigurationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -40608,7 +40631,7 @@ exports.deserializeAws_restXmlPutBucketLoggingCommand = deserializeAws_restXmlPu
 const deserializeAws_restXmlPutBucketLoggingCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -40633,7 +40656,7 @@ exports.deserializeAws_restXmlPutBucketMetricsConfigurationCommand = deserialize
 const deserializeAws_restXmlPutBucketMetricsConfigurationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -40658,7 +40681,7 @@ exports.deserializeAws_restXmlPutBucketNotificationConfigurationCommand = deseri
 const deserializeAws_restXmlPutBucketNotificationConfigurationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -40683,7 +40706,7 @@ exports.deserializeAws_restXmlPutBucketOwnershipControlsCommand = deserializeAws
 const deserializeAws_restXmlPutBucketOwnershipControlsCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -40708,7 +40731,7 @@ exports.deserializeAws_restXmlPutBucketPolicyCommand = deserializeAws_restXmlPut
 const deserializeAws_restXmlPutBucketPolicyCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -40733,7 +40756,7 @@ exports.deserializeAws_restXmlPutBucketReplicationCommand = deserializeAws_restX
 const deserializeAws_restXmlPutBucketReplicationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -40758,7 +40781,7 @@ exports.deserializeAws_restXmlPutBucketRequestPaymentCommand = deserializeAws_re
 const deserializeAws_restXmlPutBucketRequestPaymentCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -40783,7 +40806,7 @@ exports.deserializeAws_restXmlPutBucketTaggingCommand = deserializeAws_restXmlPu
 const deserializeAws_restXmlPutBucketTaggingCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -40808,7 +40831,7 @@ exports.deserializeAws_restXmlPutBucketVersioningCommand = deserializeAws_restXm
 const deserializeAws_restXmlPutBucketVersioningCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -40833,7 +40856,7 @@ exports.deserializeAws_restXmlPutBucketWebsiteCommand = deserializeAws_restXmlPu
 const deserializeAws_restXmlPutBucketWebsiteCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -40875,7 +40898,7 @@ exports.deserializeAws_restXmlPutObjectCommand = deserializeAws_restXmlPutObject
 const deserializeAws_restXmlPutObjectCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -40901,7 +40924,7 @@ exports.deserializeAws_restXmlPutObjectAclCommand = deserializeAws_restXmlPutObj
 const deserializeAws_restXmlPutObjectAclCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -40933,7 +40956,7 @@ exports.deserializeAws_restXmlPutObjectLegalHoldCommand = deserializeAws_restXml
 const deserializeAws_restXmlPutObjectLegalHoldCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -40959,7 +40982,7 @@ exports.deserializeAws_restXmlPutObjectLockConfigurationCommand = deserializeAws
 const deserializeAws_restXmlPutObjectLockConfigurationCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -40985,7 +41008,7 @@ exports.deserializeAws_restXmlPutObjectRetentionCommand = deserializeAws_restXml
 const deserializeAws_restXmlPutObjectRetentionCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -41011,7 +41034,7 @@ exports.deserializeAws_restXmlPutObjectTaggingCommand = deserializeAws_restXmlPu
 const deserializeAws_restXmlPutObjectTaggingCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -41036,7 +41059,7 @@ exports.deserializeAws_restXmlPutPublicAccessBlockCommand = deserializeAws_restX
 const deserializeAws_restXmlPutPublicAccessBlockCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -41063,7 +41086,7 @@ exports.deserializeAws_restXmlRestoreObjectCommand = deserializeAws_restXmlResto
 const deserializeAws_restXmlRestoreObjectCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -41095,7 +41118,7 @@ exports.deserializeAws_restXmlSelectObjectContentCommand = deserializeAws_restXm
 const deserializeAws_restXmlSelectObjectContentCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -41134,7 +41157,7 @@ exports.deserializeAws_restXmlUploadPartCommand = deserializeAws_restXmlUploadPa
 const deserializeAws_restXmlUploadPartCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -41170,7 +41193,7 @@ exports.deserializeAws_restXmlUploadPartCopyCommand = deserializeAws_restXmlUplo
 const deserializeAws_restXmlUploadPartCopyCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -41195,7 +41218,7 @@ exports.deserializeAws_restXmlWriteGetObjectResponseCommand = deserializeAws_res
 const deserializeAws_restXmlWriteGetObjectResponseCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestXmlErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -45183,6 +45206,14 @@ const parseBody = (streamBody, context) => collectBodyString(streamBody, context
     }
     return {};
 });
+const parseErrorBody = async (errorBody, context) => {
+    var _a;
+    const value = await parseBody(errorBody, context);
+    if (value.Error) {
+        value.Error.message = (_a = value.Error.message) !== null && _a !== void 0 ? _a : value.Error.Message;
+    }
+    return value;
+};
 const loadRestXmlErrorCode = (output, data) => {
     if (data.Code !== undefined) {
         return data.Code;
@@ -46491,7 +46522,7 @@ exports.deserializeAws_restJson1GetRoleCredentialsCommand = deserializeAws_restJ
 const deserializeAws_restJson1GetRoleCredentialsCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -46537,7 +46568,7 @@ exports.deserializeAws_restJson1ListAccountRolesCommand = deserializeAws_restJso
 const deserializeAws_restJson1ListAccountRolesCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -46583,7 +46614,7 @@ exports.deserializeAws_restJson1ListAccountsCommand = deserializeAws_restJson1Li
 const deserializeAws_restJson1ListAccountsCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -46623,7 +46654,7 @@ exports.deserializeAws_restJson1LogoutCommand = deserializeAws_restJson1LogoutCo
 const deserializeAws_restJson1LogoutCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadRestJsonErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -46765,12 +46796,21 @@ const parseBody = (streamBody, context) => collectBodyString(streamBody, context
     }
     return {};
 });
+const parseErrorBody = async (errorBody, context) => {
+    var _a;
+    const value = await parseBody(errorBody, context);
+    value.message = (_a = value.message) !== null && _a !== void 0 ? _a : value.Message;
+    return value;
+};
 const loadRestJsonErrorCode = (output, data) => {
     const findKey = (object, key) => Object.keys(object).find((k) => k.toLowerCase() === key.toLowerCase());
     const sanitizeErrorCode = (rawValue) => {
         let cleanValue = rawValue;
         if (typeof cleanValue === "number") {
             cleanValue = cleanValue.toString();
+        }
+        if (cleanValue.indexOf(",") >= 0) {
+            cleanValue = cleanValue.split(",")[0];
         }
         if (cleanValue.indexOf(":") >= 0) {
             cleanValue = cleanValue.split(":")[0];
@@ -48146,17 +48186,17 @@ exports.deserializeAws_queryAssumeRoleCommand = deserializeAws_queryAssumeRoleCo
 const deserializeAws_queryAssumeRoleCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadQueryErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "ExpiredTokenException":
         case "com.amazonaws.sts#ExpiredTokenException":
             throw await deserializeAws_queryExpiredTokenExceptionResponse(parsedOutput, context);
-        case "MalformedPolicyDocumentException":
+        case "MalformedPolicyDocument":
         case "com.amazonaws.sts#MalformedPolicyDocumentException":
             throw await deserializeAws_queryMalformedPolicyDocumentExceptionResponse(parsedOutput, context);
-        case "PackedPolicyTooLargeException":
+        case "PackedPolicyTooLarge":
         case "com.amazonaws.sts#PackedPolicyTooLargeException":
             throw await deserializeAws_queryPackedPolicyTooLargeExceptionResponse(parsedOutput, context);
         case "RegionDisabledException":
@@ -48189,23 +48229,23 @@ exports.deserializeAws_queryAssumeRoleWithSAMLCommand = deserializeAws_queryAssu
 const deserializeAws_queryAssumeRoleWithSAMLCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadQueryErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "ExpiredTokenException":
         case "com.amazonaws.sts#ExpiredTokenException":
             throw await deserializeAws_queryExpiredTokenExceptionResponse(parsedOutput, context);
-        case "IDPRejectedClaimException":
+        case "IDPRejectedClaim":
         case "com.amazonaws.sts#IDPRejectedClaimException":
             throw await deserializeAws_queryIDPRejectedClaimExceptionResponse(parsedOutput, context);
-        case "InvalidIdentityTokenException":
+        case "InvalidIdentityToken":
         case "com.amazonaws.sts#InvalidIdentityTokenException":
             throw await deserializeAws_queryInvalidIdentityTokenExceptionResponse(parsedOutput, context);
-        case "MalformedPolicyDocumentException":
+        case "MalformedPolicyDocument":
         case "com.amazonaws.sts#MalformedPolicyDocumentException":
             throw await deserializeAws_queryMalformedPolicyDocumentExceptionResponse(parsedOutput, context);
-        case "PackedPolicyTooLargeException":
+        case "PackedPolicyTooLarge":
         case "com.amazonaws.sts#PackedPolicyTooLargeException":
             throw await deserializeAws_queryPackedPolicyTooLargeExceptionResponse(parsedOutput, context);
         case "RegionDisabledException":
@@ -48238,26 +48278,26 @@ exports.deserializeAws_queryAssumeRoleWithWebIdentityCommand = deserializeAws_qu
 const deserializeAws_queryAssumeRoleWithWebIdentityCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadQueryErrorCode(output, parsedOutput.body);
     switch (errorCode) {
         case "ExpiredTokenException":
         case "com.amazonaws.sts#ExpiredTokenException":
             throw await deserializeAws_queryExpiredTokenExceptionResponse(parsedOutput, context);
-        case "IDPCommunicationErrorException":
+        case "IDPCommunicationError":
         case "com.amazonaws.sts#IDPCommunicationErrorException":
             throw await deserializeAws_queryIDPCommunicationErrorExceptionResponse(parsedOutput, context);
-        case "IDPRejectedClaimException":
+        case "IDPRejectedClaim":
         case "com.amazonaws.sts#IDPRejectedClaimException":
             throw await deserializeAws_queryIDPRejectedClaimExceptionResponse(parsedOutput, context);
-        case "InvalidIdentityTokenException":
+        case "InvalidIdentityToken":
         case "com.amazonaws.sts#InvalidIdentityTokenException":
             throw await deserializeAws_queryInvalidIdentityTokenExceptionResponse(parsedOutput, context);
-        case "MalformedPolicyDocumentException":
+        case "MalformedPolicyDocument":
         case "com.amazonaws.sts#MalformedPolicyDocumentException":
             throw await deserializeAws_queryMalformedPolicyDocumentExceptionResponse(parsedOutput, context);
-        case "PackedPolicyTooLargeException":
+        case "PackedPolicyTooLarge":
         case "com.amazonaws.sts#PackedPolicyTooLargeException":
             throw await deserializeAws_queryPackedPolicyTooLargeExceptionResponse(parsedOutput, context);
         case "RegionDisabledException":
@@ -48290,7 +48330,7 @@ exports.deserializeAws_queryDecodeAuthorizationMessageCommand = deserializeAws_q
 const deserializeAws_queryDecodeAuthorizationMessageCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadQueryErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -48324,7 +48364,7 @@ exports.deserializeAws_queryGetAccessKeyInfoCommand = deserializeAws_queryGetAcc
 const deserializeAws_queryGetAccessKeyInfoCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadQueryErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -48352,7 +48392,7 @@ exports.deserializeAws_queryGetCallerIdentityCommand = deserializeAws_queryGetCa
 const deserializeAws_queryGetCallerIdentityCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadQueryErrorCode(output, parsedOutput.body);
     const parsedBody = parsedOutput.body;
@@ -48380,14 +48420,14 @@ exports.deserializeAws_queryGetFederationTokenCommand = deserializeAws_queryGetF
 const deserializeAws_queryGetFederationTokenCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadQueryErrorCode(output, parsedOutput.body);
     switch (errorCode) {
-        case "MalformedPolicyDocumentException":
+        case "MalformedPolicyDocument":
         case "com.amazonaws.sts#MalformedPolicyDocumentException":
             throw await deserializeAws_queryMalformedPolicyDocumentExceptionResponse(parsedOutput, context);
-        case "PackedPolicyTooLargeException":
+        case "PackedPolicyTooLarge":
         case "com.amazonaws.sts#PackedPolicyTooLargeException":
             throw await deserializeAws_queryPackedPolicyTooLargeExceptionResponse(parsedOutput, context);
         case "RegionDisabledException":
@@ -48420,7 +48460,7 @@ exports.deserializeAws_queryGetSessionTokenCommand = deserializeAws_queryGetSess
 const deserializeAws_queryGetSessionTokenCommandError = async (output, context) => {
     const parsedOutput = {
         ...output,
-        body: await parseBody(output.body, context),
+        body: await parseErrorBody(output.body, context),
     };
     const errorCode = loadQueryErrorCode(output, parsedOutput.body);
     switch (errorCode) {
@@ -49059,6 +49099,14 @@ const parseBody = (streamBody, context) => collectBodyString(streamBody, context
     }
     return {};
 });
+const parseErrorBody = async (errorBody, context) => {
+    var _a;
+    const value = await parseBody(errorBody, context);
+    if (value.Error) {
+        value.Error.message = (_a = value.Error.message) !== null && _a !== void 0 ? _a : value.Error.Message;
+    }
+    return value;
+};
 const buildFormUrlencodedString = (formEntries) => Object.entries(formEntries)
     .map(([key, value]) => (0, smithy_client_1.extendedEncodeURIComponent)(key) + "=" + (0, smithy_client_1.extendedEncodeURIComponent)(value))
     .join("&");
@@ -49257,7 +49305,7 @@ const resolveEndpointsConfig = (input) => {
         endpoint: endpoint
             ? (0, util_middleware_1.normalizeProvider)(typeof endpoint === "string" ? urlParser(endpoint) : endpoint)
             : () => (0, getEndpointFromRegion_1.getEndpointFromRegion)({ ...input, useDualstackEndpoint, useFipsEndpoint }),
-        isCustomEndpoint: endpoint ? true : false,
+        isCustomEndpoint: !!endpoint,
         useDualstackEndpoint,
     };
 };
@@ -52910,7 +52958,9 @@ class StandardRetryStrategy {
                 attempts++;
                 if (this.shouldRetry(err, attempts, maxAttempts)) {
                     retryTokenAmount = this.retryQuota.retrieveRetryTokens(err);
-                    const delay = this.delayDecider((0, service_error_classification_1.isThrottlingError)(err) ? constants_1.THROTTLING_RETRY_DELAY_BASE : constants_1.DEFAULT_RETRY_DELAY_BASE, attempts);
+                    const delayFromDecider = this.delayDecider((0, service_error_classification_1.isThrottlingError)(err) ? constants_1.THROTTLING_RETRY_DELAY_BASE : constants_1.DEFAULT_RETRY_DELAY_BASE, attempts);
+                    const delayFromResponse = getDelayFromRetryAfterHeader(err.$response);
+                    const delay = Math.max(delayFromResponse || 0, delayFromDecider);
                     totalDelay += delay;
                     await new Promise((resolve) => setTimeout(resolve, delay));
                     continue;
@@ -52926,6 +52976,19 @@ class StandardRetryStrategy {
     }
 }
 exports.StandardRetryStrategy = StandardRetryStrategy;
+const getDelayFromRetryAfterHeader = (response) => {
+    if (!protocol_http_1.HttpResponse.isInstance(response))
+        return;
+    const retryAfterHeaderName = Object.keys(response.headers).find((key) => key.toLowerCase() === "retry-after");
+    if (!retryAfterHeaderName)
+        return;
+    const retryAfter = response.headers[retryAfterHeaderName];
+    const retryAfterSeconds = Number(retryAfter);
+    if (!Number.isNaN(retryAfterSeconds))
+        return retryAfterSeconds * 1000;
+    const retryAfterDate = new Date(retryAfter);
+    return retryAfterDate.getTime() - Date.now();
+};
 const asSdkError = (error) => {
     if (error instanceof Error)
         return error;
@@ -53257,6 +53320,27 @@ exports.getCheckContentLengthHeaderPlugin = getCheckContentLengthHeaderPlugin;
 
 /***/ }),
 
+/***/ 71744:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.resolveS3Config = void 0;
+const resolveS3Config = (input) => {
+    var _a, _b, _c;
+    return ({
+        ...input,
+        forcePathStyle: (_a = input.forcePathStyle) !== null && _a !== void 0 ? _a : false,
+        useAccelerateEndpoint: (_b = input.useAccelerateEndpoint) !== null && _b !== void 0 ? _b : false,
+        disableMultiregionAccessPoints: (_c = input.disableMultiregionAccessPoints) !== null && _c !== void 0 ? _c : false,
+    });
+};
+exports.resolveS3Config = resolveS3Config;
+
+
+/***/ }),
+
 /***/ 81139:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
@@ -53265,6 +53349,7 @@ exports.getCheckContentLengthHeaderPlugin = getCheckContentLengthHeaderPlugin;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const tslib_1 = __nccwpck_require__(4351);
 tslib_1.__exportStar(__nccwpck_require__(51671), exports);
+tslib_1.__exportStar(__nccwpck_require__(71744), exports);
 tslib_1.__exportStar(__nccwpck_require__(10404), exports);
 tslib_1.__exportStar(__nccwpck_require__(56777), exports);
 tslib_1.__exportStar(__nccwpck_require__(1997), exports);
@@ -53286,7 +53371,7 @@ const throw200ExceptionsMiddleware = (config) => (next) => async (args) => {
     if (!protocol_http_1.HttpResponse.isInstance(response))
         return result;
     const { statusCode, body } = response;
-    if (statusCode < 200 && statusCode >= 300)
+    if (statusCode < 200 || statusCode >= 300)
         return result;
     const bodyBytes = await collectBody(body, config);
     const bodyString = await collectBodyString(bodyBytes, config);
@@ -53514,7 +53599,14 @@ exports.getSerdePlugin = getSerdePlugin;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.serializerMiddleware = void 0;
 const serializerMiddleware = (options, serializer) => (next, context) => async (args) => {
-    const request = await serializer(args.input, options);
+    var _a;
+    const endpoint = ((_a = context.endpointV2) === null || _a === void 0 ? void 0 : _a.url) && options.urlParser
+        ? async () => options.urlParser(context.endpointV2.url)
+        : options.endpoint;
+    if (!endpoint) {
+        throw new Error("No valid endpoint provider available.");
+    }
+    const request = await serializer(args.input, { ...options, endpoint });
     return next({
         ...args,
         request,
@@ -53534,6 +53626,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.resolveSigV4AuthConfig = exports.resolveAwsAuthConfig = void 0;
 const property_provider_1 = __nccwpck_require__(74462);
 const signature_v4_1 = __nccwpck_require__(37776);
+const util_middleware_1 = __nccwpck_require__(10236);
 const CREDENTIAL_EXPIRE_WINDOW = 300000;
 const resolveAwsAuthConfig = (input) => {
     const normalizedCreds = input.credentials
@@ -53542,10 +53635,10 @@ const resolveAwsAuthConfig = (input) => {
     const { signingEscapePath = true, systemClockOffset = input.systemClockOffset || 0, sha256 } = input;
     let signer;
     if (input.signer) {
-        signer = normalizeProvider(input.signer);
+        signer = (0, util_middleware_1.normalizeProvider)(input.signer);
     }
-    else {
-        signer = () => normalizeProvider(input.region)()
+    else if (input.regionInfoProvider) {
+        signer = () => (0, util_middleware_1.normalizeProvider)(input.region)()
             .then(async (region) => [
             (await input.regionInfoProvider(region, {
                 useFipsEndpoint: await input.useFipsEndpoint(),
@@ -53565,9 +53658,30 @@ const resolveAwsAuthConfig = (input) => {
                 sha256,
                 uriEscapePath: signingEscapePath,
             };
-            const signerConstructor = input.signerConstructor || signature_v4_1.SignatureV4;
-            return new signerConstructor(params);
+            const SignerCtor = input.signerConstructor || signature_v4_1.SignatureV4;
+            return new SignerCtor(params);
         });
+    }
+    else {
+        signer = async (authScheme) => {
+            if (!authScheme) {
+                throw new Error("Unexpected empty auth scheme config");
+            }
+            const signingRegion = authScheme.signingScope;
+            const signingService = authScheme.signingName;
+            input.signingRegion = input.signingRegion || signingRegion;
+            input.signingName = input.signingName || signingService || input.serviceId;
+            const params = {
+                ...input,
+                credentials: normalizedCreds,
+                region: input.signingRegion,
+                service: input.signingName,
+                sha256,
+                uriEscapePath: signingEscapePath,
+            };
+            const SignerCtor = input.signerConstructor || signature_v4_1.SignatureV4;
+            return new SignerCtor(params);
+        };
     }
     return {
         ...input,
@@ -53585,10 +53699,10 @@ const resolveSigV4AuthConfig = (input) => {
     const { signingEscapePath = true, systemClockOffset = input.systemClockOffset || 0, sha256 } = input;
     let signer;
     if (input.signer) {
-        signer = normalizeProvider(input.signer);
+        signer = (0, util_middleware_1.normalizeProvider)(input.signer);
     }
     else {
-        signer = normalizeProvider(new signature_v4_1.SignatureV4({
+        signer = (0, util_middleware_1.normalizeProvider)(new signature_v4_1.SignatureV4({
             credentials: normalizedCreds,
             region: input.region,
             service: input.signingName,
@@ -53605,19 +53719,12 @@ const resolveSigV4AuthConfig = (input) => {
     };
 };
 exports.resolveSigV4AuthConfig = resolveSigV4AuthConfig;
-const normalizeProvider = (input) => {
-    if (typeof input === "object") {
-        const promisified = Promise.resolve(input);
-        return () => promisified;
-    }
-    return input;
-};
 const normalizeCredentialProvider = (credentials) => {
     if (typeof credentials === "function") {
         return (0, property_provider_1.memoize)(credentials, (credentials) => credentials.expiration !== undefined &&
             credentials.expiration.getTime() - Date.now() < CREDENTIAL_EXPIRE_WINDOW, (credentials) => credentials.expiration !== undefined);
     }
-    return normalizeProvider(credentials);
+    return (0, util_middleware_1.normalizeProvider)(credentials);
 };
 
 
@@ -53647,9 +53754,11 @@ const protocol_http_1 = __nccwpck_require__(70223);
 const getSkewCorrectedDate_1 = __nccwpck_require__(68253);
 const getUpdatedSystemClockOffset_1 = __nccwpck_require__(35863);
 const awsAuthMiddleware = (options) => (next, context) => async function (args) {
+    var _a, _b, _c;
     if (!protocol_http_1.HttpRequest.isInstance(args.request))
         return next(args);
-    const signer = await options.signer();
+    const authScheme = (_c = (_b = (_a = (context.endpointV2)) === null || _a === void 0 ? void 0 : _a.properties) === null || _b === void 0 ? void 0 : _b.authSchemes) === null || _c === void 0 ? void 0 : _c[0];
+    const signer = await options.signer(authScheme);
     const output = await next({
         ...args,
         request: await signer.sign(args.request, {
@@ -53871,7 +53980,7 @@ const constructStack = () => {
         });
         return expandedMiddlewareList;
     };
-    const getMiddlewareList = () => {
+    const getMiddlewareList = (debug = false) => {
         const normalizedAbsoluteEntries = [];
         const normalizedRelativeEntries = [];
         const normalizedEntriesNameMap = {};
@@ -53899,6 +54008,9 @@ const constructStack = () => {
             if (entry.toMiddleware) {
                 const toMiddleware = normalizedEntriesNameMap[entry.toMiddleware];
                 if (toMiddleware === undefined) {
+                    if (debug) {
+                        return;
+                    }
                     throw new Error(`${entry.toMiddleware} is not found when adding ${entry.name || "anonymous"} middleware ${entry.relation} ${entry.toMiddleware}`);
                 }
                 if (entry.relation === "after") {
@@ -53915,7 +54027,7 @@ const constructStack = () => {
             wholeList.push(...expendedMiddlewareList);
             return wholeList;
         }, []);
-        return mainChain.map((entry) => entry.middleware);
+        return mainChain;
     };
     const stack = {
         add: (middleware, options = {}) => {
@@ -53996,8 +54108,15 @@ const constructStack = () => {
             return cloned;
         },
         applyToStack: cloneTo,
+        identify: () => {
+            return getMiddlewareList(true).map((mw) => {
+                return mw.name + ": " + (mw.tags || []).join(",");
+            });
+        },
         resolve: (handler, context) => {
-            for (const middleware of getMiddlewareList().reverse()) {
+            for (const middleware of getMiddlewareList()
+                .map((entry) => entry.middleware)
+                .reverse()) {
                 handler = middleware(handler, context);
             }
             return handler;
@@ -55538,6 +55657,7 @@ class SignatureV4 {
     async presign(originalRequest, options = {}) {
         const { signingDate = new Date(), expiresIn = 3600, unsignableHeaders, unhoistableHeaders, signableHeaders, signingRegion, signingService, } = options;
         const credentials = await this.credentialProvider();
+        this.validateResolvedCredentials(credentials);
         const region = signingRegion !== null && signingRegion !== void 0 ? signingRegion : (await this.regionProvider());
         const { longDate, shortDate } = formatDate(signingDate);
         if (expiresIn > constants_1.MAX_PRESIGNED_TTL) {
@@ -55588,6 +55708,7 @@ class SignatureV4 {
     }
     async signString(stringToSign, { signingDate = new Date(), signingRegion, signingService } = {}) {
         const credentials = await this.credentialProvider();
+        this.validateResolvedCredentials(credentials);
         const region = signingRegion !== null && signingRegion !== void 0 ? signingRegion : (await this.regionProvider());
         const { shortDate } = formatDate(signingDate);
         const hash = new this.sha256(await this.getSigningKey(credentials, region, shortDate, signingService));
@@ -55596,6 +55717,7 @@ class SignatureV4 {
     }
     async signRequest(requestToSign, { signingDate = new Date(), signableHeaders, unsignableHeaders, signingRegion, signingService, } = {}) {
         const credentials = await this.credentialProvider();
+        this.validateResolvedCredentials(credentials);
         const region = signingRegion !== null && signingRegion !== void 0 ? signingRegion : (await this.regionProvider());
         const request = (0, prepareRequest_1.prepareRequest)(requestToSign);
         const { longDate, shortDate } = formatDate(signingDate);
@@ -55665,6 +55787,13 @@ ${(0, util_hex_encoding_1.toHex)(hashedRequest)}`;
     }
     getSigningKey(credentials, region, shortDate, service) {
         return (0, credentialDerivation_1.getSigningKey)(this.sha256, credentials, shortDate, region, service || this.service);
+    }
+    validateResolvedCredentials(credentials) {
+        if (typeof credentials !== "object" ||
+            typeof credentials.accessKeyId !== "string" ||
+            typeof credentials.secretAccessKey !== "string") {
+            throw new Error("Resolved credential object is not valid");
+        }
     }
 }
 exports.SignatureV4 = SignatureV4;
@@ -56984,7 +57113,10 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.parseUrl = void 0;
 const querystring_parser_1 = __nccwpck_require__(47424);
 const parseUrl = (url) => {
-    const { hostname, pathname, port, protocol, search } = new URL(url);
+    if (typeof url === 'string') {
+        return (0, exports.parseUrl)(new URL(url));
+    }
+    const { hostname, pathname, port, protocol, search } = url;
     let query;
     if (search) {
         query = (0, querystring_parser_1.parseQueryString)(search);
@@ -57756,9 +57888,9 @@ const exponentialBackoffWithJitter = (minDelay, maxDelay, attemptCeiling, attemp
 const randomInRange = (min, max) => min + Math.random() * (max - min);
 const runPolling = async ({ minDelay, maxDelay, maxWaitTime, abortController, client, abortSignal }, input, acceptorChecks) => {
     var _a;
-    const { state } = await acceptorChecks(client, input);
+    const { state, reason } = await acceptorChecks(client, input);
     if (state !== waiter_1.WaiterState.RETRY) {
-        return { state };
+        return { state, reason };
     }
     let currentAttempt = 1;
     const waitUntil = Date.now() + maxWaitTime * 1000;
@@ -57772,9 +57904,9 @@ const runPolling = async ({ minDelay, maxDelay, maxWaitTime, abortController, cl
             return { state: waiter_1.WaiterState.TIMEOUT };
         }
         await (0, sleep_1.sleep)(delay);
-        const { state } = await acceptorChecks(client, input);
+        const { state, reason } = await acceptorChecks(client, input);
         if (state !== waiter_1.WaiterState.RETRY) {
-            return { state };
+            return { state, reason };
         }
         currentAttempt += 1;
     }
@@ -73753,7 +73885,7 @@ const generateGlobTasksSync = normalizeArgumentsSync(generateTasksSync);
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-cloudfront","description":"AWS SDK for JavaScript Cloudfront Client for Node.js, Browser and React Native","version":"3.162.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"2.0.0","@aws-crypto/sha256-js":"2.0.0","@aws-sdk/client-sts":"3.162.0","@aws-sdk/config-resolver":"3.162.0","@aws-sdk/credential-provider-node":"3.162.0","@aws-sdk/fetch-http-handler":"3.162.0","@aws-sdk/hash-node":"3.162.0","@aws-sdk/invalid-dependency":"3.162.0","@aws-sdk/middleware-content-length":"3.162.0","@aws-sdk/middleware-host-header":"3.162.0","@aws-sdk/middleware-logger":"3.162.0","@aws-sdk/middleware-recursion-detection":"3.162.0","@aws-sdk/middleware-retry":"3.162.0","@aws-sdk/middleware-serde":"3.162.0","@aws-sdk/middleware-signing":"3.162.0","@aws-sdk/middleware-stack":"3.162.0","@aws-sdk/middleware-user-agent":"3.162.0","@aws-sdk/node-config-provider":"3.162.0","@aws-sdk/node-http-handler":"3.162.0","@aws-sdk/protocol-http":"3.162.0","@aws-sdk/smithy-client":"3.162.0","@aws-sdk/types":"3.162.0","@aws-sdk/url-parser":"3.162.0","@aws-sdk/util-base64-browser":"3.109.0","@aws-sdk/util-base64-node":"3.55.0","@aws-sdk/util-body-length-browser":"3.154.0","@aws-sdk/util-body-length-node":"3.55.0","@aws-sdk/util-defaults-mode-browser":"3.162.0","@aws-sdk/util-defaults-mode-node":"3.162.0","@aws-sdk/util-user-agent-browser":"3.162.0","@aws-sdk/util-user-agent-node":"3.162.0","@aws-sdk/util-utf8-browser":"3.109.0","@aws-sdk/util-utf8-node":"3.109.0","@aws-sdk/util-waiter":"3.162.0","@aws-sdk/xml-builder":"3.142.0","entities":"2.2.0","fast-xml-parser":"3.19.0","tslib":"^2.3.1"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.58.0","@tsconfig/recommended":"1.0.1","@types/node":"^12.7.5","concurrently":"7.0.0","downlevel-dts":"0.7.0","rimraf":"3.0.2","typedoc":"0.19.2","typescript":"~4.6.2"},"overrides":{"typedoc":{"typescript":"~4.6.2"}},"engines":{"node":">=12.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-cloudfront","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-cloudfront"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-cloudfront","description":"AWS SDK for JavaScript Cloudfront Client for Node.js, Browser and React Native","version":"3.181.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"2.0.0","@aws-crypto/sha256-js":"2.0.0","@aws-sdk/client-sts":"3.181.0","@aws-sdk/config-resolver":"3.178.0","@aws-sdk/credential-provider-node":"3.181.0","@aws-sdk/fetch-http-handler":"3.178.0","@aws-sdk/hash-node":"3.178.0","@aws-sdk/invalid-dependency":"3.178.0","@aws-sdk/middleware-content-length":"3.178.0","@aws-sdk/middleware-host-header":"3.178.0","@aws-sdk/middleware-logger":"3.178.0","@aws-sdk/middleware-recursion-detection":"3.178.0","@aws-sdk/middleware-retry":"3.178.0","@aws-sdk/middleware-serde":"3.178.0","@aws-sdk/middleware-signing":"3.179.0","@aws-sdk/middleware-stack":"3.178.0","@aws-sdk/middleware-user-agent":"3.178.0","@aws-sdk/node-config-provider":"3.178.0","@aws-sdk/node-http-handler":"3.178.0","@aws-sdk/protocol-http":"3.178.0","@aws-sdk/smithy-client":"3.180.0","@aws-sdk/types":"3.178.0","@aws-sdk/url-parser":"3.178.0","@aws-sdk/util-base64-browser":"3.170.0","@aws-sdk/util-base64-node":"3.170.0","@aws-sdk/util-body-length-browser":"3.170.0","@aws-sdk/util-body-length-node":"3.170.0","@aws-sdk/util-defaults-mode-browser":"3.180.0","@aws-sdk/util-defaults-mode-node":"3.180.0","@aws-sdk/util-user-agent-browser":"3.178.0","@aws-sdk/util-user-agent-node":"3.178.0","@aws-sdk/util-utf8-browser":"3.170.0","@aws-sdk/util-utf8-node":"3.170.0","@aws-sdk/util-waiter":"3.180.0","@aws-sdk/xml-builder":"3.170.0","entities":"2.2.0","fast-xml-parser":"3.19.0","tslib":"^2.3.1"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.170.0","@tsconfig/recommended":"1.0.1","@types/node":"^12.7.5","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.19.2","typescript":"~4.6.2"},"overrides":{"typedoc":{"typescript":"~4.6.2"}},"engines":{"node":">=12.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-cloudfront","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-cloudfront"}}');
 
 /***/ }),
 
@@ -73761,7 +73893,7 @@ module.exports = JSON.parse('{"name":"@aws-sdk/client-cloudfront","description":
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-s3","description":"AWS SDK for JavaScript S3 Client for Node.js, Browser and React Native","version":"3.162.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","test":"yarn test:unit","test:e2e":"ts-mocha test/**/*.ispec.ts && karma start karma.conf.js","test:unit":"ts-mocha test/**/*.spec.ts"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha1-browser":"2.0.0","@aws-crypto/sha256-browser":"2.0.0","@aws-crypto/sha256-js":"2.0.0","@aws-sdk/client-sts":"3.162.0","@aws-sdk/config-resolver":"3.162.0","@aws-sdk/credential-provider-node":"3.162.0","@aws-sdk/eventstream-serde-browser":"3.162.0","@aws-sdk/eventstream-serde-config-resolver":"3.162.0","@aws-sdk/eventstream-serde-node":"3.162.0","@aws-sdk/fetch-http-handler":"3.162.0","@aws-sdk/hash-blob-browser":"3.162.0","@aws-sdk/hash-node":"3.162.0","@aws-sdk/hash-stream-node":"3.162.0","@aws-sdk/invalid-dependency":"3.162.0","@aws-sdk/md5-js":"3.162.0","@aws-sdk/middleware-bucket-endpoint":"3.162.0","@aws-sdk/middleware-content-length":"3.162.0","@aws-sdk/middleware-expect-continue":"3.162.0","@aws-sdk/middleware-flexible-checksums":"3.162.0","@aws-sdk/middleware-host-header":"3.162.0","@aws-sdk/middleware-location-constraint":"3.162.0","@aws-sdk/middleware-logger":"3.162.0","@aws-sdk/middleware-recursion-detection":"3.162.0","@aws-sdk/middleware-retry":"3.162.0","@aws-sdk/middleware-sdk-s3":"3.162.0","@aws-sdk/middleware-serde":"3.162.0","@aws-sdk/middleware-signing":"3.162.0","@aws-sdk/middleware-ssec":"3.162.0","@aws-sdk/middleware-stack":"3.162.0","@aws-sdk/middleware-user-agent":"3.162.0","@aws-sdk/node-config-provider":"3.162.0","@aws-sdk/node-http-handler":"3.162.0","@aws-sdk/protocol-http":"3.162.0","@aws-sdk/signature-v4-multi-region":"3.162.0","@aws-sdk/smithy-client":"3.162.0","@aws-sdk/types":"3.162.0","@aws-sdk/url-parser":"3.162.0","@aws-sdk/util-base64-browser":"3.109.0","@aws-sdk/util-base64-node":"3.55.0","@aws-sdk/util-body-length-browser":"3.154.0","@aws-sdk/util-body-length-node":"3.55.0","@aws-sdk/util-defaults-mode-browser":"3.162.0","@aws-sdk/util-defaults-mode-node":"3.162.0","@aws-sdk/util-stream-browser":"3.162.0","@aws-sdk/util-stream-node":"3.162.0","@aws-sdk/util-user-agent-browser":"3.162.0","@aws-sdk/util-user-agent-node":"3.162.0","@aws-sdk/util-utf8-browser":"3.109.0","@aws-sdk/util-utf8-node":"3.109.0","@aws-sdk/util-waiter":"3.162.0","@aws-sdk/xml-builder":"3.142.0","entities":"2.2.0","fast-xml-parser":"3.19.0","tslib":"^2.3.1"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.58.0","@tsconfig/recommended":"1.0.1","@types/chai":"^4.2.11","@types/mocha":"^8.0.4","@types/node":"^12.7.5","concurrently":"7.0.0","downlevel-dts":"0.7.0","rimraf":"3.0.2","typedoc":"0.19.2","typescript":"~4.6.2"},"overrides":{"typedoc":{"typescript":"~4.6.2"}},"engines":{"node":">=12.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-s3","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-s3"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-s3","description":"AWS SDK for JavaScript S3 Client for Node.js, Browser and React Native","version":"3.181.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","test":"yarn test:unit","test:e2e":"ts-mocha test/**/*.ispec.ts && karma start karma.conf.js","test:unit":"ts-mocha test/**/*.spec.ts"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha1-browser":"2.0.0","@aws-crypto/sha256-browser":"2.0.0","@aws-crypto/sha256-js":"2.0.0","@aws-sdk/client-sts":"3.181.0","@aws-sdk/config-resolver":"3.178.0","@aws-sdk/credential-provider-node":"3.181.0","@aws-sdk/eventstream-serde-browser":"3.178.0","@aws-sdk/eventstream-serde-config-resolver":"3.178.0","@aws-sdk/eventstream-serde-node":"3.178.0","@aws-sdk/fetch-http-handler":"3.178.0","@aws-sdk/hash-blob-browser":"3.178.0","@aws-sdk/hash-node":"3.178.0","@aws-sdk/hash-stream-node":"3.178.0","@aws-sdk/invalid-dependency":"3.178.0","@aws-sdk/md5-js":"3.178.0","@aws-sdk/middleware-bucket-endpoint":"3.178.0","@aws-sdk/middleware-content-length":"3.178.0","@aws-sdk/middleware-expect-continue":"3.178.0","@aws-sdk/middleware-flexible-checksums":"3.178.0","@aws-sdk/middleware-host-header":"3.178.0","@aws-sdk/middleware-location-constraint":"3.178.0","@aws-sdk/middleware-logger":"3.178.0","@aws-sdk/middleware-recursion-detection":"3.178.0","@aws-sdk/middleware-retry":"3.178.0","@aws-sdk/middleware-sdk-s3":"3.178.0","@aws-sdk/middleware-serde":"3.178.0","@aws-sdk/middleware-signing":"3.179.0","@aws-sdk/middleware-ssec":"3.178.0","@aws-sdk/middleware-stack":"3.178.0","@aws-sdk/middleware-user-agent":"3.178.0","@aws-sdk/node-config-provider":"3.178.0","@aws-sdk/node-http-handler":"3.178.0","@aws-sdk/protocol-http":"3.178.0","@aws-sdk/signature-v4-multi-region":"3.180.0","@aws-sdk/smithy-client":"3.180.0","@aws-sdk/types":"3.178.0","@aws-sdk/url-parser":"3.178.0","@aws-sdk/util-base64-browser":"3.170.0","@aws-sdk/util-base64-node":"3.170.0","@aws-sdk/util-body-length-browser":"3.170.0","@aws-sdk/util-body-length-node":"3.170.0","@aws-sdk/util-defaults-mode-browser":"3.180.0","@aws-sdk/util-defaults-mode-node":"3.180.0","@aws-sdk/util-stream-browser":"3.178.0","@aws-sdk/util-stream-node":"3.178.0","@aws-sdk/util-user-agent-browser":"3.178.0","@aws-sdk/util-user-agent-node":"3.178.0","@aws-sdk/util-utf8-browser":"3.170.0","@aws-sdk/util-utf8-node":"3.170.0","@aws-sdk/util-waiter":"3.180.0","@aws-sdk/xml-builder":"3.170.0","entities":"2.2.0","fast-xml-parser":"3.19.0","tslib":"^2.3.1"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.170.0","@tsconfig/recommended":"1.0.1","@types/chai":"^4.2.11","@types/mocha":"^8.0.4","@types/node":"^12.7.5","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.19.2","typescript":"~4.6.2"},"overrides":{"typedoc":{"typescript":"~4.6.2"}},"engines":{"node":">=12.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-s3","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-s3"}}');
 
 /***/ }),
 
@@ -73769,7 +73901,7 @@ module.exports = JSON.parse('{"name":"@aws-sdk/client-s3","description":"AWS SDK
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-sso","description":"AWS SDK for JavaScript Sso Client for Node.js, Browser and React Native","version":"3.162.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"2.0.0","@aws-crypto/sha256-js":"2.0.0","@aws-sdk/config-resolver":"3.162.0","@aws-sdk/fetch-http-handler":"3.162.0","@aws-sdk/hash-node":"3.162.0","@aws-sdk/invalid-dependency":"3.162.0","@aws-sdk/middleware-content-length":"3.162.0","@aws-sdk/middleware-host-header":"3.162.0","@aws-sdk/middleware-logger":"3.162.0","@aws-sdk/middleware-recursion-detection":"3.162.0","@aws-sdk/middleware-retry":"3.162.0","@aws-sdk/middleware-serde":"3.162.0","@aws-sdk/middleware-stack":"3.162.0","@aws-sdk/middleware-user-agent":"3.162.0","@aws-sdk/node-config-provider":"3.162.0","@aws-sdk/node-http-handler":"3.162.0","@aws-sdk/protocol-http":"3.162.0","@aws-sdk/smithy-client":"3.162.0","@aws-sdk/types":"3.162.0","@aws-sdk/url-parser":"3.162.0","@aws-sdk/util-base64-browser":"3.109.0","@aws-sdk/util-base64-node":"3.55.0","@aws-sdk/util-body-length-browser":"3.154.0","@aws-sdk/util-body-length-node":"3.55.0","@aws-sdk/util-defaults-mode-browser":"3.162.0","@aws-sdk/util-defaults-mode-node":"3.162.0","@aws-sdk/util-user-agent-browser":"3.162.0","@aws-sdk/util-user-agent-node":"3.162.0","@aws-sdk/util-utf8-browser":"3.109.0","@aws-sdk/util-utf8-node":"3.109.0","tslib":"^2.3.1"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.58.0","@tsconfig/recommended":"1.0.1","@types/node":"^12.7.5","concurrently":"7.0.0","downlevel-dts":"0.7.0","rimraf":"3.0.2","typedoc":"0.19.2","typescript":"~4.6.2"},"overrides":{"typedoc":{"typescript":"~4.6.2"}},"engines":{"node":">=12.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sso","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sso"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-sso","description":"AWS SDK for JavaScript Sso Client for Node.js, Browser and React Native","version":"3.181.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"2.0.0","@aws-crypto/sha256-js":"2.0.0","@aws-sdk/config-resolver":"3.178.0","@aws-sdk/fetch-http-handler":"3.178.0","@aws-sdk/hash-node":"3.178.0","@aws-sdk/invalid-dependency":"3.178.0","@aws-sdk/middleware-content-length":"3.178.0","@aws-sdk/middleware-host-header":"3.178.0","@aws-sdk/middleware-logger":"3.178.0","@aws-sdk/middleware-recursion-detection":"3.178.0","@aws-sdk/middleware-retry":"3.178.0","@aws-sdk/middleware-serde":"3.178.0","@aws-sdk/middleware-stack":"3.178.0","@aws-sdk/middleware-user-agent":"3.178.0","@aws-sdk/node-config-provider":"3.178.0","@aws-sdk/node-http-handler":"3.178.0","@aws-sdk/protocol-http":"3.178.0","@aws-sdk/smithy-client":"3.180.0","@aws-sdk/types":"3.178.0","@aws-sdk/url-parser":"3.178.0","@aws-sdk/util-base64-browser":"3.170.0","@aws-sdk/util-base64-node":"3.170.0","@aws-sdk/util-body-length-browser":"3.170.0","@aws-sdk/util-body-length-node":"3.170.0","@aws-sdk/util-defaults-mode-browser":"3.180.0","@aws-sdk/util-defaults-mode-node":"3.180.0","@aws-sdk/util-user-agent-browser":"3.178.0","@aws-sdk/util-user-agent-node":"3.178.0","@aws-sdk/util-utf8-browser":"3.170.0","@aws-sdk/util-utf8-node":"3.170.0","tslib":"^2.3.1"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.170.0","@tsconfig/recommended":"1.0.1","@types/node":"^12.7.5","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.19.2","typescript":"~4.6.2"},"overrides":{"typedoc":{"typescript":"~4.6.2"}},"engines":{"node":">=12.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sso","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sso"}}');
 
 /***/ }),
 
@@ -73777,7 +73909,7 @@ module.exports = JSON.parse('{"name":"@aws-sdk/client-sso","description":"AWS SD
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-sts","description":"AWS SDK for JavaScript Sts Client for Node.js, Browser and React Native","version":"3.162.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","test":"yarn test:unit","test:unit":"jest"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"2.0.0","@aws-crypto/sha256-js":"2.0.0","@aws-sdk/config-resolver":"3.162.0","@aws-sdk/credential-provider-node":"3.162.0","@aws-sdk/fetch-http-handler":"3.162.0","@aws-sdk/hash-node":"3.162.0","@aws-sdk/invalid-dependency":"3.162.0","@aws-sdk/middleware-content-length":"3.162.0","@aws-sdk/middleware-host-header":"3.162.0","@aws-sdk/middleware-logger":"3.162.0","@aws-sdk/middleware-recursion-detection":"3.162.0","@aws-sdk/middleware-retry":"3.162.0","@aws-sdk/middleware-sdk-sts":"3.162.0","@aws-sdk/middleware-serde":"3.162.0","@aws-sdk/middleware-signing":"3.162.0","@aws-sdk/middleware-stack":"3.162.0","@aws-sdk/middleware-user-agent":"3.162.0","@aws-sdk/node-config-provider":"3.162.0","@aws-sdk/node-http-handler":"3.162.0","@aws-sdk/protocol-http":"3.162.0","@aws-sdk/smithy-client":"3.162.0","@aws-sdk/types":"3.162.0","@aws-sdk/url-parser":"3.162.0","@aws-sdk/util-base64-browser":"3.109.0","@aws-sdk/util-base64-node":"3.55.0","@aws-sdk/util-body-length-browser":"3.154.0","@aws-sdk/util-body-length-node":"3.55.0","@aws-sdk/util-defaults-mode-browser":"3.162.0","@aws-sdk/util-defaults-mode-node":"3.162.0","@aws-sdk/util-user-agent-browser":"3.162.0","@aws-sdk/util-user-agent-node":"3.162.0","@aws-sdk/util-utf8-browser":"3.109.0","@aws-sdk/util-utf8-node":"3.109.0","entities":"2.2.0","fast-xml-parser":"3.19.0","tslib":"^2.3.1"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.58.0","@tsconfig/recommended":"1.0.1","@types/node":"^12.7.5","concurrently":"7.0.0","downlevel-dts":"0.7.0","rimraf":"3.0.2","typedoc":"0.19.2","typescript":"~4.6.2"},"overrides":{"typedoc":{"typescript":"~4.6.2"}},"engines":{"node":">=12.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sts","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sts"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-sts","description":"AWS SDK for JavaScript Sts Client for Node.js, Browser and React Native","version":"3.181.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","test":"yarn test:unit","test:unit":"jest"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"2.0.0","@aws-crypto/sha256-js":"2.0.0","@aws-sdk/config-resolver":"3.178.0","@aws-sdk/credential-provider-node":"3.181.0","@aws-sdk/fetch-http-handler":"3.178.0","@aws-sdk/hash-node":"3.178.0","@aws-sdk/invalid-dependency":"3.178.0","@aws-sdk/middleware-content-length":"3.178.0","@aws-sdk/middleware-host-header":"3.178.0","@aws-sdk/middleware-logger":"3.178.0","@aws-sdk/middleware-recursion-detection":"3.178.0","@aws-sdk/middleware-retry":"3.178.0","@aws-sdk/middleware-sdk-sts":"3.179.0","@aws-sdk/middleware-serde":"3.178.0","@aws-sdk/middleware-signing":"3.179.0","@aws-sdk/middleware-stack":"3.178.0","@aws-sdk/middleware-user-agent":"3.178.0","@aws-sdk/node-config-provider":"3.178.0","@aws-sdk/node-http-handler":"3.178.0","@aws-sdk/protocol-http":"3.178.0","@aws-sdk/smithy-client":"3.180.0","@aws-sdk/types":"3.178.0","@aws-sdk/url-parser":"3.178.0","@aws-sdk/util-base64-browser":"3.170.0","@aws-sdk/util-base64-node":"3.170.0","@aws-sdk/util-body-length-browser":"3.170.0","@aws-sdk/util-body-length-node":"3.170.0","@aws-sdk/util-defaults-mode-browser":"3.180.0","@aws-sdk/util-defaults-mode-node":"3.180.0","@aws-sdk/util-user-agent-browser":"3.178.0","@aws-sdk/util-user-agent-node":"3.178.0","@aws-sdk/util-utf8-browser":"3.170.0","@aws-sdk/util-utf8-node":"3.170.0","entities":"2.2.0","fast-xml-parser":"3.19.0","tslib":"^2.3.1"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.170.0","@tsconfig/recommended":"1.0.1","@types/node":"^12.7.5","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.19.2","typescript":"~4.6.2"},"overrides":{"typedoc":{"typescript":"~4.6.2"}},"engines":{"node":">=12.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sts","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sts"}}');
 
 /***/ }),
 
