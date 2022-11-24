@@ -9,11 +9,10 @@
     "url": "https://github.com/kazimanzurrashid/aws-static-web-app-update-action"
   },
   "scripts": {
-    "format": "prettier --write **/*.ts",
-    "lint": "eslint src/**/*.ts",
+    "format": "prettier --check --write ./**/*.{ts,js,json,md,yml,yaml}",
+    "lint": "eslint ./ --fix",
     "build": "rimraf build && tsc",
-    "pack": "ncc build --source-map --license licenses.txt",
-    "release": "npm run format && npm run lint && npm run build && npm run pack"
+    "pack": "ncc build --source-map --license licenses.txt"
   },
   "dependencies": {
     "@actions/core": "^1.10.0",

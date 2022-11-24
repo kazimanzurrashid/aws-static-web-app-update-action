@@ -70,6 +70,7 @@ class Action {
       this.listFiles(input.location)
     ]);
 
+    // eslint-disable-next-line i18n-text/no-en
     this.log(`Uploading to s3 bucket ${input.bucket}`);
 
     const uploads = files.map(async (file) =>
@@ -83,6 +84,7 @@ class Action {
 
     await Promise.all(uploads);
 
+    // eslint-disable-next-line i18n-text/no-en
     this.log('Upload completed');
 
     if (
@@ -253,6 +255,7 @@ class Action {
               return;
             }
 
+            // eslint-disable-next-line i18n-text/no-en
             this.log('Invalidation completed');
             return resolve();
           } catch (error) {
@@ -273,6 +276,7 @@ class Action {
       }
     });
 
+    // eslint-disable-next-line i18n-text/no-en
     this.log(`Invalidating cloudfront distribution ${distributionId}`);
 
     const createInvalidationResult = await this.cf.createInvalidation(
