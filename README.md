@@ -12,7 +12,7 @@ S3 bucket and optionally issues an invalidation command to associated cloudfront
 ### minimum
 
 ```yaml
-uses: kazimanzurrashid/aws-static-web-app-update-action@v1
+uses: kazimanzurrashid/aws-static-web-app-update-action@v1.0.1
 with:
   location: './web/public'
   bucket: 'example.com'
@@ -21,7 +21,7 @@ with:
 ### complete
 
 ```yaml
-uses: kazimanzurrashid/aws-static-web-app-update-action@v1
+uses: kazimanzurrashid/aws-static-web-app-update-action@v1.0.1
 with:
   location: './web/public'
   bucket: 'example.com'
@@ -47,7 +47,7 @@ is provided (e.g. `invalidate: true`) then `"cloudfront:ListDistributions"` is a
     {
       "Effect": "Allow",
       "Action": ["s3:PutObject"],
-      "Resource": "*"
+      "Resource": "*"  // Don't use for production, change it to your s3 bucket name
     },
     {
       "Effect": "Allow",
@@ -56,7 +56,7 @@ is provided (e.g. `invalidate: true`) then `"cloudfront:ListDistributions"` is a
         "cloudfront:GetInvalidation",
         "cloudfront:ListDistributions"
       ],
-      "Resource": "*"
+      "Resource": "*" // Don't use all, change it to your actual cloudfront distribution
     }
   ]
 }
@@ -115,12 +115,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Node.js setup
-        uses: actions/setup-node@v2.1.4
+        uses: actions/setup-node@v3
         with:
-          node-version: 12.x
+          node-version: 18
 
       - name: Build
         run: |
@@ -128,7 +128,7 @@ jobs:
           npm run build
 
       - name: Update
-        uses: kazimanzurrashid/aws-static-web-app-update-action@v1
+        uses: kazimanzurrashid/aws-static-web-app-update-action@v1.0.1
         with:
           location: ./build
           bucket: my-site.com
@@ -155,20 +155,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Node.js setup
-        uses: actions/setup-node@v2.1.4
+        uses: actions/setup-node@v3
         with:
-          node-version: 12.x
+          node-version: 18
 
       - name: Build
         run: |
           npm ci
-          ng build --prod
+          ng build --configuration production
 
       - name: Update
-        uses: kazimanzurrashid/aws-static-web-app-update-action@v1
+        uses: kazimanzurrashid/aws-static-web-app-update-action@v1.0.1
         with:
           location: ./dist/my-ng-app
           bucket: my-site.com
@@ -195,12 +195,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Node.js setup
-        uses: actions/setup-node@v2.1.4
+        uses: actions/setup-node@v3
         with:
-          node-version: 12.x
+          node-version: 18
 
       - name: Build
         run: |
@@ -208,7 +208,7 @@ jobs:
           npm run build
 
       - name: Update
-        uses: kazimanzurrashid/aws-static-web-app-update-action@v1
+        uses: kazimanzurrashid/aws-static-web-app-update-action@v1.0.1
         with:
           location: ./public
           bucket: my-site.com
