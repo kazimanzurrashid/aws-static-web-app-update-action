@@ -47,7 +47,7 @@ is provided (e.g. `invalidate: true`) then `"cloudfront:ListDistributions"` is a
     {
       "Effect": "Allow",
       "Action": ["s3:PutObject"],
-      "Resource": "*"  // Don't use for production, change it to your s3 bucket name
+      "Resource": "*" // Don't use for production, change it to your s3 bucket name
     },
     {
       "Effect": "Allow",
