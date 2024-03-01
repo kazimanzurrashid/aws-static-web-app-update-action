@@ -12,7 +12,7 @@ S3 bucket and optionally issues an invalidation command to associated cloudfront
 ### minimum
 
 ```yaml
-uses: kazimanzurrashid/aws-static-web-app-update-action@v1.0.1
+uses: kazimanzurrashid/aws-static-web-app-update-action@v1.1.0
 with:
   location: './web/public'
   bucket: 'example.com'
@@ -21,7 +21,7 @@ with:
 ### complete
 
 ```yaml
-uses: kazimanzurrashid/aws-static-web-app-update-action@v1.0.1
+uses: kazimanzurrashid/aws-static-web-app-update-action@v1.1.0
 with:
   location: './web/public'
   bucket: 'example.com'
@@ -32,6 +32,7 @@ with:
   AWS_REGION: ${{ secrets.AWS_REGION }}
   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  AWS_SESSION_TOKEN: ${{ secrets.AWS_SESSION_TOKEN }} 
 ```
 
 ## AWS Permission
@@ -96,6 +97,11 @@ _Optional_, if not specified fallbacks to environment variable.
 
 _Optional_, if not specified fallbacks to environment variable.
 
+### `AWS_SESSION_TOKEN`
+
+_Optional_, if not specified fallbacks to environment variable.
+
+
 ## Outputs
 
 N/A
@@ -128,7 +134,7 @@ jobs:
           npm run build
 
       - name: Update
-        uses: kazimanzurrashid/aws-static-web-app-update-action@v1.0.1
+        uses: kazimanzurrashid/aws-static-web-app-update-action@v1.1.0
         with:
           location: ./build
           bucket: my-site.com
@@ -168,7 +174,7 @@ jobs:
           ng build --configuration production
 
       - name: Update
-        uses: kazimanzurrashid/aws-static-web-app-update-action@v1.0.1
+        uses: kazimanzurrashid/aws-static-web-app-update-action@v1.1.0
         with:
           location: ./dist/my-ng-app
           bucket: my-site.com
@@ -208,7 +214,7 @@ jobs:
           npm run build
 
       - name: Update
-        uses: kazimanzurrashid/aws-static-web-app-update-action@v1.0.1
+        uses: kazimanzurrashid/aws-static-web-app-update-action@v1.1.0
         with:
           location: ./public
           bucket: my-site.com

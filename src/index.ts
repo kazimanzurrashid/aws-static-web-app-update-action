@@ -33,12 +33,14 @@ const wait = (getInput('wait') || 'true').toLowerCase() === 'true';
 const awsRegion = getValue('AWS_REGION');
 const awsAccessKeyId = getValue('AWS_ACCESS_KEY_ID');
 const awsSecretAccessKey = getValue('AWS_SECRET_ACCESS_KEY');
+const awsSessionToken = getValue('AWS_SESSION_TOKEN');
 
 const s3 = new S3({
   region: awsRegion,
   credentials: {
     accessKeyId: awsAccessKeyId,
-    secretAccessKey: awsSecretAccessKey
+    secretAccessKey: awsSecretAccessKey,
+    sessionToken: awsSessionToken
   }
 });
 
