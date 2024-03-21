@@ -1,5 +1,7 @@
 # Changelog
 
+## [1.1.1](https://github.com/kazimanzurrashid/aws-static-web-app-update-action/compare/v1.1.0...v1.1.1) (2024-03-21)
+
 ## [1.1.0](https://github.com/kazimanzurrashid/aws-static-web-app-update-action/compare/v1.0.1...v1.1.0) (2024-03-01)
 
 ### Features
