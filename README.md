@@ -12,7 +12,7 @@ S3 bucket and optionally issues an invalidation command to associated cloudfront
 ### minimum
 
 ```yaml
-uses: kazimanzurrashid/aws-static-web-app-update-action@v1.1.0
+uses: kazimanzurrashid/aws-static-web-app-update-action@v1.1.1
 with:
   location: './web/public'
   bucket: 'example.com'
@@ -21,7 +21,7 @@ with:
 ### complete
 
 ```yaml
-uses: kazimanzurrashid/aws-static-web-app-update-action@v1.1.0
+uses: kazimanzurrashid/aws-static-web-app-update-action@v1.1.1
 with:
   location: './web/public'
   bucket: 'example.com'
@@ -32,7 +32,7 @@ with:
   AWS_REGION: ${{ secrets.AWS_REGION }}
   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-  AWS_SESSION_TOKEN: ${{ secrets.AWS_SESSION_TOKEN }} 
+  AWS_SESSION_TOKEN: ${{ secrets.AWS_SESSION_TOKEN }}
 ```
 
 ## AWS Permission
@@ -101,7 +101,6 @@ _Optional_, if not specified fallbacks to environment variable.
 
 _Optional_, if not specified fallbacks to environment variable.
 
-
 ## Outputs
 
 N/A
@@ -121,12 +120,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Node.js setup
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
 
       - name: Build
         run: |
@@ -134,7 +133,7 @@ jobs:
           npm run build
 
       - name: Update
-        uses: kazimanzurrashid/aws-static-web-app-update-action@v1.1.0
+        uses: kazimanzurrashid/aws-static-web-app-update-action@v1.1.1
         with:
           location: ./build
           bucket: my-site.com
@@ -161,12 +160,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Node.js setup
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
 
       - name: Build
         run: |
@@ -174,7 +173,7 @@ jobs:
           ng build --configuration production
 
       - name: Update
-        uses: kazimanzurrashid/aws-static-web-app-update-action@v1.1.0
+        uses: kazimanzurrashid/aws-static-web-app-update-action@v1.1.1
         with:
           location: ./dist/my-ng-app
           bucket: my-site.com
@@ -201,12 +200,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Node.js setup
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
 
       - name: Build
         run: |
@@ -214,7 +213,7 @@ jobs:
           npm run build
 
       - name: Update
-        uses: kazimanzurrashid/aws-static-web-app-update-action@v1.1.0
+        uses: kazimanzurrashid/aws-static-web-app-update-action@v1.1.1
         with:
           location: ./public
           bucket: my-site.com
