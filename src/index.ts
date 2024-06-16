@@ -48,7 +48,8 @@ const cf = new CloudFront({
   region: awsRegion,
   credentials: {
     accessKeyId: awsAccessKeyId,
-    secretAccessKey: awsSecretAccessKey
+    secretAccessKey: awsSecretAccessKey,
+    sessionToken: awsSessionToken
   }
 });
 

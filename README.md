@@ -12,7 +12,7 @@ S3 bucket and optionally issues an invalidation command to associated cloudfront
 ### minimum
 
 ```yaml
-uses: kazimanzurrashid/aws-static-web-app-update-action@v1.1.1
+uses: kazimanzurrashid/aws-static-web-app-update-action@v1.1.2
 with:
   location: './web/public'
   bucket: 'example.com'
@@ -21,7 +21,7 @@ with:
 ### complete
 
 ```yaml
-uses: kazimanzurrashid/aws-static-web-app-update-action@v1.1.1
+uses: kazimanzurrashid/aws-static-web-app-update-action@v1.1.2
 with:
   location: './web/public'
   bucket: 'example.com'
@@ -133,7 +133,7 @@ jobs:
           npm run build
 
       - name: Update
-        uses: kazimanzurrashid/aws-static-web-app-update-action@v1.1.1
+        uses: kazimanzurrashid/aws-static-web-app-update-action@v1.1.2
         with:
           location: ./build
           bucket: my-site.com
@@ -173,7 +173,7 @@ jobs:
           ng build --configuration production
 
       - name: Update
-        uses: kazimanzurrashid/aws-static-web-app-update-action@v1.1.1
+        uses: kazimanzurrashid/aws-static-web-app-update-action@v1.1.2
         with:
           location: ./dist/my-ng-app
           bucket: my-site.com
@@ -213,7 +213,7 @@ jobs:
           npm run build
 
       - name: Update
-        uses: kazimanzurrashid/aws-static-web-app-update-action@v1.1.1
+        uses: kazimanzurrashid/aws-static-web-app-update-action@v1.1.2
         with:
           location: ./public
           bucket: my-site.com
