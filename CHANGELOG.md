@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.1.2](https://github.com/kazimanzurrashid/aws-static-web-app-update-action/compare/v1.1.1...v1.1.2) (2024-06-16)
+
+
+### Bug Fixes
+
+* add session token in cloudfront client ([8e57e56](https://github.com/kazimanzurrashid/aws-static-web-app-update-action/commit/8e57e561dad283d57a5289b927b118e9d20e0e3d))
+* upgrade @aws-sdk/client-cloudfront from 3.567.0 to 3.568.0 ([6ad85e3](https://github.com/kazimanzurrashid/aws-static-web-app-update-action/commit/6ad85e3013d7d979084b44dedf0bef3c94c2bc95))
+* upgrade @aws-sdk/client-s3 from 3.540.0 to 3.550.0 ([d0453b0](https://github.com/kazimanzurrashid/aws-static-web-app-update-action/commit/d0453b0e0dc3ea16ce3cdd702340d9dbb3e140c2))
+
 ## [1.1.1](https://github.com/kazimanzurrashid/aws-static-web-app-update-action/compare/v1.1.0...v1.1.1) (2024-03-21)
 
 ## [1.1.0](https://github.com/kazimanzurrashid/aws-static-web-app-update-action/compare/v1.0.1...v1.1.0) (2024-03-01)
