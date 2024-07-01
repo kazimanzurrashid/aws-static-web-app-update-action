@@ -27,7 +27,7 @@
     "@release-it/conventional-changelog": "^8.0.1",
     "@types/js-yaml": "^4.0.9",
     "@types/mime-types": "^2.1.4",
-    "@types/node": "^20.14.2",
+    "@types/node": "^20.14.9",
     "@typescript-eslint/eslint-plugin": "^7.13.0",
     "@typescript-eslint/parser": "^7.13.0",
     "@vercel/ncc": "^0.38.1",
